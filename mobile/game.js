@@ -515,6 +515,65 @@
       .replace(/\n/g, '<br>');
   }
 
+  // --- CATEGORY SORTER / BUCKETER HANDLER ---
+  window.handleMobileCategorySelect = function(btn, event, itemIdx, chosenCat) {
+    try {
+      if (event && event.stopPropagation) {
+        event.stopPropagation();
+      }
+      SoundFX.playTap();
+
+      if (itemIdx === undefined || itemIdx === null || isNaN(itemIdx)) {
+        itemIdx = parseInt(btn.getAttribute('data-item') || (btn.dataset && btn.dataset.item), 10);
+      }
+      if (!chosenCat) {
+        chosenCat = btn.getAttribute('data-cat') || (btn.dataset && btn.dataset.cat);
+      }
+      if (!STATE.sorterAssignments) {
+        STATE.sorterAssignments = {};
+      }
+      STATE.sorterAssignments[itemIdx] = chosenCat;
+
+      // Highlight selected button & update card style
+      const card = btn.closest('.mobile-sorter-card') || document.getElementById(`m-scard-${itemIdx}`);
+      if (card) {
+        card.querySelectorAll('.mobile-cat-btn').forEach(b => b.classList.remove('selected'));
+        card.classList.add('classified');
+      }
+      btn.classList.add('selected');
+
+      // Update buckets
+      const level = STATE.activeLevel;
+      if (level) {
+        const tasks = level.tasks || level.questions;
+        const task = tasks[STATE.currentQuestionIdx];
+        const categories = (task && task.categories) || [];
+        const items = (task && task.items) || [];
+
+        categories.forEach((cat, cIdx) => {
+          const bItems = document.getElementById(`m-bitems-${cIdx}`);
+          const bCount = document.getElementById(`m-bcount-${cIdx}`);
+          const assigned = items.filter((_, i) => STATE.sorterAssignments[i] === cat);
+          if (bCount) bCount.textContent = assigned.length;
+          if (bItems) {
+            bItems.innerHTML = assigned.map(it => `
+              <div class="mobile-placed-item">
+                <span>${(it.text.split('|')[0] || it.text).substring(0, 32)}...</span>
+                <span style="color:#10b981; font-weight:800;">✓</span>
+              </div>
+            `).join('');
+          }
+        });
+
+        if (Object.keys(STATE.sorterAssignments).length === items.length) {
+          DOM.playActionBtn.disabled = false;
+        }
+      }
+    } catch (err) {
+      console.error("handleMobileCategorySelect error:", err);
+    }
+  };
+
   // --- RENDER ACTIVE TASK / QUESTION (SYNCED WITH DESKTOP) ---
   function renderQuestion() {
     const level = STATE.activeLevel;
@@ -535,6 +594,7 @@
     STATE.assembledTokens = [];
     STATE.matchedPairsCount = 0;
     STATE.activeMatchPick = null;
+    STATE.sorterAssignments = {};
 
     DOM.playQuestionBox.innerHTML = '';
 
@@ -634,36 +694,15 @@
         card.innerHTML = `
           <div class="mobile-sorter-card-text">${it.text}</div>
           <div class="mobile-cat-buttons">
-            ${categories.map(cat => `<button type="button" class="mobile-cat-btn" data-item="${idx}" data-cat="${cat}">${cat}</button>`).join('')}
+            ${categories.map(cat => {
+              const safeCat = cat.replace(/'/g, "\\'");
+              return `<button type="button" class="mobile-cat-btn" data-item="${idx}" data-cat="${cat}" onclick="window.handleMobileCategorySelect(this, event, ${idx}, '${safeCat}')">${cat}</button>`;
+            }).join('')}
           </div>
         `;
-        card.querySelectorAll('.mobile-cat-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            SoundFX.playTap();
-            const itemIdx = parseInt(btn.dataset.item, 10);
-            const chosenCat = btn.dataset.cat;
-            STATE.sorterAssignments[itemIdx] = chosenCat;
-
-            card.querySelectorAll('.mobile-cat-btn').forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-            card.classList.add('classified');
-
-            categories.forEach((cat, cIdx) => {
-              const bItems = wrap.querySelector(`#m-bitems-${cIdx}`);
-              const bCount = wrap.querySelector(`#m-bcount-${cIdx}`);
-              const assigned = items.filter((_, i) => STATE.sorterAssignments[i] === cat);
-              bCount.textContent = assigned.length;
-              bItems.innerHTML = assigned.map(it => `
-                <div class="mobile-placed-item">
-                  <span>${(it.text.split('|')[0] || it.text).substring(0, 32)}...</span>
-                  <span style="color:#10b981; font-weight:800;">✓</span>
-                </div>
-              `).join('');
-            });
-
-            if (Object.keys(STATE.sorterAssignments).length === items.length) {
-              DOM.playActionBtn.disabled = false;
-            }
+        card.querySelectorAll('.mobile-cat-btn').forEach(b => {
+          b.addEventListener('click', function(e) {
+            window.handleMobileCategorySelect(this, e);
           });
         });
         pool.appendChild(card);

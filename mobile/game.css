@@ -1865,37 +1865,59 @@ body.samsung-light .mobile-placed-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  pointer-events: auto !important;
+  position: relative;
+  transition: all 0.2s ease;
 }
 .mobile-sorter-card.classified {
-  opacity: 0.5;
-  border-color: var(--game-green);
+  opacity: 1 !important;
+  border-color: #10b981 !important;
+  border-bottom-color: #059669 !important;
+  background: rgba(16, 185, 129, 0.08) !important;
 }
 .mobile-sorter-card-text {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--game-text);
+  line-height: 1.4;
 }
 .mobile-cat-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  position: relative;
+  z-index: 5;
 }
 .mobile-cat-btn {
-  background: rgba(44, 117, 255, 0.12);
-  border: 1.5px solid var(--game-blue);
-  color: #93c5fd;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  cursor: pointer;
+  background: rgba(44, 117, 255, 0.15) !important;
+  border: 1.5px solid var(--game-blue) !important;
+  color: #93c5fd !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 999px !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  touch-action: manipulation !important;
+  transition: all 0.15s ease !important;
+  outline: none;
 }
 body.samsung-light .mobile-cat-btn {
-  color: var(--samsung-blue);
+  color: var(--samsung-blue) !important;
+}
+.mobile-cat-btn:active {
+  transform: scale(0.96);
 }
 .mobile-cat-btn.selected {
-  background: var(--game-blue);
-  color: #fff;
+  background: #2563eb !important;
+  border-color: #93c5fd !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6) !important;
+  transform: scale(1.03);
 }
 
 /* 2. Cloze Chips / Fill-in-the-Blanks (Mobile) */

@@ -259,9 +259,13 @@ function downloadFeedbackJson(topicId, duoData, completedLevels, levelStars, cou
 // Duolingo Signature Web Audio Sound Synthesizer
 class DuoSound {
   static init() {
-    if (!this.ctx) {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (AudioCtx) this.ctx = new AudioCtx();
+    try {
+      if (!this.ctx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) this.ctx = new AudioCtx();
+      }
+    } catch(e) {
+      this.ctx = null;
     }
   }
 
@@ -889,6 +893,63 @@ function renderTapOrderTask(task, arena, actionBtn) {
 }
 
 /* --- Task Type: Category Sorter / Concept Bucketing --- */
+window.handleCategorySelect = function(btn, event, itemIdx, chosenCat) {
+  try {
+    if (event && event.stopPropagation) {
+      event.stopPropagation();
+    }
+    DuoSound.playTap();
+
+    if (itemIdx === undefined || itemIdx === null || isNaN(itemIdx)) {
+      itemIdx = parseInt(btn.getAttribute('data-item') || (btn.dataset && btn.dataset.item), 10);
+    }
+    if (!chosenCat) {
+      chosenCat = btn.getAttribute('data-cat') || (btn.dataset && btn.dataset.cat);
+    }
+    sorterAssignments[itemIdx] = chosenCat;
+
+    // Highlight selected button & update card style
+    const arena = document.getElementById('lesson-task-arena');
+    const card = (arena && arena.querySelector(`#sorter-card-${itemIdx}`)) || btn.closest('.duo-sorter-card');
+    if (card) {
+      card.querySelectorAll('.duo-cat-btn').forEach(b => b.classList.remove('selected'));
+      card.classList.add('classified');
+    }
+    btn.classList.add('selected');
+
+    // Update buckets
+    const tasks = (activeLevel && (activeLevel.tasks || activeLevel.questions)) || [];
+    const task = tasks[currentTaskIndex];
+    if (task) {
+      const categories = task.categories || [];
+      const items = task.items || [];
+
+      categories.forEach((cat, cIdx) => {
+        const bItems = document.getElementById(`bitems-${cIdx}`);
+        const bCount = document.getElementById(`bcount-${cIdx}`);
+        const assigned = items.filter((_, i) => sorterAssignments[i] === cat);
+        if (bCount) bCount.textContent = assigned.length;
+        if (bItems) {
+          bItems.innerHTML = assigned.map(it => `
+            <div class="duo-placed-item">
+              <span>${(it.text.split('|')[0] || it.text).substring(0, 36)}...</span>
+              <span style="color:#10b981; font-weight:bold;">✓</span>
+            </div>
+          `).join('');
+        }
+      });
+
+      const actionBtn = document.getElementById('lesson-action-btn');
+      if (actionBtn && Object.keys(sorterAssignments).length === items.length) {
+        actionBtn.disabled = false;
+        actionBtn.classList.add('ready-pulse');
+      }
+    }
+  } catch(err) {
+    console.error("handleCategorySelect error:", err);
+  }
+};
+
 function renderCategorySorterTask(task, arena, actionBtn) {
   sorterAssignments = {};
   const categories = task.categories || [];
@@ -908,9 +969,10 @@ function renderCategorySorterTask(task, arena, actionBtn) {
     <div class="duo-sorter-card" id="sorter-card-${idx}">
       <div class="duo-sorter-card-text">${it.text}</div>
       <div class="duo-cat-buttons">
-        ${categories.map(cat => `
-          <button type="button" class="duo-cat-btn" data-item="${idx}" data-cat="${cat}">${cat}</button>
-        `).join('')}
+        ${categories.map(cat => {
+          const safeCat = cat.replace(/'/g, "\\'");
+          return `<button type="button" class="duo-cat-btn" data-item="${idx}" data-cat="${cat}" onclick="window.handleCategorySelect(this, event, ${idx}, '${safeCat}')">${cat}</button>`;
+        }).join('')}
       </div>
     </div>
   `).join('');
@@ -929,34 +991,10 @@ function renderCategorySorterTask(task, arena, actionBtn) {
     </div>
   `;
 
+  // Attach event listener fallback on arena
   arena.querySelectorAll('.duo-cat-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      DuoSound.playTap();
-      const itemIdx = parseInt(btn.dataset.item, 10);
-      const chosenCat = btn.dataset.cat;
-      sorterAssignments[itemIdx] = chosenCat;
-
-      const card = arena.querySelector(`#sorter-card-${itemIdx}`);
-      card.querySelectorAll('.duo-cat-btn').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      card.classList.add('classified');
-
-      categories.forEach((cat, cIdx) => {
-        const bItems = arena.querySelector(`#bitems-${cIdx}`);
-        const bCount = arena.querySelector(`#bcount-${cIdx}`);
-        const assigned = items.filter((_, i) => sorterAssignments[i] === cat);
-        bCount.textContent = assigned.length;
-        bItems.innerHTML = assigned.map(it => `
-          <div class="duo-placed-item">
-            <span>${(it.text.split('|')[0] || it.text).substring(0, 38)}...</span>
-            <span style="color:#10b981; font-weight:bold;">✓</span>
-          </div>
-        `).join('');
-      });
-
-      if (Object.keys(sorterAssignments).length === items.length) {
-        actionBtn.disabled = false;
-      }
+    btn.addEventListener('click', function(e) {
+      window.handleCategorySelect(this, e);
     });
   });
 }
