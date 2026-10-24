@@ -370,23 +370,30 @@
     DOM.bossHpText.textContent = `${STATE.activeLevel.bossName}: ${STATE.bossCurrentHp} / ${max} HP`;
   }
 
-  // --- RENDER ACTIVE QUESTION ---
+  function formatContent(text) {
+    if (!text) return '';
+    return text
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/\n\n/g, '<div style="margin-bottom:0.75rem;"></div>')
+      .replace(/\n/g, '<br>');
+  }
+
+  // --- RENDER ACTIVE TASK / QUESTION (SYNCED WITH DESKTOP) ---
   function renderQuestion() {
     const level = STATE.activeLevel;
     if (!level) return;
 
-    const questions = level.questions;
-    const q = questions[STATE.currentQuestionIdx];
+    const tasks = level.tasks || level.questions;
+    const task = tasks[STATE.currentQuestionIdx];
 
     // Progress bar update
-    const progressPct = ((STATE.currentQuestionIdx) / questions.length) * 100;
+    const progressPct = ((STATE.currentQuestionIdx) / tasks.length) * 100;
     DOM.playProgressBar.style.width = `${progressPct}%`;
 
     // Reset feedback and action button
     DOM.feedbackBanner.className = 'feedback-banner';
     DOM.feedbackBanner.style.display = 'none';
-    DOM.playActionBtn.textContent = 'CHECK ANSWER';
-    DOM.playActionBtn.disabled = true;
 
     STATE.selectedOption = null;
     STATE.assembledTokens = [];
@@ -395,17 +402,47 @@
 
     DOM.playQuestionBox.innerHTML = '';
 
+    // TYPE 1: CONCEPT CARD (Desktop Verbatim)
+    if (task.type === 'concept') {
+      DOM.playActionBtn.textContent = 'CONTINUE (+10 XP)';
+      DOM.playActionBtn.disabled = false;
+
+      const card = document.createElement('div');
+      card.style.cssText = 'background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.85rem;';
+      card.innerHTML = `
+        <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#10b981; letter-spacing:0.05em;">
+          💡 CONCEPT DISCOVERY
+        </div>
+        <h3 style="font-family:'Outfit', sans-serif; font-size:1.35rem; font-weight:900; color:#fff; line-height:1.25;">
+          ${task.title}
+        </h3>
+        <div style="font-size:0.95rem; line-height:1.6; color:#cbd5e1;">
+          ${formatContent(task.content)}
+        </div>
+        ${task.keyTakeaway ? `
+          <div style="background: rgba(16, 185, 129, 0.15); border-left: 4px solid #10b981; border-radius: 0 10px 10px 0; padding: 0.75rem 1rem; font-size:0.86rem; color:#a7f3d0; line-height:1.45;">
+            <strong>Key Takeaway:</strong> ${task.keyTakeaway}
+          </div>
+        ` : ''}
+      `;
+      DOM.playQuestionBox.appendChild(card);
+      return;
+    }
+
+    DOM.playActionBtn.textContent = 'CHECK ANSWER';
+    DOM.playActionBtn.disabled = true;
+
     // Prompt Header
     const promptEl = document.createElement('h3');
     promptEl.className = 'question-prompt';
-    promptEl.textContent = q.prompt;
+    promptEl.textContent = task.prompt || task.question;
     DOM.playQuestionBox.appendChild(promptEl);
 
-    // Render by Question Type
-    if (q.type === 'mcq') {
+    // TYPE 2: MCQ (Desktop Verbatim)
+    if (task.type === 'mcq') {
       const grid = document.createElement('div');
       grid.className = 'options-grid';
-      q.options.forEach((opt, idx) => {
+      task.options.forEach((opt, idx) => {
         const card = document.createElement('div');
         card.className = 'option-card';
         card.innerHTML = `<span style="color:#6366f1; font-weight:800;">${['A', 'B', 'C', 'D'][idx]}</span> <span>${opt}</span>`;
@@ -419,7 +456,9 @@
         grid.appendChild(card);
       });
       DOM.playQuestionBox.appendChild(grid);
-    } else if (q.type === 'swipe') {
+    } 
+    // TYPE 3: TRUE / FALSE (Desktop Verbatim)
+    else if (task.type === 'true_false' || task.type === 'swipe') {
       const swipeGrid = document.createElement('div');
       swipeGrid.className = 'blitz-controls';
       swipeGrid.style.marginTop = '2rem';
@@ -449,15 +488,22 @@
       swipeGrid.appendChild(btnFalse);
       swipeGrid.appendChild(btnTrue);
       DOM.playQuestionBox.appendChild(swipeGrid);
-    } else if (q.type === 'match') {
+    } 
+    // TYPE 4: MATCH PAIRS (Desktop Verbatim)
+    else if (task.type === 'match_pairs' || task.type === 'match') {
       const matchGrid = document.createElement('div');
       matchGrid.className = 'match-grid';
 
-      // Flatten and shuffle pairs
+      const rawPairs = task.pairs.map((p, idx) => ({
+        pairId: idx,
+        left: p.left || p.term,
+        right: p.right || p.def
+      }));
+
       const tiles = [];
-      q.pairs.forEach((p, idx) => {
-        tiles.push({ text: p.term, pairId: idx, side: 'term' });
-        tiles.push({ text: p.def, pairId: idx, side: 'def' });
+      rawPairs.forEach(p => {
+        tiles.push({ text: p.left, pairId: p.pairId, side: 'left' });
+        tiles.push({ text: p.right, pairId: p.pairId, side: 'right' });
       });
       tiles.sort(() => Math.random() - 0.5);
 
@@ -489,7 +535,7 @@
               STATE.matchedPairsCount++;
               STATE.activeMatchPick = null;
 
-              if (STATE.matchedPairsCount === q.pairs.length) {
+              if (STATE.matchedPairsCount === rawPairs.length) {
                 DOM.playActionBtn.disabled = false;
                 DOM.feedbackBanner.className = 'feedback-banner success';
                 DOM.feedbackBanner.innerHTML = '<strong>✨ Perfect Match!</strong> All concepts connected successfully.';
@@ -507,7 +553,9 @@
       });
 
       DOM.playQuestionBox.appendChild(matchGrid);
-    } else if (q.type === 'tap_order') {
+    } 
+    // TYPE 5: TAP TO ORDER (Desktop Verbatim)
+    else if (task.type === 'tap_order') {
       const slot = document.createElement('div');
       slot.className = 'tokens-assembly-slot';
       slot.id = 'tokens-assembly-slot';
@@ -515,7 +563,7 @@
       const bank = document.createElement('div');
       bank.className = 'tokens-bank';
 
-      const shuffledTokens = [...q.tokens].sort(() => Math.random() - 0.5);
+      const shuffledTokens = [...task.tokens].sort(() => Math.random() - 0.5);
       shuffledTokens.forEach((token, idx) => {
         const tokenBtn = document.createElement('button');
         tokenBtn.className = 'word-token';
@@ -527,7 +575,6 @@
           tokenBtn.classList.add('placed');
           STATE.assembledTokens.push({ text: token, element: tokenBtn });
 
-          // Render into slot
           const placedPill = document.createElement('button');
           placedPill.className = 'word-token';
           placedPill.textContent = token;
@@ -536,11 +583,11 @@
             tokenBtn.classList.remove('placed');
             STATE.assembledTokens = STATE.assembledTokens.filter(t => t.element !== tokenBtn);
             placedPill.remove();
-            DOM.playActionBtn.disabled = STATE.assembledTokens.length !== q.tokens.length;
+            DOM.playActionBtn.disabled = STATE.assembledTokens.length !== task.tokens.length;
           };
           slot.appendChild(placedPill);
 
-          if (STATE.assembledTokens.length === q.tokens.length) {
+          if (STATE.assembledTokens.length === task.tokens.length) {
             DOM.playActionBtn.disabled = false;
           }
         });
@@ -555,13 +602,14 @@
   // --- CHECK ANSWER HANDLER ---
   function handleCheckAnswer() {
     const level = STATE.activeLevel;
-    const q = level.questions[STATE.currentQuestionIdx];
+    const tasks = level.tasks || level.questions;
+    const task = tasks[STATE.currentQuestionIdx];
 
-    // If already in 'Continue' state, advance to next question
-    if (DOM.playActionBtn.textContent === 'CONTINUE') {
+    // If in 'Continue' state, advance to next question
+    if (DOM.playActionBtn.textContent.startsWith('CONTINUE')) {
       SoundFX.playTap();
       STATE.currentQuestionIdx++;
-      if (STATE.currentQuestionIdx < level.questions.length) {
+      if (STATE.currentQuestionIdx < tasks.length) {
         renderQuestion();
       } else {
         finishLevel();
@@ -571,29 +619,29 @@
 
     let isCorrect = false;
 
-    if (q.type === 'mcq') {
-      isCorrect = STATE.selectedOption === q.correctIndex;
-    } else if (q.type === 'swipe') {
-      isCorrect = STATE.selectedOption === q.isTrue;
-    } else if (q.type === 'match') {
-      isCorrect = STATE.matchedPairsCount === q.pairs.length;
-    } else if (q.type === 'tap_order') {
-      const userString = STATE.assembledTokens.map(t => t.text).join(' ');
-      const correctString = q.correctOrder.join(' ');
-      isCorrect = userString === correctString;
+    if (task.type === 'mcq') {
+      isCorrect = STATE.selectedOption === task.correctIndex;
+    } else if (task.type === 'true_false' || task.type === 'swipe') {
+      isCorrect = STATE.selectedOption === (task.correct !== undefined ? task.correct : task.isTrue);
+    } else if (task.type === 'match_pairs' || task.type === 'match') {
+      isCorrect = STATE.matchedPairsCount === task.pairs.length;
+    } else if (task.type === 'tap_order') {
+      const userString = STATE.assembledTokens.map(t => t.text).join(' ').trim();
+      const targetString = (task.correctSentence || (task.correctOrder ? task.correctOrder.join(' ') : task.tokens.join(' '))).trim();
+      isCorrect = userString === targetString;
     }
 
     if (isCorrect) {
       SoundFX.playCorrect();
-      if (level.isBoss && q.damage) {
+      if (level.isBoss) {
         SoundFX.playBossHit();
-        STATE.bossCurrentHp = Math.max(0, STATE.bossCurrentHp - q.damage);
+        STATE.bossCurrentHp = Math.max(0, STATE.bossCurrentHp - 250);
         updateBossHp();
       }
       DOM.feedbackBanner.className = 'feedback-banner success';
       DOM.feedbackBanner.innerHTML = `
         <div style="font-weight:900; margin-bottom:4px;">✨ BRILLIANT! +25 XP</div>
-        <div>${q.explanation || 'Spot on conceptual clarity!'}</div>
+        <div>${task.explanation || 'Spot on conceptual clarity!'}</div>
       `;
     } else {
       SoundFX.playError();
@@ -602,7 +650,7 @@
       DOM.feedbackBanner.className = 'feedback-banner error';
       DOM.feedbackBanner.innerHTML = `
         <div style="font-weight:900; margin-bottom:4px;">💔 INCORRECT (-1 Heart)</div>
-        <div>${q.explanation || 'Review the core concept carefully!'}</div>
+        <div>${task.explanation || 'Review the core concept carefully!'}</div>
       `;
     }
 
