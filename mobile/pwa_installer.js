@@ -1,6 +1,7 @@
 /**
  * CORTEX PWA INSTALLER & SERVICE WORKER CONTROLLER
  * Full Chrome PWA Install Prompt, Native App Hooks, and Offline Sync
+ * Features: Automatic removal after first touch/click by user + persistent state
  */
 
 (function () {
@@ -8,10 +9,33 @@
 
   let deferredInstallPrompt = null;
 
+  function hasUserDismissedInstall() {
+    try {
+      return localStorage.getItem('cortex_install_dismissed') === 'true' ||
+             window.matchMedia('(display-mode: standalone)').matches ||
+             window.navigator.standalone === true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function removeInstallButtons() {
+    const buttons = document.querySelectorAll('.btn-pwa-install, #btn-pwa-install, #hud-install-btn, #nav-install-btn, [data-action="install-pwa"]');
+    buttons.forEach((btn) => {
+      btn.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+      btn.style.opacity = '0';
+      btn.style.transform = 'scale(0.8)';
+      setTimeout(() => {
+        if (btn && btn.parentNode) {
+          btn.remove();
+        }
+      }, 260);
+    });
+  }
+
   // 1. Register Service Worker with appropriate relative path
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      // Determine if we are in /mobile/ or root directory
       const isMobileSubdir = window.location.pathname.includes('/mobile/');
       const swUrl = isMobileSubdir ? 'sw.js' : 'sw.js';
 
@@ -27,17 +51,26 @@
 
   // 2. Capture Chrome 'beforeinstallprompt' event
   window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent default mini-infobar on Android
     e.preventDefault();
     deferredInstallPrompt = e;
     console.log('[PWA] Captured beforeinstallprompt event. Ready for Chrome installation.');
 
-    // Unhide install buttons in the UI
-    updateInstallButtons(true);
+    // Only unhide install buttons if user has NOT already touched/dismissed it
+    if (!hasUserDismissedInstall()) {
+      updateInstallButtons(true);
+    } else {
+      removeInstallButtons();
+    }
   });
 
-  // 3. User trigger install method
+  // 3. User trigger install method (Immediately removes button on first touch)
   window.triggerPwaInstall = async function () {
+    // Instantly mark as touched and remove button from UI
+    try {
+      localStorage.setItem('cortex_install_dismissed', 'true');
+    } catch (e) {}
+    removeInstallButtons();
+
     if (deferredInstallPrompt) {
       // Show native Chrome install prompt dialog
       deferredInstallPrompt.prompt();
@@ -50,7 +83,6 @@
         console.log('[PWA] User dismissed the Chrome install prompt');
       }
       deferredInstallPrompt = null;
-      updateInstallButtons(false);
     } else {
       // Friendly fallback guidance if already installed or triggered on unsupported environment
       showInstallInstructions();
@@ -60,10 +92,13 @@
   // 4. Handle successful installation
   window.addEventListener('appinstalled', (evt) => {
     console.log('[PWA] Cortex Quest app was installed successfully on Chrome!', evt);
+    try {
+      localStorage.setItem('cortex_install_dismissed', 'true');
+    } catch (e) {}
     deferredInstallPrompt = null;
-    updateInstallButtons(false);
+    removeInstallButtons();
 
-    // Optional celebration toast
+    // Celebration feedback
     if (window.DuoSound && typeof DuoSound.playFanfare === 'function') {
       DuoSound.playFanfare();
     }
@@ -72,6 +107,10 @@
 
   // Helper to toggle install buttons visibility
   function updateInstallButtons(visible) {
+    if (hasUserDismissedInstall()) {
+      removeInstallButtons();
+      return;
+    }
     const buttons = document.querySelectorAll('.btn-pwa-install, #btn-pwa-install, #hud-install-btn, #nav-install-btn');
     buttons.forEach((btn) => {
       btn.style.display = visible ? 'inline-flex' : 'none';
@@ -117,13 +156,25 @@
     }, 4000);
   }
 
-  // Hook any elements with data-action="install-pwa"
+  // Hook first touch and dismissal on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-action="install-pwa"]').forEach((el) => {
-      el.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.triggerPwaInstall();
-      });
+    if (hasUserDismissedInstall()) {
+      removeInstallButtons();
+      return;
+    }
+
+    const buttons = document.querySelectorAll('.btn-pwa-install, #btn-pwa-install, #hud-install-btn, #nav-install-btn, [data-action="install-pwa"]');
+    buttons.forEach((btn) => {
+      // On first touch or click by user, remove immediately
+      const handleFirstTouch = () => {
+        try {
+          localStorage.setItem('cortex_install_dismissed', 'true');
+        } catch (e) {}
+        removeInstallButtons();
+      };
+
+      btn.addEventListener('touchstart', handleFirstTouch, { passive: true, once: true });
+      btn.addEventListener('mousedown', handleFirstTouch, { once: true });
     });
   });
 })();
