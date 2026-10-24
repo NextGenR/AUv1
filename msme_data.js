@@ -239,10 +239,10 @@ const MSME_DATA = {
           explanation: "Correct! UN designated June 27 as International MSME Day to recognize their fundamental economic role worldwide."
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the core macroeconomic statistic regarding MSME exports:",
-          tokens: ["MSMEs contribute", "nearly 48.6%", "of India's", "total merchandise", "exports."],
-          correctSentence: "MSMEs contribute nearly 48.6% of India's total merchandise exports."
+          type: "true_false",
+          prompt: "True or False: More than 51% of all Micro, Small and Medium Enterprises in India are located in rural areas, making the sector a primary driver of decentralized, equitable regional development.",
+          correct: true,
+          explanation: "True! Official data indicates that over 51.2% of MSMEs operate in rural India, preventing forced urban migration and driving inclusive social equity with substantial ownership among SC, ST, and OBC entrepreneurs."
         }
       ]
     },
@@ -311,20 +311,20 @@ const MSME_DATA = {
           title: "Dwarfs vs. Infants (Economic Survey 2018-19)",
           mascotMood: "concerned",
           flowchart: "flowchart_dwarfism_vs_mittelstand.svg",
-          content: "Chief Economic Adviser Krishnamurthy Subramanian highlighted a fundamental flaw in Indian industrial policy:\n\n• **Infants:** Young firms that start small but rapidly scale up in productivity, employment, and technology.\n• **Dwarfs:** Firms that remain small despite being in business for over 10-20 years!\n\n**Why do firms stay small?** Historically, policy offered subsidies based on *size* rather than *age*, creating a 'regulatory cliff' where growing meant losing priority sector credit, tax exemptions, and labor inspection immunities.",
-          keyTakeaway: "Over 99.4% of India's MSMEs are Micro units; only 0.52% are Small and 0.08% are Medium—a stark 'Missing Middle'."
+          content: "Chief Economic Adviser Krishnamurthy Subramanian highlighted a fundamental flaw in Indian industrial policy:\n\n• **Infants:** Young firms that start small but rapidly scale up in productivity, employment, and technology.\n• **Dwarfs:** Firms that remain small despite being in business for over 10-20 years!\n\n**Why do firms stay small?** Historically, policy offered subsidies based on *size* rather than *age*, creating a 'regulatory cliff' where growing meant losing priority sector credit, tax exemptions, and labor inspection immunities.\n\nOver 99.4% of India's MSMEs are Micro units; only 0.52% are Small and 0.08% are Medium—a stark 'Missing Middle'.",
+          keyTakeaway: "Policy must incentivize infant firms with sunset clauses rather than permanently subsidizing perpetual dwarf enterprises."
         },
         {
           type: "mcq",
-          prompt: "According to the Economic Survey 2018-19, what distinguishes 'dwarf' enterprises from 'infant' enterprises in India?",
+          prompt: "Consider the following statements comparing 'Infant Enterprises' and 'Dwarf Enterprises' in India:\n1. Infant enterprises are young firms that experience rapid growth and productivity gains over time.\n2. Dwarf enterprises remain small despite being in business for over a decade, contributing little to net employment growth or productivity.\n3. Government policies that tie subsidies indefinitely to small firm size inadvertently foster dwarfism.\nWhich of the statements given above are correct?",
           options: [
-            "Dwarfs operate in agriculture while infants operate in manufacturing",
-            "Dwarfs are enterprises that stay small throughout their multi-decade existence, whereas infants start small and rapidly scale",
-            "Dwarfs have foreign institutional ownership while infants are purely domestic",
-            "Dwarfs are fully registered on Udyam while infants operate in the informal unorganized sector"
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
           ],
-          correctIndex: 1,
-          explanation: "Infants are young firms with high growth potential, whereas dwarfs stay small for decades intentionally to exploit small-enterprise regulatory loopholes."
+          correctIndex: 3,
+          explanation: "All three statements are correct (Economic Survey 2018-19). Smallness is natural for infants, but pathological for dwarfs. Indefinite size-based reservations incentivize firms to stay small rather than scaling up into productive medium enterprises."
         },
         {
           type: "match_pairs",
@@ -337,10 +337,16 @@ const MSME_DATA = {
           ]
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the structural recommendation from Economic Survey 2018-19:",
-          tokens: ["Incentivize infant firms", "with sunset clauses", "rather than protecting", "perpetual dwarf enterprises."],
-          correctSentence: "Incentivize infant firms with sunset clauses rather than protecting perpetual dwarf enterprises."
+          type: "mcq",
+          prompt: "In the analysis of Indian industrial architecture, what does the 'Missing Middle' phenomenon describe?",
+          options: [
+            "The complete absence of middle-class consumers in rural markets",
+            "A bimodal distribution dominated by millions of tiny micro-enterprises and a few large conglomerates, with very few mid-sized firms",
+            "The lack of intermediate technical training institutions between schools and universities",
+            "The absence of central public sector enterprises in central India"
+          ],
+          correctIndex: 1,
+          explanation: "The 'Missing Middle' refers to the sharp structural imbalance in Indian industry: over 99% of units are tiny micro-enterprises with fewer than 10 workers, with a glaring deficit of mid-sized firms (100–500 employees) that typically drive productivity, innovation, and global exports."
         }
       ]
     },
@@ -365,27 +371,31 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "Under Section 16 of the MSMED Act 2006, what is the statutory rate of penal interest payable by a defaulting buyer to a Micro or Small enterprise?",
+          prompt: "Regarding the penal interest payable on delayed payments under Section 16 of the MSMED Act 2006, consider the following statements:\n1. The buyer is liable to pay compound interest with monthly rests to the supplier.\n2. The interest rate is fixed at three times the Bank Rate notified by the Reserve Bank of India.\n3. The penal interest paid by the buyer can be deducted as an allowable business expense under the Income Tax Act.\nWhich of the statements given above are correct?",
           options: [
-            "Simple interest at the prevailing SBI Prime Lending Rate",
-            "Compound interest with monthly rests at 3 times the Bank Rate notified by the RBI",
-            "Flat 18 per cent per annum simple interest",
-            "Discretionary interest decided mutually by the parties"
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
           ],
-          correctIndex: 1,
-          explanation: "Section 16 prescribes compound interest with monthly rests at three times the RBI Bank Rate, creating severe financial deterrence against delayed payments."
+          correctIndex: 0,
+          explanation: "Statements 1 and 2 are correct. Section 16 mandates compound interest at 3 times the RBI Bank Rate with monthly rests. Statement 3 is incorrect because Section 23 of the MSMED Act explicitly prohibits the buyer from claiming this penal interest as a deductible business expense under the Income Tax Act."
         },
         {
           type: "true_false",
-          prompt: "True or False: Under Section 19 of the MSMED Act, an appellant challenging an MSEFC decree in a civil court must deposit at least 75% of the awarded amount as a mandatory pre-condition.",
+          prompt: "True or False: Under Section 19 of the MSMED Act 2006, no court or appellate authority can entertain an application by a buyer to set aside an MSEFC arbitral award unless the buyer first deposits 75% of the decreed amount.",
           correct: true,
-          explanation: "Correct! Section 19 prevents large corporate buyers from using protracted litigation to starve small suppliers of funds."
+          explanation: "True! Section 19 mandates a mandatory 75% pre-deposit before any court can entertain an application to set aside an MSEFC award, preventing corporate buyers from using protracted appeals to starve small suppliers."
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the statutory payment timeline under Section 15 of MSMED Act:",
-          tokens: ["Payment cannot exceed", "45 days by agreement", "or 15 days", "if no agreement exists."],
-          correctSentence: "Payment cannot exceed 45 days by agreement or 15 days if no agreement exists."
+          type: "match_pairs",
+          prompt: "Match the MSMED Act Section with its Statutory Provision:",
+          pairs: [
+            { left: "Section 15", right: "Mandatory payment within 45 days (agreed) or 15 days (default)" },
+            { left: "Section 16", right: "Compound penal interest at 3x RBI Bank Rate with monthly rests" },
+            { left: "Section 18", right: "MSEFC conciliation/arbitration within 90 days" },
+            { left: "Section 23", right: "Penal interest disallowed as tax deduction under Income Tax Act" }
+          ]
         }
       ]
     },
@@ -410,7 +420,7 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "Consider the following statements regarding Section 43B(h) of the Income Tax Act, 1961:\n1. It disallows tax deductions for expenditure incurred on purchases from Micro and Small enterprises if payments are delayed beyond the MSMED Act Section 15 timeline.\n2. The provision applies equally to transactions with Medium enterprises.\n3. The disallowed expenditure can be claimed as a deduction in the subsequent financial year when actual payment is completed.\nWhich of the statements given above are correct?",
+          prompt: "With reference to Section 43B(h) of the Income Tax Act, 1961, consider the following statements:\n1. It was introduced via Finance Act 2023 to disallow tax deductions for purchases from Micro and Small enterprises if payments exceed the MSMED Act Section 15 timeline.\n2. The provision applies equally to transactions with Medium enterprises and wholesale/retail traders.\n3. The disallowed expense is allowed as a deduction in the subsequent financial year when actual payment is cleared.\nWhich of the statements given above are correct?",
           options: [
             "1 and 2 only",
             "1 and 3 only",
@@ -418,7 +428,7 @@ const MSME_DATA = {
             "1, 2 and 3"
           ],
           correctIndex: 1,
-          explanation: "Statements 1 and 3 are correct. Statement 2 is incorrect because Section 43B(h) explicitly excludes Medium enterprises and applies solely to Micro and Small entities."
+          explanation: "Statements 1 and 3 are correct. Statement 2 is incorrect because Section 43B(h) strictly applies ONLY to Micro and Small enterprises (MSEs). Medium enterprises are excluded, and wholesale/retail traders are excluded unless registered as manufacturers or service providers."
         },
         {
           type: "true_false",
@@ -427,10 +437,14 @@ const MSME_DATA = {
           explanation: "False! Section 43B(h) applies only when the supplier is formally registered as a Micro or Small enterprise on the Udyam portal."
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the core operation of Section 43B(h):",
-          tokens: ["Delayed payments to MSMEs", "are disallowed as deductions", "and taxed as income", "in that fiscal year."],
-          correctSentence: "Delayed payments to MSMEs are disallowed as deductions and taxed as income in that fiscal year."
+          type: "match_pairs",
+          prompt: "Match the Section 43B(h) Application Rule with its Statutory Entity:",
+          pairs: [
+            { left: "Micro & Small Suppliers", right: "Protected by 43B(h) deduction disallowance" },
+            { left: "Medium Enterprises", right: "Explicitly excluded from 43B(h) coverage" },
+            { left: "Wholesale & Retail Traders", right: "Ineligible for 43B(h) tax protection" },
+            { left: "Subsequent Fiscal Year", right: "Deduction restored upon actual clearance" }
+          ]
         }
       ]
     },
@@ -455,15 +469,15 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "Which of the following is NOT one of the benefits provided under the PM Vishwakarma Scheme?",
+          prompt: "Consider the following statements regarding the credit and skill architecture under the PM Vishwakarma scheme:\n1. Beneficiaries receive collateral-free enterprise development credit in two tranches (₹1 Lakh and ₹2 Lakh).\n2. Loans are provided at a concessional interest rate of 5% to the artisan, with an 8% interest subvention paid by the Government.\n3. Registered artisans receive a ₹15,000 digital toolkit incentive upon completing basic skill training.\nWhich of the statements given above are correct?",
           options: [
-            "Concessional collateral-free enterprise credit up to ₹3 Lakh in two tranches at 5 per cent interest",
-            "Toolkit incentive of ₹15,000 through electronic vouchers",
-            "Unconditional direct cash transfer of ₹50,000 per month for life",
-            "Skill verification, basic training with ₹500 daily stipend, and advanced training"
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
           ],
-          correctIndex: 2,
-          explanation: "PM Vishwakarma does not provide monthly lifetime pensions or unconditional cash transfers. It provides skill training, ₹15k toolkits, and subsidized credit."
+          correctIndex: 3,
+          explanation: "All three statements are correct. PM Vishwakarma provides collateral-free credit: Tranche 1 (₹1L @ 18 months) and Tranche 2 (₹2L @ 30 months) at 5% interest with 8% subvention, plus a ₹15,000 e-voucher toolkit grant."
         },
         {
           type: "match_pairs",
@@ -503,15 +517,15 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "As announced in the Union Budget 2025-26, what major reform was introduced in the credit assessment mechanism for MSMEs by Public Sector Banks?",
+          prompt: "Consider the following statements regarding the credit reforms announced in Union Budget 2025-26 for MSMEs:\n1. A self-financing guarantee fund was established providing credit guarantee cover up to ₹100 Crore for machinery term loans.\n2. Public sector banks will assess MSME credit eligibility using in-house digital footprint scoring models rather than physical immovable collateral.\n3. The credit guarantee cover under CGTMSE for micro and small enterprises was doubled from ₹5 Crore to ₹10 Crore.\nWhich of the statements given above are correct?",
           options: [
-            "Mandating 100% gold mortgaging for all manufacturing loans",
-            "Shifting from physical immovable collateral to scoring digital footprints and transaction data",
-            "Restricting all bank lending exclusively to public sector undertakings",
-            "Abolishing the requirement of any credit evaluation for loans under ₹50 Crore"
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
           ],
-          correctIndex: 1,
-          explanation: "Public sector banks have developed in-house digital scoring models that analyze GST, electricity bills, and banking flows, eliminating the requirement for physical land mortgages."
+          correctIndex: 3,
+          explanation: "All three statements are correct. Budget 2025-26 launched the ₹100 Cr machinery guarantee fund, mandated digital cash-flow underwriting using GST/banking footprints, and doubled the CGTMSE guarantee limit from ₹5 Cr to ₹10 Cr."
         },
         {
           type: "true_false",
@@ -520,10 +534,14 @@ const MSME_DATA = {
           explanation: "Correct! The 'Tarun Plus' category now offers up to ₹20 Lakh for entrepreneurs who have previously availed and successfully repaid Tarun loans."
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the key Budget 2025-26 manufacturing guarantee reform:",
-          tokens: ["Guarantee cover up to ₹100 Cr", "for purchasing machinery", "without third-party collateral", "or land mortgage."],
-          correctSentence: "Guarantee cover up to ₹100 Cr for purchasing machinery without third-party collateral or land mortgage."
+          type: "match_pairs",
+          prompt: "Match the Budget 2025-26 MSME Initiative with its Core Policy Feature:",
+          pairs: [
+            { left: "₹100 Cr Machinery Fund", right: "Self-financing guarantee for term loans without land mortgage" },
+            { left: "CGTMSE Normal Cover", right: "Doubled from ₹5 Crore to ₹10 Crore" },
+            { left: "Mudra Tarun Plus", right: "Loan ceiling enhanced from ₹10 Lakh to ₹20 Lakh" },
+            { left: "Customised Credit Card", right: "₹5 Lakh credit limit for Udyam-registered micro units" }
+          ]
         }
       ]
     },
@@ -547,15 +565,15 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "Under the Public Procurement Policy for Micro and Small Enterprises, what are the mandatory overall procurement percentage and the specific sub-quota for women entrepreneurs?",
+          prompt: "Consider the following statements regarding the Public Procurement Policy for Micro and Small Enterprises (MSEs):\n1. Central Ministries, Departments, and CPSEs must mandatorily procure a minimum of 25% of their annual requirements from MSEs.\n2. Within the 25% quota, 4% is earmarked for SC/ST-owned MSEs and 3% is earmarked for Women-owned MSEs.\n3. Udyam-registered MSEs quoting within a price band of L1 + 15% are allowed to supply a portion of the order by matching the L1 price.\nWhich of the statements given above are correct?",
           options: [
-            "20% overall and 1% for women entrepreneurs",
-            "25% overall and 3% for women entrepreneurs",
-            "30% overall and 5% for women entrepreneurs",
-            "15% overall and 2% for women entrepreneurs"
+            "1 and 2 only",
+            "2 and 3 only",
+            "1 and 3 only",
+            "1, 2 and 3"
           ],
-          correctIndex: 1,
-          explanation: "The statutory policy mandates 25% annual procurement from MSEs, with 4% earmarked for SC/ST and 3% earmarked for Women entrepreneurs."
+          correctIndex: 3,
+          explanation: "All three statements are correct under the Public Procurement Policy 2012 (amended 2018). It mandates 25% overall procurement, 4% SC/ST, 3% Women, and price preference within the L1 + 15% band."
         },
         {
           type: "match_pairs",
@@ -596,21 +614,25 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "In the context of MSME export facilitation and digital inclusion, how does the Open Network for Digital Commerce (ONDC) empower small merchants?",
+          prompt: "In the context of MSME export facilitation and digital inclusion, consider the following statements regarding ONDC and E-Commerce Export Hubs (ECEH):\n1. ONDC unbundles the e-commerce value chain so small sellers can access buyers across multiple consumer apps without single-platform commissions.\n2. E-Commerce Export Hubs (ECEHs) provide bonded warehousing, customs clearance, and return-processing logistics in public-private partnership.\nWhich of the statements given above is/are correct?",
           options: [
-            "By offering 100% subsidized air freight for export consignments",
-            "By unbundling the e-commerce value chain so buyers and sellers interact without being locked into proprietary single-platform monopolies",
-            "By replacing all national currencies with central bank cryptocurrency",
-            "By prohibiting large corporate brands from selling goods online"
+            "1 only",
+            "2 only",
+            "Both 1 and 2",
+            "Neither 1 nor 2"
           ],
-          correctIndex: 1,
-          explanation: "ONDC uses open network protocols (like UPI for payments) to allow small sellers on any catalog application to be discovered by buyers on any consumer app without 30% platform monopolies."
+          correctIndex: 2,
+          explanation: "Both statements are correct. ONDC creates an open network eliminating 30% platform monopolies, while ECEHs (announced in Budget 2024-26) establish bonded export staging hubs for small artisans."
         },
         {
-          type: "tap_order",
-          prompt: "Assemble the strategic advantage of industrial cluster agglomeration:",
-          tokens: ["Shared common infrastructure", "lowers capital barriers", "and boosts global", "export competitiveness."],
-          correctSentence: "Shared common infrastructure lowers capital barriers and boosts global export competitiveness."
+          type: "match_pairs",
+          prompt: "Match the Industrial Cluster & Scheme with its Strategic Role:",
+          pairs: [
+            { left: "Tiruppur Cluster", right: "Over $4B knitwear exports via shared effluent zero-discharge infrastructure" },
+            { left: "SFURTI Scheme", right: "Up to ₹5 Cr for Common Facility Centers in artisan clusters" },
+            { left: "RAMP Program", right: "World Bank assisted program for state-level MSME institutional capacity" },
+            { left: "ECEH Model", right: "Bonded warehousing and cross-border export logistics" }
+          ]
         },
         {
           type: "true_false",
@@ -641,15 +663,15 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "BOSS CHALLENGE 1: A manufacturing firm in Pune has an investment in machinery of ₹9 Crore, domestic turnover of ₹45 Crore, and export turnover of ₹35 Crore. Under the MSMED 2020 classification criteria, what is its exact statutory status?",
+          prompt: "BOSS CHALLENGE 1: Under the 2020 MSME composite classification, consider a Pune manufacturing firm with:\n• Investment in Plant & Machinery: ₹9 Crore\n• Domestic Turnover: ₹45 Crore\n• Export Turnover: ₹35 Crore\nWhat is the exact legal classification of this enterprise?",
           options: [
-            "Medium Enterprise because total turnover is ₹80 Crore (exceeds ₹50 Cr)",
-            "Small Enterprise because export turnover is excluded, leaving net qualifying turnover at ₹45 Crore (≤ ₹50 Cr)",
-            "Micro Enterprise because net investment after depreciation is below ₹1 Crore",
-            "Disqualified from MSME status due to exceeding foreign trade limits"
+            "Medium Enterprise, because gross turnover (₹80 Crore) exceeds the ₹50 Crore Small enterprise ceiling",
+            "Small Enterprise, because export turnover is statutorily excluded, leaving qualifying turnover at ₹45 Crore (≤ ₹50 Crore) and investment at ₹9 Crore (≤ ₹10 Crore)",
+            "Micro Enterprise, because investment can be adjusted for depreciation down to ₹1 Crore",
+            "Disqualified from MSME benefits due to engaging in foreign merchandise export trade"
           ],
           correctIndex: 1,
-          explanation: "CRITICAL HIT! Export turnover is strictly excluded from classification. Net qualifying turnover is ₹45 Cr (≤ ₹50 Cr) and investment is ₹9 Cr (≤ ₹10 Cr), making it firmly a Small Enterprise!"
+          explanation: "CRITICAL HIT! Under the MSMED notification, export turnover is strictly excluded from classification. Qualifying turnover is ₹45 Cr (≤ ₹50 Cr limit) and investment is ₹9 Cr (≤ ₹10 Cr limit), classifying it firmly as a Small Enterprise."
         },
         {
           type: "match_pairs",
@@ -663,21 +685,25 @@ const MSME_DATA = {
         },
         {
           type: "mcq",
-          prompt: "BOSS CHALLENGE 3: Which committee appointed by the Ministry of MSME recommended removing size-based concessions and transitioning towards scale-neutral support to eradicate dwarfism?",
+          prompt: "BOSS CHALLENGE 3: Which expert committee appointed by the Reserve Bank of India in 2019 comprehensively reviewed MSME challenges and recommended creating a ₹10,000 Crore Fund of Funds, expanding TReDS, and non-collateral cash-flow lending?",
           options: [
-            "Justice B.N. Srikrishna Committee",
-            "Dr. K.P. Krishnan Committee on Regulatory Simplification",
-            "Kelkar Committee on PPP Models",
-            "Justice A.K. Rajan Committee"
+            "U.K. Sinha Committee on MSMEs",
+            "Bimal Jalan Committee on Economic Capital Framework",
+            "Nachiket Mor Committee on Comprehensive Financial Services",
+            "Urjit Patel Committee on Monetary Policy Framework"
           ],
-          correctIndex: 1,
-          explanation: "SUPER EFFECTIVE! The Dr. K.P. Krishnan Committee recommended replacing arbitrary size cliffs with sunset clauses and scale-neutral compliance."
+          correctIndex: 0,
+          explanation: "SUPER EFFECTIVE! The U.K. Sinha Committee (RBI, 2019) is the landmark committee that recommended the ₹10,000 Cr Fund of Funds (SRI Fund), doubling collateral-free loans, mandatory TReDS onboarding, and transitioning from asset mortgages to cash-flow based digital lending."
         },
         {
-          type: "tap_order",
-          prompt: "BOSS FINISHER: Assemble the golden concluding thesis on India's MSME revolution:",
-          tokens: ["MSMEs are the crucible", "where Indian entrepreneurship", "meets global competitiveness", "to power Viksit Bharat 2047."],
-          correctSentence: "MSMEs are the crucible where Indian entrepreneurship meets global competitiveness to power Viksit Bharat 2047."
+          type: "match_pairs",
+          prompt: "BOSS FINISHER: Link the Constitutional & Policy Pillars to India's MSME Transformation:",
+          pairs: [
+            { left: "Article 39(b) & (c)", right: "Preventing corporate monopoly and distributing industrial resources" },
+            { left: "German Mittelstand", right: "Transforming dwarf firms into globally competitive niche champions" },
+            { left: "TReDS & Securitisation", right: "Liquidity architecture turning receivables into instant working capital" },
+            { left: "Viksit Bharat 2047", right: "MSMEs driving 50% of GDP and inclusive regional industrialization" }
+          ]
         }
       ]
     }
