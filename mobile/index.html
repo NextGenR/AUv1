@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Cortex Quest | UPSC CAVA Mobile Game</title>
+  <meta name="description" content="Gamified mobile learning experience for UPSC CAVA. Master Public Examinations, AI in Judiciary, and Constitutional frameworks through boss battles, blitz swipe quizzes, and quest maps.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0d111c">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body class="mobile-game-body">
+
+  <!-- Celebration Confetti Layer -->
+  <canvas id="game-confetti-canvas"></canvas>
+
+  <!-- Mobile App Frame / Shell -->
+  <div class="mobile-app-shell">
+
+    <!-- Top Game Status HUD -->
+    <header class="game-top-hud">
+      <div class="hud-pill hud-streak" title="Study Streak">
+        <span>🔥</span>
+        <span id="hud-streak-count">18</span>
+      </div>
+
+      <div class="hud-pill hud-gems" title="Gems Earned">
+        <span>💎</span>
+        <span id="hud-gems-count">450</span>
+      </div>
+
+      <div class="hud-pill hud-coins" title="Coins">
+        <span>🪙</span>
+        <span id="hud-coins-count">1,280</span>
+      </div>
+
+      <div class="hud-pill hud-hearts" id="hud-hearts-pill" title="Lives Remaining">
+        <span>❤️</span>
+        <span id="hud-hearts-count">5/5</span>
+      </div>
+    </header>
+
+    <!-- Scrollable Main Content -->
+    <main class="game-main-content">
+      
+      <!-- SCREEN 1: QUEST / LEVEL MAP -->
+      <section class="game-screen active" id="screen-map">
+        <div id="quest-path-content">
+          <!-- Populated dynamically via game.js -->
+        </div>
+      </section>
+
+      <!-- SCREEN 2: 60-SEC BLITZ RAPID-FIRE ARENA -->
+      <section class="game-screen" id="screen-blitz">
+        <div class="blitz-arena-wrapper">
+          <div class="blitz-timer-ring" id="blitz-timer-display">60</div>
+          <div class="blitz-combo-badge" id="blitz-combo-badge">🔥 1X STREAK COMBO</div>
+          
+          <div class="blitz-card">
+            <span id="blitz-card-text">Swipe or Tap True / False as fast as possible to earn multiplier coins!</span>
+          </div>
+
+          <div class="blitz-controls">
+            <button class="btn-blitz-false" id="btn-blitz-false">✕ FALSE</button>
+            <button class="btn-blitz-true" id="btn-blitz-true">✓ TRUE</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 3: LEADERBOARD & ASPIRANT LEAGUE -->
+      <section class="game-screen" id="screen-leaderboard">
+        <div style="padding: 1.25rem 1rem 0.5rem; text-align: center;">
+          <h2 style="font-family:'Outfit'; font-size:1.5rem; font-weight:900; color:#facc15;">
+            👑 UPSC Diamond League
+          </h2>
+          <p style="font-size:0.82rem; color:#94a3b8;">Top 3 advance to the LBSNAA Apex Cadre this Sunday!</p>
+        </div>
+        <div class="leaderboard-list" id="leaderboard-list">
+          <!-- Populated dynamically via game.js -->
+        </div>
+      </section>
+
+      <!-- SCREEN 4: ARMORY / SHOP -->
+      <section class="game-screen" id="screen-shop">
+        <div style="padding: 1.25rem 1rem 0.5rem; text-align: center;">
+          <h2 style="font-family:'Outfit'; font-size:1.5rem; font-weight:900; color:#38bdf8;">
+            🎒 Aspirant Armory
+          </h2>
+          <p style="font-size:0.82rem; color:#94a3b8;">Boosters, Lifelines, Streak Freezes & Avatars</p>
+        </div>
+        <div class="shop-grid" id="shop-grid">
+          <!-- Populated dynamically via game.js -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Game Navigation Dock -->
+    <nav class="game-bottom-dock">
+      <button class="dock-btn active" data-tab="map" id="dock-btn-map">
+        <span class="dock-icon">🗺️</span>
+        <span>Quest</span>
+      </button>
+
+      <button class="dock-btn" data-tab="blitz" id="dock-btn-blitz">
+        <span class="dock-icon">⚡</span>
+        <span>Blitz</span>
+      </button>
+
+      <button class="dock-btn" data-tab="leaderboard" id="dock-btn-ranks">
+        <span class="dock-icon">🏆</span>
+        <span>Ranks</span>
+      </button>
+
+      <button class="dock-btn" data-tab="shop" id="dock-btn-shop">
+        <span class="dock-icon">🎒</span>
+        <span>Shop</span>
+      </button>
+
+      <button class="dock-btn" onclick="window.location.href='../roadmap_notes.html'" id="dock-btn-web">
+        <span class="dock-icon">🧭</span>
+        <span>Roadmap</span>
+      </button>
+    </nav>
+
+    <!-- Immersive Play / Level Session Modal -->
+    <div class="play-modal" id="play-modal" role="dialog" aria-modal="true">
+      <div class="play-header">
+        <button class="play-close-btn" id="play-close-btn" aria-label="Exit Level">✕</button>
+        <div class="play-progress-track">
+          <div class="play-progress-bar" id="play-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Boss HP Bar (Visible in Boss Levels) -->
+      <div class="boss-hp-container" id="boss-hp-container">
+        <div style="font-size:0.82rem; font-weight:800; color:#ef4444;" id="boss-hp-text">Boss HP</div>
+        <div class="boss-hp-bar-track">
+          <div class="boss-hp-bar-fill" id="boss-hp-fill"></div>
+        </div>
+      </div>
+
+      <!-- Active Question Box -->
+      <div class="play-question-box" id="play-question-box">
+        <!-- Rendered dynamically via game.js -->
+      </div>
+
+      <!-- Bottom Action & Feedback Bar -->
+      <div class="play-bottom-bar">
+        <div class="feedback-banner" id="feedback-banner"></div>
+        <button class="btn-game-primary" id="play-action-btn" disabled>CHECK ANSWER</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="mobile_data.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
