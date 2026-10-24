@@ -3897,3 +3897,414 @@ body {
   overflow-y: auto;
 }
 
+/* ==========================================================================
+   INNOVATIVE LEARNING FORMATS (NO STANDARD MCQS)
+   1. Category Sorter / Concept Bucketer
+   2. Cloze Chips / Interactive Fill-in-the-Blanks
+   3. Flaw Hunter / Spot the Impostor
+   4. Case Study Simulation / Mini-Tribunal Judge
+   5. Binary Policy Verdict
+   ========================================================================== */
+
+/* 1. Category Sorter / Concept Bucketing */
+.duo-sorter-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.duo-bucket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+.duo-bucket {
+  background: rgba(15, 23, 42, 0.7);
+  border: 2px dashed rgba(99, 102, 241, 0.4);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.duo-bucket.dragover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+.duo-bucket-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.duo-bucket-count {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.duo-bucket-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+.duo-placed-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.82rem;
+  color: #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInPop 0.2s ease;
+}
+.duo-remove-placed {
+  cursor: pointer;
+  color: #ef4444;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+.duo-sorter-items-pool {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.duo-sorter-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 3.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: all 0.15s ease;
+}
+.duo-sorter-card.classified {
+  opacity: 0.5;
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.05);
+}
+.duo-sorter-card-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+.duo-cat-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.duo-cat-btn {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1.5px solid rgba(99, 102, 241, 0.4);
+  color: #c7d2fe;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.duo-cat-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.duo-cat-btn.selected {
+  background: #4f46e5;
+  border-color: #818cf8;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* 2. Cloze Chips / Fill-in-the-Blanks */
+.duo-cloze-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.duo-cloze-sentence-box {
+  background: rgba(15, 23, 42, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f5f9;
+}
+.duo-cloze-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  height: 38px;
+  padding: 0 0.85rem;
+  margin: 0 0.25rem;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 2px dashed #6366f1;
+  color: #c7d2fe;
+  font-weight: 800;
+  font-size: 0.95rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.duo-cloze-slot.active {
+  border-color: #38bdf8;
+  border-style: solid;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.2);
+  color: #fff;
+}
+.duo-cloze-slot.filled {
+  border-style: solid;
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+.duo-cloze-chips-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.duo-chip-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 3.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 0.6rem 1.15rem;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.duo-chip-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+.duo-chip-btn.used {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* 3. Spot the Impostor / Statutory Flaw Hunter */
+.duo-flaw-dossier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.duo-flaw-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+.duo-flaw-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+.duo-flaw-card.selected {
+  border-color: #ef4444;
+  border-bottom-color: #b91c1c;
+  background: rgba(239, 68, 68, 0.15);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.3);
+}
+.duo-flaw-badge {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.duo-flaw-card.selected .duo-flaw-badge {
+  background: #ef4444;
+  color: #fff;
+}
+.duo-flaw-text {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+/* 4. Case Study Simulation / Mini-Tribunal Judge */
+.duo-case-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.duo-case-dossier-box {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 2px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+.duo-case-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+.duo-case-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.duo-case-tag {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.duo-case-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.duo-case-fact-item {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  display: flex;
+  gap: 0.5rem;
+}
+.duo-case-fact-bullet {
+  color: #fbbf24;
+  font-weight: bold;
+}
+.duo-verdict-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  margin-top: 0.25rem;
+}
+.duo-verdict-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.duo-verdict-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.4;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.duo-verdict-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.duo-verdict-card.selected {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  border-bottom-color: #4338ca;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.35);
+}
+
+/* 5. Binary Policy Verdict / Fact vs Myth */
+.duo-binary-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.duo-binary-scenario-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 2px solid rgba(59, 130, 246, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #f1f5f9;
+}
+.duo-binary-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.duo-binary-btn {
+  padding: 1.15rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.duo-binary-btn:hover {
+  transform: translateY(-2px);
+}
+.duo-binary-btn.btn-true.selected {
+  border-color: #10b981;
+  border-bottom-color: #047857;
+  background: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+.duo-binary-btn.btn-false.selected {
+  border-color: #ef4444;
+  border-bottom-color: #b91c1c;
+  background: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+@keyframes fadeInPop {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+

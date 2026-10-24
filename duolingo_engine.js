@@ -604,12 +604,19 @@ function renderLevelPath() {
 /* ==========================================================================
    INTERACTIVE LESSON ARENA & TASK RUNNER
    ========================================================================== */
+let sorterAssignments = {};
+let clozeAnswers = {};
+let activeClozeBlankId = null;
+
 function startLesson(level) {
   activeLevel = level;
   currentTaskIndex = 0;
   selectedOption = null;
   assembledTokens = [];
   matchedPairCount = 0;
+  sorterAssignments = {};
+  clozeAnswers = {};
+  activeClozeBlankId = null;
 
   const modal = document.getElementById('duo-lesson-modal');
   if (modal) modal.classList.add('active');
@@ -649,15 +656,25 @@ function renderCurrentTask() {
   if (!arena) return;
   arena.innerHTML = '';
 
-  // Render specific task template
+  // Render specific task template (Innovative Formats)
   if (task.type === 'concept') {
     renderConceptTask(task, arena, actionBtn);
-  } else if (task.type === 'mcq') {
-    renderMcqTask(task, arena, actionBtn);
-  } else if (task.type === 'true_false') {
-    renderTrueFalseTask(task, arena, actionBtn);
+  } else if (task.type === 'category_sorter') {
+    renderCategorySorterTask(task, arena, actionBtn);
+  } else if (task.type === 'cloze_chips') {
+    renderClozeChipsTask(task, arena, actionBtn);
+  } else if (task.type === 'flaw_hunter') {
+    renderFlawHunterTask(task, arena, actionBtn);
+  } else if (task.type === 'case_judge') {
+    renderCaseJudgeTask(task, arena, actionBtn);
+  } else if (task.type === 'binary_verdict') {
+    renderBinaryVerdictTask(task, arena, actionBtn);
   } else if (task.type === 'match_pairs') {
     renderMatchPairsTask(task, arena, actionBtn);
+  } else if (task.type === 'true_false') {
+    renderTrueFalseTask(task, arena, actionBtn);
+  } else if (task.type === 'mcq') {
+    renderMcqTask(task, arena, actionBtn);
   } else if (task.type === 'tap_order') {
     renderTapOrderTask(task, arena, actionBtn);
   }
@@ -871,6 +888,288 @@ function renderTapOrderTask(task, arena, actionBtn) {
   });
 }
 
+/* --- Task Type: Category Sorter / Concept Bucketing --- */
+function renderCategorySorterTask(task, arena, actionBtn) {
+  sorterAssignments = {};
+  const categories = task.categories || [];
+  const items = task.items || [];
+
+  const bucketsHtml = categories.map((cat, cIdx) => `
+    <div class="duo-bucket" data-cat="${cat}" id="bucket-${cIdx}">
+      <div class="duo-bucket-title">
+        <span>${cat}</span>
+        <span class="duo-bucket-count" id="bcount-${cIdx}">0</span>
+      </div>
+      <div class="duo-bucket-items" id="bitems-${cIdx}"></div>
+    </div>
+  `).join('');
+
+  const itemsHtml = items.map((it, idx) => `
+    <div class="duo-sorter-card" id="sorter-card-${idx}">
+      <div class="duo-sorter-card-text">${it.text}</div>
+      <div class="duo-cat-buttons">
+        ${categories.map(cat => `
+          <button type="button" class="duo-cat-btn" data-item="${idx}" data-cat="${cat}">${cat}</button>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  arena.innerHTML = `
+    <div class="duo-question-prompt">
+      <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(99,102,241,0.15); border:1px solid rgba(99,102,241,0.3); padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800; color:#818cf8; margin-bottom:0.5rem;">
+        <span>📊 CONCEPT BUCKETER</span>
+      </div>
+      <h3>${task.prompt}</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted);">Assign each industrial profile to its correct statutory category:</p>
+    </div>
+    <div class="duo-sorter-wrap">
+      <div class="duo-bucket-grid">${bucketsHtml}</div>
+      <div class="duo-sorter-items-pool">${itemsHtml}</div>
+    </div>
+  `;
+
+  arena.querySelectorAll('.duo-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      DuoSound.playTap();
+      const itemIdx = parseInt(btn.dataset.item, 10);
+      const chosenCat = btn.dataset.cat;
+      sorterAssignments[itemIdx] = chosenCat;
+
+      const card = arena.querySelector(`#sorter-card-${itemIdx}`);
+      card.querySelectorAll('.duo-cat-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      card.classList.add('classified');
+
+      categories.forEach((cat, cIdx) => {
+        const bItems = arena.querySelector(`#bitems-${cIdx}`);
+        const bCount = arena.querySelector(`#bcount-${cIdx}`);
+        const assigned = items.filter((_, i) => sorterAssignments[i] === cat);
+        bCount.textContent = assigned.length;
+        bItems.innerHTML = assigned.map(it => `
+          <div class="duo-placed-item">
+            <span>${(it.text.split('|')[0] || it.text).substring(0, 38)}...</span>
+            <span style="color:#10b981; font-weight:bold;">✓</span>
+          </div>
+        `).join('');
+      });
+
+      if (Object.keys(sorterAssignments).length === items.length) {
+        actionBtn.disabled = false;
+      }
+    });
+  });
+}
+
+/* --- Task Type: Cloze Chips / Fill-in-the-Blanks --- */
+function renderClozeChipsTask(task, arena, actionBtn) {
+  clozeAnswers = {};
+  activeClozeBlankId = (task.blanks && task.blanks[0]) ? task.blanks[0].id : 1;
+
+  let templateHtml = task.template || '';
+  (task.blanks || []).forEach(b => {
+    const slotTag = `{${b.id}}`;
+    const slotHtml = `<span class="duo-cloze-slot ${b.id === activeClozeBlankId ? 'active' : ''}" data-blank-id="${b.id}" id="cslot-${b.id}">[ Blank ${b.id} ]</span>`;
+    templateHtml = templateHtml.replace(slotTag, slotHtml);
+  });
+
+  const shuffledChips = [...(task.chips || [])].sort(() => Math.random() - 0.5);
+  const chipsHtml = shuffledChips.map((chip, i) => `
+    <button type="button" class="duo-chip-btn" data-chip="${chip}" id="cchip-${i}">${chip}</button>
+  `).join('');
+
+  arena.innerHTML = `
+    <div class="duo-question-prompt">
+      <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800; color:#34d399; margin-bottom:0.5rem;">
+        <span>🧩 CLOZE STATUTORY KEYWORD DROP</span>
+      </div>
+      <h3>${task.prompt}</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted);">Tap a blank, then tap the matching keyword or timeline chip below:</p>
+    </div>
+    <div class="duo-cloze-wrap">
+      <div class="duo-cloze-sentence-box">${templateHtml}</div>
+      <div class="duo-cloze-chips-bank">${chipsHtml}</div>
+    </div>
+  `;
+
+  arena.querySelectorAll('.duo-cloze-slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      DuoSound.playTap();
+      const bId = parseInt(slot.dataset.blankId, 10);
+      if (clozeAnswers[bId]) {
+        const val = clozeAnswers[bId];
+        delete clozeAnswers[bId];
+        slot.textContent = `[ Blank ${bId} ]`;
+        slot.classList.remove('filled');
+        arena.querySelectorAll('.duo-chip-btn').forEach(btn => {
+          if (btn.dataset.chip === val && btn.classList.contains('used')) {
+            btn.classList.remove('used');
+          }
+        });
+      }
+      activeClozeBlankId = bId;
+      arena.querySelectorAll('.duo-cloze-slot').forEach(s => s.classList.remove('active'));
+      slot.classList.add('active');
+      actionBtn.disabled = Object.keys(clozeAnswers).length !== (task.blanks || []).length;
+    });
+  });
+
+  arena.querySelectorAll('.duo-chip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('used')) return;
+      DuoSound.playTap();
+      const chipText = btn.dataset.chip;
+
+      let targetId = activeClozeBlankId;
+      if (!targetId || clozeAnswers[targetId]) {
+        const nextBlank = (task.blanks || []).find(b => !clozeAnswers[b.id]);
+        if (nextBlank) targetId = nextBlank.id;
+      }
+      if (!targetId) return;
+
+      clozeAnswers[targetId] = chipText;
+      btn.classList.add('used');
+
+      const slot = arena.querySelector(`#cslot-${targetId}`);
+      if (slot) {
+        slot.textContent = chipText;
+        slot.classList.remove('active');
+        slot.classList.add('filled');
+      }
+
+      const nextEmpty = (task.blanks || []).find(b => !clozeAnswers[b.id]);
+      if (nextEmpty) {
+        activeClozeBlankId = nextEmpty.id;
+        const nextSlot = arena.querySelector(`#cslot-${nextEmpty.id}`);
+        if (nextSlot) nextSlot.classList.add('active');
+      } else {
+        activeClozeBlankId = null;
+      }
+
+      actionBtn.disabled = Object.keys(clozeAnswers).length !== (task.blanks || []).length;
+    });
+  });
+}
+
+/* --- Task Type: Spot the Impostor / Statutory Flaw Hunter --- */
+function renderFlawHunterTask(task, arena, actionBtn) {
+  selectedOption = null;
+  const cardsHtml = (task.statements || []).map((st, i) => `
+    <div class="duo-flaw-card" data-index="${i}">
+      <span class="duo-flaw-badge">Statement ${String.fromCharCode(65 + i)}</span>
+      <div class="duo-flaw-text">${st.text}</div>
+    </div>
+  `).join('');
+
+  arena.innerHTML = `
+    <div class="duo-question-prompt">
+      <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.3); padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800; color:#f87171; margin-bottom:0.5rem;">
+        <span>🕵️ STATUTORY FLAW HUNTER</span>
+      </div>
+      <h3>${task.prompt}</h3>
+    </div>
+    <div class="duo-flaw-dossier">${cardsHtml}</div>
+  `;
+
+  arena.querySelectorAll('.duo-flaw-card').forEach(card => {
+    card.addEventListener('click', () => {
+      DuoSound.playTap();
+      arena.querySelectorAll('.duo-flaw-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedOption = parseInt(card.dataset.index, 10);
+      actionBtn.disabled = false;
+    });
+  });
+}
+
+/* --- Task Type: Case Study Simulation / Mini-Tribunal Judge --- */
+function renderCaseJudgeTask(task, arena, actionBtn) {
+  selectedOption = null;
+  const dossier = task.caseDossier || { title: 'Case Dossier', facts: [] };
+  const factsHtml = (dossier.facts || []).map(f => `
+    <li class="duo-case-fact-item">
+      <span class="duo-case-fact-bullet">§</span>
+      <span>${f}</span>
+    </li>
+  `).join('');
+
+  const optionsHtml = (task.options || []).map((opt, i) => `
+    <div class="duo-verdict-card" data-index="${i}">
+      <span style="font-size:1.1rem;">⚖️</span>
+      <span>${opt.text}</span>
+    </div>
+  `).join('');
+
+  arena.innerHTML = `
+    <div class="duo-question-prompt">
+      <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(245,158,11,0.15); border:1px solid rgba(245,158,11,0.3); padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800; color:#fbbf24; margin-bottom:0.5rem;">
+        <span>🏛️ MSEFC ARBITRAL TRIBUNAL</span>
+      </div>
+      <h3>${task.prompt}</h3>
+    </div>
+    <div class="duo-case-wrap">
+      <div class="duo-case-dossier-box">
+        <div class="duo-case-header">
+          <div class="duo-case-title"><span>📜</span> ${dossier.title}</div>
+          <span class="duo-case-tag">Arbitral Record</span>
+        </div>
+        <ul class="duo-case-facts">${factsHtml}</ul>
+      </div>
+      <div class="duo-verdict-title">${task.question || 'Determine the Statutory Verdict:'}</div>
+      <div class="duo-verdict-grid">${optionsHtml}</div>
+    </div>
+  `;
+
+  arena.querySelectorAll('.duo-verdict-card').forEach(card => {
+    card.addEventListener('click', () => {
+      DuoSound.playTap();
+      arena.querySelectorAll('.duo-verdict-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedOption = parseInt(card.dataset.index, 10);
+      actionBtn.disabled = false;
+    });
+  });
+}
+
+/* --- Task Type: Binary Policy Verdict --- */
+function renderBinaryVerdictTask(task, arena, actionBtn) {
+  selectedOption = null;
+  const labels = task.labels || { trueLabel: "VALID / TRUE", falseLabel: "INVALID / FALSE" };
+
+  arena.innerHTML = `
+    <div class="duo-question-prompt">
+      <div style="display:inline-flex; align-items:center; gap:0.4rem; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.3); padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800; color:#60a5fa; margin-bottom:0.5rem;">
+        <span>⚖️ STATUTORY POLICY VERDICT</span>
+      </div>
+      <h3>${task.prompt}</h3>
+    </div>
+    <div class="duo-binary-wrap">
+      <div class="duo-binary-scenario-card">${task.scenario || ''}</div>
+      <div style="font-weight:800; font-size:0.95rem; color:#e2e8f0;">${task.verdictQuestion || 'Render your statutory determination:'}</div>
+      <div class="duo-binary-btns">
+        <button type="button" class="duo-binary-btn btn-true" data-val="true">
+          <span style="font-size:1.4rem;">✓</span>
+          <span>${labels.trueLabel}</span>
+        </button>
+        <button type="button" class="duo-binary-btn btn-false" data-val="false">
+          <span style="font-size:1.4rem;">✕</span>
+          <span>${labels.falseLabel}</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  arena.querySelectorAll('.duo-binary-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      DuoSound.playTap();
+      arena.querySelectorAll('.duo-binary-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedOption = btn.dataset.val === 'true';
+      actionBtn.disabled = false;
+    });
+  });
+}
+
 /* ==========================================================================
    TASK EVALUATION & ACTION HANDLER
    ========================================================================== */
@@ -890,7 +1189,24 @@ function handleTaskAction() {
   let isCorrect = false;
   let explanation = '';
 
-  if (task.type === 'mcq') {
+  if (task.type === 'category_sorter') {
+    isCorrect = (task.items || []).every((it, idx) => sorterAssignments[idx] === it.category);
+    explanation = task.explanation || 'Review the composite classification thresholds.';
+  } else if (task.type === 'cloze_chips') {
+    isCorrect = (task.blanks || []).every(b => clozeAnswers[b.id] === b.correct);
+    explanation = task.explanation || 'Statutory formula verified.';
+  } else if (task.type === 'flaw_hunter') {
+    const chosen = (task.statements || [])[selectedOption];
+    isCorrect = chosen && chosen.isFlaw === true;
+    explanation = chosen ? (chosen.flawReason || task.explanation) : task.explanation;
+  } else if (task.type === 'case_judge') {
+    const chosen = (task.options || [])[selectedOption];
+    isCorrect = chosen && chosen.isVerdict === true;
+    explanation = task.explanation;
+  } else if (task.type === 'binary_verdict') {
+    isCorrect = selectedOption === task.correct;
+    explanation = task.explanation;
+  } else if (task.type === 'mcq') {
     isCorrect = selectedOption === task.correctIndex;
     explanation = task.explanation;
   } else if (task.type === 'true_false') {

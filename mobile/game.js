@@ -600,8 +600,273 @@
     promptEl.textContent = task.prompt || task.question;
     DOM.playQuestionBox.appendChild(promptEl);
 
+    // TYPE: CATEGORY SORTER / BUCKETER
+    if (task.type === 'category_sorter') {
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-sorter-wrap';
+
+      const categories = task.categories || [];
+      const items = task.items || [];
+
+      const bGrid = document.createElement('div');
+      bGrid.className = 'mobile-bucket-grid';
+      categories.forEach((cat, cIdx) => {
+        const bEl = document.createElement('div');
+        bEl.className = 'mobile-bucket';
+        bEl.id = `m-bucket-${cIdx}`;
+        bEl.innerHTML = `
+          <div class="mobile-bucket-title">
+            <span>${cat}</span>
+            <span class="mobile-bucket-count" id="m-bcount-${cIdx}">0</span>
+          </div>
+          <div class="mobile-bucket-items" id="m-bitems-${cIdx}"></div>
+        `;
+        bGrid.appendChild(bEl);
+      });
+      wrap.appendChild(bGrid);
+
+      const pool = document.createElement('div');
+      pool.style.cssText = 'display:flex; flex-direction:column; gap:0.6rem;';
+      items.forEach((it, idx) => {
+        const card = document.createElement('div');
+        card.className = 'mobile-sorter-card';
+        card.id = `m-scard-${idx}`;
+        card.innerHTML = `
+          <div class="mobile-sorter-card-text">${it.text}</div>
+          <div class="mobile-cat-buttons">
+            ${categories.map(cat => `<button type="button" class="mobile-cat-btn" data-item="${idx}" data-cat="${cat}">${cat}</button>`).join('')}
+          </div>
+        `;
+        card.querySelectorAll('.mobile-cat-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            SoundFX.playTap();
+            const itemIdx = parseInt(btn.dataset.item, 10);
+            const chosenCat = btn.dataset.cat;
+            STATE.sorterAssignments[itemIdx] = chosenCat;
+
+            card.querySelectorAll('.mobile-cat-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            card.classList.add('classified');
+
+            categories.forEach((cat, cIdx) => {
+              const bItems = wrap.querySelector(`#m-bitems-${cIdx}`);
+              const bCount = wrap.querySelector(`#m-bcount-${cIdx}`);
+              const assigned = items.filter((_, i) => STATE.sorterAssignments[i] === cat);
+              bCount.textContent = assigned.length;
+              bItems.innerHTML = assigned.map(it => `
+                <div class="mobile-placed-item">
+                  <span>${(it.text.split('|')[0] || it.text).substring(0, 32)}...</span>
+                  <span style="color:#10b981; font-weight:800;">✓</span>
+                </div>
+              `).join('');
+            });
+
+            if (Object.keys(STATE.sorterAssignments).length === items.length) {
+              DOM.playActionBtn.disabled = false;
+            }
+          });
+        });
+        pool.appendChild(card);
+      });
+      wrap.appendChild(pool);
+      DOM.playQuestionBox.appendChild(wrap);
+    }
+    // TYPE: CLOZE CHIPS
+    else if (task.type === 'cloze_chips') {
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-cloze-wrap';
+
+      STATE.clozeAnswers = {};
+      STATE.activeClozeBlankId = (task.blanks && task.blanks[0]) ? task.blanks[0].id : 1;
+
+      let tmpl = task.template || '';
+      (task.blanks || []).forEach(b => {
+        tmpl = tmpl.replace(`{${b.id}}`, `<span class="mobile-cloze-slot ${b.id === STATE.activeClozeBlankId ? 'active' : ''}" data-blank-id="${b.id}" id="m-cslot-${b.id}">[ Blank ${b.id} ]</span>`);
+      });
+
+      const box = document.createElement('div');
+      box.className = 'mobile-cloze-box';
+      box.innerHTML = tmpl;
+      wrap.appendChild(box);
+
+      box.querySelectorAll('.mobile-cloze-slot').forEach(slot => {
+        slot.addEventListener('click', () => {
+          SoundFX.playTap();
+          const bId = parseInt(slot.dataset.blankId, 10);
+          if (STATE.clozeAnswers[bId]) {
+            const val = STATE.clozeAnswers[bId];
+            delete STATE.clozeAnswers[bId];
+            slot.textContent = `[ Blank ${bId} ]`;
+            slot.classList.remove('filled');
+            wrap.querySelectorAll('.mobile-chip-btn').forEach(b => {
+              if (b.dataset.chip === val && b.classList.contains('used')) {
+                b.classList.remove('used');
+              }
+            });
+          }
+          STATE.activeClozeBlankId = bId;
+          box.querySelectorAll('.mobile-cloze-slot').forEach(s => s.classList.remove('active'));
+          slot.classList.add('active');
+          DOM.playActionBtn.disabled = Object.keys(STATE.clozeAnswers).length !== (task.blanks || []).length;
+        });
+      });
+
+      const bank = document.createElement('div');
+      bank.className = 'mobile-chips-bank';
+      const shuffled = [...(task.chips || [])].sort(() => Math.random() - 0.5);
+      shuffled.forEach(chip => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'mobile-chip-btn';
+        btn.dataset.chip = chip;
+        btn.textContent = chip;
+        btn.addEventListener('click', () => {
+          if (btn.classList.contains('used')) return;
+          SoundFX.playTap();
+
+          let targetId = STATE.activeClozeBlankId;
+          if (!targetId || STATE.clozeAnswers[targetId]) {
+            const nextBlank = (task.blanks || []).find(b => !STATE.clozeAnswers[b.id]);
+            if (nextBlank) targetId = nextBlank.id;
+          }
+          if (!targetId) return;
+
+          STATE.clozeAnswers[targetId] = chip;
+          btn.classList.add('used');
+
+          const slot = box.querySelector(`#m-cslot-${targetId}`);
+          if (slot) {
+            slot.textContent = chip;
+            slot.classList.remove('active');
+            slot.classList.add('filled');
+          }
+
+          const nextEmpty = (task.blanks || []).find(b => !STATE.clozeAnswers[b.id]);
+          if (nextEmpty) {
+            STATE.activeClozeBlankId = nextEmpty.id;
+            const nextSlot = box.querySelector(`#m-cslot-${nextEmpty.id}`);
+            if (nextSlot) nextSlot.classList.add('active');
+          } else {
+            STATE.activeClozeBlankId = null;
+          }
+
+          DOM.playActionBtn.disabled = Object.keys(STATE.clozeAnswers).length !== (task.blanks || []).length;
+        });
+        bank.appendChild(btn);
+      });
+      wrap.appendChild(bank);
+      DOM.playQuestionBox.appendChild(wrap);
+    }
+    // TYPE: FLAW HUNTER
+    else if (task.type === 'flaw_hunter') {
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-flaw-dossier';
+
+      (task.statements || []).forEach((st, idx) => {
+        const card = document.createElement('div');
+        card.className = 'mobile-flaw-card';
+        card.innerHTML = `
+          <span class="mobile-flaw-badge">Statement ${String.fromCharCode(65 + idx)}</span>
+          <div class="mobile-flaw-text">${st.text}</div>
+        `;
+        card.addEventListener('click', () => {
+          SoundFX.playTap();
+          wrap.querySelectorAll('.mobile-flaw-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          STATE.selectedOption = idx;
+          DOM.playActionBtn.disabled = false;
+        });
+        wrap.appendChild(card);
+      });
+      DOM.playQuestionBox.appendChild(wrap);
+    }
+    // TYPE: CASE JUDGE
+    else if (task.type === 'case_judge') {
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-case-wrap';
+
+      const dossier = task.caseDossier || { title: 'Case Record', facts: [] };
+      const dBox = document.createElement('div');
+      dBox.className = 'mobile-case-dossier';
+      dBox.innerHTML = `
+        <div class="mobile-case-header">
+          <div class="mobile-case-title"><span>🏛️</span> ${dossier.title}</div>
+          <span style="font-size:0.7rem; font-weight:800; color:#fbbf24; background:rgba(245,158,11,0.2); padding:2px 6px; border-radius:4px;">Record</span>
+        </div>
+        <div>
+          ${(dossier.facts || []).map(f => `<div class="mobile-case-fact-item"><span style="color:#fbbf24; font-weight:bold;">§</span> ${f}</div>`).join('')}
+        </div>
+      `;
+      wrap.appendChild(dBox);
+
+      const qTitle = document.createElement('div');
+      qTitle.style.cssText = 'font-weight:800; font-size:0.9rem; color:#e2e8f0; margin-top:0.3rem;';
+      qTitle.textContent = task.question || 'Render your statutory verdict:';
+      wrap.appendChild(qTitle);
+
+      const vGrid = document.createElement('div');
+      vGrid.className = 'mobile-verdict-grid';
+      (task.options || []).forEach((opt, idx) => {
+        const card = document.createElement('div');
+        card.className = 'mobile-verdict-card';
+        card.innerHTML = `<span>⚖️</span> <span>${opt.text}</span>`;
+        card.addEventListener('click', () => {
+          SoundFX.playTap();
+          vGrid.querySelectorAll('.mobile-verdict-card').forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          STATE.selectedOption = idx;
+          DOM.playActionBtn.disabled = false;
+        });
+        vGrid.appendChild(card);
+      });
+      wrap.appendChild(vGrid);
+      DOM.playQuestionBox.appendChild(wrap);
+    }
+    // TYPE: BINARY VERDICT
+    else if (task.type === 'binary_verdict') {
+      const wrap = document.createElement('div');
+      wrap.className = 'mobile-binary-wrap';
+
+      const scBox = document.createElement('div');
+      scBox.className = 'mobile-binary-scenario';
+      scBox.textContent = task.scenario || '';
+      wrap.appendChild(scBox);
+
+      const vTitle = document.createElement('div');
+      vTitle.style.cssText = 'font-weight:800; font-size:0.9rem; color:#e2e8f0; margin-top:0.3rem;';
+      vTitle.textContent = task.verdictQuestion || 'Statutory determination:';
+      wrap.appendChild(vTitle);
+
+      const labels = task.labels || { trueLabel: "VALID / TRUE", falseLabel: "INVALID / FALSE" };
+      const btns = document.createElement('div');
+      btns.className = 'mobile-binary-btns';
+      btns.innerHTML = `
+        <button type="button" class="mobile-binary-btn btn-true">✓ ${labels.trueLabel}</button>
+        <button type="button" class="mobile-binary-btn btn-false">✕ ${labels.falseLabel}</button>
+      `;
+
+      const bTrue = btns.querySelector('.btn-true');
+      const bFalse = btns.querySelector('.btn-false');
+      bTrue.onclick = () => {
+        SoundFX.playTap();
+        bTrue.classList.add('selected');
+        bFalse.classList.remove('selected');
+        STATE.selectedOption = true;
+        DOM.playActionBtn.disabled = false;
+      };
+      bFalse.onclick = () => {
+        SoundFX.playTap();
+        bFalse.classList.add('selected');
+        bTrue.classList.remove('selected');
+        STATE.selectedOption = false;
+        DOM.playActionBtn.disabled = false;
+      };
+
+      wrap.appendChild(btns);
+      DOM.playQuestionBox.appendChild(wrap);
+    }
     // TYPE 2: MCQ (Desktop Verbatim)
-    if (task.type === 'mcq') {
+    else if (task.type === 'mcq') {
       const grid = document.createElement('div');
       grid.className = 'options-grid';
       task.options.forEach((opt, idx) => {
@@ -781,7 +1046,19 @@
 
     let isCorrect = false;
 
-    if (task.type === 'mcq') {
+    if (task.type === 'category_sorter') {
+      isCorrect = (task.items || []).every((it, idx) => STATE.sorterAssignments[idx] === it.category);
+    } else if (task.type === 'cloze_chips') {
+      isCorrect = (task.blanks || []).every(b => STATE.clozeAnswers[b.id] === b.correct);
+    } else if (task.type === 'flaw_hunter') {
+      const chosen = (task.statements || [])[STATE.selectedOption];
+      isCorrect = chosen && chosen.isFlaw === true;
+    } else if (task.type === 'case_judge') {
+      const chosen = (task.options || [])[STATE.selectedOption];
+      isCorrect = chosen && chosen.isVerdict === true;
+    } else if (task.type === 'binary_verdict') {
+      isCorrect = STATE.selectedOption === task.correct;
+    } else if (task.type === 'mcq') {
       isCorrect = STATE.selectedOption === task.correctIndex;
     } else if (task.type === 'true_false' || task.type === 'swipe') {
       isCorrect = STATE.selectedOption === (task.correct !== undefined ? task.correct : task.isTrue);

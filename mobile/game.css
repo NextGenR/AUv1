@@ -1794,4 +1794,323 @@ body.samsung-light .mobile-textarea {
   transform: scale(0.98);
 }
 
+/* ==========================================================================
+   INNOVATIVE MOBILE FORMATS (NO STANDARD MCQS)
+   ========================================================================== */
+
+/* 1. Category Sorter / Concept Bucketer (Mobile) */
+.mobile-sorter-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobile-bucket-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+.mobile-bucket {
+  background: var(--game-card);
+  border: 1.5px dashed var(--game-card-border);
+  border-radius: 16px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-bucket-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--game-blue);
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-bucket-count {
+  background: rgba(44, 117, 255, 0.2);
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+body.samsung-light .mobile-bucket-count {
+  color: var(--samsung-blue);
+}
+.mobile-bucket-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.mobile-placed-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--game-border-subtle);
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--game-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body.samsung-light .mobile-placed-item {
+  background: #f1f5f9;
+}
+.mobile-sorter-card {
+  background: var(--game-card);
+  border: 2px solid var(--game-card-border);
+  border-bottom: 4px solid var(--game-card-border-b);
+  border-radius: 18px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobile-sorter-card.classified {
+  opacity: 0.5;
+  border-color: var(--game-green);
+}
+.mobile-sorter-card-text {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--game-text);
+}
+.mobile-cat-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.mobile-cat-btn {
+  background: rgba(44, 117, 255, 0.12);
+  border: 1.5px solid var(--game-blue);
+  color: #93c5fd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+body.samsung-light .mobile-cat-btn {
+  color: var(--samsung-blue);
+}
+.mobile-cat-btn.selected {
+  background: var(--game-blue);
+  color: #fff;
+}
+
+/* 2. Cloze Chips / Fill-in-the-Blanks (Mobile) */
+.mobile-cloze-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.mobile-cloze-box {
+  background: var(--game-card);
+  border: 2px solid var(--game-card-border);
+  border-radius: 18px;
+  padding: 1rem 1.15rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--game-text);
+}
+.mobile-cloze-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  height: 34px;
+  padding: 0 0.65rem;
+  margin: 0 0.2rem;
+  border-radius: 8px;
+  background: rgba(44, 117, 255, 0.12);
+  border: 2px dashed var(--game-blue);
+  color: #93c5fd;
+  font-weight: 800;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.mobile-cloze-slot.active {
+  border-color: #38bdf8;
+  border-style: solid;
+  background: rgba(56, 189, 248, 0.2);
+  color: #fff;
+}
+.mobile-cloze-slot.filled {
+  border-color: var(--game-green);
+  border-style: solid;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+body.samsung-light .mobile-cloze-slot.filled {
+  color: #00703c;
+}
+.mobile-chips-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.85rem;
+  border-radius: 16px;
+}
+body.samsung-light .mobile-chips-bank {
+  background: #f1f5f9;
+}
+.mobile-chip-btn {
+  background: var(--game-card);
+  border: 1.5px solid var(--game-card-border);
+  border-bottom: 3.5px solid var(--game-card-border-b);
+  border-radius: 12px;
+  padding: 0.55rem 0.95rem;
+  color: var(--game-text);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.mobile-chip-btn.used {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* 3. Flaw Hunter / Spot the Impostor (Mobile) */
+.mobile-flaw-dossier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.mobile-flaw-card {
+  background: var(--game-card);
+  border: 2px solid var(--game-card-border);
+  border-bottom: 4px solid var(--game-card-border-b);
+  border-radius: 18px;
+  padding: 0.95rem 1.1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.mobile-flaw-card.selected {
+  border-color: var(--game-red);
+  border-bottom-color: #b91c1c;
+  background: rgba(239, 68, 68, 0.15);
+}
+.mobile-flaw-badge {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 6px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.mobile-flaw-card.selected .mobile-flaw-badge {
+  background: var(--game-red);
+  color: #fff;
+}
+.mobile-flaw-text {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--game-text);
+  font-weight: 600;
+}
+
+/* 4. Case Study Simulation (Mobile) */
+.mobile-case-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobile-case-dossier {
+  background: var(--game-card);
+  border: 2px solid var(--game-amber);
+  border-radius: 18px;
+  padding: 1rem;
+}
+.mobile-case-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.25);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+.mobile-case-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+.mobile-case-fact-item {
+  font-size: 0.85rem;
+  color: var(--game-text-dim);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+.mobile-verdict-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.mobile-verdict-card {
+  background: var(--game-card);
+  border: 2px solid var(--game-card-border);
+  border-bottom: 4px solid var(--game-card-border-b);
+  border-radius: 16px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--game-text);
+  cursor: pointer;
+}
+.mobile-verdict-card.selected {
+  background: rgba(44, 117, 255, 0.18);
+  border-color: var(--game-blue);
+  border-bottom-color: var(--game-blue-dark);
+}
+
+/* 5. Binary Policy Verdict (Mobile) */
+.mobile-binary-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.mobile-binary-scenario {
+  background: var(--game-card);
+  border: 2px solid var(--game-card-border);
+  border-radius: 18px;
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--game-text);
+}
+.mobile-binary-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.mobile-binary-btn {
+  padding: 1rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid var(--game-card-border);
+  border-bottom: 4px solid var(--game-card-border-b);
+  background: var(--game-card);
+  color: var(--game-text);
+}
+.mobile-binary-btn.btn-true.selected {
+  border-color: var(--game-green);
+  border-bottom-color: var(--game-green-dark);
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--game-green);
+}
+.mobile-binary-btn.btn-false.selected {
+  border-color: var(--game-red);
+  border-bottom-color: #b91c1c;
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
 
