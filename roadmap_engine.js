@@ -132,6 +132,29 @@
         actionText: '📊 Review AI Pyramid Tiers',
         targetBranchId: 'ai-b6'
       }
+    ],
+    'msme': [
+      {
+        afterSectionIndex: 1,
+        title: '🏭 Milestone 1: The Creative Destruction & Dwarfism Diagnostic',
+        text: 'You have mastered the 31.1% GDP macro bedrock and Joseph Schumpeter\'s Creative Destruction. Indefinite size-based reservations foster pathological dwarfism rather than scaling up infants.',
+        actionText: '🔍 Inspect Missing Middle',
+        targetBranchId: 'msme-b5'
+      },
+      {
+        afterSectionIndex: 2,
+        title: '⚖️ Milestone 2: The Statutory Fortress & Section 43B(h)',
+        text: 'Section 16 penal interest (3x Bank Rate) and Section 43B(h) tax disallowance form the dual legal teeth safeguarding small supplier liquidity.',
+        actionText: '📜 Review Section 43B(h)',
+        targetBranchId: 'msme-b8'
+      },
+      {
+        afterSectionIndex: 3,
+        title: '🏦 Milestone 3: The Budget 2025 Underwriting Revolution',
+        text: 'Shifting from immovable land mortgages to scoring digital footprints (GST/TReDS) unlocks bank credit for asset-light innovators.',
+        actionText: '✨ View Budget Reforms',
+        targetBranchId: 'msme-b9'
+      }
     ]
   };
 
@@ -151,6 +174,12 @@
       { name: 'Cause-List AI', id: 'ai-b4-1' },
       { name: 'Registry Defect Check', id: 'ai-b4-2' },
       { name: 'Docket Grouping', id: 'ai-b4-3' }
+    ],
+    'msme-b3': [
+      { name: 'Micro: ≤ ₹1Cr / ₹5Cr', id: 'msme-b3-1' },
+      { name: 'Small: ≤ ₹10Cr / ₹50Cr', id: 'msme-b3-2' },
+      { name: 'Medium: ≤ ₹50Cr / ₹250Cr', id: 'msme-b3-3' },
+      { name: 'Exports Excluded', id: 'msme-b3-4' }
     ]
   };
 

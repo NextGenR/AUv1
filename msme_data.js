@@ -84,6 +84,10 @@ const MSME_DATA = {
             detail: "Shift from legacy 2006 bifurcated criteria to 2020 composite investment-turnover standards, augmented by Budget 2025-26 credit underwriting reforms."
           },
           {
+            text: "Joseph Schumpeter's 'Creative Destruction' vs Capital Locking",
+            detail: "Healthy economies thrive through continuous innovation where dynamic firms displace obsolete enterprises. Rigid exit barriers and distortionary subsidies lock capital and labor in unproductive dwarf units, choking creative destruction."
+          },
+          {
             text: "Urgent Need to Dismantle the 'Missing Middle' & Dwarfism",
             detail: "Perverse incentives historically prompted firms to intentionally suppress scale to retain small-enterprise fiscal exemptions."
           }
@@ -311,7 +315,7 @@ const MSME_DATA = {
           title: "Dwarfs vs. Infants (Economic Survey 2018-19)",
           mascotMood: "concerned",
           flowchart: "flowchart_dwarfism_vs_mittelstand.svg",
-          content: "Chief Economic Adviser Krishnamurthy Subramanian highlighted a fundamental flaw in Indian industrial policy:\n\n• **Infants:** Young firms that start small but rapidly scale up in productivity, employment, and technology.\n• **Dwarfs:** Firms that remain small despite being in business for over 10-20 years!\n\n**Why do firms stay small?** Historically, policy offered subsidies based on *size* rather than *age*, creating a 'regulatory cliff' where growing meant losing priority sector credit, tax exemptions, and labor inspection immunities.\n\nOver 99.4% of India's MSMEs are Micro units; only 0.52% are Small and 0.08% are Medium—a stark 'Missing Middle'.",
+          content: "Chief Economic Adviser Krishnamurthy Subramanian and CAVA Lecture 4 highlight a fundamental flaw in Indian industrial policy:\n\n• **Infants:** Young firms that start small but rapidly scale up in productivity, employment, and technology.\n• **Dwarfs:** Firms that remain small despite being in business for over 10-20 years!\n• **Creative Destruction (Joseph Schumpeter):** Dynamic economies thrive when innovative firms displace obsolete units. In India, rigid exit barriers and distortionary subsidies trap capital in unproductive dwarf units, choking creative destruction.\n\n**Why do firms stay small?** Historically, policy offered subsidies based on *size* rather than *age*, creating a 'regulatory cliff' where growing meant losing priority sector credit, tax exemptions, and labor inspection immunities.\n\nOver 99.4% of India's MSMEs are Micro units; only 0.52% are Small and 0.08% are Medium—a stark 'Missing Middle'.",
           keyTakeaway: "Policy must incentivize infant firms with sunset clauses rather than permanently subsidizing perpetual dwarf enterprises."
         },
         {
@@ -330,10 +334,10 @@ const MSME_DATA = {
           type: "match_pairs",
           prompt: "Match the Industrial Structure Concept with its Definitional Attribute:",
           pairs: [
+            { left: "Creative Destruction", right: "Schumpeterian innovation hindered by exit barriers & subsidies" },
             { left: "Missing Middle", right: "Severe deficit of medium-sized enterprises (0.08%)" },
             { left: "German Mittelstand", right: "High-productivity, globally competitive niche leaders" },
-            { left: "Regulatory Cliff", right: "Disincentive to expand due to loss of size-based subsidies" },
-            { left: "Zombie Enterprise", right: "Insolvent firm surviving only on subsidized bank rollover" }
+            { left: "Regulatory Cliff", right: "Disincentive to expand due to loss of size-based subsidies" }
           ]
         },
         {

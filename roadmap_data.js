@@ -459,5 +459,313 @@ const ROADMAP_DATA = {
         ]
       }
     ]
+  },
+  "msme": {
+    id: "msme",
+    title: "MSMEs as Catalysts: Growth Engine, Creative Destruction & Budget Reforms",
+    subject: "CAVA Lecture 4",
+    syllabus: "GS-3: Indian Economy, Industrial Policy & Mobilization of Resources",
+    readTime: "18 min visual roadmap",
+    sections: [
+      {
+        id: "msme-trunk-1",
+        title: "Macro Bedrock & Employment Footprint",
+        subtitle: "The 31.1% Engine of Indian Growth",
+        isCore: true,
+        branches: [
+          {
+            id: "msme-b1",
+            title: "The 31.1% GDP & 35.4% GVA Bedrock",
+            shortDesc: "MSMEs drive 31.1% of national GDP, 35.4% of manufacturing GVA, and 48.6% of merchandise exports.",
+            tag: "Macro Pillar",
+            details: `
+              <h4>The Bedrock of India's Economic Architecture</h4>
+              <p>Official data and CAVA Lecture 4 establish that any MSME answer must open with precise macro data:</p>
+              <div class="reading-callout">
+                <strong>Macro Statistics:</strong>
+                <ul>
+                  <li><strong>31.1%</strong> of India's Gross Domestic Product (GDP)</li>
+                  <li><strong>35.4%</strong> of Manufacturing Gross Value Added (GVA)</li>
+                  <li><strong>48.6%</strong> of Total Merchandise Exports</li>
+                  <li><strong>Over 11.1 Crore jobs</strong> across 6.33 crore enterprises</li>
+                </ul>
+              </div>
+              <p>MSMEs generate 4x more employment per unit of capital invested compared to large-scale organized manufacturing corporations.</p>
+            `,
+            quotes: ["\"MSME means data has to be there. No other introduction, whatever be the MSME question!\" - CAVA 4"],
+            mainsTip: "Use 31.1% GDP + 48.6% Exports as your opening data hook."
+          },
+          {
+            id: "msme-b2",
+            title: "51.2% Rural Social Footprint",
+            shortDesc: "Decentralized regional growth preventing distress urban migration; high SC/ST/OBC ownership.",
+            tag: "Inclusive Growth",
+            details: `
+              <h4>Democratization of Employment & Rural Decentralization</h4>
+              <p>More than <strong>51.2% of MSMEs are situated in rural hinterlands</strong>, making the sector the foremost driver of decentralized, balanced regional development.</p>
+              <div class="reading-callout reading-callout-warning">
+                <strong>Social Equity Anchor:</strong> Substantial ownership among SC, ST, and Women entrepreneurs enables direct wealth generation and prevents forced distress migration to congested Tier-1 megacities.
+              </div>
+            `,
+            quotes: ["Over 51% of MSMEs are rural, anchoring decentralized regional growth."],
+            mainsTip: "Connect to inclusive growth and distress migration mitigation."
+          },
+          {
+            id: "msme-b3",
+            title: "Composite Classification Matrix (2020)",
+            shortDesc: "Investment & Turnover dual ceilings (1/5, 10/50, 50/250) with statutory exclusion of exports.",
+            tag: "Statutory Matrix",
+            details: `
+              <h4>Unified Composite Criteria (July 1, 2020)</h4>
+              <p>Abolished the legacy manufacturing vs service dichotomy, adopting a dual Investment AND Turnover test:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>Micro:</strong> Investment ≤ ₹1 Cr | Turnover ≤ ₹5 Cr</li>
+                  <li><strong>Small:</strong> Investment ≤ ₹10 Cr | Turnover ≤ ₹50 Cr</li>
+                  <li><strong>Medium:</strong> Investment ≤ ₹50 Cr | Turnover ≤ ₹250 Cr</li>
+                </ul>
+                <p><strong>Golden Rule:</strong> Export turnover is statutorily EXCLUDED to incentivize global competitiveness.</p>
+              </div>
+            `,
+            quotes: ["Export turnover is strictly excluded from classification ceilings."],
+            mainsTip: "Highlight the 1:5 ratio and export exclusion rule."
+          }
+        ]
+      },
+      {
+        id: "msme-trunk-2",
+        title: "Structural Dilemmas: Dwarfism & Creative Destruction",
+        subtitle: "The Missing Middle vs. German Mittelstand",
+        isCore: true,
+        branches: [
+          {
+            id: "msme-b4",
+            title: "Joseph Schumpeter's Creative Destruction",
+            shortDesc: "Market process where dynamic innovators displace obsolete firms, hindered by exit barriers and subsidies.",
+            tag: "Core Economic Concept",
+            details: `
+              <h4>Creative Destruction (Joseph Schumpeter)</h4>
+              <p>As emphasized in CAVA Lecture 4, <em>Creative Destruction</em> describes the continuous process of industrial mutation where technologically dynamic innovators displace obsolete, inefficient enterprises.</p>
+              <div class="reading-callout reading-callout-warning">
+                <strong>The Indian Paradox:</strong> When bankruptcy, labor laws, and insolvency exit barriers prevent unviable firms from closing down, capital and labor remain trapped in unproductive units, blocking creative destruction.
+              </div>
+            `,
+            quotes: ["Joseph Schumpeter: 'Destructing the obsolete to create the innovative new.'"],
+            mainsTip: "Anchor analytical questions on exit policy and IBC with Schumpeter's creative destruction."
+          },
+          {
+            id: "msme-b5",
+            title: "Dwarfs vs. Infant Enterprises (Eco Survey)",
+            shortDesc: "Firms staying small for decades to retain subsidies vs young firms growing exponentially.",
+            tag: "Economic Survey Thesis",
+            details: `
+              <h4>Dwarfs vs Infants (Economic Survey 2018-19)</h4>
+              <p>Chief Economic Adviser Krishnamurthy Subramanian highlighted:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>Infant Enterprises:</strong> Young firms that start small but rapidly scale in productivity, employment, and technology.</li>
+                  <li><strong>Dwarf Enterprises:</strong> Firms that remain small despite being in business for over 10-20 years!</li>
+                </ul>
+                <p>Over 99.4% of units remain micro; only 0.08% are medium—creating the infamous 'Missing Middle'.</p>
+              </div>
+            `,
+            quotes: ["Economic Survey: Subsidize infant firms with sunset clauses, not perpetual dwarfs."],
+            mainsTip: "Use the dwarfism thesis to critique indefinite size-based reservations."
+          },
+          {
+            id: "msme-b6",
+            title: "The German 'Mittelstand' Benchmark",
+            shortDesc: "Scale-neutral incentives, dual technical vocational education, and global niche export champions.",
+            tag: "Global Best Practice",
+            details: `
+              <h4>The Mittelstand Blueprint for India</h4>
+              <p>Germany's world-leading industrial backbone relies on medium-sized family-owned firms (Mittelstand) characterized by:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li>Scale-neutral regulatory compliance and tax regimes</li>
+                  <li>Dual vocational apprenticeship systems linking technical institutes to shop floors</li>
+                  <li>Deep niche specialization dominating global B2B export supply chains</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["German Mittelstand: Scale-neutral support creates global niche champions."],
+            mainsTip: "Propose Mittelstand adoption in Way Forward for GS-3 industrial policy."
+          }
+        ]
+      },
+      {
+        id: "msme-trunk-3",
+        title: "Statutory Fortress: MSMED Act & Section 43B(h)",
+        subtitle: "Solving Delayed Payments & Working Capital Asphyxiation",
+        isCore: true,
+        branches: [
+          {
+            id: "msme-b7",
+            title: "MSMED Act Sections 15 to 19",
+            shortDesc: "15-day default, 45-day ceiling, 3x RBI Bank Rate compounding interest, and MSEFC 90-day arbitration.",
+            tag: "Statutory Teeth",
+            details: `
+              <h4>The Delayed Payments Statutory Code</h4>
+              <p>Sections 15 to 19 of the MSMED Act, 2006 provide powerful protection for micro and small suppliers:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>Section 15:</strong> Mandatory payment within agreed timeline (max 45 days) or 15 days by default.</li>
+                  <li><strong>Section 16:</strong> Penal compound interest with monthly rests at <strong>3x the RBI Bank Rate</strong>.</li>
+                  <li><strong>Section 18:</strong> MSEFC conciliation/arbitration within 90 days.</li>
+                  <li><strong>Section 19:</strong> Mandatory 75% pre-deposit by buyer before challenging any MSEFC award.</li>
+                  <li><strong>Section 23:</strong> Penal interest cannot be claimed as tax-deductible expenditure.</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["Section 16 compound penal interest at 3x RBI Bank Rate is non-waivable."],
+            mainsTip: "Cite Sections 15, 16, and 19 for any question on MSME liquidity."
+          },
+          {
+            id: "msme-b8",
+            title: "Section 43B(h) Income Tax Revolution",
+            shortDesc: "Finance Act 2023: Tax deduction disallowed for corporate buyers delaying MSE payment past 45 days.",
+            tag: "Tax Law Game Changer",
+            details: `
+              <h4>Section 43B(h) of Income Tax Act (AY 2024-25)</h4>
+              <p>Direct tax deduction is conditioned upon timely payment to Micro and Small suppliers:</p>
+              <div class="reading-callout reading-callout-warning">
+                <strong>Statutory Mechanism:</strong> If a buyer fails to pay a registered MSE within 45 days, the entire purchase amount is disallowed as a business deduction in that fiscal year, forcing income tax liability!
+                <br><br>
+                <strong>Nuances:</strong> Applies only to Micro and Small entities (Medium excluded; retail traders excluded unless registered manufacturers).
+              </div>
+            `,
+            quotes: ["Section 43B(h): Transforming delayed payment from civil breach to tax disallowance."],
+            mainsTip: "Highlight Section 43B(h) as an effective behavioral nudge."
+          }
+        ]
+      },
+      {
+        id: "msme-trunk-4",
+        title: "Union Budget 2025-26 & Credit Underwriting",
+        subtitle: "Dismantling the ₹30 Lakh Crore Credit Deficit",
+        isCore: true,
+        branches: [
+          {
+            id: "msme-b9",
+            title: "₹100 Cr Manufacturing Term Loan Guarantee",
+            shortDesc: "Self-financing guarantee fund providing collateral-free credit cover up to ₹100 Crore for machinery.",
+            tag: "Budget 2025 Reform",
+            details: `
+              <h4>Budget 2025-26 Credit Guarantee Architecture</h4>
+              <p>Union Budget 2025-26 directly attacked the physical collateral bottleneck:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>₹100 Cr Guarantee Fund:</strong> Self-financing guarantee providing collateral-free cover for term loans up to ₹100 Cr to purchase machinery and equipment.</li>
+                  <li><strong>CGTMSE Doubling:</strong> Normal guarantee cover under CGTMSE doubled from ₹5 Cr to ₹10 Cr.</li>
+                  <li><strong>Digital Footprint Underwriting:</strong> PSBs shift from immovable land mortgages to scoring GST returns and TReDS invoices.</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["Union Budget 2025-26: Shifting from balance-sheet mortgage to cash-flow underwriting."],
+            mainsTip: "Prime data point for Budget 2025-26 economic governance answers."
+          },
+          {
+            id: "msme-b10",
+            title: "PM Vishwakarma 5-Pillar Architecture",
+            shortDesc: "₹13,000 Cr Central Sector Scheme covering 18 artisan trades with ₹15k toolkits and 5% credit.",
+            tag: "Artisan Empowerment",
+            details: `
+              <h4>PM Vishwakarma Central Sector Scheme</h4>
+              <p>Launched on Vishwakarma Jayanti with ₹13,000 Crore outlay for 18 traditional artisan trades:</p>
+              <div class="reading-callout">
+                <ol>
+                  <li>Recognition: PM Vishwakarma Certificate & Digital ID</li>
+                  <li>Skill Upgradation: 5-7 days basic (₹500/day stipend) + 15 days advanced</li>
+                  <li>Toolkit Grant: ₹15,000 modern e-voucher</li>
+                  <li>Credit: Collateral-free ₹1L + ₹2L at 5% concessional interest (8% subvention)</li>
+                  <li>Digital Incentives & GeM/ONDC market linkages</li>
+                </ol>
+              </div>
+            `,
+            quotes: ["PM Vishwakarma: Preserving guru-shishya parampara with Industry 4.0 market linkages."],
+            mainsTip: "Comprehensive case study for rural artisanal industrialization."
+          },
+          {
+            id: "msme-b11",
+            title: "TReDS Mandatory Onboarding & Mudra Tarun Plus",
+            shortDesc: "Turnover ceiling lowered to ₹500 Cr for buyers; Mudra Tarun ceiling doubled to ₹20 Lakh.",
+            tag: "Liquidity Ecosystem",
+            details: `
+              <h4>Receivables Liquidity & Mudra Expansion</h4>
+              <p>Expanding liquidity pipelines for small entrepreneurs:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>TReDS Mandate:</strong> Lowered turnover threshold for mandatory corporate buyer onboarding to ₹500 Crore.</li>
+                  <li><strong>Mudra 'Tarun Plus':</strong> Ceiling doubled from ₹10 Lakh to ₹20 Lakh for entrepreneurs with good repayment track records.</li>
+                  <li><strong>UAP Platform:</strong> Enabled 1.5+ crore informal micro units to obtain priority sector lending certificates without GSTIN.</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["TReDS securitisation turns unpaid bills into immediate working capital."],
+            mainsTip: "Cite TReDS and Mudra Tarun Plus for financial inclusion questions."
+          }
+        ]
+      },
+      {
+        id: "msme-trunk-5",
+        title: "Cluster Agglomeration & Viksit Bharat 2047",
+        subtitle: "Collective Scale, Cross-Border E-Commerce & Article 39",
+        isCore: true,
+        branches: [
+          {
+            id: "msme-b12",
+            title: "The Tiruppur Miracle & SFURTI Clusters",
+            shortDesc: "Shared effluent infrastructure, common facilities, and $4B knitwear exports.",
+            tag: "Cluster Economics",
+            details: `
+              <h4>Cluster Agglomeration: Converting Weakness into Power</h4>
+              <p>Individual micro units cannot afford advanced testing or effluent treatment. Industrial clustering solves this:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>Tiruppur Cluster:</strong> Over $4 Billion knitwear exports achieved through Common Effluent Treatment Plants (CETPs) with Zero Liquid Discharge (ZLD).</li>
+                  <li><strong>SFURTI Scheme:</strong> Up to ₹5 Crore assistance to establish Common Facility Centers (CFCs) for traditional khadi, coir, and agro-processing clusters.</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["Clusters turn atomized individual weakness into collective industrial power."],
+            mainsTip: "Use Tiruppur as your primary cluster agglomeration example."
+          },
+          {
+            id: "msme-b13",
+            title: "E-Commerce Export Hubs (ECEH) & ONDC",
+            shortDesc: "Public-private bonded export hubs, customs pre-clearance, and unbundled digital e-commerce.",
+            tag: "Digital Trade",
+            details: `
+              <h4>Democratizing Digital Trade & Cross-Border Logistics</h4>
+              <p>Breaking intermediary monopolies through open digital public infrastructure:</p>
+              <div class="reading-callout">
+                <ul>
+                  <li><strong>ONDC:</strong> Unbundles e-commerce value chains so local artisans sell to buyers across multiple consumer apps without 30% platform monopolies.</li>
+                  <li><strong>E-Commerce Export Hubs (ECEH):</strong> Bonded warehousing, automated regulatory clearances, and return-processing logistics in PPP mode.</li>
+                </ul>
+              </div>
+            `,
+            quotes: ["ONDC unbundles the e-commerce stack to liberate artisans from platform rent-seeking."],
+            mainsTip: "Cite ONDC and ECEHs for digital economy and export questions."
+          },
+          {
+            id: "msme-b14",
+            title: "Viksit Bharat 2047 & Article 39(b)-(c)",
+            shortDesc: "\"MSMEs are the crucible where Indian entrepreneurship meets global manufacturing excellence.\"",
+            tag: "Master Thesis Hook",
+            details: `
+              <h4>Constitutional Vision & Concluding Synthesis</h4>
+              <p>Under <strong>Directive Principles Articles 39(b) and 39(c)</strong>, the State must distribute material resources to serve the common good and prevent concentration of economic power.</p>
+              <div class="reading-callout reading-callout-warning">
+                <strong>The Golden Conclusion:</strong>
+                <em>"MSMEs are not just a safety valve for surplus agricultural labor; they are the crucible where Indian entrepreneurship meets global manufacturing excellence. Unleashing them from dwarfism is the paramount prerequisite for India's $5 Trillion economy and Viksit Bharat 2047."</em>
+              </div>
+            `,
+            quotes: ["\"MSMEs are the crucible where Indian entrepreneurship meets global manufacturing excellence.\""],
+            mainsTip: "Memorize this concluding thesis for GS-3 economy answers."
+          }
+        ]
+      }
+    ]
   }
 };

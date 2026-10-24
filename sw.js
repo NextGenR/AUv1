@@ -3,7 +3,7 @@
  * Offline Caching, Stale-While-Revalidate & Chrome Installability
  */
 
-const CACHE_NAME = 'cortex-pwa-v1.2';
+const CACHE_NAME = 'cortex-pwa-v2.5';
 
 const PRECACHE_ASSETS = [
   './',
@@ -45,7 +45,6 @@ const PRECACHE_ASSETS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      // Use addAll with error handling for optional assets
       return Promise.allSettled(
         PRECACHE_ASSETS.map((url) =>
           cache.add(url).catch((err) => {
@@ -57,7 +56,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate: Clean Up Old Caches
+// Activate: Clean Up Old Caches Immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -73,16 +72,22 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch: Stale-While-Revalidate Strategy with Network Fallback
+// Fetch: Network-First for JS, HTML, JSON & CSS; Cache-First for static assets
 self.addEventListener('fetch', (event) => {
-  // Only handle GET requests and http/https schemes
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
   if (!url.protocol.startsWith('http')) return;
 
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      const fetchPromise = fetch(event.request)
+  const isDynamic = url.pathname.endsWith('.js') || 
+                    url.pathname.endsWith('.html') || 
+                    url.pathname.endsWith('.json') || 
+                    url.pathname.endsWith('.css') ||
+                    event.request.mode === 'navigate';
+
+  if (isDynamic) {
+    // Network-First: Fetch freshest file from server, fallback to cache if offline
+    event.respondWith(
+      fetch(event.request)
         .then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             const responseClone = networkResponse.clone();
@@ -93,14 +98,29 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          // If offline and request is for a web page, return cached index
-          if (event.request.mode === 'navigate') {
-            return caches.match('./mobile/index.html') || caches.match('./index.html');
+          return caches.match(event.request).then((cached) => {
+            if (cached) return cached;
+            if (event.request.mode === 'navigate') {
+              return caches.match('./mobile/index.html') || caches.match('./index.html');
+            }
+            return null;
+          });
+        })
+    );
+  } else {
+    // Cache-First for media/images
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
+            });
           }
-          return null;
+          return networkResponse;
         });
-
-      return cachedResponse || fetchPromise;
-    })
-  );
+      })
+    );
+  }
 });
