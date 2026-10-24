@@ -1,10 +1,10 @@
 # 🧠 Cortex Anki 2.0 Pro
 ### Next-Gen Spaced Repetition, Duolingo Gamified Learning & Roadmap.sh Visual Tree Notes
 
-[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://nextgenr.github.io/Anki_Upgraded/)
-[![Syllabus](https://img.shields.io/badge/UPSC-GS--2%20%7C%20GS--3-indigo?style=for-the-badge)](https://nextgenr.github.io/Anki_Upgraded/)
-[![Design](https://img.shields.io/badge/UI-Roadmap.sh%20%2B%20Glassmorphism-facc15?style=for-the-badge)](https://nextgenr.github.io/Anki_Upgraded/roadmap_notes.html)
-[![Mobile](https://img.shields.io/badge/Mobile-100%25%20Responsive-emerald?style=for-the-badge)](https://nextgenr.github.io/Anki_Upgraded/roadmap_notes.html)
+[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://nextgenr.github.io/AUv1/)
+[![Syllabus](https://img.shields.io/badge/UPSC-GS--2%20%7C%20GS--3-indigo?style=for-the-badge)](https://nextgenr.github.io/AUv1/)
+[![Design](https://img.shields.io/badge/UI-Roadmap.sh%20%2B%20Glassmorphism-facc15?style=for-the-badge)](https://nextgenr.github.io/AUv1/roadmap_notes.html)
+[![Mobile](https://img.shields.io/badge/Mobile-100%25%20Responsive-emerald?style=for-the-badge)](https://nextgenr.github.io/AUv1/roadmap_notes.html)
 
 Cortex Anki 2.0 is an advanced cognitive learning and spaced repetition engine tailored for civil services preparation, legal studies, and high-yield value addition. Built with vanilla HTML5, CSS3, and modern JavaScript with zero heavy framework overhead.
 
@@ -12,11 +12,11 @@ Cortex Anki 2.0 is an advanced cognitive learning and spaced repetition engine t
 
 ## 🚀 Live Demo & Pages
 
-- 🗺️ **[Visual Tree Roadmap (`roadmap_notes.html`)](https://nextgenr.github.io/Anki_Upgraded/roadmap_notes.html)**: Interactive Roadmap.sh-style tree notes with ForumIAS slide-out/bottom-sheet inspector drawer.
-- 🎮 **[Duolingo Gamified Path (`public_exam_duo.html`)](https://nextgenr.github.io/Anki_Upgraded/public_exam_duo.html)**: 10 progressive gamified levels on the Public Examinations (Prevention of Unfair Means) Act & NTA Governance Overhaul.
-- ⚡ **[CAVA Subject Hub (`cava.html`)](https://nextgenr.github.io/Anki_Upgraded/cava.html)**: Topic directory with flashcard decks, flowcharts, and study modules.
-- ⚖️ **[AI in the Judiciary Module (`topic_study.html`)](https://nextgenr.github.io/Anki_Upgraded/topic_study.html)**: 6 comprehensive study modules covering the Supreme Court 3-tier AI pyramid and NCLT precedent.
-- 📊 **[Executive Dashboard (`index.html`)](https://nextgenr.github.io/Anki_Upgraded/index.html)**: Spaced repetition retention metrics, study streaks, and activity heatmaps.
+- 🗺️ **[Visual Tree Roadmap (`roadmap_notes.html`)](https://nextgenr.github.io/AUv1/roadmap_notes.html)**: Interactive Roadmap.sh-style tree notes with ForumIAS slide-out/bottom-sheet inspector drawer.
+- 🎮 **[Duolingo Gamified Path (`public_exam_duo.html`)](https://nextgenr.github.io/AUv1/public_exam_duo.html)**: 10 progressive gamified levels on the Public Examinations (Prevention of Unfair Means) Act & NTA Governance Overhaul.
+- ⚡ **[CAVA Subject Hub (`cava.html`)](https://nextgenr.github.io/AUv1/cava.html)**: Topic directory with flashcard decks, flowcharts, and study modules.
+- ⚖️ **[AI in the Judiciary Module (`topic_study.html`)](https://nextgenr.github.io/AUv1/topic_study.html)**: 6 comprehensive study modules covering the Supreme Court 3-tier AI pyramid and NCLT precedent.
+- 📊 **[Executive Dashboard (`index.html`)](https://nextgenr.github.io/AUv1/index.html)**: Spaced repetition retention metrics, study streaks, and activity heatmaps.
 
 ---
 
@@ -65,8 +65,8 @@ Cortex Anki 2.0 is an advanced cognitive learning and spaced repetition engine t
 Clone and run locally without installing any npm dependencies:
 
 ```bash
-git clone https://github.com/NextGenR/Anki_Upgraded.git
-cd Anki_Upgraded
+git clone https://github.com/NextGenR/AUv1.git
+cd AUv1
 python -m http.server 8080
 ```
 
