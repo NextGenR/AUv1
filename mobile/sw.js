@@ -2,7 +2,7 @@
  * CORTEX MOBILE PWA SERVICE WORKER
  */
 
-const CACHE_NAME = 'cortex-mobile-v2.7';
+const CACHE_NAME = 'cortex-mobile-v2.8';
 
 const ASSETS = [
   './',

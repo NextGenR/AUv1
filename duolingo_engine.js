@@ -611,8 +611,12 @@ function renderLevelPath() {
 let sorterAssignments = {};
 let clozeAnswers = {};
 let activeClozeBlankId = null;
+let isLessonActionBusy = false;
 
 function startLesson(level) {
+  if (isLessonActionBusy) return;
+  isLessonActionBusy = true;
+
   activeLevel = level;
   currentTaskIndex = 0;
   selectedOption = null;
@@ -626,6 +630,10 @@ function startLesson(level) {
   if (modal) modal.classList.add('active');
 
   renderCurrentTask();
+
+  setTimeout(() => {
+    isLessonActionBusy = false;
+  }, 350);
 }
 
 function renderCurrentTask() {
@@ -651,9 +659,19 @@ function renderCurrentTask() {
   if (bottomBar) bottomBar.className = 'lesson-bottom-bar state-ready';
   if (feedbackMsg) feedbackMsg.innerHTML = '';
   if (actionBtn) {
-    actionBtn.textContent = task.type === 'concept' ? 'Continue' : 'Check Answer';
-    actionBtn.disabled = task.type === 'concept' ? false : true;
     actionBtn.onclick = handleTaskAction;
+    if (task.type === 'concept') {
+      actionBtn.textContent = 'Continue';
+      actionBtn.disabled = true; // Lock momentarily to prevent ghost click from previous level
+      setTimeout(() => {
+        if (actionBtn && activeLevel && activeLevel.tasks[currentTaskIndex]?.type === 'concept') {
+          actionBtn.disabled = false;
+        }
+      }, 350);
+    } else {
+      actionBtn.textContent = 'Check Answer';
+      actionBtn.disabled = true;
+    }
   }
 
   const arena = document.getElementById('lesson-task-arena');
@@ -1211,16 +1229,31 @@ function renderBinaryVerdictTask(task, arena, actionBtn) {
 /* ==========================================================================
    TASK EVALUATION & ACTION HANDLER
    ========================================================================== */
-function handleTaskAction() {
+function handleTaskAction(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  if (isLessonActionBusy) return;
+  if (!activeLevel) return;
+
   const task = activeLevel.tasks[currentTaskIndex];
+  if (!task) return;
+
   const bottomBar = document.getElementById('lesson-bottom-bar');
   const actionBtn = document.getElementById('lesson-action-btn');
   const feedbackMsg = document.getElementById('lesson-feedback-message');
 
-  // If already checked, continue to next task
-  if (bottomBar.classList.contains('state-success') || bottomBar.classList.contains('state-error') || task.type === 'concept' || task.type === 'match_pairs') {
+  // Check if we are currently in 'Continue' state
+  const isContinueState = actionBtn && actionBtn.textContent.trim().toLowerCase().startsWith('continue');
+
+  if (isContinueState) {
+    isLessonActionBusy = true;
+    if (actionBtn) actionBtn.disabled = true;
+
     currentTaskIndex++;
     renderCurrentTask();
+
+    setTimeout(() => {
+      isLessonActionBusy = false;
+    }, 350);
     return;
   }
 
@@ -1527,10 +1560,17 @@ function completeLesson() {
 
   if (actionBtn) {
     actionBtn.textContent = 'Finish & Return to Path';
-    actionBtn.onclick = () => {
+    actionBtn.disabled = false;
+    actionBtn.onclick = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      if (isLessonActionBusy) return;
+      isLessonActionBusy = true;
       document.getElementById('duo-lesson-modal').classList.remove('active');
       renderLevelPath();
       DuoState.updateHeaderUI();
+      setTimeout(() => {
+        isLessonActionBusy = false;
+      }, 350);
     };
   }
 }

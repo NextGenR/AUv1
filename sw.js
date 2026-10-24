@@ -3,7 +3,7 @@
  * Offline Caching, Stale-While-Revalidate & Chrome Installability
  */
 
-const CACHE_NAME = 'cortex-pwa-v2.7';
+const CACHE_NAME = 'cortex-pwa-v2.8';
 
 const PRECACHE_ASSETS = [
   './',

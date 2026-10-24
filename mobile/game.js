@@ -477,8 +477,13 @@
     DOM.questPath.appendChild(pathContainer);
   }
 
+  let isMobileActionBusy = false;
+
   // --- START LEVEL SESSION ---
   function startLevel(level) {
+    if (isMobileActionBusy) return;
+    isMobileActionBusy = true;
+
     // Unlimited tries - no heart depletion or lockout
     SoundFX.playTap();
     STATE.activeLevel = level;
@@ -496,6 +501,10 @@
 
     renderQuestion();
     DOM.playModal.classList.add('open');
+
+    setTimeout(() => {
+      isMobileActionBusy = false;
+    }, 350);
   }
 
   function updateBossHp() {
@@ -601,7 +610,13 @@
     // TYPE 1: CONCEPT CARD (Desktop Verbatim)
     if (task.type === 'concept') {
       DOM.playActionBtn.textContent = 'CONTINUE (+10 XP)';
-      DOM.playActionBtn.disabled = false;
+      DOM.playActionBtn.disabled = true; // Momentarily locked to avoid ghost click
+      setTimeout(() => {
+        const curTask = (STATE.activeLevel?.tasks || STATE.activeLevel?.questions)?.[STATE.currentQuestionIdx];
+        if (curTask && curTask.type === 'concept') {
+          DOM.playActionBtn.disabled = false;
+        }
+      }, 350);
 
       const fcPreview = task.flowchart ? `
         <div class="concept-flowchart-card" id="task-flowchart-preview-btn">
@@ -1067,19 +1082,29 @@
 
   // --- CHECK ANSWER HANDLER ---
   function handleCheckAnswer() {
+    if (isMobileActionBusy) return;
     const level = STATE.activeLevel;
+    if (!level) return;
     const tasks = level.tasks || level.questions;
     const task = tasks[STATE.currentQuestionIdx];
+    if (!task) return;
 
     // If in 'Continue' state, advance to next question
     if (DOM.playActionBtn.textContent.startsWith('CONTINUE')) {
       SoundFX.playTap();
+      isMobileActionBusy = true;
+      DOM.playActionBtn.disabled = true;
+
       STATE.currentQuestionIdx++;
       if (STATE.currentQuestionIdx < tasks.length) {
         renderQuestion();
       } else {
         finishLevel();
       }
+
+      setTimeout(() => {
+        isMobileActionBusy = false;
+      }, 350);
       return;
     }
 
@@ -1536,10 +1561,16 @@
 
     DOM.feedbackBanner.style.display = 'none';
     DOM.playActionBtn.textContent = 'BACK TO QUEST MAP';
-    DOM.playActionBtn.onclick = () => {
+    DOM.playActionBtn.disabled = false;
+    DOM.playActionBtn.onclick = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      if (isMobileActionBusy) return;
+      isMobileActionBusy = true;
       DOM.playModal.classList.remove('open');
       renderQuestMap();
-      DOM.playActionBtn.onclick = handleCheckAnswer;
+      setTimeout(() => {
+        isMobileActionBusy = false;
+      }, 350);
     };
   }
 
@@ -1767,7 +1798,15 @@
     }
 
     if (DOM.playActionBtn) {
-      DOM.playActionBtn.addEventListener('click', handleCheckAnswer);
+      DOM.playActionBtn.onclick = (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        if (DOM.playActionBtn.textContent.includes('QUEST MAP')) {
+          DOM.playModal.classList.remove('open');
+          renderQuestMap();
+          return;
+        }
+        handleCheckAnswer();
+      };
     }
 
     // Blitz Buttons
