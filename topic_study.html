@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI in Judiciary | Comprehensive UPSC Study Suite | Cortex Anki 2.0</title>
   <meta name="description" content="Master AI in Judiciary with interactive reading, Prelims & Mains pointers, diagrams, Anki SRS flashcards, MCQs, and Mains answer writing.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cortex Quest">
   <link rel="stylesheet" href="style.css">
   <style>
     /* Sticky Top Reading Progress Bar */
@@ -39,11 +47,18 @@
       <li><a href="subjects.html" class="nav-link" id="nav-subjects">📚 Subjects</a></li>
       <li><a href="cava.html" class="nav-link" id="nav-cava">⚡ CAVA Hub</a></li>
       <li><a href="roadmap_notes.html" class="nav-link" id="nav-roadmap" style="color:#ffe600; font-weight:700;">🗺️ Visual Roadmap</a></li>
-      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="msme_duo.html" class="nav-link" id="nav-duo-msme">🏭 MSME Duolingo</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam">🎮 Public Exams</a></li>
       <li><a href="topic_study.html" class="nav-link active" id="nav-study">🎯 AI in Judiciary</a></li>
     </ul>
 
     <div class="nav-actions">
+      <button class="btn btn-sm btn-pwa-install" id="nav-install-btn" onclick="window.triggerPwaInstall()" style="background:#2563eb; color:#fff; font-weight:800; border-radius:999px; text-decoration:none;" title="Install on Google Chrome">
+        <span>📲</span> Install App
+      </button>
+      <a href="mobile/index.html" class="btn btn-sm" style="background:#10b981; color:#fff; font-weight:800; border-radius:999px; text-decoration:none;" id="btn-nav-mobile-game">
+        📱 Mobile Game
+      </a>
       <div class="streak-pill">
         <span class="streak-flame">🔥</span>
         <span class="streak-number">18</span> Days Streak
@@ -451,5 +466,6 @@
   <script src="lecture_data.js"></script>
   <script src="app.js"></script>
   <script src="study_module.js"></script>
+  <script src="pwa_installer.js"></script>
 </body>
 </html>

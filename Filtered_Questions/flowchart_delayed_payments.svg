@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="640" rx="28" fill="url(#bg2)"/>
+  <rect x="2" y="2" width="896" height="636" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 35)">
+    <rect x="0" y="0" width="170" height="26" rx="13" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="85" y="17" fill="#fca5a5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">MSMED ACT 2006 • CH. V</text>
+    <text x="0" y="62" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="26" font-weight="900">Delayed Payments &amp; Commercial Justice Pipeline</text>
+    <text x="0" y="86" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">Sections 15–19, Penal Compound Interest, Section 43B(h) Tax Disallowance &amp; MSEFC Timelines</text>
+  </g>
+
+  <!-- Step 1: Supply & Delivery -->
+  <g transform="translate(40, 140)">
+    <rect width="180" height="150" rx="18" fill="url(#stepGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <rect x="15" y="15" width="40" height="24" rx="6" fill="#3b82f6"/>
+    <text x="35" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">SEC 15</text>
+    <text x="15" y="65" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="15" font-weight="800">Supply of Goods / Services</text>
+    <text x="15" y="90" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• With Agreement: <tspan fill="#facc15" font-weight="800">Max 45 Days</tspan></text>
+    <text x="15" y="112" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• No Agreement: <tspan fill="#38bdf8" font-weight="800">15 Days</tspan> (Appointed Day)</text>
+    <text x="15" y="132" fill="#ef4444" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">Non-negotiable deadline</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 230 215 L 255 215" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="255,210 265,215 255,220" fill="#60a5fa"/>
+
+  <!-- Step 2: Default & Section 16 Penalty -->
+  <g transform="translate(275, 140)">
+    <rect width="190" height="150" rx="18" fill="url(#stepGrad)" stroke="rgba(239,68,68,0.4)" stroke-width="2"/>
+    <rect x="15" y="15" width="40" height="24" rx="6" fill="#ef4444"/>
+    <text x="35" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">SEC 16</text>
+    <text x="15" y="65" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="15" font-weight="800">Penal Compound Interest</text>
+    <text x="15" y="90" fill="#f87171" font-family="'Outfit', sans-serif" font-size="18" font-weight="900">3× RBI Bank Rate</text>
+    <text x="15" y="112" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• Compounded monthly</text>
+    <text x="15" y="132" fill="#fca5a5" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">Sec 23: Tax non-deductible</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 475 215 L 500 215" stroke="#f87171" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="500,210 510,215 500,220" fill="#f87171"/>
+
+  <!-- Step 3: MSEFC Adjudication (Section 18) -->
+  <g transform="translate(520, 140)">
+    <rect width="340" height="150" rx="18" fill="url(#stepGrad)" stroke="rgba(245,158,11,0.4)" stroke-width="2"/>
+    <rect x="15" y="15" width="40" height="24" rx="6" fill="#f59e0b"/>
+    <text x="35" y="32" fill="#000" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">SEC 18</text>
+    <text x="65" y="32" fill="#fde68a" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">MSEFC Facilitation Council</text>
+    
+    <rect x="15" y="55" width="145" height="55" rx="10" fill="rgba(245,158,11,0.15)"/>
+    <text x="87" y="75" fill="#facc15" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">1. MEDIATION</text>
+    <text x="87" y="95" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" text-anchor="middle">Mandatory in 90 Days</text>
+
+    <rect x="175" y="55" width="145" height="55" rx="10" fill="rgba(239,68,68,0.15)"/>
+    <text x="247" y="75" fill="#f87171" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">2. ARBITRATION</text>
+    <text x="247" y="95" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" text-anchor="middle">Completion in 30 Days</text>
+
+    <text x="15" y="132" fill="#cbd5e1" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">Filed digitally via <tspan fill="#38bdf8" font-weight="800">MSME Samadhaan</tspan> Portal</text>
+  </g>
+
+  <!-- Step 4: Court Appeal & Pre-Deposit (Section 19) -->
+  <g transform="translate(40, 320)">
+    <rect width="400" height="140" rx="18" fill="url(#stepGrad)" stroke="rgba(168,85,247,0.3)" stroke-width="1.5"/>
+    <rect x="15" y="15" width="40" height="24" rx="6" fill="#a855f7"/>
+    <text x="35" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">SEC 19</text>
+    <text x="65" y="32" fill="#d8b4fe" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">Appeal Barrier (Section 19)</text>
+    <text x="15" y="70" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="18" font-weight="900">75% Pre-Deposit Mandate</text>
+    <text x="15" y="95" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">• Buyer MUST deposit 75% of awarded amount with court</text>
+    <text x="15" y="115" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">• Proposed amendment: calibrate to 50% to ease genuine appeals</text>
+  </g>
+
+  <!-- Step 5: Income Tax Section 43B(h) Disallowance -->
+  <g transform="translate(460, 320)">
+    <rect width="400" height="140" rx="18" fill="url(#stepGrad)" stroke="rgba(239,68,68,0.3)" stroke-width="1.5"/>
+    <rect x="15" y="15" width="55" height="24" rx="6" fill="#dc2626"/>
+    <text x="42" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="11" font-weight="900" text-anchor="middle">IT ACT</text>
+    <text x="80" y="32" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">Section 43B(h) Tax Disallowance</text>
+    <text x="15" y="70" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="18" font-weight="900">Expense Disallowance if Unpaid</text>
+    <text x="15" y="95" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">• If overdue beyond 45 days on March 31, deduction denied</text>
+    <text x="15" y="115" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">• Applies ONLY to Micro &amp; Small units (NOT Medium or Traders)</text>
+  </g>
+
+  <!-- Warning Banner: Fear of Business Loss -->
+  <g transform="translate(40, 485)">
+    <rect width="820" height="120" rx="18" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.4)" stroke-width="2"/>
+    <text x="25" y="34" fill="#ef4444" font-family="'Outfit', sans-serif" font-size="16" font-weight="900">⚠️ THE 'FEAR OF BUSINESS LOSS' MARKET PARADOX:</text>
+    <text x="25" y="60" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">• Despite statutory protections, small suppliers hesitate to file on Samadhaan fearing buyers will blacklist them.</text>
+    <text x="25" y="80" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">• Large buyers may divert orders to Medium or unregistered firms to evade the rigid 45-day payment constraint.</text>
+    <text x="25" y="100" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">★ SOLUTION: Mandatory TReDS Onboarding for all CPSEs &amp; Corporates for non-recourse digital invoice factoring!</text>
+  </g>
+</svg>

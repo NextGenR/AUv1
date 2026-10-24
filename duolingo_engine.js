@@ -3,19 +3,41 @@
  * Sound FX, Visual Winding Path, Hearts/Lives, XP, Tap-to-Order & Match Pairs
  */
 
+function getActiveDuoData() {
+  if (typeof window !== 'undefined' && window.ACTIVE_DUO_DATA) return window.ACTIVE_DUO_DATA;
+  const isMsme = typeof window !== 'undefined' && (
+    window.location.pathname.includes('msme') || 
+    window.location.search.includes('msme') || 
+    window.location.href.includes('msme')
+  );
+  if (isMsme && typeof MSME_DATA !== 'undefined') return MSME_DATA;
+  if (typeof PUBLIC_EXAM_DATA !== 'undefined') return PUBLIC_EXAM_DATA;
+  if (typeof MSME_DATA !== 'undefined') return MSME_DATA;
+  return null;
+}
+
 class DuoState {
+  static getStorageKey() {
+    const data = getActiveDuoData();
+    return data && data.id ? `cortex_duo_progress_${data.id}` : 'cortex_duo_progress';
+  }
+
   static getProgress() {
-    const raw = localStorage.getItem('cortex_duo_progress');
+    const key = DuoState.getStorageKey();
+    const raw = localStorage.getItem(key);
+    const data = getActiveDuoData();
+    const defaultLvl = (data && data.levels && data.levels[0]) ? data.levels[0].id : "lvl-1";
     return raw ? JSON.parse(raw) : {
       xp: 60,
       hearts: 5,
-      completedLevels: ["lvl-1"],
+      completedLevels: [defaultLvl],
       streak: 18
     };
   }
 
   static saveProgress(state) {
-    localStorage.setItem('cortex_duo_progress', JSON.stringify(state));
+    const key = DuoState.getStorageKey();
+    localStorage.setItem(key, JSON.stringify(state));
     DuoState.updateHeaderUI();
   }
 
@@ -191,9 +213,10 @@ function setupSheetViewToggle() {
    ========================================================================== */
 function renderForumIASSheet() {
   const container = document.getElementById('sheet-notes-target');
-  if (!container || !PUBLIC_EXAM_DATA.sheetNotes) return;
+  const duoData = getActiveDuoData();
+  if (!container || !duoData || !duoData.sheetNotes) return;
 
-  const data = PUBLIC_EXAM_DATA.sheetNotes;
+  const data = duoData.sheetNotes;
   container.innerHTML = '';
 
   const sheet = document.createElement('div');
@@ -320,11 +343,14 @@ function renderLevelPath() {
   const container = document.getElementById('duo-path-container');
   if (!container) return;
 
+  const duoData = getActiveDuoData();
+  if (!duoData || !duoData.levels) return;
+
   container.innerHTML = '';
   const progress = DuoState.getProgress();
   let currentUnit = '';
 
-  PUBLIC_EXAM_DATA.levels.forEach((lvl, idx) => {
+  duoData.levels.forEach((lvl, idx) => {
     // If new unit, render unit header banner
     if (lvl.unit !== currentUnit) {
       currentUnit = lvl.unit;
@@ -333,14 +359,14 @@ function renderLevelPath() {
       unitBanner.style.borderLeftColor = lvl.unitColor;
       unitBanner.innerHTML = `
         <div class="unit-meta" style="color:${lvl.unitColor};">${lvl.unit.toUpperCase()}</div>
-        <div class="unit-title">Exam Integrity & Institutional Reforms</div>
+        <div class="unit-title">${duoData.title || 'Integrity & Structural Reforms'}</div>
       `;
       container.appendChild(unitBanner);
     }
 
     // Determine status: completed, current, or locked
     const isCompleted = progress.completedLevels.includes(lvl.id);
-    const prevCompleted = idx === 0 || progress.completedLevels.includes(PUBLIC_EXAM_DATA.levels[idx - 1].id);
+    const prevCompleted = idx === 0 || progress.completedLevels.includes(duoData.levels[idx - 1].id);
     const isCurrent = !isCompleted && prevCompleted;
     const isLocked = !isCompleted && !isCurrent;
 
@@ -451,15 +477,26 @@ function renderCurrentTask() {
 
 /* --- Task Type 1: Concept Drop --- */
 function renderConceptTask(task, arena, actionBtn) {
+  const flowchartHtml = task.flowchart ? `
+    <div class="duo-flowchart-card" style="margin: 1.25rem 0; border: 1.5px solid rgba(59, 130, 246, 0.35); border-radius: 14px; padding: 0.9rem; background: rgba(15, 23, 42, 0.85); text-align: center;">
+      <div style="font-size: 0.78rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: space-between;">
+        <span>📊 Visual Flowchart Diagram</span>
+        <a href="Filtered_Questions/${task.flowchart}" target="_blank" style="color: #60a5fa; text-decoration: none; font-size: 0.75rem; background: rgba(59,130,246,0.2); padding: 3px 8px; border-radius: 6px;">🔍 Full View ↗</a>
+      </div>
+      <img src="Filtered_Questions/${task.flowchart}" alt="Flowchart Diagram" style="max-width: 100%; height: auto; max-height: 280px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.5);" loading="lazy">
+    </div>
+  ` : '';
+
   arena.innerHTML = `
     <div class="duo-concept-card">
       <div class="duo-mascot-row">
         <div class="duo-mascot-avatar">🦉</div>
         <div class="duo-speech-bubble">
           <strong>${task.title}</strong>
-          <p>${task.content.replace(/\n/g, '<br>')}</p>
+          <p>${(task.content || '').replace(/\\n/g, '<br>').replace(/\n/g, '<br>')}</p>
         </div>
       </div>
+      ${flowchartHtml}
       <div class="duo-takeaway-banner">
         💡 <strong>Key UPSC Takeaway:</strong> ${task.keyTakeaway}
       </div>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#161824"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" rx="28" fill="url(#bg4)"/>
+  <rect x="2" y="2" width="896" height="596" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 35)">
+    <rect x="0" y="0" width="180" height="26" rx="13" fill="rgba(245,158,11,0.2)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="90" y="17" fill="#fde68a" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">ECONOMIC PARADIGMS</text>
+    <text x="0" y="62" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="26" font-weight="900">Indian Dwarfism Trap vs. German Mittelstand</text>
+    <text x="0" y="86" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">The Anatomy of the Missing Middle &amp; How Mid-Sized Champions Drive National Productivity</text>
+  </g>
+
+  <!-- Left Card: The Indian Dwarfism Trap -->
+  <g transform="translate(40, 130)">
+    <rect width="390" height="420" rx="22" fill="#111420" stroke="rgba(239,68,68,0.3)" stroke-width="2"/>
+    <rect width="390" height="50" rx="22" fill="#dc2626"/>
+    <text x="195" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">❌ THE INDIAN DWARFISM TRAP</text>
+
+    <g transform="translate(25, 75)">
+      <text x="0" y="0" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">1. Pathological Smallness</text>
+      <text x="0" y="20" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Firms remain older than 10-20 years but employ &lt;10 workers deliberately to evade labor and factory laws.</text>
+
+      <text x="0" y="70" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">2. The Bimodal 'Missing Middle'</text>
+      <text x="0" y="90" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Over 95% micro-enterprises and a few massive corporations; acute lack of 100-500 employee competitive firms.</text>
+
+      <text x="0" y="140" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">3. Hsieh &amp; Klenow (2009) TFP Penalty</text>
+      <text x="0" y="160" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Capital and labor misallocation reduces Indian aggregate manufacturing productivity by <tspan fill="#ef4444" font-weight="800">40% to 60%</tspan>.</text>
+
+      <text x="0" y="210" fill="#fca5a5" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">4. Survivalist vs. Transformational</text>
+      <text x="0" y="230" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Tiny units operate for subsistence survival rather than investing in automation, R&amp;D, or export scaling.</text>
+
+      <rect x="-10" y="270" width="360" height="50" rx="12" fill="rgba(239,68,68,0.15)"/>
+      <text x="170" y="292" fill="#ef4444" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">RESULT: STAGNANT PRODUCTIVITY</text>
+      <text x="170" y="308" fill="#fca5a5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" text-anchor="middle">Inability to absorb agricultural surplus labor</text>
+    </g>
+  </g>
+
+  <!-- Right Card: The German Mittelstand Transformation -->
+  <g transform="translate(470, 130)">
+    <rect width="390" height="420" rx="22" fill="#111420" stroke="rgba(16,185,129,0.3)" stroke-width="2"/>
+    <rect width="390" height="50" rx="22" fill="#059669"/>
+    <text x="195" y="32" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">✓ THE MITTELSTAND TRANSFORMATION</text>
+
+    <g transform="translate(25, 75)">
+      <text x="0" y="0" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">1. Global 'Hidden Champions'</text>
+      <text x="0" y="20" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Mid-sized (100–500 workers) specialized firms that dominate global market shares in precision B2B niches.</text>
+
+      <text x="0" y="70" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">2. Dual Vocational Apprenticeships</text>
+      <text x="0" y="90" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Firms invest heavily in training technical apprentices, solving the skill deficit and creating high-wage jobs.</text>
+
+      <text x="0" y="140" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">3. Generational Patient Capital</text>
+      <text x="0" y="160" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Family ownership and equity funds (like SRI Fund) prioritize long-term R&amp;D over short-term quarterly debt.</text>
+
+      <text x="0" y="210" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="14" font-weight="800">4. High Value-Added Output (55% GDP)</text>
+      <text x="0" y="230" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5">Contributes 55% of German output, providing the resilient anchor against external global supply shocks.</text>
+
+      <rect x="-10" y="270" width="360" height="50" rx="12" fill="rgba(16,185,129,0.15)"/>
+      <text x="170" y="292" fill="#10b981" font-family="'Outfit', sans-serif" font-size="12" font-weight="900" text-anchor="middle">GOAL: VIKSIT BHARAT CHAMPIONS</text>
+      <text x="170" y="308" fill="#a7f3d0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" text-anchor="middle">Transitioning from survivalism to global tech lead</text>
+    </g>
+  </g>
+</svg>

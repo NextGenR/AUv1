@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="cardG3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="620" rx="28" fill="url(#bg3)"/>
+  <rect x="2" y="2" width="896" height="616" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+
+  <!-- Header -->
+  <g transform="translate(40, 35)">
+    <rect x="0" y="0" width="165" height="26" rx="13" fill="rgba(168,85,247,0.2)" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="82" y="17" fill="#d8b4fe" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">CENTRAL SECTOR SCHEME</text>
+    <text x="0" y="62" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="26" font-weight="900">PM Vishwakarma 5-Pillar Artisan Lifecycle</text>
+    <text x="0" y="86" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">Launched Sept 17, 2023 • ₹13,000 Cr Outlay • Supporting 18 Traditional Hands-and-Tools Trades</text>
+  </g>
+
+  <!-- 5 Horizontal Sequential Step Boxes -->
+  <!-- Pillar 1 -->
+  <g transform="translate(40, 130)">
+    <rect width="150" height="220" rx="16" fill="url(#cardG3)" stroke="rgba(168,85,247,0.3)" stroke-width="1.5"/>
+    <circle cx="75" cy="35" r="20" fill="#7c3aed"/>
+    <text x="75" y="41" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">1</text>
+    <text x="75" y="78" fill="#c4b5fd" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">RECOGNITION</text>
+    <text x="12" y="105" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• Biometric CSC Enrolment</text>
+    <text x="12" y="135" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• 3-Tier Verification (Gram Panchayat / District / State)</text>
+    <text x="12" y="190" fill="#38bdf8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">Certificate &amp; ID</text>
+  </g>
+
+  <!-- Pillar 2 -->
+  <g transform="translate(205, 130)">
+    <rect width="150" height="220" rx="16" fill="url(#cardG3)" stroke="rgba(59,130,246,0.3)" stroke-width="1.5"/>
+    <circle cx="75" cy="35" r="20" fill="#2563eb"/>
+    <text x="75" y="41" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">2</text>
+    <text x="75" y="78" fill="#93c5fd" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">SKILLING</text>
+    <text x="12" y="105" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• 5-Day Basic Skill Training</text>
+    <text x="12" y="135" fill="#facc15" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800">• ₹500 / Day</text>
+    <text x="12" y="152" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">daily stipend support</text>
+    <text x="12" y="190" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700">15-day Advanced Opt.</text>
+  </g>
+
+  <!-- Pillar 3 -->
+  <g transform="translate(370, 130)">
+    <rect width="150" height="220" rx="16" fill="url(#cardG3)" stroke="rgba(16,185,129,0.3)" stroke-width="1.5"/>
+    <circle cx="75" cy="35" r="20" fill="#059669"/>
+    <text x="75" y="41" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">3</text>
+    <text x="75" y="78" fill="#6ee7b7" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">TOOLKIT</text>
+    <text x="12" y="105" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• Modern Tools Grant</text>
+    <text x="12" y="135" fill="#10b981" font-family="'Outfit', sans-serif" font-size="18" font-weight="900">₹15,000</text>
+    <text x="12" y="155" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">via e-Voucher</text>
+    <text x="12" y="190" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700">Digital Tool Purchase</text>
+  </g>
+
+  <!-- Pillar 4 -->
+  <g transform="translate(535, 130)">
+    <rect width="165" height="220" rx="16" fill="url(#cardG3)" stroke="rgba(245,158,11,0.3)" stroke-width="1.5"/>
+    <circle cx="82" cy="35" r="20" fill="#d97706"/>
+    <text x="82" y="41" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">4</text>
+    <text x="82" y="78" fill="#fde68a" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">CREDIT SUPPORT</text>
+    <text x="12" y="105" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700">Collateral-Free Loan:</text>
+    <text x="12" y="125" fill="#facc15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">• Tranche 1: Up to ₹1L (18m)</text>
+    <text x="12" y="145" fill="#facc15" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">• Tranche 2: Up to ₹2L (30m)</text>
+    <text x="12" y="175" fill="#34d399" font-family="'Outfit', sans-serif" font-size="14" font-weight="900">5% Interest Rate</text>
+    <text x="12" y="195" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">(8% Govt Subvention)</text>
+  </g>
+
+  <!-- Pillar 5 -->
+  <g transform="translate(715, 130)">
+    <rect width="145" height="220" rx="16" fill="url(#cardG3)" stroke="rgba(236,72,153,0.3)" stroke-width="1.5"/>
+    <circle cx="72" cy="35" r="20" fill="#db2777"/>
+    <text x="72" y="41" fill="#fff" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" text-anchor="middle">5</text>
+    <text x="72" y="78" fill="#fbcfe8" font-family="'Outfit', sans-serif" font-size="13" font-weight="800" text-anchor="middle">MARKETING</text>
+    <text x="10" y="105" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• Digital Tx: ₹1/tx (max ₹100/mo)</text>
+    <text x="10" y="140" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600">• Onboarding on GeM &amp; ONDC</text>
+    <text x="10" y="190" fill="#f472b6" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">Quality &amp; Branding</text>
+  </g>
+
+  <!-- Achievement Numbers Banner -->
+  <g transform="translate(40, 380)">
+    <rect width="820" height="200" rx="20" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#facc15" font-family="'Outfit', sans-serif" font-size="16" font-weight="900">★ OFFICIAL SCHEME MILESTONES (PIB FEB 2025):</text>
+    
+    <g transform="translate(30, 60)">
+      <rect width="240" height="110" rx="14" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.4)" stroke-width="1.5"/>
+      <text x="20" y="35" fill="#c4b5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">TOTAL APPLICATIONS</text>
+      <text x="20" y="75" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="28" font-weight="900">2.65 Crore+</text>
+      <text x="20" y="95" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">submitted nationwide</text>
+    </g>
+
+    <g transform="translate(290, 60)">
+      <rect width="240" height="110" rx="14" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+      <text x="20" y="35" fill="#6ee7b7" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">SUCCESSFUL REGISTRATIONS</text>
+      <text x="20" y="75" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="28" font-weight="900">27.13 Lakh</text>
+      <text x="20" y="95" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">vetted &amp; certified artisans</text>
+    </g>
+
+    <g transform="translate(550, 60)">
+      <rect width="240" height="110" rx="14" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.4)" stroke-width="1.5"/>
+      <text x="20" y="35" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">TRADITIONAL TRADES</text>
+      <text x="20" y="75" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="28" font-weight="900">18 Trades</text>
+      <text x="20" y="95" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Carpenters, Potters, Masons, etc.</text>
+    </g>
+  </g>
+</svg>

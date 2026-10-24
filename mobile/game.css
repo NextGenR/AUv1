@@ -1055,3 +1055,432 @@ body.samsung-light .leader-row.is-user {
   pointer-events: none;
   z-index: 999;
 }
+
+/* ==========================================================================
+   SAMSUNG ONE UI TOPIC PICKER (MOBILE HOME SCREEN)
+   ========================================================================== */
+.topic-picker-container {
+  padding: 0.85rem 1rem 0.5rem;
+  background: var(--game-header-bg);
+  border-bottom: 1px solid var(--game-border-subtle);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.topic-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.topic-picker-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--game-text-dim);
+  text-transform: uppercase;
+}
+
+.topic-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.topic-level-counter {
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+body.samsung-light .topic-level-counter {
+  background: rgba(0, 114, 222, 0.1);
+  color: var(--samsung-blue);
+  border-color: rgba(0, 114, 222, 0.25);
+}
+
+.topic-pills-row {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+
+.topic-pills-row::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-pill {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 0.95rem;
+  border-radius: 20px;
+  background: var(--game-card);
+  border: 1.5px solid var(--game-card-border);
+  border-bottom: 3px solid var(--game-card-border-b);
+  color: var(--game-text-dim);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.topic-pill:active {
+  transform: translateY(2px);
+  border-bottom-width: 1.5px;
+}
+
+.topic-pill.active {
+  background: #2563eb;
+  border-color: #3b82f6;
+  border-bottom-color: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+body.samsung-light .topic-pill.active {
+  background: var(--samsung-blue);
+  border-color: var(--samsung-blue);
+  border-bottom-color: var(--samsung-blue-dark);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 114, 222, 0.3);
+}
+
+.topic-pill-icon {
+  font-size: 1rem;
+}
+
+/* Quick Flowcharts Strip */
+.flowchart-quick-strip {
+  padding: 0.6rem 1rem 0.2rem;
+}
+
+.flowchart-strip-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.95rem;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(99, 102, 241, 0.12));
+  border: 1.5px solid rgba(59, 130, 246, 0.35);
+  border-bottom: 3.5px solid rgba(37, 99, 235, 0.6);
+  border-radius: 18px;
+  color: var(--game-text);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.samsung-light .flowchart-strip-card {
+  background: linear-gradient(135deg, rgba(0, 114, 222, 0.08), rgba(99, 102, 241, 0.06));
+  border-color: rgba(0, 114, 222, 0.25);
+  border-bottom-color: rgba(0, 114, 222, 0.45);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.flowchart-strip-card:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.flowchart-strip-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  overflow: hidden;
+}
+
+.flowchart-strip-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+body.samsung-light .flowchart-strip-icon {
+  background: rgba(0, 114, 222, 0.12);
+}
+
+.flowchart-strip-text {
+  overflow: hidden;
+}
+
+.flowchart-strip-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: #60a5fa;
+  margin-bottom: 2px;
+}
+
+body.samsung-light .flowchart-strip-title {
+  color: var(--samsung-blue);
+}
+
+.flowchart-strip-sub {
+  font-size: 0.7rem;
+  color: var(--game-text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flowchart-strip-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: rgba(59, 130, 246, 0.25);
+  color: #93c5fd;
+  padding: 4px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+body.samsung-light .flowchart-strip-badge {
+  background: rgba(0, 114, 222, 0.15);
+  color: var(--samsung-blue);
+}
+
+/* ==========================================================================
+   VISUAL FLOWCHART MODAL (HIGH RESOLUTION SVG VIEWER)
+   ========================================================================== */
+.flowchart-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+body.samsung-light .flowchart-modal {
+  background: rgba(242, 244, 248, 0.98);
+}
+
+.flowchart-modal.open {
+  transform: translateY(0);
+}
+
+.flowchart-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--game-border-subtle);
+  background: var(--game-header-bg);
+}
+
+.flowchart-modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.flowchart-modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+
+body.samsung-light .flowchart-modal-title {
+  color: #0f172a;
+}
+
+.flowchart-modal-sub {
+  font-size: 0.72rem;
+  color: var(--game-text-dim);
+  margin: 0;
+}
+
+.flowchart-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--game-text);
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+body.samsung-light .flowchart-modal-close {
+  background: rgba(0, 0, 0, 0.08);
+  color: #0f172a;
+}
+
+.flowchart-modal-close:active {
+  transform: scale(0.9);
+}
+
+/* Flowchart Selector Tabs */
+.flowchart-tabs-bar {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: var(--game-surface);
+  border-bottom: 1px solid var(--game-border-subtle);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.flowchart-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.fc-tab-btn {
+  flex: 1 0 auto;
+  padding: 0.45rem 0.85rem;
+  border-radius: 12px;
+  background: transparent;
+  border: 1.5px solid transparent;
+  color: var(--game-text-dim);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.fc-tab-btn.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #60a5fa;
+}
+
+body.samsung-light .fc-tab-btn.active {
+  background: rgba(0, 114, 222, 0.12);
+  border-color: var(--samsung-blue);
+  color: var(--samsung-blue);
+}
+
+/* Viewport */
+.flowchart-viewport {
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+
+body.samsung-light .flowchart-viewport {
+  background: #ffffff;
+}
+
+.flowchart-img-wrap {
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+  text-align: center;
+}
+
+.flowchart-img-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+/* Flowchart Footer */
+.flowchart-modal-footer {
+  padding: 0.75rem 1.25rem;
+  background: var(--game-surface);
+  border-top: 1px solid var(--game-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.flowchart-desc-text {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--game-text-dim);
+  flex: 1;
+}
+
+.btn-fc-fullscreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+body.samsung-light .btn-fc-fullscreen {
+  background: var(--samsung-blue);
+}
+
+/* In-Play Concept Card Flowchart Preview */
+.concept-flowchart-card {
+  margin: 0.75rem 0;
+  border: 1.5px solid rgba(59, 130, 246, 0.35);
+  border-radius: 14px;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.concept-flowchart-card:active {
+  transform: scale(0.98);
+}
+

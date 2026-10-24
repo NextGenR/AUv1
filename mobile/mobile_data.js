@@ -1,40 +1,71 @@
 /**
  * CORTEX MOBILE GAME DATA
  * Unified repository synchronizer: uses the EXACT SAME questions as the desktop webpage version
- * (PUBLIC_EXAM_DATA from public_exam_data.js and LECTURE_DATA from lecture_data.js)
+ * (MSME_DATA from msme_data.js, PUBLIC_EXAM_DATA from public_exam_data.js, and LECTURE_DATA from lecture_data.js)
  */
 
 (function () {
   'use strict';
 
-  function buildWorlds() {
-    // 1. WORLD 1: Public Examinations & NTA Overhaul (From Desktop PUBLIC_EXAM_DATA.levels)
-    const world1Levels = (typeof PUBLIC_EXAM_DATA !== 'undefined' && PUBLIC_EXAM_DATA.levels)
-      ? PUBLIC_EXAM_DATA.levels.map((lvl) => ({
-          id: lvl.levelNumber,
-          rawId: lvl.id,
-          title: lvl.title,
-          subtitle: lvl.description,
-          icon: lvl.badgeIcon,
-          unit: lvl.unit,
-          unitColor: lvl.unitColor,
-          xpReward: lvl.xpReward,
-          coinsReward: lvl.xpReward * 3,
-          isBoss: lvl.levelNumber === 10,
-          bossName: lvl.levelNumber === 10 ? "Dreadlord Cartel Master" : null,
-          bossHp: 1000,
-          tasks: lvl.tasks // Exact same tasks and questions from desktop!
-        }))
-      : [];
+  // 1. TOPIC: MSME Reforms & Catalysts (10 Levels from MSME_DATA)
+  function buildMsmeLevels() {
+    if (typeof MSME_DATA !== 'undefined' && MSME_DATA.levels) {
+      return MSME_DATA.levels.map((lvl) => ({
+        id: lvl.levelNumber,
+        rawId: lvl.id,
+        topic: 'msme',
+        title: lvl.title,
+        subtitle: lvl.description,
+        icon: lvl.badgeIcon,
+        unit: lvl.unit,
+        unitColor: lvl.unitColor,
+        xpReward: lvl.xpReward,
+        coinsReward: lvl.xpReward * 3,
+        isBoss: lvl.levelNumber === 10,
+        bossName: lvl.levelNumber === 10 ? "Regulatory Cliff & Syndicate Overlord" : null,
+        bossHp: 1000,
+        tasks: lvl.tasks
+      }));
+    }
+    return [];
+  }
 
-    // 2. WORLD 2: AI in the Judiciary (From Desktop LECTURE_DATA)
+  // 2. TOPIC: Public Examinations & NTA Reforms (10 Levels from PUBLIC_EXAM_DATA)
+  function buildPublicExamLevels() {
+    if (typeof PUBLIC_EXAM_DATA !== 'undefined' && PUBLIC_EXAM_DATA.levels) {
+      return PUBLIC_EXAM_DATA.levels.map((lvl) => ({
+        id: lvl.levelNumber,
+        rawId: lvl.id,
+        topic: 'public-exams',
+        title: lvl.title,
+        subtitle: lvl.description,
+        icon: lvl.badgeIcon,
+        unit: lvl.unit,
+        unitColor: lvl.unitColor,
+        xpReward: lvl.xpReward,
+        coinsReward: lvl.xpReward * 3,
+        isBoss: lvl.levelNumber === 10,
+        bossName: lvl.levelNumber === 10 ? "Dreadlord Cartel Master" : null,
+        bossHp: 1000,
+        tasks: lvl.tasks
+      }));
+    }
+    return [];
+  }
+
+  // 3. TOPIC: AI in the Judiciary (4 Levels from LECTURE_DATA)
+  function buildAiJudiciaryLevels() {
     const mcqs = (typeof LECTURE_DATA !== 'undefined' && LECTURE_DATA.mcqs) ? LECTURE_DATA.mcqs : [];
-    const world2Levels = [
+    return [
       {
-        id: 11,
+        id: 1,
+        rawId: 'ai-1',
+        topic: 'ai-judiciary',
         title: "5.1 Crore Pendency & Judge Ratio",
         subtitle: "Human Capital Deficit & NJDG Data",
         icon: "📊",
+        unit: "Unit 1: Judicial Crisis & AI Capabilities",
+        unitColor: "#6366f1",
         xpReward: 30,
         coinsReward: 90,
         tasks: [
@@ -54,10 +85,14 @@
         ]
       },
       {
-        id: 12,
+        id: 2,
+        rawId: 'ai-2',
+        topic: 'ai-judiciary',
         title: "Supreme Court 3-Tier AI Pyramid",
         subtitle: "Green, Amber & Red Tiers",
         icon: "🚦",
+        unit: "Unit 1: Judicial Crisis & AI Capabilities",
+        unitColor: "#6366f1",
         xpReward: 35,
         coinsReward: 100,
         tasks: [
@@ -82,10 +117,14 @@
         ]
       },
       {
-        id: 13,
+        id: 3,
+        rawId: 'ai-3',
+        topic: 'ai-judiciary',
         title: "Judicial Hallucinations & Precedent",
         subtitle: "The Toxic Gas Warning & Mata v. Avianca",
         icon: "⚖️",
+        unit: "Unit 2: Ethical Hazards & Legal Guardrails",
+        unitColor: "#ec4899",
         xpReward: 40,
         coinsReward: 120,
         tasks: [
@@ -110,16 +149,19 @@
         ]
       },
       {
-        id: 14,
+        id: 4,
+        rawId: 'ai-4',
+        topic: 'ai-judiciary',
         isBoss: true,
-        title: "BOSS: Regulation 43 & The Conscience Dictum",
+        title: "BOSS: Regulation 43 & Conscience Dictum",
         subtitle: "Defend Article 21 and the Speaking Order Doctrine!",
         icon: "👑",
+        unit: "Unit 2: Ethical Hazards & Legal Guardrails",
+        unitColor: "#ec4899",
         bossName: "Algorithmic Black-Box Leviathan",
         bossHp: 1200,
         xpReward: 60,
         coinsReward: 250,
-        badgeUnlock: "Constitutional Guardian",
         tasks: [
           {
             type: "concept",
@@ -148,43 +190,133 @@
         ]
       }
     ];
+  }
 
+  // Visual Flowcharts Repository for Mobile Viewer
+  const flowcharts = {
+    'fc-classification': {
+      id: 'fc-classification',
+      title: 'Composite Classification & Multipliers',
+      file: 'assets/flowcharts/flowchart_msme_classification.svg',
+      desc: 'Visual breakdown of Investment & Turnover ceilings (Micro ₹1Cr/₹5Cr, Small ₹10Cr/₹50Cr, Medium ₹50Cr/₹250Cr), 1:5 ratio, 2.5x multiplier, and export turnover exclusion.'
+    },
+    'fc-delayed-payments': {
+      id: 'fc-delayed-payments',
+      title: 'Delayed Payments & Section 43B(h)',
+      file: 'assets/flowcharts/flowchart_delayed_payments.svg',
+      desc: 'MSMED Act Sections 15-19: 15/45-day deadline, Section 16 compound interest at 3x RBI Bank Rate, MSEFC 90-day arbitration, 75% court pre-deposit, and Section 43B(h) tax disallowance.'
+    },
+    'fc-pm-vishwakarma': {
+      id: 'fc-pm-vishwakarma',
+      title: 'PM Vishwakarma 5-Pillar Architecture',
+      file: 'assets/flowcharts/flowchart_pm_vishwakarma.svg',
+      desc: '₹13,000 Cr Central Sector outlay, 18 traditional artisan trades, ₹15k precision toolkit, and ₹1L + ₹2L collateral-free enterprise credit at 5% concessional interest with 8% subvention.'
+    },
+    'fc-dwarfism': {
+      id: 'fc-dwarfism',
+      title: 'Dwarfism & Missing Middle vs. Mittelstand',
+      file: 'assets/flowcharts/flowchart_dwarfism_vs_mittelstand.svg',
+      desc: 'Economic Survey 2018-19: Inverted pyramid of 99.4% micro units vs German Mittelstand high-productivity model, and scale-neutral policy pathways.'
+    }
+  };
+
+  // The 3 Playable Topics
+  const topics = {
+    'msme': {
+      id: 'msme',
+      title: 'MSME Reforms & Catalysts',
+      badge: 'CAVA GS-3 (Desktop Synced)',
+      description: '10 levels: Composite Criteria, Delayed Payments, 43B(h), PM Vishwakarma & Budget 2025.',
+      color: '#3b82f6',
+      icon: '🏭',
+      flowcharts: ['fc-classification', 'fc-delayed-payments', 'fc-pm-vishwakarma', 'fc-dwarfism'],
+      get levels() { return buildMsmeLevels(); }
+    },
+    'public-exams': {
+      id: 'public-exams',
+      title: 'Public Examinations & NTA Overhaul',
+      badge: 'CAVA Lecture 4 (Desktop Synced)',
+      description: '10 levels: Unfair Means Act 2024, Radhakrishnan Committee & NTA 24-staff paradox.',
+      color: '#10b981',
+      icon: '🏛️',
+      flowcharts: [],
+      get levels() { return buildPublicExamLevels(); }
+    },
+    'ai-judiciary': {
+      id: 'ai-judiciary',
+      title: 'AI in the Judiciary',
+      badge: 'CAVA Lecture 3 (Desktop Synced)',
+      description: '4 levels: Supreme Court 3-Tier AI Pyramid, Regulation 43 & Conscience Dictum.',
+      color: '#6366f1',
+      icon: '⚖️',
+      flowcharts: [],
+      get levels() { return buildAiJudiciaryLevels(); }
+    }
+  };
+
+  // Backward compatible worlds builder
+  function buildWorlds() {
     return [
       {
+        id: "world-msme",
+        topicId: "msme",
+        name: "World 1: MSMEs as Catalysts",
+        badge: "CAVA GS-3 (Desktop Synced)",
+        description: "10 progressive levels: Composite Criteria, Delayed Payments, 43B(h), PM Vishwakarma & Budget 2025.",
+        color: "#3b82f6",
+        levels: buildMsmeLevels()
+      },
+      {
         id: "world-1",
-        name: "World 1: Public Examinations & NTA Reforms",
+        topicId: "public-exams",
+        name: "World 2: Public Examinations & NTA Reforms",
         badge: "CAVA Lecture 4 (Desktop Synced)",
         description: "10 progressive levels directly synced with the desktop Duolingo learning model.",
         color: "#10b981",
-        levels: world1Levels
+        levels: buildPublicExamLevels()
       },
       {
         id: "world-2",
-        name: "World 2: AI in the Judiciary",
+        topicId: "ai-judiciary",
+        name: "World 3: AI in the Judiciary",
         badge: "CAVA Lecture 3 (Desktop Synced)",
         description: "Supreme Court Draft Regulations, 3-Tier AI Pyramid, and Regulation 43.",
         color: "#6366f1",
-        levels: world2Levels
+        levels: buildAiJudiciaryLevels()
       }
     ];
   }
 
-  // Rapid-fire blitz statements directly extracted from desktop lecture points
+  // Rapid-fire blitz statements (Comprehensive MSME + Public Exams + AI Judiciary)
   const blitzQuestions = [
+    // MSME
+    { q: "MSMEs contribute approximately 31.1% of India's GDP and 48.6% of merchandise exports.", ans: true },
+    { q: "Export turnover is included when calculating the turnover limit under the 2020 MSME composite criteria.", ans: false },
+    { q: "Section 16 of MSMED Act prescribes compound interest at 3 times the RBI Bank Rate for delayed payments.", ans: true },
+    { q: "Section 43B(h) of the Income Tax Act applies equally to Micro, Small, and Medium enterprises.", ans: false },
+    { q: "PM Vishwakarma provides collateral-free enterprise loans up to ₹3 Lakh at a subsidized 5% interest rate.", ans: true },
+    { q: "In the 2020 composite criteria, the Turnover ceiling is exactly 5 times the Investment ceiling across all tiers.", ans: true },
+    { q: "Under Budget 2025-26, the credit guarantee cover for MSME manufacturing machinery was set at up to ₹100 Crore.", ans: true },
+    { q: "Over 99% of all MSMEs in India are classified as Medium enterprises.", ans: false },
+    { q: "Section 19 of MSMED Act requires a defaulting buyer to pre-deposit 75% of the decreed amount before appealing in court.", ans: true },
+    { q: "The Udyam Assist Platform (UAP) enables informal micro enterprises lacking GSTIN to access priority sector lending.", ans: true },
+    { q: "Mudra loan ceiling under the Tarun Plus category was doubled from ₹10 Lakh to ₹20 Lakh in Budget 2025-26.", ans: true },
+
+    // Public Exams
     { q: "Education was moved to Concurrent List (Entry 25) by 42nd CAA 1976.", ans: true },
     { q: "NTA conducts exams for 1.5 Crore students with only 24 permanent employees.", ans: true },
     { q: "Under the 2024 Act, candidates appearing for exams face mandatory 5 years in prison.", ans: false },
     { q: "The Chhattisgarh High Court observed that a paper leak is more heinous than murder.", ans: true },
     { q: "Gary Becker proved that severe punishment alone deters crime even with near-zero detection.", ans: false },
+    { q: "Radhakrishnan Committee recommended hybrid digital lockboxes with 30-min transmission.", ans: true },
+    { q: "NTA was established as a statutory constitutional body under Article 324.", ans: false },
+    { q: "The 2026 Amendment heightened organized paper leak fines to a minimum of ₹1 Crore.", ans: true },
+
+    // AI Judiciary
     { q: "India currently has approximately 21 judges per million population (target is 50).", ans: true },
     { q: "Supreme Court Red Tier permits automated algorithmic determination of criminal guilt.", ans: false },
     { q: "Regulation 43 mandates compulsory disclosure whenever AI tools are used in court filings.", ans: true },
-    { q: "Radhakrishnan Committee recommended hybrid digital lockboxes with 30-min transmission.", ans: true },
-    { q: "NTA was established as a statutory constitutional body under Article 324.", ans: false },
-    { q: "Justice A.K. Rajan Committee found centralized exams heavily favored coaching hubs.", ans: true },
     { q: "Speaking order doctrine requires judges to provide explainable written reasoning.", ans: true },
-    { q: "China's Gaokao exam employs armed military escorts, signal jammers, and 7-year penal terms.", ans: true },
-    { q: "The 2026 Amendment heightened organized paper leak fines to a minimum of ₹1 Crore.", ans: true },
     { q: "SUVAS is an automated adjudicatory algorithm that delivers final Supreme Court verdicts.", ans: false }
   ];
 
@@ -235,6 +367,15 @@
       type: "skin"
     },
     {
+      id: "skin-msme",
+      name: "Viksit Bharat Industrialist Badge",
+      desc: "Unlock the MSME Catalyst Champion avatar.",
+      price: 500,
+      currency: "gems",
+      icon: "🏭",
+      type: "skin"
+    },
+    {
       id: "skin-judge",
       name: "Supreme Court Gavel Avatar",
       desc: "Unlock the Apex Bench Judiciary avatar.",
@@ -257,6 +398,8 @@
   ];
 
   window.GAME_DATA = {
+    topics,
+    flowcharts,
     get worlds() {
       return buildWorlds();
     },

@@ -177,14 +177,19 @@
     }
   };
 
+  // --- URL PARAMETERS & INITIAL TOPIC ---
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialTopic = urlParams.get('topic') || localStorage.getItem('cortex_active_topic') || 'msme';
+
   // --- GAME STATE ---
   const STATE = {
+    currentTopic: (typeof GAME_DATA !== 'undefined' && GAME_DATA.topics && GAME_DATA.topics[initialTopic]) ? initialTopic : 'msme',
     hearts: parseInt(localStorage.getItem('cortex_game_hearts') || '5', 10),
     gems: parseInt(localStorage.getItem('cortex_game_gems') || '450', 10),
     coins: parseInt(localStorage.getItem('cortex_game_coins') || '1280', 10),
     streak: parseInt(localStorage.getItem('cortex_game_streak') || '18', 10),
-    completedLevels: new Set(JSON.parse(localStorage.getItem('cortex_game_levels') || '[1]')),
-    levelStars: JSON.parse(localStorage.getItem('cortex_game_stars') || '{"1":3}'),
+    completedLevels: new Set(JSON.parse(localStorage.getItem(`cortex_game_levels_${initialTopic}`) || '[1]')),
+    levelStars: JSON.parse(localStorage.getItem(`cortex_game_stars_${initialTopic}`) || '{"1":3}'),
     activeTab: 'map',
     theme: localStorage.getItem('samsung_ui_theme') || 'samsung-dark',
 
@@ -210,8 +215,8 @@
     localStorage.setItem('cortex_game_gems', STATE.gems);
     localStorage.setItem('cortex_game_coins', STATE.coins);
     localStorage.setItem('cortex_game_streak', STATE.streak);
-    localStorage.setItem('cortex_game_levels', JSON.stringify(Array.from(STATE.completedLevels)));
-    localStorage.setItem('cortex_game_stars', JSON.stringify(STATE.levelStars));
+    localStorage.setItem(`cortex_game_levels_${STATE.currentTopic}`, JSON.stringify(Array.from(STATE.completedLevels)));
+    localStorage.setItem(`cortex_game_stars_${STATE.currentTopic}`, JSON.stringify(STATE.levelStars));
     updateHUD();
   }
 
@@ -228,6 +233,18 @@
     screens: document.querySelectorAll('.game-screen'),
     dockBtns: document.querySelectorAll('.dock-btn'),
     questPath: document.getElementById('quest-path-content'),
+    // Topic Switcher Elements
+    topicPills: document.querySelectorAll('.topic-pill'),
+    topicLevelCounter: document.getElementById('topic-level-counter'),
+    btnOpenFlowcharts: document.getElementById('btn-open-flowcharts'),
+    // Flowchart Modal Elements
+    flowchartModal: document.getElementById('flowchart-modal'),
+    flowchartCloseBtn: document.getElementById('flowchart-modal-close'),
+    flowchartTabs: document.querySelectorAll('.fc-tab-btn'),
+    flowchartImg: document.getElementById('flowchart-active-img'),
+    flowchartTitle: document.getElementById('flowchart-modal-title'),
+    flowchartDesc: document.getElementById('flowchart-desc-text'),
+    flowchartFullscreen: document.getElementById('btn-fc-fullscreen'),
     // Play Modal
     playModal: document.getElementById('play-modal'),
     playCloseBtn: document.getElementById('play-close-btn'),
@@ -310,63 +327,148 @@
     }
   }
 
-  // --- RENDER QUEST MAP ---
+  // --- TOPIC CONTROLLER (SAMSUNG ONE UI PICKER) ---
+  function switchTopic(topicId) {
+    if (!GAME_DATA.topics || !GAME_DATA.topics[topicId]) return;
+    STATE.currentTopic = topicId;
+    localStorage.setItem('cortex_active_topic', topicId);
+
+    // Load topic progress
+    const savedLevels = localStorage.getItem(`cortex_game_levels_${topicId}`);
+    STATE.completedLevels = new Set(JSON.parse(savedLevels || '[1]'));
+    const savedStars = localStorage.getItem(`cortex_game_stars_${topicId}`);
+    STATE.levelStars = JSON.parse(savedStars || '{"1":3}');
+
+    // Update Pills
+    if (DOM.topicPills) {
+      DOM.topicPills.forEach(pill => {
+        const isActive = pill.dataset.topic === topicId;
+        pill.classList.toggle('active', isActive);
+        pill.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    }
+
+    // Update counter
+    const topicData = GAME_DATA.topics[topicId];
+    if (DOM.topicLevelCounter && topicData) {
+      DOM.topicLevelCounter.textContent = `${topicData.levels.length} Levels`;
+    }
+
+    // Toggle flowcharts strip visibility (show for MSME or topics with flowcharts)
+    const fcStrip = document.getElementById('flowchart-quick-strip');
+    if (fcStrip) {
+      fcStrip.style.display = (topicId === 'msme' || (topicData.flowcharts && topicData.flowcharts.length > 0)) ? 'block' : 'none';
+    }
+
+    renderQuestMap();
+  }
+
+  // --- FLOWCHART MODAL CONTROLLER ---
+  function openFlowchart(fcId = 'fc-classification') {
+    if (!DOM.flowchartModal) return;
+    DOM.flowchartModal.classList.add('open');
+    showFlowchart(fcId);
+  }
+
+  function closeFlowchart() {
+    if (DOM.flowchartModal) {
+      DOM.flowchartModal.classList.remove('open');
+    }
+  }
+
+  function showFlowchart(fcId) {
+    if (!GAME_DATA.flowcharts) return;
+    const fc = GAME_DATA.flowcharts[fcId];
+    if (!fc) return;
+
+    if (DOM.flowchartImg) DOM.flowchartImg.src = fc.file;
+    if (DOM.flowchartTitle) DOM.flowchartTitle.textContent = fc.title;
+    if (DOM.flowchartDesc) DOM.flowchartDesc.textContent = fc.desc;
+    if (DOM.flowchartFullscreen) DOM.flowchartFullscreen.href = fc.file;
+
+    if (DOM.flowchartTabs) {
+      DOM.flowchartTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.fc === fcId);
+      });
+    }
+  }
+
+  // --- RENDER QUEST MAP (TOPIC-AWARE & LEVEL PATH) ---
   function renderQuestMap() {
     if (!DOM.questPath) return;
     DOM.questPath.innerHTML = '';
 
-    GAME_DATA.worlds.forEach((world, wIdx) => {
-      // World Banner
-      const banner = document.createElement('div');
-      banner.className = `world-header-banner ${wIdx === 1 ? 'world-2' : ''}`;
-      banner.innerHTML = `
-        <span class="world-tag">${world.badge}</span>
-        <h2 class="world-title">${world.name}</h2>
-        <p class="world-desc">${world.description}</p>
-      `;
-      DOM.questPath.appendChild(banner);
+    const topic = (GAME_DATA.topics && GAME_DATA.topics[STATE.currentTopic]) ? GAME_DATA.topics[STATE.currentTopic] : (GAME_DATA.topics ? GAME_DATA.topics['msme'] : null);
+    if (!topic) return;
 
-      // Levels in World
-      const pathContainer = document.createElement('div');
-      pathContainer.className = 'quest-path-container';
+    // World Banner for Active Topic
+    const banner = document.createElement('div');
+    banner.className = `world-header-banner topic-${topic.id}`;
+    banner.style.borderLeftColor = topic.color;
+    banner.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+        <span class="world-tag" style="color:${topic.color}; border-color:${topic.color};">${topic.badge}</span>
+        <span style="font-size:0.75rem; font-weight:800; color:#cbd5e1; background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:999px;">
+          ${topic.levels.length} Quests
+        </span>
+      </div>
+      <h2 class="world-title">${topic.icon} ${topic.title}</h2>
+      <p class="world-desc">${topic.description}</p>
+    `;
+    DOM.questPath.appendChild(banner);
 
-      world.levels.forEach((level) => {
-        const isCompleted = STATE.completedLevels.has(level.id);
-        const isUnlocked = isCompleted || STATE.completedLevels.has(level.id - 1) || level.id === 1;
-        const isCurrent = !isCompleted && isUnlocked;
-        const stars = STATE.levelStars[level.id] || 0;
+    // Levels in Active Topic
+    const pathContainer = document.createElement('div');
+    pathContainer.className = 'quest-path-container';
 
-        const nodeWrapper = document.createElement('div');
-        nodeWrapper.className = 'quest-node-wrapper';
+    let currentUnit = '';
 
-        const btn = document.createElement('button');
-        btn.className = `quest-node-btn ${level.isBoss ? 'boss' : ''} ${isCurrent ? 'current' : ''} ${!isUnlocked ? 'locked' : ''}`;
-        btn.innerHTML = isUnlocked ? (level.isBoss ? '👑' : level.icon) : '🔒';
-        btn.disabled = !isUnlocked;
+    topic.levels.forEach((level) => {
+      // Unit Divider Banner if unit changes
+      if (level.unit && level.unit !== currentUnit) {
+        currentUnit = level.unit;
+        const unitDiv = document.createElement('div');
+        unitDiv.style.cssText = `margin: 1.5rem 0 0.8rem; padding: 0.5rem 0.85rem; background: rgba(255,255,255,0.04); border-left: 3.5px solid ${level.unitColor || topic.color}; border-radius: 0 10px 10px 0; font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: ${level.unitColor || topic.color};`;
+        unitDiv.textContent = currentUnit;
+        pathContainer.appendChild(unitDiv);
+      }
 
-        btn.addEventListener('click', () => {
-          if (isUnlocked) {
-            startLevel(level);
-          }
-        });
+      const isCompleted = STATE.completedLevels.has(level.id);
+      const isUnlocked = isCompleted || STATE.completedLevels.has(level.id - 1) || level.id === 1;
+      const isCurrent = !isCompleted && isUnlocked;
+      const stars = STATE.levelStars[level.id] || 0;
 
-        const label = document.createElement('div');
-        label.className = 'quest-node-label';
-        label.textContent = level.title;
+      const nodeWrapper = document.createElement('div');
+      nodeWrapper.className = 'quest-node-wrapper';
 
-        const starsEl = document.createElement('div');
-        starsEl.className = 'quest-node-stars';
-        starsEl.textContent = isCompleted ? '⭐'.repeat(stars) : '';
+      const btn = document.createElement('button');
+      btn.className = `quest-node-btn ${level.isBoss ? 'boss' : ''} ${isCurrent ? 'current' : ''} ${!isUnlocked ? 'locked' : ''}`;
+      btn.innerHTML = isUnlocked ? (level.isBoss ? '👑' : (level.icon || '⚔️')) : '🔒';
+      btn.disabled = !isUnlocked;
+      btn.setAttribute('aria-label', `Level ${level.id}: ${level.title}`);
 
-        nodeWrapper.appendChild(btn);
-        nodeWrapper.appendChild(label);
-        if (isCompleted) nodeWrapper.appendChild(starsEl);
-
-        pathContainer.appendChild(nodeWrapper);
+      btn.addEventListener('click', () => {
+        if (isUnlocked) {
+          startLevel(level);
+        }
       });
 
-      DOM.questPath.appendChild(pathContainer);
+      const label = document.createElement('div');
+      label.className = 'quest-node-label';
+      label.textContent = `Lvl ${level.id}: ${level.title}`;
+
+      const starsEl = document.createElement('div');
+      starsEl.className = 'quest-node-stars';
+      starsEl.textContent = isCompleted ? '⭐'.repeat(stars) : '';
+
+      nodeWrapper.appendChild(btn);
+      nodeWrapper.appendChild(label);
+      if (isCompleted) nodeWrapper.appendChild(starsEl);
+
+      pathContainer.appendChild(nodeWrapper);
     });
+
+    DOM.questPath.appendChild(pathContainer);
   }
 
   // --- START LEVEL SESSION ---
@@ -440,6 +542,16 @@
       DOM.playActionBtn.textContent = 'CONTINUE (+10 XP)';
       DOM.playActionBtn.disabled = false;
 
+      const fcPreview = task.flowchart ? `
+        <div class="concept-flowchart-card" id="task-flowchart-preview-btn">
+          <div style="font-size:0.75rem; font-weight:800; color:#38bdf8; display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span>📊 Architectural Flowchart</span>
+            <span style="background:rgba(59,130,246,0.25); color:#93c5fd; padding:2px 8px; border-radius:6px; font-size:0.72rem;">🔍 Tap to Zoom</span>
+          </div>
+          <img src="assets/flowcharts/${task.flowchart}" alt="Flowchart Diagram" style="width:100%; max-height:160px; object-fit:contain; border-radius:8px; background:rgba(0,0,0,0.4);" loading="lazy">
+        </div>
+      ` : '';
+
       const card = document.createElement('div');
       card.style.cssText = 'background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.85rem;';
       card.innerHTML = `
@@ -452,12 +564,28 @@
         <div style="font-size:0.95rem; line-height:1.6; color:#cbd5e1;">
           ${formatContent(task.content)}
         </div>
+        ${fcPreview}
         ${task.keyTakeaway ? `
           <div style="background: rgba(16, 185, 129, 0.15); border-left: 4px solid #10b981; border-radius: 0 10px 10px 0; padding: 0.75rem 1rem; font-size:0.86rem; color:#a7f3d0; line-height:1.45;">
             <strong>Key Takeaway:</strong> ${task.keyTakeaway}
           </div>
         ` : ''}
       `;
+
+      if (task.flowchart) {
+        const fcBtn = card.querySelector('#task-flowchart-preview-btn');
+        if (fcBtn) {
+          fcBtn.addEventListener('click', () => {
+            SoundFX.playTap();
+            let fcKey = 'fc-classification';
+            if (task.flowchart.includes('delayed')) fcKey = 'fc-delayed-payments';
+            else if (task.flowchart.includes('vishwakarma')) fcKey = 'fc-pm-vishwakarma';
+            else if (task.flowchart.includes('dwarfism')) fcKey = 'fc-dwarfism';
+            openFlowchart(fcKey);
+          });
+        }
+      }
+
       DOM.playQuestionBox.appendChild(card);
       return;
     }
@@ -884,9 +1012,46 @@
     applySamsungTheme(STATE.theme);
     Confetti.init();
     updateHUD();
-    renderQuestMap();
     renderLeaderboard();
     renderShop();
+
+    // Initialize Active Topic & Quest Map
+    switchTopic(STATE.currentTopic);
+
+    // Topic Switcher Event Listeners
+    if (DOM.topicPills) {
+      DOM.topicPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const topicId = pill.dataset.topic;
+          if (topicId) switchTopic(topicId);
+        });
+      });
+    }
+
+    // Flowchart Modal Event Listeners
+    if (DOM.btnOpenFlowcharts) {
+      DOM.btnOpenFlowcharts.addEventListener('click', () => {
+        SoundFX.playTap();
+        openFlowchart('fc-classification');
+      });
+    }
+
+    if (DOM.flowchartCloseBtn) {
+      DOM.flowchartCloseBtn.addEventListener('click', () => {
+        SoundFX.playTap();
+        closeFlowchart();
+      });
+    }
+
+    if (DOM.flowchartTabs) {
+      DOM.flowchartTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          SoundFX.playTap();
+          const fcId = tab.dataset.fc;
+          if (fcId) showFlowchart(fcId);
+        });
+      });
+    }
 
     // Theme Switcher Event
     if (DOM.themeToggleBtn) {

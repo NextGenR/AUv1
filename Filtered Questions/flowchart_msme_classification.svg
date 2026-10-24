@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="microGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="smallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="900" height="620" rx="28" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="896" height="616" rx="26" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+
+  <!-- Header Section -->
+  <g transform="translate(40, 35)">
+    <rect x="0" y="0" width="140" height="26" rx="13" fill="rgba(44,117,255,0.2)" stroke="#2c75ff" stroke-width="1.5"/>
+    <text x="70" y="17" fill="#60a5fa" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">UPSC CAVA • MSME</text>
+    <text x="0" y="60" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="26" font-weight="900">MSME Composite Classification Architecture</text>
+    <text x="0" y="85" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">Statutory Framework: MSMED Act 2020 Baseline vs. Union Budget 2025-26 Scaling Multipliers</text>
+  </g>
+
+  <!-- Highlight Banner: Budget 2025-26 Multipliers -->
+  <g transform="translate(40, 145)" filter="url(#shadow)">
+    <rect width="820" height="54" rx="16" fill="url(#bannerGrad)"/>
+    <text x="25" y="33" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="15" font-weight="900">🚀 BUDGET 2025-26 MULTIPLIERS:</text>
+    <text x="280" y="33" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700">Investment limits increased by <tspan font-weight="900" text-decoration="underline">2.5 Times</tspan> • Turnover limits increased by <tspan font-weight="900" text-decoration="underline">2.0 Times</tspan></text>
+  </g>
+
+  <!-- 3 Classification Cards -->
+  <!-- 1. MICRO ENTERPRISE -->
+  <g transform="translate(40, 220)" filter="url(#shadow)">
+    <rect width="255" height="260" rx="22" fill="#121622" stroke="rgba(16,185,129,0.3)" stroke-width="2"/>
+    <rect width="255" height="55" rx="22" fill="url(#microGrad)"/>
+    <text x="127" y="34" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🌱 MICRO</text>
+    
+    <text x="20" y="85" fill="#6ee7b7" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">INVESTMENT CEILING</text>
+    <text x="20" y="112" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹2.5 Cr</text>
+    <text x="20" y="130" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹1.0 Cr)</text>
+    
+    <line x1="20" y1="145" x2="235" y2="145" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <text x="20" y="172" fill="#6ee7b7" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">ANNUAL TURNOVER CEILING</text>
+    <text x="20" y="199" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹10.0 Cr</text>
+    <text x="20" y="217" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹5.0 Cr)</text>
+
+    <rect x="20" y="230" width="215" height="18" rx="9" fill="rgba(16,185,129,0.15)"/>
+    <text x="127" y="243" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle">&gt;95% of all Indian MSMEs</text>
+  </g>
+
+  <!-- 2. SMALL ENTERPRISE -->
+  <g transform="translate(322, 220)" filter="url(#shadow)">
+    <rect width="255" height="260" rx="22" fill="#121622" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+    <rect width="255" height="55" rx="22" fill="url(#smallGrad)"/>
+    <text x="127" y="34" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" text-anchor="middle">⚡ SMALL</text>
+    
+    <text x="20" y="85" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">INVESTMENT CEILING</text>
+    <text x="20" y="112" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹25.0 Cr</text>
+    <text x="20" y="130" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹10.0 Cr)</text>
+    
+    <line x1="20" y1="145" x2="235" y2="145" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <text x="20" y="172" fill="#93c5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">ANNUAL TURNOVER CEILING</text>
+    <text x="20" y="199" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹100.0 Cr</text>
+    <text x="20" y="217" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹50.0 Cr)</text>
+
+    <rect x="20" y="230" width="215" height="18" rx="9" fill="rgba(59,130,246,0.15)"/>
+    <text x="127" y="243" fill="#60a5fa" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle">Eligible for Section 43B(h)</text>
+  </g>
+
+  <!-- 3. MEDIUM ENTERPRISE -->
+  <g transform="translate(605, 220)" filter="url(#shadow)">
+    <rect width="255" height="260" rx="22" fill="#121622" stroke="rgba(139,92,246,0.3)" stroke-width="2"/>
+    <rect width="255" height="55" rx="22" fill="url(#medGrad)"/>
+    <text x="127" y="34" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="18" font-weight="900" text-anchor="middle">🏢 MEDIUM</text>
+    
+    <text x="20" y="85" fill="#c4b5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">INVESTMENT CEILING</text>
+    <text x="20" y="112" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹125.0 Cr</text>
+    <text x="20" y="130" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹50.0 Cr)</text>
+    
+    <line x1="20" y1="145" x2="235" y2="145" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <text x="20" y="172" fill="#c4b5fd" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">ANNUAL TURNOVER CEILING</text>
+    <text x="20" y="199" fill="#ffffff" font-family="'Outfit', sans-serif" font-size="22" font-weight="900">≤ ₹500.0 Cr</text>
+    <text x="20" y="217" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">(2020 Baseline: ≤ ₹250.0 Cr)</text>
+
+    <rect x="20" y="230" width="215" height="18" rx="9" fill="rgba(139,92,246,0.15)"/>
+    <text x="127" y="243" fill="#a78bfa" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle">Mittelstand Target Group</text>
+  </g>
+
+  <!-- Critical Rule Callout Footer -->
+  <g transform="translate(40, 500)">
+    <rect width="820" height="85" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="25" y="32" fill="#facc15" font-family="'Outfit', sans-serif" font-size="14" font-weight="900">★ STATUTORY EXCLUSION CLAUSE (MSMED RULES):</text>
+    <text x="25" y="55" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">1. <tspan font-weight="800" fill="#38bdf8">Export Turnover of Goods &amp; Services</tspan> is completely excluded when calculating annual turnover for classification!</text>
+    <text x="25" y="74" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="12">2. Investment calculation excludes Land, Buildings, R&amp;D equipment, Pollution Control devices, and Industrial Safety tools.</text>
+  </g>
+</svg>

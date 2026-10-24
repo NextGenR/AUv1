@@ -1,0 +1,58 @@
+{
+  "name": "Cortex Quest | UPSC CAVA Mobile Game",
+  "short_name": "Cortex Quest",
+  "id": "cortex-quest-mobile-pwa",
+  "description": "Gamified mobile learning experience for UPSC CAVA. Master MSME, Public Examinations, and AI in Judiciary through Duolingo boss battles and quest maps.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#0d111c",
+  "lang": "en-IN",
+  "categories": ["education", "games", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "MSME Quests",
+      "short_name": "MSME",
+      "description": "Play MSME levels and flowcharts",
+      "url": "./index.html?topic=msme",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Public Exams Quests",
+      "short_name": "Exams",
+      "description": "Play Public Exams levels",
+      "url": "./index.html?topic=public-exams",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI in Judiciary Quests",
+      "short_name": "AI Court",
+      "description": "Play AI in Judiciary levels",
+      "url": "./index.html?topic=ai-judiciary",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

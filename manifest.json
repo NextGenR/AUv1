@@ -1,0 +1,65 @@
+{
+  "name": "Cortex Anki & Quest - UPSC CAVA Gamified",
+  "short_name": "Cortex Quest",
+  "id": "cortex-anki-quest-pwa",
+  "description": "Gamified Duolingo roadmap and CAVA study engine for UPSC Civil Services Examination. Master MSME, Public Examinations, and AI in Judiciary.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#0b0f19",
+  "lang": "en-IN",
+  "categories": ["education", "productivity", "games"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mobile Game Quest",
+      "short_name": "Quest",
+      "description": "Launch mobile Duolingo quest mode with topic switcher",
+      "url": "./mobile/index.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "MSME Duolingo Course",
+      "short_name": "MSME",
+      "description": "Master MSME classification, delayed payments, and Vishwakarma",
+      "url": "./msme_duo.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Public Exams Integrity",
+      "short_name": "Exams",
+      "description": "Study Public Examinations Unfair Means Act and NTA reforms",
+      "url": "./public_exam_duo.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Visual Roadmap Notes",
+      "short_name": "Roadmap",
+      "description": "Interactive tree view of CAVA topics",
+      "url": "./roadmap_notes.html",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

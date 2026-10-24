@@ -1,0 +1,733 @@
+{
+  "title": "MSME Reforms, Framework & Policy Architecture - Curated Best Questions",
+  "total_filtered_questions": 44,
+  "description": "High-yield curated questions for UPSC Prelims & Mains from ForumIAS notes, Mindmap and Budget 2025-26, mapped to visual flowcharts.",
+  "flowcharts": [
+    {
+      "filename": "flowchart_msme_classification.svg",
+      "title": "Composite Classification Framework & 2.5x Multiplier",
+      "description": "Visual breakdown of Investment & Turnover ceilings (1/5, 10/50, 50/250) and export turnover exclusion."
+    },
+    {
+      "filename": "flowchart_delayed_payments.svg",
+      "title": "Delayed Payments & Section 43B(h) Workflow",
+      "description": "Sections 15-19 MSMED Act, 3x RBI Bank Rate compounding, MSEFC 90-day arbitrations, and 45-day tax deductibility."
+    },
+    {
+      "filename": "flowchart_pm_vishwakarma.svg",
+      "title": "PM Vishwakarma 5-Pillar Scheme Architecture",
+      "description": "₹13,000 Cr outlay, 18 trades, ₹15k toolkit, and ₹1L + ₹2L collateral-free credit at 5% interest."
+    },
+    {
+      "filename": "flowchart_dwarfism_vs_mittelstand.svg",
+      "title": "Dwarfism & Missing Middle vs. German Mittelstand",
+      "description": "Inverted pyramid vs. high-productivity Mittelstand model and structural transition pathways."
+    }
+  ],
+  "questions": [
+    {
+      "id": "MSME_001",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "statement_based",
+      "difficulty": "Easy",
+      "question": "With reference to the global observance of Micro, Small and Medium Enterprises, consider the following statements:\n1. June 27 is designated as International MSME Day.\n2. Globally, MSMEs account for approximately 90 per cent of all business enterprises and over 50 per cent of employment.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "C",
+      "explanation": "Both statements are correct. June 27 is observed annually worldwide as International MSME Day to draw attention to strengthening MSMEs' access to finance, markets, technology, and policy support. Globally, MSMEs form the backbone of economic ecosystems, representing nearly 90% of all businesses and providing more than 50% of total employment.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_002",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "According to the ForumIAS and PIB official data, what is the share of the MSME sector in India's Gross Domestic Product (GDP)?",
+      "options": {
+        "A": "18.5 per cent",
+        "B": "24.2 per cent",
+        "C": "31.1 per cent",
+        "D": "42.8 per cent"
+      },
+      "correct_option": "C",
+      "explanation": "According to official data and ForumIAS notes, the MSME sector contributes 31.1 per cent to India's GDP, 35.4 per cent to manufacturing Gross Value Added (GVA), and nearly 48.6 per cent to total exports, making it a critical pillar of economic output.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_003",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "Consider the following statements regarding the contribution of MSMEs to India's manufacturing and external trade:\n1. MSMEs contribute 35.4 per cent to India's manufacturing Gross Value Added (GVA).\n2. Products related to MSMEs consistently account for over 45 per cent of India's total merchandise exports.\n3. India possesses the largest MSME ecosystem in the world, surpassing both the United States and China.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "A",
+      "explanation": "Statements 1 and 2 are correct. MSMEs contribute 35.4% to manufacturing GVA and around 45.7% to 48.6% of India's total exports. Statement 3 is incorrect because India has the third-largest MSME ecosystem in the world, ranking behind the United States and China.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_004",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "In comparison with India, what is the approximate share of MSMEs in the total economic output of advanced manufacturing-led economies like Germany and Japan?",
+      "options": {
+        "A": "Around 30% in Germany and 25% in Japan",
+        "B": "Around 55% in Germany and 52% in Japan",
+        "C": "Around 70% in Germany and 65% in Japan",
+        "D": "Around 40% in Germany and 35% in Japan"
+      },
+      "correct_option": "B",
+      "explanation": "In advanced manufacturing economies, MSMEs contribute substantially higher shares of economic output: approximately 55% in Germany, 52% in Japan, and 47% in South Korea. This comparison highlights India's vast untapped potential to expand MSME value addition from its current ~31.1% level.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_009",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "As per the PIB release on Budget 2025-26, how many total MSMEs were officially registered on the Udyam portal as of February 4, 2025, and how many jobs do they account for?",
+      "options": {
+        "A": "1.25 crore MSMEs employing 8.5 crore individuals",
+        "B": "3.42 crore MSMEs employing 14.2 crore individuals",
+        "C": "5.93 crore MSMEs employing over 25.18 crore individuals",
+        "D": "8.10 crore MSMEs employing over 35.0 crore individuals"
+      },
+      "correct_option": "C",
+      "explanation": "As of February 4, 2025, the Udyam Portal recorded exactly 5,93,38,604 (5.93 crore) registered MSMEs, generating documented employment for over 25.18 crore individuals. The vast majority of these registered units belong to the micro-enterprise segment.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_014",
+      "module": "Macro Architecture & Benchmark Data",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What is the primary objective of migrating from physical asset-collateral lending to 'cash-flow-based lending' for MSMEs?",
+      "options": {
+        "A": "To mandate immovable real estate ownership as a prerequisite for business loans",
+        "B": "To assess creditworthiness based on verifiable GST invoices, digital bank transactions, and Account Aggregator data",
+        "C": "To eliminate the role of commercial banks in enterprise credit",
+        "D": "To replace Indian rupee loans with foreign direct equity investments"
+      },
+      "correct_option": "B",
+      "explanation": "Cash-flow-based lending assesses an enterprise's credit eligibility using actual business revenue velocity, GST filing trails, and Account Aggregator data, bypassing the traditional constraint where micro-entrepreneurs lack immovable land/property titles for collateral.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_026",
+      "module": "Core Economic Concepts & Theoretical Paradigms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "Which prominent economic concept coined by Joseph Schumpeter is referenced in the MSME notes as being hindered by rigid exit barriers and distortionary subsidies?",
+      "options": {
+        "A": "Liquidity Trap",
+        "B": "Creative Destruction",
+        "C": "Comparative Advantage",
+        "D": "Rational Expectations"
+      },
+      "correct_option": "B",
+      "explanation": "Creative Destruction, formulation by Joseph Schumpeter, refers to the ongoing market process wherein dynamic, technologically superior innovators displace obsolete, inefficient enterprises. When bankruptcy and exit barriers prevent unviable firms from shutting down, capital and labor remain locked in unproductive units, blocking creative destruction.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_028",
+      "module": "Core Economic Concepts & Theoretical Paradigms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "The term 'Lewisian Transformation', highlighted in the MSME conceptual framework, draws from the economic model of Sir Arthur Lewis. What does it describe?",
+      "options": {
+        "A": "Transition of an agrarian economy to a cryptocurrency-based barter system",
+        "B": "Shift of surplus labor from subsistence agriculture into modern high-productivity formal manufacturing",
+        "C": "Complete privatization of central public sector enterprises",
+        "D": "Transformation of direct taxes into consumption taxes"
+      },
+      "correct_option": "B",
+      "explanation": "Arthur Lewis's Dual Sector Model outlines the 'Lewisian Transformation'—the process whereby an economy transfers surplus, low-productivity rural labor (disguised unemployment in agriculture) into modern, urban/semi-urban manufacturing enterprises that offer rising wages and higher capital accumulation.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_032",
+      "module": "Core Economic Concepts & Theoretical Paradigms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What is meant by the 'Regulatory Penalty' (or cliff effect) in the context of MSME growth constraints?",
+      "options": {
+        "A": "Monetary fines imposed exclusively on foreign multi-national companies",
+        "B": "The steep escalation in legal compliances and administrative scrutiny that occurs when a firm crosses specific employment or turnover thresholds",
+        "C": "Penalties imposed by the WTO for exceeding export subsidies",
+        "D": "Taxes levied on non-performing loans in rural credit cooperatives"
+      },
+      "correct_option": "B",
+      "explanation": "The 'Regulatory Penalty' occurs because crossing statutory thresholds (e.g., 10, 20, 50, or 100 workers under various labor, factory, and tax laws) triggers a massive jump in regulatory inspections, mandatory filings, and statutory benefits, creating a strong economic incentive for entrepreneurs to remain tiny or split into multiple dwarf entities.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_035",
+      "module": "Core Economic Concepts & Theoretical Paradigms",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the economic concept of 'Agglomeration Economies' or Industrial Clustering as seen in MSMEs:\n1. Geographic concentration of specialized firms reduces transaction costs and transport expenses.\n2. Clusters facilitate the development of a shared pool of skilled labor, common testing facilities, and specialized suppliers.\n3. The Jalandhar-Meerut sports goods cluster is a premier Indian example of cluster-based MSME competitiveness.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements are correct. Industrial clusters generate positive external economies of scale: shared tooling, specialized artisan knowledge, common testing infrastructure (CFCs), and joint marketing linkages, as exemplified by the Jalandhar-Meerut sports manufacturing hub.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_038",
+      "module": "Core Economic Concepts & Theoretical Paradigms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "How does the 'Fear of Business Loss' manifest in the context of statutory delayed payment protections (such as Section 43B(h) of the Income Tax Act) according to the notes?",
+      "options": {
+        "A": "Small suppliers fear taking aggressive legal action against large corporate buyers because buyers will simply cancel future purchase orders",
+        "B": "Small enterprises fear that their patents will be expropriated by the Ministry of Finance",
+        "C": "Buyers refuse to pay corporate tax under any circumstances",
+        "D": "MSMEs are legally forbidden from maintaining bank accounts"
+      },
+      "correct_option": "A",
+      "explanation": "The 'Fear of Business Loss' is a severe practical bottleneck: even though laws like Section 43B(h) mandate payments within 45 days, MSME suppliers are reluctant to strictly enforce compliance or file complaints on MSME Samadhaan because powerful corporate buyers threaten to black-list them and divert orders elsewhere.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_051",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "statement_based",
+      "difficulty": "Easy",
+      "question": "Under the revised composite classification criteria introduced on July 1, 2020, what two parameters are jointly used to classify an enterprise as Micro, Small, or Medium?\n1. Number of permanent full-time employees\n2. Investment in plant and machinery or equipment\n3. Annual turnover\n4. Electricity consumption in units\nSelect the correct answer using the code given below:",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1, 2 and 3 only",
+        "D": "2, 3 and 4 only"
+      },
+      "correct_option": "B",
+      "explanation": "Since the July 1, 2020 notification under the MSMED Act, India discarded the separate classification for manufacturing and service sectors and adopted a composite criteria based on two objective parameters: (1) Investment in Plant & Machinery/Equipment, and (2) Annual Turnover.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_053",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What critical rule applies to 'Exports of Goods and Services' when calculating the turnover of an enterprise for MSME classification under the MSMED regulations?",
+      "options": {
+        "A": "Export turnover is counted at double its invoice value",
+        "B": "Export turnover is completely excluded from the calculation of annual turnover",
+        "C": "Export turnover automatically disqualifies an enterprise from MSME status",
+        "D": "Only agricultural exports are excluded while manufactured exports are included"
+      },
+      "correct_option": "B",
+      "explanation": "To actively incentivize MSMEs to export without the fear of outgrowing their MSME classification and losing regulatory protections, the rules explicitly mandate that all export turnover of goods or services is excluded from the turnover ceiling.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_056",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "single_choice_fact",
+      "difficulty": "Hard",
+      "question": "Following the Budget 2025-26 revision, what are the new classification ceilings for a 'Medium Enterprise'?",
+      "options": {
+        "A": "Investment up to ₹75 crore and Turnover up to ₹350 crore",
+        "B": "Investment up to ₹100 crore and Turnover up to ₹400 crore",
+        "C": "Investment up to ₹125 crore and Turnover up to ₹500 crore",
+        "D": "Investment up to ₹150 crore and Turnover up to ₹600 crore"
+      },
+      "correct_option": "C",
+      "explanation": "Applying the Budget 2025-26 multipliers to the 2020 baseline for a Medium Enterprise (previously ₹50 Cr investment and ₹250 Cr turnover): Investment ceiling = ₹50 Cr × 2.5 = ₹125 crore; Turnover ceiling = ₹250 Cr × 2 = ₹500 crore.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_058",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "Prior to the 2020 reforms, how did the Micro, Small and Medium Enterprises Development (MSMED) Act 2006 classify enterprises?\n1. It maintained a strict separation between manufacturing enterprises and service enterprises.\n2. Manufacturing units were classified based on investment in plant and machinery, while service units were classified based on investment in equipment.\n3. Turnover was not a statutory classification criterion.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements accurately describe the pre-2020 framework under the MSMED Act 2006. Manufacturing and services had separate ceilings based solely on original acquisition cost of machinery/equipment, with turnover completely omitted, creating distortions as businesses added value.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_062",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the downward reclassification of an enterprise (e.g. from Medium to Small):\n1. An enterprise cannot be downgraded to a lower category even if its investment and turnover decline.\n2. An enterprise will be reclassified to a lower category only if both its investment and turnover fall below the ceilings of that lower category.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "B",
+      "explanation": "Statement 2 is correct. To transition downward into a lower category, an enterprise must fall below the ceilings of BOTH criteria (investment and turnover). A drop in only one parameter does not trigger downward reclassification.",
+      "associated_flowchart": "flowchart_msme_classification.svg"
+    },
+    {
+      "id": "MSME_065",
+      "module": "Statutory Framework & Classification Limits",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "Which Ministry serves as the nodal administrative authority for formulating policies, programmes, and schemes for micro, small, and medium enterprises in India?",
+      "options": {
+        "A": "Ministry of Commerce and Industry",
+        "B": "Ministry of Finance",
+        "C": "Ministry of Micro, Small and Medium Enterprises",
+        "D": "Ministry of Heavy Industries"
+      },
+      "correct_option": "C",
+      "explanation": "The Ministry of Micro, Small and Medium Enterprises (M/o MSME) is the nodal central ministry responsible for designing policies, administering statutory acts (MSMED Act 2006), and implementing flagship schemes for the sector.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_076",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "Under Section 15 of the MSMED Act 2006, what is the maximum statutory period allowed for a buyer to make payment to an MSE supplier where there is a written agreement between the parties?",
+      "options": {
+        "A": "30 days from delivery",
+        "B": "45 days from the day of acceptance",
+        "C": "60 days from invoice generation",
+        "D": "90 days from dispatch"
+      },
+      "correct_option": "B",
+      "explanation": "Section 15 of the MSMED Act stipulates that in no case shall the agreed period of payment between the buyer and the supplier exceed 45 days from the day of acceptance or the day of deemed acceptance of goods or services.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_077",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "If there is NO written agreement between the buyer and the MSE supplier, what is the statutory deadline (the 'appointed day') for making payment under the MSMED Act 2006?",
+      "options": {
+        "A": "Within 7 days",
+        "B": "Within 15 days following the day of acceptance",
+        "C": "Within 30 days",
+        "D": "Within 45 days"
+      },
+      "correct_option": "B",
+      "explanation": "Where there is no explicit written agreement between the buyer and supplier, the statutory payment deadline defaults to the 'appointed day', which is defined as the day following immediately after the expiry of the period of 15 days from the day of acceptance.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_079",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "Which statutory quasi-judicial authority is established at the state/district level under the MSMED Act 2006 to adjudicate delayed payment disputes between buyers and MSEs?",
+      "options": {
+        "A": "National Company Law Tribunal (NCLT)",
+        "B": "Micro and Small Enterprises Facilitation Council (MSEFC)",
+        "C": "Debt Recovery Tribunal (DRT)",
+        "D": "District Consumer Disputes Redressal Commission"
+      },
+      "correct_option": "B",
+      "explanation": "Under Section 20 of the MSMED Act 2006, State Governments establish Micro and Small Enterprises Facilitation Councils (MSEFCs) to hear and resolve claims related to delayed payments and penal interest.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_082",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "In recent reform proposals and the MSMED Amendment discourse highlighted in the Mindmap notes, what adjustment is discussed regarding the pre-deposit requirement for challenging arbitral awards?\n1. Reducing the onerous pre-deposit threshold to 50% of the awarded amount to balance dispute resolution and appeal access.\n2. Eliminating the pre-deposit requirement completely for all private corporate buyers.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "A",
+      "explanation": "Statement 1 is correct. The Mindmap notes ('50% of the awarded amount -> dispute resolution') reference proposed amendments to calibrate the pre-deposit requirement from 75% to 50% to rationalize dispute resolution while still discouraging frivolous appeals.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_085",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "Under Section 43B(h) of the Income Tax Act, when does an enterprise get a tax deduction for an overdue expense that was disallowed in the prior year due to non-payment within 45 days?",
+      "options": {
+        "A": "The deduction is permanently forfeited and can never be claimed",
+        "B": "In the previous year through an amended tax return",
+        "C": "In the subsequent financial year in which the payment is actually made",
+        "D": "After paying a 50% penalty to the Ministry of MSME"
+      },
+      "correct_option": "C",
+      "explanation": "Section 43B operates on an actual payment basis. If an expense is disallowed in Year 1 because it remained unpaid beyond the 45-day window as of March 31, the deduction is not permanently lost—it is allowed in the subsequent financial year in which the payment is actually cleared.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_087",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What is the primary role of the Trade Receivables Discounting System (TReDS) in tackling delayed payments?",
+      "options": {
+        "A": "It mandates that all MSME invoices are converted into sovereign debt guarantees",
+        "B": "It operates an electronic platform where MSE trade invoices are competitively discounted by banks and financiers at transparent market rates without waiting for buyer payment",
+        "C": "It acts as a court of law to issue arrest warrants against corporate buyers",
+        "D": "It provides free insurance for imported industrial machinery"
+      },
+      "correct_option": "B",
+      "explanation": "TReDS is an institutional auction platform regulated by the Reserve Bank of India. Once a buyer uploads/accepts an MSE supplier's invoice on TReDS, multiple financiers bid against each other to discount the invoice, giving the MSE immediate liquidity while the financier collects payment from the buyer on the due date.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_092",
+      "module": "Delayed Payments & Dispute Resolution",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding disclosure requirements in the annual balance sheet of a corporate buyer under Section 22 of the MSMED Act 2006:\n1. The buyer must disclose the principal amount and interest due to MSE suppliers remaining unpaid at the end of each accounting year.\n2. The buyer must disclose the amount of interest accrued and remaining unpaid at the end of the year.\n3. The company's statutory auditors must verify and report these MSME unpaid dues.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements are correct. Section 22 of the MSMED Act mandates that buyers who are required to get their accounts audited under any law must explicitly disclose in their annual statements: principal and interest unpaid to MSEs, interest paid, and cumulative interest accrued and unpaid.",
+      "associated_flowchart": "flowchart_delayed_payments.svg"
+    },
+    {
+      "id": "MSME_101",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "In the Union Budget 2025-26, to what amount has the credit guarantee cover for micro and small enterprises been increased under CGTMSE?",
+      "options": {
+        "A": "From ₹2 crore to ₹5 crore",
+        "B": "From ₹5 crore to ₹10 crore",
+        "C": "From ₹10 crore to ₹25 crore",
+        "D": "From ₹1 crore to ₹3 crore"
+      },
+      "correct_option": "B",
+      "explanation": "According to the official PIB Budget 2025-26 release, the credit guarantee cover for micro and small enterprises (MSEs) has been doubled from ₹5 crore to ₹10 crore, unlocking an estimated ₹1.5 lakh crore in additional credit over the next five years.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_103",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What credit support has been announced in Budget 2025-26 specifically for export-oriented MSMEs?",
+      "options": {
+        "A": "100% direct cash grants on all export shipments",
+        "B": "Term loans up to ₹20 crore with enhanced credit guarantee cover",
+        "C": "Exemption from international maritime shipping freight charges",
+        "D": "Mandatory conversion of exporter equity into government bonds"
+      },
+      "correct_option": "B",
+      "explanation": "Under the enhanced credit availability measures in Budget 2025-26, exporter MSMEs will benefit from term loans up to ₹20 crore supported by an enhanced credit guarantee cover to boost global competitiveness.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_106",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the new scheme for first-time entrepreneurs announced in Budget 2025-26:\n1. It targets 5 lakh first-time women, Scheduled Caste (SC), and Scheduled Tribe (ST) entrepreneurs.\n2. It provides term loans of up to ₹2 crore over five years.\n3. It incorporates key operational lessons from the Stand-Up India scheme.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements are correct as specified in the PIB document: the scheme will assist 5 lakh first-time women, SC, and ST entrepreneurs with term loans up to ₹2 crore over five years, leveraging insights from the Stand-Up India initiative.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_110",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the clean tech manufacturing push under the National Manufacturing Mission in Budget 2025-26:\n1. It provides policy support and roadmaps for small, medium, and large industries under the Make in India initiative.\n2. It prioritizes domestic production of solar PV cells, EV batteries, wind turbines, and high-voltage transmission equipment.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "C",
+      "explanation": "Both statements are correct. The National Manufacturing Mission aligns industrial policy across firm sizes, placing strategic priority on domestic clean technology value chains including solar cells, EV storage batteries, wind turbines, and grid transmission components.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_115",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "How much additional credit flow over a five-year horizon is projected to be stimulated by raising the MSE credit guarantee cover from ₹5 crore to ₹10 crore in Budget 2025-26?",
+      "options": {
+        "A": "₹25,000 crore",
+        "B": "₹50,000 crore",
+        "C": "₹1.5 lakh crore",
+        "D": "₹5.0 lakh crore"
+      },
+      "correct_option": "C",
+      "explanation": "The official PIB release states that expanding the credit guarantee cover to ₹10 crore will enable an additional credit flow of ₹1.5 lakh crore over five years for micro and small enterprises.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_118",
+      "module": "Union Budget 2025-26 & Credit Reforms",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "Consider the following statements regarding the ₹5 lakh Customised Credit Card scheme for micro-enterprises:\n1. It is exclusively available to micro-enterprises registered on the Udyam portal.\n2. It provides short-term working capital liquidity to meet day-to-day business operating expenses.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "C",
+      "explanation": "Both statements are correct. The customized credit card provides pre-approved, flexible short-term credit up to ₹5 lakh to micro-enterprises registered on Udyam, functioning as a rolling digital working capital line for inventory, raw materials, and utility payments.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_126",
+      "module": "PM Vishwakarma, Udyam & Udyam Assist Platform",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "On which date was the 'PM Vishwakarma' scheme officially launched by the Government of India?",
+      "options": {
+        "A": "August 15, 2023",
+        "B": "September 17, 2023",
+        "C": "January 26, 2024",
+        "D": "July 1, 2020"
+      },
+      "correct_option": "B",
+      "explanation": "The PM Vishwakarma scheme was announced in the Union Budget 2023-24 and officially launched by the Prime Minister on September 17, 2023 (coinciding with Vishwakarma Jayanti) to support traditional artisans and craftspeople.",
+      "associated_flowchart": "flowchart_pm_vishwakarma.svg"
+    },
+    {
+      "id": "MSME_128",
+      "module": "PM Vishwakarma, Udyam & Udyam Assist Platform",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What is the primary target group of the PM Vishwakarma scheme?",
+      "options": {
+        "A": "Software engineers developing artificial intelligence applications",
+        "B": "Traditional artisans and craftspeople who work with hands and tools across traditional trades",
+        "C": "Commercial airline pilots and aeronautical mechanics",
+        "D": "Large corporate real estate developers"
+      },
+      "correct_option": "B",
+      "explanation": "The scheme specifically targets traditional artisans and craftspeople (Vishwakarmas) working with their hands and tools across 18 designated traditional family-based trades (such as carpenters, blacksmiths, potters, sculptors, cobblers, tailors, and masons).",
+      "associated_flowchart": "flowchart_pm_vishwakarma.svg"
+    },
+    {
+      "id": "MSME_133",
+      "module": "PM Vishwakarma, Udyam & Udyam Assist Platform",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "With reference to the Udyam Registration Portal launched on July 1, 2020, consider the following statements:\n1. It replaced the older systems of Udyog Aadhaar Memorandum (UAM) and Entrepreneurs Memorandum-II (EM-II).\n2. It operates on a paperless, self-declaration-based system with zero document upload requirements.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "C",
+      "explanation": "Both statements are correct. The portal was launched on July 1, 2020, replacing UAM and EM-II. It enables seamless registration using PAN and Aadhaar without demanding physical documentation or registration fees.",
+      "associated_flowchart": "flowchart_pm_vishwakarma.svg"
+    },
+    {
+      "id": "MSME_138",
+      "module": "PM Vishwakarma, Udyam & Udyam Assist Platform",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the dynamic updating of MSME classification on the Udyam portal:\n1. The portal automatically updates an enterprise's investment and turnover data based on its filed Income Tax Returns and GST returns.\n2. An enterprise does not need to submit fresh manual declarations every year to maintain its registration.\nWhich of the statements given above is/are correct?",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "Both 1 and 2",
+        "D": "Neither 1 nor 2"
+      },
+      "correct_option": "C",
+      "explanation": "Both statements are correct. Udyam's digital backend pulls audited WDV investment figures from CBDT database and turnover from GSTN, dynamically updating the enterprise's status without manual bureaucratic interventions.",
+      "associated_flowchart": "flowchart_pm_vishwakarma.svg"
+    },
+    {
+      "id": "MSME_151",
+      "module": "PMEGP, SFURTI & Public Procurement Policy",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "What is the maximum admissible project cost for setting up a new enterprise in the manufacturing sector under the Prime Minister's Employment Generation Programme (PMEGP)?",
+      "options": {
+        "A": "₹10 lakh",
+        "B": "₹25 lakh",
+        "C": "₹50 lakh",
+        "D": "₹1 crore"
+      },
+      "correct_option": "C",
+      "explanation": "Under PMEGP, the maximum project cost admissible for establishing a new unit in the manufacturing sector is ₹50 lakh (raised from the earlier ₹25 lakh ceiling), while for the service sector it is ₹20 lakh.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_154",
+      "module": "PMEGP, SFURTI & Public Procurement Policy",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "Consider the following statements regarding the subsidy structure under PMEGP for Special Category beneficiaries (SC, ST, OBC, Women, Transgenders, etc.):\n1. The margin money subsidy is 25% in urban areas.\n2. The margin money subsidy is 35% in rural areas.\n3. The beneficiary's own contribution is restricted to only 5% of the project cost.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements are correct. For Special Categories, the required beneficiary contribution is reduced to just 5%, while the Government provides an enhanced margin money subsidy of 25% in urban areas and 35% in rural areas.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_158",
+      "module": "PMEGP, SFURTI & Public Procurement Policy",
+      "question_type": "statement_based",
+      "difficulty": "Hard",
+      "question": "According to the official PIB achievements for PMEGP in 2023-24, consider the following statements:\n1. PMEGP supported 89,118 micro-enterprises across various sectors.\n2. The scheme disbursed ₹3,093.87 crore as margin money subsidy.\n3. It generated an estimated 7,12,944 employment opportunities.\nWhich of the statements given above are correct?",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1 and 3 only",
+        "D": "1, 2 and 3"
+      },
+      "correct_option": "D",
+      "explanation": "All three statements are exact achievements recorded in the PIB document for FY 2023-24: 89,118 enterprises supported, ₹3,093.87 crore margin money subsidy disbursed, generating 7,12,944 jobs.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_162",
+      "module": "PMEGP, SFURTI & Public Procurement Policy",
+      "question_type": "single_choice_fact",
+      "difficulty": "Easy",
+      "question": "What is the mandatory minimum percentage of annual procurement that Central Ministries, Departments, and CPSEs must source from Micro and Small Enterprises (MSEs) under the Public Procurement Policy?",
+      "options": {
+        "A": "10 per cent",
+        "B": "15 per cent",
+        "C": "20 per cent",
+        "D": "25 per cent"
+      },
+      "correct_option": "D",
+      "explanation": "Under the Public Procurement Policy for Micro and Small Enterprises (MSEs) notified in 2012 (and revised in 2018), Central Ministries, Government Departments, and Central Public Sector Enterprises (CPSEs) must mandatorily procure at least 25% of their total annual purchases of goods and services from MSEs.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_166",
+      "module": "PMEGP, SFURTI & Public Procurement Policy",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "Which portal was launched by the Ministry of MSME to monitor the public procurement of goods and services from MSEs by CPSEs?",
+      "options": {
+        "A": "MSME Sambandh",
+        "B": "MSME Samadhaan",
+        "C": "MSME Sampark",
+        "D": "Udyam Portal"
+      },
+      "correct_option": "A",
+      "explanation": "The MSME Sambandh Portal is the designated public procurement monitoring portal where CPSEs report their monthly and annual procurement progress from MSEs, tracking adherence to the 25%, 4% (SC/ST), and 3% (Women) quotas.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_176",
+      "module": "Expert Views, Academic Studies & Case Studies",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "Which Union Minister of Micro, Small and Medium Enterprises is cited in the Mindmap notes regarding the focus on grassroots rural industrialization and marginalized community empowerment?",
+      "options": {
+        "A": "Piyush Goyal",
+        "B": "Jitan Ram Manjhi",
+        "C": "Nitin Gadkari",
+        "D": "Narayan Rane"
+      },
+      "correct_option": "B",
+      "explanation": "Union Minister Jitan Ram Manjhi is specifically referenced in the Mindmap notes under 'VIEWS', advocating for targeted rural enterprise creation, upliftment of marginalized artisans (SC/ST/women), and scaling up micro-units into sustainable ventures.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_180",
+      "module": "Expert Views, Academic Studies & Case Studies",
+      "question_type": "single_choice_fact",
+      "difficulty": "Hard",
+      "question": "What is the primary finding of the academic research by Santana & Joseph referenced in the Mindmap notes on small enterprise competitiveness?",
+      "options": {
+        "A": "MSMEs should completely stop adopting digital technologies",
+        "B": "Indian small enterprises suffer from systemic technological capability deficits, low R&D investment, and weak inter-firm knowledge spillovers within clusters",
+        "C": "Indian small enterprises have higher patent output than Silicon Valley startups",
+        "D": "All small manufacturing should be relocated to coastal islands"
+      },
+      "correct_option": "B",
+      "explanation": "Studies by Santana & Joseph analyze the innovation systems and technological backwardness of Indian small enterprises, highlighting that low internal R&D expenditure and weak cluster linkages prevent them from transitioning from low-value imitation to frontier technology.",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_185",
+      "module": "Expert Views, Academic Studies & Case Studies",
+      "question_type": "statement_based",
+      "difficulty": "Medium",
+      "question": "According to the Mindmap notes, what are the four key policy suggestions to unleash the MSME sector?\n1. Bridge the credit gap\n2. Eradicate regulatory penalty\n3. Comprehensive policy reforms (such as correcting Inverted Duty Structure)\n4. Create 'more factories, not people' by eliminating compliance cliffs\nSelect the correct answer using the code given below:",
+      "options": {
+        "A": "1 and 2 only",
+        "B": "2 and 3 only",
+        "C": "1, 2 and 3 only",
+        "D": "1, 2, 3 and 4"
+      },
+      "correct_option": "D",
+      "explanation": "The Mindmap notes under 'SUGGESTIONS' explicitly list: (1) bridge the credit gap, (2) eradicate regulatory penalty, (3) policy reforms, and (4) more factories not people (solving the employment paradox by making it painless for factories to add formal workers).",
+      "associated_flowchart": "flowchart_dwarfism_vs_mittelstand.svg"
+    },
+    {
+      "id": "MSME_192",
+      "module": "Expert Views, Academic Studies & Case Studies",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "What is the primary barrier that prevents small enterprises from investing in workforce skill development, leading to the 'Skill Challenge' noted in the Mindmap?",
+      "options": {
+        "A": "Employees are legally forbidden from learning new skills",
+        "B": "Firms fear that after spending resources training a worker, the worker will be poached by larger competitors (the free-rider problem)",
+        "C": "Vocational training is banned by state industrial departments",
+        "D": "Skill training reduces factory output"
+      },
+      "correct_option": "B",
+      "explanation": "In small enterprise economics, the poaching/free-rider problem is a well-known market failure: small employers hesitate to invest in formal employee skilling because trained workers frequently leave for marginally higher wages at competing firms, leaving the small firm with unrecoverable training costs.",
+      "associated_flowchart": null
+    },
+    {
+      "id": "MSME_198",
+      "module": "Expert Views, Academic Studies & Case Studies",
+      "question_type": "single_choice_fact",
+      "difficulty": "Medium",
+      "question": "According to the ForumIAS conclusion, what kind of ecosystem is imperative for building a developed and inclusive India?",
+      "options": {
+        "A": "A centralized state-monopolized production regime",
+        "B": "A vibrant, digitally enabled, financially empowered and globally connected MSME ecosystem",
+        "C": "An economy completely devoid of small private businesses",
+        "D": "An economy that relies solely on service sector exports"
+      },
+      "correct_option": "B",
+      "explanation": "The conclusion of the ForumIAS text emphasizes: 'A vibrant, digitally enabled, financially empowered and globally connected MSME ecosystem will be imperative for building a developed and inclusive India.'",
+      "associated_flowchart": null
+    }
+  ]
+}

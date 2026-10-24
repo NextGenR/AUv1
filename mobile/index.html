@@ -8,6 +8,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#0d111c">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cortex Quest">
+  <meta name="application-name" content="Cortex Quest">
   <link rel="stylesheet" href="game.css">
 </head>
 <body class="mobile-game-body samsung-dark">
@@ -40,6 +49,12 @@
         <span id="hud-hearts-count">5/5</span>
       </div>
 
+      <!-- Chrome PWA Install Pill -->
+      <button class="hud-pill btn-pwa-install" id="hud-install-btn" title="Install on Chrome / Add to Home Screen" onclick="window.triggerPwaInstall()" style="background:#2563eb; color:#fff; border-color:#3b82f6; font-weight:800;">
+        <span>📲</span>
+        <span class="install-text">Install</span>
+      </button>
+
       <!-- Samsung Quick Panel Theme Switcher -->
       <button class="hud-pill hud-theme-toggle" id="samsung-theme-toggle" title="Switch Samsung One UI Theme (AMOLED Dark / Ceramic Light)" aria-label="Toggle Theme">
         <span id="theme-toggle-icon">🌙</span>
@@ -52,6 +67,47 @@
       
       <!-- SCREEN 1: QUEST / LEVEL MAP -->
       <section class="game-screen active" id="screen-map">
+        
+        <!-- Samsung One UI Topic Picker -->
+        <div class="topic-picker-container" id="topic-picker-container">
+          <div class="topic-picker-header">
+            <div class="topic-picker-title">
+              <span class="topic-indicator-dot"></span>
+              <span>SELECT STUDY TOPIC</span>
+            </div>
+            <span class="topic-level-counter" id="topic-level-counter">10 Levels</span>
+          </div>
+          
+          <div class="topic-pills-row" id="topic-pills-row" role="tablist">
+            <button class="topic-pill active" data-topic="msme" id="pill-topic-msme" role="tab" aria-selected="true">
+              <span class="topic-pill-icon">🏭</span>
+              <span class="topic-pill-text">MSME Reforms</span>
+            </button>
+            <button class="topic-pill" data-topic="public-exams" id="pill-topic-exams" role="tab" aria-selected="false">
+              <span class="topic-pill-icon">🏛️</span>
+              <span class="topic-pill-text">Public Exams</span>
+            </button>
+            <button class="topic-pill" data-topic="ai-judiciary" id="pill-topic-judiciary" role="tab" aria-selected="false">
+              <span class="topic-pill-icon">⚖️</span>
+              <span class="topic-pill-text">AI Judiciary</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Flowcharts Gallery Strip -->
+        <div class="flowchart-quick-strip" id="flowchart-quick-strip">
+          <button class="flowchart-strip-card" id="btn-open-flowcharts" aria-label="Open Visual Flowcharts">
+            <div class="flowchart-strip-left">
+              <div class="flowchart-strip-icon">📊</div>
+              <div class="flowchart-strip-text">
+                <div class="flowchart-strip-title">Visual Flowcharts & Mindmaps</div>
+                <div class="flowchart-strip-sub">Classification • Delayed Payments • PM Vishwakarma • Mittelstand</div>
+              </div>
+            </div>
+            <div class="flowchart-strip-badge">4 SVGs ➔</div>
+          </button>
+        </div>
+
         <div id="quest-path-content">
           <!-- Populated dynamically via game.js -->
         </div>
@@ -159,12 +215,53 @@
       </div>
     </div>
 
+    <!-- Visual Flowcharts Viewer Modal -->
+    <div class="flowchart-modal" id="flowchart-modal" role="dialog" aria-modal="true">
+      <div class="flowchart-modal-header">
+        <div class="flowchart-modal-title-group">
+          <span style="font-size:1.4rem;">📊</span>
+          <div>
+            <h3 class="flowchart-modal-title" id="flowchart-modal-title">MSME Visual Flowcharts</h3>
+            <p class="flowchart-modal-sub" id="flowchart-modal-sub">Pinch, zoom, or swipe to study framework architecture</p>
+          </div>
+        </div>
+        <button class="flowchart-modal-close" id="flowchart-modal-close" aria-label="Close Flowcharts">✕</button>
+      </div>
+
+      <!-- Flowchart Selector Tabs -->
+      <div class="flowchart-tabs-bar" id="flowchart-tabs-bar">
+        <button class="fc-tab-btn active" data-fc="fc-classification">Classification</button>
+        <button class="fc-tab-btn" data-fc="fc-delayed-payments">Delayed Payments</button>
+        <button class="fc-tab-btn" data-fc="fc-pm-vishwakarma">PM Vishwakarma</button>
+        <button class="fc-tab-btn" data-fc="fc-dwarfism">Dwarfism</button>
+      </div>
+
+      <!-- Flowchart Canvas Viewport -->
+      <div class="flowchart-viewport" id="flowchart-viewport">
+        <div class="flowchart-img-wrap" id="flowchart-img-wrap">
+          <img src="assets/flowcharts/flowchart_msme_classification.svg" id="flowchart-active-img" alt="Flowchart Diagram" loading="eager">
+        </div>
+      </div>
+
+      <!-- Flowchart Footer Information -->
+      <div class="flowchart-modal-footer">
+        <div class="flowchart-desc-text" id="flowchart-desc-text">
+          Composite Classification: Investment & Turnover limits (1/5, 10/50, 50/250) and 2.5x turnover multiplier.
+        </div>
+        <a href="assets/flowcharts/flowchart_msme_classification.svg" target="_blank" class="btn-fc-fullscreen" id="btn-fc-fullscreen">
+          <span>Full SVG</span> ↗
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <!-- Scripts: Desktop Data Repositories + Mobile Game Engine -->
+  <script src="../msme_data.js"></script>
   <script src="../public_exam_data.js"></script>
   <script src="../lecture_data.js"></script>
   <script src="mobile_data.js"></script>
   <script src="game.js"></script>
+  <script src="pwa_installer.js"></script>
 </body>
 </html>
