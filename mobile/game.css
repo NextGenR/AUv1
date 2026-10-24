@@ -1484,3 +1484,314 @@ body.samsung-light .btn-fc-fullscreen {
   transform: scale(0.98);
 }
 
+/* ==========================================================================
+   MOBILE QUESTION FEEDBACK & LESSON-WISE STARS MODAL
+   ========================================================================== */
+
+/* Mobile Question Feedback inside Banner */
+.mobile-q-fb-wrap {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+body.samsung-light .mobile-q-fb-wrap {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-q-fb-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--game-text-dim);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-q-fb-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.mobile-q-fb-chip {
+  padding: 0.3rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--game-text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+body.samsung-light .mobile-q-fb-chip {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.mobile-q-fb-chip.selected {
+  background: rgba(37, 99, 235, 0.3);
+  border-color: #3b82f6;
+  color: #60a5fa;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+.mobile-q-fb-input-row {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.mobile-q-fb-input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.78rem;
+  color: var(--game-text);
+  outline: none;
+}
+
+body.samsung-light .mobile-q-fb-input {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.mobile-q-fb-btn {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: var(--game-pill-bg);
+  border: 1px solid var(--game-pill-border);
+  color: var(--game-text);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Mobile Stars Bottom Sheet Modal */
+.stars-feedback-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.stars-feedback-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.stars-modal-content {
+  background: var(--game-bg);
+  border-top: 1.5px solid var(--game-border-subtle);
+  border-radius: 24px 24px 0 0;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stars-feedback-modal.open .stars-modal-content {
+  transform: translateY(0);
+}
+
+.stars-modal-header {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--game-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars-modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stars-modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--game-text);
+  margin: 0;
+}
+
+.stars-modal-sub {
+  font-size: 0.75rem;
+  color: var(--game-text-dim);
+  margin: 2px 0 0 0;
+}
+
+.stars-modal-close {
+  background: var(--game-pill-bg);
+  border: 1px solid var(--game-pill-border);
+  color: var(--game-text-dim);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars-modal-body {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Lesson Cards List */
+.mobile-stars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-star-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--game-border-subtle);
+}
+
+body.samsung-light .mobile-star-item {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.mobile-star-item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.mobile-star-num {
+  font-size: 0.75rem;
+  font-weight: 900;
+  background: rgba(59, 130, 246, 0.15);
+  color: #38bdf8;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.mobile-star-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--game-text);
+}
+
+.mobile-star-display {
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Mobile AI Feedback Box */
+.mobile-ai-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--game-border-subtle);
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+body.samsung-light .mobile-ai-box {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-star-picker {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
+
+.mobile-star-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  filter: grayscale(100%);
+  opacity: 0.35;
+  transition: all 0.15s ease;
+}
+
+.mobile-star-btn.active {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.mobile-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--game-border-subtle);
+  border-radius: 12px;
+  padding: 0.65rem 0.85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: var(--game-text);
+  resize: none;
+  outline: none;
+}
+
+body.samsung-light .mobile-textarea {
+  background: #f8fafc;
+}
+
+.btn-mobile-copy-ai {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.btn-mobile-copy-ai:active {
+  transform: scale(0.98);
+}
+
+

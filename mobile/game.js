@@ -184,7 +184,7 @@
   // --- GAME STATE ---
   const STATE = {
     currentTopic: (typeof GAME_DATA !== 'undefined' && GAME_DATA.topics && GAME_DATA.topics[initialTopic]) ? initialTopic : 'msme',
-    hearts: parseInt(localStorage.getItem('cortex_game_hearts') || '5', 10),
+    hearts: 'unlimited', // Unlimited tries - no heart depletion
     gems: parseInt(localStorage.getItem('cortex_game_gems') || '450', 10),
     coins: parseInt(localStorage.getItem('cortex_game_coins') || '1280', 10),
     streak: parseInt(localStorage.getItem('cortex_game_streak') || '18', 10),
@@ -211,7 +211,7 @@
   };
 
   function saveState() {
-    localStorage.setItem('cortex_game_hearts', STATE.hearts);
+    localStorage.setItem('cortex_game_hearts', 'unlimited');
     localStorage.setItem('cortex_game_gems', STATE.gems);
     localStorage.setItem('cortex_game_coins', STATE.coins);
     localStorage.setItem('cortex_game_streak', STATE.streak);
@@ -245,6 +245,12 @@
     flowchartTitle: document.getElementById('flowchart-modal-title'),
     flowchartDesc: document.getElementById('flowchart-desc-text'),
     flowchartFullscreen: document.getElementById('btn-fc-fullscreen'),
+    // Stars & AI Feedback Modal Elements
+    btnOpenStarsFeedback: document.getElementById('btn-open-stars-feedback'),
+    starsFeedbackModal: document.getElementById('stars-feedback-modal'),
+    starsModalCloseBtn: document.getElementById('stars-modal-close-btn'),
+    starsModalBody: document.getElementById('stars-modal-body'),
+    starsModalTopicTitle: document.getElementById('stars-modal-topic-title'),
     // Play Modal
     playModal: document.getElementById('play-modal'),
     playCloseBtn: document.getElementById('play-close-btn'),
@@ -301,9 +307,9 @@
     if (DOM.hudStreak) DOM.hudStreak.textContent = STATE.streak;
     if (DOM.hudGems) DOM.hudGems.textContent = STATE.gems;
     if (DOM.hudCoins) DOM.hudCoins.textContent = STATE.coins.toLocaleString();
-    if (DOM.hudHearts) DOM.hudHearts.textContent = `${STATE.hearts}/5`;
+    if (DOM.hudHearts) DOM.hudHearts.textContent = '♾️ Unlimited';
     if (DOM.hudHeartsPill) {
-      DOM.hudHeartsPill.classList.toggle('low-hearts', STATE.hearts <= 1);
+      DOM.hudHeartsPill.classList.remove('low-hearts');
     }
   }
 
@@ -473,12 +479,7 @@
 
   // --- START LEVEL SESSION ---
   function startLevel(level) {
-    if (STATE.hearts <= 0) {
-      alert('❤️ Out of Lives! Refill hearts in the Shop to keep playing.');
-      switchTab('shop');
-      return;
-    }
-
+    // Unlimited tries - no heart depletion or lockout
     SoundFX.playTap();
     STATE.activeLevel = level;
     STATE.currentQuestionIdx = 0;
@@ -806,21 +807,365 @@
       `;
     } else {
       SoundFX.playError();
-      STATE.hearts = Math.max(0, STATE.hearts - 1);
-      saveState();
+      // Unlimited tries! No heart loss!
       DOM.feedbackBanner.className = 'feedback-banner error';
       DOM.feedbackBanner.innerHTML = `
-        <div style="font-weight:900; margin-bottom:4px;">💔 INCORRECT (-1 Heart)</div>
+        <div style="font-weight:900; margin-bottom:4px; color:#f87171;">💡 NOT QUITE • Unlimited Tries</div>
         <div>${task.explanation || 'Review the core concept carefully!'}</div>
       `;
     }
+
+    renderMobileQuestionFeedback(task, isCorrect, DOM.feedbackBanner);
 
     DOM.feedbackBanner.style.display = 'block';
     DOM.playActionBtn.textContent = 'CONTINUE';
     DOM.playActionBtn.disabled = false;
   }
 
-  // --- FINISH LEVEL (VICTORY SCREEN) ---
+  // --- QUESTION FEEDBACK WIDGET (MOBILE) ---
+  function renderMobileQuestionFeedback(task, isCorrect, banner) {
+    const topicId = STATE.currentTopic || 'msme';
+    const levelId = STATE.activeLevel ? STATE.activeLevel.id : 1;
+    const qId = `${topicId}_lvl-${levelId}_q${STATE.currentQuestionIdx}`;
+
+    let existing = null;
+    try {
+      const list = JSON.parse(localStorage.getItem('cortex_question_feedback') || '[]');
+      existing = list.find(x => x.id === qId);
+    } catch(e) {}
+
+    const fbWrap = document.createElement('div');
+    fbWrap.className = 'mobile-q-fb-wrap';
+    fbWrap.innerHTML = `
+      <div class="mobile-q-fb-title">
+        <span>Rate Question:</span>
+        <span class="mobile-q-fb-saved" style="color:#10b981; font-weight:800; font-size:0.75rem; ${existing ? 'display:inline;' : 'display:none;'}">✓ Saved (${existing ? existing.rating : ''})</span>
+      </div>
+      <div class="mobile-q-fb-chips">
+        <button type="button" class="mobile-q-fb-chip ${existing && existing.rating === 'Helpful' ? 'selected' : ''}" data-rating="Helpful">👍 Helpful</button>
+        <button type="button" class="mobile-q-fb-chip ${existing && existing.rating === 'Clear' ? 'selected' : ''}" data-rating="Clear">💡 Clear</button>
+        <button type="button" class="mobile-q-fb-chip ${existing && existing.rating === 'Confusing' ? 'selected' : ''}" data-rating="Confusing">🤔 Confusing</button>
+        <button type="button" class="mobile-q-fb-chip ${existing && existing.rating === 'Issue' ? 'selected' : ''}" data-rating="Issue">⚠️ Typo</button>
+      </div>
+      <div class="mobile-q-fb-input-row">
+        <input type="text" class="mobile-q-fb-input" placeholder="Optional note for AI..." value="${existing && existing.note ? existing.note.replace(/"/g, '&quot;') : ''}" maxlength="120" />
+        <button type="button" class="mobile-q-fb-btn">Save</button>
+      </div>
+    `;
+
+    banner.appendChild(fbWrap);
+
+    const chips = fbWrap.querySelectorAll('.mobile-q-fb-chip');
+    const input = fbWrap.querySelector('.mobile-q-fb-input');
+    const btn = fbWrap.querySelector('.mobile-q-fb-btn');
+    const savedTag = fbWrap.querySelector('.mobile-q-fb-saved');
+
+    function save(ratingOverride) {
+      const activeChip = fbWrap.querySelector('.mobile-q-fb-chip.selected');
+      const rating = ratingOverride || (activeChip ? activeChip.dataset.rating : 'Helpful');
+      const note = input ? input.value.trim() : '';
+
+      try {
+        const list = JSON.parse(localStorage.getItem('cortex_question_feedback') || '[]');
+        const item = {
+          id: qId,
+          topic: topicId,
+          levelId: `lvl-${levelId}`,
+          levelNumber: levelId,
+          levelTitle: STATE.activeLevel ? STATE.activeLevel.title : '',
+          taskIndex: STATE.currentQuestionIdx,
+          prompt: task.prompt || task.title || (task.tokens ? task.tokens.join(' ') : 'Question'),
+          rating: rating,
+          note: note,
+          isCorrect: isCorrect,
+          timestamp: new Date().toISOString()
+        };
+        const idx = list.findIndex(x => x.id === qId);
+        if (idx >= 0) list[idx] = item;
+        else list.push(item);
+        localStorage.setItem('cortex_question_feedback', JSON.stringify(list));
+        if (savedTag) {
+          savedTag.textContent = `✓ Saved (${rating})`;
+          savedTag.style.display = 'inline';
+        }
+      } catch(e) {}
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        chips.forEach(c => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        save(chip.dataset.rating);
+      });
+    });
+
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        save();
+      });
+    }
+
+    if (input) {
+      input.addEventListener('keydown', (e) => {
+        e.stopPropagation();
+        if (e.key === 'Enter') save();
+      });
+    }
+  }
+
+  // --- BUILD LESSON STARS & AI FEEDBACK HTML (MOBILE) ---
+  function buildMobileLessonStarsHtml(topicId) {
+    const topic = GAME_DATA.topics[topicId];
+    const levels = (topic && topic.levels) ? topic.levels : [];
+    
+    let allQ = [];
+    try {
+      allQ = JSON.parse(localStorage.getItem('cortex_question_feedback') || '[]').filter(x => x.topic === topicId);
+    } catch(e) {}
+
+    let existingCourseFb = null;
+    try {
+      existingCourseFb = JSON.parse(localStorage.getItem(`cortex_course_feedback_${topicId}`) || 'null');
+    } catch(e) {}
+
+    const currentRating = (existingCourseFb && existingCourseFb.rating) || 5;
+    const currentComment = (existingCourseFb && existingCourseFb.comment) || '';
+
+    let itemsHtml = '';
+    let totalStars = 0;
+    levels.forEach(lvl => {
+      const isDone = STATE.completedLevels.has(lvl.id);
+      const stars = STATE.levelStars[lvl.id] || (isDone ? 3 : 0);
+      totalStars += stars;
+      const starsDisplay = stars > 0 ? '⭐'.repeat(stars) : '<span style="color:#64748b;">—</span>';
+      const qNotesCount = allQ.filter(q => q.levelNumber === lvl.id || q.levelId === `lvl-${lvl.id}`).length;
+      const notesBadge = qNotesCount > 0 ? `<span style="font-size:0.7rem; color:#38bdf8; background:rgba(56,189,248,0.15); padding:2px 5px; border-radius:4px; margin-left:4px;">📝${qNotesCount}</span>` : '';
+
+      itemsHtml += `
+        <div class="mobile-star-item">
+          <div class="mobile-star-item-info">
+            <span class="mobile-star-num">L${lvl.id}</span>
+            <div style="text-align:left;">
+              <div class="mobile-star-title">${lvl.title}</div>
+              <div style="font-size:0.72rem; color:${isDone ? '#34d399' : '#94a3b8'};">
+                ${isDone ? '✓ Mastered' : '🔒 In Progress'}${notesBadge}
+              </div>
+            </div>
+          </div>
+          <div class="mobile-star-display">${starsDisplay}</div>
+        </div>
+      `;
+    });
+
+    return `
+      <div style="margin-top:0.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+          <h4 style="font-family:'Outfit'; font-size:1rem; font-weight:800; color:#facc15; margin:0;">
+            🌟 All Lessons Stars
+          </h4>
+          <span style="font-size:0.8rem; font-weight:800; color:#38bdf8;">
+            ${totalStars} / ${levels.length * 3} ⭐
+          </span>
+        </div>
+
+        <div class="mobile-stars-list">
+          ${itemsHtml}
+        </div>
+
+        <!-- AI Feedback Box -->
+        <div class="mobile-ai-box" style="margin-top:1rem;">
+          <div style="font-size:0.9rem; font-weight:800; color:var(--game-text); text-align:center;">
+            💬 Feedback for the AI / Developer
+          </div>
+          <p style="font-size:0.75rem; color:var(--game-text-dim); text-align:center; margin:0;">
+            Rate this topic and share suggestions. Click "Copy for AI" to paste into our conversation!
+          </p>
+
+          <div class="mobile-star-picker" id="mobile-star-picker">
+            ${[1, 2, 3, 4, 5].map(n => `
+              <button type="button" class="mobile-star-btn ${n <= currentRating ? 'active' : ''}" data-val="${n}">⭐</button>
+            `).join('')}
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:0.35rem; justify-content:center;">
+            <button type="button" class="quick-fb-tag mobile-quick-tag" data-tag="High UPSC Yield">🎯 High Yield</button>
+            <button type="button" class="quick-fb-tag mobile-quick-tag" data-tag="Great Explanations">🔍 Explanations</button>
+            <button type="button" class="quick-fb-tag mobile-quick-tag" data-tag="Helpful Flowcharts">📊 Flowcharts</button>
+            <button type="button" class="quick-fb-tag mobile-quick-tag" data-tag="Good Pacing">⏱️ Pacing</button>
+          </div>
+
+          <textarea class="mobile-textarea" id="mobile-feedback-text" rows="3" placeholder="Share your suggestions, question feedback, or next topics...">${currentComment}</textarea>
+
+          <button type="button" class="btn-mobile-copy-ai" id="btn-mobile-copy-report">
+            <span>📋</span> Copy Feedback Report for AI
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function wireMobileFeedbackEvents(container, topicId) {
+    if (!container) return;
+    const topic = GAME_DATA.topics[topicId];
+    let selectedRating = 5;
+    try {
+      const fb = JSON.parse(localStorage.getItem(`cortex_course_feedback_${topicId}`) || 'null');
+      if (fb && fb.rating) selectedRating = fb.rating;
+    } catch(e) {}
+
+    const starBtns = container.querySelectorAll('.mobile-star-btn');
+    const textarea = container.querySelector('#mobile-feedback-text');
+    const copyBtn = container.querySelector('#btn-mobile-copy-report');
+    const quickTags = container.querySelectorAll('.mobile-quick-tag');
+
+    function saveFeedback() {
+      const comment = textarea ? textarea.value.trim() : '';
+      const payload = {
+        topic: topicId,
+        rating: selectedRating,
+        comment: comment,
+        savedAt: new Date().toISOString()
+      };
+      localStorage.setItem(`cortex_course_feedback_${topicId}`, JSON.stringify(payload));
+    }
+
+    starBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.dataset.val, 10);
+        selectedRating = val;
+        starBtns.forEach(b => {
+          const bVal = parseInt(b.dataset.val, 10);
+          b.classList.toggle('active', bVal <= val);
+        });
+        saveFeedback();
+      });
+    });
+
+    quickTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        if (!textarea) return;
+        const text = tag.dataset.tag;
+        if (textarea.value.includes(text)) return;
+        textarea.value = textarea.value ? `${textarea.value}; ${text}` : text;
+        saveFeedback();
+      });
+    });
+
+    if (textarea) {
+      textarea.addEventListener('input', saveFeedback);
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        saveFeedback();
+        const md = generateMobileFeedbackReport(topicId, topic, selectedRating, textarea ? textarea.value : '');
+        copyMobileTextToClipboard(md, copyBtn);
+      });
+    }
+  }
+
+  function generateMobileFeedbackReport(topicId, topic, rating, comment) {
+    const levels = (topic && topic.levels) ? topic.levels : [];
+    let allQ = [];
+    try {
+      allQ = JSON.parse(localStorage.getItem('cortex_question_feedback') || '[]').filter(x => x.topic === topicId);
+    } catch(e) {}
+
+    let md = `# 🎓 UPSC Cortex Mobile - Lesson Stars & Feedback Report\n\n`;
+    md += `**Topic**: ${topic ? topic.name : topicId}\n`;
+    md += `**Date**: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n`;
+    md += `**Overall Course Rating**: ${'⭐'.repeat(rating || 5)} (${rating || 5}/5)\n\n`;
+
+    md += `### 🌟 Lesson-Wise Stars Summary\n`;
+    md += `| Level | Title | Stars Earned | Status | Notes |\n`;
+    md += `| :---: | :--- | :---: | :---: | :---: |\n`;
+
+    let totalStars = 0;
+    levels.forEach(lvl => {
+      const isDone = STATE.completedLevels.has(lvl.id);
+      const stars = STATE.levelStars[lvl.id] || (isDone ? 3 : 0);
+      totalStars += stars;
+      const starsDisplay = stars > 0 ? '⭐'.repeat(stars) : '—';
+      const statusDisplay = isDone ? '✓ Mastered' : '🔒 In Progress';
+      const qNotesCount = allQ.filter(q => q.levelNumber === lvl.id || q.levelId === `lvl-${lvl.id}`).length;
+      const notesBadge = qNotesCount > 0 ? `📝 ${qNotesCount}` : '—';
+      md += `| Level ${lvl.id} | ${lvl.title} | ${starsDisplay} | ${statusDisplay} | ${notesBadge} |\n`;
+    });
+    md += `\n**Total Stars Earned**: ${totalStars} / ${levels.length * 3} ⭐\n\n`;
+
+    if (allQ.length > 0) {
+      md += `### 📝 Question-Specific Feedback (${allQ.length} Logged)\n`;
+      allQ.forEach((q, i) => {
+        const ratingIcon = q.rating === 'Helpful' ? '👍' : q.rating === 'Clear' ? '💡' : q.rating === 'Confusing' ? '🤔' : '⚠️';
+        md += `${i + 1}. **[${q.levelTitle || ('Level ' + q.levelNumber)}] Q${(q.taskIndex || 0) + 1}**: ${ratingIcon} *${q.rating}*\n`;
+        md += `   - **Prompt**: "${(q.prompt || '').substring(0, 80)}..."\n`;
+        if (q.note) md += `   - **Note**: "${q.note}"\n`;
+      });
+      md += `\n`;
+    }
+
+    md += `### 💬 User Review & Suggestions for AI\n`;
+    md += `> ${comment && comment.trim() ? comment.trim().replace(/\n/g, '\n> ') : 'No additional text comments provided.'}\n\n`;
+    md += `---\n*Generated by Cortex Mobile Gamified Engine (Unlimited Tries & Feedback System)*\n`;
+    return md;
+  }
+
+  function copyMobileTextToClipboard(text, triggerBtn) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showMobileCopyToast(triggerBtn);
+      }).catch(() => {
+        fallbackMobileCopy(text, triggerBtn);
+      });
+    } else {
+      fallbackMobileCopy(text, triggerBtn);
+    }
+  }
+
+  function fallbackMobileCopy(text, triggerBtn) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showMobileCopyToast(triggerBtn);
+    } catch(e) {
+      alert('Copy failed, please copy manually.');
+    }
+    document.body.removeChild(ta);
+  }
+
+  function showMobileCopyToast(triggerBtn) {
+    if (triggerBtn) {
+      const orig = triggerBtn.innerHTML;
+      triggerBtn.innerHTML = '✓ Copied to Clipboard!';
+      triggerBtn.style.background = '#10b981';
+      setTimeout(() => {
+        triggerBtn.innerHTML = orig;
+        triggerBtn.style.background = '';
+      }, 2500);
+    }
+    alert('📋 Feedback report copied to clipboard!\n\nYou can now paste it into the chat to share your feedback with me.');
+  }
+
+  function openMobileStarsFeedbackModal() {
+    SoundFX.playTap();
+    if (!DOM.starsFeedbackModal || !DOM.starsModalBody) return;
+    const topic = GAME_DATA.topics[STATE.currentTopic];
+    if (DOM.starsModalTopicTitle) {
+      DOM.starsModalTopicTitle.textContent = `${topic ? topic.name : 'Topic'} Stars`;
+    }
+    DOM.starsModalBody.innerHTML = buildMobileLessonStarsHtml(STATE.currentTopic);
+    wireMobileFeedbackEvents(DOM.starsModalBody, STATE.currentTopic);
+    DOM.starsFeedbackModal.classList.add('open');
+  }
+
+  // --- FINISH LEVEL (VICTORY SCREEN WITH LESSON STARS MATRIX) ---
   function finishLevel() {
     const level = STATE.activeLevel;
     SoundFX.playVictory();
@@ -834,35 +1179,44 @@
     saveState();
 
     DOM.playProgressBar.style.width = '100%';
+    const starsHtml = buildMobileLessonStarsHtml(STATE.currentTopic);
+
     DOM.playQuestionBox.innerHTML = `
-      <div style="text-align: center; padding: 2rem 0; animation: screenFadeIn 0.4s ease;">
-        <div style="font-size: 5rem; margin-bottom: 1rem;">🏆</div>
-        <h2 style="font-family:'Outfit'; font-size: 2rem; font-weight: 900; color: #facc15; margin-bottom: 0.5rem;">
+      <div style="text-align: center; padding: 1.5rem 0; animation: screenFadeIn 0.4s ease;">
+        <div style="font-size: 4rem; margin-bottom: 0.5rem;">🏆</div>
+        <h2 style="font-family:'Outfit'; font-size: 1.8rem; font-weight: 900; color: #facc15; margin-bottom: 0.25rem;">
           LEVEL COMPLETE!
         </h2>
-        <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 1.5rem;">
+        <p style="color: #cbd5e1; font-size: 0.92rem; margin-bottom: 1.25rem;">
           You mastered: <strong>${level.title}</strong>
         </p>
 
-        <div style="display:flex; justify-content:center; gap:1.25rem; margin-bottom: 2rem;">
-          <div style="background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:1rem 1.5rem;">
-            <div style="font-size:1.8rem; color:#facc15;">⭐ ⭐ ⭐</div>
-            <div style="font-size:0.78rem; font-weight:800; color:#94a3b8; text-transform:uppercase;">Mastery</div>
+        <div style="display:flex; justify-content:center; gap:1rem; margin-bottom: 1.5rem;">
+          <div style="background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:0.8rem 1.2rem;">
+            <div style="font-size:1.6rem; color:#facc15;">⭐ ⭐ ⭐</div>
+            <div style="font-size:0.75rem; font-weight:800; color:#94a3b8; text-transform:uppercase;">Mastery</div>
           </div>
-          <div style="background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:1rem 1.5rem;">
-            <div style="font-size:1.5rem; font-weight:900; color:#38bdf8;">+${level.xpReward || 50} XP</div>
-            <div style="font-size:0.78rem; font-weight:800; color:#94a3b8; text-transform:uppercase;">Reward</div>
+          <div style="background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:0.8rem 1.2rem;">
+            <div style="font-size:1.4rem; font-weight:900; color:#38bdf8;">+${level.xpReward || 50} XP</div>
+            <div style="font-size:0.75rem; font-weight:800; color:#94a3b8; text-transform:uppercase;">Reward</div>
           </div>
         </div>
 
         ${level.badgeUnlock ? `
-          <div style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(249, 115, 22, 0.2)); border:1.5px solid #facc15; border-radius:14px; padding:1rem; margin-bottom:1.5rem;">
-            <div style="font-size:0.8rem; font-weight:900; text-transform:uppercase; color:#facc15;">🎖️ New Title Unlocked!</div>
-            <div style="font-size:1.15rem; font-weight:900; color:#fff;">${level.badgeUnlock}</div>
+          <div style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(249, 115, 22, 0.2)); border:1.5px solid #facc15; border-radius:14px; padding:0.85rem; margin-bottom:1.5rem;">
+            <div style="font-size:0.75rem; font-weight:900; text-transform:uppercase; color:#facc15;">🎖️ New Title Unlocked!</div>
+            <div style="font-size:1.05rem; font-weight:900; color:#fff;">${level.badgeUnlock}</div>
           </div>
         ` : ''}
+
+        <!-- Lesson-Wise Stars & Course Feedback -->
+        <div id="finish-stars-container" style="text-align:left;">
+          ${starsHtml}
+        </div>
       </div>
     `;
+
+    wireMobileFeedbackEvents(document.getElementById('finish-stars-container'), STATE.currentTopic);
 
     DOM.feedbackBanner.style.display = 'none';
     DOM.playActionBtn.textContent = 'BACK TO QUEST MAP';
@@ -999,12 +1353,12 @@
     }
 
     if (item.id === 'heart-refill') {
-      STATE.hearts = 5;
+      STATE.hearts = 'unlimited';
     }
 
     SoundFX.playCorrect();
     saveState();
-    alert(`🎉 Purchased ${item.name}!`);
+    alert(`🎉 Purchased ${item.name}! Unlimited Tries are Active.`);
   }
 
   // --- INITIALIZATION ---
@@ -1025,6 +1379,28 @@
           const topicId = pill.dataset.topic;
           if (topicId) switchTopic(topicId);
         });
+      });
+    }
+
+    // Stars & AI Feedback Modal Event Listeners
+    if (DOM.btnOpenStarsFeedback) {
+      DOM.btnOpenStarsFeedback.addEventListener('click', () => {
+        openMobileStarsFeedbackModal();
+      });
+    }
+
+    if (DOM.starsModalCloseBtn) {
+      DOM.starsModalCloseBtn.addEventListener('click', () => {
+        SoundFX.playTap();
+        if (DOM.starsFeedbackModal) DOM.starsFeedbackModal.classList.remove('open');
+      });
+    }
+
+    if (DOM.starsFeedbackModal) {
+      DOM.starsFeedbackModal.addEventListener('click', (e) => {
+        if (e.target === DOM.starsFeedbackModal) {
+          DOM.starsFeedbackModal.classList.remove('open');
+        }
       });
     }
 

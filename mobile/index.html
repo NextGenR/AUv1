@@ -44,9 +44,9 @@
         <span id="hud-coins-count">1,280</span>
       </div>
 
-      <div class="hud-pill hud-hearts" id="hud-hearts-pill" title="Lives Remaining">
+      <div class="hud-pill hud-hearts" id="hud-hearts-pill" title="Unlimited Tries / Zen Mode">
         <span>❤️</span>
-        <span id="hud-hearts-count">5/5</span>
+        <span id="hud-hearts-count">♾️ Unlimited</span>
       </div>
 
       <!-- Chrome PWA Install Pill -->
@@ -105,6 +105,20 @@
               </div>
             </div>
             <div class="flowchart-strip-badge">4 SVGs ➔</div>
+          </button>
+        </div>
+
+        <!-- Quick Stars & AI Feedback Strip -->
+        <div class="flowchart-quick-strip" style="margin-top:0.4rem;">
+          <button class="flowchart-strip-card" id="btn-open-stars-feedback" aria-label="Open Lesson Stars & AI Feedback" style="border-color:rgba(250,204,21,0.35); background:linear-gradient(135deg, rgba(234,179,8,0.12), rgba(30,41,59,0.9));">
+            <div class="flowchart-strip-left">
+              <div class="flowchart-strip-icon" style="background:rgba(250,204,21,0.15); border-color:rgba(250,204,21,0.3); color:#facc15;">⭐</div>
+              <div class="flowchart-strip-text">
+                <div class="flowchart-strip-title" style="color:#facc15;">Lesson Stars & AI Feedback</div>
+                <div class="flowchart-strip-sub">View stars across all 10 lessons • Export report for AI</div>
+              </div>
+            </div>
+            <div class="flowchart-strip-badge" style="background:#facc15; color:#0f172a; font-weight:900;">10 Lessons ➔</div>
           </button>
         </div>
 
@@ -251,6 +265,26 @@
         <a href="assets/flowcharts/flowchart_msme_classification.svg" target="_blank" class="btn-fc-fullscreen" id="btn-fc-fullscreen">
           <span>Full SVG</span> ↗
         </a>
+      </div>
+    </div>
+
+    <!-- Mobile Lesson Stars & AI Feedback Modal -->
+    <div class="stars-feedback-modal" id="stars-feedback-modal" role="dialog" aria-modal="true">
+      <div class="stars-modal-content">
+        <div class="stars-modal-header">
+          <div class="stars-modal-title-group">
+            <span style="font-size:1.4rem;">🌟</span>
+            <div>
+              <h3 class="stars-modal-title" id="stars-modal-topic-title">Lesson-Wise Stars</h3>
+              <p class="stars-modal-sub">Mastery breakdown & AI Feedback Exporter</p>
+            </div>
+          </div>
+          <button class="stars-modal-close" id="stars-modal-close-btn" aria-label="Close Stars Modal">✕</button>
+        </div>
+
+        <div class="stars-modal-body" id="stars-modal-body">
+          <!-- Populated dynamically via game.js -->
+        </div>
       </div>
     </div>
 
