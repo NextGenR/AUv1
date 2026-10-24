@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Cortex Visual Roadmap | Public Examinations & AI in Judiciary</title>
+  <meta name="description" content="Interactive visual roadmap in Roadmap.sh format featuring ForumIAS sheet notes, judicial precedents, and UPSC Mains frameworks for Public Examinations and AI in Judiciary.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="roadmap-page-body">
+
+  <!-- Top Global Navbar -->
+  <nav class="navbar" id="main-nav" style="border-bottom: 2px solid #e2e8f0; background: rgba(255, 255, 255, 0.95);">
+    <a href="index.html" class="nav-brand" id="brand-logo">
+      <div class="brand-icon">🧠</div>
+      <div class="brand-text">
+        <h1 style="color: #0f172a;">CORTEX ANKI <span class="brand-badge" style="background:#2563eb; color:#fff;">Roadmap.sh</span></h1>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" id="nav-dashboard" style="color:#475569;">📊 Dashboard</a></li>
+      <li><a href="subjects.html" class="nav-link" id="nav-subjects" style="color:#475569;">📚 Subjects</a></li>
+      <li><a href="cava.html" class="nav-link" id="nav-cava" style="color:#475569;">⚡ CAVA Hub</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam" style="color:#475569;">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="topic_study.html" class="nav-link" id="nav-study" style="color:#475569;">⚖️ AI in Judiciary</a></li>
+      <li><a href="roadmap_notes.html" class="nav-link active" id="nav-roadmap" style="background:#ffe600; color:#0f172a; font-weight:800; border:1.5px solid #0f172a; box-shadow:2px 2px 0px #0f172a;">🗺️ Visual Roadmap</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-sm btn-secondary" id="btn-theme-toggle" style="background:#ffffff; color:#0f172a; border:1.5px solid #cbd5e1; font-weight:700;">
+        🌙 Dark Canvas
+      </button>
+      <a href="public_exam_duo.html" class="btn btn-sm" style="background:#10b981; color:#fff; border-bottom:2px solid #047857; font-weight:800;" id="btn-nav-duo-mode">
+        🎮 Duolingo Mode
+      </a>
+    </div>
+  </nav>
+
+  <!-- Sticky Roadmap Command & Filter Bar -->
+  <header class="roadmap-command-bar" id="roadmap-command-bar">
+    <div class="roadmap-command-inner">
+      
+      <!-- Topic Switcher -->
+      <div class="roadmap-topic-selector" aria-label="Select Roadmap Topic">
+        <button class="topic-toggle-btn active" data-topic="public-exams" id="btn-topic-pe">
+          🏛️ Public Exams & NTA (L4)
+        </button>
+        <button class="topic-toggle-btn" data-topic="ai-judiciary" id="btn-topic-ai">
+          ⚖️ AI in Judiciary (L3)
+        </button>
+      </div>
+
+      <!-- Quick Search -->
+      <div class="roadmap-search-box">
+        <span class="roadmap-search-icon">🔍</span>
+        <input type="text" id="roadmap-search-input" class="roadmap-search-input" placeholder="Search concept, quote, act..." aria-label="Search roadmap topics">
+      </div>
+
+      <!-- Progress Stats Pill -->
+      <div class="roadmap-stats-pill" id="roadmap-stats-container">
+        <div class="roadmap-progress-bar-mini" title="Mastery Progress">
+          <div class="roadmap-progress-bar-fill" id="roadmap-progress-fill" style="width: 0%;"></div>
+        </div>
+        <span id="roadmap-stats-text">0 / 16 Mastered (0%)</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Roadmap Container -->
+  <main class="roadmap-container" id="roadmap-main-container">
+    
+    <!-- Topic Title Badge & Intro -->
+    <div style="text-align: center; margin-bottom: 2.5rem; position: relative; z-index: 5;">
+      <div style="display:inline-flex; align-items:center; gap:0.5rem; background:#ffffff; border:1.5px solid #cbd5e1; padding:0.35rem 1rem; border-radius:999px; font-size:0.8rem; font-weight:700; color:#2563eb; box-shadow:0 2px 4px rgba(0,0,0,0.03); margin-bottom:0.75rem;">
+        <span>🗺️ Interactive Tree Navigation</span>
+        <span>•</span>
+        <span>Tap any card to inspect ForumIAS Sheet Notes</span>
+      </div>
+      <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; letter-spacing: -0.02em;" id="roadmap-page-title">
+        Public Examinations & NTA Governance Overhaul
+      </h2>
+      <p style="max-width: 650px; margin: 0 auto; color: #475569; font-size: 0.95rem; line-height: 1.5;">
+        Constitutional foundations, the 24-Staff paradox, Gary Becker deterrence economics, and the Radhakrishnan 7-pillar restructuring blueprint.
+      </p>
+    </div>
+
+    <!-- Central Blue Guide Rail Spine -->
+    <div class="roadmap-spine" aria-hidden="true"></div>
+
+    <!-- Dynamic SVG Bezier Connecting Lines Overlay -->
+    <svg class="roadmap-svg-overlay" id="roadmap-svg-overlay" aria-hidden="true"></svg>
+
+    <!-- Tree Canvas (Rendered via roadmap_engine.js) -->
+    <div class="roadmap-tree" id="roadmap-tree-canvas">
+      <!-- Section Blocks, Yellow Trunk Nodes, and Cream Branch Cards are dynamically rendered here -->
+    </div>
+
+  </main>
+
+  <!-- ForumIAS High-Yield Inspector Drawer (Slide-out on desktop, Bottom-sheet on mobile) -->
+  <div class="roadmap-drawer-overlay" id="roadmap-drawer-overlay" aria-hidden="true"></div>
+  
+  <aside class="roadmap-drawer" id="roadmap-drawer" role="dialog" aria-labelledby="drawer-node-title" aria-modal="true">
+    
+    <!-- Drawer Header -->
+    <div class="roadmap-drawer-header">
+      <div style="display: flex; flex-direction: column; gap: 4px; max-width: 80%;">
+        <span class="roadmap-branch-tag" id="drawer-node-tag">CONCEPT</span>
+        <h3 id="drawer-node-title" style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: #0f172a; margin: 0; line-height: 1.25;">
+          Node Title
+        </h3>
+      </div>
+      <button class="roadmap-drawer-close" id="roadmap-drawer-close" aria-label="Close Inspector Drawer">
+        ✕
+      </button>
+    </div>
+
+    <!-- Drawer Body (ForumIAS Structured Notes) -->
+    <div class="roadmap-drawer-content" id="roadmap-drawer-body">
+      <!-- Populated dynamically via roadmap_engine.js -->
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="roadmap-drawer-footer">
+      <div style="display: flex; gap: 0.5rem;">
+        <button class="btn btn-sm btn-secondary" id="drawer-btn-prev" title="Previous Node">
+          ← Prev
+        </button>
+        <button class="btn btn-sm btn-secondary" id="drawer-btn-next" title="Next Node">
+          Next →
+        </button>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button class="btn btn-sm btn-secondary" id="drawer-btn-audio" title="Listen to text-to-speech audio summary">
+          🔊 Read Aloud
+        </button>
+        <button class="btn btn-sm" id="drawer-btn-master" style="background:#e2e8f0; color:#1e293b; font-weight:800; border:1px solid #cbd5e1;">
+          Mark Mastered
+        </button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Scripts -->
+  <script src="roadmap_data.js"></script>
+  <script src="roadmap_engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Examinations & NTA Reforms | Duolingo Gamified Learning | Cortex Anki 2.0</title>
+  <meta name="description" content="Master Public Examinations, Prevention of Unfair Means Act, and K. Radhakrishnan Committee reforms through a Duolingo level-wise gamified roadmap.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <a href="index.html" class="nav-brand" id="brand-logo">
+      <div class="brand-icon">🧠</div>
+      <div class="brand-text">
+        <h1>CORTEX ANKI <span class="brand-badge">2.0 Pro</span></h1>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" id="nav-dashboard">📊 Dashboard</a></li>
+      <li><a href="subjects.html" class="nav-link" id="nav-subjects">📚 Subjects</a></li>
+      <li><a href="cava.html" class="nav-link" id="nav-cava">⚡ CAVA Hub</a></li>
+      <li><a href="roadmap_notes.html" class="nav-link" id="nav-roadmap" style="color:#ffe600; font-weight:700;">🗺️ Visual Roadmap</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link active" id="nav-duo-exam">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="topic_study.html" class="nav-link" id="nav-ai-judiciary">⚖️ AI in Judiciary</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="streak-pill">
+        <span class="streak-flame">🔥</span>
+        <span class="streak-number" id="duo-streak-count">18</span> Days Streak
+      </div>
+      <button class="btn btn-primary btn-open-upload">
+        <span>+</span> Upload Lecture
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Dashboard</a>
+      <span class="separator">/</span>
+      <a href="subjects.html">Subjects</a>
+      <span class="separator">/</span>
+      <a href="cava.html">CAVA</a>
+      <span class="separator">/</span>
+      <span class="current">Public Examinations & NTA Reforms</span>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="margin-bottom: 1.5rem;">
+      <div class="page-header-content">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.5rem; flex-wrap:wrap;">
+          <span class="subject-tag tag-cava" style="margin-bottom:0;">CAVA Lecture #04</span>
+          <span class="badge badge-success">🎮 Duolingo Level Progression</span>
+          <span class="badge badge-primary">10 Levels • 250 XP</span>
+          <span class="badge" style="background:rgba(255,255,255,0.08); color:#cbd5e1;">Radhakrishnan Committee</span>
+        </div>
+        <h2>Public Examinations: Unfair Means Act & NTA Governance Overhaul</h2>
+        <p>Master paper leak criminal deterrence, the NTA 24-staff paradox, constitutional obligations, and ISRO-grade testing models through a gamified level path.</p>
+      </div>
+
+      <div class="header-actions" style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+        <a href="roadmap_notes.html?topic=public-exams" class="btn btn-sm" style="background:#ffe600; color:#0f172a; font-weight:800; border:1.5px solid #0f172a; box-shadow:2px 2px 0px #0f172a;">
+          🗺️ Switch to Roadmap.sh Tree
+        </a>
+        <a href="cava.html" class="btn btn-secondary btn-sm">
+          ← Back to CAVA Topics
+        </a>
+      </div>
+    </header>
+
+    <!-- Top Gamification Stats & View Toggle Bar -->
+    <div class="duo-stats-bar">
+      <div class="duo-stats-group">
+        <div class="duo-stat-pill pill-xp" title="Total XP Points Earned">
+          <span>💎</span>
+          <span><span id="duo-xp-count">60</span> XP</span>
+        </div>
+        <div class="duo-stat-pill pill-hearts" title="Hearts / Lives Remaining">
+          <span>❤️</span>
+          <span><span id="duo-hearts-count">5</span> / 5</span>
+        </div>
+        <div class="duo-stat-pill pill-streak" title="Continuous Study Streak">
+          <span>🔥</span>
+          <span><span id="duo-streak-count">18</span> Days</span>
+        </div>
+      </div>
+
+      <!-- View Selector (Duolingo Path vs ForumIAS Sheet Notes) -->
+      <div class="reading-view-selector" id="duo-view-selector">
+        <button class="view-btn active" id="toggle-view-path">🎮 Duolingo Level Path</button>
+        <button class="view-btn" id="toggle-view-sheet">📋 ForumIAS Sheet Notes (PDF Format)</button>
+      </div>
+    </div>
+
+    <!-- VIEW 1: DUOLINGO WINDING PATH OF STEPPING STONES -->
+    <section id="duo-path-section">
+      <div class="duo-path-layout" id="duo-path-container">
+        <!-- Rendered dynamically by duolingo_engine.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: FORUMIAS SHEET NOTES (MATCHING EXACT PDF FORMAT) -->
+    <section id="duo-sheet-section" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; max-width:960px; margin-left:auto; margin-right:auto;">
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:1.3rem; color:#fff;">CAVA Lecture 4 Classroom Sheet</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Formatted with dashed boxes, arrow bullets, and expandable analytical notes.</p>
+        </div>
+        <button class="btn btn-sm btn-secondary" onclick="window.print()">🖨️ Print Sheet</button>
+      </div>
+      <div id="sheet-notes-target"></div>
+    </section>
+
+  </main>
+
+  <!-- DUOLINGO FULL-SCREEN INTERACTIVE LESSON ARENA -->
+  <div class="duo-modal" id="duo-lesson-modal">
+    
+    <!-- Top Header in Lesson -->
+    <header class="duo-lesson-header">
+      <button class="btn-close-lesson" onclick="document.getElementById('duo-lesson-modal').classList.remove('active')">&times;</button>
+      
+      <div class="lesson-progress-bar">
+        <div class="lesson-progress-fill" id="lesson-progress-fill"></div>
+      </div>
+
+      <div class="lesson-hearts-badge">
+        <span>❤️</span>
+        <span id="lesson-hearts-display">5</span>
+      </div>
+    </header>
+
+    <!-- Task Arena -->
+    <main class="duo-lesson-arena" id="lesson-task-arena">
+      <!-- Injected by duolingo_engine.js based on task type -->
+    </main>
+
+    <!-- Bottom Action Bar (Check / Continue / Feedback) -->
+    <footer class="lesson-bottom-bar state-ready" id="lesson-bottom-bar">
+      <div class="lesson-bottom-inner">
+        <div id="lesson-feedback-message"></div>
+        <button class="btn-duo-check" id="lesson-action-btn" disabled>Check Answer</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Global Upload Lecture Modal -->
+  <div class="modal-overlay" id="upload-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="close-upload-modal">&times;</button>
+      <h3 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:0.4rem; color:#fff;">Upload / Ingest Lecture</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Paste your complete lecture transcript or notes here to auto-generate study modules.
+      </p>
+
+      <form id="upload-lecture-form">
+        <div class="form-group">
+          <label class="form-label" for="lecture-title-input">Lecture / Topic Title</label>
+          <input type="text" id="lecture-title-input" class="form-input" placeholder="e.g. MSME Reforms" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-subject-select">Assign to Subject</label>
+          <select id="lecture-subject-select" class="form-select">
+            <option value="cava" selected>CAVA (Current Affairs & Value Addition)</option>
+            <option value="gs2">GS-2: Governance & Constitution</option>
+            <option value="gs3">GS-3: Science, Tech & Economy</option>
+            <option value="gs4">GS-4: Ethics & Integrity</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-raw-text">Paste Lecture Transcript / Notes</label>
+          <textarea id="lecture-raw-text" class="form-textarea" rows="8" placeholder="Paste entire lecture or notes here..."></textarea>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem;">
+          <button type="button" class="btn btn-secondary" id="cancel-upload">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-upload">Process & Ingest Lecture</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="lecture_data.js"></script>
+  <script src="public_exam_data.js"></script>
+  <script src="duolingo_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

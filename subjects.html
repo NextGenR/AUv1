@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects Directory | Cortex Anki 2.0</title>
+  <meta name="description" content="Browse UPSC and civil services subjects including CAVA, GS-1, GS-2, GS-3, and GS-4.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <a href="index.html" class="nav-brand" id="brand-logo">
+      <div class="brand-icon">🧠</div>
+      <div class="brand-text">
+        <h1>CORTEX ANKI <span class="brand-badge">2.0 Pro</span></h1>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" id="nav-dashboard">📊 Dashboard</a></li>
+      <li><a href="subjects.html" class="nav-link active" id="nav-subjects">📚 Subjects</a></li>
+      <li><a href="cava.html" class="nav-link" id="nav-cava">⚡ CAVA Hub</a></li>
+      <li><a href="roadmap_notes.html" class="nav-link" id="nav-roadmap" style="color:#ffe600; font-weight:700;">🗺️ Visual Roadmap</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="topic_study.html" class="nav-link" id="nav-study">🎯 AI in Judiciary</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="streak-pill">
+        <span class="streak-flame">🔥</span>
+        <span class="streak-number">18</span> Days Streak
+      </div>
+      <button class="btn btn-primary btn-open-upload">
+        <span>+</span> Upload Lecture
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Dashboard</a>
+      <span class="separator">/</span>
+      <span class="current">Subjects</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="page-header-content">
+        <h2>Subjects Repository</h2>
+        <p>Curated syllabus domains. Select a subject to explore active lecture modules, flashcard decks, and revision schedules.</p>
+      </div>
+      <div class="header-actions">
+        <input type="text" id="subject-search-box" class="form-input" placeholder="🔍 Search subjects..." style="width:260px; display:inline-block;">
+      </div>
+    </header>
+
+    <!-- Subjects Grid -->
+    <div class="subjects-grid" id="subjects-container">
+      
+      <!-- CAVA SUBJECT CARD (Click opens cava.html) -->
+      <a href="cava.html" class="subject-card" id="card-cava" style="border: 2px solid rgba(236, 72, 153, 0.4); box-shadow: 0 10px 30px rgba(236, 72, 153, 0.15);">
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <span class="subject-tag tag-cava">Primary Focus • Featured</span>
+            <span class="badge badge-success">Active Module</span>
+          </div>
+
+          <h3 class="subject-card-title" style="font-size: 1.65rem; color: #fff; margin-top: 0.5rem;">
+            CAVA (Current Affairs & Value Addition)
+          </h3>
+          <p class="subject-card-desc">
+            Interdisciplinary analysis of contemporary national developments, Supreme Court judgments, policy shifts, and analytical themes for Mains value enhancement and Prelims factual precision.
+          </p>
+
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">
+            <span>Mastery Progress</span>
+            <span style="color:#f472b6; font-weight:700;">85% Mastered</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 85%; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="background: rgba(236, 72, 153, 0.08); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #fbcfe8;">
+            ⭐ <strong>Featured Lecture Available:</strong> Artificial Intelligence in Judiciary
+          </div>
+
+          <div class="subject-meta">
+            <span><strong>5</strong> Topics</span>
+            <span><strong>48</strong> Flashcards</span>
+            <span><strong>12</strong> Due Today</span>
+            <span class="btn btn-primary btn-sm" style="background: #ec4899; box-shadow:0 0 15px rgba(236,72,153,0.4);">
+              Open CAVA Topics →
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- GS-2 Subject Card -->
+      <a href="cava.html" class="subject-card" id="card-gs2">
+        <div>
+          <span class="subject-tag tag-gs2">GS Paper 2</span>
+          <h3 class="subject-card-title">Governance, Constitution & Polity</h3>
+          <p class="subject-card-desc">
+            Constitutional framework, federalism, separation of powers, dispute redressal mechanisms, civil services role, and international relations.
+          </p>
+
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">
+            <span>Mastery Progress</span>
+            <span style="color:#818cf8; font-weight:700;">64%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 64%;"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>8</strong> Topics</span>
+          <span><strong>72</strong> Cards</span>
+          <span><strong>14</strong> Due</span>
+          <span style="color:var(--primary-light); font-weight:600;">Open Subject →</span>
+        </div>
+      </a>
+
+      <!-- GS-3 Subject Card -->
+      <a href="cava.html" class="subject-card" id="card-gs3">
+        <div>
+          <span class="subject-tag tag-gs3">GS Paper 3</span>
+          <h3 class="subject-card-title">Technology, Economy & Internal Security</h3>
+          <p class="subject-card-desc">
+            Inclusive growth, government budgeting, agricultural supply chains, science & tech innovations, cybersecurity, and border management.
+          </p>
+
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">
+            <span>Mastery Progress</span>
+            <span style="color:#22d3ee; font-weight:700;">72%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 72%; background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>12</strong> Topics</span>
+          <span><strong>96</strong> Cards</span>
+          <span><strong>18</strong> Due</span>
+          <span style="color:#22d3ee; font-weight:600;">Open Subject →</span>
+        </div>
+      </a>
+
+      <!-- GS-4 Subject Card -->
+      <a href="cava.html" class="subject-card" id="card-gs4">
+        <div>
+          <span class="subject-tag tag-gs4">GS Paper 4</span>
+          <h3 class="subject-card-title">Ethics, Integrity & Aptitude</h3>
+          <p class="subject-card-desc">
+            Ethical dilemmas in public administration, emotional intelligence, moral philosophers, probity in governance, and real-world case studies.
+          </p>
+
+          <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">
+            <span>Mastery Progress</span>
+            <span style="color:#fbbf24; font-weight:700;">48%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 48%; background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>6</strong> Topics</span>
+          <span><strong>52</strong> Cards</span>
+          <span><strong>8</strong> Due</span>
+          <span style="color:#fbbf24; font-weight:600;">Open Subject →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- Global Upload Lecture Modal -->
+  <div class="modal-overlay" id="upload-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="close-upload-modal">&times;</button>
+      <h3 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:0.4rem; color:#fff;">Upload / Ingest Lecture</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Paste your complete lecture transcript or notes here to auto-generate study modules.
+      </p>
+
+      <form id="upload-lecture-form">
+        <div class="form-group">
+          <label class="form-label" for="lecture-title-input">Lecture / Topic Title</label>
+          <input type="text" id="lecture-title-input" class="form-input" placeholder="e.g. AI in Judiciary" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-subject-select">Assign to Subject</label>
+          <select id="lecture-subject-select" class="form-select">
+            <option value="cava" selected>CAVA (Current Affairs & Value Addition)</option>
+            <option value="gs2">GS-2: Governance & Constitution</option>
+            <option value="gs3">GS-3: Science, Tech & Economy</option>
+            <option value="gs4">GS-4: Ethics & Integrity</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-file-input">Or Upload Text/Markdown File</label>
+          <input type="file" id="lecture-file-input" class="form-input" accept=".txt,.md,.json">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-raw-text">Paste Lecture Transcript / Notes</label>
+          <textarea id="lecture-raw-text" class="form-textarea" rows="8" placeholder="Paste entire lecture or notes here..."></textarea>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem;">
+          <button type="button" class="btn btn-secondary" id="cancel-upload">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-upload">Process & Ingest Lecture</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Search Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchBox = document.getElementById('subject-search-box');
+      if (searchBox) {
+        searchBox.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const cards = document.querySelectorAll('.subject-card');
+          cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(query) ? 'flex' : 'none';
+          });
+        });
+      }
+    });
+  </script>
+  <script src="lecture_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

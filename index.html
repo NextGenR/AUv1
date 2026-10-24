@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cortex Anki 2.0 | Advanced UPSC Knowledge & SRS Engine</title>
+  <meta name="description" content="Next-generation Anki spaced repetition and lecture comprehension system for civil services and high-yield study.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <a href="index.html" class="nav-brand" id="brand-logo">
+      <div class="brand-icon">🧠</div>
+      <div class="brand-text">
+        <h1>CORTEX ANKI <span class="brand-badge">2.0 Pro</span></h1>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active" id="nav-dashboard">📊 Dashboard</a></li>
+      <li><a href="subjects.html" class="nav-link" id="nav-subjects">📚 Subjects</a></li>
+      <li><a href="cava.html" class="nav-link" id="nav-cava">⚡ CAVA Hub</a></li>
+      <li><a href="roadmap_notes.html" class="nav-link" id="nav-roadmap" style="color:#ffe600; font-weight:700;">🗺️ Visual Roadmap</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="topic_study.html" class="nav-link" id="nav-study">⚖️ AI in Judiciary</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="streak-pill" title="Continuous Active Study Streak">
+        <span class="streak-flame">🔥</span>
+        <span class="streak-number" id="nav-streak-count">18</span> Days Streak
+      </div>
+      <button class="btn btn-primary btn-open-upload" id="btn-global-upload">
+        <span>+</span> Upload Lecture
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="page-container">
+    
+    <!-- Hero / Header -->
+    <header class="page-header">
+      <div class="page-header-content">
+        <h2>Cognitive Performance Dashboard</h2>
+        <p>Spaced repetition mastery, activity heatmap, visual tree roadmaps, and Duolingo gamified learning models.</p>
+      </div>
+      <div class="header-actions" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <a href="roadmap_notes.html" class="btn btn-lg" style="background:#ffe600; color:#0f172a; font-weight:800; border-bottom:3px solid #b45309; box-shadow:0 4px 15px rgba(255,230,0,0.35);" id="btn-hero-roadmap">
+          🗺️ Visual Tree Roadmap
+        </a>
+        <a href="public_exam_duo.html" class="btn btn-lg" style="background:#10b981; color:#fff; border-bottom:3px solid #047857; box-shadow:0 4px 15px rgba(16,185,129,0.4);" id="btn-play-duo-hero">
+          🎮 Play Duolingo: <strong>Public Exams & NTA</strong>
+        </a>
+        <a href="topic_study.html" class="btn btn-secondary btn-lg" id="btn-quick-resume">
+          ⚖️ AI in Judiciary
+        </a>
+      </div>
+    </header>
+
+    <!-- Metrics Row -->
+    <section class="dashboard-grid" aria-label="Key Performance Indicators">
+      
+      <div class="col-3">
+        <div class="glass-card metric-card" id="metric-cards-due">
+          <div class="metric-icon-wrap metric-icon-indigo">⚡</div>
+          <div class="metric-info">
+            <h3>Cards Due Today</h3>
+            <div class="metric-val" id="val-cards-due">42</div>
+            <div class="metric-sub">Across 5 subjects</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="glass-card metric-card" id="metric-retention">
+          <div class="metric-icon-wrap metric-icon-emerald">🎯</div>
+          <div class="metric-info">
+            <h3>Retention Rate</h3>
+            <div class="metric-val" id="val-retention">92.4%</div>
+            <div class="metric-sub">+3.2% vs last week</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="glass-card metric-card" id="metric-streak">
+          <div class="metric-icon-wrap metric-icon-amber">🔥</div>
+          <div class="metric-info">
+            <h3>Active Streak</h3>
+            <div class="metric-val"><span class="streak-number">18</span> Days</div>
+            <div class="metric-sub">Personal best: 34 days</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="glass-card metric-card" id="metric-time">
+          <div class="metric-icon-wrap metric-icon-cyan">⏱️</div>
+          <div class="metric-info">
+            <h3>Study Time (Wk)</h3>
+            <div class="metric-val" id="val-study-time">14.6h</div>
+            <div class="metric-sub">Daily avg: 2h 5m</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Heatmap & Review Analytics -->
+    <section class="dashboard-grid">
+      
+      <!-- Anki 365-Day Activity Heatmap -->
+      <div class="col-12">
+        <div class="glass-card" id="heatmap-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <h3 style="font-family:var(--font-display); font-size:1.25rem; color:#fff;">Anki Review Heatmap (52 Weeks)</h3>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Visualizing daily card reviews, consistency, and spaced intervals.</p>
+            </div>
+            <span class="badge badge-primary">1,420 Total Reviews</span>
+          </div>
+
+          <!-- Heatmap Canvas/DOM Container -->
+          <div class="heatmap-container">
+            <div id="anki-heatmap"></div>
+          </div>
+
+          <div class="heatmap-legend">
+            <span>Less</span>
+            <div class="heatmap-legend-cells">
+              <div class="heatmap-cell level-0" style="cursor:default;"></div>
+              <div class="heatmap-cell level-1" style="cursor:default;"></div>
+              <div class="heatmap-cell level-2" style="cursor:default;"></div>
+              <div class="heatmap-cell level-3" style="cursor:default;"></div>
+              <div class="heatmap-cell level-4" style="cursor:default;"></div>
+            </div>
+            <span>More Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphs: 14-Day Review Trend Curve -->
+      <div class="col-8">
+        <div class="glass-card" id="retention-chart-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <div>
+              <h3 style="font-family:var(--font-display); font-size:1.2rem; color:#fff;">Review Frequency Trend (Last 14 Days)</h3>
+              <p style="font-size:0.82rem; color:var(--text-muted);">Daily volume of spaced repetition card recall attempts</p>
+            </div>
+            <span class="badge badge-success">Consistent Peak</span>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="chart-retention"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphs: SRS Card Pipeline Status -->
+      <div class="col-4">
+        <div class="glass-card" id="srs-chart-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <div>
+              <h3 style="font-family:var(--font-display); font-size:1.2rem; color:#fff;">SRS Memory Pipeline</h3>
+              <p style="font-size:0.82rem; color:var(--text-muted);">Card state distribution</p>
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="chart-srs"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Featured Subject & Quick Links -->
+    <section class="page-header" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+      <div class="page-header-content">
+        <h3 style="font-family:var(--font-display); font-size:1.6rem; color:#fff;">Subjects Overview</h3>
+        <p style="font-size:0.9rem; color:var(--text-muted);">Select a subject to drill down into high-yield lecture topics.</p>
+      </div>
+      <a href="subjects.html" class="btn btn-secondary">View All Subjects →</a>
+    </section>
+
+    <div class="subjects-grid">
+      
+      <!-- CAVA Primary Subject Card -->
+      <a href="cava.html" class="subject-card" id="subject-card-cava" style="border-color: rgba(236, 72, 153, 0.35);">
+        <div>
+          <span class="subject-tag tag-cava">Primary Subject</span>
+          <h4 class="subject-card-title">CAVA (Current Affairs & Value Addition)</h4>
+          <p class="subject-card-desc">High-yield analytical themes, Supreme Court rulings, emerging technological governance, and Prelims + Mains value enrichment.</p>
+          
+          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">Mastery Progress (85%)</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 85%; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>5</strong> Topics</span>
+          <span><strong>48</strong> Flashcards</span>
+          <span style="color:#f472b6; font-weight:700;">Open CAVA →</span>
+        </div>
+      </a>
+
+      <!-- GS-2 Card -->
+      <a href="subjects.html" class="subject-card" id="subject-card-gs2">
+        <div>
+          <span class="subject-tag tag-gs2">GS Paper 2</span>
+          <h4 class="subject-card-title">Governance & Constitutional Law</h4>
+          <p class="subject-card-desc">Separation of powers, judicial independence, administrative tribunals, fundamental rights jurisprudence, and public policy.</p>
+          
+          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">Mastery Progress (64%)</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 64%;"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>8</strong> Topics</span>
+          <span><strong>72</strong> Flashcards</span>
+          <span style="color:var(--primary-light); font-weight:600;">Explore →</span>
+        </div>
+      </a>
+
+      <!-- GS-3 Card -->
+      <a href="subjects.html" class="subject-card" id="subject-card-gs3">
+        <div>
+          <span class="subject-tag tag-gs3">GS Paper 3</span>
+          <h4 class="subject-card-title">Economy, S&T and Security</h4>
+          <p class="subject-card-desc">AI governance, semiconductor mission, macroeconomic stability, cybersecurity frameworks, and internal security challenges.</p>
+          
+          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.4rem;">Mastery Progress (72%)</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: 72%; background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);"></div>
+          </div>
+        </div>
+
+        <div class="subject-meta">
+          <span><strong>12</strong> Topics</span>
+          <span><strong>96</strong> Flashcards</span>
+          <span style="color:#22d3ee; font-weight:600;">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- Global Upload Lecture Modal -->
+  <div class="modal-overlay" id="upload-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="close-upload-modal">&times;</button>
+      <h3 style="font-family:var(--font-display); font-size:1.5rem; margin-bottom:0.4rem; color:#fff;">Upload / Ingest Lecture</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Paste your complete lecture transcript or notes here. The system will auto-generate reading modules, key terms, flashcards, and MCQs.
+      </p>
+
+      <form id="upload-lecture-form">
+        <div class="form-group">
+          <label class="form-label" for="lecture-title-input">Lecture / Topic Title</label>
+          <input type="text" id="lecture-title-input" class="form-input" placeholder="e.g. AI in Judiciary / Deepfakes in Elections" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-subject-select">Assign to Subject</label>
+          <select id="lecture-subject-select" class="form-select">
+            <option value="cava" selected>CAVA (Current Affairs & Value Addition)</option>
+            <option value="gs2">GS-2: Governance & Constitution</option>
+            <option value="gs3">GS-3: Science, Tech & Economy</option>
+            <option value="gs4">GS-4: Ethics & Integrity</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-file-input">Or Upload Lecture Text/Markdown File</label>
+          <input type="file" id="lecture-file-input" class="form-input" accept=".txt,.md,.json">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lecture-raw-text">Paste Lecture Transcript / Notes</label>
+          <textarea id="lecture-raw-text" class="form-textarea" rows="8" placeholder="Paste entire lecture or notes here...&#10;Key definitions with colons (e.g. Term: Definition) will automatically convert to flashcards!"></textarea>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:1.5rem;">
+          <button type="button" class="btn btn-secondary" id="cancel-upload">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-upload">Process & Ingest Lecture</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="lecture_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

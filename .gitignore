@@ -1,0 +1,15 @@
+# Audio files larger than GitHub's 100MB limit
+*.mp3
+*.wav
+*.m4a
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
