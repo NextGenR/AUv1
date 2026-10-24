@@ -13,31 +13,31 @@
 <body class="roadmap-page-body">
 
   <!-- Top Global Navbar -->
-  <nav class="navbar" id="main-nav" style="border-bottom: 2px solid #e2e8f0; background: rgba(255, 255, 255, 0.95);">
+  <nav class="navbar" id="main-nav">
     <a href="index.html" class="nav-brand" id="brand-logo">
       <div class="brand-icon">🧠</div>
       <div class="brand-text">
-        <h1 style="color: #0f172a;">CORTEX ANKI <span class="brand-badge" style="background:#2563eb; color:#fff;">Roadmap.sh</span></h1>
+        <h1>CORTEX ANKI <span class="brand-badge" style="background:#2563eb; color:#fff;">Roadmap.sh</span></h1>
       </div>
     </a>
 
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-link" id="nav-dashboard" style="color:#475569;">📊 Dashboard</a></li>
-      <li><a href="subjects.html" class="nav-link" id="nav-subjects" style="color:#475569;">📚 Subjects</a></li>
-      <li><a href="cava.html" class="nav-link" id="nav-cava" style="color:#475569;">⚡ CAVA Hub</a></li>
-      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam" style="color:#475569;">🎮 Public Exams (Duolingo)</a></li>
-      <li><a href="topic_study.html" class="nav-link" id="nav-study" style="color:#475569;">⚖️ AI in Judiciary</a></li>
+      <li><a href="index.html" class="nav-link" id="nav-dashboard">📊 Dashboard</a></li>
+      <li><a href="subjects.html" class="nav-link" id="nav-subjects">📚 Subjects</a></li>
+      <li><a href="cava.html" class="nav-link" id="nav-cava">⚡ CAVA Hub</a></li>
+      <li><a href="public_exam_duo.html" class="nav-link" id="nav-duo-exam">🎮 Public Exams (Duolingo)</a></li>
+      <li><a href="topic_study.html" class="nav-link" id="nav-study">⚖️ AI in Judiciary</a></li>
       <li><a href="roadmap_notes.html" class="nav-link active" id="nav-roadmap" style="background:#ffe600; color:#0f172a; font-weight:800; border:1.5px solid #0f172a; box-shadow:2px 2px 0px #0f172a;">🗺️ Visual Roadmap</a></li>
     </ul>
 
     <div class="nav-actions">
-      <a href="mobile/index.html" class="btn btn-sm" style="background:#10b981; color:#fff; border-bottom:2px solid #047857; font-weight:800;" id="btn-nav-mobile-game">
+      <a href="mobile/index.html" class="btn btn-sm" style="background:#10b981; color:#fff; border-bottom:2px solid #047857; font-weight:800; text-decoration:none;" id="btn-nav-mobile-game">
         📱 Mobile Game
       </a>
-      <button class="btn btn-sm btn-secondary" id="btn-theme-toggle" style="background:#ffffff; color:#0f172a; border:1.5px solid #cbd5e1; font-weight:700;">
-        🌙 Dark Canvas
+      <button class="btn btn-sm btn-secondary" id="btn-theme-toggle" style="font-weight:700; border-radius:999px;">
+        <span id="theme-btn-icon">🌙</span> <span id="theme-btn-text">Dark UI</span>
       </button>
-      <a href="public_exam_duo.html" class="btn btn-sm btn-secondary" style="font-weight:700;" id="btn-nav-duo-mode">
+      <a href="public_exam_duo.html" class="btn btn-sm btn-secondary" style="font-weight:700; border-radius:999px;" id="btn-nav-duo-mode">
         🎮 Duolingo
       </a>
     </div>
@@ -152,6 +152,7 @@
   </aside>
 
   <!-- Scripts -->
+  <script src="theme_sync.js"></script>
   <script src="roadmap_data.js"></script>
   <script src="roadmap_engine.js"></script>
 </body>

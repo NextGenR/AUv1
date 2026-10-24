@@ -186,6 +186,7 @@
     completedLevels: new Set(JSON.parse(localStorage.getItem('cortex_game_levels') || '[1]')),
     levelStars: JSON.parse(localStorage.getItem('cortex_game_stars') || '{"1":3}'),
     activeTab: 'map',
+    theme: localStorage.getItem('samsung_ui_theme') || 'samsung-dark',
 
     // Active Level Session
     activeLevel: null,
@@ -221,6 +222,9 @@
     hudCoins: document.getElementById('hud-coins-count'),
     hudHearts: document.getElementById('hud-hearts-count'),
     hudHeartsPill: document.getElementById('hud-hearts-pill'),
+    themeToggleBtn: document.getElementById('samsung-theme-toggle'),
+    themeToggleIcon: document.getElementById('theme-toggle-icon'),
+    themeToggleText: document.getElementById('theme-toggle-text'),
     screens: document.querySelectorAll('.game-screen'),
     dockBtns: document.querySelectorAll('.dock-btn'),
     questPath: document.getElementById('quest-path-content'),
@@ -245,6 +249,35 @@
     leaderboardList: document.getElementById('leaderboard-list'),
     shopGrid: document.getElementById('shop-grid')
   };
+
+  // --- SAMSUNG ONE UI THEME CONTROLLER ---
+  function applySamsungTheme(theme) {
+    STATE.theme = theme;
+    localStorage.setItem('samsung_ui_theme', theme);
+    localStorage.setItem('cortex_roadmap_dark', theme === 'samsung-dark' ? 'true' : 'false');
+
+    if (theme === 'samsung-light') {
+      document.body.classList.remove('samsung-dark');
+      document.body.classList.add('samsung-light');
+      if (DOM.themeToggleIcon) DOM.themeToggleIcon.textContent = '☀️';
+      if (DOM.themeToggleText) DOM.themeToggleText.textContent = 'Light';
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      if (metaTheme) metaTheme.setAttribute('content', '#f2f4f8');
+    } else {
+      document.body.classList.remove('samsung-light');
+      document.body.classList.add('samsung-dark');
+      if (DOM.themeToggleIcon) DOM.themeToggleIcon.textContent = '🌙';
+      if (DOM.themeToggleText) DOM.themeToggleText.textContent = 'Dark';
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      if (metaTheme) metaTheme.setAttribute('content', '#000000');
+    }
+  }
+
+  function toggleSamsungTheme() {
+    SoundFX.playTap();
+    const nextTheme = STATE.theme === 'samsung-dark' ? 'samsung-light' : 'samsung-dark';
+    applySamsungTheme(nextTheme);
+  }
 
   // --- UPDATE TOP HUD ---
   function updateHUD() {
@@ -848,11 +881,17 @@
 
   // --- INITIALIZATION ---
   function init() {
+    applySamsungTheme(STATE.theme);
     Confetti.init();
     updateHUD();
     renderQuestMap();
     renderLeaderboard();
     renderShop();
+
+    // Theme Switcher Event
+    if (DOM.themeToggleBtn) {
+      DOM.themeToggleBtn.addEventListener('click', toggleSamsungTheme);
+    }
 
     // Dock Navigation Events
     DOM.dockBtns.forEach(btn => {

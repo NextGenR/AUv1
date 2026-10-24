@@ -636,18 +636,37 @@
     scheduleRenderLines();
   }
 
-  // --- THEME TOGGLE ---
+  // --- SAMSUNG ONE UI THEME INTEGRATION ---
   function applyTheme() {
+    const saved = localStorage.getItem('samsung_ui_theme');
+    STATE.isDarkMode = saved ? saved === 'samsung-dark' : (localStorage.getItem('cortex_roadmap_dark') !== 'false');
+
     if (STATE.isDarkMode) {
-      document.body.classList.add('dark-theme');
-      if (DOM.themeToggleBtn) DOM.themeToggleBtn.textContent = '☀️ Light Blueprint';
+      document.body.classList.remove('samsung-light', 'light-theme');
+      document.body.classList.add('dark-theme', 'samsung-dark');
+      if (DOM.themeToggleBtn) {
+        const icon = DOM.themeToggleBtn.querySelector('#theme-btn-icon');
+        const text = DOM.themeToggleBtn.querySelector('#theme-btn-text');
+        if (icon) icon.textContent = '🌙';
+        if (text) text.textContent = 'Dark UI';
+      }
     } else {
-      document.body.classList.remove('dark-theme');
-      if (DOM.themeToggleBtn) DOM.themeToggleBtn.textContent = '🌙 Dark Canvas';
+      document.body.classList.remove('dark-theme', 'samsung-dark');
+      document.body.classList.add('samsung-light', 'light-theme');
+      if (DOM.themeToggleBtn) {
+        const icon = DOM.themeToggleBtn.querySelector('#theme-btn-icon');
+        const text = DOM.themeToggleBtn.querySelector('#theme-btn-text');
+        if (icon) icon.textContent = '☀️';
+        if (text) text.textContent = 'Light UI';
+      }
     }
-    localStorage.setItem('cortex_roadmap_dark', STATE.isDarkMode);
     scheduleRenderLines();
   }
+
+  // Subscribe to external theme updates
+  window.addEventListener('samsungThemeChanged', () => {
+    applyTheme();
+  });
 
   // --- SETUP EVENT LISTENERS ---
   function initEvents() {
@@ -674,8 +693,13 @@
     // Theme Toggle
     if (DOM.themeToggleBtn) {
       DOM.themeToggleBtn.addEventListener('click', () => {
-        STATE.isDarkMode = !STATE.isDarkMode;
-        applyTheme();
+        if (window.SamsungTheme) {
+          window.SamsungTheme.toggle();
+        } else {
+          STATE.isDarkMode = !STATE.isDarkMode;
+          localStorage.setItem('samsung_ui_theme', STATE.isDarkMode ? 'samsung-dark' : 'samsung-light');
+          applyTheme();
+        }
       });
     }
 

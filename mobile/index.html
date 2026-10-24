@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#0d111c">
   <link rel="stylesheet" href="game.css">
 </head>
-<body class="mobile-game-body">
+<body class="mobile-game-body samsung-dark">
 
   <!-- Celebration Confetti Layer -->
   <canvas id="game-confetti-canvas"></canvas>
@@ -39,6 +39,12 @@
         <span>❤️</span>
         <span id="hud-hearts-count">5/5</span>
       </div>
+
+      <!-- Samsung Quick Panel Theme Switcher -->
+      <button class="hud-pill hud-theme-toggle" id="samsung-theme-toggle" title="Switch Samsung One UI Theme (AMOLED Dark / Ceramic Light)" aria-label="Toggle Theme">
+        <span id="theme-toggle-icon">🌙</span>
+        <span class="theme-label" id="theme-toggle-text">Dark</span>
+      </button>
     </header>
 
     <!-- Scrollable Main Content -->
