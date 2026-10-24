@@ -570,12 +570,12 @@ function renderLevelPath() {
     nodeWrap.className = `duo-node-wrapper ${offsetClass}`;
 
     const button = document.createElement('button');
-    button.className = `duo-path-node ${isCompleted ? 'completed' : isCurrent ? 'active' : 'locked'}`;
+    button.className = `duo-path-node ${isCompleted ? 'completed' : 'active'}`;
     button.dataset.levelId = lvl.id;
     button.setAttribute('aria-label', `Level ${lvl.levelNumber}: ${lvl.title}`);
 
     // Crown or Checkmark
-    const crownBadge = isCompleted ? '<span class="node-crown">✓</span>' : isCurrent ? '<span class="node-crown">👑</span>' : '<span class="node-crown">🔒</span>';
+    const crownBadge = isCompleted ? '<span class="node-crown">✓</span>' : '<span class="node-crown">👑</span>';
 
     button.innerHTML = `
       <div class="node-inner">
@@ -589,15 +589,13 @@ function renderLevelPath() {
     tooltip.className = 'duo-node-tooltip';
     tooltip.innerHTML = `
       <strong>Level ${lvl.levelNumber}: ${lvl.title}</strong>
-      <span>${isCompleted ? '✓ Completed (+20 XP)' : isCurrent ? '▶ Start Lesson (+25 XP)' : '🔒 Locked'}</span>
+      <span>${isCompleted ? '✓ Completed (+20 XP)' : '▶ Start Lesson (+25 XP)'}</span>
     `;
 
-    if (!isLocked) {
-      button.addEventListener('click', () => {
-        DuoSound.playTap();
-        startLesson(lvl);
-      });
-    }
+    button.addEventListener('click', () => {
+      DuoSound.playTap();
+      startLesson(lvl);
+    });
 
     nodeWrap.appendChild(button);
     nodeWrap.appendChild(tooltip);
@@ -614,8 +612,7 @@ let activeClozeBlankId = null;
 let isLessonActionBusy = false;
 
 function startLesson(level) {
-  if (isLessonActionBusy) return;
-  isLessonActionBusy = true;
+  isLessonActionBusy = false; // Reset action busy state so opening a level is never blocked
 
   activeLevel = level;
   currentTaskIndex = 0;
@@ -627,13 +624,12 @@ function startLesson(level) {
   activeClozeBlankId = null;
 
   const modal = document.getElementById('duo-lesson-modal');
-  if (modal) modal.classList.add('active');
+  if (modal) {
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+  }
 
   renderCurrentTask();
-
-  setTimeout(() => {
-    isLessonActionBusy = false;
-  }, 350);
 }
 
 function renderCurrentTask() {
@@ -1563,14 +1559,14 @@ function completeLesson() {
     actionBtn.disabled = false;
     actionBtn.onclick = (e) => {
       if (e && e.preventDefault) e.preventDefault();
-      if (isLessonActionBusy) return;
-      isLessonActionBusy = true;
-      document.getElementById('duo-lesson-modal').classList.remove('active');
+      isLessonActionBusy = false;
+      const modal = document.getElementById('duo-lesson-modal');
+      if (modal) {
+        modal.classList.remove('active');
+        modal.style.display = 'none';
+      }
       renderLevelPath();
       DuoState.updateHeaderUI();
-      setTimeout(() => {
-        isLessonActionBusy = false;
-      }, 350);
     };
   }
 }

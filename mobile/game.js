@@ -448,15 +448,13 @@
       nodeWrapper.className = 'quest-node-wrapper';
 
       const btn = document.createElement('button');
-      btn.className = `quest-node-btn ${level.isBoss ? 'boss' : ''} ${isCurrent ? 'current' : ''} ${!isUnlocked ? 'locked' : ''}`;
-      btn.innerHTML = isUnlocked ? (level.isBoss ? '👑' : (level.icon || '⚔️')) : '🔒';
-      btn.disabled = !isUnlocked;
+      btn.className = `quest-node-btn ${level.isBoss ? 'boss' : ''} ${isCompleted ? 'completed' : 'current'}`;
+      btn.innerHTML = level.isBoss ? '👑' : (level.icon || '⚔️');
+      btn.disabled = false;
       btn.setAttribute('aria-label', `Level ${level.id}: ${level.title}`);
 
       btn.addEventListener('click', () => {
-        if (isUnlocked) {
-          startLevel(level);
-        }
+        startLevel(level);
       });
 
       const label = document.createElement('div');
@@ -481,8 +479,7 @@
 
   // --- START LEVEL SESSION ---
   function startLevel(level) {
-    if (isMobileActionBusy) return;
-    isMobileActionBusy = true;
+    isMobileActionBusy = false; // Never block opening a level
 
     // Unlimited tries - no heart depletion or lockout
     SoundFX.playTap();
@@ -501,10 +498,6 @@
 
     renderQuestion();
     DOM.playModal.classList.add('open');
-
-    setTimeout(() => {
-      isMobileActionBusy = false;
-    }, 350);
   }
 
   function updateBossHp() {
@@ -1564,13 +1557,9 @@
     DOM.playActionBtn.disabled = false;
     DOM.playActionBtn.onclick = (e) => {
       if (e && e.preventDefault) e.preventDefault();
-      if (isMobileActionBusy) return;
-      isMobileActionBusy = true;
+      isMobileActionBusy = false;
       DOM.playModal.classList.remove('open');
       renderQuestMap();
-      setTimeout(() => {
-        isMobileActionBusy = false;
-      }, 350);
     };
   }
 

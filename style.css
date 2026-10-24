@@ -2074,7 +2074,7 @@ body {
 }
 
 .duo-modal.active {
-  display: flex;
+  display: flex !important;
 }
 
 .duo-lesson-header {
