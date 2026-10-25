@@ -10,14 +10,17 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f7f4;--card:#fff;--ink:#14282a;--mut:#62777a;--line:#d5e0dc;--acc:#e8a317;--accd:#b57a06;--ok:#14a273;--okbg:#d5f4e8;--no:#e5484d;--nobg:#fde0e1;--sel:#d8e9ff;--selb:#3d79e8;--chip:#e3f1ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b1d;--card:#172a2c;--ink:#ecf5f2;--mut:#9bb3b0;--line:#2a4144;--ok:#3ad3a0;--okbg:#0f3b2f;--no:#ff6b70;--nobg:#4a1c20;--sel:#1f3560;--selb:#6c9bff;--chip:#1e3a3c}}
-:root[data-theme="dark"]{--bg:#0e1b1d;--card:#172a2c;--ink:#ecf5f2;--mut:#9bb3b0;--line:#2a4144;--ok:#3ad3a0;--okbg:#0f3b2f;--no:#ff6b70;--nobg:#4a1c20;--sel:#1f3560;--selb:#6c9bff;--chip:#1e3a3c}
+:root{--bg:#f4f6f8;--card:#ffffff;--card-sub:#f8fafc;--ink:#111827;--mut:#64748b;--line:#e2e8f0;--acc:#f59e0b;--accd:#d97706;--ok:#16a34a;--okbg:#dcfce7;--no:#dc2626;--nobg:#fee2e2;--sel:#eff6ff;--selb:#2563eb;--chip:#f1f5f9;--hl-bg:rgba(254,215,64,0.36);--hl-line:rgba(245,158,11,0.65);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000000;--card:#141519;--card-sub:#1c1d24;--ink:#f6f7f9;--mut:#94a3b8;--line:#262833;--acc:#f59e0b;--accd:#d97706;--ok:#22c55e;--okbg:#062e1a;--no:#ef4444;--nobg:#381216;--sel:#1e293b;--selb:#3b82f6;--chip:#1c1d24;--hl-bg:rgba(245,158,11,0.26);--hl-line:rgba(245,158,11,0.7)}}
+:root[data-theme="dark"]{--bg:#000000;--card:#141519;--card-sub:#1c1d24;--ink:#f6f7f9;--mut:#94a3b8;--line:#262833;--acc:#f59e0b;--accd:#d97706;--ok:#22c55e;--okbg:#062e1a;--no:#ef4444;--nobg:#381216;--sel:#1e293b;--selb:#3b82f6;--chip:#1c1d24;--hl-bg:rgba(245,158,11,0.26);--hl-line:rgba(245,158,11,0.7)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;margin:0}
-body{background:var(--bg);color:var(--ink);font-family:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:17px;display:flex;justify-content:center}
+body{background:var(--bg);color:var(--ink);font-family:"SamsungOne","Samsung One","Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:500;font-size:16.5px;line-height:1.45;letter-spacing:-0.015em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;display:flex;justify-content:center}
+h1,h2,h3{letter-spacing:-0.025em;font-weight:800}
 #app{width:100%;max-width:480px;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .top{display:flex;gap:12px;justify-content:flex-end;padding:12px 18px 6px;font-weight:800;align-items:center}
 .install-pill{background:#2563eb;color:#fff;border:0;border-bottom:3px solid #1d4ed8;border-radius:999px;padding:4px 12px;font:inherit;font-size:13.5px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
@@ -109,7 +112,7 @@ input[type="range"]{accent-color:var(--acc);margin:16px 0;height:8px;cursor:poin
 .tile{display:flex;gap:10px;background:var(--card);border:2px solid var(--line);border-left:6px solid var(--h);border-radius:14px;padding:4px 14px 4px 12px;margin-bottom:10px}
 .tile p{margin:8px 0;line-height:1.4}
 .tile .dot{color:var(--h);margin-top:9px;flex:none}
-.tile b{background:linear-gradient(transparent 58%,color-mix(in srgb,var(--h) 28%,transparent) 58%);font-weight:800}
+b,strong,.tile b,.fact b,p b{font-weight:700;color:inherit;background:var(--hl-bg);padding:1.5px 6px;margin:0 1.5px;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone;display:inline;box-shadow:inset 0 -2.5px 0 0 var(--hl-line)}
 .pop{animation:pop .35s ease-out}
 @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
 .kw{font-weight:800;margin:16px 0 8px;color:var(--mut)}
@@ -135,6 +138,7 @@ try {
   var s = JSON.parse(localStorage.getItem("cortex_cava_state") || "null");
   if(s) S = s;
 } catch(e) {}
+if(S.theme && document.documentElement) try { document.documentElement.setAttribute('data-theme', S.theme); } catch(e) {}
 
 function save(){
   try {
@@ -656,8 +660,12 @@ function home(){
 
   var isInstalled = isStandalone();
   var installBtn = isInstalled ? '' : '<button class="install-pill" id="btn-install" aria-label="Install App on Chrome">📲 Install</button>';
+  var docEl = document.documentElement;
+  var isDark = docEl && (docEl.getAttribute("data-theme") === "dark" || (!docEl.getAttribute("data-theme") && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches));
+  var themeBtn = '<button class="x" id="theme-btn" aria-label="Toggle Night Mode" style="font-size:18px">' + (isDark ? '☀️' : '🌙') + '</button>';
 
   var h = '<div class="top">' +
+    themeBtn +
     installBtn +
     '<button class="x" id="mt" aria-label="Sound">' + (S.mute ? '🔇' : '🔊') + '</button>' +
     '<span>🔥 ' + curStreak() + '</span>' +
@@ -679,6 +687,17 @@ function home(){
   });
 
   app.innerHTML = h + '</div></div>';
+
+  var tb = document.getElementById('theme-btn');
+  if (tb) tb.onclick = function(){
+    var cur = document.documentElement ? document.documentElement.getAttribute('data-theme') : null;
+    var sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = (cur === 'dark' || (!cur && sysDark)) ? 'light' : 'dark';
+    if (document.documentElement) document.documentElement.setAttribute('data-theme', next);
+    S.theme = next;
+    save();
+    home();
+  };
 
   var ib = document.getElementById('btn-install');
   if (ib) ib.onclick = triggerInstall;

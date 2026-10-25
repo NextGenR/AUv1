@@ -17,6 +17,11 @@ global.window = {
   }
 };
 global.document = {
+  documentElement: {
+    _attrs: {},
+    getAttribute(k) { return this._attrs[k] || null; },
+    setAttribute(k, v) { this._attrs[k] = String(v); }
+  },
   getElementById: (id) => ({
     id,
     classList: { add() {}, remove() {} },
@@ -214,5 +219,28 @@ if (!app.innerHTML.includes("Lab complete!")) throw new Error("Concept lab compl
 R = { arc: 1 };
 finRev(true);
 if (!app.innerHTML.includes("Arcade cleared!")) throw new Error("Arcade cleared screen failed");
+
+console.log("10. Testing Samsung One UI Dark / Night Mode Toggle & Persistence...");
+home();
+if (!app.innerHTML.includes('id="theme-btn"')) throw new Error("Theme button not rendered in top bar");
+// Trigger theme toggle to dark
+let curTheme = global.document.documentElement.getAttribute('data-theme');
+let nextTheme = (curTheme === 'dark') ? 'light' : 'dark';
+global.document.documentElement.setAttribute('data-theme', nextTheme);
+S.theme = nextTheme;
+save();
+home();
+if (S.theme !== 'dark') throw new Error("Theme state should be 'dark'");
+if (global.document.documentElement.getAttribute('data-theme') !== 'dark') throw new Error("Document attribute should be 'dark'");
+console.log("Theme toggled to 'dark' successfully and saved in state!");
+
+// Toggle back to light
+nextTheme = (S.theme === 'dark') ? 'light' : 'dark';
+global.document.documentElement.setAttribute('data-theme', nextTheme);
+S.theme = nextTheme;
+save();
+home();
+if (S.theme !== 'light') throw new Error("Theme state should be 'light'");
+console.log("Theme toggled back to 'light' successfully!");
 
 console.log("=== ALL CAVA ENGINE & GAME HUB TESTS PASSED WITH 100% SUCCESS ===");

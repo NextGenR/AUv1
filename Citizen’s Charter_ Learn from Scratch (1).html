@@ -2,14 +2,17 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Citizen’s Charter: Learn from Scratch</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f7f4;--card:#fff;--ink:#14282a;--mut:#62777a;--line:#d5e0dc;--acc:#e8a317;--accd:#b57a06;--ok:#14a273;--okbg:#d5f4e8;--no:#e5484d;--nobg:#fde0e1;--sel:#d8e9ff;--selb:#3d79e8;--chip:#e3f1ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b1d;--card:#172a2c;--ink:#ecf5f2;--mut:#9bb3b0;--line:#2a4144;--ok:#3ad3a0;--okbg:#0f3b2f;--no:#ff6b70;--nobg:#4a1c20;--sel:#1f3560;--selb:#6c9bff;--chip:#1e3a3c}}
-:root[data-theme="dark"]{--bg:#0e1b1d;--card:#172a2c;--ink:#ecf5f2;--mut:#9bb3b0;--line:#2a4144;--ok:#3ad3a0;--okbg:#0f3b2f;--no:#ff6b70;--nobg:#4a1c20;--sel:#1f3560;--selb:#6c9bff;--chip:#1e3a3c}
+:root{--bg:#f4f6f8;--card:#ffffff;--card-sub:#f8fafc;--ink:#111827;--mut:#64748b;--line:#e2e8f0;--acc:#f59e0b;--accd:#d97706;--ok:#16a34a;--okbg:#dcfce7;--no:#dc2626;--nobg:#fee2e2;--sel:#eff6ff;--selb:#2563eb;--chip:#f1f5f9;--hl-bg:rgba(254,215,64,0.36);--hl-line:rgba(245,158,11,0.65);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#000000;--card:#141519;--card-sub:#1c1d24;--ink:#f6f7f9;--mut:#94a3b8;--line:#262833;--acc:#f59e0b;--accd:#d97706;--ok:#22c55e;--okbg:#062e1a;--no:#ef4444;--nobg:#381216;--sel:#1e293b;--selb:#3b82f6;--chip:#1c1d24;--hl-bg:rgba(245,158,11,0.26);--hl-line:rgba(245,158,11,0.7)}}
+:root[data-theme="dark"]{--bg:#000000;--card:#141519;--card-sub:#1c1d24;--ink:#f6f7f9;--mut:#94a3b8;--line:#262833;--acc:#f59e0b;--accd:#d97706;--ok:#22c55e;--okbg:#062e1a;--no:#ef4444;--nobg:#381216;--sel:#1e293b;--selb:#3b82f6;--chip:#1c1d24;--hl-bg:rgba(245,158,11,0.26);--hl-line:rgba(245,158,11,0.7)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;margin:0}
-body{background:var(--bg);color:var(--ink);font-family:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:17px;display:flex;justify-content:center}
+body{background:var(--bg);color:var(--ink);font-family:"SamsungOne","Samsung One","Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:500;font-size:16.5px;line-height:1.45;letter-spacing:-0.015em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;display:flex;justify-content:center}
+h1,h2,h3{letter-spacing:-0.025em;font-weight:800}
 #app{width:100%;max-width:480px;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .top{display:flex;gap:14px;justify-content:flex-end;padding:12px 18px;font-weight:800}
 .home{flex:1;overflow-y:auto;padding:0 18px 24px}
@@ -85,7 +88,7 @@ h1{font-size:28px;line-height:1.1;margin:6px 0 4px;font-weight:800}
 .tile{display:flex;gap:10px;background:var(--card);border:2px solid var(--line);border-left:6px solid var(--h);border-radius:14px;padding:4px 14px 4px 12px;margin-bottom:10px}
 .tile p{margin:8px 0;line-height:1.4}
 .tile .dot{color:var(--h);margin-top:9px;flex:none}
-.tile b{background:linear-gradient(transparent 58%,color-mix(in srgb,var(--h) 28%,transparent) 58%);font-weight:800}
+b,strong,.tile b,.fact b,p b{font-weight:700;color:inherit;background:var(--hl-bg);padding:1.5px 6px;margin:0 1.5px;border-radius:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone;display:inline;box-shadow:inset 0 -2.5px 0 0 var(--hl-line)}
 .pop{animation:pop .35s ease-out}
 @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
 .kw{font-weight:800;margin:16px 0 8px;color:var(--mut)}
@@ -164,6 +167,7 @@ q:[
 
 var S={xp:0,streak:0,done:{}},app=document.getElementById("app"),R={};
 try{var s=JSON.parse(localStorage.getItem("cc1")||"null");if(s)S=s}catch(e){}
+if(S.theme)try{document.documentElement.setAttribute("data-theme",S.theme)}catch(e){}
 function save(){try{localStorage.setItem("cc1",JSON.stringify(S))}catch(e){}}
 S.kw=S.kw||[];S.weak=S.weak||[];
 function today(){return new Date().toDateString()}
@@ -254,11 +258,14 @@ function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.r
 function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 
 function home(){
- var h='<div class="top"><button class="x" id="mt" aria-label="Sound">'+(S.mute?'🔇':'🔊')+'</button><span>🔥 '+curStreak()+'</span><span>⚡ '+S.xp+' XP</span></div><div class="home"><h1>Citizen’s Charter</h1><p class="sub">Learn it from zero: read the idea, then prove it. Seven short lessons.</p>'+goalCard()+'<div class="path">';
+ var docEl=document.documentElement,isDark=docEl&&(docEl.getAttribute("data-theme")==="dark"||(!docEl.getAttribute("data-theme")&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches));
+ var themeBtn='<button class="x" id="theme-btn" aria-label="Toggle Night Mode" style="font-size:18px">'+(isDark?'☀️':'🌙')+'</button>';
+ var h='<div class="top">'+themeBtn+'<button class="x" id="mt" aria-label="Sound">'+(S.mute?'🔇':'🔊')+'</button><span>🔥 '+curStreak()+'</span><span>⚡ '+S.xp+' XP</span></div><div class="home"><h1>Citizen’s Charter</h1><p class="sub">Learn it from zero: read the idea, then prove it. Seven short lessons.</p>'+goalCard()+'<div class="path">';
  L.forEach(function(l,i){var d=S.done[i];h+='<button class="lesson'+(d?' done':'')+'" data-i="'+i+'"><span class="badge">'+(d?'✓':l.e)+'</span><span><b>'+l.n+'</b><small>'+l.d+(d?' · best '+d+'%':'')+'</small></span></button>'});
  app.innerHTML=h+'</div></div>';
  app.querySelectorAll(".lesson").forEach(function(b){b.onclick=function(){start(+b.dataset.i)}});
  var v=document.getElementById("vt"),w=document.getElementById("wk");if(v)v.onclick=vault;if(w)w.onclick=startReview;var pq=document.getElementById("pq");if(pq)pq.onclick=startPyq;var sk=document.getElementById("sk");if(sk)sk.onclick=skPick;var ac=document.getElementById("ac");if(ac)ac.onclick=hub;
+ var tb=document.getElementById("theme-btn");if(tb)tb.onclick=function(){var cur=document.documentElement?document.documentElement.getAttribute("data-theme"):null,sysDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches,next=(cur==="dark"||(!cur&&sysDark))?"light":"dark";if(document.documentElement)document.documentElement.setAttribute("data-theme",next);S.theme=next;save();home()};
  document.getElementById("mt").onclick=function(){S.mute=!S.mute;save();home()};
 }
 function start(i){var l=L[i];R={i:i,ci:0,queue:l.q.map(function(q,n){return {q:q,key:i+':'+n}}),total:l.c.length+l.q.length,solved:0,hearts:5,mist:0,xp:0};next()}
