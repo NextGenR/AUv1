@@ -1,16 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Builder script for CAVA Learn from Scratch Mobile Application.
-Adopts the exact design, UX architecture, interaction model, and visual tokens of
-Citizen's Charter_ Learn from Scratch.html for all CAVA topics:
-- MSME Reforms
-- Public Examinations & Exam Integrity
-- AI in Judiciary
-- Citizen's Charter & Service Delivery
+Includes Game Hub and Interactive Tools across all CAVA topics.
 """
-
-import json
-import os
 
 TOPICS = {
     "msme": {
@@ -18,8 +10,52 @@ TOPICS = {
         "title": "MSME Reforms & Economic Catalysts",
         "badge": "🏭",
         "sub": "Master India's 31.1% GDP growth engine, 2020 classification, delayed payments, and Budget 2025 reforms.",
-        "hue": ["#0f8a62", "#2f63d6", "#7442d6", "#b8760a", "#d23a40", "#0b8a9a", "#d9570c"],
-        "ico": [["🏭", "📊", "🎯"], ["📐", "⚙️", "🌍"], ["📉", "🏢", "🇩🇪"], ["⏳", "📜", "⚖️"], ["💳", "📱", "🏦"], ["🚀", "🔨", "📦"], ["🎯", "🗺️", "🏆"]],
+        "hue": [
+            "#0f8a62",
+            "#2f63d6",
+            "#7442d6",
+            "#b8760a",
+            "#d23a40",
+            "#0b8a9a",
+            "#d9570c"
+        ],
+        "ico": [
+            [
+                "🏭",
+                "📊",
+                "🎯"
+            ],
+            [
+                "📐",
+                "⚙️",
+                "🌍"
+            ],
+            [
+                "📉",
+                "🏢",
+                "🇩🇪"
+            ],
+            [
+                "⏳",
+                "📜",
+                "⚖️"
+            ],
+            [
+                "💳",
+                "📱",
+                "🏦"
+            ],
+            [
+                "🚀",
+                "🔨",
+                "📦"
+            ],
+            [
+                "🎯",
+                "🗺️",
+                "🏆"
+            ]
+        ],
         "lessons": [
             {
                 "n": "Macro Pillars & Economic Footprint",
@@ -33,7 +69,12 @@ TOPICS = {
                             "Macro footprint: <b>31.1% of India's GDP</b>, <b>35.4% of Manufacturing GVA</b>, and <b>48.6% of Total Merchandise Exports</b>.",
                             "Over <b>51.2% of MSMEs are in rural areas</b>, promoting equitable regional growth and reducing distress migration."
                         ],
-                        "k": ["31.1% GDP Share", "48.6% Merchandise Exports", "11.1 Crore Jobs", "Rural Democratization"],
+                        "k": [
+                            "31.1% GDP Share",
+                            "48.6% Merchandise Exports",
+                            "11.1 Crore Jobs",
+                            "Rural Democratization"
+                        ],
                         "n": "Low capital investment per job created makes MSMEs vital for India's demographic dividend."
                     },
                     {
@@ -43,7 +84,11 @@ TOPICS = {
                             "Key pillar for realizing a <b>$5 Trillion economy</b> and achieving the vision of <b>Viksit Bharat 2047</b>.",
                             "High representation of vulnerable social groups: significant ownership by SC, ST, and women entrepreneurs."
                         ],
-                        "k": ["Article 39(b) & 39(c)", "Inclusive Growth", "Viksit Bharat 2047"],
+                        "k": [
+                            "Article 39(b) & 39(c)",
+                            "Inclusive Growth",
+                            "Viksit Bharat 2047"
+                        ],
                         "n": "Exam angle: GS-3 (Mobilization of Resources, Employment, Industrial Policy)."
                     }
                 ],
@@ -51,7 +96,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What proportion of India's total merchandise exports is contributed by MSMEs?",
-                        "o": ["About 15%", "About 25%", "About 48.6%", "Over 75%"],
+                        "o": [
+                            "About 15%",
+                            "About 25%",
+                            "About 48.6%",
+                            "Over 75%"
+                        ],
                         "a": 2,
                         "e": "MSMEs account for ~48.6% of India's total merchandise exports across textiles, engineering, and leather."
                     },
@@ -64,20 +114,68 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap all verified macroeconomic benchmarks of India's MSME sector.",
-                        "o": ["31.1% of India's GDP", "35.4% of Manufacturing GVA", "11.1 Crore jobs sustained", "90% of central corporate tax"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "31.1% of India's GDP",
+                            "35.4% of Manufacturing GVA",
+                            "11.1 Crore jobs sustained",
+                            "90% of central corporate tax"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "31.1% GDP, 35.4% Manufacturing GVA, and 11.1 Cr jobs are verified government benchmarks."
                     },
                     {
                         "k": "match",
                         "q": "Match the macroeconomic metric to its official benchmark.",
                         "p": [
-                            ["GDP Contribution", "31.1% of GDP"],
-                            ["Manufacturing GVA", "35.4% share"],
-                            ["Merchandise Exports", "48.6% of total"],
-                            ["Employment Footprint", "11.1 Crore jobs"]
+                            [
+                                "GDP Contribution",
+                                "31.1% of GDP"
+                            ],
+                            [
+                                "Manufacturing GVA",
+                                "35.4% share"
+                            ],
+                            [
+                                "Merchandise Exports",
+                                "48.6% of total"
+                            ],
+                            [
+                                "Employment Footprint",
+                                "11.1 Crore jobs"
+                            ]
                         ],
                         "e": "Memorize these four data points for your GS-3 introduction paragraphs!"
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag: the one false part of this statement.",
+                        "o": [
+                            "MSMEs contribute 31.1% of India’s GDP,",
+                            "pay 90% of central corporate tax,",
+                            "and sustain 11.1 Crore livelihoods across India."
+                        ],
+                        "a": 1,
+                        "e": "MSMEs do NOT pay 90% of corporate tax; corporate tax is dominated by large conglomerates."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the sentence: tap words in order.",
+                        "o": [
+                            "MSMEs",
+                            "power",
+                            "nearly",
+                            "half",
+                            "of",
+                            "India’s",
+                            "merchandise",
+                            "exports"
+                        ],
+                        "e": "MSMEs power nearly half of India’s merchandise exports."
                     }
                 ]
             },
@@ -93,7 +191,11 @@ TOPICS = {
                             "Introduced a <b>composite criteria</b> combining both <b>Plant & Machinery Investment</b> and <b>Annual Turnover</b>.",
                             "Both conditions must be satisfied. Crossing either limit moves the enterprise into the higher bracket."
                         ],
-                        "k": ["Composite Criteria", "Unified Classification", "Atmanirbhar Bharat"],
+                        "k": [
+                            "Composite Criteria",
+                            "Unified Classification",
+                            "Atmanirbhar Bharat"
+                        ],
                         "n": "Replaced the archaic 2006 manufacturing vs services equipment division."
                     },
                     {
@@ -104,7 +206,12 @@ TOPICS = {
                             "<b>Medium:</b> Investment up to <b>₹50 Crore</b> AND Turnover up to <b>₹250 Crore</b> (50:250 ratio).",
                             "Notice the constant <b>5x turnover multiplier</b> across all three tiers!"
                         ],
-                        "k": ["Micro (1 Cr / 5 Cr)", "Small (10 Cr / 50 Cr)", "Medium (50 Cr / 250 Cr)", "5x Multiplier"],
+                        "k": [
+                            "Micro (1 Cr / 5 Cr)",
+                            "Small (10 Cr / 50 Cr)",
+                            "Medium (50 Cr / 250 Cr)",
+                            "5x Multiplier"
+                        ],
                         "n": "Easy mnemonic: 1 -> 10 -> 50 for Investment, multiply by 5 for Turnover!"
                     },
                     {
@@ -114,7 +221,11 @@ TOPICS = {
                             "Why? To prevent growing firms from fearing that exporting more will cost them their MSME priority sector status.",
                             "An enterprise can export ₹500 Cr and still remain a 'Small' enterprise as long as domestic turnover is under ₹50 Cr."
                         ],
-                        "k": ["Export Carve-out", "Global Scale", "Incentive Compatibility"],
+                        "k": [
+                            "Export Carve-out",
+                            "Global Scale",
+                            "Incentive Compatibility"
+                        ],
                         "n": "Removes the export penalty and directly supports Atmanirbhar Bharat export competitiveness."
                     }
                 ],
@@ -122,7 +233,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What are the ceiling limits for a 'Small' enterprise under the 2020 classification?",
-                        "o": ["Inv ₹1 Cr / TO ₹5 Cr", "Inv ₹10 Cr / TO ₹50 Cr", "Inv ₹50 Cr / TO ₹250 Cr", "Inv ₹25 Cr / TO ₹100 Cr"],
+                        "o": [
+                            "Inv ₹1 Cr / TO ₹5 Cr",
+                            "Inv ₹10 Cr / TO ₹50 Cr",
+                            "Inv ₹50 Cr / TO ₹250 Cr",
+                            "Inv ₹25 Cr / TO ₹100 Cr"
+                        ],
                         "a": 1,
                         "e": "Small enterprise: Investment up to ₹10 Crore AND Turnover up to ₹50 Crore."
                     },
@@ -135,19 +251,68 @@ TOPICS = {
                     {
                         "k": "order",
                         "q": "Arrange the 2020 MSME tiers in ascending order of investment ceilings.",
-                        "o": ["Micro (₹1 Crore)", "Small (₹10 Crore)", "Medium (₹50 Crore)"],
+                        "o": [
+                            "Micro (₹1 Crore)",
+                            "Small (₹10 Crore)",
+                            "Medium (₹50 Crore)"
+                        ],
                         "e": "Micro (₹1 Cr) → Small (₹10 Cr) → Medium (₹50 Cr)."
                     },
                     {
                         "k": "match",
                         "q": "Match the MSME tier to its maximum investment limit.",
                         "p": [
-                            ["Micro Enterprise", "Up to ₹1 Crore"],
-                            ["Small Enterprise", "Up to ₹10 Crore"],
-                            ["Medium Enterprise", "Up to ₹50 Crore"],
-                            ["Turnover Multiplier", "5x Investment"]
+                            [
+                                "Micro Enterprise",
+                                "Up to ₹1 Crore"
+                            ],
+                            [
+                                "Small Enterprise",
+                                "Up to ₹10 Crore"
+                            ],
+                            [
+                                "Medium Enterprise",
+                                "Up to ₹50 Crore"
+                            ],
+                            [
+                                "Turnover Multiplier",
+                                "5x Investment"
+                            ]
                         ],
                         "e": "Clean 1:5, 10:50, 50:250 mathematical formula."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the composite MSME classification (Investment + Turnover) was notified under Atmanirbhar Bharat.",
+                        "a": 2020,
+                        "tol": 0,
+                        "min": 2005,
+                        "max": 2025,
+                        "e": "July 2020."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort by enterprise ceiling: Micro, Small, or Medium?",
+                        "b": [
+                            "Micro",
+                            "Small",
+                            "Medium"
+                        ],
+                        "it": [
+                            [
+                                "₹1 Cr Invest / ₹5 Cr Turnover",
+                                0
+                            ],
+                            [
+                                "₹10 Cr Invest / ₹50 Cr Turnover",
+                                1
+                            ],
+                            [
+                                "₹50 Cr Invest / ₹250 Cr Turnover",
+                                2
+                            ]
+                        ],
+                        "e": "Micro = 1/5; Small = 10/50; Medium = 50/250. Export turnover is excluded!"
                     }
                 ]
             },
@@ -163,7 +328,11 @@ TOPICS = {
                             "Only <b>0.52% are Small</b>, and an infinitesimal <b>0.08% are Medium</b>.",
                             "Instead of an upright pyramid or healthy cylinder, India has an <b>inverted mushroom</b>: vast dwarfs and giant conglomerates, with a missing middle."
                         ],
-                        "k": ["Dwarfism Paradox", "Missing Middle", "99.4% Micro Share"],
+                        "k": [
+                            "Dwarfism Paradox",
+                            "Missing Middle",
+                            "99.4% Micro Share"
+                        ],
                         "n": "Economic Survey distinguishes between 'infants' (young firms that grow) and 'dwarfs' (old firms that deliberately stay small)."
                     },
                     {
@@ -173,7 +342,11 @@ TOPICS = {
                             "Firms fear losing priority sector lending, tax breaks, and flexible labor compliance exemptions.",
                             "Capital and labor become locked in low-productivity dwarf units, preventing <b>Schumpeterian 'Creative Destruction'</b>."
                         ],
-                        "k": ["Regulatory Cliff", "Perverse Incentives", "Creative Destruction"],
+                        "k": [
+                            "Regulatory Cliff",
+                            "Perverse Incentives",
+                            "Creative Destruction"
+                        ],
                         "n": "Subsidies tied to remaining small perversely incentivize staying small."
                     },
                     {
@@ -183,7 +356,11 @@ TOPICS = {
                             "Features: <b>Scale-neutral incentives</b> (subsidies don't vanish upon growth), <b>dual vocational training</b>, and long-term bank capital.",
                             "India must transition from protecting dwarfs to empowering Mittelstand-style global scale."
                         ],
-                        "k": ["German Mittelstand", "Scale-Neutrality", "Hidden Champions"],
+                        "k": [
+                            "German Mittelstand",
+                            "Scale-Neutrality",
+                            "Hidden Champions"
+                        ],
                         "n": "A classic international case study to quote in your GS-3 conclusion."
                     }
                 ],
@@ -191,7 +368,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What percentage of enterprises in India's MSME sector are micro units?",
-                        "o": ["Around 50%", "Around 75%", "Over 99.4%", "Exactly 33%"],
+                        "o": [
+                            "Around 50%",
+                            "Around 75%",
+                            "Over 99.4%",
+                            "Exactly 33%"
+                        ],
                         "a": 2,
                         "e": "Over 99.4% of all MSMEs in India are micro enterprises, showcasing extreme dwarfism."
                     },
@@ -204,20 +386,58 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the core root causes of MSME dwarfism in India.",
-                        "o": ["Regulatory cliff upon scaling up", "Loss of priority sector lending and fiscal exemptions", "Excessive supply of equity capital", "Distortionary size-based incentives"],
-                        "a": [0, 1, 3],
+                        "o": [
+                            "Regulatory cliff upon scaling up",
+                            "Loss of priority sector lending and fiscal exemptions",
+                            "Excessive supply of equity capital",
+                            "Distortionary size-based incentives"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            3
+                        ],
                         "e": "Size-based incentives, regulatory cliffs, and fear of losing exemptions trap firms in dwarfism."
                     },
                     {
                         "k": "match",
                         "q": "Match the economic concept to its definition.",
                         "p": [
-                            ["Dwarfism", "Older firms deliberately remaining small"],
-                            ["Missing Middle", "Scarcity of medium-sized enterprises"],
-                            ["Mittelstand", "German scale-neutral medium firm model"],
-                            ["Creative Destruction", "Dynamic firms replacing obsolete ones"]
+                            [
+                                "Dwarfism",
+                                "Older firms deliberately remaining small"
+                            ],
+                            [
+                                "Missing Middle",
+                                "Scarcity of medium-sized enterprises"
+                            ],
+                            [
+                                "Mittelstand",
+                                "German scale-neutral medium firm model"
+                            ],
+                            [
+                                "Creative Destruction",
+                                "Dynamic firms replacing obsolete ones"
+                            ]
                         ],
                         "e": "Crucial terminology for GS-3 industrial policy answers."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I? Fewer clues, more XP.",
+                        "c": [
+                            "I am an economic phenomenon documented by Chief Economic Advisor KV Subramanian.",
+                            "Firms stay deliberately small and under 100 workers to retain subsidies and avoid labor inspections.",
+                            "I prevent India from building global Mittelstand champions."
+                        ],
+                        "o": [
+                            "Dwarfism syndrome",
+                            "Twin balance sheet",
+                            "Dutch disease",
+                            "Liquidity trap"
+                        ],
+                        "a": 0,
+                        "e": "Dwarfism syndrome: firms stay dwarfs rather than growing into giants."
                     }
                 ]
             },
@@ -233,7 +453,11 @@ TOPICS = {
                             "Small suppliers have weak bargaining power and are forced to accept payment delays of 120-180 days.",
                             "This triggers severe liquidity crunches, inability to service bank debt, and insolvency."
                         ],
-                        "k": ["Delayed Payments", "Working Capital Crisis", "Bargaining Asymmetry"],
+                        "k": [
+                            "Delayed Payments",
+                            "Working Capital Crisis",
+                            "Bargaining Asymmetry"
+                        ],
                         "n": "MSMEs are often profitable on paper but bankrupt in cash flow."
                     },
                     {
@@ -243,7 +467,12 @@ TOPICS = {
                             "<b>Section 16:</b> Defaulting buyer must pay <b>compound interest with monthly rests at 3 TIMES the RBI Bank Rate</b>!",
                             "<b>Section 18 & 19:</b> Micro & Small Enterprise Facilitation Councils (MSEFC). If buyer appeals, they must pre-deposit <b>75% of the award amount</b>!"
                         ],
-                        "k": ["45-day Maximum Window", "3x RBI Bank Rate Compound Interest", "MSEFC", "75% Pre-deposit"],
+                        "k": [
+                            "45-day Maximum Window",
+                            "3x RBI Bank Rate Compound Interest",
+                            "MSEFC",
+                            "75% Pre-deposit"
+                        ],
                         "n": "The 75% pre-deposit under Section 19 prevents big buyers from tying small vendors in endless litigation."
                     },
                     {
@@ -253,7 +482,11 @@ TOPICS = {
                             "Rule: A buyer can only claim tax deduction for purchases from MSMEs in the year the payment is <b>actually made</b>!",
                             "If payment is delayed beyond the 45-day window, the deduction is disallowed that financial year, sharply raising the buyer's income tax bill."
                         ],
-                        "k": ["Section 43B(h)", "Tax Disallowance", "Payment Discipline"],
+                        "k": [
+                            "Section 43B(h)",
+                            "Tax Disallowance",
+                            "Payment Discipline"
+                        ],
                         "n": "Provides a direct financial penalty that forces corporate CFOs to pay MSMEs on time."
                     }
                 ],
@@ -261,14 +494,24 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What is the maximum payment credit period permitted under Section 15 of MSMED Act when agreed in writing?",
-                        "o": ["15 days", "30 days", "45 days", "90 days"],
+                        "o": [
+                            "15 days",
+                            "30 days",
+                            "45 days",
+                            "90 days"
+                        ],
                         "a": 2,
                         "e": "Section 15 stipulates that the agreed credit period cannot exceed 45 days under any circumstances."
                     },
                     {
                         "k": "mc",
                         "q": "What penal interest rate applies to delayed payments under Section 16 of the MSMED Act?",
-                        "o": ["Bank Rate + 2%", "Simple interest at 10%", "3 times the RBI Bank Rate (compound interest)", "No interest penalty"],
+                        "o": [
+                            "Bank Rate + 2%",
+                            "Simple interest at 10%",
+                            "3 times the RBI Bank Rate (compound interest)",
+                            "No interest penalty"
+                        ],
                         "a": 2,
                         "e": "Defaulting buyers must pay compound interest with monthly rests at 3 times the RBI Bank Rate."
                     },
@@ -281,8 +524,25 @@ TOPICS = {
                     {
                         "k": "order",
                         "q": "Put the delayed payments enforcement process in sequence.",
-                        "o": ["Supply of goods/services completed", "45-day maximum statutory window expires", "Filing application on MSME Samadhaan portal", "MSEFC arbitral award with 3x bank rate interest", "Buyer mandatory 75% pre-deposit for appeal"],
+                        "o": [
+                            "Supply of goods/services completed",
+                            "45-day maximum statutory window expires",
+                            "Filing application on MSME Samadhaan portal",
+                            "MSEFC arbitral award with 3x bank rate interest",
+                            "Buyer mandatory 75% pre-deposit for appeal"
+                        ],
                         "e": "Supply → 45 days expire → Samadhaan filing → MSEFC award → 75% pre-deposit."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "Section 15 of MSMED Act mandates payment within 45 days,",
+                            "defaults incur compound interest at 3 times bank rate,",
+                            "and defaulting corporate buyers get instant income tax deductions."
+                        ],
+                        "a": 2,
+                        "e": "Section 43B(h) DISALLOWS tax deduction to defaulting buyers until actual payment is made!"
                     }
                 ]
             },
@@ -298,7 +558,11 @@ TOPICS = {
                             "Over 85% of MSMEs lack access to formal bank loans due to an absence of immovable physical collateral (real estate/land).",
                             "Traditional banking relies on asset-based mortgages rather than business cash-flows."
                         ],
-                        "k": ["UK Sinha Committee", "₹30 Lakh Crore Deficit", "Collateral Trap"],
+                        "k": [
+                            "UK Sinha Committee",
+                            "₹30 Lakh Crore Deficit",
+                            "Collateral Trap"
+                        ],
                         "n": "Without formal credit, MSMEs are forced into predatory informal borrowing at 30-40% interest."
                     },
                     {
@@ -308,7 +572,11 @@ TOPICS = {
                             "Assessing creditworthiness through <b>GST invoices</b>, bank statements via <b>Account Aggregators</b>, and UPI merchant turnover.",
                             "Enables algorithm-driven collateral-free credit sanctioning in minutes rather than weeks."
                         ],
-                        "k": ["Cash-flow Lending", "Account Aggregator", "Digital Footprint"],
+                        "k": [
+                            "Cash-flow Lending",
+                            "Account Aggregator",
+                            "Digital Footprint"
+                        ],
                         "n": "Turns transaction data into an economic asset for the borrower."
                     },
                     {
@@ -318,7 +586,11 @@ TOPICS = {
                             "MSMEs upload accepted invoices; multiple banks and NBFCs bid to discount them without recourse.",
                             "Budget 2024-25 lowered the mandatory buyer onboarding turnover threshold to <b>₹500 Crore</b> to force CPSEs and corporates onto the platform."
                         ],
-                        "k": ["TReDS", "Factoring without Recourse", "₹500 Cr Mandate"],
+                        "k": [
+                            "TReDS",
+                            "Factoring without Recourse",
+                            "₹500 Cr Mandate"
+                        ],
                         "n": "Converts locked accounts receivable into instant liquid working capital."
                     }
                 ],
@@ -326,7 +598,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Which RBI-appointed committee authored the comprehensive blueprint on MSME credit and structural reforms?",
-                        "o": ["Nachiket Mor Committee", "UK Sinha Committee", "Bimal Jalan Committee", "Urjit Patel Committee"],
+                        "o": [
+                            "Nachiket Mor Committee",
+                            "UK Sinha Committee",
+                            "Bimal Jalan Committee",
+                            "Urjit Patel Committee"
+                        ],
                         "a": 1,
                         "e": "The UK Sinha Committee (2019) recommended the overhaul of MSME credit, TReDS expansion, and cash-flow underwriting."
                     },
@@ -339,20 +616,58 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap all instruments facilitating digital cash-flow based MSME credit.",
-                        "o": ["Account Aggregator framework", "GST invoice data analytics", "TReDS factoring platform", "Physical land registry mortgage"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Account Aggregator framework",
+                            "GST invoice data analytics",
+                            "TReDS factoring platform",
+                            "Physical land registry mortgage"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Account Aggregator, GST returns, and TReDS enable cash-flow lending, replacing physical mortgages."
                     },
                     {
                         "k": "match",
                         "q": "Match the financing tool to its key mechanism.",
                         "p": [
-                            ["UK Sinha Committee", "₹30 Lakh Crore credit gap analysis"],
-                            ["TReDS Platform", "Invoice discounting without recourse"],
-                            ["Account Aggregator", "Consent-based digital financial data sharing"],
-                            ["Cash-Flow Lending", "Credit based on GST transactions, not land"]
+                            [
+                                "UK Sinha Committee",
+                                "₹30 Lakh Crore credit gap analysis"
+                            ],
+                            [
+                                "TReDS Platform",
+                                "Invoice discounting without recourse"
+                            ],
+                            [
+                                "Account Aggregator",
+                                "Consent-based digital financial data sharing"
+                            ],
+                            [
+                                "Cash-Flow Lending",
+                                "Credit based on GST transactions, not land"
+                            ]
                         ],
                         "e": "Core pillars of the digital credit revolution for MSMEs."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I?",
+                        "c": [
+                            "I am an institutional electronic platform regulated by RBI.",
+                            "MSMEs upload their trade receivables against corporate buyers.",
+                            "Financiers bid in reverse auctions to discount the invoices without recourse."
+                        ],
+                        "o": [
+                            "TReDS",
+                            "Udyam",
+                            "GeM",
+                            "SWIFT"
+                        ],
+                        "a": 0,
+                        "e": "TReDS (Trade Receivables Electronic Discounting System)."
                     }
                 ]
             },
@@ -368,7 +683,11 @@ TOPICS = {
                             "Focuses specifically on manufacturing scale-up and technological upgradation.",
                             "Borrowers pay an annual guarantee fee based on the diminishing loan balance."
                         ],
-                        "k": ["₹100 Cr Guarantee Fund", "Machinery Purchase", "Self-financing"],
+                        "k": [
+                            "₹100 Cr Guarantee Fund",
+                            "Machinery Purchase",
+                            "Self-financing"
+                        ],
                         "n": "Solves the capex financing roadblock for ambitious small enterprises."
                     },
                     {
@@ -378,7 +697,12 @@ TOPICS = {
                             "Five pillars: <b>PM Vishwakarma Certificate & ID</b>, <b>Skill training with ₹500/day stipend</b>, <b>₹15,000 modern toolkit incentive</b>.",
                             "Collateral-free enterprise credit up to <b>₹3 Lakh</b> (₹1L tranche 1 + ₹2L tranche 2) at a concessional interest rate of <b>5%</b>!"
                         ],
-                        "k": ["PM Vishwakarma", "18 Traditional Trades", "₹15,000 Toolkit", "5% Subsidized Loans"],
+                        "k": [
+                            "PM Vishwakarma",
+                            "18 Traditional Trades",
+                            "₹15,000 Toolkit",
+                            "5% Subsidized Loans"
+                        ],
                         "n": "Protects traditional artisanal heritage while linking them to modern value chains."
                     },
                     {
@@ -388,7 +712,11 @@ TOPICS = {
                             "<b>Mudra 'Tarun Plus':</b> Loan ceiling doubled from ₹10 Lakh to <b>₹20 Lakh</b> for entrepreneurs who have successfully repaid prior Tarun loans.",
                             "<b>TReDS expansion:</b> Lowering buyer mandate to ₹500 Cr adds 22 CPSEs and 7,000+ private companies."
                         ],
-                        "k": ["E-Commerce Export Hubs", "Mudra Tarun Plus (₹20 Lakh)", "Cross-border Trade"],
+                        "k": [
+                            "E-Commerce Export Hubs",
+                            "Mudra Tarun Plus (₹20 Lakh)",
+                            "Cross-border Trade"
+                        ],
                         "n": "Empowers grassroots MSMEs to sell directly to consumers across the globe via digital marketplaces."
                     }
                 ],
@@ -396,14 +724,24 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What is the maximum credit cover provided under the Budget 2025 Credit Guarantee Scheme for machinery purchase?",
-                        "o": ["₹10 Crore", "₹25 Crore", "₹50 Crore", "₹100 Crore"],
+                        "o": [
+                            "₹10 Crore",
+                            "₹25 Crore",
+                            "₹50 Crore",
+                            "₹100 Crore"
+                        ],
                         "a": 3,
                         "e": "Budget 2024-25 introduced a guarantee fund facilitating collateral-free term loans up to ₹100 Crore."
                     },
                     {
                         "k": "mc",
                         "q": "How many traditional artisan trades are supported under the PM Vishwakarma Scheme?",
-                        "o": ["10 trades", "12 trades", "18 trades", "25 trades"],
+                        "o": [
+                            "10 trades",
+                            "12 trades",
+                            "18 trades",
+                            "25 trades"
+                        ],
                         "a": 2,
                         "e": "The scheme covers 18 traditional family-based trades including carpenters, blacksmiths, goldsmiths, and sculptors."
                     },
@@ -416,8 +754,17 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap all key pillars of the PM Vishwakarma Scheme.",
-                        "o": ["PM Vishwakarma Certificate & ID card", "₹15,000 grant for modern toolkits", "Collateral-free credit up to ₹3 Lakh at 5% interest", "Mandatory nationalization of private workshops"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "PM Vishwakarma Certificate & ID card",
+                            "₹15,000 grant for modern toolkits",
+                            "Collateral-free credit up to ₹3 Lakh at 5% interest",
+                            "Mandatory nationalization of private workshops"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Certification, toolkit grant of ₹15,000, and subsidized loans at 5% form the scheme's core."
                     }
                 ]
@@ -434,7 +781,9 @@ TOPICS = {
                             "<b>Diagnostic Terminology:</b> Dwarfism paradox, regulatory cliff, missing middle, Schumpeterian creative destruction, working capital asphyxiation.",
                             "<b>Policy & Reform Solutions:</b> German Mittelstand model, scale-neutral incentives, Section 43B(h) statutory discipline, TReDS invoice factoring, E-Commerce Export Hubs (ECEH)."
                         ],
-                        "k": ["Use 4 to 5 per Mains answer!"],
+                        "k": [
+                            "Use 4 to 5 per Mains answer!"
+                        ],
                         "n": "Examiners scan for specific diagnostic vocabulary rather than generic essays."
                     },
                     {
@@ -446,7 +795,9 @@ TOPICS = {
                             "<b>4. Recent Policy Push:</b> 2020 composite criteria, Budget 2025 ₹100 Cr guarantee, Sec 43B(h), PM Vishwakarma.",
                             "<b>5. Way Forward & Conclusion:</b> Transition from dwarfs to German Mittelstand; engine for $5T economy and Viksit Bharat 2047."
                         ],
-                        "k": ["Intro → Significance → Bottlenecks → Policy → Mittelstand Conclusion"],
+                        "k": [
+                            "Intro → Significance → Bottlenecks → Policy → Mittelstand Conclusion"
+                        ],
                         "n": "Structure your answers with subheadings, data, and visual flowcharts for top marks."
                     }
                 ],
@@ -466,15 +817,29 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Which international manufacturing model is widely recommended for India to overcome the 'missing middle'?",
-                        "o": ["South Korean Chaebols", "German Mittelstand", "American Wall Street", "Japanese Keiretsu monopolies"],
+                        "o": [
+                            "South Korean Chaebols",
+                            "German Mittelstand",
+                            "American Wall Street",
+                            "Japanese Keiretsu monopolies"
+                        ],
                         "a": 1,
                         "e": "The German Mittelstand model is praised for its scale-neutral policies, vocational training, and resilient medium enterprises."
                     },
                     {
                         "k": "multi",
                         "q": "Tap the indispensable Mains keywords for MSME answers.",
-                        "o": ["Dwarfism paradox", "Section 43B(h)", "German Mittelstand", "Agrarian collectivization"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Dwarfism paradox",
+                            "Section 43B(h)",
+                            "German Mittelstand",
+                            "Agrarian collectivization"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Dwarfism, Section 43B(h), and Mittelstand are top-scoring keywords."
                     },
                     {
@@ -533,16 +898,365 @@ TOPICS = {
                     "Ladder: Micro (₹1 Cr/₹5 Cr) → Small (₹10 Cr/₹50 Cr) → Medium (₹50 Cr/₹250 Cr) → Mittelstand."
                 ]
             }
+        ],
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag: the one false part of this statement.",
+                "o": [
+                    "MSMEs generate 31.1% of India’s GDP,",
+                    "pay 90% of central corporate income tax,",
+                    "and power 48.6% of merchandise exports."
+                ],
+                "a": 1,
+                "e": "MSMEs do NOT pay 90% of corporate tax; corporate tax is dominated by large conglomerates."
+            },
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "Section 15 of MSMED Act mandates payment within 45 days,",
+                    "defaults incur compound interest at 3 times bank rate,",
+                    "and defaulting buyers are granted full immediate tax deductions."
+                ],
+                "a": 2,
+                "e": "Section 43B(h) DISALLOWS income tax deductions until actual payment is made!"
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year composite MSME classification (Investment + Turnover) was notified under Atmanirbhar Bharat.",
+                "a": 2020,
+                "tol": 0,
+                "min": 2005,
+                "max": 2025,
+                "e": "July 2020."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year Parliament enacted the Micro, Small and Medium Enterprises Development (MSMED) Act.",
+                "a": 2006,
+                "tol": 0,
+                "min": 2000,
+                "max": 2020,
+                "e": "2006."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every enterprise: Micro, Small, or Medium?",
+                "b": [
+                    "Micro",
+                    "Small",
+                    "Medium"
+                ],
+                "it": [
+                    [
+                        "₹1 Cr Investment / ₹5 Cr Turnover",
+                        0
+                    ],
+                    [
+                        "₹10 Cr Investment / ₹50 Cr Turnover",
+                        1
+                    ],
+                    [
+                        "₹50 Cr Investment / ₹250 Cr Turnover",
+                        2
+                    ],
+                    [
+                        "Single artisan pottery workshop",
+                        0
+                    ],
+                    [
+                        "Auto parts supplier with ₹35 Cr turnover",
+                        1
+                    ]
+                ],
+                "e": "1/5 Micro, 10/50 Small, 50/250 Medium. Export turnover is excluded!"
+            },
+            {
+                "k": "sort",
+                "q": "Sort every item: Dwarfism Symptom or Reform Measure?",
+                "b": [
+                    "Dwarfism Symptom",
+                    "Reform Measure"
+                ],
+                "it": [
+                    [
+                        "Capping employee headcount below 100",
+                        0
+                    ],
+                    [
+                        "TReDS invoice discounting",
+                        1
+                    ],
+                    [
+                        "Fragmenting into dummy sister firms",
+                        0
+                    ],
+                    [
+                        "Cash-flow digital lending via Account Aggregator",
+                        1
+                    ],
+                    [
+                        "Fear of losing priority credit tag",
+                        0
+                    ]
+                ],
+                "e": "Dwarfism traps firms in unproductive size; reforms enable non-punitive scaling."
+            },
+            {
+                "k": "mc",
+                "q": "Odd keyword out: which does NOT belong with TReDS?",
+                "o": [
+                    "Financier / Factor",
+                    "MSME Supplier",
+                    "Corporate Buyer",
+                    "Personal Car Loan"
+                ],
+                "a": 3,
+                "e": "TReDS is an institutional auction platform for MSME trade receivables."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I am an electronic platform regulated by the Reserve Bank of India.",
+                    "MSMEs upload their trade receivables against large corporate and PSU buyers.",
+                    "Financiers bid competitively in online reverse auctions to discount the bills without recourse."
+                ],
+                "o": [
+                    "TReDS",
+                    "Udyam",
+                    "GeM",
+                    "SWIFT"
+                ],
+                "a": 0,
+                "e": "TReDS (Trade Receivables Electronic Discounting System)."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I was launched in Budget 2023 with an outlay of ₹13,000 Crore.",
+                    "I cover 18 traditional artisan and craft trades like blacksmiths, potters, and sculptors.",
+                    "I provide a ₹15,000 toolkit grant, collateral-free credit at 5%, and official verification."
+                ],
+                "o": [
+                    "PM Vishwakarma",
+                    "PM SVANidhi",
+                    "Stand-Up India",
+                    "MUDRA"
+                ],
+                "a": 0,
+                "e": "PM Vishwakarma Scheme."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a statutory council established in every state under Section 18 of the MSMED Act, 2006.",
+                    "Aggrieved MSMEs approach me when buyer payments are delayed beyond 45 days.",
+                    "I act as arbitrator and conciliation authority with powers of a civil court."
+                ],
+                "o": [
+                    "MSEFC",
+                    "NCLT",
+                    "Competition Commission",
+                    "DRT"
+                ],
+                "a": 0,
+                "e": "MSEFC (Micro and Small Enterprises Facilitation Council)."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: General Manager of District Industries Centre (DIC) receives a distress petition from an SC woman-owned brassware unit whose invoices are 120 days overdue from a Tier-1 contractor.",
+            "e": "Values: economic justice, statutory enforcement, affirmative support.",
+            "s": [
+                {
+                    "t": "The entrepreneur states her bank loan is turning NPA due to this unpaid bill. First step?",
+                    "o": [
+                        [
+                            "Issue immediate notice under Section 18 of MSMED Act & register on MSME Samadhaan",
+                            1,
+                            "Immediate formal statutory escalation protects her from default."
+                        ],
+                        [
+                            "Tell her to resolve commercial disputes informally",
+                            0,
+                            "Leaves the vulnerable micro entrepreneur powerless against big buyers."
+                        ],
+                        [
+                            "Advise her to declare bankruptcy",
+                            0,
+                            "Abdicates administrative duty to support compliant enterprise."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The corporate buyer claims the goods were delivered 3 days late and demands a 50% discount. Your call?",
+                    "o": [
+                        [
+                            "Convene MSEFC conciliation within 90-day statutory timeline and scrutinize inspection memo",
+                            1,
+                            "Rejections must be raised within 15 days of delivery under Section 2(b)."
+                        ],
+                        [
+                            "Accept the corporate's unilateral 50% deduction",
+                            0,
+                            "Violates the statutory protection against arbitrary offsets."
+                        ],
+                        [
+                            "Transfer the dispute to regular civil court",
+                            0,
+                            "Civil courts face multi-year delays, defeating Section 18."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The buyer fails to appear for conciliation. Next?",
+                    "o": [
+                        [
+                            "Initiate formal arbitration under Arbitration Act and notify compound interest liability at 3x bank rate",
+                            1,
+                            "Statutory escalation enforces the law and triggers Section 43B(h) tax disallowance."
+                        ],
+                        [
+                            "Drop the proceedings",
+                            0,
+                            "Gross dereliction of administrative duty."
+                        ],
+                        [
+                            "Ask the entrepreneur to compromise",
+                            0,
+                            "Weakens the integrity of MSME credit architecture."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: TReDS only, Factoring only, or Both?",
+            "b": [
+                "TReDS only",
+                "Factoring only",
+                "Both"
+            ],
+            "it": [
+                [
+                    "RBI-licensed electronic multi-funder auction platform",
+                    0
+                ],
+                [
+                    "Traditional bilateral relationship with a single NBFC factor",
+                    1
+                ],
+                [
+                    "Converts trade receivables into immediate cash liquidity",
+                    2
+                ],
+                [
+                    "MSMEs avoid recourse on approved invoices",
+                    2
+                ]
+            ],
+            "e": "Both liquefy working capital; TReDS brings competitive digital multi-bidder auctions."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "MSMEs",
+                    "power",
+                    "31.1%",
+                    "percent",
+                    "of",
+                    "India’s",
+                    "GDP"
+                ],
+                "e": "MSMEs power 31.1% percent of India’s GDP."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Section",
+                    "15",
+                    "mandates",
+                    "payment",
+                    "within",
+                    "45",
+                    "days"
+                ],
+                "e": "Section 15 mandates payment within 45 days."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Export",
+                    "turnover",
+                    "is",
+                    "excluded",
+                    "from",
+                    "MSME",
+                    "limits"
+                ],
+                "e": "Export turnover is excluded from MSME limits."
+            }
         ]
     },
-
     "exams": {
         "id": "exams",
         "title": "Public Exams Act & Exam Integrity",
         "badge": "🏛️",
         "sub": "Master the 2024/2026 Act, K. Radhakrishnan Committee reforms, NTA restructuring, and exam security.",
-        "hue": ["#2f63d6", "#7442d6", "#0f8a62", "#d23a40", "#b8760a", "#0b8a9a"],
-        "ico": [["🏛️", "⚖️", "📜"], ["🔒", "👮", "⛓️"], ["🔍", "📋", "🏫"], ["⚙️", "🏢", "💻"], ["📜", "⚖️", "🎯"], ["🏆", "🗺️", "🧭"]],
+        "hue": [
+            "#2f63d6",
+            "#7442d6",
+            "#0f8a62",
+            "#d23a40",
+            "#b8760a",
+            "#0b8a9a"
+        ],
+        "ico": [
+            [
+                "🏛️",
+                "⚖️",
+                "📜"
+            ],
+            [
+                "🔒",
+                "👮",
+                "⛓️"
+            ],
+            [
+                "🔍",
+                "📋",
+                "🏫"
+            ],
+            [
+                "⚙️",
+                "🏢",
+                "💻"
+            ],
+            [
+                "📜",
+                "⚖️",
+                "🎯"
+            ],
+            [
+                "🏆",
+                "🗺️",
+                "🧭"
+            ]
+        ],
         "lessons": [
             {
                 "n": "Engine of Mobility & The Crisis",
@@ -556,7 +1270,11 @@ TOPICS = {
                             "They allow underprivileged, rural, and first-generation learners to transcend generational poverty on sheer merit.",
                             "When an examination is compromised, meritocracy is murdered, destroying public faith in the republic."
                         ],
-                        "k": ["Social Mobility", "Meritocracy", "Public Trust"],
+                        "k": [
+                            "Social Mobility",
+                            "Meritocracy",
+                            "Public Trust"
+                        ],
                         "n": "Chhattisgarh High Court dictum: 'A paper leak is more heinous than murder; murder takes one life, but a paper leak kills the dreams of millions.'"
                     },
                     {
@@ -566,7 +1284,11 @@ TOPICS = {
                             "Operating with corporate sophistication: charging <b>₹30 Lakh to ₹50 Lakh per leaked paper</b>.",
                             "Modus operandi: breaching printing presses, hacking commercial private computer labs, and deploying expert 'solvers'."
                         ],
-                        "k": ["Organized Syndicates", "Commercialized Cheating", "Institutional Breach"],
+                        "k": [
+                            "Organized Syndicates",
+                            "Commercialized Cheating",
+                            "Institutional Breach"
+                        ],
                         "n": "Economic incentives: multi-crore illicit profits with historically low prosecution and bail loopholes."
                     }
                 ],
@@ -574,7 +1296,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Which High Court observed that 'a paper leak is more heinous than murder'?",
-                        "o": ["Allahabad High Court", "Chhattisgarh High Court", "Delhi High Court", "Bombay High Court"],
+                        "o": [
+                            "Allahabad High Court",
+                            "Chhattisgarh High Court",
+                            "Delhi High Court",
+                            "Bombay High Court"
+                        ],
                         "a": 1,
                         "e": "The Chhattisgarh High Court highlighted the profound moral and generational damage wrought by examination leaks."
                     },
@@ -587,9 +1314,29 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the societal impacts of compromised public recruitment exams.",
-                        "o": ["Erosion of faith in meritocratic governance", "Disproportionate harm to underprivileged rural aspirants", "Economic loss of candidate years and savings", "Automatic acceleration of government appointments"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Erosion of faith in meritocratic governance",
+                            "Disproportionate harm to underprivileged rural aspirants",
+                            "Economic loss of candidate years and savings",
+                            "Automatic acceleration of government appointments"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Compromised exams destroy meritocracy, waste precious years of youth, and hit marginalized families hardest."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "Paper leaks compromise constitutional Article 14 and 16 merit,",
+                            "generate illicit seats costing ₹30-50 Lakhs,",
+                            "and the High Court described paper leaks as minor administrative irregularities."
+                        ],
+                        "a": 2,
+                        "e": "The High Court held: 'A paper leak is more heinous than murder because it destroys the careers of millions.'"
                     }
                 ]
             },
@@ -605,7 +1352,11 @@ TOPICS = {
                             "Applies across central testing bodies: <b>UPSC, SSC, NTA, RRB, and IBPS</b>.",
                             "Defines 15 specific corrupt practices: question leaking, unauthorized paper possession, tampering with computer networks, and fake websites."
                         ],
-                        "k": ["Public Examinations Act 2024", "Central Agencies Covered", "15 Corrupt Practices"],
+                        "k": [
+                            "Public Examinations Act 2024",
+                            "Central Agencies Covered",
+                            "15 Corrupt Practices"
+                        ],
                         "n": "A dedicated central law to create overwhelming criminal deterrence."
                     },
                     {
@@ -615,7 +1366,11 @@ TOPICS = {
                             "<b>Organized Crime Syndicate:</b> Rigorous imprisonment of <b>5 to 10 years</b> and minimum fine of <b>₹1 Crore</b>!",
                             "Defaulting institutions face <b>attachment of property</b> and recovery of total examination costs."
                         ],
-                        "k": ["3-5 Years (Individual)", "5-10 Years & ₹1 Cr Fine (Syndicate)", "Asset Attachment"],
+                        "k": [
+                            "3-5 Years (Individual)",
+                            "5-10 Years & ₹1 Cr Fine (Syndicate)",
+                            "Asset Attachment"
+                        ],
                         "n": "All offenses are Cognizable, Non-Bailable, and Non-Compoundable."
                     },
                     {
@@ -625,7 +1380,11 @@ TOPICS = {
                             "Students caught cheating remain subject to administrative examination bylaws (debarment), but are shielded from draconian anti-gang criminal charges.",
                             "Focus is squarely on prosecuting the criminal supply-side: syndicates, corrupt officials, and coaching mafia."
                         ],
-                        "k": ["Candidate Immunity", "Supply-side Prosecution", "Targeting Kingpins"],
+                        "k": [
+                            "Candidate Immunity",
+                            "Supply-side Prosecution",
+                            "Targeting Kingpins"
+                        ],
                         "n": "Prevents harassment of vulnerable young students by law enforcement."
                     }
                 ],
@@ -633,7 +1392,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What is the minimum fine prescribed for organized paper leak syndicates under the 2024 Act?",
-                        "o": ["₹10 Lakh", "₹25 Lakh", "₹50 Lakh", "₹1 Crore"],
+                        "o": [
+                            "₹10 Lakh",
+                            "₹25 Lakh",
+                            "₹50 Lakh",
+                            "₹1 Crore"
+                        ],
                         "a": 3,
                         "e": "Section 10(2) mandates a minimum fine of ₹1 Crore alongside 5 to 10 years imprisonment for organized syndicates."
                     },
@@ -647,12 +1411,64 @@ TOPICS = {
                         "k": "match",
                         "q": "Match the entity to its statutory penal consequence.",
                         "p": [
-                            ["Individual Cheating", "3 to 5 years prison + ₹10L fine"],
-                            ["Organized Syndicate", "5 to 10 years prison + min ₹1 Cr fine"],
-                            ["Compromised Agency", "Asset attachment & cost recovery"],
-                            ["Bona Fide Candidate", "Immune from criminal prosecution under Act"]
+                            [
+                                "Individual Cheating",
+                                "3 to 5 years prison + ₹10L fine"
+                            ],
+                            [
+                                "Organized Syndicate",
+                                "5 to 10 years prison + min ₹1 Cr fine"
+                            ],
+                            [
+                                "Compromised Agency",
+                                "Asset attachment & cost recovery"
+                            ],
+                            [
+                                "Bona Fide Candidate",
+                                "Immune from criminal prosecution under Act"
+                            ]
                         ],
                         "e": "Clear graduated liability framework."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year Parliament enacted the Public Examinations (Prevention of Unfair Means) Act.",
+                        "a": 2024,
+                        "tol": 0,
+                        "min": 2018,
+                        "max": 2026,
+                        "e": "2024."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort every card: Individual Candidate vs Organized Crime Syndicate",
+                        "b": [
+                            "Individual",
+                            "Syndicate"
+                        ],
+                        "it": [
+                            [
+                                "Imprisonment up to 3 to 5 years",
+                                0
+                            ],
+                            [
+                                "Minimum 5 years extending to 10 years imprisonment",
+                                1
+                            ],
+                            [
+                                "Minimum ₹1 Crore fine",
+                                1
+                            ],
+                            [
+                                "Fine up to ₹10 Lakh",
+                                0
+                            ],
+                            [
+                                "Attachment and forfeiture of property",
+                                1
+                            ]
+                        ],
+                        "e": "Section 10(1) punishes individuals; Section 10(2) slaps ₹1 Cr fine and asset attachment on syndicates."
                     }
                 ]
             },
@@ -668,7 +1484,11 @@ TOPICS = {
                             "Formed in response to widespread public outcry over NEET-UG and UGC-NET paper leaks and integrity failures.",
                             "Tasked with recommending structural reforms in NTA, digital security, and examination standard operating procedures."
                         ],
-                        "k": ["K. Radhakrishnan Committee", "7-Member Panel", "NTA Overhaul"],
+                        "k": [
+                            "K. Radhakrishnan Committee",
+                            "7-Member Panel",
+                            "NTA Overhaul"
+                        ],
                         "n": "Applies ISRO-grade mission security principles to competitive examination administration."
                     },
                     {
@@ -678,7 +1498,11 @@ TOPICS = {
                             "<b>2. Hybrid Testing Format:</b> Question papers transmitted digitally in encrypted form at the last minute; answers marked on physical OMR or verified terminals.",
                             "<b>3. 100% Government Test Centers:</b> End reliance on dubious private engineering college labs. Conduct exams exclusively in <b>Kendriya Vidyalayas, Navodaya Vidyalayas, IITs, and NITs</b>."
                         ],
-                        "k": ["Multi-Stage Exams", "Hybrid Digital Mode", "Government Test Centers"],
+                        "k": [
+                            "Multi-Stage Exams",
+                            "Hybrid Digital Mode",
+                            "Government Test Centers"
+                        ],
                         "n": "Eliminates vulnerable supply chains where physical paper packages travel by road days in advance."
                     }
                 ],
@@ -686,15 +1510,29 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Who chaired the 7-member high-level committee appointed to reform the National Testing Agency (NTA)?",
-                        "o": ["K. Kasturirangan", "Dr. K. Radhakrishnan", "Prof. Yash Pal", "Dr. Anil Kakodkar"],
+                        "o": [
+                            "K. Kasturirangan",
+                            "Dr. K. Radhakrishnan",
+                            "Prof. Yash Pal",
+                            "Dr. Anil Kakodkar"
+                        ],
                         "a": 1,
                         "e": "Former ISRO Chairman Dr. K. Radhakrishnan headed the 7-member committee on exam reforms."
                     },
                     {
                         "k": "multi",
                         "q": "Tap key recommendations proposed by the K. Radhakrishnan Committee.",
-                        "o": ["Multi-stage screening for mega examinations", "Hybrid encrypted digital question transmission", "Restricting test centers exclusively to verified government institutions", "Complete abolition of all competitive entrance exams"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Multi-stage screening for mega examinations",
+                            "Hybrid encrypted digital question transmission",
+                            "Restricting test centers exclusively to verified government institutions",
+                            "Complete abolition of all competitive entrance exams"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Multi-stage testing, hybrid transmission, and using only public institutions (KVs, IITs, NITs) were recommended."
                     },
                     {
@@ -702,6 +1540,39 @@ TOPICS = {
                         "q": "The Radhakrishnan Committee recommended expanding outsourcing of exam center management to unverified private IT institutes.",
                         "a": 1,
                         "e": "False. It strongly recommended eliminating private testing centers in favor of trusted government institutions."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I?",
+                        "c": [
+                            "I was constituted by the Ministry of Education in June 2024.",
+                            "I am headed by former ISRO Chairman Dr. K. Radhakrishnan.",
+                            "I recommended multi-stage exams, hybrid CBT-OMR models, and 100% government exam centres."
+                        ],
+                        "o": [
+                            "Radhakrishnan Committee",
+                            "Kothari Commission",
+                            "Kasturirangan Committee",
+                            "Santhanam Committee"
+                        ],
+                        "a": 0,
+                        "e": "Dr. K. Radhakrishnan High-Level Committee on Exam Reforms."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the sentence: tap words in order.",
+                        "o": [
+                            "Public",
+                            "examinations",
+                            "must",
+                            "ensure",
+                            "uncompromising",
+                            "merit",
+                            "and",
+                            "integrity"
+                        ],
+                        "e": "Public examinations must ensure uncompromising merit and integrity."
                     }
                 ]
             },
@@ -717,7 +1588,11 @@ TOPICS = {
                             "Yet it operates with a permanent core cadre of <b>barely 24 regular officers</b>!",
                             "Result: massive, dangerous reliance on contractual staffing, outsourced private vendors, and third-party IT labs."
                         ],
-                        "k": ["24-Staff Paradox", "Vendor Capture", "Contractual Outsourcing"],
+                        "k": [
+                            "24-Staff Paradox",
+                            "Vendor Capture",
+                            "Contractual Outsourcing"
+                        ],
                         "n": "An agency conducting the world's largest high-stakes exams cannot run on a skeleton contractual staff."
                     },
                     {
@@ -727,7 +1602,11 @@ TOPICS = {
                             "Merely prescribing 10-year prison terms fails if the <b>probability of detection is near zero</b>.",
                             "Real deterrence requires unhackable cyber-audits, biometrics, live CCTV feeds with AI gaze tracking, and sting operations."
                         ],
-                        "k": ["Gary Becker's Crime Model", "Probability of Detection", "CCTV & Biometric Integrity"],
+                        "k": [
+                            "Gary Becker's Crime Model",
+                            "Probability of Detection",
+                            "CCTV & Biometric Integrity"
+                        ],
                         "n": "A high-scoring theoretical framework to cite in your GS-2 & GS-4 governance answers."
                     }
                 ],
@@ -735,7 +1614,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What core administrative anomaly cripples the National Testing Agency's internal capacity?",
-                        "o": ["Lack of internet connectivity", "Operating with barely 24 permanent staff members", "Having too many testing centers", "Over-regulation by state governments"],
+                        "o": [
+                            "Lack of internet connectivity",
+                            "Operating with barely 24 permanent staff members",
+                            "Having too many testing centers",
+                            "Over-regulation by state governments"
+                        ],
                         "a": 1,
                         "e": "NTA's reliance on only ~24 permanent officers forces excessive outsourcing to vulnerable third-party contractors."
                     },
@@ -749,10 +1633,22 @@ TOPICS = {
                         "k": "match",
                         "q": "Match the institutional bottleneck to its strategic solution.",
                         "p": [
-                            ["24-Staff Paradox", "Create dedicated permanent NTA cadre"],
-                            ["Private Lab Compromise", "Shift to KVs, IITs and NITs"],
-                            ["Physical Paper Transit Breach", "Hybrid encrypted digital transmission"],
-                            ["Low Detection Probability", "Continuous AI-proctoring and forensic audits"]
+                            [
+                                "24-Staff Paradox",
+                                "Create dedicated permanent NTA cadre"
+                            ],
+                            [
+                                "Private Lab Compromise",
+                                "Shift to KVs, IITs and NITs"
+                            ],
+                            [
+                                "Physical Paper Transit Breach",
+                                "Hybrid encrypted digital transmission"
+                            ],
+                            [
+                                "Low Detection Probability",
+                                "Continuous AI-proctoring and forensic audits"
+                            ]
                         ],
                         "e": "Pair problem with structural administrative remedy."
                     }
@@ -770,7 +1666,11 @@ TOPICS = {
                             "<b>Article 21A:</b> Right to education is rendered hollow if admission into medical and higher education institutions is auctioned to the highest bidder.",
                             "<b>Concurrent List Entry 25:</b> Both Parliament and State Legislatures share constitutional responsibility over education."
                         ],
-                        "k": ["Article 14 & 16", "Article 21A", "Concurrent List Entry 25"],
+                        "k": [
+                            "Article 14 & 16",
+                            "Article 21A",
+                            "Concurrent List Entry 25"
+                        ],
                         "n": "Links paper leaks directly to violations of fundamental constitutional guarantees."
                     },
                     {
@@ -780,7 +1680,11 @@ TOPICS = {
                             "Aspirants internalize that integrity and hard work are futile, and corruption is the only viable path to success.",
                             "Restoring exam integrity is therefore a foundational moral duty for preserving democratic citizenship."
                         ],
-                        "k": ["Crisis of Conscience", "Moral Cynicism", "Probity in Governance"],
+                        "k": [
+                            "Crisis of Conscience",
+                            "Moral Cynicism",
+                            "Probity in Governance"
+                        ],
                         "n": "A potent theme for GS-4 Ethics questions on public service values and trust."
                     }
                 ],
@@ -788,7 +1692,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Which Constitutional Entry establishes education as a shared responsibility between Center and States?",
-                        "o": ["Union List Entry 10", "Concurrent List Entry 25", "State List Entry 14", "Residuary Powers"],
+                        "o": [
+                            "Union List Entry 10",
+                            "Concurrent List Entry 25",
+                            "State List Entry 14",
+                            "Residuary Powers"
+                        ],
                         "a": 1,
                         "e": "Entry 25 of the Concurrent List (introduced via 42nd Amendment, 1976) covers education."
                     },
@@ -801,8 +1710,17 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap all constitutional articles directly impacted by examination corruption.",
-                        "o": ["Article 14 (Equality before law)", "Article 16 (Equal opportunity in public employment)", "Article 21 (Right to dignified life)", "Article 356 (President's Rule)"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Article 14 (Equality before law)",
+                            "Article 16 (Equal opportunity in public employment)",
+                            "Article 21 (Right to dignified life)",
+                            "Article 356 (President's Rule)"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Articles 14, 16, and 21 are directly undermined when merit is subverted."
                     }
                 ]
@@ -819,7 +1737,9 @@ TOPICS = {
                             "<b>Statutory Architecture:</b> Public Examinations Act 2024, ₹1 Crore minimum fine, asset attachment, candidate immunity.",
                             "<b>Committees & Models:</b> K. Radhakrishnan 7-member Committee, Gary Becker's Economics of Crime, 24-staff paradox, hybrid testing."
                         ],
-                        "k": ["Use 4 to 5 per Mains answer!"],
+                        "k": [
+                            "Use 4 to 5 per Mains answer!"
+                        ],
                         "n": "Guarantees top marks in GS-2 Governance and GS-4 Ethics papers."
                     },
                     {
@@ -831,7 +1751,9 @@ TOPICS = {
                             "<b>Reform Measures:</b> Radhakrishnan Committee: multi-stage testing, hybrid mode, 100% government centers.",
                             "<b>Conclusion:</b> Restoring faith in the meritocratic social contract as a cornerstone of Viksit Bharat."
                         ],
-                        "k": ["Intro → Constitution → Bottlenecks → Radhakrishnan Reforms → Meritocracy Conclusion"],
+                        "k": [
+                            "Intro → Constitution → Bottlenecks → Radhakrishnan Reforms → Meritocracy Conclusion"
+                        ],
                         "n": "Clear, logical flow from crisis to constitutional values and concrete technical solutions."
                     }
                 ],
@@ -901,16 +1823,306 @@ TOPICS = {
                     "Funnel: Stage 1 Screening → Stage 2 Hybrid Proctored Test at Government Centers."
                 ]
             }
+        ],
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "Section 10(2) of Public Examinations Act 2024 punishes organized syndicates with minimum 5-10 years prison,",
+                    "mandates a minimum fine of ₹1 Crore,",
+                    "and awards capital punishment to printing press owners."
+                ],
+                "a": 2,
+                "e": "The Act prescribes property attachment and fines, NOT capital punishment."
+            },
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "The 2024 Act covers UPSC, SSC, Railways, and NTA exams,",
+                    "makes all paper leak offences cognizable and non-bailable,",
+                    "and allows candidates to be handcuffed at the exam desk."
+                ],
+                "a": 2,
+                "e": "Bona fide candidates are explicitly shielded from criminalization under Section 12."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year Parliament enacted the Public Examinations (Prevention of Unfair Means) Act.",
+                "a": 2024,
+                "tol": 0,
+                "min": 2018,
+                "max": 2026,
+                "e": "Enacted in February 2024."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Individual Malpractice vs Organized Crime Syndicate",
+                "b": [
+                    "Individual Malpractice",
+                    "Organized Syndicate"
+                ],
+                "it": [
+                    [
+                        "Imprisonment up to 3 to 5 years",
+                        0
+                    ],
+                    [
+                        "Imprisonment from 5 to 10 years",
+                        1
+                    ],
+                    [
+                        "Minimum ₹1 Crore fine",
+                        1
+                    ],
+                    [
+                        "Fine up to ₹10 Lakhs",
+                        0
+                    ],
+                    [
+                        "Attachment and recovery of exam expenses",
+                        1
+                    ]
+                ],
+                "e": "Individuals face Section 10(1); syndicates face Section 10(2) and asset forfeiture."
+            },
+            {
+                "k": "mc",
+                "q": "Odd keyword out: which is NOT recommended by the Radhakrishnan Committee?",
+                "o": [
+                    "Multi-stage exam screening",
+                    "Hybrid CBT-OMR model",
+                    "Subcontracting exam centers to shady private computer kiosks",
+                    "100% government test centers"
+                ],
+                "a": 2,
+                "e": "Radhakrishnan panel urged ending private franchise test centers."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I was appointed by the Ministry of Education in June 2024.",
+                    "I was chaired by a former Chairman of ISRO.",
+                    "I submitted recommendations for comprehensive restructuring of the National Testing Agency."
+                ],
+                "o": [
+                    "Dr. K. Radhakrishnan Committee",
+                    "Kothari Commission",
+                    "Justice Verma Committee",
+                    "Santhanam Committee"
+                ],
+                "a": 0,
+                "e": "Dr. K. Radhakrishnan Committee."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a landmark criminal statute passed in 2024.",
+                    "I make paper leaks and tampering cognizable, non-bailable, and non-compoundable.",
+                    "I protect genuine students while targeting organized solver gangs with ₹1 Crore fines."
+                ],
+                "o": [
+                    "Public Examinations Act 2024",
+                    "Bharatiya Nyaya Sanhita",
+                    "IT Act 2000",
+                    "Prevention of Corruption Act"
+                ],
+                "a": 0,
+                "e": "Public Examinations (Prevention of Unfair Means) Act, 2024."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: You are Centre Superintendent for the Civil Services Prelims exam. 45 minutes before commencement, the strongroom observer notices that one question packet's tamper-evident seal is micro-slit.",
+            "e": "Values: uncompromising probity, calm leadership, evidentiary protocol.",
+            "s": [
+                {
+                    "t": "The clock is ticking. What is your immediate executive command?",
+                    "o": [
+                        [
+                            "Quarantine the packet, activate SOP with the City Coordinator, and prepare backup encrypted question set",
+                            1,
+                            "Preserves exam integrity while maintaining strict chain of custody."
+                        ],
+                        [
+                            "Ignore the micro-slit to avoid candidate panic",
+                            0,
+                            "Compromises the examination and invites criminal syndication."
+                        ],
+                        [
+                            "Cancel the entire country's exam unilaterally",
+                            0,
+                            "Only the central exam authority holds power to cancel all shifts."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The backup digital questions arrive encrypted via secure satellite link. Next?",
+                    "o": [
+                        [
+                            "Verify digital signatures with 2 independent observers and print under continuous CCTV recording",
+                            1,
+                            "Guarantees full forensic audibility and transparent chain of custody."
+                        ],
+                        [
+                            "Print unrecorded in a private corner",
+                            0,
+                            "Breaches standard operating procedure and invites suspicion."
+                        ],
+                        [
+                            "Distribute the suspected slit packet anyway",
+                            0,
+                            "Gross dereliction of duty."
+                        ]
+                    ]
+                },
+                {
+                    "t": "After the exam concludes successfully, what must you do with the suspect packet?",
+                    "o": [
+                        [
+                            "Impound in evidence bag, record signed panchnama with observers, and lodge formal police report under 2024 Act",
+                            1,
+                            "Ensures full legal prosecution under the Public Examinations Act, 2024."
+                        ],
+                        [
+                            "Throw the packet away to avoid inquiry",
+                            0,
+                            "Destruction of criminal evidence under Section 9."
+                        ],
+                        [
+                            "Keep it in personal custody",
+                            0,
+                            "Violates strongroom evidentiary protocol."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: Individual Malpractice, Syndicate Crime, or Both?",
+            "b": [
+                "Individual Malpractice",
+                "Syndicate Crime",
+                "Both"
+            ],
+            "it": [
+                [
+                    "Carrying unauthorized chits or cheating device",
+                    0
+                ],
+                [
+                    "Hacking server networks or setting up solver gangs",
+                    1
+                ],
+                [
+                    "Cognizable and non-bailable under 2024 Act",
+                    2
+                ],
+                [
+                    "Compromises merit in public examinations",
+                    2
+                ]
+            ],
+            "e": "Both undermine public trust; syndicates face stringent ₹1 Cr minimum fines and 10-year sentences."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Paper",
+                    "leaks",
+                    "are",
+                    "heinous",
+                    "attacks",
+                    "on",
+                    "merit"
+                ],
+                "e": "Paper leaks are heinous attacks on merit."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "The",
+                    "2024",
+                    "Act",
+                    "prescribes",
+                    "one",
+                    "crore",
+                    "fine"
+                ],
+                "e": "The 2024 Act prescribes one crore fine."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Exams",
+                    "must",
+                    "shift",
+                    "to",
+                    "government",
+                    "centers"
+                ],
+                "e": "Exams must shift to government centers."
+            }
         ]
     },
-
     "judiciary": {
         "id": "judiciary",
         "title": "AI in Judiciary & Legal Tech",
         "badge": "⚖️",
         "sub": "Master the 5 Crore case backlog, draft AI guidelines 2026, NCLT hallucination crisis, and ethical boundaries.",
-        "hue": ["#7442d6", "#2f63d6", "#0f8a62", "#d9570c", "#b8760a", "#0b8a9a"],
-        "ico": [["⚖️", "📊", "🏛️"], ["⚠️", "🤖", "📜"], ["💻", "🌐", "⚡"], ["🛡️", "👁️", "⚖️"], ["📉", "👨‍⚖️", "⏳"], ["🎯", "🗺️", "🏆"]],
+        "hue": [
+            "#7442d6",
+            "#2f63d6",
+            "#0f8a62",
+            "#d9570c",
+            "#b8760a",
+            "#0b8a9a"
+        ],
+        "ico": [
+            [
+                "⚖️",
+                "📊",
+                "🏛️"
+            ],
+            [
+                "⚠️",
+                "🤖",
+                "📜"
+            ],
+            [
+                "💻",
+                "🌐",
+                "⚡"
+            ],
+            [
+                "🛡️",
+                "👁️",
+                "⚖️"
+            ],
+            [
+                "📉",
+                "👨‍⚖️",
+                "⏳"
+            ],
+            [
+                "🎯",
+                "🗺️",
+                "🏆"
+            ]
+        ],
         "lessons": [
             {
                 "n": "The 5 Crore Backlog & Assistive AI",
@@ -924,7 +2136,11 @@ TOPICS = {
                             "Over 4.4 Crore cases are trapped in subordinate district courts alone.",
                             "Consequence: 'Justice delayed is justice denied' — undertrials languishing for years, and commercial contract enforcement crippled."
                         ],
-                        "k": ["5 Crore Backlog", "NJDG Data", "4.4 Cr District Court Cases"],
+                        "k": [
+                            "5 Crore Backlog",
+                            "NJDG Data",
+                            "4.4 Cr District Court Cases"
+                        ],
                         "n": "Economic Survey highlights that judicial delay reduces GDP growth by 1.5% to 2% annually."
                     },
                     {
@@ -934,7 +2150,11 @@ TOPICS = {
                             "<b>Fundamental Principle:</b> AI must only serve as an <b>assistive tool / judicial assistant</b>, NEVER as the adjudicator!",
                             "Adjudication demands human empathy, constitutional morality, and contextual equity — qualities no LLM possesses."
                         ],
-                        "k": ["Assistive AI", "Human in the Loop", "Constitutional Morality"],
+                        "k": [
+                            "Assistive AI",
+                            "Human in the Loop",
+                            "Constitutional Morality"
+                        ],
                         "n": "Machines can process logic, but only human judges can administer justice with conscience."
                     }
                 ],
@@ -942,7 +2162,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What is the approximate total judicial case pendency in India according to the National Judicial Data Grid?",
-                        "o": ["1 Crore cases", "2.5 Crore cases", "Over 5 Crore cases", "Over 10 Crore cases"],
+                        "o": [
+                            "1 Crore cases",
+                            "2.5 Crore cases",
+                            "Over 5 Crore cases",
+                            "Over 10 Crore cases"
+                        ],
                         "a": 2,
                         "e": "NJDG records over 5 Crore pending cases across Supreme Court, High Courts, and Subordinate Courts."
                     },
@@ -955,9 +2180,29 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap legitimate assistive applications of AI in court administration.",
-                        "o": ["Automated vernacular translation of judgments", "Intelligent case clustering and categorization", "Cause-list scheduling and backlog analytics", "Autonomous delivery of death penalty verdicts"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Automated vernacular translation of judgments",
+                            "Intelligent case clustering and categorization",
+                            "Cause-list scheduling and backlog analytics",
+                            "Autonomous delivery of death penalty verdicts"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Translation, categorization, and scheduling are ideal assistive tasks. Adjudication remains human."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "Over 5 Crore cases are pending across Indian courts,",
+                            "District Courts shoulder over 4.4 Crore cases,",
+                            "and the Supreme Court has cleared 100% of its backlog with zero pending cases."
+                        ],
+                        "a": 2,
+                        "e": "The Supreme Court still has ~80,000 pending cases."
                     }
                 ]
             },
@@ -973,7 +2218,11 @@ TOPICS = {
                             "Generative LLMs produce convincing citations of non-existent court judgments when queried for supporting case law.",
                             "The Supreme Court reacted sharply, warning that <i>'submitting AI-hallucinated case law in court is like the release of toxic Methyl Isocyanate gas!'</i>"
                         ],
-                        "k": ["AI Hallucination", "NCLT Precedent Shock", "Methyl Isocyanate Warning"],
+                        "k": [
+                            "AI Hallucination",
+                            "NCLT Precedent Shock",
+                            "Methyl Isocyanate Warning"
+                        ],
                         "n": "Submitting fabricated precedents damages the foundational integrity of the common-law doctrine of precedent (stare decisis)."
                     },
                     {
@@ -983,7 +2232,11 @@ TOPICS = {
                             "<b>Key Mandates:</b> Mandatory disclosure whenever AI is used in drafting pleadings; total prohibition on AI in final adjudication.",
                             "Strict verification requirement: Advocates bear personal disciplinary responsibility for verifying every citation against official law reporters."
                         ],
-                        "k": ["Draft AI Guidelines 2026", "Mandatory Disclosure", "Advocate Responsibility"],
+                        "k": [
+                            "Draft AI Guidelines 2026",
+                            "Mandatory Disclosure",
+                            "Advocate Responsibility"
+                        ],
                         "n": "Establishes institutional guardrails to prevent algorithmic poisoning of court records."
                     }
                 ],
@@ -991,7 +2244,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "To what toxic substance did the Supreme Court compare the submission of AI-hallucinated case precedents in court?",
-                        "o": ["Carbon Monoxide", "Sulphur Dioxide", "Methyl Isocyanate (Bhopal gas)", "Chlorine Gas"],
+                        "o": [
+                            "Carbon Monoxide",
+                            "Sulphur Dioxide",
+                            "Methyl Isocyanate (Bhopal gas)",
+                            "Chlorine Gas"
+                        ],
                         "a": 2,
                         "e": "The Supreme Court warned that citing unverified AI hallucinations pollutes the judicial stream like toxic Methyl Isocyanate."
                     },
@@ -1004,9 +2262,53 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the risks posed by unverified Generative AI usage in legal proceedings.",
-                        "o": ["Fabrication of non-existent case precedents", "Hallucination of statutory sections", "Erosion of stare decisis (doctrine of precedent)", "100% guarantee of winning the lawsuit"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Fabrication of non-existent case precedents",
+                            "Hallucination of statutory sections",
+                            "Erosion of stare decisis (doctrine of precedent)",
+                            "100% guarantee of winning the lawsuit"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Hallucinations threaten legal certainty and the doctrine of binding precedent."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort every tool: Permissible Assistive AI vs Non-Negotiable Human Judge",
+                        "b": [
+                            "Assistive AI",
+                            "Human Judge"
+                        ],
+                        "it": [
+                            [
+                                "Vernacular translation of judgments (SUVAS)",
+                                0
+                            ],
+                            [
+                                "Automated cause-list scheduling",
+                                0
+                            ],
+                            [
+                                "Weighing circumstantial evidence and witness credibility",
+                                1
+                            ],
+                            [
+                                "Applying constitutional morality and empathy",
+                                1
+                            ],
+                            [
+                                "Bail order transmission (FASTER)",
+                                0
+                            ],
+                            [
+                                "Final criminal sentencing",
+                                1
+                            ]
+                        ],
+                        "e": "AI assists with routine admin and translation; human judges alone decide guilt, sentencing, and justice."
                     }
                 ]
             },
@@ -1022,7 +2324,11 @@ TOPICS = {
                             "<b>SUVAS (Supreme Court Vidhik Anuvaad Software):</b> AI-powered translation tool translating English Supreme Court judgments into regional Indian languages (Hindi, Tamil, Bengali, etc.).",
                             "<b>FASTER (Fast and Secured Transmission of Electronic Records):</b> Secure digital delivery of bail orders to prison authorities to prevent unlawful detention."
                         ],
-                        "k": ["SUPACE (Research)", "SUVAS (Translation)", "FASTER (Bail Delivery)"],
+                        "k": [
+                            "SUPACE (Research)",
+                            "SUVAS (Translation)",
+                            "FASTER (Bail Delivery)"
+                        ],
                         "n": "SUVAS democratizes justice by making apex court rulings accessible in vernacular tongues."
                     },
                     {
@@ -1032,7 +2338,11 @@ TOPICS = {
                             "Focus: Transition from digitized paper courts to a <b>digital-native, cloud-first platform</b> with intelligent judicial analytics.",
                             "Features: Paperless digital courts, digital case management, virtual hearings, and open judicial data APIs."
                         ],
-                        "k": ["e-Courts Phase III", "₹7,210 Cr Outlay", "Cloud-First Architecture"],
+                        "k": [
+                            "e-Courts Phase III",
+                            "₹7,210 Cr Outlay",
+                            "Cloud-First Architecture"
+                        ],
                         "n": "Lays the physical and digital rails necessary for ethical AI integration."
                     }
                 ],
@@ -1041,17 +2351,34 @@ TOPICS = {
                         "k": "match",
                         "q": "Match the judicial tech initiative to its primary objective.",
                         "p": [
-                            ["SUPACE", "AI legal research & document parsing"],
-                            ["SUVAS", "Translating verdicts into regional languages"],
-                            ["FASTER", "Instant secure digital transmission of bail orders"],
-                            ["e-Courts Phase III", "₹7,210 Cr digital-native cloud infrastructure"]
+                            [
+                                "SUPACE",
+                                "AI legal research & document parsing"
+                            ],
+                            [
+                                "SUVAS",
+                                "Translating verdicts into regional languages"
+                            ],
+                            [
+                                "FASTER",
+                                "Instant secure digital transmission of bail orders"
+                            ],
+                            [
+                                "e-Courts Phase III",
+                                "₹7,210 Cr digital-native cloud infrastructure"
+                            ]
                         ],
                         "e": "A classic match question for Prelims and high-yield data for Mains."
                     },
                     {
                         "k": "mc",
                         "q": "Which AI tool was specifically built by the Supreme Court to translate judgments into vernacular languages?",
-                        "o": ["SUPACE", "SUVAS", "FASTER", "Bhashini"],
+                        "o": [
+                            "SUPACE",
+                            "SUVAS",
+                            "FASTER",
+                            "Bhashini"
+                        ],
                         "a": 1,
                         "e": "SUVAS (Supreme Court Vidhik Anuvaad Software) handles regional language judicial translations."
                     },
@@ -1060,6 +2387,47 @@ TOPICS = {
                         "q": "FASTER was introduced to ensure that prisoners granted bail are not kept incarcerated due to physical paper transit delays.",
                         "a": 0,
                         "e": "True. FASTER transmits electronic signed bail orders directly to jail authorities instantly."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year Union Cabinet approved e-Courts Phase III with an outlay of ₹7,210 Crore.",
+                        "a": 2023,
+                        "tol": 0,
+                        "min": 2015,
+                        "max": 2025,
+                        "e": "September 2023."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I?",
+                        "c": [
+                            "I am an AI-powered translation tool developed by the Supreme Court.",
+                            "I translate judicial orders and judgments into regional Indian languages like Hindi, Tamil, and Bengali."
+                        ],
+                        "o": [
+                            "SUVAS",
+                            "SUPACE",
+                            "FASTER",
+                            "CPGRAMS"
+                        ],
+                        "a": 0,
+                        "e": "SUVAS (Supreme Court Vidhik Anuvaad Software)."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the sentence: tap words in order.",
+                        "o": [
+                            "AI",
+                            "must",
+                            "assist",
+                            "judges",
+                            "never",
+                            "replace",
+                            "human",
+                            "conscience"
+                        ],
+                        "e": "AI must assist judges never replace human conscience."
                     }
                 ]
             },
@@ -1075,7 +2443,11 @@ TOPICS = {
                             "<b>The Black Box Problem:</b> Deep neural networks cannot explain <i>why</i> an algorithmic score was assigned (e.g. COMPAS recidivism algorithm in the US).",
                             "A defendant has a fundamental constitutional right to know the exact reasoning behind an adverse finding."
                         ],
-                        "k": ["Article 21 Fair Trial", "Black Box Problem", "Reasoned Decision"],
+                        "k": [
+                            "Article 21 Fair Trial",
+                            "Black Box Problem",
+                            "Reasoned Decision"
+                        ],
                         "n": "Justice must not only be done, but must be seen to be reasoned and explainable."
                     },
                     {
@@ -1085,7 +2457,11 @@ TOPICS = {
                             "<b>Digital Divide:</b> Wealthy corporate litigants can deploy elite commercial legal AI, while indigent undertrials lack basic legal aid.",
                             "Risk of creating a two-tiered justice system if high-tech tools are not democratized."
                         ],
-                        "k": ["Historical Training Bias", "Digital Asymmetry", "Legal Aid Gap"],
+                        "k": [
+                            "Historical Training Bias",
+                            "Digital Asymmetry",
+                            "Legal Aid Gap"
+                        ],
                         "n": "Garbage-in, garbage-out: Biased historical legal data produces biased algorithmic predictions."
                     }
                 ],
@@ -1093,7 +2469,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "Which constitutional provision guarantees the right to a fair trial and a reasoned judicial decision?",
-                        "o": ["Article 12", "Article 21", "Article 25", "Article 324"],
+                        "o": [
+                            "Article 12",
+                            "Article 21",
+                            "Article 25",
+                            "Article 324"
+                        ],
                         "a": 1,
                         "e": "Article 21 encompasses the right to a fair, speedy, and reasoned trial."
                     },
@@ -1106,8 +2487,17 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the primary constitutional objections against autonomous algorithmic sentencing.",
-                        "o": ["Violation of Article 21 reasoned adjudication", "Opacity of black-box neural networks", "Perpetuation of historical demographic bias", "Algorithms running out of memory"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Violation of Article 21 reasoned adjudication",
+                            "Opacity of black-box neural networks",
+                            "Perpetuation of historical demographic bias",
+                            "Algorithms running out of memory"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Article 21, black-box opacity, and training bias are substantive constitutional challenges."
                     }
                 ]
@@ -1124,7 +2514,11 @@ TOPICS = {
                             "Compare this to the <b>Law Commission's target of 50 judges per million</b>, and 100+ in developed nations (e.g. US ~107).",
                             "AI can assist workflow, but cannot cure the structural vacancy crisis in subordinate and high courts."
                         ],
-                        "k": ["21 Judges per Million", "Law Commission 50 Target", "Structural Vacancy"],
+                        "k": [
+                            "21 Judges per Million",
+                            "Law Commission 50 Target",
+                            "Structural Vacancy"
+                        ],
                         "n": "Technology cannot substitute for an adequate number of constitutionally appointed judges."
                     },
                     {
@@ -1134,7 +2528,11 @@ TOPICS = {
                             "Economic Survey demonstrates that when CCR drops below 100%, the backlog mountain grows automatically.",
                             "AI's true value lies in accelerating mundane document processing to push the CCR comfortably above 100%."
                         ],
-                        "k": ["Case Clearance Rate (CCR)", "Disposal Ratio", "Administrative Velocity"],
+                        "k": [
+                            "Case Clearance Rate (CCR)",
+                            "Disposal Ratio",
+                            "Administrative Velocity"
+                        ],
                         "n": "A high-impact quantitative metric to include in your GS-2 answers."
                     }
                 ],
@@ -1142,7 +2540,12 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "What is India's current judge-to-population ratio compared to the Law Commission's benchmark?",
-                        "o": ["10 per million (vs 20)", "21 per million (vs 50)", "50 per million (vs 100)", "75 per million (vs 150)"],
+                        "o": [
+                            "10 per million (vs 20)",
+                            "21 per million (vs 50)",
+                            "50 per million (vs 100)",
+                            "75 per million (vs 150)"
+                        ],
                         "a": 1,
                         "e": "India has ~21 judges per million citizens, far below the Law Commission's recommended target of 50."
                     },
@@ -1156,10 +2559,22 @@ TOPICS = {
                         "k": "match",
                         "q": "Match the judicial governance metric to its meaning.",
                         "p": [
-                            ["Judge-Population Ratio", "21 judges per million citizens in India"],
-                            ["Law Commission Target", "50 judges per million benchmark"],
-                            ["Case Clearance Rate", "Ratio of disposed cases to instituted cases"],
-                            ["e-Courts Outlay", "₹7,210 Crore under Phase III"]
+                            [
+                                "Judge-Population Ratio",
+                                "21 judges per million citizens in India"
+                            ],
+                            [
+                                "Law Commission Target",
+                                "50 judges per million benchmark"
+                            ],
+                            [
+                                "Case Clearance Rate",
+                                "Ratio of disposed cases to instituted cases"
+                            ],
+                            [
+                                "e-Courts Outlay",
+                                "₹7,210 Crore under Phase III"
+                            ]
                         ],
                         "e": "Essential statistics for GS-2 Judiciary questions."
                     }
@@ -1178,7 +2593,9 @@ TOPICS = {
                             "<b>Tech Initiatives:</b> SUPACE, SUVAS, FASTER, e-Courts Phase III (₹7,210 Cr).",
                             "<b>Constitutional & Ethics:</b> Article 21, black-box opacity, algorithmic bias, human empathy in adjudication."
                         ],
-                        "k": ["Use 4 to 5 per Mains answer!"],
+                        "k": [
+                            "Use 4 to 5 per Mains answer!"
+                        ],
                         "n": "Positions your answer in the top 5% of all candidates."
                     },
                     {
@@ -1190,7 +2607,9 @@ TOPICS = {
                             "<b>Institutional Initiatives:</b> SUPACE, SUVAS, FASTER, e-Courts Phase III, SC Draft Guidelines 2026.",
                             "<b>Conclusion:</b> Technology as a force multiplier for human judges, not a replacement for judicial conscience."
                         ],
-                        "k": ["Intro → The Boundary → Risks → Policy → Ethical Conscience Conclusion"],
+                        "k": [
+                            "Intro → The Boundary → Risks → Policy → Ethical Conscience Conclusion"
+                        ],
                         "n": "A balanced, forward-looking constitutional synthesis."
                     }
                 ],
@@ -1260,16 +2679,306 @@ TOPICS = {
                     "Balance: Algorithmic Efficiency on the left, Constitutional Conscience on the right."
                 ]
             }
+        ],
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "The Supreme Court uses SUVAS for multilingual judgment translation,",
+                    "SUPACE for judicial legal research assistance,",
+                    "and delegates final criminal sentencing to automated generative AI bots."
+                ],
+                "a": 2,
+                "e": "The Supreme Court strictly forbids automated decision-making and AI sentencing."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the Union Cabinet approved e-Courts Project Phase III with an outlay of ₹7,210 Crore.",
+                "a": 2023,
+                "tol": 0,
+                "min": 2015,
+                "max": 2025,
+                "e": "September 2023."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Permissible Assistive AI vs Non-Negotiable Human Judge",
+                "b": [
+                    "Permissible Assistive AI",
+                    "Human Judge"
+                ],
+                "it": [
+                    [
+                        "Cause-list optimization and case clustering",
+                        0
+                    ],
+                    [
+                        "Evaluating witness demeanor and credibility",
+                        1
+                    ],
+                    [
+                        "Vernacular translation of orders (SUVAS)",
+                        0
+                    ],
+                    [
+                        "Exercising judicial empathy and conscience",
+                        1
+                    ],
+                    [
+                        "Optical character recognition of old handwritten records",
+                        0
+                    ],
+                    [
+                        "Adjudicating constitutional validity under Article 13",
+                        1
+                    ]
+                ],
+                "e": "AI handles administrative efficiency; humans alone administer constitutional justice."
+            },
+            {
+                "k": "mc",
+                "q": "Odd keyword out: which is NOT an official Supreme Court technology portal?",
+                "o": [
+                    "SUVAS",
+                    "SUPACE",
+                    "FASTER",
+                    "TikTok Bot"
+                ],
+                "a": 3,
+                "e": "SUVAS, SUPACE, and FASTER are certified Supreme Court digital platforms."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I am an AI-trained language portal designed by the Supreme Court.",
+                    "I translate judicial pronouncements and legal papers into 18+ scheduled regional languages.",
+                    "My acronym stands for Supreme Court Vidhik Anuvaad Software."
+                ],
+                "o": [
+                    "SUVAS",
+                    "SUPACE",
+                    "FASTER",
+                    "Karmayogi"
+                ],
+                "a": 0,
+                "e": "SUVAS."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a digital system launched by Chief Justice NV Ramana in 2022.",
+                    "I securely transmit bail orders, stay orders, and release warrants directly to prison authorities.",
+                    "My name stands for Fast and Secured Transmission of Electronic Records."
+                ],
+                "o": [
+                    "FASTER",
+                    "SUVAS",
+                    "SUPACE",
+                    "e-Challan"
+                ],
+                "a": 0,
+                "e": "FASTER."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: You are Principal District Judge. A software vendor offers a proprietary AI tool that predicts recidivism risk and recommends bail denial based on historical police arrest logs.",
+            "e": "Values: judicial independence, Article 21 liberty, algorithmic bias prevention.",
+            "s": [
+                {
+                    "t": "The vendor claims the AI has 94% accuracy based on historical police records. Your reaction?",
+                    "o": [
+                        [
+                            "Decline automated bail scoring; historical arrest data carries ingrained socio-economic bias",
+                            1,
+                            "Article 14 and 21 require individualized, bias-free human adjudication."
+                        ],
+                        [
+                            "Accept the tool and let it decide all bail applications",
+                            0,
+                            "Gross violation of judicial conscience and personal liberty."
+                        ],
+                        [
+                            "Sell court litigant data to the vendor",
+                            0,
+                            "Criminal breach of privacy under Digital Personal Data Protection Act."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The vendor then offers an AI tool limited to summarizing 800-page trial bundles and indexing citations. Next?",
+                    "o": [
+                        [
+                            "Pilot the assistive summarizer with mandatory human verification of all cited extracts",
+                            1,
+                            "Assistive AI aids legal research while keeping human judges strictly in the loop."
+                        ],
+                        [
+                            "Ban all computers from the court",
+                            0,
+                            "Rejects useful digitization that could reduce 4.4 Cr case pendency."
+                        ],
+                        [
+                            "Rely on AI summaries without ever reading the case file",
+                            0,
+                            "Abdicates judicial duty."
+                        ]
+                    ]
+                },
+                {
+                    "t": "A young magistrate asks if ChatGPT can write her final reasoned judgment in an eviction suit. Your advice?",
+                    "o": [
+                        [
+                            "Strictly forbid: judgment writing requires judicial reasoning, conscience, and statutory interpretation",
+                            1,
+                            "The Supreme Court draft AI guidelines strictly prohibit outsourcing judicial reasoning."
+                        ],
+                        [
+                            "Encourage it to save time",
+                            0,
+                            "Robots cannot exercise constitutional morality."
+                        ],
+                        [
+                            "Allow it if the parties agree",
+                            0,
+                            "Justice is not a private contract."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: SUVAS only, SUPACE only, or Both?",
+            "b": [
+                "SUVAS only",
+                "SUPACE only",
+                "Both"
+            ],
+            "it": [
+                [
+                    "Specialized in regional vernacular translation of judgments",
+                    0
+                ],
+                [
+                    "AI research portal to extract legal precedents and facts",
+                    1
+                ],
+                [
+                    "Deployed under Supreme Court Artificial Intelligence Committee",
+                    2
+                ],
+                [
+                    "Aims to reduce delay without replacing judges",
+                    2
+                ]
+            ],
+            "e": "SUVAS translates; SUPACE analyzes legal points; both empower human judges."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "AI",
+                    "must",
+                    "assist",
+                    "judges",
+                    "never",
+                    "replace",
+                    "human",
+                    "conscience"
+                ],
+                "e": "AI must assist judges never replace human conscience."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Phase",
+                    "three",
+                    "e-Courts",
+                    "allocates",
+                    "7210",
+                    "crores"
+                ],
+                "e": "Phase three e-Courts allocates 7210 crores."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "FASTER",
+                    "transmits",
+                    "bail",
+                    "orders",
+                    "directly",
+                    "to",
+                    "jails"
+                ],
+                "e": "FASTER transmits bail orders directly to jails."
+            }
         ]
     },
-
     "charter": {
         "id": "charter",
         "title": "Citizen’s Charter & Service Delivery",
         "badge": "📜",
         "sub": "Learn it from zero: read the idea, then prove it. Principles, Sevottam, Right to Services Acts, and 2nd ARC.",
-        "hue": ["#0f8a62", "#2f63d6", "#7442d6", "#b8760a", "#d23a40", "#0b8a9a", "#d9570c"],
-        "ico": [["📜", "🌍", "🎯"], ["🧱", "📋", "🛠️"], ["🏛️", "⭐", "📊"], ["🐯", "📃", "⚖️"], ["📐", "📢", "🔒"], ["🔧", "📱", "🏆"], ["🗝️", "🗺️", "🧭"]],
+        "hue": [
+            "#0f8a62",
+            "#2f63d6",
+            "#7442d6",
+            "#b8760a",
+            "#d23a40",
+            "#0b8a9a",
+            "#d9570c"
+        ],
+        "ico": [
+            [
+                "📜",
+                "🌍",
+                "🎯"
+            ],
+            [
+                "🧱",
+                "📋",
+                "🛠️"
+            ],
+            [
+                "🏛️",
+                "⭐",
+                "📊"
+            ],
+            [
+                "🐯",
+                "📃",
+                "⚖️"
+            ],
+            [
+                "📐",
+                "📢",
+                "🔒"
+            ],
+            [
+                "🔧",
+                "📱",
+                "🏆"
+            ],
+            [
+                "🗝️",
+                "🗺️",
+                "🧭"
+            ]
+        ],
         "lessons": [
             {
                 "n": "The Big Idea",
@@ -1282,7 +2991,10 @@ TOPICS = {
                             "A Citizen’s Charter is a written promise by a government body: <b>what services it offers</b>, the <b>standards and timelines</b> it commits to, and <b>how to complain</b> if it fails.",
                             "Think of it as a menu with a delivery guarantee, published for citizens."
                         ],
-                        "k": ["Service-delivery commitment", "Social contract"],
+                        "k": [
+                            "Service-delivery commitment",
+                            "Social contract"
+                        ],
                         "n": "It is a statement of intent, not a law."
                     },
                     {
@@ -1292,7 +3004,11 @@ TOPICS = {
                             "In India it gained momentum after the <b>1997 Conference of Chief Ministers</b>, which adopted an Action Plan for an effective and responsive administration.",
                             "The <b>DARPG</b> (Dept. of Administrative Reforms and Public Grievances) is the nodal agency."
                         ],
-                        "k": ["New Public Management", "DARPG", "Citizen-centric governance"]
+                        "k": [
+                            "New Public Management",
+                            "DARPG",
+                            "Citizen-centric governance"
+                        ]
                     },
                     {
                         "t": "Why it matters",
@@ -1300,7 +3016,10 @@ TOPICS = {
                             "It shifts government from <b>rule-bound</b> to <b>citizen-centric</b>, and turns vague duty into a measurable promise.",
                             "Exam angle: GS-2 (governance, transparency, accountability) and GS-4 (responsiveness, public service values)."
                         ],
-                        "k": ["Accountability", "Responsiveness"]
+                        "k": [
+                            "Accountability",
+                            "Responsiveness"
+                        ]
                     }
                 ],
                 "q": [
@@ -1313,23 +3032,58 @@ TOPICS = {
                     {
                         "k": "mc",
                         "q": "In which country did the Citizen’s Charter idea originate (1991)?",
-                        "o": ["United States", "United Kingdom", "France", "Japan"],
+                        "o": [
+                            "United States",
+                            "United Kingdom",
+                            "France",
+                            "Japan"
+                        ],
                         "a": 1,
                         "e": "UK, under PM John Major."
                     },
                     {
                         "k": "mc",
                         "q": "Which body is the nodal agency for Citizen’s Charters in India?",
-                        "o": ["NITI Aayog", "Election Commission", "DARPG", "Finance Commission"],
+                        "o": [
+                            "NITI Aayog",
+                            "Election Commission",
+                            "DARPG",
+                            "Finance Commission"
+                        ],
                         "a": 2,
                         "e": "DARPG in the Ministry of Personnel coordinates charters and grievance redress."
                     },
                     {
                         "k": "mc",
                         "q": "Which phrase best captures the philosophy behind charters?",
-                        "o": ["Citizen-centric governance", "Maximising revenue", "Centralised secrecy", "Colonial paternalism"],
+                        "o": [
+                            "Citizen-centric governance",
+                            "Maximising revenue",
+                            "Centralised secrecy",
+                            "Colonial paternalism"
+                        ],
                         "a": 0,
                         "e": "Governance designed around the user of the service."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag: the one false part of this sentence.",
+                        "o": [
+                            "Citizen’s Charters are legally enforceable in court,",
+                            "were launched in India after the 1997 CMs conference,",
+                            "and are coordinated centrally by DARPG."
+                        ],
+                        "a": 0,
+                        "e": "Charters are voluntary commitments. Enforceability requires a statute such as a Right to Services Act."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the UK launched the world’s first Citizen’s Charter under PM John Major.",
+                        "a": 1991,
+                        "tol": 0,
+                        "min": 1980,
+                        "max": 2020,
+                        "e": "1991, under PM John Major."
                     }
                 ]
             },
@@ -1344,7 +3098,12 @@ TOPICS = {
                             "Indian notes list six pillars: <b>Quality, Choice, Standards, Value, Accountability, Transparency</b>.",
                             "Quality: better service. Choice: options where possible. Standards: clear, measurable norms. Value: for taxpayers’ money. Accountability: someone answerable. Transparency: open rules."
                         ],
-                        "k": ["Quality", "Standards", "Accountability", "Transparency"]
+                        "k": [
+                            "Quality",
+                            "Standards",
+                            "Accountability",
+                            "Transparency"
+                        ]
                     },
                     {
                         "t": "What goes inside",
@@ -1355,7 +3114,11 @@ TOPICS = {
                             "<b>Grievance redress</b> process and officer details.",
                             "<b>What citizens should do</b> (expectations from the public)."
                         ],
-                        "k": ["Service standards", "Time limits", "Grievance redress"]
+                        "k": [
+                            "Service standards",
+                            "Time limits",
+                            "Grievance redress"
+                        ]
                     },
                     {
                         "t": "How to build a good one",
@@ -1364,40 +3127,89 @@ TOPICS = {
                             "<b>Publish</b> widely, in local languages and online.",
                             "<b>Monitor and review</b> regularly, then revise."
                         ],
-                        "k": ["Consultation", "Periodic review"]
+                        "k": [
+                            "Consultation",
+                            "Periodic review"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "mc",
                         "q": "Which of these is NOT one of the six pillars?",
-                        "o": ["Quality", "Standards", "Secrecy", "Transparency"],
+                        "o": [
+                            "Quality",
+                            "Standards",
+                            "Secrecy",
+                            "Transparency"
+                        ],
                         "a": 2,
                         "e": "Secrecy is the opposite of the charter spirit."
                     },
                     {
                         "k": "multi",
                         "q": "Tap everything a good charter contains.",
-                        "o": ["Service standards and time limits", "Grievance redress process", "Vision and mission", "Officers’ personal salary details"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Service standards and time limits",
+                            "Grievance redress process",
+                            "Vision and mission",
+                            "Officers’ personal salary details"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Salaries are not part of a service promise."
                     },
                     {
                         "k": "order",
                         "q": "Put the charter-building steps in order.",
-                        "o": ["Consult citizens and staff", "Set realistic standards", "Publish widely", "Monitor and review"],
+                        "o": [
+                            "Consult citizens and staff",
+                            "Set realistic standards",
+                            "Publish widely",
+                            "Monitor and review"
+                        ],
                         "e": "Consult → Standards → Publish → Review."
                     },
                     {
                         "k": "match",
                         "q": "Match the pillar to its meaning.",
                         "p": [
-                            ["Standards", "Clear, measurable norms"],
-                            ["Choice", "Options where possible"],
-                            ["Value", "For taxpayers’ money"],
-                            ["Transparency", "Open rules and procedures"]
+                            [
+                                "Standards",
+                                "Clear, measurable norms"
+                            ],
+                            [
+                                "Choice",
+                                "Options where possible"
+                            ],
+                            [
+                                "Value",
+                                "For taxpayers’ money"
+                            ],
+                            [
+                                "Transparency",
+                                "Open rules and procedures"
+                            ]
                         ],
                         "e": "Use these one-liners to explain pillars in Mains."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the definition: tap words in order.",
+                        "o": [
+                            "A",
+                            "Citizen’s",
+                            "Charter",
+                            "is",
+                            "a",
+                            "public",
+                            "promise"
+                        ],
+                        "e": "A Citizen’s Charter is a public promise."
                     }
                 ]
             },
@@ -1412,7 +3224,10 @@ TOPICS = {
                             "The <b>2nd Administrative Reforms Commission</b> studied charters in its 12th Report, <b>“Citizen Centric Administration: The Heart of Governance”</b> (2009).",
                             "It stressed that charters must be made in consultation with citizens, carry realistic standards, and be reviewed periodically, or they become paper exercises."
                         ],
-                        "k": ["2nd ARC", "Citizen Centric Administration"]
+                        "k": [
+                            "2nd ARC",
+                            "Citizen Centric Administration"
+                        ]
                     },
                     {
                         "t": "Sevottam model",
@@ -1421,7 +3236,11 @@ TOPICS = {
                             "Three modules: <b>1. Citizen’s Charter</b>, <b>2. Public Grievance Redress</b>, <b>3. Service Delivery Capability</b>.",
                             "Organisations are assessed against it, like a report card."
                         ],
-                        "k": ["Sevottam", "Service Delivery Capability", "Self-assessment"]
+                        "k": [
+                            "Sevottam",
+                            "Service Delivery Capability",
+                            "Self-assessment"
+                        ]
                     },
                     {
                         "t": "Feedback tools",
@@ -1430,32 +3249,61 @@ TOPICS = {
                             "<b>Citizen Report Cards</b>: surveys where users rate services. Pioneered by the Public Affairs Centre, Bangalore.",
                             "Both close the loop between promise and performance."
                         ],
-                        "k": ["CPGRAMS", "Citizen Report Card"]
+                        "k": [
+                            "CPGRAMS",
+                            "Citizen Report Card"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "mc",
                         "q": "Which 2nd ARC report is the key source on citizen-centric governance?",
-                        "o": ["1st: Right to Information", "12th: Citizen Centric Administration", "4th: Ethics in Governance only", "15th: Local Governance only"],
+                        "o": [
+                            "1st: Right to Information",
+                            "12th: Citizen Centric Administration",
+                            "4th: Ethics in Governance only",
+                            "15th: Local Governance only"
+                        ],
                         "a": 1,
                         "e": "12th Report: Citizen Centric Administration, The Heart of Governance."
                     },
                     {
                         "k": "multi",
                         "q": "Tap the 3 modules of Sevottam.",
-                        "o": ["Citizen’s Charter", "Public Grievance Redress", "Service Delivery Capability", "Revenue Maximisation"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Citizen’s Charter",
+                            "Public Grievance Redress",
+                            "Service Delivery Capability",
+                            "Revenue Maximisation"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Charter, grievance redress and delivery capability."
                     },
                     {
                         "k": "match",
                         "q": "Match tool to purpose.",
                         "p": [
-                            ["Sevottam", "Service excellence framework"],
-                            ["CPGRAMS", "Online grievance portal"],
-                            ["Report Card", "Citizen feedback survey"],
-                            ["2nd ARC 12th Report", "Citizen Centric Administration"]
+                            [
+                                "Sevottam",
+                                "Service excellence framework"
+                            ],
+                            [
+                                "CPGRAMS",
+                                "Online grievance portal"
+                            ],
+                            [
+                                "Report Card",
+                                "Citizen feedback survey"
+                            ],
+                            [
+                                "2nd ARC 12th Report",
+                                "Citizen Centric Administration"
+                            ]
                         ],
                         "e": "Four keywords you can name-drop confidently."
                     },
@@ -1464,6 +3312,32 @@ TOPICS = {
                         "q": "“Sevottam” combines the words Seva and Uttam.",
                         "a": 0,
                         "e": "True: service of the highest quality."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I? Fewer clues, more XP.",
+                        "c": [
+                            "I am a quality framework from DARPG created in 2006.",
+                            "My name fuses words for service and excellence.",
+                            "I evaluate 3 modules: Charters, Grievance Redress, and Service Capability."
+                        ],
+                        "o": [
+                            "Sevottam",
+                            "CPGRAMS",
+                            "Sakala",
+                            "Mission Karmayogi"
+                        ],
+                        "a": 0,
+                        "e": "Sevottam (Seva + Uttam)."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the 2nd ARC released its landmark 12th Report: Citizen Centric Administration.",
+                        "a": 2009,
+                        "tol": 1,
+                        "min": 2000,
+                        "max": 2020,
+                        "e": "2009: 12th Report of 2nd ARC."
                     }
                 ]
             },
@@ -1478,7 +3352,10 @@ TOPICS = {
                             "A charter has <b>no penalty</b> and <b>no legal remedy</b>. An officer who ignores it usually faces nothing.",
                             "This is why critics call charters ‘paper tigers’."
                         ],
-                        "k": ["Non-justiciable", "Paper tiger"]
+                        "k": [
+                            "Non-justiciable",
+                            "Paper tiger"
+                        ]
                     },
                     {
                         "t": "The 2011 Bill",
@@ -1486,7 +3363,10 @@ TOPICS = {
                             "The <b>Citizens Charter Bill, 2011</b> (Right of Citizens for Time Bound Delivery of Goods and Services and Redressal of their Grievances) was introduced in Lok Sabha.",
                             "It proposed mandatory charters, grievance officers and penalties. It <b>lapsed</b> when the Lok Sabha was dissolved in 2014."
                         ],
-                        "k": ["Statutory backing", "Lapsed Bill"]
+                        "k": [
+                            "Statutory backing",
+                            "Lapsed Bill"
+                        ]
                     },
                     {
                         "t": "Right to Services Acts",
@@ -1494,21 +3374,35 @@ TOPICS = {
                             "States moved first. <b>Madhya Pradesh Lok Sewa Guarantee Act, 2010</b> was the first. Bihar (2011), Rajasthan, Delhi, Karnataka (Sakala) and others followed.",
                             "Typical features: <b>notified services, fixed deadlines, penalty on the officer, appeal</b>."
                         ],
-                        "k": ["Right to Services", "Lok Sewa Guarantee", "Sakala"]
+                        "k": [
+                            "Right to Services",
+                            "Lok Sewa Guarantee",
+                            "Sakala"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "mc",
                         "q": "Which state enacted the first Right to Services law (2010)?",
-                        "o": ["Bihar", "Madhya Pradesh", "Kerala", "Gujarat"],
+                        "o": [
+                            "Bihar",
+                            "Madhya Pradesh",
+                            "Kerala",
+                            "Gujarat"
+                        ],
                         "a": 1,
                         "e": "Madhya Pradesh Lok Sewa Guarantee Act, 2010."
                     },
                     {
                         "k": "mc",
                         "q": "What does a Right to Services Act add over a plain charter?",
-                        "o": ["More posters", "Legal deadlines and penalties", "A new logo", "Fewer services"],
+                        "o": [
+                            "More posters",
+                            "Legal deadlines and penalties",
+                            "A new logo",
+                            "Fewer services"
+                        ],
                         "a": 1,
                         "e": "Statutory deadlines, penalties and appeals make it enforceable."
                     },
@@ -1521,9 +3415,58 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the usual features of a Right to Services Act.",
-                        "o": ["Fixed time limits", "Penalty on defaulting officers", "First and second appeal", "Ban on online services"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Fixed time limits",
+                            "Penalty on defaulting officers",
+                            "First and second appeal",
+                            "Ban on online services"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "Time limits, penalties and appeals."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort every card: Voluntary Charter or Statutory RTS Act?",
+                        "b": [
+                            "Voluntary Charter",
+                            "Statutory RTS Act"
+                        ],
+                        "it": [
+                            [
+                                "Voluntary moral promise",
+                                0
+                            ],
+                            [
+                                "Penalty on defaulting officers",
+                                1
+                            ],
+                            [
+                                "Statutory binding deadlines",
+                                1
+                            ],
+                            [
+                                "No legal remedy or compensation",
+                                0
+                            ],
+                            [
+                                "First and second appellate hierarchy",
+                                1
+                            ]
+                        ],
+                        "e": "Charters are voluntary; RTS Acts are legally enforceable with penalties and appeals."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year Madhya Pradesh enacted India’s first Lok Sewa Guarantee Act.",
+                        "a": 2010,
+                        "tol": 0,
+                        "min": 2000,
+                        "max": 2020,
+                        "e": "2010."
                     }
                 ]
             },
@@ -1539,7 +3482,11 @@ TOPICS = {
                             "Standards are <b>vague</b> (‘as early as possible’) or unrealistic.",
                             "Seldom <b>updated</b>, so they go out of date."
                         ],
-                        "k": ["Top-down", "Vague standards", "Ritual compliance"]
+                        "k": [
+                            "Top-down",
+                            "Vague standards",
+                            "Ritual compliance"
+                        ]
                     },
                     {
                         "t": "Awareness and access",
@@ -1548,7 +3495,10 @@ TOPICS = {
                             "Not in <b>local languages</b>; poor reach for illiterate or digitally excluded people.",
                             "Information is displayed but not explained."
                         ],
-                        "k": ["Awareness gap", "Digital divide"]
+                        "k": [
+                            "Awareness gap",
+                            "Digital divide"
+                        ]
                     },
                     {
                         "t": "Enforcement and culture",
@@ -1557,41 +3507,109 @@ TOPICS = {
                             "Staff lack <b>training and ownership</b>; the charter is seen as extra paperwork.",
                             "Different departments, different formats: no <b>uniform monitoring</b>."
                         ],
-                        "k": ["Weak enforcement", "Accountability deficit", "Bureaucratic culture"]
+                        "k": [
+                            "Weak enforcement",
+                            "Accountability deficit",
+                            "Bureaucratic culture"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "mc",
                         "q": "“Charters are drafted without consulting citizens.” Which challenge?",
-                        "o": ["Design problem", "Awareness problem", "Funding problem"],
+                        "o": [
+                            "Design problem",
+                            "Awareness problem",
+                            "Funding problem"
+                        ],
                         "a": 0,
                         "e": "Top-down design is a design problem."
                     },
                     {
                         "k": "multi",
                         "q": "Tap all genuine challenges.",
-                        "o": ["No penalty for breach", "Poor awareness among citizens", "Too many citizens read charters", "Standards are vague or outdated"],
-                        "a": [0, 1, 3],
+                        "o": [
+                            "No penalty for breach",
+                            "Poor awareness among citizens",
+                            "Too many citizens read charters",
+                            "Standards are vague or outdated"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            3
+                        ],
                         "e": "Low readership, not high, is the problem."
                     },
                     {
                         "k": "match",
                         "q": "Match challenge to root cause.",
                         "p": [
-                            ["Paper tiger", "No legal penalty"],
-                            ["Awareness gap", "Not in local language"],
-                            ["Ritual compliance", "Seen as paperwork"],
-                            ["Vague standards", "No SMART timelines"]
+                            [
+                                "Paper tiger",
+                                "No legal penalty"
+                            ],
+                            [
+                                "Awareness gap",
+                                "Not in local language"
+                            ],
+                            [
+                                "Ritual compliance",
+                                "Seen as paperwork"
+                            ],
+                            [
+                                "Vague standards",
+                                "No SMART timelines"
+                            ]
                         ],
                         "e": "Pair cause and effect in your answers."
                     },
                     {
                         "k": "mc",
                         "q": "Which is the deepest structural reason charters fail?",
-                        "o": ["Lack of enforceable accountability", "Too much colour printing", "Too many websites"],
+                        "o": [
+                            "Lack of enforceable accountability",
+                            "Too much colour printing",
+                            "Too many websites"
+                        ],
                         "a": 0,
                         "e": "Without consequences, a promise stays a slogan."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort every card: Charter Pathology vs Structural Remedy",
+                        "b": [
+                            "Pathology",
+                            "Remedy"
+                        ],
+                        "it": [
+                            [
+                                "Vague standards without timelines",
+                                0
+                            ],
+                            [
+                                "Co-creation with frontline staff and users",
+                                1
+                            ],
+                            [
+                                "Ritual compliance treated as paperwork",
+                                0
+                            ],
+                            [
+                                "Third-party social audits & report cards",
+                                1
+                            ],
+                            [
+                                "Absence of penalty for non-compliance",
+                                0
+                            ],
+                            [
+                                "Statutory backing via RTS legislation",
+                                1
+                            ]
+                        ],
+                        "e": "Pair every failure mechanism with its institutional reform."
                     }
                 ]
             },
@@ -1609,7 +3627,11 @@ TOPICS = {
                             "<b>Third-party audits</b>, social audits and report cards.",
                             "<b>Train and reward</b> staff; link to performance appraisal."
                         ],
-                        "k": ["SLA", "Social audit", "Statutory backing"]
+                        "k": [
+                            "SLA",
+                            "Social audit",
+                            "Statutory backing"
+                        ]
                     },
                     {
                         "t": "Technology",
@@ -1618,7 +3640,10 @@ TOPICS = {
                             "<b>CPGRAMS</b> for grievances; mobile alerts at each stage.",
                             "Digital delivery cuts discretion and delay."
                         ],
-                        "k": ["E-governance", "Auto-escalation"]
+                        "k": [
+                            "E-governance",
+                            "Auto-escalation"
+                        ]
                     },
                     {
                         "t": "Best practices",
@@ -1627,21 +3652,39 @@ TOPICS = {
                             "<b>Madhya Pradesh Lok Sewa Guarantee</b>: statutory time-bound service with penalties.",
                             "<b>Citizen Report Cards</b> (Bangalore): evidence-based public feedback."
                         ],
-                        "k": ["Charter Mark", "Lok Sewa Guarantee", "Report Card"]
+                        "k": [
+                            "Charter Mark",
+                            "Lok Sewa Guarantee",
+                            "Report Card"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "multi",
                         "q": "Tap the effective solutions.",
-                        "o": ["Co-create charters with citizens", "Statutory backing with penalties", "Hide the charter from the public", "Third-party and social audits"],
-                        "a": [0, 1, 3],
+                        "o": [
+                            "Co-create charters with citizens",
+                            "Statutory backing with penalties",
+                            "Hide the charter from the public",
+                            "Third-party and social audits"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            3
+                        ],
                         "e": "Transparency and consequences drive results."
                     },
                     {
                         "k": "mc",
                         "q": "The UK Charter Mark is best described as:",
-                        "o": ["A tax", "An award for excellent service standards", "A court", "A police force"],
+                        "o": [
+                            "A tax",
+                            "An award for excellent service standards",
+                            "A court",
+                            "A police force"
+                        ],
                         "a": 1,
                         "e": "A recognition scheme that rewards good service."
                     },
@@ -1649,19 +3692,68 @@ TOPICS = {
                         "k": "match",
                         "q": "Match practice to place.",
                         "p": [
-                            ["Charter Mark", "United Kingdom"],
-                            ["Lok Sewa Guarantee", "Madhya Pradesh"],
-                            ["Sakala", "Karnataka"],
-                            ["Report Cards", "Bangalore (PAC)"]
+                            [
+                                "Charter Mark",
+                                "United Kingdom"
+                            ],
+                            [
+                                "Lok Sewa Guarantee",
+                                "Madhya Pradesh"
+                            ],
+                            [
+                                "Sakala",
+                                "Karnataka"
+                            ],
+                            [
+                                "Report Cards",
+                                "Bangalore (PAC)"
+                            ]
                         ],
                         "e": "One domestic and one global example is enough for Mains."
                     },
                     {
                         "k": "mc",
                         "q": "What does ‘SMART standard’ mean in a charter?",
-                        "o": ["Specific, measurable and time-bound", "Short, mild, and tentative", "Silent and recorded", "Subjective and flexible"],
+                        "o": [
+                            "Specific, measurable and time-bound",
+                            "Short, mild, and tentative",
+                            "Silent and recorded",
+                            "Subjective and flexible"
+                        ],
                         "a": 0,
                         "e": "Clear, measurable, time-bound commitments."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the sentence: tap words in order.",
+                        "o": [
+                            "Right",
+                            "to",
+                            "Services",
+                            "Acts",
+                            "guarantee",
+                            "services",
+                            "within",
+                            "deadlines"
+                        ],
+                        "e": "Right to Services Acts guarantee services within deadlines."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I?",
+                        "c": [
+                            "I am a prestigious UK government scheme.",
+                            "I award public bodies that display sustained excellence in service delivery standards."
+                        ],
+                        "o": [
+                            "Charter Mark",
+                            "Sakala",
+                            "Lok Sewa Guarantee",
+                            "CPGRAMS"
+                        ],
+                        "a": 0,
+                        "e": "UK Charter Mark."
                     }
                 ]
             },
@@ -1677,7 +3769,9 @@ TOPICS = {
                             "<b>Sevottam</b>, <b>2nd ARC 12th Report</b>, <b>CPGRAMS</b>, <b>Lok Sewa Guarantee</b>.",
                             "<b>Paper tiger</b>, <b>ritual compliance</b>, <b>accountability deficit</b>."
                         ],
-                        "k": ["Use 4 to 5 per answer"]
+                        "k": [
+                            "Use 4 to 5 per answer"
+                        ]
                     },
                     {
                         "t": "Answer skeleton",
@@ -1688,7 +3782,9 @@ TOPICS = {
                             "<b>Way forward:</b> statutory backing, tech, audits.",
                             "<b>Conclusion:</b> from promise to guarantee."
                         ],
-                        "k": ["Intro → Body → Challenges → Way forward → Conclusion"]
+                        "k": [
+                            "Intro → Body → Challenges → Way forward → Conclusion"
+                        ]
                     },
                     {
                         "t": "Ethics link (GS-4)",
@@ -1696,14 +3792,23 @@ TOPICS = {
                             "Charters embody <b>accountability, responsiveness, empathy</b> and <b>public service orientation</b>.",
                             "A conscientious officer treats the charter as a personal duty, not a poster."
                         ],
-                        "k": ["Public service values", "Probity"]
+                        "k": [
+                            "Public service values",
+                            "Probity"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "order",
                         "q": "Order the Mains answer skeleton.",
-                        "o": ["Intro: define and origin", "Body: principles, Sevottam, 2nd ARC", "Challenges", "Way forward", "Conclusion"],
+                        "o": [
+                            "Intro: define and origin",
+                            "Body: principles, Sevottam, 2nd ARC",
+                            "Challenges",
+                            "Way forward",
+                            "Conclusion"
+                        ],
                         "e": "Define → Explain → Critique → Fix → Conclude."
                     },
                     {
@@ -1721,8 +3826,17 @@ TOPICS = {
                     {
                         "k": "multi",
                         "q": "Tap the Mains keywords for this topic.",
-                        "o": ["Sevottam", "CPGRAMS", "Citizen-centric governance", "Dynastic politics"],
-                        "a": [0, 1, 2],
+                        "o": [
+                            "Sevottam",
+                            "CPGRAMS",
+                            "Citizen-centric governance",
+                            "Dynastic politics"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
                         "e": "The fourth is unrelated."
                     },
                     {
@@ -1796,6 +3910,375 @@ TOPICS = {
                     "Wheel: Sevottam at the centre with Citizen’s Charter, Grievance Redress and Service Delivery Capability around it."
                 ]
             }
+        ],
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag: the one false part of this sentence.",
+                "o": [
+                    "Citizen’s Charters are legally enforceable in court,",
+                    "were launched in India in 1997,",
+                    "and are coordinated by DARPG."
+                ],
+                "a": 0,
+                "e": "Charters are voluntary commitments. Enforceability requires a statute such as a Right to Services Act."
+            },
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "Sevottam combines Seva and Uttam,",
+                    "has four modules,",
+                    "and was developed by DARPG."
+                ],
+                "a": 1,
+                "e": "Three modules: Citizen’s Charter, Grievance Redress, Service Delivery Capability."
+            },
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "The Citizens Charter Bill, 2011 proposed grievance officers and penalties,",
+                    "and it was passed into law in 2013."
+                ],
+                "a": 1,
+                "e": "The Citizens Charter Bill lapsed in 2014 upon dissolution of the 15th Lok Sabha."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the UK launched its Citizen’s Charter.",
+                "a": 1991,
+                "tol": 0,
+                "min": 1980,
+                "max": 2020,
+                "e": "1991, under PM John Major."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year Madhya Pradesh passed the first Lok Sewa Guarantee Act.",
+                "a": 2010,
+                "tol": 0,
+                "min": 1980,
+                "max": 2020,
+                "e": "2010 (MP pioneered statutory Right to Services)."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year of the 2nd ARC 12th Report on citizen-centric administration (1 year off is fine).",
+                "a": 2009,
+                "tol": 1,
+                "min": 1980,
+                "max": 2020,
+                "e": "2009: 12th Report, 'Citizen Centric Administration: The Heart of Governance'."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Charter or Right to Services Act?",
+                "b": [
+                    "Charter",
+                    "RTS Act"
+                ],
+                "it": [
+                    [
+                        "Voluntary promise",
+                        0
+                    ],
+                    [
+                        "Penalty on defaulting officer",
+                        1
+                    ],
+                    [
+                        "Statutory deadlines",
+                        1
+                    ],
+                    [
+                        "No legal remedy",
+                        0
+                    ],
+                    [
+                        "Appeal against delay",
+                        1
+                    ]
+                ],
+                "e": "Charter = promise. RTS Act = enforceable guarantee."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Challenge or Fix?",
+                "b": [
+                    "Challenge",
+                    "Fix"
+                ],
+                "it": [
+                    [
+                        "Vague standards",
+                        0
+                    ],
+                    [
+                        "Co-create with citizens",
+                        1
+                    ],
+                    [
+                        "Low awareness",
+                        0
+                    ],
+                    [
+                        "Third-party social audit",
+                        1
+                    ],
+                    [
+                        "No penalty",
+                        0
+                    ],
+                    [
+                        "SMART standards",
+                        1
+                    ]
+                ],
+                "e": "Pair every challenge with a fix in Mains."
+            },
+            {
+                "k": "mc",
+                "q": "Odd keyword out: which does NOT belong with Sevottam?",
+                "o": [
+                    "Grievance Redress",
+                    "Service Delivery Capability",
+                    "Official Secrets Act",
+                    "Citizen’s Charter"
+                ],
+                "a": 2,
+                "e": "Sevottam = Charter + Grievance Redress + Service Delivery Capability."
+            },
+            {
+                "k": "mc",
+                "q": "Odd one out: which is NOT a weakness of charters?",
+                "o": [
+                    "Vague standards",
+                    "Low awareness",
+                    "Penalty on defaulters",
+                    "No legal remedy"
+                ],
+                "a": 2,
+                "e": "Penalties on defaulters come with Right to Services Acts, not plain charters."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I was launched in the UK in 1991.",
+                    "In India I gained momentum after the 1997 Chief Ministers’ Conference.",
+                    "I list services, standards, timelines and redress.",
+                    "I have no legal force."
+                ],
+                "o": [
+                    "Citizen’s Charter",
+                    "RTI Act",
+                    "Lokpal",
+                    "Right to Services Act"
+                ],
+                "a": 0,
+                "e": "The Citizen’s Charter."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a framework from DARPG.",
+                    "My name joins words for service and excellent.",
+                    "I have three modules."
+                ],
+                "o": [
+                    "Sevottam",
+                    "CPGRAMS",
+                    "Jan Soochana",
+                    "Charter Mark"
+                ],
+                "a": 0,
+                "e": "Sevottam = Seva + Uttam."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am an online portal.",
+                    "Citizens lodge and track grievances on me.",
+                    "DARPG runs me."
+                ],
+                "o": [
+                    "CPGRAMS",
+                    "Sakala",
+                    "Sevottam",
+                    "Report Card"
+                ],
+                "a": 0,
+                "e": "CPGRAMS (Centralized Public Grievance Redress and Monitoring System)."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am an award from the UK.",
+                    "I reward excellence in service standards."
+                ],
+                "o": [
+                    "Charter Mark",
+                    "Lok Sewa Guarantee",
+                    "Report Card",
+                    "Sakala"
+                ],
+                "a": 0,
+                "e": "The UK Charter Mark."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: a citizen has waited 3 months for a service your charter promises in 15 days.",
+            "e": "Values: empathy, accountability, integrity, public service orientation.",
+            "s": [
+                {
+                    "t": "A visibly upset citizen reaches your counter. Your first move?",
+                    "o": [
+                        [
+                            "Apologise, record the grievance and give a date",
+                            1,
+                            "Acknowledgement and a date are basic responsiveness."
+                        ],
+                        [
+                            "Ask her to come back next week",
+                            0,
+                            "Delay repeats the failure the charter promised to prevent."
+                        ],
+                        [
+                            "Say charters are only guidelines",
+                            0,
+                            "This paper-tiger attitude destroys public trust."
+                        ]
+                    ]
+                },
+                {
+                    "t": "You find the file stuck with a clerk who was on leave. Next?",
+                    "o": [
+                        [
+                            "Fast-track it and fix the leave-cover gap",
+                            1,
+                            "You solved the case and the system."
+                        ],
+                        [
+                            "Blame the clerk publicly",
+                            0,
+                            "Public blame hurts morale and fixes nothing."
+                        ],
+                        [
+                            "Quietly close the file",
+                            0,
+                            "No learning and no accountability."
+                        ]
+                    ]
+                },
+                {
+                    "t": "A senior asks you to hide the delay from the monthly report. Your call?",
+                    "o": [
+                        [
+                            "Report honestly and propose a remedy",
+                            1,
+                            "Integrity and transparency: the heart of GS-4."
+                        ],
+                        [
+                            "Edit the report to look good",
+                            0,
+                            "Falsifying records breaks probity."
+                        ],
+                        [
+                            "Delay the report",
+                            0,
+                            "Avoidance is not accountability."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: Charter only, RTS Act only, or Both?",
+            "b": [
+                "Charter only",
+                "RTS Act only",
+                "Both"
+            ],
+            "it": [
+                [
+                    "Voluntary promise",
+                    0
+                ],
+                [
+                    "No legal remedy",
+                    0
+                ],
+                [
+                    "Penalty on officer",
+                    1
+                ],
+                [
+                    "Appeal against delay",
+                    1
+                ],
+                [
+                    "Citizen-facing service standards",
+                    2
+                ],
+                [
+                    "Aims at timely service",
+                    2
+                ]
+            ],
+            "e": "Both aim at timely service. Only the RTS Act adds penalties and appeals."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "A",
+                    "Citizen’s",
+                    "Charter",
+                    "is",
+                    "a",
+                    "public",
+                    "promise"
+                ],
+                "e": "A Citizen’s Charter is a public promise."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Right",
+                    "to",
+                    "Services",
+                    "Acts",
+                    "guarantee",
+                    "services",
+                    "within",
+                    "deadlines"
+                ],
+                "e": "Right to Services Acts guarantee services within deadlines."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Sevottam",
+                    "has",
+                    "three",
+                    "modules"
+                ],
+                "e": "Sevottam has three modules."
+            }
         ]
     },
     "rti": {
@@ -1804,764 +4287,1146 @@ TOPICS = {
         "badge": "🔑",
         "sub": "Master constitutional genesis (Art 19(1)(a)), statutory architecture, Section 8 exemptions, landmark case laws, and 2nd ARC reforms.",
         "hue": [
-                "#0b8a9a",
-                "#2f63d6",
-                "#7442d6",
-                "#b8760a",
-                "#d23a40",
-                "#0f8a62",
-                "#d9570c"
+            "#0b8a9a",
+            "#2f63d6",
+            "#7442d6",
+            "#b8760a",
+            "#d23a40",
+            "#0f8a62",
+            "#d9570c"
         ],
         "ico": [
-                [
-                        "🔑",
-                        "📜",
-                        "⚖️"
-                ],
-                [
-                        "🏢",
-                        "⏱️",
-                        "📋"
-                ],
-                [
-                        "🔒",
-                        "🛡️",
-                        "📝"
-                ],
-                [
-                        "🏛️",
-                        "⚖️",
-                        "🗳️"
-                ],
-                [
-                        "🚧",
-                        "⚠️",
-                        "⏳"
-                ],
-                [
-                        "✅",
-                        "🏛️",
-                        "📊"
-                ],
-                [
-                        "🎯",
-                        "🗺️",
-                        "🏆"
-                ]
+            [
+                "🔑",
+                "📜",
+                "⚖️"
+            ],
+            [
+                "🏢",
+                "⏱️",
+                "📋"
+            ],
+            [
+                "🔒",
+                "🛡️",
+                "📝"
+            ],
+            [
+                "🏛️",
+                "⚖️",
+                "🗳️"
+            ],
+            [
+                "🚧",
+                "⚠️",
+                "⏳"
+            ],
+            [
+                "✅",
+                "🏛️",
+                "📊"
+            ],
+            [
+                "🎯",
+                "🗺️",
+                "🏆"
+            ]
         ],
         "lessons": [
-                {
-                        "n": "Constitutional Roots & Evolution",
-                        "e": "🧭",
-                        "d": "From Raj Narain (1975) & MKSS to 2005 Act",
-                        "c": [
-                                {
-                                        "t": "Constitutional Genesis: Article 19(1)(a)",
-                                        "b": [
-                                                "The Right to Information is rooted in <b>Article 19(1)(a) (Freedom of Speech and Expression)</b>, reinforced by <b>Article 14 (anti-arbitrariness)</b> and <b>Article 21 (dignity)</b>.",
-                                                "Landmark ruling: In <b>State of Uttar Pradesh v. Raj Narain (1975)</b>, the Supreme Court held that in a democracy where all agents of the public must be responsible for their conduct, citizens have a right to know every public act.",
-                                                "Shifts governance from the colonial culture of secrecy (*Official Secrets Act, 1923*) to participatory democracy."
-                                        ],
-                                        "k": [
-                                                "Article 19(1)(a)",
-                                                "Raj Narain (1975)",
-                                                "Culture of Secrecy vs Openness"
-                                        ],
-                                        "n": "Without information, citizens cannot cast an informed vote or meaningfully exercise free speech."
-                                },
-                                {
-                                        "t": "Grassroots Struggle: The MKSS Movement",
-                                        "b": [
-                                                "In the 1990s, the <b>Mazdoor Kisan Shakti Sangathan (MKSS)</b> led by Aruna Roy in rural Rajasthan spearheaded the RTI movement.",
-                                                "Historic demand: <b>'Hamara Paisa, Hamara Hisab'</b> (Our Money, Our Accounts). Organized *Jan Sunwais* (public hearings) to audit muster rolls and expose fake vouchers in drought relief.",
-                                                "Proved that RTI is not an elite intellectual pursuit, but an indispensable weapon of survival for the poor."
-                                        ],
-                                        "k": [
-                                                "MKSS Rajasthan",
-                                                "Jan Sunwai (Social Audit)",
-                                                "Hamara Paisa Hamara Hisab"
-                                        ],
-                                        "n": "A classic example of a grassroots civil society movement transforming into a statutory reality."
-                                },
-                                {
-                                        "t": "Legislative Evolution (1997–2005)",
-                                        "b": [
-                                                "<b>1997:</b> Tamil Nadu became the first state in India to pass an RTI law, followed by Goa, Delhi, and Karnataka.",
-                                                "<b>2002:</b> The central <i>Freedom of Information Act, 2002</i> was passed, but was toothless, lacked independent appellate bodies, and was never notified.",
-                                                "<b>2005:</b> Enactment of the comprehensive <b>Right to Information Act, 2005</b>, with the <b>DoPT (Dept. of Personnel & Training)</b> as the nodal department."
-                                        ],
-                                        "k": [
-                                                "Tamil Nadu (1997 First State)",
-                                                "Freedom of Information Act 2002",
-                                                "RTI Act 2005",
-                                                "DoPT Nodal Body"
-                                        ],
-                                        "n": "The 2005 Act provided enforceable mechanisms, penalty provisions, and independent oversight commissions."
-                                }
+            {
+                "n": "Constitutional Roots & Evolution",
+                "e": "🧭",
+                "d": "From Raj Narain (1975) & MKSS to 2005 Act",
+                "c": [
+                    {
+                        "t": "Constitutional Genesis: Article 19(1)(a)",
+                        "b": [
+                            "The Right to Information is rooted in <b>Article 19(1)(a) (Freedom of Speech and Expression)</b>, reinforced by <b>Article 14 (anti-arbitrariness)</b> and <b>Article 21 (dignity)</b>.",
+                            "Landmark ruling: In <b>State of Uttar Pradesh v. Raj Narain (1975)</b>, the Supreme Court held that in a democracy where all agents of the public must be responsible for their conduct, citizens have a right to know every public act.",
+                            "Shifts governance from the colonial culture of secrecy (*Official Secrets Act, 1923*) to participatory democracy."
                         ],
-                        "q": [
-                                {
-                                        "k": "mc",
-                                        "q": "In which landmark 1975 case did the Supreme Court first recognize the Right to Information under Article 19(1)(a)?",
-                                        "o": [
-                                                "Kesavananda Bharati v. State of Kerala",
-                                                "State of Uttar Pradesh v. Raj Narain",
-                                                "Maneka Gandhi v. Union of India",
-                                                "Minerva Mills v. Union of India"
-                                        ],
-                                        "a": 1,
-                                        "e": "In State of UP v. Raj Narain (1975), Justice Mathew ruled that citizens have a right to know every public act done by their functionaries."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "Which grassroots movement in Rajasthan popularized the demand for public records through 'Jan Sunwais'?",
-                                        "o": [
-                                                "Chipko Movement",
-                                                "Mazdoor Kisan Shakti Sangathan (MKSS)",
-                                                "Narmada Bachao Andolan",
-                                                "Bhoodan Movement"
-                                        ],
-                                        "a": 1,
-                                        "e": "MKSS, founded by Aruna Roy, Nikhil Dey, and Shankar Singh, championed rural transparency through Jan Sunwais."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "Which state was the first in India to enact an RTI law in 1997?",
-                                        "o": [
-                                                "Maharashtra",
-                                                "Tamil Nadu",
-                                                "Kerala",
-                                                "Rajasthan"
-                                        ],
-                                        "a": 1,
-                                        "e": "Tamil Nadu enacted India's first state-level Right to Information Act in 1997."
-                                },
-                                {
-                                        "k": "order",
-                                        "q": "Arrange the milestones in India's transparency movement in chronological order.",
-                                        "o": [
-                                                "SC recognizes RTI in Raj Narain case (1975)",
-                                                "MKSS grassroots Jan Sunwais in Rajasthan (1990s)",
-                                                "Tamil Nadu enacts first state RTI law (1997)",
-                                                "Passage of the Right to Information Act (2005)"
-                                        ],
-                                        "e": "1975 (Raj Narain) → 1990s (MKSS) → 1997 (Tamil Nadu) → 2005 (RTI Act)."
-                                }
-                        ]
-                },
-                {
-                        "n": "Core Architecture & Timelines",
-                        "e": "🏛️",
-                        "d": "Public authorities, PIOs & Section 7 deadlines",
-                        "c": [
-                                {
-                                        "t": "Universal Scope: Public Authority (Section 2(h))",
-                                        "b": [
-                                                "Defines 'Public Authority' as any body established by the <b>Constitution, Parliament, State Legislature, or government notification</b>.",
-                                                "Critically includes entities <b>owned, controlled, or substantially financed</b> directly or indirectly by government funds.",
-                                                "Covers non-government organizations (NGOs) receiving substantial state funding."
-                                        ],
-                                        "k": [
-                                                "Section 2(h)",
-                                                "Substantially Financed",
-                                                "Public Authority Scope"
-                                        ],
-                                        "n": "Broad definition ensures public funds cannot hide behind corporate or non-profit veils."
-                                },
-                                {
-                                        "t": "Proactive Transparency (Section 4)",
-                                        "b": [
-                                                "Mandates all public authorities to <b>suo motu publish details</b> of their organization, functions, powers, officers' salaries, and subsidy schemes.",
-                                                "Requires digitized records for easy public access and regular updating.",
-                                                "Philosophy: Sunshine by default — minimize the necessity for citizens to file formal applications."
-                                        ],
-                                        "k": [
-                                                "Section 4 Suo Motu Disclosure",
-                                                "Digitized Records",
-                                                "Proactive Sunshine"
-                                        ],
-                                        "n": "If Section 4 is fully implemented, over 70% of routine RTI applications become unnecessary."
-                                },
-                                {
-                                        "t": "Strict Statutory Deadlines (Section 7)",
-                                        "b": [
-                                                "<b>General Request:</b> Must be answered within <b>30 days</b> (or 35 days if submitted via Assistant PIO).",
-                                                "<b>Life or Liberty:</b> If the requested information concerns the life or liberty of an individual, it must be provided within <b>48 HOURS</b>!",
-                                                "<b>Fees:</b> Nominal fee for general citizens; <b>100% free for Below Poverty Line (BPL) applicants</b>. If response is delayed beyond 30 days, information must be given free to everyone."
-                                        ],
-                                        "k": [
-                                                "30-Day Standard Limit",
-                                                "48-Hour Life & Liberty Rule",
-                                                "BPL Fee Waiver",
-                                                "Free if Delayed"
-                                        ],
-                                        "n": "The 48-hour life-or-liberty rule is vital for undertrials, police encounters, and emergency medical access."
-                                }
+                        "k": [
+                            "Article 19(1)(a)",
+                            "Raj Narain (1975)",
+                            "Culture of Secrecy vs Openness"
                         ],
-                        "q": [
-                                {
-                                        "k": "mc",
-                                        "q": "Within what statutory timeframe must information concerning 'life or liberty' be supplied under Section 7(1)?",
-                                        "o": [
-                                                "24 hours",
-                                                "48 hours",
-                                                "7 days",
-                                                "15 days"
-                                        ],
-                                        "a": 1,
-                                        "e": "Section 7(1) mandates a strict 48-hour turnaround if information concerns an individual's life or liberty."
-                                },
-                                {
-                                        "k": "tf",
-                                        "q": "Citizens living Below the Poverty Line (BPL) must pay double the fee to prioritize their applications.",
-                                        "a": 1,
-                                        "e": "False. Section 7(5) explicitly waives all application and copying fees for BPL citizens."
-                                },
-                                {
-                                        "k": "multi",
-                                        "q": "Tap all entities falling under the definition of 'public authority' under Section 2(h).",
-                                        "o": [
-                                                "Constitutional bodies like Election Commission",
-                                                "Statutory corporations established by Parliament",
-                                                "NGOs substantially financed by the government",
-                                                "Wholly private clubs with zero government funding"
-                                        ],
-                                        "a": [
-                                                0,
-                                                1,
-                                                2
-                                        ],
-                                        "e": "Bodies created by Constitution, statute, or substantially financed by govt qualify. Wholly private clubs with no govt funds do not."
-                                },
-                                {
-                                        "k": "match",
-                                        "q": "Match the statutory section to its core mandate.",
-                                        "p": [
-                                                [
-                                                        "Section 2(h)",
-                                                        "Definition of Public Authority"
-                                                ],
-                                                [
-                                                        "Section 4",
-                                                        "Suo motu proactive transparency"
-                                                ],
-                                                [
-                                                        "Section 5",
-                                                        "Designation of PIOs & APIOs"
-                                                ],
-                                                [
-                                                        "Section 7",
-                                                        "30-day / 48-hour deadlines & fees"
-                                                ]
-                                        ],
-                                        "e": "Memorize Sections 2(h), 4, 7, 8, and 20 for GS-2 answers!"
-                                }
-                        ]
-                },
-                {
-                        "n": "Exemptions & Recent Amendments",
-                        "e": "⚖️",
-                        "d": "Section 8, 2019 Tenure & DPDP Act 2023",
-                        "c": [
-                                {
-                                        "t": "Section 8 Exemptions & Public Interest Override",
-                                        "b": [
-                                                "Section 8(1) carves out limited exceptions: national security, foreign relations, cabinet papers, commercial confidence, and personal privacy.",
-                                                "<b>The Golden Rule — Section 8(2) Public Interest Override:</b> A public authority may allow access to exempt information if <b>public interest in disclosure outweighs the harm to protected interests</b>!",
-                                                "Parliamentary Parity Proviso: <i>Information which cannot be denied to Parliament or a State Legislature shall not be denied to any citizen.</i>"
-                                        ],
-                                        "k": [
-                                                "Section 8(1) Exemptions",
-                                                "Section 8(2) Public Interest Override",
-                                                "Parliamentary Parity"
-                                        ],
-                                        "n": "Section 8(2) establishes that public welfare always trumps bureaucratic secrecy."
-                                },
-                                {
-                                        "t": "RTI (Amendment) Act, 2019",
-                                        "b": [
-                                                "Removed the fixed <b>5-year statutory tenure</b> for Central and State Information Commissioners.",
-                                                "Removed statutory salary parity linking CIC to Chief Election Commissioner.",
-                                                "Tenure, salaries, and service conditions are now <b>determined by rules prescribed by the Central Government</b>.",
-                                                "Critique: Stirs concerns regarding the perceived independence and institutional autonomy of the commissions."
-                                        ],
-                                        "k": [
-                                                "2019 Amendment",
-                                                "Removal of Fixed 5-Year Tenure",
-                                                "Executive Rule-Making"
-                                        ],
-                                        "n": "A frequent UPSC Mains topic on the dilution of independent statutory watchdogs."
-                                },
-                                {
-                                        "t": "DPDP Act, 2023 [Section 44(3)]",
-                                        "b": [
-                                                "The Digital Personal Data Protection Act, 2023 substituted Section 8(1)(j) of the RTI Act with an exemption for <b>'information which relates to personal information'</b>.",
-                                                "Deleted earlier provisos that allowed disclosure if information had a nexus to public activity or if it could not be denied to Parliament.",
-                                                "However, the overarching <b>Section 8(2) Public Interest Override remains fully alive</b> in the statute!"
-                                        ],
-                                        "k": [
-                                                "DPDP Act 2023 Sec 44(3)",
-                                                "Section 8(1)(j) Substitution",
-                                                "Personal Information Exemption"
-                                        ],
-                                        "n": "Balances the constitutional Right to Information with the Right to Privacy (Puttaswamy 2017)."
-                                }
+                        "n": "Without information, citizens cannot cast an informed vote or meaningfully exercise free speech."
+                    },
+                    {
+                        "t": "Grassroots Struggle: The MKSS Movement",
+                        "b": [
+                            "In the 1990s, the <b>Mazdoor Kisan Shakti Sangathan (MKSS)</b> led by Aruna Roy in rural Rajasthan spearheaded the RTI movement.",
+                            "Historic demand: <b>'Hamara Paisa, Hamara Hisab'</b> (Our Money, Our Accounts). Organized *Jan Sunwais* (public hearings) to audit muster rolls and expose fake vouchers in drought relief.",
+                            "Proved that RTI is not an elite intellectual pursuit, but an indispensable weapon of survival for the poor."
                         ],
-                        "q": [
-                                {
-                                        "k": "mc",
-                                        "q": "What extraordinary power does Section 8(2) of the RTI Act bestow upon authorities?",
-                                        "o": [
-                                                "To delete controversial government files",
-                                                "To override exemptions if public interest outweighs harm",
-                                                "To cancel citizen applications without reasons",
-                                                "To arrest citizens for asking sensitive questions"
-                                        ],
-                                        "a": 1,
-                                        "e": "Section 8(2) allows disclosure of exempt records if the public interest in disclosure outweighs the harm."
-                                },
-                                {
-                                        "k": "tf",
-                                        "q": "The RTI (Amendment) Act, 2019 strengthened the statutory autonomy of Information Commissioners by granting them constitutional status.",
-                                        "a": 1,
-                                        "e": "False. It removed fixed 5-year tenures and salary parity, placing terms under executive discretion."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "What significant modification did the DPDP Act, 2023 introduce to Section 8(1)(j) of the RTI Act?",
-                                        "o": [
-                                                "Abolished the RTI Act completely",
-                                                "Substituted Section 8(1)(j) with a blanket exemption for personal information",
-                                                "Made all government databases public",
-                                                "Banned journalists from filing RTIs"
-                                        ],
-                                        "a": 1,
-                                        "e": "Section 44(3) of DPDP Act substituted Section 8(1)(j) to broaden exemptions for personal information."
-                                },
-                                {
-                                        "k": "multi",
-                                        "q": "Tap true statements regarding exemptions under the RTI Act.",
-                                        "o": [
-                                                "Section 8(2) public interest override continues to exist after DPDP Act 2023",
-                                                "Information that cannot be denied to Parliament cannot be denied to citizens",
-                                                "Any officer can invent new exemptions not listed in Section 8",
-                                                "Cabinet papers must be disclosed after decisions are made and completed"
-                                        ],
-                                        "a": [
-                                                0,
-                                                1,
-                                                3
-                                        ],
-                                        "e": "Section 8(2) still overrides, parliamentary parity stands, and completed cabinet decisions become disclosable."
-                                }
-                        ]
-                },
-                {
-                        "n": "Landmark Case Laws",
-                        "e": "📜",
-                        "d": "Aditya Bandopadhyay to Electoral Bonds (2024)",
-                        "c": [
-                                {
-                                        "t": "Answer Books & ACRs: Exams and Service Records",
-                                        "b": [
-                                                "<b>CBSE v. Aditya Bandopadhyay (2011):</b> The Supreme Court held that evaluated answer scripts are 'information' accessible under RTI. The examiner–examinee relationship is not an exempt fiduciary shield.",
-                                                "<b>Girish Ramchandra Deshpande v. CIC (2013):</b> Annual Confidential Reports (ACRs), service records, and disciplinary proceedings constitute personal information under Section 8(1)(j) unless larger public interest justifies disclosure."
-                                        ],
-                                        "k": [
-                                                "Aditya Bandopadhyay (2011)",
-                                                "Answer Books Disclosable",
-                                                "Girish Deshpande (2013)"
-                                        ],
-                                        "n": "Balances student transparency against the privacy of public servants' personnel records."
-                                },
-                                {
-                                        "t": "Financial Transparency & Institutions",
-                                        "b": [
-                                                "<b>Thalappalam Coop Bank v. State of Kerala (2013):</b> Cooperative societies are not automatically public authorities under Section 2(h); they must satisfy the test of substantial state financing or control.",
-                                                "<b>RBI v. Jayantilal N. Mistry (2016):</b> SC rejected the Reserve Bank of India's blanket claim of fiduciary confidentiality, ordering disclosure of inspection reports of defaulting banks in the public interest."
-                                        ],
-                                        "k": [
-                                                "Thalappalam Coop Bank (2013)",
-                                                "RBI v. Jayantilal Mistry (2016)",
-                                                "Fiduciary Shield Rejected"
-                                        ],
-                                        "n": "Reaffirms that economic regulators cannot shield systemic financial defaulters behind secrecy."
-                                },
-                                {
-                                        "t": "CJI Office & Electoral Bonds (2019 & 2024)",
-                                        "b": [
-                                                "<b>CPIO, Supreme Court v. Subhash Chandra Agarwal (2019):</b> A 5-judge Constitution Bench held that the <b>Office of the Chief Justice of India (CJI) is a public authority</b> under RTI, balancing judicial independence with transparency via proportionality.",
-                                                "<b>ADR v. Union of India (2024):</b> Constitution Bench unanimously struck down the Electoral Bonds Scheme, holding that voters' right to know political party funding is an integral fundamental right under Article 19(1)(a)."
-                                        ],
-                                        "k": [
-                                                "CJI Office under RTI (2019)",
-                                                "Subhash Chandra Agarwal",
-                                                "ADR Electoral Bonds (2024)",
-                                                "Voters' Right to Know"
-                                        ],
-                                        "n": "The 2024 Electoral Bonds judgment is the strongest constitutional reaffirmation of RTI in decades."
-                                }
+                        "k": [
+                            "MKSS Rajasthan",
+                            "Jan Sunwai (Social Audit)",
+                            "Hamara Paisa Hamara Hisab"
                         ],
-                        "q": [
-                                {
-                                        "k": "match",
-                                        "q": "Match the landmark case to its historic legal doctrine.",
-                                        "p": [
-                                                [
-                                                        "Aditya Bandopadhyay (2011)",
-                                                        "Exam answer scripts accessible under RTI"
-                                                ],
-                                                [
-                                                        "RBI v. Jayantilal Mistry (2016)",
-                                                        "Rejected blanket fiduciary shield for bank inspection reports"
-                                                ],
-                                                [
-                                                        "Subhash Chandra Agarwal (2019)",
-                                                        "Office of the CJI is a public authority under RTI"
-                                                ],
-                                                [
-                                                        "ADR v. Union of India (2024)",
-                                                        "Struck down Electoral Bonds under Art 19(1)(a)"
-                                                ]
-                                        ],
-                                        "e": "These four cases represent the bedrock of judicial interpretation of the RTI Act."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "In which case did the Supreme Court hold that cooperative societies are not automatically public authorities unless substantially financed by the state?",
-                                        "o": [
-                                                "ADR Case",
-                                                "Thalappalam Coop Bank v. State of Kerala",
-                                                "Raj Narain Case",
-                                                "Jayantilal Mistry Case"
-                                        ],
-                                        "a": 1,
-                                        "e": "In Thalappalam (2013), SC clarified that cooperative societies need substantial govt control or funds to fall under Sec 2(h)."
-                                },
-                                {
-                                        "k": "tf",
-                                        "q": "In Subhash Chandra Agarwal (2019), the Supreme Court ruled that judicial independence completely excludes the higher judiciary from the RTI Act.",
-                                        "a": 1,
-                                        "e": "False. The Constitution Bench held that the CJI's office IS a public authority under RTI, harmonized via proportionality."
-                                }
-                        ]
-                },
-                {
-                        "n": "Systemic Challenges & Whistleblower Peril",
-                        "e": "🚧",
-                        "d": "Vacancies, threats, the 4% penalty & Official Secrets",
-                        "c": [
-                                {
-                                        "t": "Danger to RTI Users & Whistleblowers",
-                                        "b": [
-                                                "Citizens and activists using RTI to expose sand mafia, tender rigging, or panchayat scams face physical assault, harassment, and murder.",
-                                                "Over 100+ RTI activists have been murdered across India over the past two decades.",
-                                                "The <b>Whistleblowers Protection Act, 2014</b> has languished without operationalized rules, leaving information seekers vulnerable."
-                                        ],
-                                        "k": [
-                                                "Whistleblower Murders",
-                                                "Whistleblowers Protection Act 2014",
-                                                "Safety Crisis"
-                                        ],
-                                        "n": "When seeking public information carries a death sentence, democracy is mortally wounded."
-                                },
-                                {
-                                        "t": "Appellate Backlogs & Vacancy Paralysis",
-                                        "b": [
-                                                "Over <b>3 to 4 lakh appeals</b> remain pending across the Central Information Commission (CIC) and State Information Commissions (SICs).",
-                                                "Governments delay appointments, leaving several state commissions completely headless or functioning with skeletal staff.",
-                                                "Waiting times for a second appeal stretch from 2 to 5 years, converting 'Right to Information' into 'Right to Wait'."
-                                        ],
-                                        "k": [
-                                                "Commission Vacancies",
-                                                "Right to Wait",
-                                                "Multi-Year Pendency"
-                                        ],
-                                        "n": "Delayed justice in transparency turns statutory promises into paper tigers."
-                                },
-                                {
-                                        "t": "The 4% Penalty Paradox & Colonial Secrecy",
-                                        "b": [
-                                                "Section 20 allows commissions to levy fines of ₹250/day up to ₹25,000 on recalcitrant PIOs.",
-                                                "Empirical data: Between 2015 and 2023, <b>penalties were imposed in barely ~4% of cases</b> where violations were found!",
-                                                "Bureaucrats weaponize minor formatting errors or claim 'state secret' under the lingering mindset of the <b>Official Secrets Act, 1923</b>."
-                                        ],
-                                        "k": [
-                                                "Section 20 Penalty Under-Use (4%)",
-                                                "Official Secrets Act 1923 Mindset",
-                                                "Unfair Rejections"
-                                        ],
-                                        "n": "Without fear of personal financial penalties, PIOs have zero incentive to answer on time."
-                                }
+                        "n": "A classic example of a grassroots civil society movement transforming into a statutory reality."
+                    },
+                    {
+                        "t": "Legislative Evolution (1997–2005)",
+                        "b": [
+                            "<b>1997:</b> Tamil Nadu became the first state in India to pass an RTI law, followed by Goa, Delhi, and Karnataka.",
+                            "<b>2002:</b> The central <i>Freedom of Information Act, 2002</i> was passed, but was toothless, lacked independent appellate bodies, and was never notified.",
+                            "<b>2005:</b> Enactment of the comprehensive <b>Right to Information Act, 2005</b>, with the <b>DoPT (Dept. of Personnel & Training)</b> as the nodal department."
                         ],
-                        "q": [
-                                {
-                                        "k": "mc",
-                                        "q": "Between 2015 and 2023, approximately what percentage of defaulting officers faced Section 20 financial penalties?",
-                                        "o": [
-                                                "Over 50%",
-                                                "About 25%",
-                                                "Barely ~4%",
-                                                "Exactly 0%"
-                                        ],
-                                        "a": 2,
-                                        "e": "Transparency studies reveal that penalties are imposed in only ~4% of eligible violation cases, nullifying deterrence."
-                                },
-                                {
-                                        "k": "tf",
-                                        "q": "The Whistleblowers Protection Act, 2014 has established dedicated local safe-houses and comprehensive rules in all states.",
-                                        "a": 1,
-                                        "e": "False. The Act has not been fully operationalized through comprehensive notified rules."
-                                },
-                                {
-                                        "k": "multi",
-                                        "q": "Tap genuine systemic challenges crippling the RTI Act.",
-                                        "o": [
-                                                "Chronic vacancies and backlog in Information Commissions",
-                                                "Lack of physical safety for grassroots whistleblowers",
-                                                "Low rate of penalty imposition under Section 20",
-                                                "Too many officers being sent to jail"
-                                        ],
-                                        "a": [
-                                                0,
-                                                1,
-                                                2
-                                        ],
-                                        "e": "Vacancies, activist murders, and lack of penalties cripple implementation. Officers are almost never jailed."
-                                }
-                        ]
-                },
-                {
-                        "n": "2nd ARC & The Way Forward",
-                        "e": "✅",
-                        "d": "National Coordination Committee & systemic fixes",
-                        "c": [
-                                {
-                                        "t": "2nd ARC Blueprint: 1st Report",
-                                        "b": [
-                                                "The 2nd Administrative Reforms Commission (ARC) dedicated its 1st Report to <b>'Right to Information: Master Key to Good Governance'</b>.",
-                                                "Recommended establishing a <b>National Coordination Committee (NCC)</b> under the Chief Information Commissioner to monitor portal performance and impact.",
-                                                "Stressed that at least <b>half (50%) of Information Commissioners</b> should be drawn from non-civil services backgrounds (law, media, academia, civil society)."
-                                        ],
-                                        "k": [
-                                                "2nd ARC 1st Report",
-                                                "Master Key to Good Governance",
-                                                "National Coordination Committee",
-                                                "50% Non-Civil Services"
-                                        ],
-                                        "n": "Breaking the bureaucratic monopoly over Information Commissions restores public trust."
-                                },
-                                {
-                                        "t": "Statutory Protection Chapter for Seekers",
-                                        "b": [
-                                                "Urgent need to amend the RTI Act to incorporate a dedicated chapter: <b>'Protection of those seeking information under the RTI Act'</b>.",
-                                                "Mandate police protection and fast-track prosecution when an information seeker reports intimidation or filing an RTI on sensitive land/mining issues.",
-                                                "Must work hand-in-hand with fully operationalized rules under the Whistleblowers Protection Act."
-                                        ],
-                                        "k": [
-                                                "Dedicated Protection Chapter",
-                                                "Whistleblower Safeguards",
-                                                "Fast-track Prosecution"
-                                        ],
-                                        "n": "State must guarantee life and liberty to those who dare to shine light on corruption."
-                                },
-                                {
-                                        "t": "Independent Public Records Offices & Tech",
-                                        "b": [
-                                                "2nd ARC recommended setting up independent <b>Public Records Offices</b> at Central and State levels to overhaul archiving and indexing.",
-                                                "<b>Standardize procedures:</b> Eliminate archaic payment methods (like compulsory demand drafts); unify application fee structures nationwide.",
-                                                "Continuous capacity building and rigorous sensitization for PIOs on the constitutional sanctity of transparency."
-                                        ],
-                                        "k": [
-                                                "Public Records Offices",
-                                                "Standardized Fee Structure",
-                                                "E-Filing & Digital Tracking"
-                                        ],
-                                        "n": "Good governance cannot function without modern, indexed, searchable public records."
-                                }
+                        "k": [
+                            "Tamil Nadu (1997 First State)",
+                            "Freedom of Information Act 2002",
+                            "RTI Act 2005",
+                            "DoPT Nodal Body"
                         ],
-                        "q": [
-                                {
-                                        "k": "mc",
-                                        "q": "What body did the 2nd ARC recommend setting up under the Chief Information Commissioner to evaluate RTI impact?",
-                                        "o": [
-                                                "Central Vigilance Commission",
-                                                "National Coordination Committee (NCC)",
-                                                "National Transparency Tribunal",
-                                                "Public Grievance Council"
-                                        ],
-                                        "a": 1,
-                                        "e": "The 2nd ARC recommended an NCC under the Chief Information Commissioner to monitor RTI nationwide."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "What proportion of Information Commissioners should be drawn from non-civil service backgrounds according to the 2nd ARC?",
-                                        "o": [
-                                                "10%",
-                                                "25%",
-                                                "At least 50%",
-                                                "100%"
-                                        ],
-                                        "a": 2,
-                                        "e": "The 2nd ARC recommended at least 50% non-civil service commissioners to avoid bureaucratic insularity."
-                                },
-                                {
-                                        "k": "multi",
-                                        "q": "Tap the core reform measures recommended by the 2nd ARC for RTI.",
-                                        "o": [
-                                                "Establish independent Public Records Offices",
-                                                "Incorporate statutory protection chapter for information seekers",
-                                                "Standardize fee structures and eliminate demand draft hurdles",
-                                                "Repeal the RTI Act and replace with Official Secrets Act"
-                                        ],
-                                        "a": [
-                                                0,
-                                                1,
-                                                2
-                                        ],
-                                        "e": "Public Records Offices, protection chapter, and standardized digital access are 2nd ARC cornerstones."
-                                },
-                                {
-                                        "k": "match",
-                                        "q": "Match the proposed reform to its governance outcome.",
-                                        "p": [
-                                                [
-                                                        "National Coordination Committee",
-                                                        "Central monitoring of portal & Act impact"
-                                                ],
-                                                [
-                                                        "50% Non-Civil Service Commissioners",
-                                                        "Prevents bureaucratic bias and insularity"
-                                                ],
-                                                [
-                                                        "Public Records Offices",
-                                                        "Modern cataloging and suo motu disclosure"
-                                                ],
-                                                [
-                                                        "Statutory Protection Chapter",
-                                                        "Shields whistleblowers from physical violence"
-                                                ]
-                                        ],
-                                        "e": "Strategic solutions to cite in Mains GS-2 answers."
-                                }
-                        ]
-                },
-                {
-                        "n": "Mains Answer Mastery Toolkit",
-                        "e": "🎯",
-                        "d": "Keywords, 5-point skeleton & model intro",
-                        "c": [
-                                {
-                                        "t": "High-Yield Keywords to Drop",
-                                        "b": [
-                                                "<b>Constitutional Anchors:</b> Article 19(1)(a), Raj Narain (1975), Sunshine legislation, Culture of secrecy vs openness.",
-                                                "<b>Statutory Architecture:</b> Section 2(h) Public Authority, Section 4 Suo Motu, Section 7 Life & Liberty (48h), Section 8(2) Public Interest Override, Section 20 Penalty.",
-                                                "<b>Landmark Jurisprudence:</b> Subhash Chandra Agarwal (CJI office), Jayantilal Mistry (RBI), ADR (Electoral Bonds 2024).",
-                                                "<b>2nd ARC Recommendations:</b> 1st Report ('Master Key to Good Governance'), National Coordination Committee, 50% non-civil service commissioners, Public Records Offices."
-                                        ],
-                                        "k": [
-                                                "Use 4 to 5 per Mains answer!"
-                                        ],
-                                        "n": "Examiners award top marks for precise statutory section citations and landmark jurisprudence."
-                                },
-                                {
-                                        "t": "Mains 5-Stage Answer Skeleton",
-                                        "b": [
-                                                "<b>1. Intro:</b> Article 19(1)(a) + Raj Narain (1975) + MKSS grassroots Jan Sunwais.",
-                                                "<b>2. Statutory Pillars:</b> Sections 2(h), 4, 7 (48h/30d), and the Section 8(2) public interest override.",
-                                                "<b>3. Landmark Case Laws:</b> CJI under RTI (Subhash Chandra Agarwal) & ADR Electoral Bonds (2024).",
-                                                "<b>4. Structural Bottlenecks:</b> 2019 tenure amendment, DPDP Act 2023 Sec 44(3), 4% penalty rate, whistleblower murders.",
-                                                "<b>5. Way Forward & Conclusion:</b> 2nd ARC blueprint (NCC, 50% non-IAS, Public Records Offices, Whistleblower chapter); master key to participatory democracy."
-                                        ],
-                                        "k": [
-                                                "Intro → Statutory Pillars → Case Laws → Bottlenecks → 2nd ARC Conclusion"
-                                        ],
-                                        "n": "A comprehensive, high-scoring structure for any 10-marker or 15-marker RTI question."
-                                }
+                        "n": "The 2005 Act provided enforceable mechanisms, penalty provisions, and independent oversight commissions."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "In which landmark 1975 case did the Supreme Court first recognize the Right to Information under Article 19(1)(a)?",
+                        "o": [
+                            "Kesavananda Bharati v. State of Kerala",
+                            "State of Uttar Pradesh v. Raj Narain",
+                            "Maneka Gandhi v. Union of India",
+                            "Minerva Mills v. Union of India"
                         ],
-                        "q": [
-                                {
-                                        "k": "order",
-                                        "q": "Order the optimal Mains answer structure for a Right to Information question.",
-                                        "o": [
-                                                "Intro: Article 19(1)(a), Raj Narain (1975) & MKSS struggle",
-                                                "Statutory Canvas: Sections 2(h), 4, 7 & Sec 8(2) override",
-                                                "Landmark Jurisprudence: Subhash Chandra Agarwal & ADR (2024)",
-                                                "Contemporary Challenges: Vacancies, 4% penalty & whistleblower peril",
-                                                "Way Forward: 2nd ARC National Coordination Committee & Protection"
-                                        ],
-                                        "e": "Constitutional Roots → Statutory Design → Jurisprudence → Bottlenecks → 2nd ARC Solutions."
-                                },
-                                {
-                                        "k": "mc",
-                                        "q": "Best one-line concluding sentence for an answer on RTI?",
-                                        "o": [
-                                                "The RTI Act should be repealed because citizens ask too many questions.",
-                                                "Right to Information is the master key to participatory democracy, transforming citizens from passive recipients of governance into vigilant custodians of constitutional accountability.",
-                                                "Official secrecy must be restored to accelerate bureaucratic file movement.",
-                                                "Information Commissions should be abolished to save public funds."
-                                        ],
-                                        "a": 1,
-                                        "e": "A balanced, inspiring constitutional conclusion directly echoing the 2nd ARC."
-                                },
-                                {
-                                        "k": "flip",
-                                        "q": "Write a 2-line intro for 'Right to Information: Cornerstone of Democratic Governance'.",
-                                        "r": "Recognized in State of UP v. Raj Narain (1975) as an integral part of Article 19(1)(a) and birthed by grassroots struggle (MKSS), the RTI Act, 2005 dismantled the colonial culture of secrecy. By institutionalizing transparency and citizen participation, it serves as the master key to democratic accountability."
-                                }
-                        ]
-                }
+                        "a": 1,
+                        "e": "In State of UP v. Raj Narain (1975), Justice Mathew ruled that citizens have a right to know every public act done by their functionaries."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Which grassroots movement in Rajasthan popularized the demand for public records through 'Jan Sunwais'?",
+                        "o": [
+                            "Chipko Movement",
+                            "Mazdoor Kisan Shakti Sangathan (MKSS)",
+                            "Narmada Bachao Andolan",
+                            "Bhoodan Movement"
+                        ],
+                        "a": 1,
+                        "e": "MKSS, founded by Aruna Roy, Nikhil Dey, and Shankar Singh, championed rural transparency through Jan Sunwais."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Which state was the first in India to enact an RTI law in 1997?",
+                        "o": [
+                            "Maharashtra",
+                            "Tamil Nadu",
+                            "Kerala",
+                            "Rajasthan"
+                        ],
+                        "a": 1,
+                        "e": "Tamil Nadu enacted India's first state-level Right to Information Act in 1997."
+                    },
+                    {
+                        "k": "order",
+                        "q": "Arrange the milestones in India's transparency movement in chronological order.",
+                        "o": [
+                            "SC recognizes RTI in Raj Narain case (1975)",
+                            "MKSS grassroots Jan Sunwais in Rajasthan (1990s)",
+                            "Tamil Nadu enacts first state RTI law (1997)",
+                            "Passage of the Right to Information Act (2005)"
+                        ],
+                        "e": "1975 (Raj Narain) → 1990s (MKSS) → 1997 (Tamil Nadu) → 2005 (RTI Act)."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the Supreme Court recognized RTI under Article 19(1)(a) in State of UP v. Raj Narain.",
+                        "a": 1975,
+                        "tol": 0,
+                        "min": 1970,
+                        "max": 2010,
+                        "e": "1975."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "RTI emerged from MKSS grassroots Jan Sunwais in Rajasthan,",
+                            "was recognized under Article 19(1)(a) in Raj Narain (1975),",
+                            "and the RTI Act was passed in 1885 under Lord Dufferin."
+                        ],
+                        "a": 2,
+                        "e": "The RTI Act was enacted in 2005, not 1885."
+                    }
+                ]
+            },
+            {
+                "n": "Core Architecture & Timelines",
+                "e": "🏛️",
+                "d": "Public authorities, PIOs & Section 7 deadlines",
+                "c": [
+                    {
+                        "t": "Universal Scope: Public Authority (Section 2(h))",
+                        "b": [
+                            "Defines 'Public Authority' as any body established by the <b>Constitution, Parliament, State Legislature, or government notification</b>.",
+                            "Critically includes entities <b>owned, controlled, or substantially financed</b> directly or indirectly by government funds.",
+                            "Covers non-government organizations (NGOs) receiving substantial state funding."
+                        ],
+                        "k": [
+                            "Section 2(h)",
+                            "Substantially Financed",
+                            "Public Authority Scope"
+                        ],
+                        "n": "Broad definition ensures public funds cannot hide behind corporate or non-profit veils."
+                    },
+                    {
+                        "t": "Proactive Transparency (Section 4)",
+                        "b": [
+                            "Mandates all public authorities to <b>suo motu publish details</b> of their organization, functions, powers, officers' salaries, and subsidy schemes.",
+                            "Requires digitized records for easy public access and regular updating.",
+                            "Philosophy: Sunshine by default — minimize the necessity for citizens to file formal applications."
+                        ],
+                        "k": [
+                            "Section 4 Suo Motu Disclosure",
+                            "Digitized Records",
+                            "Proactive Sunshine"
+                        ],
+                        "n": "If Section 4 is fully implemented, over 70% of routine RTI applications become unnecessary."
+                    },
+                    {
+                        "t": "Strict Statutory Deadlines (Section 7)",
+                        "b": [
+                            "<b>General Request:</b> Must be answered within <b>30 days</b> (or 35 days if submitted via Assistant PIO).",
+                            "<b>Life or Liberty:</b> If the requested information concerns the life or liberty of an individual, it must be provided within <b>48 HOURS</b>!",
+                            "<b>Fees:</b> Nominal fee for general citizens; <b>100% free for Below Poverty Line (BPL) applicants</b>. If response is delayed beyond 30 days, information must be given free to everyone."
+                        ],
+                        "k": [
+                            "30-Day Standard Limit",
+                            "48-Hour Life & Liberty Rule",
+                            "BPL Fee Waiver",
+                            "Free if Delayed"
+                        ],
+                        "n": "The 48-hour life-or-liberty rule is vital for undertrials, police encounters, and emergency medical access."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Within what statutory timeframe must information concerning 'life or liberty' be supplied under Section 7(1)?",
+                        "o": [
+                            "24 hours",
+                            "48 hours",
+                            "7 days",
+                            "15 days"
+                        ],
+                        "a": 1,
+                        "e": "Section 7(1) mandates a strict 48-hour turnaround if information concerns an individual's life or liberty."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "Citizens living Below the Poverty Line (BPL) must pay double the fee to prioritize their applications.",
+                        "a": 1,
+                        "e": "False. Section 7(5) explicitly waives all application and copying fees for BPL citizens."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all entities falling under the definition of 'public authority' under Section 2(h).",
+                        "o": [
+                            "Constitutional bodies like Election Commission",
+                            "Statutory corporations established by Parliament",
+                            "NGOs substantially financed by the government",
+                            "Wholly private clubs with zero government funding"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Bodies created by Constitution, statute, or substantially financed by govt qualify. Wholly private clubs with no govt funds do not."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the statutory section to its core mandate.",
+                        "p": [
+                            [
+                                "Section 2(h)",
+                                "Definition of Public Authority"
+                            ],
+                            [
+                                "Section 4",
+                                "Suo motu proactive transparency"
+                            ],
+                            [
+                                "Section 5",
+                                "Designation of PIOs & APIOs"
+                            ],
+                            [
+                                "Section 7",
+                                "30-day / 48-hour deadlines & fees"
+                            ]
+                        ],
+                        "e": "Memorize Sections 2(h), 4, 7, 8, and 20 for GS-2 answers!"
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort by statutory deadline: 48 Hours, 30 Days, or 35 Days?",
+                        "b": [
+                            "48 Hours",
+                            "30 Days",
+                            "35 Days"
+                        ],
+                        "it": [
+                            [
+                                "Information concerning life and liberty",
+                                0
+                            ],
+                            [
+                                "Standard information request to Central PIO",
+                                1
+                            ],
+                            [
+                                "Request submitted via Assistant PIO (APIO)",
+                                2
+                            ]
+                        ],
+                        "e": "Life/liberty = 48 hrs; standard PIO = 30 days; through APIO = 35 days (+5 days)."
+                    }
+                ]
+            },
+            {
+                "n": "Exemptions & Recent Amendments",
+                "e": "⚖️",
+                "d": "Section 8, 2019 Tenure & DPDP Act 2023",
+                "c": [
+                    {
+                        "t": "Section 8 Exemptions & Public Interest Override",
+                        "b": [
+                            "Section 8(1) carves out limited exceptions: national security, foreign relations, cabinet papers, commercial confidence, and personal privacy.",
+                            "<b>The Golden Rule — Section 8(2) Public Interest Override:</b> A public authority may allow access to exempt information if <b>public interest in disclosure outweighs the harm to protected interests</b>!",
+                            "Parliamentary Parity Proviso: <i>Information which cannot be denied to Parliament or a State Legislature shall not be denied to any citizen.</i>"
+                        ],
+                        "k": [
+                            "Section 8(1) Exemptions",
+                            "Section 8(2) Public Interest Override",
+                            "Parliamentary Parity"
+                        ],
+                        "n": "Section 8(2) establishes that public welfare always trumps bureaucratic secrecy."
+                    },
+                    {
+                        "t": "RTI (Amendment) Act, 2019",
+                        "b": [
+                            "Removed the fixed <b>5-year statutory tenure</b> for Central and State Information Commissioners.",
+                            "Removed statutory salary parity linking CIC to Chief Election Commissioner.",
+                            "Tenure, salaries, and service conditions are now <b>determined by rules prescribed by the Central Government</b>.",
+                            "Critique: Stirs concerns regarding the perceived independence and institutional autonomy of the commissions."
+                        ],
+                        "k": [
+                            "2019 Amendment",
+                            "Removal of Fixed 5-Year Tenure",
+                            "Executive Rule-Making"
+                        ],
+                        "n": "A frequent UPSC Mains topic on the dilution of independent statutory watchdogs."
+                    },
+                    {
+                        "t": "DPDP Act, 2023 [Section 44(3)]",
+                        "b": [
+                            "The Digital Personal Data Protection Act, 2023 substituted Section 8(1)(j) of the RTI Act with an exemption for <b>'information which relates to personal information'</b>.",
+                            "Deleted earlier provisos that allowed disclosure if information had a nexus to public activity or if it could not be denied to Parliament.",
+                            "However, the overarching <b>Section 8(2) Public Interest Override remains fully alive</b> in the statute!"
+                        ],
+                        "k": [
+                            "DPDP Act 2023 Sec 44(3)",
+                            "Section 8(1)(j) Substitution",
+                            "Personal Information Exemption"
+                        ],
+                        "n": "Balances the constitutional Right to Information with the Right to Privacy (Puttaswamy 2017)."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What extraordinary power does Section 8(2) of the RTI Act bestow upon authorities?",
+                        "o": [
+                            "To delete controversial government files",
+                            "To override exemptions if public interest outweighs harm",
+                            "To cancel citizen applications without reasons",
+                            "To arrest citizens for asking sensitive questions"
+                        ],
+                        "a": 1,
+                        "e": "Section 8(2) allows disclosure of exempt records if the public interest in disclosure outweighs the harm."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "The RTI (Amendment) Act, 2019 strengthened the statutory autonomy of Information Commissioners by granting them constitutional status.",
+                        "a": 1,
+                        "e": "False. It removed fixed 5-year tenures and salary parity, placing terms under executive discretion."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "What significant modification did the DPDP Act, 2023 introduce to Section 8(1)(j) of the RTI Act?",
+                        "o": [
+                            "Abolished the RTI Act completely",
+                            "Substituted Section 8(1)(j) with a blanket exemption for personal information",
+                            "Made all government databases public",
+                            "Banned journalists from filing RTIs"
+                        ],
+                        "a": 1,
+                        "e": "Section 44(3) of DPDP Act substituted Section 8(1)(j) to broaden exemptions for personal information."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap true statements regarding exemptions under the RTI Act.",
+                        "o": [
+                            "Section 8(2) public interest override continues to exist after DPDP Act 2023",
+                            "Information that cannot be denied to Parliament cannot be denied to citizens",
+                            "Any officer can invent new exemptions not listed in Section 8",
+                            "Cabinet papers must be disclosed after decisions are made and completed"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            3
+                        ],
+                        "e": "Section 8(2) still overrides, parliamentary parity stands, and completed cabinet decisions become disclosable."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I? Fewer clues, more XP.",
+                        "c": [
+                            "I am a vital clause in the RTI Act, 2005.",
+                            "I declare that public interest in disclosure trumps harm to protected interests.",
+                            "I override Section 8(1) exemptions and the Official Secrets Act, 1923."
+                        ],
+                        "o": [
+                            "Section 8(2)",
+                            "Section 4(1)(b)",
+                            "Section 20(1)",
+                            "Section 7(1)"
+                        ],
+                        "a": 0,
+                        "e": "Section 8(2): Public Interest Override."
+                    }
+                ]
+            },
+            {
+                "n": "Landmark Case Laws",
+                "e": "📜",
+                "d": "Aditya Bandopadhyay to Electoral Bonds (2024)",
+                "c": [
+                    {
+                        "t": "Answer Books & ACRs: Exams and Service Records",
+                        "b": [
+                            "<b>CBSE v. Aditya Bandopadhyay (2011):</b> The Supreme Court held that evaluated answer scripts are 'information' accessible under RTI. The examiner–examinee relationship is not an exempt fiduciary shield.",
+                            "<b>Girish Ramchandra Deshpande v. CIC (2013):</b> Annual Confidential Reports (ACRs), service records, and disciplinary proceedings constitute personal information under Section 8(1)(j) unless larger public interest justifies disclosure."
+                        ],
+                        "k": [
+                            "Aditya Bandopadhyay (2011)",
+                            "Answer Books Disclosable",
+                            "Girish Deshpande (2013)"
+                        ],
+                        "n": "Balances student transparency against the privacy of public servants' personnel records."
+                    },
+                    {
+                        "t": "Financial Transparency & Institutions",
+                        "b": [
+                            "<b>Thalappalam Coop Bank v. State of Kerala (2013):</b> Cooperative societies are not automatically public authorities under Section 2(h); they must satisfy the test of substantial state financing or control.",
+                            "<b>RBI v. Jayantilal N. Mistry (2016):</b> SC rejected the Reserve Bank of India's blanket claim of fiduciary confidentiality, ordering disclosure of inspection reports of defaulting banks in the public interest."
+                        ],
+                        "k": [
+                            "Thalappalam Coop Bank (2013)",
+                            "RBI v. Jayantilal Mistry (2016)",
+                            "Fiduciary Shield Rejected"
+                        ],
+                        "n": "Reaffirms that economic regulators cannot shield systemic financial defaulters behind secrecy."
+                    },
+                    {
+                        "t": "CJI Office & Electoral Bonds (2019 & 2024)",
+                        "b": [
+                            "<b>CPIO, Supreme Court v. Subhash Chandra Agarwal (2019):</b> A 5-judge Constitution Bench held that the <b>Office of the Chief Justice of India (CJI) is a public authority</b> under RTI, balancing judicial independence with transparency via proportionality.",
+                            "<b>ADR v. Union of India (2024):</b> Constitution Bench unanimously struck down the Electoral Bonds Scheme, holding that voters' right to know political party funding is an integral fundamental right under Article 19(1)(a)."
+                        ],
+                        "k": [
+                            "CJI Office under RTI (2019)",
+                            "Subhash Chandra Agarwal",
+                            "ADR Electoral Bonds (2024)",
+                            "Voters' Right to Know"
+                        ],
+                        "n": "The 2024 Electoral Bonds judgment is the strongest constitutional reaffirmation of RTI in decades."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "match",
+                        "q": "Match the landmark case to its historic legal doctrine.",
+                        "p": [
+                            [
+                                "Aditya Bandopadhyay (2011)",
+                                "Exam answer scripts accessible under RTI"
+                            ],
+                            [
+                                "RBI v. Jayantilal Mistry (2016)",
+                                "Rejected blanket fiduciary shield for bank inspection reports"
+                            ],
+                            [
+                                "Subhash Chandra Agarwal (2019)",
+                                "Office of the CJI is a public authority under RTI"
+                            ],
+                            [
+                                "ADR v. Union of India (2024)",
+                                "Struck down Electoral Bonds under Art 19(1)(a)"
+                            ]
+                        ],
+                        "e": "These four cases represent the bedrock of judicial interpretation of the RTI Act."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "In which case did the Supreme Court hold that cooperative societies are not automatically public authorities unless substantially financed by the state?",
+                        "o": [
+                            "ADR Case",
+                            "Thalappalam Coop Bank v. State of Kerala",
+                            "Raj Narain Case",
+                            "Jayantilal Mistry Case"
+                        ],
+                        "a": 1,
+                        "e": "In Thalappalam (2013), SC clarified that cooperative societies need substantial govt control or funds to fall under Sec 2(h)."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "In Subhash Chandra Agarwal (2019), the Supreme Court ruled that judicial independence completely excludes the higher judiciary from the RTI Act.",
+                        "a": 1,
+                        "e": "False. The Constitution Bench held that the CJI's office IS a public authority under RTI, harmonized via proportionality."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the Supreme Court struck down the Electoral Bonds Scheme in ADR v. Union of India.",
+                        "a": 2024,
+                        "tol": 0,
+                        "min": 2015,
+                        "max": 2025,
+                        "e": "February 2024."
+                    },
+                    {
+                        "k": "order",
+                        "inl": 1,
+                        "q": "Build the sentence: tap words in order.",
+                        "o": [
+                            "Voters",
+                            "have",
+                            "a",
+                            "fundamental",
+                            "right",
+                            "to",
+                            "know",
+                            "under",
+                            "Article",
+                            "19"
+                        ],
+                        "e": "Voters have a fundamental right to know under Article 19."
+                    }
+                ]
+            },
+            {
+                "n": "Systemic Challenges & Whistleblower Peril",
+                "e": "🚧",
+                "d": "Vacancies, threats, the 4% penalty & Official Secrets",
+                "c": [
+                    {
+                        "t": "Danger to RTI Users & Whistleblowers",
+                        "b": [
+                            "Citizens and activists using RTI to expose sand mafia, tender rigging, or panchayat scams face physical assault, harassment, and murder.",
+                            "Over 100+ RTI activists have been murdered across India over the past two decades.",
+                            "The <b>Whistleblowers Protection Act, 2014</b> has languished without operationalized rules, leaving information seekers vulnerable."
+                        ],
+                        "k": [
+                            "Whistleblower Murders",
+                            "Whistleblowers Protection Act 2014",
+                            "Safety Crisis"
+                        ],
+                        "n": "When seeking public information carries a death sentence, democracy is mortally wounded."
+                    },
+                    {
+                        "t": "Appellate Backlogs & Vacancy Paralysis",
+                        "b": [
+                            "Over <b>3 to 4 lakh appeals</b> remain pending across the Central Information Commission (CIC) and State Information Commissions (SICs).",
+                            "Governments delay appointments, leaving several state commissions completely headless or functioning with skeletal staff.",
+                            "Waiting times for a second appeal stretch from 2 to 5 years, converting 'Right to Information' into 'Right to Wait'."
+                        ],
+                        "k": [
+                            "Commission Vacancies",
+                            "Right to Wait",
+                            "Multi-Year Pendency"
+                        ],
+                        "n": "Delayed justice in transparency turns statutory promises into paper tigers."
+                    },
+                    {
+                        "t": "The 4% Penalty Paradox & Colonial Secrecy",
+                        "b": [
+                            "Section 20 allows commissions to levy fines of ₹250/day up to ₹25,000 on recalcitrant PIOs.",
+                            "Empirical data: Between 2015 and 2023, <b>penalties were imposed in barely ~4% of cases</b> where violations were found!",
+                            "Bureaucrats weaponize minor formatting errors or claim 'state secret' under the lingering mindset of the <b>Official Secrets Act, 1923</b>."
+                        ],
+                        "k": [
+                            "Section 20 Penalty Under-Use (4%)",
+                            "Official Secrets Act 1923 Mindset",
+                            "Unfair Rejections"
+                        ],
+                        "n": "Without fear of personal financial penalties, PIOs have zero incentive to answer on time."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Between 2015 and 2023, approximately what percentage of defaulting officers faced Section 20 financial penalties?",
+                        "o": [
+                            "Over 50%",
+                            "About 25%",
+                            "Barely ~4%",
+                            "Exactly 0%"
+                        ],
+                        "a": 2,
+                        "e": "Transparency studies reveal that penalties are imposed in only ~4% of eligible violation cases, nullifying deterrence."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "The Whistleblowers Protection Act, 2014 has established dedicated local safe-houses and comprehensive rules in all states.",
+                        "a": 1,
+                        "e": "False. The Act has not been fully operationalized through comprehensive notified rules."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap genuine systemic challenges crippling the RTI Act.",
+                        "o": [
+                            "Chronic vacancies and backlog in Information Commissions",
+                            "Lack of physical safety for grassroots whistleblowers",
+                            "Low rate of penalty imposition under Section 20",
+                            "Too many officers being sent to jail"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Vacancies, activist murders, and lack of penalties cripple implementation. Officers are almost never jailed."
+                    }
+                ]
+            },
+            {
+                "n": "2nd ARC & The Way Forward",
+                "e": "✅",
+                "d": "National Coordination Committee & systemic fixes",
+                "c": [
+                    {
+                        "t": "2nd ARC Blueprint: 1st Report",
+                        "b": [
+                            "The 2nd Administrative Reforms Commission (ARC) dedicated its 1st Report to <b>'Right to Information: Master Key to Good Governance'</b>.",
+                            "Recommended establishing a <b>National Coordination Committee (NCC)</b> under the Chief Information Commissioner to monitor portal performance and impact.",
+                            "Stressed that at least <b>half (50%) of Information Commissioners</b> should be drawn from non-civil services backgrounds (law, media, academia, civil society)."
+                        ],
+                        "k": [
+                            "2nd ARC 1st Report",
+                            "Master Key to Good Governance",
+                            "National Coordination Committee",
+                            "50% Non-Civil Services"
+                        ],
+                        "n": "Breaking the bureaucratic monopoly over Information Commissions restores public trust."
+                    },
+                    {
+                        "t": "Statutory Protection Chapter for Seekers",
+                        "b": [
+                            "Urgent need to amend the RTI Act to incorporate a dedicated chapter: <b>'Protection of those seeking information under the RTI Act'</b>.",
+                            "Mandate police protection and fast-track prosecution when an information seeker reports intimidation or filing an RTI on sensitive land/mining issues.",
+                            "Must work hand-in-hand with fully operationalized rules under the Whistleblowers Protection Act."
+                        ],
+                        "k": [
+                            "Dedicated Protection Chapter",
+                            "Whistleblower Safeguards",
+                            "Fast-track Prosecution"
+                        ],
+                        "n": "State must guarantee life and liberty to those who dare to shine light on corruption."
+                    },
+                    {
+                        "t": "Independent Public Records Offices & Tech",
+                        "b": [
+                            "2nd ARC recommended setting up independent <b>Public Records Offices</b> at Central and State levels to overhaul archiving and indexing.",
+                            "<b>Standardize procedures:</b> Eliminate archaic payment methods (like compulsory demand drafts); unify application fee structures nationwide.",
+                            "Continuous capacity building and rigorous sensitization for PIOs on the constitutional sanctity of transparency."
+                        ],
+                        "k": [
+                            "Public Records Offices",
+                            "Standardized Fee Structure",
+                            "E-Filing & Digital Tracking"
+                        ],
+                        "n": "Good governance cannot function without modern, indexed, searchable public records."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What body did the 2nd ARC recommend setting up under the Chief Information Commissioner to evaluate RTI impact?",
+                        "o": [
+                            "Central Vigilance Commission",
+                            "National Coordination Committee (NCC)",
+                            "National Transparency Tribunal",
+                            "Public Grievance Council"
+                        ],
+                        "a": 1,
+                        "e": "The 2nd ARC recommended an NCC under the Chief Information Commissioner to monitor RTI nationwide."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "What proportion of Information Commissioners should be drawn from non-civil service backgrounds according to the 2nd ARC?",
+                        "o": [
+                            "10%",
+                            "25%",
+                            "At least 50%",
+                            "100%"
+                        ],
+                        "a": 2,
+                        "e": "The 2nd ARC recommended at least 50% non-civil service commissioners to avoid bureaucratic insularity."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the core reform measures recommended by the 2nd ARC for RTI.",
+                        "o": [
+                            "Establish independent Public Records Offices",
+                            "Incorporate statutory protection chapter for information seekers",
+                            "Standardize fee structures and eliminate demand draft hurdles",
+                            "Repeal the RTI Act and replace with Official Secrets Act"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Public Records Offices, protection chapter, and standardized digital access are 2nd ARC cornerstones."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the proposed reform to its governance outcome.",
+                        "p": [
+                            [
+                                "National Coordination Committee",
+                                "Central monitoring of portal & Act impact"
+                            ],
+                            [
+                                "50% Non-Civil Service Commissioners",
+                                "Prevents bureaucratic bias and insularity"
+                            ],
+                            [
+                                "Public Records Offices",
+                                "Modern cataloging and suo motu disclosure"
+                            ],
+                            [
+                                "Statutory Protection Chapter",
+                                "Shields whistleblowers from physical violence"
+                            ]
+                        ],
+                        "e": "Strategic solutions to cite in Mains GS-2 answers."
+                    }
+                ]
+            },
+            {
+                "n": "Mains Answer Mastery Toolkit",
+                "e": "🎯",
+                "d": "Keywords, 5-point skeleton & model intro",
+                "c": [
+                    {
+                        "t": "High-Yield Keywords to Drop",
+                        "b": [
+                            "<b>Constitutional Anchors:</b> Article 19(1)(a), Raj Narain (1975), Sunshine legislation, Culture of secrecy vs openness.",
+                            "<b>Statutory Architecture:</b> Section 2(h) Public Authority, Section 4 Suo Motu, Section 7 Life & Liberty (48h), Section 8(2) Public Interest Override, Section 20 Penalty.",
+                            "<b>Landmark Jurisprudence:</b> Subhash Chandra Agarwal (CJI office), Jayantilal Mistry (RBI), ADR (Electoral Bonds 2024).",
+                            "<b>2nd ARC Recommendations:</b> 1st Report ('Master Key to Good Governance'), National Coordination Committee, 50% non-civil service commissioners, Public Records Offices."
+                        ],
+                        "k": [
+                            "Use 4 to 5 per Mains answer!"
+                        ],
+                        "n": "Examiners award top marks for precise statutory section citations and landmark jurisprudence."
+                    },
+                    {
+                        "t": "Mains 5-Stage Answer Skeleton",
+                        "b": [
+                            "<b>1. Intro:</b> Article 19(1)(a) + Raj Narain (1975) + MKSS grassroots Jan Sunwais.",
+                            "<b>2. Statutory Pillars:</b> Sections 2(h), 4, 7 (48h/30d), and the Section 8(2) public interest override.",
+                            "<b>3. Landmark Case Laws:</b> CJI under RTI (Subhash Chandra Agarwal) & ADR Electoral Bonds (2024).",
+                            "<b>4. Structural Bottlenecks:</b> 2019 tenure amendment, DPDP Act 2023 Sec 44(3), 4% penalty rate, whistleblower murders.",
+                            "<b>5. Way Forward & Conclusion:</b> 2nd ARC blueprint (NCC, 50% non-IAS, Public Records Offices, Whistleblower chapter); master key to participatory democracy."
+                        ],
+                        "k": [
+                            "Intro → Statutory Pillars → Case Laws → Bottlenecks → 2nd ARC Conclusion"
+                        ],
+                        "n": "A comprehensive, high-scoring structure for any 10-marker or 15-marker RTI question."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "order",
+                        "q": "Order the optimal Mains answer structure for a Right to Information question.",
+                        "o": [
+                            "Intro: Article 19(1)(a), Raj Narain (1975) & MKSS struggle",
+                            "Statutory Canvas: Sections 2(h), 4, 7 & Sec 8(2) override",
+                            "Landmark Jurisprudence: Subhash Chandra Agarwal & ADR (2024)",
+                            "Contemporary Challenges: Vacancies, 4% penalty & whistleblower peril",
+                            "Way Forward: 2nd ARC National Coordination Committee & Protection"
+                        ],
+                        "e": "Constitutional Roots → Statutory Design → Jurisprudence → Bottlenecks → 2nd ARC Solutions."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Best one-line concluding sentence for an answer on RTI?",
+                        "o": [
+                            "The RTI Act should be repealed because citizens ask too many questions.",
+                            "Right to Information is the master key to participatory democracy, transforming citizens from passive recipients of governance into vigilant custodians of constitutional accountability.",
+                            "Official secrecy must be restored to accelerate bureaucratic file movement.",
+                            "Information Commissions should be abolished to save public funds."
+                        ],
+                        "a": 1,
+                        "e": "A balanced, inspiring constitutional conclusion directly echoing the 2nd ARC."
+                    },
+                    {
+                        "k": "flip",
+                        "q": "Write a 2-line intro for 'Right to Information: Cornerstone of Democratic Governance'.",
+                        "r": "Recognized in State of UP v. Raj Narain (1975) as an integral part of Article 19(1)(a) and birthed by grassroots struggle (MKSS), the RTI Act, 2005 dismantled the colonial culture of secrecy. By institutionalizing transparency and citizen participation, it serves as the master key to democratic accountability."
+                    }
+                ]
+            }
         ],
         "pyq": [
-                {
-                        "k": "flip",
-                        "q": "PYQ-style: 'Right to Information is not merely a statutory right but a fundamental constitutional entitlement.' Trace its evolution and evaluate its efficacy in dismantling bureaucratic secrecy. (150 words)",
-                        "r": "Intro: SC in Raj Narain (1975) recognized RTI within Article 19(1)(a); grassroots struggle by MKSS in Rajasthan (Jan Sunwais) led to the RTI Act, 2005. Efficacy in Promoting Openness: 1. Sections 2(h), 4 & 7 established enforceable transparency, life/liberty 48-hr mandate, and BPL fee waivers. 2. Section 8(2) provided a golden 'public interest override'. 3. SC expanded scope: CJI office under RTI (Subhash Chandra Agarwal 2019) and struck down Electoral Bonds (ADR 2024). Persistent Impediments: 1. Official Secrets Act 1923 culture persists; 4% penalty rate under Sec 20. 2. Murders of whistleblowers without operationalized Whistleblowers Act. 3. 2019 tenure dilution & DPDP Act 2023 Sec 44(3). Conclude: Adopt 2nd ARC recommendations (NCC, 50% non-bureaucrat commissioners) to preserve transparency as the master key to democracy."
-                },
-                {
-                        "k": "flip",
-                        "q": "PYQ-style: The office of the Chief Justice of India was brought under the RTI Act in Subhash Chandra Agarwal (2019). How did the Supreme Court reconcile transparency with judicial independence? (150 words)",
-                        "r": "Context: Constitution Bench affirmed that the CJI's office is a public authority under Section 2(h). Reconciliation Doctrine: 1. Transparency vs Independence: Held that transparency does not undermine judicial independence; it fortifies public faith in judicial probity. 2. Proportionality & Balance: Disclosure must be weighed against personal privacy under Section 8(1)(j) using the proportionality test. 3. Fiduciary Filter: Deliberations of the Collegium and medical records are shielded unless larger public interest demands disclosure. Significance: Established that no constitutional office is an island of absolute secrecy, setting a benchmark for open governance while safeguarding institutional integrity."
-                },
-                {
-                        "k": "flip",
-                        "q": "PYQ-style: Examine the safety risks faced by RTI activists and suggest measures to protect information seekers drawing from 2nd ARC recommendations. (150 words)",
-                        "r": "Context: Over 100+ RTI activists have been murdered for exposing sand, mining, and welfare corruption. Structural Vulnerability: 1. Asymmetry of power between rural citizens and corrupt local syndicates. 2. Whistleblowers Protection Act 2014 remains non-operationalized without notified rules. 2nd ARC Measures: 1. Statutory Protection Chapter: Amend RTI Act to include a dedicated chapter for mandatory state protection of threatened applicants. 2. Fast-track investigation: Mandate high-level time-bound police probes into attacks on activists. 3. Suo motu disclosure of queried info: If an activist is threatened or killed, the requested information should be immediately placed in the public domain to eliminate the murderer's motive. Conclude: Protecting the information seeker is prerequisite to protecting the right itself."
-                }
+            {
+                "k": "flip",
+                "q": "PYQ-style: 'Right to Information is not merely a statutory right but a fundamental constitutional entitlement.' Trace its evolution and evaluate its efficacy in dismantling bureaucratic secrecy. (150 words)",
+                "r": "Intro: SC in Raj Narain (1975) recognized RTI within Article 19(1)(a); grassroots struggle by MKSS in Rajasthan (Jan Sunwais) led to the RTI Act, 2005. Efficacy in Promoting Openness: 1. Sections 2(h), 4 & 7 established enforceable transparency, life/liberty 48-hr mandate, and BPL fee waivers. 2. Section 8(2) provided a golden 'public interest override'. 3. SC expanded scope: CJI office under RTI (Subhash Chandra Agarwal 2019) and struck down Electoral Bonds (ADR 2024). Persistent Impediments: 1. Official Secrets Act 1923 culture persists; 4% penalty rate under Sec 20. 2. Murders of whistleblowers without operationalized Whistleblowers Act. 3. 2019 tenure dilution & DPDP Act 2023 Sec 44(3). Conclude: Adopt 2nd ARC recommendations (NCC, 50% non-bureaucrat commissioners) to preserve transparency as the master key to democracy."
+            },
+            {
+                "k": "flip",
+                "q": "PYQ-style: The office of the Chief Justice of India was brought under the RTI Act in Subhash Chandra Agarwal (2019). How did the Supreme Court reconcile transparency with judicial independence? (150 words)",
+                "r": "Context: Constitution Bench affirmed that the CJI's office is a public authority under Section 2(h). Reconciliation Doctrine: 1. Transparency vs Independence: Held that transparency does not undermine judicial independence; it fortifies public faith in judicial probity. 2. Proportionality & Balance: Disclosure must be weighed against personal privacy under Section 8(1)(j) using the proportionality test. 3. Fiduciary Filter: Deliberations of the Collegium and medical records are shielded unless larger public interest demands disclosure. Significance: Established that no constitutional office is an island of absolute secrecy, setting a benchmark for open governance while safeguarding institutional integrity."
+            },
+            {
+                "k": "flip",
+                "q": "PYQ-style: Examine the safety risks faced by RTI activists and suggest measures to protect information seekers drawing from 2nd ARC recommendations. (150 words)",
+                "r": "Context: Over 100+ RTI activists have been murdered for exposing sand, mining, and welfare corruption. Structural Vulnerability: 1. Asymmetry of power between rural citizens and corrupt local syndicates. 2. Whistleblowers Protection Act 2014 remains non-operationalized without notified rules. 2nd ARC Measures: 1. Statutory Protection Chapter: Amend RTI Act to include a dedicated chapter for mandatory state protection of threatened applicants. 2. Fast-track investigation: Mandate high-level time-bound police probes into attacks on activists. 3. Suo motu disclosure of queried info: If an activist is threatened or killed, the requested information should be immediately placed in the public domain to eliminate the murderer's motive. Conclude: Protecting the information seeker is prerequisite to protecting the right itself."
+            }
         ],
         "sks": [
+            {
+                "t": "Right to Information Act, 2005",
+                "s": [
+                    "RTI is rooted in Article 19(1)(a) as held in Raj Narain (1975); catalyzed by MKSS Jan Sunwais in Rajasthan.",
+                    "Sections 2(h) Public Authority, Sec 4 Suo Motu, Sec 7 (30 days / 48h life & liberty), Sec 8(2) override.",
+                    "Pros: citizen empowerment, exposed major scams, BPL fee waiver. Cons: 4% penalty rate, backlog, activist deaths.",
+                    "2nd ARC 1st Report ('Master Key to Good Governance'), National Coordination Committee, DoPT.",
+                    "Ladder: Colonial Secrecy (OSA 1923) → Raj Narain (1975) → MKSS → RTI Act 2005 → Sunshine Democracy."
+                ]
+            },
+            {
+                "t": "RTI vs Right to Privacy & DPDP Act",
+                "s": [
+                    "Tension between Article 19(1)(a) (Transparency) and Article 21 Right to Privacy (Puttaswamy 2017).",
+                    "Section 8(1)(j) amended via DPDP Act 2023 Sec 44(3) to exempt personal information; Sec 8(2) override retained.",
+                    "Pros: protects citizen data. Cons: public authorities weaponize privacy to shield corrupt public officials.",
+                    "Girish Deshpande (2013), Subhash Chandra Agarwal (2019 CJI Office proportionality), 2nd ARC.",
+                    "Balance Scale: Right to Know (Art 19(1)(a)) on left vs Right to Privacy (Art 21) on right; public interest weighs center."
+                ]
+            },
+            {
+                "t": "2nd ARC Reforms on RTI",
+                "s": [
+                    "2nd ARC dedicated its 1st Report, 'Right to Information: Master Key to Good Governance'.",
+                    "National Coordination Committee (NCC) under Chief Information Commissioner to monitor implementation.",
+                    "Pros: checks bureaucratic insularity, unifies portals. Cons: recommendations remain largely un-implemented.",
+                    "50% Non-Civil Service Commissioners; Independent Public Records Offices; Protection Chapter for seekers.",
+                    "Wheel: Chief Information Commissioner at center surrounded by NCC, Public Records Office, 50% Non-IAS, and Protection."
+                ]
+            }
+        ],
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "Information concerning life and liberty must be provided within 48 hours,",
+                    "standard requests are answered in 30 days,",
+                    "and public authorities can reject queries without citing any statutory exemption."
+                ],
+                "a": 2,
+                "e": "Rejections must explicitly cite grounds under Section 8 or 9 with appeal details."
+            },
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "MKSS conducted Jan Sunwais in Rajasthan demanding minimum wages and muster rolls,",
+                    "State of UP v. Raj Narain (1975) grounded RTI under Article 19(1)(a),",
+                    "and Section 8(1) completely eliminates the right to seek any public record whatsoever."
+                ],
+                "a": 2,
+                "e": "Section 8 contains narrow exceptions, subject to Section 8(2) public interest override."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the Supreme Court recognized the right to know as a fundamental right in Raj Narain.",
+                "a": 1975,
+                "tol": 0,
+                "min": 1970,
+                "max": 2010,
+                "e": "1975."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the Right to Information Act came into force.",
+                "a": 2005,
+                "tol": 0,
+                "min": 1990,
+                "max": 2020,
+                "e": "October 2005."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the Supreme Court struck down the Electoral Bonds Scheme under Article 19(1)(a).",
+                "a": 2024,
+                "tol": 0,
+                "min": 2015,
+                "max": 2025,
+                "e": "February 2024."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Section 8(1) Exemption or Section 4 Proactive Disclosure?",
+                "b": [
+                    "Section 8(1) Exemption",
+                    "Section 4 Disclosure"
+                ],
+                "it": [
+                    [
+                        "Sovereignty, integrity and national security secrets",
+                        0
+                    ],
+                    [
+                        "Publishing powers, duties, and norms of officers",
+                        1
+                    ],
+                    [
+                        "Cabinet papers before council decision is taken",
+                        0
+                    ],
+                    [
+                        "Directory of officers with remuneration details",
+                        1
+                    ],
+                    [
+                        "Fiduciary information without public interest",
+                        0
+                    ],
+                    [
+                        "Details of subsidy programmes and beneficiaries",
+                        1
+                    ]
+                ],
+                "e": "Section 4 mandates suo motu publication; Section 8 provides specific non-disclosure exceptions."
+            },
+            {
+                "k": "mc",
+                "q": "Odd keyword out: which is NOT an RTI statutory authority?",
+                "o": [
+                    "Public Information Officer",
+                    "First Appellate Authority",
+                    "Central Information Commission",
+                    "Censorship Board"
+                ],
+                "a": 3,
+                "e": "Censorship Board has no role in the RTI Act."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I am a grassroots mass organization founded in Rajasthan by Aruna Roy and Nikhil Dey.",
+                    "My public hearings (Jan Sunwais) popularized the slogan: 'Hamara Paisa, Hamara Hisab'.",
+                    "My struggle laid the sociological foundation for India's RTI movement."
+                ],
+                "o": [
+                    "MKSS",
+                    "SEWA",
+                    "Chipko Movement",
+                    "Narmada Bachao Andolan"
+                ],
+                "a": 0,
+                "e": "MKSS (Mazdoor Kisan Shakti Sangathan)."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a crucial provision in Section 8 of the RTI Act, 2005.",
+                    "I dictate that public interest in disclosure overrides exemptions if the benefit outweighs the harm.",
+                    "I explicitly overcome the Official Secrets Act, 1923."
+                ],
+                "o": [
+                    "Section 8(2)",
+                    "Section 4(1)(b)",
+                    "Section 20(1)",
+                    "Section 7(1)"
+                ],
+                "a": 0,
+                "e": "Section 8(2) Public Interest Override."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am the landmark 2024 Constitution Bench judgment of the Supreme Court.",
+                    "I unanimously struck down anonymous political donation instruments under Article 19(1)(a).",
+                    "I held that voters have an undeniable fundamental right to know who funds political parties."
+                ],
+                "o": [
+                    "ADR v. Union of India",
+                    "Raj Narain case",
+                    "Subhash Agarwal case",
+                    "Puttaswamy judgment"
+                ],
+                "a": 0,
+                "e": "Association for Democratic Reforms (ADR) v. Union of India (2024)."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: You are Public Information Officer (PIO) in a municipal development authority. An investigative journalist files an RTI requesting structural safety inspection reports and cement quality test sheets of an elevated highway where a crack recently appeared.",
+            "e": "Values: transparency, Article 19 public interest override, legal accountability.",
+            "s": [
                 {
-                        "t": "Right to Information Act, 2005",
-                        "s": [
-                                "RTI is rooted in Article 19(1)(a) as held in Raj Narain (1975); catalyzed by MKSS Jan Sunwais in Rajasthan.",
-                                "Sections 2(h) Public Authority, Sec 4 Suo Motu, Sec 7 (30 days / 48h life & liberty), Sec 8(2) override.",
-                                "Pros: citizen empowerment, exposed major scams, BPL fee waiver. Cons: 4% penalty rate, backlog, activist deaths.",
-                                "2nd ARC 1st Report ('Master Key to Good Governance'), National Coordination Committee, DoPT.",
-                                "Ladder: Colonial Secrecy (OSA 1923) → Raj Narain (1975) → MKSS → RTI Act 2005 → Sunshine Democracy."
+                    "t": "The private contractor lobbies your department head to deny the application citing commercial confidence under Section 8(1)(d). Your call?",
+                    "o": [
+                        [
+                            "Apply Section 8(2) public interest override: public safety on a public flyover far outweighs commercial secrecy",
+                            1,
+                            "Public interest in preventing bridge collapses decisively trumps commercial confidence."
+                        ],
+                        [
+                            "Reject the request instantly to please the contractor",
+                            0,
+                            "Violates statutory duty and endangers public life."
+                        ],
+                        [
+                            "Tell the journalist the files were eaten by termites",
+                            0,
+                            "Falsifying public records invites criminal penalty under Section 20."
                         ]
+                    ]
                 },
                 {
-                        "t": "RTI vs Right to Privacy & DPDP Act",
-                        "s": [
-                                "Tension between Article 19(1)(a) (Transparency) and Article 21 Right to Privacy (Puttaswamy 2017).",
-                                "Section 8(1)(j) amended via DPDP Act 2023 Sec 44(3) to exempt personal information; Sec 8(2) override retained.",
-                                "Pros: protects citizen data. Cons: public authorities weaponize privacy to shield corrupt public officials.",
-                                "Girish Deshpande (2013), Subhash Chandra Agarwal (2019 CJI Office proportionality), 2nd ARC.",
-                                "Balance Scale: Right to Know (Art 19(1)(a)) on left vs Right to Privacy (Art 21) on right; public interest weighs center."
+                    "t": "The contractor argues the file contains patented concrete mixture formulas. How do you resolve this?",
+                    "o": [
+                        [
+                            "Apply the Doctrine of Severability under Section 10: redact proprietary formulas, release safety inspection data",
+                            1,
+                            "Section 10 allows partial disclosure of non-exempt public interest information."
+                        ],
+                        [
+                            "Withhold the entire file because 1 paragraph is proprietary",
+                            0,
+                            "Violates Section 10's severability mandate."
+                        ],
+                        [
+                            "Release the contractor's trade secrets without inspection reports",
+                            0,
+                            "Misapplies the Act."
                         ]
+                    ]
                 },
                 {
-                        "t": "2nd ARC Reforms on RTI",
-                        "s": [
-                                "2nd ARC dedicated its 1st Report, 'Right to Information: Master Key to Good Governance'.",
-                                "National Coordination Committee (NCC) under Chief Information Commissioner to monitor implementation.",
-                                "Pros: checks bureaucratic insularity, unifies portals. Cons: recommendations remain largely un-implemented.",
-                                "50% Non-Civil Service Commissioners; Independent Public Records Offices; Protection Chapter for seekers.",
-                                "Wheel: Chief Information Commissioner at center surrounded by NCC, Public Records Office, 50% Non-IAS, and Protection."
+                    "t": "The 30-day timeline is on Day 28. Your department head delays signing the dispatch. What must you do?",
+                    "o": [
+                        [
+                            "Warn the head that failure to reply within 30 days triggers personal ₹250/day penalty up to ₹25,000 on the PIO, and dispatch the records",
+                            1,
+                            "Under Section 20, the PIO bears personal financial liability for unjustified delay."
+                        ],
+                        [
+                            "Let the deadline lapse quietly",
+                            0,
+                            "Invites Section 20 personal penalty and disciplinary action."
+                        ],
+                        [
+                            "Blame the post office",
+                            0,
+                            "Unethical and legally invalid."
                         ]
+                    ]
                 }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: Section 8(1) Exemption, Section 8(2) Override, or Both?",
+            "b": [
+                "Section 8(1) Exemption",
+                "Section 8(2) Override",
+                "Both"
+            ],
+            "it": [
+                [
+                    "Defines categorical exemptions like cabinet papers & personal privacy",
+                    0
+                ],
+                [
+                    "Mandates disclosure when public interest outweighs protected harm",
+                    1
+                ],
+                [
+                    "Core balancing mechanisms of transparency under RTI Act",
+                    2
+                ],
+                [
+                    "Overcomes the colonial Official Secrets Act, 1923",
+                    1
+                ]
+            ],
+            "e": "Section 8(1) lists exemptions; Section 8(2) creates the master public interest trump."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Voters",
+                    "have",
+                    "a",
+                    "right",
+                    "to",
+                    "know",
+                    "under",
+                    "Article",
+                    "19"
+                ],
+                "e": "Voters have a right to know under Article 19."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Life",
+                    "and",
+                    "liberty",
+                    "queries",
+                    "require",
+                    "48",
+                    "hours"
+                ],
+                "e": "Life and liberty queries require 48 hours."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Public",
+                    "interest",
+                    "overrides",
+                    "colonial",
+                    "secrecy",
+                    "laws"
+                ],
+                "e": "Public interest overrides colonial secrecy laws."
+            }
         ]
-},
+    }
 }
 
 print("Topics defined successfully. Total topics:", len(TOPICS))

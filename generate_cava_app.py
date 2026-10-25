@@ -2,7 +2,11 @@
 """
 Full Generator for CAVA Mobile Learning App
 Coded exactly following the architecture, UX, styling, and mechanics of
-Citizen’s Charter_ Learn from Scratch.html.
+Citizen’s Charter_ Learn from Scratch (1).html.
+Includes:
+- Game Hub (Arcade, Lightning Round, Boss Battle, Detective, Officer Mission, Daily Challenge, Concept Lab - NO duel)
+- Interactive Question Tools (Spot the red flag, Timeline year slider, Card sorting, Detective riddles, Sentence builders)
+- Multi-topic CAVA integration across MSME, Public Exams, AI Judiciary, Citizen's Charter, and Right to Information.
 """
 
 import json
@@ -73,14 +77,17 @@ h1{font-size:26px;line-height:1.15;margin:4px 0 4px;font-weight:800}
 .opt.gone{opacity:.25;pointer-events:none}
 .opt.bad{animation:sh .35s;border-color:var(--no);background:var(--nobg)}
 .opt:disabled{cursor:default}
+.opt.fl{display:inline-block;width:auto;margin:4px 6px 4px 0}
 @keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cols .opt{font-size:14.5px;margin:0 0 10px;padding:10px}
 .slots{min-height:64px;border-bottom:2px solid var(--line);display:flex;flex-direction:column;gap:8px;margin-bottom:16px;padding-bottom:10px}
+.slots.w{flex-direction:row;flex-wrap:wrap}
 .slots .opt{margin:0;padding:9px 12px;font-size:15.5px}
 .ph{color:var(--mut);padding:8px 2px}
 .flip{background:var(--card);border:2px dashed var(--selb);border-radius:16px;padding:18px;min-height:130px;cursor:pointer;font-size:17.5px;line-height:1.4}
 .flip em{color:var(--mut);font-style:normal}
+input[type="range"]{accent-color:var(--acc);margin:16px 0;height:8px;cursor:pointer}
 .foot{position:absolute;left:0;right:0;bottom:0;padding:14px 18px calc(18px + env(safe-area-inset-bottom,0px));border-top:2px solid var(--line);background:var(--bg)}
 .foot.ok{background:var(--okbg);border-color:transparent}.foot.no{background:var(--nobg);border-color:transparent}
 .foot h3{margin:0 0 4px;font-size:21px;font-weight:800}
@@ -228,7 +235,8 @@ function goalCard(){
     '<button class="mb" id="wk"' + (w ? '' : ' disabled style="opacity:.5"') + '>🎯 Weak spots<small>' + (w ? w + ' to review' : 'none yet') + '</small></button>' +
   '</div>' +
   '<button class="mb" id="pq" style="width:100%;margin-bottom:12px">📝 PYQ-style practice<small>' + top.pyq.length + ' timed answer drills</small></button>' +
-  '<button class="mb" id="sk" style="width:100%;margin-bottom:16px">⏱ 45-second skeleton drill<small>' + top.sks.length + ' timed topics</small></button>';
+  '<button class="mb" id="sk" style="width:100%;margin-bottom:12px">⏱ 45-second skeleton drill<small>' + top.sks.length + ' timed topics</small></button>' +
+  '<button class="mb" id="ac" style="width:100%;margin-bottom:16px">🎮 Game hub<small>arcade, lightning, boss, detective, story, lab</small></button>';
 }
 
 function vault(){
@@ -260,8 +268,15 @@ function startReview(){
 }
 
 function finRev(win){
+  if(R.daily && win && S.dc !== today()){
+    S.dc = today();
+    addXp(15);
+  }
   if(win) addXp(R.xp);
-  app.innerHTML = '<div class="end"><div class="big">' + (win ? '🎯' : '💔') + '</div><h1>' + (win ? (R.pyq ? 'PYQ drill completed!' : 'Weak spots reviewed!') : 'Out of hearts') + '</h1><p class="sub">' + (win ? '+' + R.xp + ' XP. Weak spots cleared.' : 'Try again after re-reading the study cards.') + '</p><button class="btn" id="a">Back to lessons</button></div>';
+  app.innerHTML = '<div class="end"><div class="big">' + (win ? '🎯' : '💔') + '</div>' +
+    '<h1>' + (win ? (R.daily ? 'Daily challenge done!' : R.lab ? 'Lab complete!' : R.boss ? 'Boss defeated!' : R.lt ? 'Lightning round done!' : R.det ? 'Case closed!' : R.sto ? 'Mission complete!' : R.arc ? 'Arcade cleared!' : R.pyq ? 'PYQ drill completed!' : 'Weak spots reviewed!') : 'Out of hearts') + '</h1>' +
+    '<p class="sub">' + (win ? '+' + R.xp + ' XP. ' + (R.daily ? 'Daily bonus claimed.' : R.lab ? 'Core concepts locked in.' : R.boss ? 'Mastery unlocked.' : R.lt ? 'Rapid reflexes proven.' : R.det ? 'Clues deciphered.' : R.sto ? 'Governance mission accomplished.' : R.arc ? 'Arcade cleared.' : R.pyq ? 'PYQ drill finished.' : 'Weak spots cleared.') : 'Try again after re-reading the study cards.') + '</p>' +
+    '<button class="btn" id="a">Back to lessons</button></div>';
   document.getElementById('a').onclick = home;
   if(win) confetti();
 }
@@ -342,6 +357,98 @@ function skEnd(){
   document.getElementById('a').onclick = home;
   document.getElementById('b').onclick = skPick;
   if(SK.ok >= 4) confetti();
+}
+
+function hub(){
+  var G = [
+    ['🎮 Arcade', 'red flags, year slider, card sorting', startArc],
+    ['⚡ Lightning round', '8 questions, 10 seconds each', startLt],
+    ['👹 Boss battle', '10 questions, one heart only', startBoss],
+    ['🕵️ Detective', 'guess from fewer clues', startDet],
+    ['🎭 Officer mission', 'branching story, your choices matter', startStory],
+    ['📅 Daily challenge', S.dc === today() ? '✅ done today' : '5 new questions, +15 bonus XP', startDaily],
+    ['🧪 Concept lab', 'Venn sorting and build-the-sentence', startLab]
+  ];
+  var top = DATA[CUR_TOPIC];
+  var h = '<div class="qhead"><button class="x" id="bk" aria-label="Back">←</button><b style="font-size:20px">🎮 ' + esc(top.title.split('&')[0].trim()) + ' Game Hub</b></div><div class="body">';
+  G.forEach(function(g, i){
+    h += '<button class="mb" style="width:100%;margin-bottom:10px;text-align:left" data-g="' + i + '">' + g[0] + '<small>' + g[1] + '</small></button>';
+  });
+  app.innerHTML = h + '</div>';
+  document.getElementById('bk').onclick = home;
+  app.querySelectorAll('[data-g]').forEach(function(b){
+    b.onclick = function(){ G[+b.dataset.g][2](); };
+  });
+}
+
+function go(q, o){
+  R = Object.assign({
+    i: 0,
+    ci: 99,
+    queue: q.map(function(x){ return { q: x }; }),
+    total: q.length,
+    solved: 0,
+    hearts: 5,
+    mist: 0,
+    xp: 0,
+    review: 1
+  }, o);
+  next();
+}
+
+function pool(ks){
+  var p = [];
+  var top = DATA[CUR_TOPIC];
+  top.lessons.forEach(function(l){
+    l.q.forEach(function(q){
+      if(ks.indexOf(q.k) > -1) p.push(q);
+    });
+  });
+  return sh(p);
+}
+
+function startLt(){ go(pool(['mc', 'tf', 'flag']).slice(0, 8), { lt: 1 }); }
+function startBoss(){ go(pool(['mc', 'tf', 'multi', 'order', 'flag', 'sort', 'year']).slice(0, 10), { boss: 1, hearts: 1 }); }
+function startDet(){ var top = DATA[CUR_TOPIC]; go(top.dq || [], { det: 1 }); }
+function startStory(){ var top = DATA[CUR_TOPIC]; go(top.sq ? [top.sq] : [], { sto: 1 }); }
+function startLab(){ var top = DATA[CUR_TOPIC]; go((top.vq ? [top.vq] : []).concat(top.bq || []), { lab: 1 }); }
+function startArc(){ var top = DATA[CUR_TOPIC]; go(top.aq || [], { arc: 1 }); }
+
+function startDaily(){
+  var s = 0, d = today();
+  for(var i = 0; i < d.length; i++) s = (s * 31 + d.charCodeAt(i)) % 2147483647;
+  var p = [];
+  var top = DATA[CUR_TOPIC];
+  top.lessons.forEach(function(l){
+    l.q.forEach(function(q){
+      if(['mc', 'tf', 'multi', 'flag', 'year'].indexOf(q.k) > -1) p.push(q);
+    });
+  });
+  var out = [];
+  while(out.length < 5 && p.length){
+    s = (s * 48271) % 2147483647;
+    out.push(p.splice(s % p.length, 1)[0]);
+  }
+  go(out, { daily: 1 });
+}
+
+function ltTimer(){
+  clearInterval(IV);
+  var s = 10;
+  function t(){
+    var k = document.querySelector('.kind');
+    if(!k || R.ok !== null){ clearInterval(IV); return; }
+    k.textContent = '⚡ Lightning · ' + s + 's';
+    if(s-- <= 0){
+      clearInterval(IV);
+      R.ok = false;
+      R.sel = [];
+      R.msg = 'Too slow! ' + (R.q.e || '');
+      finish();
+    }
+  }
+  t();
+  IV = setInterval(t, 1000);
 }
 
 function sh(a){
@@ -606,6 +713,7 @@ function home(){
   if(w) w.onclick = startReview;
   var pq = document.getElementById('pq'); if(pq) pq.onclick = startPyq;
   var sk = document.getElementById('sk'); if(sk) sk.onclick = skPick;
+  var ac = document.getElementById('ac'); if(ac) ac.onclick = hub;
   document.getElementById('mt').onclick = function(){ S.mute = !S.mute; save(); home(); };
 }
 
@@ -628,7 +736,7 @@ function start(i){
 function next(){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[R.i];
-  if(R.ci < l.c.length) return card();
+  if(l && R.ci < l.c.length) return card();
   if(R.hearts <= 0) return fin(false);
   if(!R.queue.length) return fin(true);
   R.cur = R.queue.shift();
@@ -647,6 +755,11 @@ function next(){
     R.err = false;
   }
   if(q.k === "flip") R.rev = false;
+  if(q.k === "flag") R.ord = q.o.map(function(_, i){ return i; });
+  if(q.k === "sort"){ R.si = 0; R.err = false; R.it = sh(q.it); }
+  if(q.k === "story"){ R.so = 0; R.pk = null; R.err = false; }
+  if(q.k === "riddle") R.cl = 1;
+  if(q.k === "year") R.sel = [Math.round((q.min + q.max) / 2)];
   draw();
 }
 
@@ -660,7 +773,10 @@ function head(){
 
 function quit(){
   document.getElementById("quit").onclick = function(){
-    if(confirm("Quit this lesson? Progress will be lost.")) home();
+    if(confirm("Quit this lesson? Progress will be lost.")) {
+      clearInterval(IV);
+      home();
+    }
   };
 }
 
@@ -707,6 +823,11 @@ function cardDraw(){
 }
 
 var KIND = {
+  riddle: "Detective: who am I?",
+  story: "Officer mission",
+  flag: "Spot the red flag",
+  year: "Slide to the year",
+  sort: "Sort the cards",
   tf: "True or false",
   mc: "Pick one",
   multi: "Select all that apply",
@@ -717,20 +838,31 @@ var KIND = {
 
 function draw(){
   var q = R.q;
-  app.innerHTML = head() + '<div class="body"><p class="kind">' + KIND[q.k] + '</p><p class="q">' + esc(q.q) + '</p><div id="in"></div></div><div class="foot" id="foot"></div>';
+  app.innerHTML = head() + '<div class="body"><p class="kind">' + (KIND[q.k] || '') + '</p><p class="q">' + esc(q.q) + '</p><div id="in"></div></div><div class="foot" id="foot"></div>';
   quit();
   inner();
   foot();
+  if(R.lt) ltTimer();
 }
 
 function inner(){
   var q = R.q, el = document.getElementById("in"), h = "";
-  if(q.k === "mc" || q.k === "tf" || q.k === "multi"){
+  if(q.k === "mc" || q.k === "riddle" || q.k === "flag" || q.k === "tf" || q.k === "multi"){
     var lab = q.k === "tf" ? ["True", "False"] : q.o;
+    if(q.k === "riddle"){
+      h = '<div class="fact">';
+      for(var c = 0; c < R.cl; c++) h += '<p>🔎 ' + esc(q.c[c]) + '</p>';
+      h += '</div>';
+      if(R.cl < q.c.length && R.ok === null) {
+        h += '<button class="mb" id="nc" style="width:100%;margin-bottom:12px">💡 Next clue (−3 XP)</button>';
+      }
+    }
     R.ord.forEach(function(i){
-      h += '<button class="opt' + (R.sel.indexOf(i) > -1 ? ' sel' : '') + '" data-i="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(lab[i]) + '</button>';
+      h += '<button class="opt' + (q.k === "flag" ? ' fl' : '') + (R.sel.indexOf(i) > -1 ? ' sel' : '') + '" data-i="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(lab[i]) + '</button>';
     });
     el.innerHTML = h;
+    var nc = document.getElementById("nc");
+    if(nc) nc.onclick = function(){ R.cl++; R.xp = Math.max(0, R.xp - 3); inner(); };
     el.querySelectorAll(".opt").forEach(function(b){
       b.onclick = function(){
         var i = +b.dataset.i;
@@ -741,16 +873,22 @@ function inner(){
           R.sel = [i];
         }
         inner(); foot();
+        if(R.lt && q.k !== "multi"){
+          clearInterval(IV);
+          R.ok = R.sel[0] === q.a;
+          R.msg = undefined;
+          finish();
+        }
       };
     });
   } else if(q.k === "order"){
-    h = '<div class="slots">' + (R.sel.length ? '' : '<span class="ph">Tap the items below in order</span>');
+    h = '<div class="slots' + (q.inl ? ' w' : '') + '">' + (R.sel.length ? '' : '<span class="ph">Tap the items below in order</span>');
     R.sel.forEach(function(i){
-      h += '<button class="opt" data-r="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
+      h += '<button class="opt' + (q.inl ? ' fl' : '') + '" data-r="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
     });
     h += '</div>';
     R.ord.forEach(function(i){
-      if(R.sel.indexOf(i) < 0) h += '<button class="opt" data-a="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
+      if(R.sel.indexOf(i) < 0) h += '<button class="opt' + (q.inl ? ' fl' : '') + '" data-a="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
     });
     el.innerHTML = h;
     el.querySelectorAll("[data-a]").forEach(function(b){
@@ -793,6 +931,70 @@ function inner(){
         }
       };
     });
+  } else if(q.k === "year"){
+    var yv = R.sel.length ? R.sel[0] : Math.round((q.min + q.max) / 2);
+    el.innerHTML = '<div class="skn" id="yv">' + (R.sel.length ? yv : '?') + '</div><input type="range" id="yr" min="' + q.min + '" max="' + q.max + '" value="' + yv + '" style="width:100%" aria-label="Year"' + (R.ok !== null ? ' disabled' : '') + '>';
+    var yr = document.getElementById('yr');
+    yr.onchange = yr.oninput = function(){
+      R.sel = [+yr.value];
+      document.getElementById('yv').textContent = yr.value;
+      foot();
+    };
+  } else if(q.k === "sort"){
+    var it = R.it[R.si];
+    if(!it){ el.innerHTML = '<p class="sub" style="text-align:center">All sorted!</p>'; return; }
+    h = '<p class="ph" style="text-align:center">' + (R.si + 1) + ' of ' + R.it.length + '</p><div class="flip" style="text-align:center;font-weight:800;font-size:22px;display:grid;place-items:center;cursor:default">' + esc(it[0]) + '</div><div class="cols" style="margin-top:16px">';
+    q.b.forEach(function(b, j){
+      h += '<button class="opt" style="text-align:center;font-weight:800" data-b="' + j + '">' + esc(b) + '</button>';
+    });
+    el.innerHTML = h + '</div>';
+    el.querySelectorAll('[data-b]').forEach(function(b){
+      b.onclick = function(){
+        if(+b.dataset.b === it[1]){
+          R.si++;
+          if(R.si >= R.it.length){
+            R.ok = !R.err;
+            finish();
+            return;
+          }
+          inner();
+        } else {
+          R.err = true;
+          b.classList.add('bad');
+        }
+      };
+    });
+  } else if(q.k === "story"){
+    var sc = q.s[R.so];
+    if(!sc){ el.innerHTML = '<p class="sub" style="text-align:center">Mission complete!</p>'; return; }
+    h = '<div class="fact"><p>' + esc(sc.t) + '</p></div>';
+    if(R.pk === null){
+      sc.o.forEach(function(o, j){
+        h += '<button class="opt" data-s="' + j + '">' + esc(o[0]) + '</button>';
+      });
+    } else {
+      var oo = sc.o[R.pk];
+      h += '<div class="tile" style="border-left-color:var(--' + (oo[1] ? 'ok' : 'no') + ')"><span class="dot">' + (oo[1] ? '✅' : '⚠️') + '</span><p>' + esc(oo[2]) + '</p></div><button class="btn" id="sn">' + (R.so + 1 >= q.s.length ? 'Finish mission' : 'Next scene') + '</button>';
+    }
+    el.innerHTML = h;
+    el.querySelectorAll('[data-s]').forEach(function(b){
+      b.onclick = function(){
+        R.pk = +b.dataset.s;
+        if(!sc.o[R.pk][1]) R.err = true;
+        inner();
+      };
+    });
+    var sn = document.getElementById('sn');
+    if(sn) sn.onclick = function(){
+      R.pk = null;
+      R.so++;
+      if(R.so >= q.s.length){
+        R.ok = !R.err;
+        finish();
+      } else {
+        inner();
+      }
+    };
   } else if(q.k === "flip"){
     el.innerHTML = '<div class="flip" id="fl">' + (R.rev ? esc(q.r) : '<em>Think of your answer, then tap to reveal.</em>') + '</div>' + (R.pyq && !R.rev ? '<p class="tmr" id="tm"></p>' : '');
     document.getElementById("fl").onclick = function(){
@@ -822,8 +1024,8 @@ function foot(){
     }
     return;
   }
-  if(q.k === "match"){
-    f.innerHTML = '<button class="btn" disabled>Match all pairs</button>';
+  if(q.k === "match" || q.k === "sort" || q.k === "story"){
+    f.innerHTML = '<button class="btn" disabled>' + (q.k === "story" ? "Make your choices" : q.k === "sort" ? "Sort every card" : "Match all pairs") + '</button>';
     return;
   }
   var ready = q.k === "order" ? R.sel.length === q.o.length : R.sel.length > 0;
@@ -832,6 +1034,7 @@ function foot(){
     var ok;
     if(q.k === "order") ok = R.sel.every(function(v, i){ return v === i; });
     else if(q.k === "multi") ok = R.sel.length === q.a.length && q.a.every(function(v){ return R.sel.indexOf(v) > -1; });
+    else if(q.k === "year") ok = Math.abs(R.sel[0] - q.a) <= (q.tol || 0);
     else ok = R.sel[0] === q.a;
     R.ok = ok;
     R.msg = undefined;
