@@ -2,27 +2,15 @@
  * CORTEX MOBILE PWA SERVICE WORKER
  */
 
-const CACHE_NAME = 'cortex-mobile-v2.9';
+const CACHE_NAME = 'cortex-cava-v3.0';
 
 const ASSETS = [
   './',
   './index.html',
-  './game.css',
-  './game.js',
-  './mobile_data.js',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png',
-  './icons/favicon.png',
-  './assets/flowcharts/flowchart_msme_classification.svg',
-  './assets/flowcharts/flowchart_delayed_payments.svg',
-  './assets/flowcharts/flowchart_pm_vishwakarma.svg',
-  './assets/flowcharts/flowchart_dwarfism_vs_mittelstand.svg',
-  '../msme_data.js',
-  '../public_exam_data.js',
-  '../lecture_data.js'
+  './icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
