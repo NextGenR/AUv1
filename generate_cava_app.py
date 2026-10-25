@@ -136,6 +136,28 @@ b,strong,.tile b,.fact b,p b{font-weight:700;color:inherit;background:var(--hl-b
 .bub p{margin:0;background:var(--card);border:2px solid var(--line);border-radius:16px 16px 16px 4px;padding:8px 12px;font-size:15px}
 button:focus-visible{outline:3px solid var(--selb);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.blk-arena{display:flex;flex-direction:column;flex:1;min-height:360px;position:relative;justify-content:space-between;padding:10px 0}
+.blk-track{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:190px;background:var(--card-sub);border:2px dashed var(--line);border-radius:20px;padding:16px;margin-bottom:12px;overflow:hidden}
+.blk-card{background:var(--card);border:2.5px solid var(--selb);border-radius:18px;padding:16px 18px;width:100%;max-width:380px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.12);animation:blkDrop 6s linear forwards}
+@keyframes blkDrop{0%{transform:translateY(-10px);opacity:.95}100%{transform:translateY(10px);opacity:1}}
+.blk-card.catch{transform:scale(0.85);opacity:0;transition:all .25s ease-in}
+.blk-term{font-size:19px;font-weight:800;color:var(--ink);margin:0 0 6px;line-height:1.25}
+.blk-sub{font-size:13px;color:var(--mut);font-weight:600;margin:0 0 10px}
+.blk-timer{height:6px;width:100%;background:var(--line);border-radius:6px;overflow:hidden}
+.blk-timer i{display:block;height:100%;background:var(--acc);transition:width .2s linear}
+.blk-targets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.blk-bin{background:var(--card);border:2px solid var(--line);border-bottom-width:5px;border-radius:16px;padding:12px 6px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;transition:all .15s}
+.blk-bin:active{transform:translateY(2px);border-bottom-width:3px}
+.blk-bin.b0{border-color:rgba(239,68,68,.35)}.blk-bin.b0 .b-ico{color:#ef4444}
+.blk-bin.b1{border-color:rgba(34,197,94,.35)}.blk-bin.b1 .b-ico{color:#16a34a}
+.blk-bin.b2{border-color:rgba(59,130,246,.35)}.blk-bin.b2 .b-ico{color:#2563eb}
+.blk-bin.b-ok{border-color:var(--ok)!important;background:var(--okbg)!important}
+.blk-bin.b-no{border-color:var(--no)!important;background:var(--nobg)!important;animation:sh .35s}
+.blk-bin b{font-size:13.5px;font-weight:800;line-height:1.15;color:var(--ink)}
+.blk-bin small{font-size:11px;color:var(--mut);font-weight:700}
+.blk-toast{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;margin-top:10px;animation:pop .25s ease-out}
+.blk-toast.ok{border-color:var(--ok);background:var(--okbg)}
+.blk-toast.no{border-color:var(--no);background:var(--nobg)}
 </style></head><body><div id="app"></div>
 <script>
 var DATA = %TOPICS_JSON%;
@@ -366,6 +388,7 @@ function skEnd(){
 function hub(){
   var G = [
     ['🎮 Arcade', 'red flags, year slider, card sorting', startArc],
+    ['🧱 Block Drop', 'sort falling key terms into solution, challenge, model blocks', startBlocks],
     ['⚡ Lightning round', '8 questions, 10 seconds each', startLt],
     ['👹 Boss battle', '10 questions, one heart only', startBoss],
     ['🕵️ Detective', 'guess from fewer clues', startDet],
@@ -417,6 +440,169 @@ function startDet(){ var top = DATA[CUR_TOPIC]; go(top.dq || [], { det: 1 }); }
 function startStory(){ var top = DATA[CUR_TOPIC]; go(top.sq ? [top.sq] : [], { sto: 1 }); }
 function startLab(){ var top = DATA[CUR_TOPIC]; go((top.vq ? [top.vq] : []).concat(top.bq || []), { lab: 1 }); }
 function startArc(){ var top = DATA[CUR_TOPIC]; go(top.aq || [], { arc: 1 }); }
+
+var BLK = {};
+
+function startBlocks(){
+  var top = DATA[CUR_TOPIC];
+  if (!top.bg || !top.bg.it || !top.bg.it.length) return alert('No block game data for this topic');
+  var deck = sh(top.bg.it);
+  BLK = {
+    deck: deck,
+    idx: 0,
+    buckets: top.bg.b,
+    counts: [0, 0, 0],
+    score: 0,
+    combo: 1,
+    maxCombo: 1,
+    hearts: 3,
+    mistakes: 0,
+    timer: null,
+    left: 8,
+    paused: false
+  };
+  blkStep();
+}
+
+function blkStep(){
+  clearInterval(BLK.timer);
+  if (BLK.hearts <= 0 || BLK.idx >= BLK.deck.length) {
+    return blkEnd();
+  }
+  BLK.left = 8;
+  BLK.paused = false;
+  blkDraw();
+  BLK.timer = setInterval(function(){
+    var e = document.getElementById('b-sec');
+    var bar = document.getElementById('b-tb');
+    if (!e || BLK.paused) return;
+    BLK.left--;
+    e.textContent = BLK.left + 's';
+    if (bar) bar.style.width = (BLK.left / 8 * 100) + '%';
+    if (BLK.left <= 0) {
+      clearInterval(BLK.timer);
+      dropBlock(-1);
+    }
+  }, 1000);
+}
+
+function blkDraw(feedback){
+  var item = BLK.deck[BLK.idx];
+  var bks = BLK.buckets;
+  var icons = ['🔴', '🟢', '🔵'];
+  var h = '<div class="qhead">' +
+    '<button class="x" id="b-quit" aria-label="Quit">✕</button>' +
+    '<span style="font-weight:800;color:var(--accd);flex:1;text-align:center">🔥 x' + BLK.combo + ' Combo</span>' +
+    '<span style="font-weight:800;color:var(--no)">❤️ ' + BLK.hearts + '</span>' +
+  '</div>' +
+  '<div class="body" style="padding-bottom:12px">' +
+    '<p class="kind" style="text-align:center">Term ' + (BLK.idx + 1) + ' of ' + BLK.deck.length + ' · ' + BLK.score + ' XP</p>' +
+    '<div class="blk-arena">' +
+      '<div class="blk-track">' +
+        '<div class="blk-card" id="b-card">' +
+          '<div class="blk-term">' + esc(item[0]) + '</div>' +
+          '<div class="blk-sub">Sort into lower blocks below:</div>' +
+          '<div class="blk-timer"><i id="b-tb" style="width:' + (BLK.left / 8 * 100) + '%"></i></div>' +
+        '</div>' +
+        '<div id="b-sec" style="font-size:12.5px;color:var(--mut);font-weight:700;margin-top:6px">' + BLK.left + 's</div>' +
+        (feedback || '') +
+      '</div>' +
+      '<div class="blk-targets">';
+
+  bks.forEach(function(b, i){
+    h += '<button class="blk-bin b' + i + '" data-b="' + i + '"' + (BLK.paused ? ' disabled' : '') + '>' +
+      '<span class="b-ico" style="font-size:22px">' + icons[i] + '</span>' +
+      '<b>' + esc(b) + '</b>' +
+      '<small>' + (BLK.counts[i] || 0) + ' sorted</small>' +
+    '</button>';
+  });
+
+  h += '</div></div></div>';
+  app.innerHTML = h;
+
+  document.getElementById('b-quit').onclick = function(){
+    clearInterval(BLK.timer);
+    hub();
+  };
+
+  app.querySelectorAll('[data-b]').forEach(function(btn){
+    btn.onclick = function(){
+      if (BLK.paused) return;
+      dropBlock(+btn.dataset.b);
+    };
+  });
+}
+
+function dropBlock(binIdx){
+  clearInterval(BLK.timer);
+  BLK.paused = true;
+  var item = BLK.deck[BLK.idx];
+  var correctIdx = item[1];
+  var isOk = binIdx === correctIdx;
+
+  if (isOk) {
+    BLK.counts[binIdx] = (BLK.counts[binIdx] || 0) + 1;
+    var gain = 10 * BLK.combo;
+    BLK.score += gain;
+    BLK.combo++;
+    if (BLK.combo > BLK.maxCombo) BLK.maxCombo = BLK.combo;
+    beep(true);
+    var card = document.getElementById('b-card');
+    if (card) card.classList.add('catch');
+    var btn = app.querySelector('[data-b="' + binIdx + '"]');
+    if (btn) btn.classList.add('b-ok');
+    var fb = '<div class="blk-toast ok"><b>✓ Correct! +' + gain + ' XP</b> (🔥 x' + BLK.combo + ' combo)<br><small>' + esc(item[2]) + '</small></div>';
+    setTimeout(function(){
+      BLK.idx++;
+      blkStep();
+    }, 850);
+  } else {
+    BLK.hearts--;
+    BLK.mistakes++;
+    BLK.combo = 1;
+    beep(false);
+    var btnBad = app.querySelector('[data-b="' + binIdx + '"]');
+    if (btnBad) btnBad.classList.add('b-no');
+    var btnCorrect = app.querySelector('[data-b="' + correctIdx + '"]');
+    if (btnCorrect) btnCorrect.classList.add('b-ok');
+    var reason = binIdx === -1 ? '⏱ Out of time!' : '✕ Not quite!';
+    var fb = '<div class="blk-toast no"><b>' + reason + '</b><br>Belongs in <b>' + esc(BLK.buckets[correctIdx]) + '</b>.<br><small>' + esc(item[2]) + '</small></div>' +
+      '<button class="btn" id="b-next" style="margin-top:10px;padding:8px 16px;font-size:15px">Next Term →</button>';
+    blkDraw(fb);
+    var nxt = document.getElementById('b-next');
+    if (nxt) nxt.onclick = function(){
+      BLK.idx++;
+      blkStep();
+    };
+  }
+}
+
+function blkEnd(){
+  clearInterval(BLK.timer);
+  var win = BLK.hearts > 0;
+  var total = BLK.deck.length;
+  var solved = total - BLK.mistakes;
+  var pct = Math.max(0, Math.round(solved / total * 100));
+  addXp(BLK.score);
+
+  var h = '<div class="end">' +
+    '<div class="big">' + (win ? '🧱' : '💔') + '</div>' +
+    '<h1>' + (win ? 'Block Drop Cleared!' : 'Out of Hearts') + '</h1>' +
+    '<p class="sub">' + (win ? 'Mastered key terms and conceptual classifications.' : 'Keep drilling to lock in your term reflexes.') + '</p>' +
+    '<div class="stats">' +
+      '<div class="stat">+' + BLK.score + '<small>XP Earned</small></div>' +
+      '<div class="stat">' + pct + '%<small>Accuracy</small></div>' +
+      '<div class="stat">🔥 x' + BLK.maxCombo + '<small>Max Combo</small></div>' +
+    '</div>' +
+    '<button class="btn" id="b-again">Play Again</button>' +
+    '<button class="btn" id="b-hub" style="margin-top:10px;background:var(--card);color:var(--ink);border-color:var(--line)">Back to Game Hub</button>' +
+  '</div>';
+
+  app.innerHTML = h;
+  document.getElementById('b-again').onclick = startBlocks;
+  document.getElementById('b-hub').onclick = hub;
+  if (win && pct >= 70) confetti();
+}
 
 function startDaily(){
   var s = 0, d = today();

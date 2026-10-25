@@ -853,20 +853,42 @@ TOPICS = {
         "pyq": [
             {
                 "k": "flip",
-                "q": "PYQ-style: Examine the structural reasons behind the 'missing middle' and dwarfism in India's MSME sector. Suggest policy measures drawing from international best practices. (150 words)",
-                "r": "Intro: MSMEs drive 31.1% GDP and 11.1 Cr jobs, yet 99.4% remain micro units (inverted mushroom structure). Causes of Dwarfism: 1. Regulatory cliff (growth triggers loss of priority credit and tax exemptions). 2. Labor rigidities and compliance burden. 3. ₹30L Cr credit deficit (UK Sinha). Fixes: 1. Adopt German Mittelstand model with scale-neutral incentives. 2. Enforce Sec 43B(h) against delayed payments. 3. Expand TReDS factoring and E-Commerce Export Hubs. Conclude: Foster creative destruction to build global champions for Viksit Bharat 2047."
+                "q": "UPSC Mains 2023 (GS-3): Faster economic growth requires increased share of the manufacturing sector in GDP, particularly MSMEs. Comment on the present policies of the Government in this regard. (150 words)",
+                "r": "<b>Context:</b> Manufacturing share remains stagnant at ~16-17% of GDP against the 25% National Manufacturing Policy target. MSMEs are crucial (31.1% GDP, 35.4% Mfg GVA, 48.6% exports, 11.1 Cr jobs).<br><b>Key Policy Interventions:</b><br>1. <b>2020 Composite Criteria:</b> Eliminated the 'fear of growing' by combining investment + turnover and excluding export turnover from ceilings.<br>2. <b>Liquidity & Capital:</b> ₹100 Cr collateral-free credit guarantee (Budget 2024-25), Mudra Tarun Plus doubled to ₹20L, TReDS invoice discounting.<br>3. <b>Fiscal Discipline:</b> Section 43B(h) disallows tax deductions for delayed buyer payments beyond 45 days.<br>4. <b>Artisan Inclusion:</b> PM Vishwakarma (₹13,000 Cr) providing ₹15k toolkits and 5% collateral-free loans to 18 traditional crafts.<br><b>Way Forward:</b> Emulate the German Mittelstand cluster model with scale-neutral incentives and dedicated E-Commerce Export Hubs (ECEH)."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Delayed payments are the single biggest cause of working capital distress for MSMEs. How far do MSMED Act and Section 43B(h) address this issue? (150 words)",
-                "r": "Context: Small suppliers face 90-180 day payment delays, asphyxiating liquidity. Statutory Architecture: 1. MSMED Act Sec 15 (max 45-day window) & Sec 16 (compound interest at 3x RBI Bank Rate). 2. Sec 19 requires 75% pre-deposit on appeals. 3. Section 43B(h) (Budget 2023): disallows tax deductions to buyers unless payments are actually cleared within 45 days. Gaps: Unequal bargaining power; suppliers fear de-listing if they drag corporate clients to MSEFC. Way Forward: Auto-reporting of overdue invoices on GST portal and mandatory TReDS onboarding for all ₹500 Cr+ buyers."
+                "q": "UPSC Mains 2022 (GS-3): What are the key bottlenecks faced by MSMEs in India? How can institutional credit flows and e-commerce platforms help overcome the problem of dwarfism? (250 words)",
+                "r": "<b>Dwarfism Paradox:</b> Over 99.4% of Indian enterprises remain micro units, with only 0.08% reaching medium size (inverted mushroom structure).<br><b>Core Bottlenecks:</b><br>1. <b>₹30 Lakh Crore Credit Deficit:</b> UK Sinha Committee highlighted that traditional banks demand immovable asset collateral.<br>2. <b>Working Capital Asphyxiation:</b> Unpaid invoices average 90-180 days, locking liquidity.<br>3. <b>Regulatory Cliff:</b> Labor laws and compliance thresholds penalize units for hiring or expanding.<br><b>Catalytic Role of Credit & Tech:</b><br>1. <b>Digital Cash-flow Lending:</b> GST invoicing data + Account Aggregator framework enable collateral-free underwriting based on transactions.<br>2. <b>TReDS Factoring:</b> Converts unpaid supplier invoices into instant cash without buyer recourse.<br>3. <b>E-Commerce & ONDC:</b> Eliminates predatory middlemen, providing direct pan-India and global export access (ECEH).<br><b>Conclusion:</b> Transforming dwarfs into Mittelstand champions is essential for a $5 Trillion economy."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Discuss how digital cash-flow lending and Budget 2025-26 initiatives can bridge the MSME credit gap. (250 words)",
-                "r": "Intro: UK Sinha Committee pegged MSME credit deficit at ₹30 Lakh Crore due to traditional asset-collateral requirements. Shift to Cash-flow Lending: 1. Account Aggregators & GST data enable transaction-based risk profiling. 2. TReDS platform allows competitive invoice discounting without recourse. Budget 2025 Interventions: 1. ₹100 Crore collateral-free Credit Guarantee Scheme for machinery & equipment purchase. 2. Mudra Tarun Plus ceiling doubled to ₹20 Lakh. 3. PM Vishwakarma (₹13,000 Cr) providing ₹15k toolkits and collateral-free credit at 5% to 18 artisan trades. Conclude: Democratizing credit access shifts capital from speculative real estate to productive manufacturing."
+                "q": "UPSC Mains 2020 (GS-3): Explain the rationale behind the revised definition of MSMEs introduced in 2020. How will the composite criteria of investment and turnover help in eliminating the 'fear of growing'? (150 words)",
+                "r": "<b>Rationale of 2020 Revision:</b><br>1. <b>End of Artificial Bifurcation:</b> Merged Manufacturing and Services into a single unified threshold.<br>2. <b>Composite Criteria:</b> Formulated dual thresholds (Micro: ₹1Cr/₹5Cr; Small: ₹10Cr/₹50Cr; Medium: ₹50Cr/₹250Cr).<br>3. <b>Export Turnover Carve-Out:</b> Exports are strictly excluded from turnover calculation.<br><b>Eliminating the 'Fear of Growing':</b><br>Under the old 2006 Act, firms intentionally split into multiple micro shell entities or throttled output to preserve Priority Sector Lending (PSL) and public procurement benefits. The revised criteria allows units to upgrade machinery and aggressively export without forfeiting MSME concessions, fostering genuine economies of scale."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2024 (GS-3): Working capital constraints and delayed payments severely handicap the competitiveness of Indian small enterprises. Evaluate the efficacy of Section 43B(h) of the Income Tax Act and the TReDS platform in mitigating this challenge. (150 words)",
+                "r": "<b>The Liquidity Crisis:</b> As noted by NITI Aayog, delayed payments lock over ₹10 Lakh Crore of MSME capital annually.<br><b>Efficacy of Reforms:</b><br>1. <b>Section 43B(h):</b> Disallows buyers from claiming income tax deduction on purchases from Micro and Small units unless payment is settled within 45 days (MSMED Act Sec 15). Created immediate board-level urgency.<br>2. <b>TReDS Factoring:</b> Three-party bidding by banks discounts accepted invoices into instant liquidity with zero collateral.<br><b>Challenges:</b> Big corporate buyers threaten to cancel orders or demand suppliers de-register from Udyam.<br><b>Way Forward:</b> Auto-reflecting overdue invoices on the GST portal and making TReDS mandatory for all ₹250 Cr+ turnover corporations."
             }
         ],
+        "bg": {
+            "b": ["Challenges & Gaps", "Solutions & Reforms", "Models & Frameworks"],
+            "it": [
+                ["Dwarfism Paradox (99.4% Micro)", 0, "Dwarfism is the structural bottleneck where firms intentionally stay small to avoid regulatory costs."],
+                ["Section 43B(h) Tax Disallowance", 1, "Section 43B(h) disallows corporate tax deductions if MSME invoices are unpaid past 45 days."],
+                ["German Mittelstand", 2, "German Mittelstand is the globally renowned cluster benchmark for scale-neutral medium enterprises."],
+                ["₹30 Lakh Crore Credit Gap", 0, "The UK Sinha Committee identified the massive formal credit deficit suffocating MSMEs."],
+                ["TReDS Invoice Factoring", 1, "TReDS is the electronic factoring platform enabling competitive discounting of trade receivables."],
+                ["2020 Composite Criteria (1/5, 10/50, 50/250)", 2, "The unified classification criteria with statutory export turnover exclusion."],
+                ["Working Capital Asphyxiation", 0, "Severe liquidity crunch caused by buyers taking 90-180 days to clear invoices."],
+                ["Budget 2025 ₹100 Cr Guarantee", 1, "Collateral-free credit guarantee scheme for machinery purchase introduced in Union Budget 2024-25."],
+                ["PM Vishwakarma Model", 2, "Holistic framework supporting traditional artisans across 18 trades with toolkits and 5% credit."],
+                ["Regulatory Cliff & Compliance Burden", 0, "Sudden jump in labor and tax compliances when a unit expands from micro to small."],
+                ["E-Commerce Export Hubs (ECEH)", 1, "Public-private trade logistics hubs enabling micro producers to export globally without middlemen."],
+                ["Digital Cash-Flow Lending via ONDC", 2, "Transaction-based credit underwriting replacing traditional fixed asset mortgages."]
+            ]
+        },
         "sks": [
             {
                 "t": "MSME Macro Significance",
@@ -1793,15 +1815,37 @@ TOPICS = {
         "pyq": [
             {
                 "k": "flip",
-                "q": "PYQ-style: 'A paper leak is more heinous than murder.' In light of recent examination controversies, critically examine the provisions of the Public Examinations Act, 2024. (150 words)",
-                "r": "Intro: Cite Chhattisgarh HC dictum. Exams are the vehicle for upward mobility; leaks murder meritocracy. Act Provisions: 1. Coverage: UPSC, SSC, NTA, RRB, IBPS. 2. Severe penal deterrence: 3-5 yrs for individuals; 5-10 yrs and minimum ₹1 Cr fine for organized syndicates with asset attachment. 3. Candidate immunity: bona fide students shielded from criminal charges. Critique & Gaps: 1. Gary Becker's Economics of Crime shows severity fails without high detection probability. 2. NTA's 24-staff paradox forces outsourcing to private labs. Conclude: Statutory teeth must be paired with Radhakrishnan Committee's hybrid testing and government-run exam centers to restore youth faith."
+                "q": "UPSC Mains 2024 (GS-2): Malpractice and paper leaks in public examinations severely compromise meritocracy and erode youth trust in public recruitment. Critically examine the deterrent framework under the Public Examinations (Prevention of Unfair Means) Act, 2024. (150 words)",
+                "r": "<b>Context:</b> Over 40+ paper leaks across states in the past 5 years affected 1.5 crore candidates, threatening Articles 14 and 16.<br><b>Deterrent Architecture:</b><br>1. <b>Strict Segregation:</b> Bona fide students are explicitly insulated from criminalization (Section 12), targeting organized mafia syndicates instead.<br>2. <b>Severe Punishments:</b> 3 to 5 years jail for individual service providers; 5 to 10 years imprisonment and minimum ₹1 Crore fine for organized crime rings.<br>3. <b>Asset Attachment:</b> Section 12 empowers seizure of properties and recovery of full exam re-conduction expenses.<br>4. <b>Cognizable & Non-Bailable:</b> Deprives leak cartels of instant bail.<br><b>Critique & Gaps:</b> Gary Becker's Economics of Crime shows punishment severity is futile without high detection probability. NTA's 24-member cadre paradox forced outsourcing to unverified private centers.<br><b>Way Forward:</b> Radhakrishnan Committee's hybrid delivery model and 100% government exam centers (KVs, IITs)."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Discuss the structural recommendations of the K. Radhakrishnan Committee to revamp the National Testing Agency (NTA). (150 words)",
-                "r": "Context: 7-member high-level panel under former ISRO chief Dr. K. Radhakrishnan setup post-NEET crisis. Key Reforms: 1. Multi-Stage Testing: Screening Prelims + Mains for mega-exams to reduce single-window risks. 2. Hybrid Delivery: Question paper transmitted digitally in encrypted packets minutes before; answer on physical OMR/proctored terminals. 3. 100% Government Centers: Test exclusively in KVs, Navodayas, IITs, NITs, ending shady private lab contracts. 4. Institutional Overhaul: Expand NTA's 24-member permanent cadre into an autonomous professional testing service. Conclude: Transforming NTA from a contractual coordinating body into an ISRO-grade secure testing institution."
+                "q": "UPSC Mains 2024 (GS-4): Compromising the sanctity of recruitment examinations creates a crisis of moral legitimacy for the state. Discuss the ethical obligations of exam conducting agencies, invigilators, and civil society. (150 words)",
+                "r": "<b>Ethics of Meritocracy:</b> Public recruitment is the constitutional social equalizer; when wealth and corrupt cartels subvert exams, merit is murdered.<br><b>Ethical Obligations:</b><br>1. <b>Exam Agencies (NTA/UPSC):</b> Institutional probity, end-to-end procedural confidentiality, zero conflict of interest, and treating candidate trust as a sacred fiduciary duty.<br>2. <b>Invigilators & Center Staff:</b> Uncompromising personal integrity, active vigilance against wireless impersonation, and resisting bribery under the Nolan principles of honesty and accountability.<br>3. <b>Civil Society & Candidates:</b> Collective refusal to patronize leaked papers, whistleblowing on solver syndicates, and de-stigmatizing competitive failures.<br><b>Conclusion:</b> Public examinations must remain a beacon of genuine equality of opportunity (Article 16), not a covert financial auction."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2024 (GS-2): Discuss the structural recommendations of the K. Radhakrishnan Committee to revamp the National Testing Agency (NTA). (150 words)",
+                "r": "<b>Mandate:</b> 7-member high-level panel headed by former ISRO chief Dr. K. Radhakrishnan formed post-NEET controversy.<br><b>Structural Blueprint:</b><br>1. <b>Multi-Stage Testing:</b> Introduce Screening Prelims + Proctored Mains for high-stakes exams to eliminate single-day risk.<br>2. <b>Hybrid Delivery Mechanism:</b> Question papers transmitted digitally encrypted minutes before start; candidates mark responses on physical OMR sheets to eliminate both transit leaks and computer lab hacking.<br>3. <b>100% Government Test Centers:</b> Ban commercial third-party labs; conduct exams exclusively in KVs, Navodayas, IITs, NITs, and universities.<br>4. <b>Autonomous Cadre:</b> Build a permanent, specialized testing civil service to end contractual outsourcing."
             }
         ],
+        "bg": {
+            "b": ["Exam Malpractices", "Statutory Deterrence", "Institutional Reforms"],
+            "it": [
+                ["Organised Paper Leak Ring", 0, "Inter-state mafia syndicates executing planned breaches for ₹30-50 Lakh per candidate."],
+                ["₹1 Crore Minimum Fine", 1, "Section 10(2) of the 2024 Act imposes a non-negotiable minimum ₹1 Cr penalty on criminal syndicates."],
+                ["Radhakrishnan Committee", 2, "7-member high-level panel under former ISRO chief Dr. K. Radhakrishnan to revamp testing mechanisms."],
+                ["Private Computer Lab Hacking", 0, "Commercial testing centers compromised via remote desktop control software like AnyDesk."],
+                ["Section 12 Property Attachment", 1, "Statutory power to seize and attach assets of exam offenders and recover total exam conducting costs."],
+                ["Hybrid Multi-Stage Testing", 2, "Radhakrishnan model: Screening Prelims + encrypted digital question delivery with physical OMR answers."],
+                ["Fake Answer Keys & Solver Gangs", 0, "Impersonators and solvers deployed inside exam halls using unauthorized wireless devices."],
+                ["5 to 10 Years Imprisonment", 1, "Mandatory severe jail term for members of organised exam-rigging syndicates."],
+                ["100% Government Test Centers", 2, "Conducting exams exclusively in Kendriya Vidyalayas, Navodayas, IITs, and NITs to eliminate private sub-contracting."],
+                ["NTA 24-Staff Paradox", 0, "National Testing Agency conducting exams for millions with only 24 permanent employees, forcing private outsourcing."],
+                ["Cognizable & Non-Bailable Status", 1, "All offences under Public Examinations Act 2024 are made non-bailable with no anticipatory bail."],
+                ["Permanent Cadre Overhaul", 2, "Building an autonomous, permanent ISRO-grade testing cadre to replace contractual coordinators."]
+            ]
+        },
         "sks": [
             {
                 "t": "Public Exams Act 2024",
@@ -2649,15 +2693,32 @@ TOPICS = {
         "pyq": [
             {
                 "k": "flip",
-                "q": "PYQ-style: Artificial intelligence can assist judicial efficiency but cannot replace judicial conscience. Comment in light of recent Supreme Court directives. (150 words)",
-                "r": "Intro: India's 5 Crore backlog (NJDG) requires technological force multipliers. Assistive Promise: 1. SUPACE parses document facts and research. 2. SUVAS translates judgments into regional languages. 3. Automated cause-lists elevate Case Clearance Rate (CCR). Perils & SC Alarm: 1. NCLT hallucination crisis where LLMs fabricated case precedents (SC warned it is like 'toxic Methyl Isocyanate gas'). 2. Article 21 demands reasoned adjudication, violated by black-box algorithms. Draft AI Guidelines 2026: Mandate disclosure of AI use and require advocates to verify citations. Conclude: AI as clerk, never as judge; efficiency must serve justice, not supersede empathy."
+                "q": "UPSC Mains 2023 (GS-2): Integration of Artificial Intelligence in the Indian judicial system offers tremendous promise for clearing the 5-crore case pendency, but raises serious constitutional and ethical dilemmas. Comment. (150 words)",
+                "r": "<b>Technological Promise:</b> India's National Judicial Data Grid (NJDG) records over 5 Crore pending cases. Interventions like <b>SUPACE</b> (fact and citation extraction), <b>SUVAS</b> (vernacular translation into 18 languages), <b>FASTER</b> (digital bail communication), and <b>e-Courts Phase III</b> (₹7,210 Cr) dramatically improve the Case Clearance Rate (CCR).<br><b>Constitutional & Ethical Dilemmas:</b><br>1. <b>Article 21 Fair Trial:</b> Machine learning operates as an unexplainable 'Black Box', preventing litigants from scrutinizing the reasoning behind decisions.<br>2. <b>Algorithmic Bias:</b> Historical arrest/conviction datasets encode systemic socio-economic and caste prejudices into predictive models.<br>3. <b>Hallucination Peril:</b> As highlighted by the Supreme Court, generative AI tools frequently invent fake precedents.<br><b>Conclusion:</b> AI must strictly remain an assistive clerk for administrative speed, while the sacred duty of moral adjudication and empathy remains human-led."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Examine the constitutional and ethical concerns associated with deploying AI algorithms in the Indian judicial system with special reference to Article 21. (150 words)",
-                "r": "Context: e-Courts Phase III (₹7,210 Cr) integrates advanced analytics. Constitutional Concerns: 1. Article 21: Right to a fair and reasoned trial requires explainability; deep learning models suffer from the 'Black Box' problem. 2. Algorithmic Bias: Models trained on historical policing/conviction data encode and automate systemic socio-economic and demographic biases. 3. Equality of Arms: Wealthy litigants deploy proprietary legal AI, widening disparity against indigent undertrials. Ethical Dimension: Adjudication requires mercy, moral reasoning, and constitutional morality—traits exclusive to human consciousness. Way Forward: Implement strict algorithmic audits, open APIs, and maintain human-in-the-loop oversight."
+                "q": "UPSC Mains 2022 (GS-4): Can artificial intelligence ever replace a human judge in deciding cases involving human dignity, empathy, and social context? Discuss with ethical arguments. (150 words)",
+                "r": "<b>Ethical Antithesis:</b> Law is not mere mechanical computation; it is the living conscience of society.<br><b>Why AI Cannot Replace Human Judges:</b><br>1. <b>Empathy & Conscience:</b> An algorithm lacks the capacity for compassion or understanding the lived humiliation of an undertrial (Gandhi’s Talisman).<br>2. <b>Moral Agency & Accountability:</b> An algorithm cannot be held morally culpable for an unjust verdict; justice requires moral responsibility.<br>3. <b>Evolution of Constitutional Morality:</b> Progressive judgments (e.g. Navtej Johar, Puttaswamy) required breaking past statistical precedents to protect minority rights—something backward-looking models cannot do.<br><b>Conclusion:</b> Efficiency can be automated, but justice demands the human soul."
             }
         ],
+        "bg": {
+            "b": ["Ethical & Tech Risks", "Assistive AI Solutions", "Constitutional Models"],
+            "it": [
+                ["NCLT Hallucination Crisis", 0, "Generative AI fabricating nonexistent case precedents, cited by lawyers to courts."],
+                ["SUVAS Vernacular Translation", 1, "Supreme Court AI tool translating orders and judgments into 18 regional Indian languages."],
+                ["SC Human Adjudication Boundary", 2, "The strict constitutional line: AI as research clerk only; empathy and final justice must remain human."],
+                ["Article 21 Black-Box Opacity", 0, "Deep neural networks lacking explainability, violating the fundamental right to a reasoned trial."],
+                ["SUPACE Legal Research Assistant", 1, "Supreme Court Portal for Assistance in Court's Efficiency to extract facts and legal citations."],
+                ["e-Courts Project Phase III", 2, "Union Cabinet approved ₹7,210 Crore initiative building paperless, digitized judicial infrastructure."],
+                ["Algorithmic Socio-Economic Bias", 0, "AI models trained on historic criminal data encoding discriminatory demographic biases."],
+                ["FASTER Digital Bail Delivery", 1, "Secure electronic transmission of bail orders directly to jail superintendents to end unlawful detentions."],
+                ["Open Judicial Data API Framework", 2, "Standardized, public APIs enabling transparent tracking of 5 Crore pending cases on the NJDG."],
+                ["Digital Divide for Rural Litigants", 0, "Lack of digital literacy and broadband access excluding indigent undertrials from virtual hearings."],
+                ["Automated Cause-List Scheduling", 1, "Algorithm balancing judge docket loads and eliminating redundant case adjournments."],
+                ["Constitutional Morality Filter", 2, "Adjudication guided by societal conscience, compassion, and justice rather than automated statistical computation."]
+            ]
+        },
         "sks": [
             {
                 "t": "AI in Judiciary: Assistive vs Adjudicative",
@@ -3850,35 +3911,42 @@ TOPICS = {
         "pyq": [
             {
                 "k": "flip",
-                "q": "PYQ-style: Citizen’s Charters have not delivered the desired results. Examine the reasons and suggest measures. (150 words)",
-                "r": "Intro: time-bound service promise (UK 1991, India 1997). Why they fell short: top-down design, vague standards, low awareness, no penalty (paper tiger). Fixes: co-create with SMART standards, Right to Services laws (MP Lok Sewa Guarantee), CPGRAMS, report cards, Sevottam audit. Conclude: from promise to guarantee."
+                "q": "UPSC Mains 2022 (GS-2): The Citizen’s Charter is an ideal instrument of organisational transparency and accountability, but it has its own serious limitations. Critically evaluate and suggest measures to make it effective. (150 words)",
+                "r": "<b>Ideal Instrument:</b> Formulated in UK (1991) and adopted in India (1997) to shift governance from bureaucratic rules to citizen-centric service guarantees.<br><b>Structural Limitations:</b><br>1. <b>Absence of Statutory Teeth:</b> Charters are voluntary declarations without legal enforceability (paper tigers).<br>2. <b>Top-Down Formulation:</b> Drafted without consulting frontline staff or citizen users, leading to unrealistic or vague timelines.<br>3. <b>Zero Penalty on Defaulters:</b> Errant officials face no personal consequence for persistent breaches.<br>4. <b>Low Public Awareness:</b> Displayed in English in obscure corridors.<br><b>Measures (2nd ARC 12th Report):</b><br>1. Co-create charters with stakeholders using SMART benchmarks.<br>2. Adopt the <b>Sevottam quality framework</b> (Charter + Grievance Redress + Capability).<br>3. Back charters with statutory <b>Right to Services Acts</b> with daily monetary compensation on defaulters.<br>4. Independent third-party social audits and Citizen Report Cards."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Discuss the role of Sevottam in improving public service delivery.",
-                "r": "Seva + Uttam, DARPG framework (~2006). Three modules: Citizen’s Charter, Grievance Redress, Service Delivery Capability. Benefit: a common yardstick and self-assessment. Limits: voluntary, uneven uptake. Link: 2nd ARC 12th Report. Way forward: independent audit and statutory backing."
+                "q": "UPSC Mains 2023 (GS-2): Right to Services Acts enacted by various State governments provide statutory teeth to Citizen’s Charters. Analyse how far this transition from 'voluntary promise' to 'legal guarantee' has empowered citizens. (150 words)",
+                "r": "<b>Paradigm Shift:</b> Pioneered by Madhya Pradesh (Lok Sewa Guarantee Act 2010), Bihar (2011), and Karnataka (Sakala), transitioning administrative promises from discretionary guidelines to enforceable statutory rights.<br><b>Empowerment Mechanisms:</b><br>1. <b>Time-Bound Service Delivery:</b> Mandatory notification of specific delivery deadlines for ration cards, caste certificates, and utility connections.<br>2. <b>Financial Deterrence:</b> Errant officers face deductions of ₹250 to ₹5,000 from personal salary, awarded directly to the aggrieved citizen as compensation.<br>3. <b>Appellate Architecture:</b> Automatic two-tier appellate mechanism.<br><b>Remaining Gaps:</b> The Central Right to Services Bill (2011) lapsed in 2014; only a limited set of routine certificates are notified; penalty provisions are sparingly enforced by appellate superiors.<br><b>Conclusion:</b> Moving from a paper promise to a statutory guarantee institutionalizes genuine administrative accountability."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: How far do Right to Services Acts address the limits of Citizen’s Charters?",
-                "r": "Gains: statutory deadlines, penalty on officers, appeals (MP 2010 first, then Bihar, Rajasthan, Delhi, Karnataka Sakala). Gaps: only notified services, weak penalty use, low awareness, uneven states. The 2011 Central Bill lapsed in 2014. Way forward: wider coverage, digital tracking, social audits."
+                "q": "UPSC Mains 2021 (GS-4): Though Citizen’s Charters have been formulated by almost all public departments, the actual redressal of citizen grievances remains lethargic. What ethical values and administrative changes are needed to make public administration responsive? (150 words)",
+                "r": "<b>Ethical Values Required (Nolan Committee & 2nd ARC):</b><br>1. <b>Empathy & Compassion:</b> Viewing citizen distress as an urgent human reality rather than a routine file number.<br>2. <b>Public Service Orientation:</b> Shedding colonial bureaucratic superiority ('mai-baap sarkar') in favor of recognizing citizens as the ultimate sovereign.<br>3. <b>Probity & Moral Accountability:</b> Treating departmental commitments as solemn personal moral oaths.<br><b>Administrative Reforms:</b><br>1. <b>Auto-Escalation:</b> Workflow tracking (like Karnataka Sakala) where unaddressed grievances automatically climb to higher authorities.<br>2. <b>Sevottam Quality Audits:</b> Annual public certification of grievance redressal systems.<br>3. <b>Citizen Feedback Loops:</b> Linking civil servant performance appraisals (APARs) with anonymized citizen satisfaction ratings."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: What role can technology play in making Citizen’s Charters effective?",
-                "r": "Online portals with tracking and auto-escalation (Sakala), CPGRAMS for grievances, SMS alerts, dashboards for monitoring, less discretion and delay. Caution: digital divide, so keep assisted and local-language channels. Conclude: tech enforces the promise only with accountability."
-            },
-            {
-                "k": "flip",
-                "q": "GS-4 case: A citizen has waited months for a service your charter promises in 15 days. What do you do?",
-                "r": "Act: fast-track the case, find the cause of delay, apologise and inform the citizen, fix the process, fix responsibility, and record the lesson. Values: empathy, accountability, integrity, public service orientation. Report systemic gaps upward."
-            },
-            {
-                "k": "flip",
-                "q": "PYQ-style: Citizen-centric administration is the heart of good governance. Comment with reference to the 2nd ARC.",
-                "r": "2nd ARC 12th Report: Citizen Centric Administration. Key ideas: consultation, realistic standards, review, grievance redress, service guarantees. Tools: Charter, Sevottam, CPGRAMS, report cards. Challenge: enforcement. Conclude: governance judged by citizen experience."
+                "q": "UPSC Mains 2020 (GS-4 Case Study): A district officer discovers that public service delivery timelines promised in the department's charter are consistently breached by 60-90 days due to clerk vacancies and archaic physical filing. Citizens are frustrated and middlemen exploit the delay. Outline an action plan. (250 words)",
+                "r": "<b>Immediate Response:</b><br>1. Set up a transparent single-window citizen helpdesk with real-time digital queue tokens.<br>2. Publish weekly backlog triage lists prioritized by citizen vulnerability (senior citizens, medical aid).<br><b>Workflow Re-engineering:</b><br>1. Digitize file movements via e-Office to eliminate physical paper transit delays and curb middleman access.<br>2. Rationalize approval hierarchies: reduce multi-tier clerk signatures to a 2-tier approval workflow.<br><b>Integrity & Grievance Mechanism:</b><br>1. Institute CCTV surveillance at public counters; strict criminal FIRs against touts.<br>2. Integrate complaints into CPGRAMS with mandatory 15-day review.<br><b>Structural Remedy:</b> Deploy temporary data-entry interns while submitting a formal empirical vacancy report to state headquarters."
             }
         ],
+        "bg": {
+            "b": ["Challenges & Gaps", "Solutions & Reforms", "Models & Frameworks"],
+            "it": [
+                ["Paper Tiger (No Penalties)", 0, "Voluntary nature without statutory backing leaves charters devoid of enforceable consequences."],
+                ["Right to Services Acts", 1, "State statutes (e.g. MP 2010, Bihar 2011) providing legal deadlines, appeals, and daily fines on officers."],
+                ["Sevottam 3-Module Framework", 2, "DARPG quality framework: Citizen's Charter + Public Grievance Redress + Service Delivery Capability."],
+                ["Top-Down Drafting", 0, "Charters designed in central ministries without consulting frontline staff or grassroots citizens."],
+                ["Third-Party Social Audits", 1, "Independent citizen-led scrutiny and public evaluations verifying actual on-ground service delivery."],
+                ["2nd ARC 12th Report", 2, "'Citizen Centric Administration: The Heart of Governance', providing the master blueprint for public service guarantees."],
+                ["Vague 'As Soon As Possible' Norms", 0, "Unquantifiable, ambiguous commitments that prevent citizens from demanding accountability."],
+                ["Sakala Auto-Escalation Engine", 1, "Karnataka's digital workflow where delayed files automatically escalate to higher supervisory officers."],
+                ["UK Charter Mark (1991)", 2, "John Major's pioneering excellence framework rewarding public agencies that meet user-defined service benchmarks."],
+                ["Language & Awareness Deficit", 0, "Charters published only in English or hidden on obscure notice boards inaccessible to common citizens."],
+                ["SMART Service Standards", 1, "Specific, Measurable, Achievable, Relevant, and Time-bound commitments for every notified service."],
+                ["Citizen Report Cards (Bangalore)", 2, "Public Affairs Centre survey methodology quantifying user satisfaction to drive bureaucratic reform."]
+            ]
+        },
         "sks": [
             {
                 "t": "Citizen’s Charter",
@@ -5086,20 +5154,42 @@ TOPICS = {
         "pyq": [
             {
                 "k": "flip",
-                "q": "PYQ-style: 'Right to Information is not merely a statutory right but a fundamental constitutional entitlement.' Trace its evolution and evaluate its efficacy in dismantling bureaucratic secrecy. (150 words)",
-                "r": "Intro: SC in Raj Narain (1975) recognized RTI within Article 19(1)(a); grassroots struggle by MKSS in Rajasthan (Jan Sunwais) led to the RTI Act, 2005. Efficacy in Promoting Openness: 1. Sections 2(h), 4 & 7 established enforceable transparency, life/liberty 48-hr mandate, and BPL fee waivers. 2. Section 8(2) provided a golden 'public interest override'. 3. SC expanded scope: CJI office under RTI (Subhash Chandra Agarwal 2019) and struck down Electoral Bonds (ADR 2024). Persistent Impediments: 1. Official Secrets Act 1923 culture persists; 4% penalty rate under Sec 20. 2. Murders of whistleblowers without operationalized Whistleblowers Act. 3. 2019 tenure dilution & DPDP Act 2023 Sec 44(3). Conclude: Adopt 2nd ARC recommendations (NCC, 50% non-bureaucrat commissioners) to preserve transparency as the master key to democracy."
+                "q": "UPSC Mains 2020 (GS-2): The Right to Information (Amendment) Act, 2019 has been criticized for undermining the independence and constitutional autonomy of Information Commissions. Discuss. (150 words)",
+                "r": "<b>The 2005 Statutory Shield:</b> Originally, Section 13 & 16 guaranteed a fixed 5-year tenure with salaries benchmarked against Chief Election Commissioners/Judges to shield commissioners from executive retaliation.<br><b>The 2019 Amendments:</b><br>1. <b>Executive Discretion:</b> Transferred power to determine tenure, salaries, and service conditions of both Central and State Information Commissioners entirely to Central Government executive rules.<br>2. <b>Federal Infringement:</b> Setting terms for State Information Commissions encroached upon state autonomy.<br><b>Implications on Autonomy:</b><br>Reduced independent statutory watchdogs into subordinate departmental directorates. Risk of pliant commissioners fearing executive displeasure when deciding high-stakes public interest appeals.<br><b>Way Forward:</b> Implement 2nd ARC recommendation to establish a statutory National Coordination Committee (NCC) and ensure non-partisan appointments."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: The office of the Chief Justice of India was brought under the RTI Act in Subhash Chandra Agarwal (2019). How did the Supreme Court reconcile transparency with judicial independence? (150 words)",
-                "r": "Context: Constitution Bench affirmed that the CJI's office is a public authority under Section 2(h). Reconciliation Doctrine: 1. Transparency vs Independence: Held that transparency does not undermine judicial independence; it fortifies public faith in judicial probity. 2. Proportionality & Balance: Disclosure must be weighed against personal privacy under Section 8(1)(j) using the proportionality test. 3. Fiduciary Filter: Deliberations of the Collegium and medical records are shielded unless larger public interest demands disclosure. Significance: Established that no constitutional office is an island of absolute secrecy, setting a benchmark for open governance while safeguarding institutional integrity."
+                "q": "UPSC Mains 2024 (GS-2): In Association for Democratic Reforms (ADR) v. Union of India (2024), the Supreme Court held that the right to know is fundamental to free elections under Article 19(1)(a). Analyse how the RTI framework complements electoral transparency. (150 words)",
+                "r": "<b>Constitutional Elevation:</b> A unanimous 5-Judge Constitution Bench invalidated the anonymous Electoral Bonds scheme, holding that the right to information is not merely statutory under 2005 Act, but a foundational human right under <b>Article 19(1)(a)</b> tracing back to <i>Raj Narain (1975)</i>.<br><b>Linkage to Electoral Transparency:</b><br>1. <b>Informed Voter Choice:</b> Freedom of expression is meaningless without knowledge of who finances political parties and potential quid pro quo policy capture.<br>2. <b>Financial Transparency:</b> Complements candidate asset disclosure mandates established in ADR (2002/2003).<br>3. <b>Section 2(h) Dilemma:</b> The 2013 Central Information Commission (CIC) order declaring national political parties as 'Public Authorities' under Section 2(h) remains resisted by parties.<br><b>Conclusion:</b> Sunlight is the best disinfectant against oligarchic policy capture."
             },
             {
                 "k": "flip",
-                "q": "PYQ-style: Examine the safety risks faced by RTI activists and suggest measures to protect information seekers drawing from 2nd ARC recommendations. (150 words)",
-                "r": "Context: Over 100+ RTI activists have been murdered for exposing sand, mining, and welfare corruption. Structural Vulnerability: 1. Asymmetry of power between rural citizens and corrupt local syndicates. 2. Whistleblowers Protection Act 2014 remains non-operationalized without notified rules. 2nd ARC Measures: 1. Statutory Protection Chapter: Amend RTI Act to include a dedicated chapter for mandatory state protection of threatened applicants. 2. Fast-track investigation: Mandate high-level time-bound police probes into attacks on activists. 3. Suo motu disclosure of queried info: If an activist is threatened or killed, the requested information should be immediately placed in the public domain to eliminate the murderer's motive. Conclude: Protecting the information seeker is prerequisite to protecting the right itself."
+                "q": "UPSC Mains 2021 (GS-2): Can the Right to Information Act, 2005 act as an effective tool for achieving participatory democracy and social accountability? Evaluate in the light of grassroots experiences. (150 words)",
+                "r": "<b>Grassroots Origins:</b> Birthed from MKSS Jan Sunwais in rural Rajasthan ('Hamara Paisa, Hamara Hisab'), RTI transformed citizens from passive subjects into active monitors of state power.<br><b>Successes in Social Accountability:</b><br>1. <b>Welfare Auditing:</b> Unmasked ghost beneficiaries in PDS ration distribution and fake muster rolls in MGNREGA.<br>2. <b>Pro-Poor Design:</b> Free access for BPL applicants and the strict 48-hour deadline for matters concerning personal life and liberty.<br><b>Persistent Grassroots Handicaps:</b><br>1. Over 3-4 lakh appeals pending; long vacancies in Information Commissions.<br>2. Severe physical danger: over 100 whistleblowers and RTI activists killed.<br>3. Section 8(1)(j) personal privacy exemption expanded under DPDP Act 2023 Sec 44(3), creating a cloak for corrupt officials.<br><b>Way Forward:</b> Implement Section 4 proactive online disclosure (Jan Soochna portal model) and operationalize the Whistleblowers Protection Act."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2023 (GS-2): Section 8 of the RTI Act provides exemptions from disclosure, yet Section 8(2) introduces a public interest override. Critically examine the tussle between institutional confidentiality and public interest. (150 words)",
+                "r": "<b>Statutory Architecture:</b><br>1. <b>Section 8(1):</b> Codifies 10 categorical exemptions (sovereignty, cabinet papers, commercial confidence, personal privacy).<br>2. <b>Section 8(2) Master Key:</b> Mandates that information must be disclosed if public interest in disclosure outweighs the harm to protected interests. It explicitly overrides the colonial Official Secrets Act, 1923.<br><b>Judicial Reconciliation:</b> In <i>Subhash Chandra Agarwal (2019)</i> bringing the CJI's office under RTI, the SC applied the proportionality doctrine to balance transparency with judicial independence.<br><b>Practical Pathology:</b> PIOs routinely cite Section 8(1) as a mechanical rubber stamp without applying the Section 8(2) balancing test.<br><b>Remedy:</b> 2nd ARC recommended penalizing officers who reject queries without recording reasoned justifications under Section 8(2)."
             }
         ],
+        "bg": {
+            "b": ["Challenges & Impediments", "Solutions & Enforcers", "Landmark Precedents"],
+            "it": [
+                ["Official Secrets Act 1923 Mentality", 0, "Bureaucratic culture of knee-jerk secrecy persisting despite the 2005 sunshine law."],
+                ["Section 8(2) Public Interest Override", 1, "Statutory trump card mandating disclosure if public benefit outweighs protected harm."],
+                ["Raj Narain Case (1975)", 2, "Supreme Court ruling declaring the right to know an integral part of Article 19(1)(a) freedom of speech."],
+                ["Information Commission Backlogs", 0, "Over 3-4 lakh second appeals pending nationwide due to unfilled commissioner vacancies."],
+                ["Section 4 Proactive Disclosure", 1, "Mandatory suo motu publication of organizational norms, reducing the need for formal RTI filings."],
+                ["ADR Electoral Bonds Ruling (2024)", 2, "Unanimous 5-Judge Constitution Bench holding voters have a fundamental right to know political donors."],
+                ["Murders of RTI Activists", 0, "Over 100 whistleblowers killed due to lack of an operationalized Whistleblowers Protection Act."],
+                ["Section 20 Personal Fine (₹250/day)", 1, "Personal financial liability up to ₹25,000 imposed on PIOs for mala fide refusals or unjustified delays."],
+                ["MKSS Jan Sunwais (Rajasthan)", 2, "Grassroots social audit movement by Aruna Roy and Nikhil Dey establishing 'Hamara Paisa, Hamara Hisab'."],
+                ["DPDP Act 2023 Sec 44(3) Amendment", 0, "Amended Section 8(1)(j) to blanket-exempt personal information, weaponized to conceal graft."],
+                ["Jan Soochna Digital Portal", 1, "Rajasthan's proactive transparency platform putting real-time welfare and scheme data online for all."],
+                ["Subhash Agarwal Judgment (2019)", 2, "Constitution Bench ruling confirming the office of the Chief Justice of India falls under RTI."]
+            ]
+        },
         "sks": [
             {
                 "t": "Right to Information Act, 2005",

@@ -64,6 +64,9 @@ topics.forEach(t => {
   if (!top.sq || !top.sq.s || !top.sq.s.length) throw new Error(`Topic ${t} missing Officer Mission story (sq)`);
   if (!top.vq || !top.vq.b || !top.vq.it) throw new Error(`Topic ${t} missing Venn sort card (vq)`);
   if (!top.bq || !top.bq.length) throw new Error(`Topic ${t} missing Sentence builders (bq)`);
+  if (!top.bg || !top.bg.b || !top.bg.it || !top.bg.it.length) throw new Error(`Topic ${t} missing Block Game data (bg)`);
+  let has2020Pyq = top.pyq.some(q => q.q && (q.q.includes('2020') || q.q.includes('2021') || q.q.includes('2022') || q.q.includes('2023') || q.q.includes('2024') || q.q.includes('2025')));
+  if (!has2020Pyq) throw new Error(`Topic ${t} missing 2020+ UPSC Mains PYQs`);
 
   top.lessons.forEach((l, li) => {
     if (!l.n || !l.e || !l.d) throw new Error(`Lesson ${li} missing title/emoji/desc in ${t}`);
@@ -242,5 +245,20 @@ save();
 home();
 if (S.theme !== 'light') throw new Error("Theme state should be 'light'");
 console.log("Theme toggled back to 'light' successfully!");
+
+console.log("11. Testing Block Drop Game...");
+startBlocks();
+if (!app.innerHTML.includes('Sort into lower blocks below')) throw new Error("Block game arena not rendered");
+if (BLK.deck.length === 0) throw new Error("Block game deck empty");
+let curItem = BLK.deck[BLK.idx];
+let targetBin = curItem[1];
+dropBlock(targetBin);
+if (BLK.score <= 0) throw new Error("Block drop correct should award score");
+if (BLK.combo <= 1) throw new Error("Block drop correct should increment combo");
+// Test incorrect drop
+dropBlock((targetBin + 1) % 3);
+if (BLK.hearts !== 2) throw new Error("Incorrect block drop should lose a heart");
+if (BLK.combo !== 1) throw new Error("Incorrect block drop should reset combo to 1");
+console.log("Block Drop Game verified with 100% success!");
 
 console.log("=== ALL CAVA ENGINE & GAME HUB TESTS PASSED WITH 100% SUCCESS ===");

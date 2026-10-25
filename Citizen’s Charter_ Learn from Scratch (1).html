@@ -98,6 +98,28 @@ b,strong,.tile b,.fact b,p b{font-weight:700;color:inherit;background:var(--hl-b
 .bub p{margin:0;background:var(--card);border:2px solid var(--line);border-radius:16px 16px 16px 4px;padding:8px 12px;font-size:15px}
 button:focus-visible{outline:3px solid var(--selb);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.blk-arena{display:flex;flex-direction:column;flex:1;min-height:360px;position:relative;justify-content:space-between;padding:10px 0}
+.blk-track{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-height:190px;background:var(--card-sub);border:2px dashed var(--line);border-radius:20px;padding:16px;margin-bottom:12px;overflow:hidden}
+.blk-card{background:var(--card);border:2.5px solid var(--selb);border-radius:18px;padding:16px 18px;width:100%;max-width:380px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.12);animation:blkDrop 6s linear forwards}
+@keyframes blkDrop{0%{transform:translateY(-10px);opacity:.95}100%{transform:translateY(10px);opacity:1}}
+.blk-card.catch{transform:scale(0.85);opacity:0;transition:all .25s ease-in}
+.blk-term{font-size:19px;font-weight:800;color:var(--ink);margin:0 0 6px;line-height:1.25}
+.blk-sub{font-size:13px;color:var(--mut);font-weight:600;margin:0 0 10px}
+.blk-timer{height:6px;width:100%;background:var(--line);border-radius:6px;overflow:hidden}
+.blk-timer i{display:block;height:100%;background:var(--acc);transition:width .2s linear}
+.blk-targets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.blk-bin{background:var(--card);border:2px solid var(--line);border-bottom-width:5px;border-radius:16px;padding:12px 6px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;transition:all .15s}
+.blk-bin:active{transform:translateY(2px);border-bottom-width:3px}
+.blk-bin.b0{border-color:rgba(239,68,68,.35)}.blk-bin.b0 .b-ico{color:#ef4444}
+.blk-bin.b1{border-color:rgba(34,197,94,.35)}.blk-bin.b1 .b-ico{color:#16a34a}
+.blk-bin.b2{border-color:rgba(59,130,246,.35)}.blk-bin.b2 .b-ico{color:#2563eb}
+.blk-bin.b-ok{border-color:var(--ok)!important;background:var(--okbg)!important}
+.blk-bin.b-no{border-color:var(--no)!important;background:var(--nobg)!important;animation:sh .35s}
+.blk-bin b{font-size:13.5px;font-weight:800;line-height:1.15;color:var(--ink)}
+.blk-bin small{font-size:11px;color:var(--mut);font-weight:700}
+.blk-toast{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35;margin-top:10px;animation:pop .25s ease-out}
+.blk-toast.ok{border-color:var(--ok);background:var(--okbg)}
+.blk-toast.no{border-color:var(--no);background:var(--nobg)}
 </style></head><body><div id="app"></div>
 <script>
 var L=[
@@ -183,12 +205,10 @@ function startReview(){var q=S.weak.slice(0,8).map(function(k){var p=k.split(':'
 function finRev(win){if(R.duel)return duelEnd();if(R.daily&&win&&S.dc!==today()){S.dc=today();addXp(15)}if(win)addXp(R.xp);app.innerHTML='<div class="end"><div class="big">'+(win?'🎯':'💔')+'</div><h1>'+(win?(R.daily?'Daily challenge done!':R.lab?'Lab complete!':R.boss?'Boss defeated!':R.lt?'Lightning round done!':R.det?'Case closed!':R.sto?'Mission complete!':R.arc?'Arcade cleared!':R.pyq?'PYQ drill done!':'Weak spots reviewed!'):'Out of hearts')+'</h1><p class="sub">'+(win?'+'+R.xp+' XP. Fewer weak spots now.':'Try again after a quick look at the lessons.')+'</p><button class="btn" id="a">Back to lessons</button></div>';document.getElementById('a').onclick=home;if(win)confetti()}
 var IV;
 var PQ=[
-{k:'flip',q:'PYQ-style: Citizen’s Charters have not delivered the desired results. Examine the reasons and suggest measures. (150 words)',r:'Intro: time-bound service promise (UK 1991, India 1997). Why they fell short: top-down design, vague standards, low awareness, no penalty (paper tiger). Fixes: co-create with SMART standards, Right to Services laws (MP Lok Sewa Guarantee), CPGRAMS, report cards, Sevottam audit. Conclude: from promise to guarantee.'},
-{k:'flip',q:'PYQ-style: Discuss the role of Sevottam in improving public service delivery.',r:'Seva + Uttam, DARPG framework (~2006). Three modules: Citizen’s Charter, Grievance Redress, Service Delivery Capability. Benefit: a common yardstick and self-assessment. Limits: voluntary, uneven uptake. Link: 2nd ARC 12th Report. Way forward: independent audit and statutory backing.'},
-{k:'flip',q:'PYQ-style: How far do Right to Services Acts address the limits of Citizen’s Charters?',r:'Gains: statutory deadlines, penalty on officers, appeals (MP 2010 first, then Bihar, Rajasthan, Delhi, Karnataka Sakala). Gaps: only notified services, weak penalty use, low awareness, uneven states. The 2011 Central Bill lapsed in 2014. Way forward: wider coverage, digital tracking, social audits.'},
-{k:'flip',q:'PYQ-style: What role can technology play in making Citizen’s Charters effective?',r:'Online portals with tracking and auto-escalation (Sakala), CPGRAMS for grievances, SMS alerts, dashboards for monitoring, less discretion and delay. Caution: digital divide, so keep assisted and local-language channels. Conclude: tech enforces the promise only with accountability.'},
-{k:'flip',q:'GS-4 case: A citizen has waited months for a service your charter promises in 15 days. What do you do?',r:'Act: fast-track the case, find the cause of delay, apologise and inform the citizen, fix the process, fix responsibility, and record the lesson. Values: empathy, accountability, integrity, public service orientation. Report systemic gaps upward.'},
-{k:'flip',q:'PYQ-style: Citizen-centric administration is the heart of good governance. Comment with reference to the 2nd ARC.',r:'2nd ARC 12th Report: Citizen Centric Administration. Key ideas: consultation, realistic standards, review, grievance redress, service guarantees. Tools: Charter, Sevottam, CPGRAMS, report cards. Challenge: enforcement. Conclude: governance judged by citizen experience.'}];
+{k:'flip',q:'UPSC Mains 2022 (GS-2): The Citizen’s Charter is an ideal instrument of organisational transparency and accountability, but it has its own serious limitations. Critically evaluate and suggest measures to make it effective. (150 words)',r:'<b>Ideal Instrument:</b> Formulated in UK (1991) and adopted in India (1997) to shift governance from bureaucratic rules to citizen-centric service guarantees.<br><b>Structural Limitations:</b><br>1. <b>Absence of Statutory Teeth:</b> Charters are voluntary declarations without legal enforceability (paper tigers).<br>2. <b>Top-Down Formulation:</b> Drafted without consulting frontline staff or citizen users, leading to unrealistic or vague timelines.<br>3. <b>Zero Penalty on Defaulters:</b> Errant officials face no personal consequence for persistent breaches.<br>4. <b>Low Public Awareness:</b> Displayed in English in obscure corridors.<br><b>Measures (2nd ARC 12th Report):</b><br>1. Co-create charters with stakeholders using SMART benchmarks.<br>2. Adopt the <b>Sevottam quality framework</b> (Charter + Grievance Redress + Capability).<br>3. Back charters with statutory <b>Right to Services Acts</b> with daily monetary compensation on defaulters.<br>4. Independent third-party social audits and Citizen Report Cards.'},
+{k:'flip',q:'UPSC Mains 2023 (GS-2): Right to Services Acts enacted by various State governments provide statutory teeth to Citizen’s Charters. Analyse how far this transition from \'voluntary promise\' to \'legal guarantee\' has empowered citizens. (150 words)',r:'<b>Paradigm Shift:</b> Pioneered by Madhya Pradesh (Lok Sewa Guarantee Act 2010), Bihar (2011), and Karnataka (Sakala), transitioning administrative promises from discretionary guidelines to enforceable statutory rights.<br><b>Empowerment Mechanisms:</b><br>1. <b>Time-Bound Service Delivery:</b> Mandatory notification of specific delivery deadlines for ration cards, caste certificates, and utility connections.<br>2. <b>Financial Deterrence:</b> Errant officers face deductions of ₹250 to ₹5,000 from personal salary, awarded directly to the aggrieved citizen as compensation.<br>3. <b>Appellate Architecture:</b> Automatic two-tier appellate mechanism.<br><b>Remaining Gaps:</b> The Central Right to Services Bill (2011) lapsed in 2014; only a limited set of routine certificates are notified; penalty provisions are sparingly enforced by appellate superiors.<br><b>Conclusion:</b> Moving from a paper promise to a statutory guarantee institutionalizes genuine administrative accountability.'},
+{k:'flip',q:'UPSC Mains 2021 (GS-4): Though Citizen’s Charters have been formulated by almost all public departments, the actual redressal of citizen grievances remains lethargic. What ethical values and administrative changes are needed to make public administration responsive? (150 words)',r:'<b>Ethical Values Required (Nolan Committee & 2nd ARC):</b><br>1. <b>Empathy & Compassion:</b> Viewing citizen distress as an urgent human reality rather than a routine file number.<br>2. <b>Public Service Orientation:</b> Shedding colonial bureaucratic superiority (\'mai-baap sarkar\') in favor of recognizing citizens as the ultimate sovereign.<br>3. <b>Probity & Moral Accountability:</b> Treating departmental commitments as solemn personal moral oaths.<br><b>Administrative Reforms:</b><br>1. <b>Auto-Escalation:</b> Workflow tracking (like Karnataka Sakala) where unaddressed grievances automatically climb to higher authorities.<br>2. <b>Sevottam Quality Audits:</b> Annual public certification of grievance redressal systems.<br>3. <b>Citizen Feedback Loops:</b> Linking civil servant performance appraisals (APARs) with anonymized citizen satisfaction ratings.'},
+{k:'flip',q:'UPSC Mains 2020 (GS-4 Case Study): A district officer discovers that public service delivery timelines promised in the department\'s charter are consistently breached by 60-90 days due to clerk vacancies and archaic physical filing. Citizens are frustrated and middlemen exploit the delay. Outline an action plan. (250 words)',r:'<b>Immediate Response:</b><br>1. Set up a transparent single-window citizen helpdesk with real-time digital queue tokens.<br>2. Publish weekly backlog triage lists prioritized by citizen vulnerability (senior citizens, medical aid).<br><b>Workflow Re-engineering:</b><br>1. Digitize file movements via e-Office to eliminate physical paper transit delays and curb middleman access.<br>2. Rationalize approval hierarchies: reduce multi-tier clerk signatures to a 2-tier approval workflow.<br><b>Integrity & Grievance Mechanism:</b><br>1. Institute CCTV surveillance at public counters; strict criminal FIRs against touts.<br>2. Integrate complaints into CPGRAMS with mandatory 15-day review.<br><b>Structural Remedy:</b> Deploy temporary data-entry interns while submitting a formal empirical vacancy report to state headquarters.'}];
 function pyTimer(){clearInterval(IV);var s=60;function t(){var e=document.getElementById('tm');if(!e){clearInterval(IV);return}e.textContent='⏱ '+s+'s · outline your answer in your head';if(s--<=0){clearInterval(IV);R.rev=true;inner();foot()}}t();IV=setInterval(t,1000)}
 function startPyq(){var q=PQ.map(function(x){return {q:x}});R={i:0,ci:99,queue:q,total:q.length,solved:0,hearts:99,mist:0,xp:0,review:1,pyq:1};next()}
 function tx(x,y,t,fs,f){var l=t.split('|');return `<text x='${x}' text-anchor='middle' font-size='${fs||13}' font-weight='700' fill='${f||'var(--ink)'}'>`+l.map(function(s,i){return `<tspan x='${x}' y='${y+i*15-(l.length-1)*7}'>${s}</tspan>`}).join('')+'</text>'}
@@ -252,7 +272,84 @@ function startDuel(){go(pool(['mc','tf']).slice(0,10),{duel:1,hearts:99,sc:[0,0]
 function startDaily(){var s=0,d=today();for(var i=0;i<d.length;i++)s=(s*31+d.charCodeAt(i))%2147483647;var p=[];L.forEach(function(l){l.q.forEach(function(q){if(['mc','tf','multi'].indexOf(q.k)>-1)p.push(q)})});var out=[];while(out.length<5&&p.length){s=(s*48271)%2147483647;out.push(p.splice(s%p.length,1)[0])}go(out,{daily:1})}
 function duelEnd(){var a=R.sc[0],b=R.sc[1];app.innerHTML='<div class="end"><div class="big">'+(a===b?'🤝':'🏆')+'</div><h1>'+(a===b?'It’s a tie!':'Player '+(a>b?1:2)+' wins!')+'</h1><p class="sub">Player 1: '+a+' · Player 2: '+b+'</p><button class="btn" id="a">Back to games</button></div>';document.getElementById('a').onclick=hub;if(a!==b)confetti()}
 function ltTimer(){clearInterval(IV);var s=10;function t(){var k=document.querySelector('.kind');if(!k||R.ok!==null){clearInterval(IV);return}k.textContent='⚡ Lightning · '+s+'s';if(s--<=0){clearInterval(IV);R.ok=false;R.sel=[];R.msg='Too slow! '+(R.q.e||'');finish()}}t();IV=setInterval(t,1000)}
-function hub(){var G=[['🎮 Arcade','red flags, year slider, card sorting',startArc],['⚡ Lightning round','8 questions, 10 seconds each',startLt],['👹 Boss battle','10 questions, one heart only',startBoss],['🕵️ Detective','guess from fewer clues',startDet],['🎭 Officer mission','branching story, your choices matter',startStory],['📅 Daily challenge',S.dc===today()?'✅ done today':'5 new questions, +15 bonus XP',startDaily],['🧪 Concept lab','Venn sorting and build-the-sentence',startLab]];var h='<div class="qhead"><button class="x" id="bk" aria-label="Back">←</button><b style="font-size:20px">🎮 Game hub</b></div><div class="body">';G.forEach(function(g,i){h+='<button class="mb" style="width:100%;margin-bottom:10px;text-align:left" data-g="'+i+'">'+g[0]+'<small>'+g[1]+'</small></button>'});app.innerHTML=h+'</div>';document.getElementById('bk').onclick=home;app.querySelectorAll('[data-g]').forEach(function(b){b.onclick=function(){G[+b.dataset.g][2]()}})}
+var BG={b:['Challenges & Gaps','Solutions & Reforms','Models & Frameworks'],it:[
+['Paper Tiger (No Penalties)',0,'Voluntary nature without statutory backing leaves charters devoid of enforceable consequences.'],
+['Right to Services Acts',1,'State statutes (e.g. MP 2010, Bihar 2011) providing legal deadlines, appeals, and daily fines on officers.'],
+['Sevottam 3-Module Framework',2,'DARPG quality framework: Citizen’s Charter + Public Grievance Redress + Service Delivery Capability.'],
+['Top-Down Drafting',0,'Charters designed in central ministries without consulting frontline staff or grassroots citizens.'],
+['Third-Party Social Audits',1,'Independent citizen-led scrutiny and public evaluations verifying actual on-ground service delivery.'],
+['2nd ARC 12th Report',2,'Citizen Centric Administration: The Heart of Governance, providing the master blueprint for public service guarantees.'],
+['Vague “As Soon As Possible” Norms',0,'Unquantifiable, ambiguous commitments that prevent citizens from demanding accountability.'],
+['Sakala Auto-Escalation Engine',1,'Karnataka’s digital workflow where delayed files automatically escalate to higher supervisory officers.'],
+['UK Charter Mark (1991)',2,'John Major’s pioneering excellence framework rewarding public agencies that meet user-defined service benchmarks.'],
+['Language & Awareness Deficit',0,'Charters published only in English or hidden on obscure notice boards inaccessible to common citizens.'],
+['SMART Service Standards',1,'Specific, Measurable, Achievable, Relevant, and Time-bound commitments for every notified service.'],
+['Citizen Report Cards (Bangalore)',2,'Public Affairs Centre survey methodology quantifying user satisfaction to drive bureaucratic reform.']
+]};
+
+var BLK={};
+function startBlocks(){
+ var deck=sh(BG.it);
+ BLK={deck:deck,idx:0,buckets:BG.b,counts:[0,0,0],score:0,combo:1,maxCombo:1,hearts:3,mistakes:0,timer:null,left:8,paused:false};
+ blkStep();
+}
+function blkStep(){
+ clearInterval(BLK.timer);
+ if(BLK.hearts<=0||BLK.idx>=BLK.deck.length)return blkEnd();
+ BLK.left=8;BLK.paused=false;blkDraw();
+ BLK.timer=setInterval(function(){
+  var e=document.getElementById('b-sec'),bar=document.getElementById('b-tb');
+  if(!e||BLK.paused)return;
+  BLK.left--;e.textContent=BLK.left+'s';
+  if(bar)bar.style.width=(BLK.left/8*100)+'%';
+  if(BLK.left<=0){clearInterval(BLK.timer);dropBlock(-1)}
+ },1000);
+}
+function blkDraw(fb){
+ var item=BLK.deck[BLK.idx],bks=BLK.buckets,icons=['🔴','🟢','🔵'];
+ var h='<div class="qhead"><button class="x" id="b-quit" aria-label="Quit">✕</button><span style="font-weight:800;color:var(--accd);flex:1;text-align:center">🔥 x'+BLK.combo+' Combo</span><span style="font-weight:800;color:var(--no)">❤️ '+BLK.hearts+'</span></div>'+
+ '<div class="body" style="padding-bottom:12px"><p class="kind" style="text-align:center">Term '+(BLK.idx+1)+' of '+BLK.deck.length+' · '+BLK.score+' XP</p>'+
+ '<div class="blk-arena"><div class="blk-track"><div class="blk-card" id="b-card"><div class="blk-term">'+esc(item[0])+'</div><div class="blk-sub">Sort into lower blocks below:</div><div class="blk-timer"><i id="b-tb" style="width:'+(BLK.left/8*100)+'%"></i></div></div><div id="b-sec" style="font-size:12.5px;color:var(--mut);font-weight:700;margin-top:6px">'+BLK.left+'s</div>'+(fb||'')+'</div>'+
+ '<div class="blk-targets">';
+ bks.forEach(function(b,i){h+='<button class="blk-bin b'+i+'" data-b="'+i+'"'+(BLK.paused?' disabled':'')+'><span class="b-ico" style="font-size:22px">'+icons[i]+'</span><b>'+esc(b)+'</b><small>'+(BLK.counts[i]||0)+' sorted</small></button>'});
+ h+='</div></div></div>';
+ app.innerHTML=h;
+ document.getElementById('b-quit').onclick=function(){clearInterval(BLK.timer);hub()};
+ app.querySelectorAll('[data-b]').forEach(function(btn){btn.onclick=function(){if(BLK.paused)return;dropBlock(+btn.dataset.b)}});
+}
+function dropBlock(binIdx){
+ clearInterval(BLK.timer);BLK.paused=true;
+ var item=BLK.deck[BLK.idx],correctIdx=item[1],isOk=binIdx===correctIdx;
+ if(isOk){
+  BLK.counts[binIdx]=(BLK.counts[binIdx]||0)+1;
+  var gain=10*BLK.combo;BLK.score+=gain;BLK.combo++;
+  if(BLK.combo>BLK.maxCombo)BLK.maxCombo=BLK.combo;
+  beep(true);
+  var card=document.getElementById('b-card');if(card)card.classList.add('catch');
+  var btn=app.querySelector('[data-b="'+binIdx+'"]');if(btn)btn.classList.add('b-ok');
+  var fb='<div class="blk-toast ok"><b>✓ Correct! +'+gain+' XP</b> (🔥 x'+BLK.combo+' combo)<br><small>'+esc(item[2])+'</small></div>';
+  setTimeout(function(){BLK.idx++;blkStep()},850);
+ }else{
+  BLK.hearts--;BLK.mistakes++;BLK.combo=1;beep(false);
+  var btnBad=app.querySelector('[data-b="'+binIdx+'"]');if(btnBad)btnBad.classList.add('b-no');
+  var btnCorrect=app.querySelector('[data-b="'+correctIdx+'"]');if(btnCorrect)btnCorrect.classList.add('b-ok');
+  var reason=binIdx===-1?'⏱ Out of time!':'✕ Not quite!';
+  var fb='<div class="blk-toast no"><b>'+reason+'</b><br>Belongs in <b>'+esc(BLK.buckets[correctIdx])+'</b>.<br><small>'+esc(item[2])+'</small></div><button class="btn" id="b-next" style="margin-top:10px;padding:8px 16px;font-size:15px">Next Term →</button>';
+  blkDraw(fb);
+  var nxt=document.getElementById('b-next');if(nxt)nxt.onclick=function(){BLK.idx++;blkStep()};
+ }
+}
+function blkEnd(){
+ clearInterval(BLK.timer);
+ var win=BLK.hearts>0,total=BLK.deck.length,solved=total-BLK.mistakes,pct=Math.max(0,Math.round(solved/total*100));
+ addXp(BLK.score);
+ var h='<div class="end"><div class="big">'+(win?'🧱':'💔')+'</div><h1>'+(win?'Block Drop Cleared!':'Out of Hearts')+'</h1><p class="sub">'+(win?'Mastered key terms and conceptual classifications.':'Keep drilling to lock in your term reflexes.')+'</p><div class="stats"><div class="stat">+'+BLK.score+'<small>XP Earned</small></div><div class="stat">'+pct+'%<small>Accuracy</small></div><div class="stat">🔥 x'+BLK.maxCombo+'<small>Max Combo</small></div></div><button class="btn" id="b-again">Play Again</button><button class="btn" id="b-hub" style="margin-top:10px;background:var(--card);color:var(--ink);border-color:var(--line)">Back to Game Hub</button></div>';
+ app.innerHTML=h;
+ document.getElementById('b-again').onclick=startBlocks;
+ document.getElementById('b-hub').onclick=hub;
+ if(win&&pct>=70)confetti();
+}
+function hub(){var G=[['🎮 Arcade','red flags, year slider, card sorting',startArc],['🧱 Block Drop','sort falling key terms into solution, challenge, model blocks',startBlocks],['⚡ Lightning round','8 questions, 10 seconds each',startLt],['👹 Boss battle','10 questions, one heart only',startBoss],['🕵️ Detective','guess from fewer clues',startDet],['🎭 Officer mission','branching story, your choices matter',startStory],['📅 Daily challenge',S.dc===today()?'✅ done today':'5 new questions, +15 bonus XP',startDaily],['🧪 Concept lab','Venn sorting and build-the-sentence',startLab]];var h='<div class="qhead"><button class="x" id="bk" aria-label="Back">←</button><b style="font-size:20px">🎮 Game hub</b></div><div class="body">';G.forEach(function(g,i){h+='<button class="mb" style="width:100%;margin-bottom:10px;text-align:left" data-g="'+i+'">'+g[0]+'<small>'+g[1]+'</small></button>'});app.innerHTML=h+'</div>';document.getElementById('bk').onclick=home;app.querySelectorAll('[data-g]').forEach(function(b){b.onclick=function(){G[+b.dataset.g][2]()}})}
 function startArc(){var q=AQ.map(function(x){return {q:x}});R={i:0,ci:99,queue:q,total:q.length,solved:0,hearts:5,mist:0,xp:0,review:1,arc:1};next()}
 function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
