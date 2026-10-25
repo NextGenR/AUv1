@@ -43,7 +43,7 @@ console.log("=== CAVA ENGINE TEST START ===");
 console.log("1. Checking DATA topics...");
 const topics = Object.keys(DATA);
 console.log("Topics found:", topics);
-if (topics.length !== 4) throw new Error("Expected 4 topics, got " + topics.length);
+if (topics.length !== 5) throw new Error("Expected 5 topics, got " + topics.length);
 
 topics.forEach(t => {
   const top = DATA[t];

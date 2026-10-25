@@ -505,6 +505,48 @@ function diag(topic, i, c){
       s += bx(10, y, 125, 40, p[0]) + ar(137, y+20, 183, y+20) + bx(185, y, 125, 40, p[1]);
     });
   }
+  // RTI Diagrams
+  else if(k === 'rti:0:0'){
+    H = 260;
+    s = `<line x1='60' y1='20' x2='60' y2='240' stroke='var(--h)' stroke-width='3'/>`;
+    [['1975','Raj Narain (Art 19(1)(a))'],['1990s','MKSS Jan Sunwais (Rajasthan)'],['1997','Tamil Nadu: First State Law'],['2005','RTI Act 2005 Enacted'],['2024','ADR: Electoral Bonds Struck Down']].forEach(function(e,j){
+      var y = 25 + j*50;
+      s += `<circle cx='60' cy='${y}' r='8' fill='var(--h)'/>` + tx(26, y+5, e[0], 12, 'var(--h)') + tx(205, y+5, e[1], 12);
+    });
+  }
+  else if(k === 'rti:1:2'){
+    H = 175;
+    s = bx(10, 15, 80, 45, 'Citizen|Request') +
+        ar(90, 37, 120, 37) +
+        bx(120, 5, 95, 35, '30 Days|Standard', 'var(--h)') +
+        bx(120, 50, 95, 35, '48 Hours|Life & Liberty', 'var(--no)') +
+        ar(215, 37, 240, 37) +
+        bx(240, 15, 75, 45, '1st / 2nd|Appeal') +
+        tx(160, 130, 'Fee Waived for BPL & Free if Delayed', 11, 'var(--ok)');
+  }
+  else if(k === 'rti:2:0'){
+    H = 165;
+    s = bx(15, 30, 130, 60, 'Section 8(1)|Categorical|Exemptions') +
+        `<line x1='160' y1='10' x2='160' y2='120' stroke='var(--ok)' stroke-width='3' stroke-dasharray='4'/>` +
+        bx(175, 30, 130, 60, 'Section 8(2)|Public Interest|Override!', 'var(--h)') +
+        ar(175, 60, 145, 60) +
+        tx(160, 140, 'Public Interest Trumps Secrecy Provisos', 12, 'var(--ok)');
+  }
+  else if(k === 'rti:3:2'){
+    H = 160;
+    s = bx(10, 15, 140, 45, 'Subhash Agarwal (2019)|CJI Office under RTI') +
+        bx(170, 15, 140, 45, 'ADR v. UOI (2024)|Electoral Bonds Struck', 'var(--h)') +
+        ar(80, 60, 160, 95) + ar(240, 60, 160, 95) +
+        bx(30, 95, 260, 40, 'Voters Right to Know under Art 19(1)(a)');
+  }
+  else if(k === 'rti:5:0'){
+    H = 185;
+    s = `<circle cx='160' cy='90' r='34' fill='var(--h)'/>` + tx(160, 95, '2nd ARC|Blueprint', 12, '#fff') +
+        `<g stroke='var(--h)' stroke-width='2'><line x1='160' y1='90' x2='75' y2='35'/><line x1='160' y1='90' x2='245' y2='35'/><line x1='160' y1='90' x2='160' y2='155'/></g>` +
+        bx(10, 15, 125, 40, 'National Coordination|Committee (NCC)') +
+        bx(185, 15, 125, 40, '50% Non-Civil|Service Members') +
+        bx(80, 145, 160, 35, 'Independent Public Records');
+  }
 
   if(!s) return '';
   return `<p class='kw'>📊 Picture it</p><div class='dg'><svg viewBox='0 0 320 ${H}' width='100%' role='img' aria-label='Diagram'><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0,0L8,4L0,8z' fill='var(--h)'/></marker></defs>${s}</svg></div>`;
@@ -939,6 +981,13 @@ def generate():
     with open(root_cava_path, "w", encoding="utf-8") as f:
         f.write(rendered_html)
     print(f"Generated root CAVA file at {root_cava_path} ({len(rendered_html)} bytes)")
+
+    # 3. Write to root Citizen’s Charter_ Learn from Scratch.html
+    root_charter_path = r"d:\Anki_Upgraded\Citizen’s Charter_ Learn from Scratch.html"
+    charter_html = rendered_html.replace('var CUR_TOPIC = "msme";', 'var CUR_TOPIC = "charter";')
+    with open(root_charter_path, "w", encoding="utf-8") as f:
+        f.write(charter_html)
+    print(f"Generated Citizen's Charter file at {root_charter_path} ({len(charter_html)} bytes)")
 
 if __name__ == "__main__":
     generate()
