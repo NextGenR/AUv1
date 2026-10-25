@@ -7,6 +7,8 @@ const script = html.split('<script>')[1].split('</script>')[0];
 
 // Mock minimal browser environment
 global.window = {
+  addEventListener() {},
+  matchMedia: () => ({ matches: false }),
   AudioContext: class {
     createOscillator() { return { frequency: { value: 0 }, connect() {}, start() {}, stop() {} }; }
     createGain() { return { gain: { value: 0 }, connect() {} }; }

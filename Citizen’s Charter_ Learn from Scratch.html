@@ -2,6 +2,14 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Citizen’s Charter: Learn from Scratch</title>
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#14a273">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f3f7f4;--card:#fff;--ink:#14282a;--mut:#62777a;--line:#d5e0dc;--acc:#e8a317;--accd:#b57a06;--ok:#14a273;--okbg:#d5f4e8;--no:#e5484d;--nobg:#fde0e1;--sel:#d8e9ff;--selb:#3d79e8;--chip:#e3f1ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -11,7 +19,16 @@
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:"Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:500;font-size:17px;display:flex;justify-content:center}
 #app{width:100%;max-width:480px;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.top{display:flex;gap:14px;justify-content:flex-end;padding:12px 18px;font-weight:800}
+.top{display:flex;gap:12px;justify-content:flex-end;padding:12px 18px;font-weight:800;align-items:center}
+.install-pill{background:#2563eb;color:#fff;border:0;border-bottom:3px solid #1d4ed8;border-radius:999px;padding:4px 12px;font:inherit;font-size:13.5px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.install-pill:active{transform:translateY(1px);border-bottom-width:2px}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:flex-end;justify-content:center;z-index:1000;animation:pop .2s ease-out}
+.modal-sheet{background:var(--card);border-top-left-radius:24px;border-top-right-radius:24px;width:100%;max-width:480px;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 30px rgba(0,0,0,.3)}
+.modal-sheet h2{font-size:22px;margin:0 0 6px;font-weight:800}
+.modal-sheet p{color:var(--mut);font-size:15px;line-height:1.4;margin:0 0 16px}
+.modal-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.modal-step{display:flex;gap:12px;align-items:center;background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:10px 14px;font-size:15px;font-weight:700}
+.modal-step span.num{width:26px;height:26px;background:var(--acc);color:#2a1a00;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:800;flex:none}
 .home{flex:1;overflow-y:auto;padding:0 18px 24px}
 h1{font-size:28px;line-height:1.1;margin:6px 0 4px;font-weight:800}
 .sub{color:var(--mut);margin:0 0 18px}
@@ -217,9 +234,12 @@ function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.r
 function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 
 function home(){
- var h='<div class="top"><button class="x" id="mt" aria-label="Sound">'+(S.mute?'🔇':'🔊')+'</button><span>🔥 '+curStreak()+'</span><span>⚡ '+S.xp+' XP</span></div><div class="home"><h1>Citizen’s Charter</h1><p class="sub">Learn it from zero: read the idea, then prove it. Seven short lessons.</p>'+goalCard()+'<div class="path">';
+ var isInstalled=isStandalone();
+ var installBtn=isInstalled?'':'<button class="install-pill" id="btn-install" aria-label="Install App on Chrome">📲 Install</button>';
+ var h='<div class="top">'+installBtn+'<button class="x" id="mt" aria-label="Sound">'+(S.mute?'🔇':'🔊')+'</button><span>🔥 '+curStreak()+'</span><span>⚡ '+S.xp+' XP</span></div><div class="home"><h1>Citizen’s Charter</h1><p class="sub">Learn it from zero: read the idea, then prove it. Seven short lessons.</p>'+goalCard()+'<div class="path">';
  L.forEach(function(l,i){var d=S.done[i];h+='<button class="lesson'+(d?' done':'')+'" data-i="'+i+'"><span class="badge">'+(d?'✓':l.e)+'</span><span><b>'+l.n+'</b><small>'+l.d+(d?' · best '+d+'%':'')+'</small></span></button>'});
  app.innerHTML=h+'</div></div>';
+ var ib=document.getElementById('btn-install');if(ib)ib.onclick=triggerInstall;
  app.querySelectorAll(".lesson").forEach(function(b){b.onclick=function(){start(+b.dataset.i)}});
  var v=document.getElementById("vt"),w=document.getElementById("wk");if(v)v.onclick=vault;if(w)w.onclick=startReview;var pq=document.getElementById("pq");if(pq)pq.onclick=startPyq;var sk=document.getElementById("sk");if(sk)sk.onclick=skPick;
  document.getElementById("mt").onclick=function(){S.mute=!S.mute;save();home()};
@@ -338,5 +358,67 @@ function fin(win){
  document.getElementById("a").onclick=function(){win?home():start(R.i)};
  if(win)confetti();
 }
+
+var deferredInstallPrompt=null;
+if('serviceWorker' in navigator){
+ window.addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(e){});
+ });
+}
+window.addEventListener('beforeinstallprompt',function(e){
+ e.preventDefault();
+ deferredInstallPrompt=e;
+ var b=document.getElementById('btn-install');if(b)b.style.display='inline-flex';
+});
+window.addEventListener('appinstalled',function(){
+ deferredInstallPrompt=null;
+ var b=document.getElementById('btn-install');if(b)b.style.display='none';
+ confetti();
+});
+function isStandalone(){
+ try{
+  return (window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||(window.navigator&&window.navigator.standalone===true);
+ }catch(e){
+  return false;
+ }
+}
+function triggerInstall(){
+ if(deferredInstallPrompt){
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.then(function(c){
+   if(c.outcome==='accepted'){var b=document.getElementById('btn-install');if(b)b.style.display='none'}
+   deferredInstallPrompt=null;
+  });
+ }else{
+  showInstallModal();
+ }
+}
+function showInstallModal(){
+ var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
+ var old=document.getElementById('install-modal');if(old)old.remove();
+ var m=document.createElement('div');
+ m.id='install-modal';
+ m.className='modal-overlay';
+ m.innerHTML='<div class="modal-sheet">'+
+  '<h2>📲 Install on Chrome / Mobile</h2>'+
+  '<p>Install this app on your device for 1-tap home screen access, ultra-smooth offline drills, and a clean full-screen learning window.</p>'+
+  '<div class="modal-steps">'+
+   (isIOS?
+    '<div class="modal-step"><span class="num">1</span><span>Tap the <b>Share button</b> (⎋) at bottom</span></div>'+
+    '<div class="modal-step"><span class="num">2</span><span>Scroll down & tap <b>"Add to Home Screen"</b></span></div>'+
+    '<div class="modal-step"><span class="num">3</span><span>Tap <b>Add</b> in the top right</span></div>'
+   :
+    '<div class="modal-step"><span class="num">1</span><span>Tap the <b>three dots menu (⋮)</b> in Chrome</span></div>'+
+    '<div class="modal-step"><span class="num">2</span><span>Tap <b>"Install app"</b> or <b>"Add to Home screen"</b></span></div>'+
+    '<div class="modal-step"><span class="num">3</span><span>Confirm <b>Install</b></span></div>'
+   )+
+  '</div>'+
+  '<button class="btn" id="modal-close">Got it</button>'+
+ '</div>';
+ document.body.appendChild(m);
+ document.getElementById('modal-close').onclick=function(){m.remove()};
+ m.onclick=function(e){if(e.target===m)m.remove()};
+}
+
 home();
 </script></body></html>
