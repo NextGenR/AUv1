@@ -844,6 +844,81 @@ function diag(topic, i, c){
         bx(185, 15, 125, 40, '50% Non-Civil|Service Members') +
         bx(80, 145, 160, 35, 'Independent Public Records');
   }
+  // Infrastructure Delivery Diagrams
+  else if(k === 'infra:0:0'){
+    H = 175;
+    s = bx(10, 15, 95, 45, 'Delhi-Meerut|Road Ready') +
+        ar(105, 37, 130, 37) +
+        bx(130, 15, 80, 45, '11 Months|Idle Wait', 'var(--no)') +
+        ar(210, 37, 235, 37) +
+        bx(235, 15, 75, 45, 'Railway|ROB Delay') +
+        ar(170, 60, 170, 90) +
+        bx(25, 90, 270, 45, 'Gati-Shakti NPG: 3-Tier Synchronized GIS', 'var(--h)') +
+        tx(160, 155, 'Overcoming Uncoordinated Silos', 12, 'var(--mut)');
+  }
+  else if(k === 'infra:1:1'){
+    H = 170;
+    s = bx(15, 20, 130, 50, 'Past Baseline|13 - 14% of GDP', 'var(--no)') +
+        `<path d='M 145 45 Q 160 15 175 45' fill='none' stroke='var(--h)' stroke-width='2.5' marker-end='url(#ar)'/>` +
+        bx(175, 20, 130, 50, 'NCAER Rebasing|7.97% of GDP', 'var(--ok)') +
+        ar(160, 75, 160, 95) +
+        bx(35, 95, 250, 45, 'ULIP + National Logistics Policy|<10% & Top 25 LPI by 2030', 'var(--h)');
+  }
+  else if(k === 'infra:2:0'){
+    H = 165;
+    s = bx(10, 15, 90, 42, 'Brownfield|Assets') +
+        ar(100, 36, 125, 36) +
+        bx(125, 15, 95, 42, 'NMP 1.0 (90%)|₹5.4L Cr Leased', 'var(--h)') +
+        ar(220, 36, 245, 36) +
+        bx(245, 15, 65, 42, 'Capital|Recycled') +
+        ar(172, 57, 172, 85) +
+        bx(20, 85, 280, 45, 'NMP 2.0 (FY26-30): ₹16.72L Cr Potential (₹5.8L Cr Pvt)');
+  }
+  else if(k === 'infra:3:0'){
+    H = 175;
+    s = bx(15, 20, 130, 45, 'Centre: SASCI|50-Yr 0% Loan (₹2L Cr)', 'var(--h)') +
+        ar(145, 42, 175, 42) +
+        bx(175, 20, 130, 45, 'State Capex Lag|27% Spent Apr-Aug', 'var(--no)') +
+        ar(160, 68, 160, 95) +
+        bx(30, 95, 260, 45, 'Cooperative Federalism: 25% CSS Flexi-Fund', 'var(--ok)') +
+        tx(160, 160, 'Balancing National Priorities with State Fiscal Space', 11, 'var(--mut)');
+  }
+  // Tech-Enabled Welfare Delivery (DBT & JAM) Diagrams
+  else if(k === 'dbt:0:0'){
+    H = 165;
+    s = bx(10, 15, 90, 45, 'Jan Dhan|59 Cr Accounts') +
+        ar(100, 37, 120, 37) +
+        bx(120, 15, 80, 45, 'Aadhaar|Digital ID') +
+        ar(200, 37, 220, 37) +
+        bx(220, 15, 90, 45, 'Mobile Rail|DBT Bharat') +
+        ar(160, 60, 160, 85) +
+        bx(30, 85, 260, 45, '₹3.48L Cr Cumulative Savings (53% PDS Reform)', 'var(--h)');
+  }
+  else if(k === 'dbt:1:1'){
+    H = 175;
+    s = bx(15, 20, 130, 55, 'Inclusion Error|Ghost / Leakage Cut|₹1.85L Cr PDS Saved', 'var(--ok)') +
+        `<line x1='160' y1='10' x2='160' y2='130' stroke='var(--h)' stroke-width='3' stroke-dasharray='4'/>` +
+        bx(175, 20, 130, 55, 'Exclusion Error|Biometric Denial|5.48 Cr Deletions', 'var(--no)') +
+        ar(80, 75, 120, 105) + ar(240, 75, 200, 105) +
+        bx(40, 105, 240, 40, 'Mandatory Offline Fallbacks (Puttaswamy)', 'var(--h)');
+  }
+  else if(k === 'dbt:2:0'){
+    H = 165;
+    s = bx(10, 15, 85, 45, 'Aadhaar|Number') +
+        ar(95, 37, 115, 37) +
+        bx(115, 15, 90, 45, 'NPCI Mapper|Bank Seeding', 'var(--h)') +
+        ar(205, 37, 225, 37) +
+        bx(225, 15, 85, 45, 'ABPS Rail|Payment') +
+        ar(160, 60, 160, 85) +
+        bx(25, 85, 270, 45, 'Seeding != Authentication: Name Mismatch Hazard', 'var(--no)');
+  }
+  else if(k === 'dbt:3:1'){
+    H = 170;
+    s = bx(10, 15, 140, 45, 'Cash: Ladli Behna|₹18.6k Cr / 6.4% Rec.') +
+        bx(170, 15, 140, 45, 'Kind: NFSA PDS|Price Shock Safety', 'var(--h)') +
+        ar(80, 60, 160, 95) + ar(240, 60, 160, 95) +
+        bx(20, 95, 280, 45, 'Fiscal Safeguard: RBI Capex Floor + Sunset Clauses', 'var(--ok)');
+  }
 
   if(!s) return '';
   return `<p class='kw'>📊 Picture it</p><div class='dg'><svg viewBox='0 0 320 ${H}' width='100%' role='img' aria-label='Diagram'><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0,0L8,4L0,8z' fill='var(--h)'/></marker></defs>${s}</svg></div>`;

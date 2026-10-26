@@ -873,20 +873,72 @@ TOPICS = {
             }
         ],
         "bg": {
-            "b": ["Challenges & Gaps", "Solutions & Reforms", "Models & Frameworks"],
+            "b": [
+                "Challenges & Gaps",
+                "Solutions & Reforms",
+                "Models & Frameworks"
+            ],
             "it": [
-                ["Dwarfism Paradox (99.4% Micro)", 0, "Dwarfism is the structural bottleneck where firms intentionally stay small to avoid regulatory costs."],
-                ["Section 43B(h) Tax Disallowance", 1, "Section 43B(h) disallows corporate tax deductions if MSME invoices are unpaid past 45 days."],
-                ["German Mittelstand", 2, "German Mittelstand is the globally renowned cluster benchmark for scale-neutral medium enterprises."],
-                ["₹30 Lakh Crore Credit Gap", 0, "The UK Sinha Committee identified the massive formal credit deficit suffocating MSMEs."],
-                ["TReDS Invoice Factoring", 1, "TReDS is the electronic factoring platform enabling competitive discounting of trade receivables."],
-                ["2020 Composite Criteria (1/5, 10/50, 50/250)", 2, "The unified classification criteria with statutory export turnover exclusion."],
-                ["Working Capital Asphyxiation", 0, "Severe liquidity crunch caused by buyers taking 90-180 days to clear invoices."],
-                ["Budget 2025 ₹100 Cr Guarantee", 1, "Collateral-free credit guarantee scheme for machinery purchase introduced in Union Budget 2024-25."],
-                ["PM Vishwakarma Model", 2, "Holistic framework supporting traditional artisans across 18 trades with toolkits and 5% credit."],
-                ["Regulatory Cliff & Compliance Burden", 0, "Sudden jump in labor and tax compliances when a unit expands from micro to small."],
-                ["E-Commerce Export Hubs (ECEH)", 1, "Public-private trade logistics hubs enabling micro producers to export globally without middlemen."],
-                ["Digital Cash-Flow Lending via ONDC", 2, "Transaction-based credit underwriting replacing traditional fixed asset mortgages."]
+                [
+                    "Dwarfism Paradox (99.4% Micro)",
+                    0,
+                    "Dwarfism is the structural bottleneck where firms intentionally stay small to avoid regulatory costs."
+                ],
+                [
+                    "Section 43B(h) Tax Disallowance",
+                    1,
+                    "Section 43B(h) disallows corporate tax deductions if MSME invoices are unpaid past 45 days."
+                ],
+                [
+                    "German Mittelstand",
+                    2,
+                    "German Mittelstand is the globally renowned cluster benchmark for scale-neutral medium enterprises."
+                ],
+                [
+                    "₹30 Lakh Crore Credit Gap",
+                    0,
+                    "The UK Sinha Committee identified the massive formal credit deficit suffocating MSMEs."
+                ],
+                [
+                    "TReDS Invoice Factoring",
+                    1,
+                    "TReDS is the electronic factoring platform enabling competitive discounting of trade receivables."
+                ],
+                [
+                    "2020 Composite Criteria (1/5, 10/50, 50/250)",
+                    2,
+                    "The unified classification criteria with statutory export turnover exclusion."
+                ],
+                [
+                    "Working Capital Asphyxiation",
+                    0,
+                    "Severe liquidity crunch caused by buyers taking 90-180 days to clear invoices."
+                ],
+                [
+                    "Budget 2025 ₹100 Cr Guarantee",
+                    1,
+                    "Collateral-free credit guarantee scheme for machinery purchase introduced in Union Budget 2024-25."
+                ],
+                [
+                    "PM Vishwakarma Model",
+                    2,
+                    "Holistic framework supporting traditional artisans across 18 trades with toolkits and 5% credit."
+                ],
+                [
+                    "Regulatory Cliff & Compliance Burden",
+                    0,
+                    "Sudden jump in labor and tax compliances when a unit expands from micro to small."
+                ],
+                [
+                    "E-Commerce Export Hubs (ECEH)",
+                    1,
+                    "Public-private trade logistics hubs enabling micro producers to export globally without middlemen."
+                ],
+                [
+                    "Digital Cash-Flow Lending via ONDC",
+                    2,
+                    "Transaction-based credit underwriting replacing traditional fixed asset mortgages."
+                ]
             ]
         },
         "sks": [
@@ -1830,20 +1882,72 @@ TOPICS = {
             }
         ],
         "bg": {
-            "b": ["Exam Malpractices", "Statutory Deterrence", "Institutional Reforms"],
+            "b": [
+                "Exam Malpractices",
+                "Statutory Deterrence",
+                "Institutional Reforms"
+            ],
             "it": [
-                ["Organised Paper Leak Ring", 0, "Inter-state mafia syndicates executing planned breaches for ₹30-50 Lakh per candidate."],
-                ["₹1 Crore Minimum Fine", 1, "Section 10(2) of the 2024 Act imposes a non-negotiable minimum ₹1 Cr penalty on criminal syndicates."],
-                ["Radhakrishnan Committee", 2, "7-member high-level panel under former ISRO chief Dr. K. Radhakrishnan to revamp testing mechanisms."],
-                ["Private Computer Lab Hacking", 0, "Commercial testing centers compromised via remote desktop control software like AnyDesk."],
-                ["Section 12 Property Attachment", 1, "Statutory power to seize and attach assets of exam offenders and recover total exam conducting costs."],
-                ["Hybrid Multi-Stage Testing", 2, "Radhakrishnan model: Screening Prelims + encrypted digital question delivery with physical OMR answers."],
-                ["Fake Answer Keys & Solver Gangs", 0, "Impersonators and solvers deployed inside exam halls using unauthorized wireless devices."],
-                ["5 to 10 Years Imprisonment", 1, "Mandatory severe jail term for members of organised exam-rigging syndicates."],
-                ["100% Government Test Centers", 2, "Conducting exams exclusively in Kendriya Vidyalayas, Navodayas, IITs, and NITs to eliminate private sub-contracting."],
-                ["NTA 24-Staff Paradox", 0, "National Testing Agency conducting exams for millions with only 24 permanent employees, forcing private outsourcing."],
-                ["Cognizable & Non-Bailable Status", 1, "All offences under Public Examinations Act 2024 are made non-bailable with no anticipatory bail."],
-                ["Permanent Cadre Overhaul", 2, "Building an autonomous, permanent ISRO-grade testing cadre to replace contractual coordinators."]
+                [
+                    "Organised Paper Leak Ring",
+                    0,
+                    "Inter-state mafia syndicates executing planned breaches for ₹30-50 Lakh per candidate."
+                ],
+                [
+                    "₹1 Crore Minimum Fine",
+                    1,
+                    "Section 10(2) of the 2024 Act imposes a non-negotiable minimum ₹1 Cr penalty on criminal syndicates."
+                ],
+                [
+                    "Radhakrishnan Committee",
+                    2,
+                    "7-member high-level panel under former ISRO chief Dr. K. Radhakrishnan to revamp testing mechanisms."
+                ],
+                [
+                    "Private Computer Lab Hacking",
+                    0,
+                    "Commercial testing centers compromised via remote desktop control software like AnyDesk."
+                ],
+                [
+                    "Section 12 Property Attachment",
+                    1,
+                    "Statutory power to seize and attach assets of exam offenders and recover total exam conducting costs."
+                ],
+                [
+                    "Hybrid Multi-Stage Testing",
+                    2,
+                    "Radhakrishnan model: Screening Prelims + encrypted digital question delivery with physical OMR answers."
+                ],
+                [
+                    "Fake Answer Keys & Solver Gangs",
+                    0,
+                    "Impersonators and solvers deployed inside exam halls using unauthorized wireless devices."
+                ],
+                [
+                    "5 to 10 Years Imprisonment",
+                    1,
+                    "Mandatory severe jail term for members of organised exam-rigging syndicates."
+                ],
+                [
+                    "100% Government Test Centers",
+                    2,
+                    "Conducting exams exclusively in Kendriya Vidyalayas, Navodayas, IITs, and NITs to eliminate private sub-contracting."
+                ],
+                [
+                    "NTA 24-Staff Paradox",
+                    0,
+                    "National Testing Agency conducting exams for millions with only 24 permanent employees, forcing private outsourcing."
+                ],
+                [
+                    "Cognizable & Non-Bailable Status",
+                    1,
+                    "All offences under Public Examinations Act 2024 are made non-bailable with no anticipatory bail."
+                ],
+                [
+                    "Permanent Cadre Overhaul",
+                    2,
+                    "Building an autonomous, permanent ISRO-grade testing cadre to replace contractual coordinators."
+                ]
             ]
         },
         "sks": [
@@ -2703,20 +2807,72 @@ TOPICS = {
             }
         ],
         "bg": {
-            "b": ["Ethical & Tech Risks", "Assistive AI Solutions", "Constitutional Models"],
+            "b": [
+                "Ethical & Tech Risks",
+                "Assistive AI Solutions",
+                "Constitutional Models"
+            ],
             "it": [
-                ["NCLT Hallucination Crisis", 0, "Generative AI fabricating nonexistent case precedents, cited by lawyers to courts."],
-                ["SUVAS Vernacular Translation", 1, "Supreme Court AI tool translating orders and judgments into 18 regional Indian languages."],
-                ["SC Human Adjudication Boundary", 2, "The strict constitutional line: AI as research clerk only; empathy and final justice must remain human."],
-                ["Article 21 Black-Box Opacity", 0, "Deep neural networks lacking explainability, violating the fundamental right to a reasoned trial."],
-                ["SUPACE Legal Research Assistant", 1, "Supreme Court Portal for Assistance in Court's Efficiency to extract facts and legal citations."],
-                ["e-Courts Project Phase III", 2, "Union Cabinet approved ₹7,210 Crore initiative building paperless, digitized judicial infrastructure."],
-                ["Algorithmic Socio-Economic Bias", 0, "AI models trained on historic criminal data encoding discriminatory demographic biases."],
-                ["FASTER Digital Bail Delivery", 1, "Secure electronic transmission of bail orders directly to jail superintendents to end unlawful detentions."],
-                ["Open Judicial Data API Framework", 2, "Standardized, public APIs enabling transparent tracking of 5 Crore pending cases on the NJDG."],
-                ["Digital Divide for Rural Litigants", 0, "Lack of digital literacy and broadband access excluding indigent undertrials from virtual hearings."],
-                ["Automated Cause-List Scheduling", 1, "Algorithm balancing judge docket loads and eliminating redundant case adjournments."],
-                ["Constitutional Morality Filter", 2, "Adjudication guided by societal conscience, compassion, and justice rather than automated statistical computation."]
+                [
+                    "NCLT Hallucination Crisis",
+                    0,
+                    "Generative AI fabricating nonexistent case precedents, cited by lawyers to courts."
+                ],
+                [
+                    "SUVAS Vernacular Translation",
+                    1,
+                    "Supreme Court AI tool translating orders and judgments into 18 regional Indian languages."
+                ],
+                [
+                    "SC Human Adjudication Boundary",
+                    2,
+                    "The strict constitutional line: AI as research clerk only; empathy and final justice must remain human."
+                ],
+                [
+                    "Article 21 Black-Box Opacity",
+                    0,
+                    "Deep neural networks lacking explainability, violating the fundamental right to a reasoned trial."
+                ],
+                [
+                    "SUPACE Legal Research Assistant",
+                    1,
+                    "Supreme Court Portal for Assistance in Court's Efficiency to extract facts and legal citations."
+                ],
+                [
+                    "e-Courts Project Phase III",
+                    2,
+                    "Union Cabinet approved ₹7,210 Crore initiative building paperless, digitized judicial infrastructure."
+                ],
+                [
+                    "Algorithmic Socio-Economic Bias",
+                    0,
+                    "AI models trained on historic criminal data encoding discriminatory demographic biases."
+                ],
+                [
+                    "FASTER Digital Bail Delivery",
+                    1,
+                    "Secure electronic transmission of bail orders directly to jail superintendents to end unlawful detentions."
+                ],
+                [
+                    "Open Judicial Data API Framework",
+                    2,
+                    "Standardized, public APIs enabling transparent tracking of 5 Crore pending cases on the NJDG."
+                ],
+                [
+                    "Digital Divide for Rural Litigants",
+                    0,
+                    "Lack of digital literacy and broadband access excluding indigent undertrials from virtual hearings."
+                ],
+                [
+                    "Automated Cause-List Scheduling",
+                    1,
+                    "Algorithm balancing judge docket loads and eliminating redundant case adjournments."
+                ],
+                [
+                    "Constitutional Morality Filter",
+                    2,
+                    "Adjudication guided by societal conscience, compassion, and justice rather than automated statistical computation."
+                ]
             ]
         },
         "sks": [
@@ -3931,20 +4087,72 @@ TOPICS = {
             }
         ],
         "bg": {
-            "b": ["Challenges & Gaps", "Solutions & Reforms", "Models & Frameworks"],
+            "b": [
+                "Challenges & Gaps",
+                "Solutions & Reforms",
+                "Models & Frameworks"
+            ],
             "it": [
-                ["Paper Tiger (No Penalties)", 0, "Voluntary nature without statutory backing leaves charters devoid of enforceable consequences."],
-                ["Right to Services Acts", 1, "State statutes (e.g. MP 2010, Bihar 2011) providing legal deadlines, appeals, and daily fines on officers."],
-                ["Sevottam 3-Module Framework", 2, "DARPG quality framework: Citizen's Charter + Public Grievance Redress + Service Delivery Capability."],
-                ["Top-Down Drafting", 0, "Charters designed in central ministries without consulting frontline staff or grassroots citizens."],
-                ["Third-Party Social Audits", 1, "Independent citizen-led scrutiny and public evaluations verifying actual on-ground service delivery."],
-                ["2nd ARC 12th Report", 2, "'Citizen Centric Administration: The Heart of Governance', providing the master blueprint for public service guarantees."],
-                ["Vague 'As Soon As Possible' Norms", 0, "Unquantifiable, ambiguous commitments that prevent citizens from demanding accountability."],
-                ["Sakala Auto-Escalation Engine", 1, "Karnataka's digital workflow where delayed files automatically escalate to higher supervisory officers."],
-                ["UK Charter Mark (1991)", 2, "John Major's pioneering excellence framework rewarding public agencies that meet user-defined service benchmarks."],
-                ["Language & Awareness Deficit", 0, "Charters published only in English or hidden on obscure notice boards inaccessible to common citizens."],
-                ["SMART Service Standards", 1, "Specific, Measurable, Achievable, Relevant, and Time-bound commitments for every notified service."],
-                ["Citizen Report Cards (Bangalore)", 2, "Public Affairs Centre survey methodology quantifying user satisfaction to drive bureaucratic reform."]
+                [
+                    "Paper Tiger (No Penalties)",
+                    0,
+                    "Voluntary nature without statutory backing leaves charters devoid of enforceable consequences."
+                ],
+                [
+                    "Right to Services Acts",
+                    1,
+                    "State statutes (e.g. MP 2010, Bihar 2011) providing legal deadlines, appeals, and daily fines on officers."
+                ],
+                [
+                    "Sevottam 3-Module Framework",
+                    2,
+                    "DARPG quality framework: Citizen's Charter + Public Grievance Redress + Service Delivery Capability."
+                ],
+                [
+                    "Top-Down Drafting",
+                    0,
+                    "Charters designed in central ministries without consulting frontline staff or grassroots citizens."
+                ],
+                [
+                    "Third-Party Social Audits",
+                    1,
+                    "Independent citizen-led scrutiny and public evaluations verifying actual on-ground service delivery."
+                ],
+                [
+                    "2nd ARC 12th Report",
+                    2,
+                    "'Citizen Centric Administration: The Heart of Governance', providing the master blueprint for public service guarantees."
+                ],
+                [
+                    "Vague 'As Soon As Possible' Norms",
+                    0,
+                    "Unquantifiable, ambiguous commitments that prevent citizens from demanding accountability."
+                ],
+                [
+                    "Sakala Auto-Escalation Engine",
+                    1,
+                    "Karnataka's digital workflow where delayed files automatically escalate to higher supervisory officers."
+                ],
+                [
+                    "UK Charter Mark (1991)",
+                    2,
+                    "John Major's pioneering excellence framework rewarding public agencies that meet user-defined service benchmarks."
+                ],
+                [
+                    "Language & Awareness Deficit",
+                    0,
+                    "Charters published only in English or hidden on obscure notice boards inaccessible to common citizens."
+                ],
+                [
+                    "SMART Service Standards",
+                    1,
+                    "Specific, Measurable, Achievable, Relevant, and Time-bound commitments for every notified service."
+                ],
+                [
+                    "Citizen Report Cards (Bangalore)",
+                    2,
+                    "Public Affairs Centre survey methodology quantifying user satisfaction to drive bureaucratic reform."
+                ]
             ]
         },
         "sks": [
@@ -5174,20 +5382,72 @@ TOPICS = {
             }
         ],
         "bg": {
-            "b": ["Challenges & Impediments", "Solutions & Enforcers", "Landmark Precedents"],
+            "b": [
+                "Challenges & Impediments",
+                "Solutions & Enforcers",
+                "Landmark Precedents"
+            ],
             "it": [
-                ["Official Secrets Act 1923 Mentality", 0, "Bureaucratic culture of knee-jerk secrecy persisting despite the 2005 sunshine law."],
-                ["Section 8(2) Public Interest Override", 1, "Statutory trump card mandating disclosure if public benefit outweighs protected harm."],
-                ["Raj Narain Case (1975)", 2, "Supreme Court ruling declaring the right to know an integral part of Article 19(1)(a) freedom of speech."],
-                ["Information Commission Backlogs", 0, "Over 3-4 lakh second appeals pending nationwide due to unfilled commissioner vacancies."],
-                ["Section 4 Proactive Disclosure", 1, "Mandatory suo motu publication of organizational norms, reducing the need for formal RTI filings."],
-                ["ADR Electoral Bonds Ruling (2024)", 2, "Unanimous 5-Judge Constitution Bench holding voters have a fundamental right to know political donors."],
-                ["Murders of RTI Activists", 0, "Over 100 whistleblowers killed due to lack of an operationalized Whistleblowers Protection Act."],
-                ["Section 20 Personal Fine (₹250/day)", 1, "Personal financial liability up to ₹25,000 imposed on PIOs for mala fide refusals or unjustified delays."],
-                ["MKSS Jan Sunwais (Rajasthan)", 2, "Grassroots social audit movement by Aruna Roy and Nikhil Dey establishing 'Hamara Paisa, Hamara Hisab'."],
-                ["DPDP Act 2023 Sec 44(3) Amendment", 0, "Amended Section 8(1)(j) to blanket-exempt personal information, weaponized to conceal graft."],
-                ["Jan Soochna Digital Portal", 1, "Rajasthan's proactive transparency platform putting real-time welfare and scheme data online for all."],
-                ["Subhash Agarwal Judgment (2019)", 2, "Constitution Bench ruling confirming the office of the Chief Justice of India falls under RTI."]
+                [
+                    "Official Secrets Act 1923 Mentality",
+                    0,
+                    "Bureaucratic culture of knee-jerk secrecy persisting despite the 2005 sunshine law."
+                ],
+                [
+                    "Section 8(2) Public Interest Override",
+                    1,
+                    "Statutory trump card mandating disclosure if public benefit outweighs protected harm."
+                ],
+                [
+                    "Raj Narain Case (1975)",
+                    2,
+                    "Supreme Court ruling declaring the right to know an integral part of Article 19(1)(a) freedom of speech."
+                ],
+                [
+                    "Information Commission Backlogs",
+                    0,
+                    "Over 3-4 lakh second appeals pending nationwide due to unfilled commissioner vacancies."
+                ],
+                [
+                    "Section 4 Proactive Disclosure",
+                    1,
+                    "Mandatory suo motu publication of organizational norms, reducing the need for formal RTI filings."
+                ],
+                [
+                    "ADR Electoral Bonds Ruling (2024)",
+                    2,
+                    "Unanimous 5-Judge Constitution Bench holding voters have a fundamental right to know political donors."
+                ],
+                [
+                    "Murders of RTI Activists",
+                    0,
+                    "Over 100 whistleblowers killed due to lack of an operationalized Whistleblowers Protection Act."
+                ],
+                [
+                    "Section 20 Personal Fine (₹250/day)",
+                    1,
+                    "Personal financial liability up to ₹25,000 imposed on PIOs for mala fide refusals or unjustified delays."
+                ],
+                [
+                    "MKSS Jan Sunwais (Rajasthan)",
+                    2,
+                    "Grassroots social audit movement by Aruna Roy and Nikhil Dey establishing 'Hamara Paisa, Hamara Hisab'."
+                ],
+                [
+                    "DPDP Act 2023 Sec 44(3) Amendment",
+                    0,
+                    "Amended Section 8(1)(j) to blanket-exempt personal information, weaponized to conceal graft."
+                ],
+                [
+                    "Jan Soochna Digital Portal",
+                    1,
+                    "Rajasthan's proactive transparency platform putting real-time welfare and scheme data online for all."
+                ],
+                [
+                    "Subhash Agarwal Judgment (2019)",
+                    2,
+                    "Constitution Bench ruling confirming the office of the Chief Justice of India falls under RTI."
+                ]
             ]
         },
         "sks": [
@@ -5514,6 +5774,1919 @@ TOPICS = {
                     "laws"
                 ],
                 "e": "Public interest overrides colonial secrecy laws."
+            }
+        ]
+    },
+    "infra": {
+        "id": "infra",
+        "title": "Infrastructure Delivery & PM Gati-Shakti",
+        "badge": "🏗️",
+        "sub": "Master multimodal planning, Gati-Shakti 3-tier governance, NMP 2.0 asset monetisation, and cooperative fiscal federalism.",
+        "hue": [
+            "#0f8a62",
+            "#2f63d6",
+            "#7442d6",
+            "#b8760a",
+            "#d23a40",
+            "#0b8a9a"
+        ],
+        "ico": [
+            [
+                "🏗️",
+                "🌐",
+                "🛤️"
+            ],
+            [
+                "🚢",
+                "📦",
+                "⚡"
+            ],
+            [
+                "💰",
+                "🤝",
+                "🏢"
+            ],
+            [
+                "🏛️",
+                "💳",
+                "📈"
+            ],
+            [
+                "📑",
+                "🔄",
+                "⚖️"
+            ],
+            [
+                "🎯",
+                "🗺️",
+                "🏆"
+            ]
+        ],
+        "lessons": [
+            {
+                "n": "The Silo Pathology & PM Gati-Shakti",
+                "e": "🏗️",
+                "d": "Departmental silos, NPG evaluation and 1,800+ GIS layers",
+                "c": [
+                    {
+                        "t": "The Departmental Silo Pathology",
+                        "b": [
+                            "Indian infrastructure has historically suffered from <b>uncoordinated departmental silos</b>, resulting in time and cost overruns.",
+                            "Classic example: The <b>Delhi-Meerut Expressway</b> waited 11 months for a single railway approval for a road-over-bridge (ROB) after the road itself was fully completed.",
+                            "The <b>Kochi LNG terminal</b> ran at severe sub-capacity from 2013 because the connecting gas pipeline was delayed due to uncoordinated land permissions."
+                        ],
+                        "k": [
+                            "Silo Pathology",
+                            "Delhi-Meerut ROB Delay",
+                            "Kochi LNG Stranded Capacity"
+                        ],
+                        "n": "Uncoordinated sequencing creates idle capital: assets built, but public benefits not delivered."
+                    },
+                    {
+                        "t": "PM Gati-Shakti National Master Plan (Oct 2021)",
+                        "b": [
+                            "Established a <b>three-tier institutional structure</b>: Empowered Group of Secretaries (EGOS), Network Planning Group (NPG), and Technical Support Unit / ITLA.",
+                            "The <b>Network Planning Group (NPG)</b> evaluates all connectivity projects above ₹500 Cr for multimodality, synchronization, and last-mile links.",
+                            "Scale (Aug 2026): <b>396 projects worth ₹18.66 Lakh Crore</b> evaluated; 58 central ministries and all 36 States/UTs onboarded with over <b>1,800 GIS data layers</b>."
+                        ],
+                        "k": [
+                            "Whole-of-Government Approach",
+                            "Network Planning Group (NPG)",
+                            "1,800+ GIS Data Layers"
+                        ],
+                        "n": "Key flaw: Gati-Shakti coordinates, but possesses no independent project capital to compel execution."
+                    },
+                    {
+                        "t": "Multi-Level Planning & District Master Plans",
+                        "b": [
+                            "Land, electricity distribution, and urban transit are <b>State subjects (7th Schedule)</b>; national corridors fail without local integration.",
+                            "<b>District Master Plans</b> launched in <b>28 Aspirational Districts</b> to align local economic clusters with trunk freight corridors.",
+                            "Inter-state coordination: <b>Madurai-Kollam corridor</b> was bifurcated and reviewed jointly under the Master Plan across Tamil Nadu and Kerala."
+                        ],
+                        "k": [
+                            "Multi-Level Planning",
+                            "28 Aspirational Districts",
+                            "Madurai-Kollam Corridor"
+                        ],
+                        "n": "Exam angle: GS-3 (Infrastructure Planning) & GS-2 (Federal Planning Mechanisms)."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Which institutional body evaluates projects for multimodality and synchronization under PM Gati-Shakti?",
+                        "o": [
+                            "Network Planning Group (NPG)",
+                            "Central Vigilance Commission",
+                            "Finance Commission",
+                            "Railway Board"
+                        ],
+                        "a": 0,
+                        "e": "The Network Planning Group (NPG) reviews all major connectivity projects for synchronization."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "PM Gati-Shakti possesses an independent ₹10 Lakh Crore budgetary fund to directly finance infrastructure.",
+                        "a": 1,
+                        "e": "False. It is a digital GIS coordination and planning platform; project capital is funded through respective ministry budgets."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all verified real-world case studies demonstrating the silo pathology in Indian infrastructure.",
+                        "o": [
+                            "Delhi-Meerut Expressway 11-month railway ROB delay",
+                            "Kochi LNG terminal sub-capacity due to pipeline delays",
+                            "Madurai-Kollam corridor cross-state coordination",
+                            "100% automated bullet train completion in 2018"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Delhi-Meerut ROB and Kochi LNG are classic silo delays; Madurai-Kollam represents Gati-Shakti inter-state coordination."
+                    },
+                    {
+                        "k": "order",
+                        "q": "Order the 3-tier institutional hierarchy of PM Gati-Shakti from top to bottom.",
+                        "o": [
+                            "Empowered Group of Secretaries (EGOS)",
+                            "Network Planning Group (NPG)",
+                            "Technical Support Unit (TSU) / ITLA"
+                        ],
+                        "e": "EGOS (Strategic Apex) → NPG (Project Evaluation) → Technical Support Unit (GIS Analytics)."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the PM Gati-Shakti National Master Plan was launched.",
+                        "a": 2021,
+                        "tol": 0,
+                        "min": 2018,
+                        "max": 2025,
+                        "e": "October 2021."
+                    }
+                ]
+            },
+            {
+                "n": "Multimodal Logistics & Cost Rebasing",
+                "e": "🚢",
+                "d": "ULIP, 7.97% cost rebasing, and green clearance acceleration",
+                "c": [
+                    {
+                        "t": "First-Mile & Last-Mile Multimodal Integration",
+                        "b": [
+                            "High-speed trunk expressways are ineffective if cargo faces <b>congested first-mile and last-mile gaps</b> at factory gates and freight terminals.",
+                            "<b>Multimodal integration</b> coordinates road, rail, coastal shipping, air cargo, and inland waterways as a unified logistics chain.",
+                            "Environmental clearances: Online <b>Parivesh portal</b> integrated with Gati-Shakti cut environmental clearance duration from <b>600 days down to 162 days</b>."
+                        ],
+                        "k": [
+                            "First-Mile & Last-Mile",
+                            "Multimodal Integration",
+                            "162-Day Green Clearance"
+                        ],
+                        "n": "Cutting regulatory clearance time from 600 to 162 days is a benchmark coordination dividend."
+                    },
+                    {
+                        "t": "National Logistics Policy (2022) & ULIP",
+                        "b": [
+                            "<b>Unified Logistics Interface Platform (ULIP)</b> creates a single-window digital interface integrating 34 systems across 8 central ministries.",
+                            "Targets: Reduce overall logistics costs to <b>under 10% of GDP</b> and propel India into the <b>top-25 Logistics Performance Index (LPI)</b> by 2030.",
+                            "Enables real-time container tracking, electronic cargo manifests, and predictive freight container allocation."
+                        ],
+                        "k": [
+                            "ULIP Open APIs",
+                            "Top-25 LPI Target",
+                            "National Logistics Policy 2022"
+                        ],
+                        "n": "ULIP democratizes logistics intelligence by opening APIs to private logistics startups."
+                    },
+                    {
+                        "t": "Logistics Cost Rebasing: 7.97% of GDP",
+                        "b": [
+                            "A comprehensive baseline study re-estimated India's actual logistics cost at <b>7.97% of GDP for 2023-24</b> (NCAER earlier estimated 7.8-8.9%).",
+                            "Replaced the long-quoted, unempirical <b>13-14% narrative</b> with rigorous national accounts data.",
+                            "Identifies real bottlenecks: <b>rail freight modal share stagnation at ~27%</b>, high terminal handling charges, and empty return hauls."
+                        ],
+                        "k": [
+                            "7.97% Logistics Cost Rebasing",
+                            "Rail Modal Share Deficit",
+                            "Terminal Dwell Times"
+                        ],
+                        "n": "Always cite the 7.97% official rebased figure in Mains rather than outdated 14% estimates."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What is the newly rebased official estimate of India's logistics cost as a percentage of GDP for 2023-24?",
+                        "o": [
+                            "14.2% of GDP",
+                            "7.97% of GDP",
+                            "3.5% of GDP",
+                            "18.5% of GDP"
+                        ],
+                        "a": 1,
+                        "e": "Rebased to 7.97% of GDP (2023-24), replacing the outdated 13-14% estimate."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "The Unified Logistics Interface Platform (ULIP) integrates data across 8 ministries via open APIs.",
+                        "a": 0,
+                        "e": "True. ULIP integrates 34 logistics systems across 8 ministries for transparent tracking."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the logistics initiative to its core function.",
+                        "p": [
+                            [
+                                "ULIP",
+                                "Single-window digital logistics APIs"
+                            ],
+                            [
+                                "Parivesh",
+                                "Environmental clearance portal (600 to 162 days)"
+                            ],
+                            [
+                                "NLP 2022",
+                                "Top-25 LPI rank by 2030 target"
+                            ],
+                            [
+                                "Gati-Shakti",
+                                "GIS multimodal coordination master plan"
+                            ]
+                        ],
+                        "e": "These 4 tools represent the technical spine of Indian logistics reforms."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "Logistics cost was re-estimated at 7.97% of GDP in 2023-24,",
+                            "environmental approval time was reduced from 600 to 162 days,",
+                            "and rail freight carries 95% of all domestic cargo in India."
+                        ],
+                        "a": 2,
+                        "e": "Rail carries only ~27% of domestic cargo; roads dominate with over 65%."
+                    }
+                ]
+            },
+            {
+                "n": "Asset Monetisation & Brownfield PPPs",
+                "e": "💰",
+                "d": "NMP 1.0 & 2.0, asset recycling, and risk allocation",
+                "c": [
+                    {
+                        "t": "Asset Recycling & Brownfield Logic",
+                        "b": [
+                            "<b>Greenfield vs Brownfield Risk:</b> Greenfield projects carry severe land acquisition, environment, and construction risks. Brownfield assets are operational, de-risked, and cash-generating.",
+                            "<b>Asset Recycling:</b> Government leases operational public assets to private concessionaires for a fixed term, <b>retaining sovereign asset ownership</b> while reinvesting lease upfront proceeds into fresh greenfield infrastructure.",
+                            "<b>NMP 1.0 (2021-25) Success:</b> Achieved roughly <b>90% of its target</b> (~₹5.3-5.4 Lakh Crore) via Infrastructure Investment Trusts (InvITs), Toll-Operate-Transfer (TOT), and airport leases."
+                        ],
+                        "k": [
+                            "Asset Recycling",
+                            "NMP 1.0 (~90% Realized)",
+                            "InvITs & TOT"
+                        ],
+                        "n": "NMP is NOT privatization; it is leasing operating cash flows while keeping sovereign title."
+                    },
+                    {
+                        "t": "National Monetisation Pipeline 2.0 (Feb 2026)",
+                        "b": [
+                            "Outlay: Estimated <b>₹16.72 Lakh Crore monetization potential</b> over FY2026-30 across 12 infrastructure sectors.",
+                            "Targets <b>₹5.8 Lakh Crore in private capital investment</b> across highways, rail freight corridors, transmission grids, and multimodal hubs.",
+                            "<b>Implementation Obstacle:</b> Clearance delays, disputed municipal tax levies, and state-level regulatory bottlenecks have slowed secondary asset transactions."
+                        ],
+                        "k": [
+                            "NMP 2.0 (₹16.72L Cr)",
+                            "₹5.8L Cr Private Capex",
+                            "12 Core Sectors"
+                        ],
+                        "n": "Private capex fell for a second straight quarter in Q3 FY26, making public de-risking essential."
+                    },
+                    {
+                        "t": "Bankability & The Infrastructure Risk Guarantee Fund",
+                        "b": [
+                            "<b>Kelkar Committee on PPP (2015):</b> Infrastructure projects attract private capital only when risks are allocated to the entity best equipped to manage them.",
+                            "<b>Budget 2026-27 Reforms:</b> Launched the <b>Infrastructure Risk Guarantee Fund</b> to absorb early-stage demand and revenue shocks in high-risk projects.",
+                            "Introduced <b>City Economic Regions</b> to plan urban-industrial clusters with unified infrastructure financing."
+                        ],
+                        "k": [
+                            "Kelkar PPP Principles",
+                            "Infrastructure Risk Guarantee Fund",
+                            "City Economic Regions"
+                        ],
+                        "n": "Without credible risk sharing, public spending ends up bearing 100% of the capital burden."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What proportion of its overall target did the National Monetisation Pipeline 1.0 (2021-25) achieve?",
+                        "o": [
+                            "About 25%",
+                            "About 50%",
+                            "Roughly 90% (₹5.3-5.4L Cr)",
+                            "Over 150%"
+                        ],
+                        "a": 2,
+                        "e": "NMP 1.0 reached ~90% of its target via InvITs, toll concessions, and airport deals."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "In brownfield asset recycling under NMP, the government permanently sells asset ownership to private companies.",
+                        "a": 1,
+                        "e": "False. Government retains 100% asset ownership; only operating and revenue rights are leased for a fixed term."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all instruments utilized in India's asset recycling framework.",
+                        "o": [
+                            "Infrastructure Investment Trusts (InvITs)",
+                            "Toll-Operate-Transfer (TOT) road concessions",
+                            "Direct liquidation of core sovereignty assets",
+                            "Long-term airport operating leases"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            3
+                        ],
+                        "e": "InvITs, TOT, and operating leases are legitimate monetization instruments; core sovereignty is not liquidated."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year National Monetisation Pipeline 2.0 was unveiled.",
+                        "a": 2026,
+                        "tol": 0,
+                        "min": 2020,
+                        "max": 2030,
+                        "e": "February 2026."
+                    }
+                ]
+            },
+            {
+                "n": "Cooperative Fiscal Federalism & SASCI",
+                "e": "🏛️",
+                "d": "50-year loans, capex expansion, and state absorption constraints",
+                "c": [
+                    {
+                        "t": "SASCI: 50-Year Interest-Free Capex Loans",
+                        "b": [
+                            "<b>Special Assistance to States for Capital Investment (SASCI):</b> Central scheme providing <b>50-year interest-free loans</b> to state governments.",
+                            "Acts as a powerful financial carrot linking central loan disbursement to states completing Gati-Shakti master plans, urban reforms, and land digitisation.",
+                            "Union Budget 2026-27 raised public capital expenditure to <b>₹12.2 Lakh Crore</b> (up from ₹11.2L Cr), maintaining strong capex momentum."
+                        ],
+                        "k": [
+                            "SASCI 50-Year Loans",
+                            "₹12.2L Cr Public Capex",
+                            "Capital Assistance Incentive"
+                        ],
+                        "n": "50-year loans protect state debt sustainability while accelerating capital asset creation."
+                    },
+                    {
+                        "t": "The State Capex Absorption Bottleneck",
+                        "b": [
+                            "Budget allocation does not automatically equal physical execution: <b>20 states spent only 27% of their budgeted capex</b> in April-August of FY26.",
+                            "Structural roadblocks: Bureaucratic delay in releasing state matching funds, litigation over land acquisition, and lack of municipal engineering capacity.",
+                            "Demonstrates that fiscal liquidity alone cannot resolve execution deficits without administrative re-engineering."
+                        ],
+                        "k": [
+                            "27% Capex Absorption Deficit",
+                            "State Execution Capacity",
+                            "Procedural Friction"
+                        ],
+                        "n": "Key diagnostic: Capital is necessary, but administrative capacity is the true binding constraint."
+                    },
+                    {
+                        "t": "Geospatial Data Interoperability & Federal Gaps",
+                        "b": [
+                            "Gati-Shakti GIS platform is only as robust as the municipal and state data layers fed into it.",
+                            "Gaps: <b>Non-standardized data formats</b>, incomplete digitization of village cadastral land records, and inter-agency turf wars.",
+                            "Private investors face <b>limited data access</b> due to state security concerns, constraining informed investment decisions."
+                        ],
+                        "k": [
+                            "Geospatial Interoperability",
+                            "Cadastral Land Records",
+                            "Data Security Trade-Off"
+                        ],
+                        "n": "Balance: Data sharing stimulates private capital; excessive opacity breeds investor risk."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What is the tenure of the interest-free capital investment loans provided to states under SASCI?",
+                        "o": [
+                            "5 Years",
+                            "10 Years",
+                            "50 Years",
+                            "100 Years"
+                        ],
+                        "a": 2,
+                        "e": "SASCI provides 50-year interest-free loans to boost capital creation in states."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "In April-August FY26, 20 major states absorbed over 90% of their budgeted capital expenditure.",
+                        "a": 1,
+                        "e": "False. 20 states spent only about 27% of their budgeted capex in April-August FY26, showing an absorption lag."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Tap the red flag.",
+                        "o": [
+                            "SASCI provides 50-year interest-free loans to state governments,",
+                            "Union Budget 2026-27 expanded central capex to ₹12.2 Lakh Crore,",
+                            "and all municipal cadastral land records across India are 100% digitized with zero discrepancies."
+                        ],
+                        "a": 2,
+                        "e": "Cadastral land records and municipal mapping remain incomplete and highly fragmented."
+                    }
+                ]
+            },
+            {
+                "n": "Centrally Sponsored Schemes (CSS) Restructuring",
+                "e": "📑",
+                "d": "Article 282 conditionalities, matching shares, and sunset clauses",
+                "c": [
+                    {
+                        "t": "Article 282 & The Matching Share Burden",
+                        "b": [
+                            "Centrally Sponsored Schemes (CSS) are funded via <b>Article 282 conditional grants</b> requiring state matching funds (typically 60:40 or 50:50).",
+                            "₹5.41 Lakh Crore was allocated to CSS in 2025-26. An <b>RBI Study (Dec 2024)</b> highlighted that numerous central schemes severely constrain state expenditure flexibility.",
+                            "Poorer states divert untied revenues to meet central matching shares, leaving local irrigation, health, and roads underfunded."
+                        ],
+                        "k": [
+                            "Article 282 Conditional Transfers",
+                            "Matching Share Burden (60:40)",
+                            "RBI Dec 2024 Study"
+                        ],
+                        "n": "Article 282 was intended as an extraordinary residual power, but has become the primary welfare rail."
+                    },
+                    {
+                        "t": "Sunset Clauses & 16th Finance Commission Review",
+                        "b": [
+                            "Central reform: Mandated <b>sunset clauses</b> and mandatory third-party independent outcome evaluations for all CSS from April 2026.",
+                            "Recommends rationalizing hundreds of sub-schemes into broad umbrella missions with strict terminal timelines.",
+                            "<b>NITI Aayog & B.K. Chaturvedi Committee:</b> Urged creating a <b>25% unconditional flexi-fund window</b> within scheme allocations so states can adapt to local geography."
+                        ],
+                        "k": [
+                            "Sunset Clauses",
+                            "16th Finance Commission Cycle",
+                            "25% Flexi-Fund Window"
+                        ],
+                        "n": "A 25% flexi-fund window restores cooperative federalism while preserving national development priorities."
+                    },
+                    {
+                        "t": "Moving to Outcome-Linked Transfers",
+                        "b": [
+                            "Traditional CSS audited input expenditures (money spent on cement); modern federalism demands <b>outcome-linked verification</b>.",
+                            "Public Financial Management System (PFMS) and Just-in-Time funding prevent idle parkings of central funds in state bank accounts.",
+                            "True cooperative federalism balances national standards with state autonomy to design regional infrastructure."
+                        ],
+                        "k": [
+                            "Outcome-Linked Transfers",
+                            "PFMS Just-in-Time",
+                            "Fiscal Autonomy"
+                        ],
+                        "n": "Shifting from bureaucratic input tracking to verified delivery outcomes transforms federal trust."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Which constitutional article governs conditional transfers from Centre to States for Centrally Sponsored Schemes?",
+                        "o": [
+                            "Article 280",
+                            "Article 282",
+                            "Article 356",
+                            "Article 370"
+                        ],
+                        "a": 1,
+                        "e": "Article 282 provides for discretionary, conditional grants by the Union or State."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "NITI Aayog and expenditure committees recommended a 25% flexi-fund component within CSS for states.",
+                        "a": 0,
+                        "e": "True. A 25% flexi-fund quota allows states to adapt central schemes to local priorities."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the core reforms proposed for the 16th Finance Commission cycle regarding CSS.",
+                        "o": [
+                            "Mandatory sunset clauses on central schemes",
+                            "Third-party independent outcome evaluations",
+                            "25% flexi-fund share for state adaptation",
+                            "Total abolition of all national highways"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Sunset clauses, evaluations, and flexi-funds are central to the 2026 CSS review."
+                    }
+                ]
+            },
+            {
+                "n": "Mains Toolkit: Infrastructure Synthesis",
+                "e": "🎯",
+                "d": "Core vocabulary, 5-stage skeleton, and policy roadmap",
+                "c": [
+                    {
+                        "t": "Indispensable Diagnostic Vocabulary",
+                        "b": [
+                            "<b>Governance & Strategy:</b> Whole-of-government approach, multi-level planning, intermodal synchronisation, geospatial interoperability.",
+                            "<b>Finance & Contracts:</b> Asset recycling, brownfield monetization, bankability & risk allocation, Kelkar PPP framework.",
+                            "<b>Federalism & Delivery:</b> Cooperative fiscal federalism, Article 282 conditional matching grants, SASCI 50-year loans, 25% flexi-funds."
+                        ],
+                        "k": [
+                            "Use 4 to 5 per Mains answer!"
+                        ],
+                        "n": "Examiners reward precise administrative concepts over generic descriptive paragraphs."
+                    },
+                    {
+                        "t": "Mains 5-Stage Answer Skeleton",
+                        "b": [
+                            "<b>1. Introduction:</b> Define Gati-Shakti as GIS-based synchronized infrastructure planning; cite 396 projects evaluated (₹18.66L Cr).",
+                            "<b>2. The Silo Problem:</b> Cite Delhi-Meerut 11-month ROB delay and Kochi LNG terminal stranded pipeline.",
+                            "<b>3. Private & Federal Rails:</b> NMP 2.0 (₹16.72L Cr potential, ₹5.8L Cr private investment) + SASCI 50-year capex loans.",
+                            "<b>4. Execution Roadblocks:</b> Geospatial data non-interoperability, state absorption lag (27% spent), land acquisition outside GIS scope.",
+                            "<b>5. Way Forward:</b> Mandatory funded district master plans, 25% CSS flexi-funds, Infrastructure Risk Guarantee Fund, and measuring outcome speed (7.97% logistics cost)."
+                        ],
+                        "k": [
+                            "Intro → Silo Case → Monetisation/SASCI → Roadblocks → Way Forward"
+                        ],
+                        "n": "A structured, keyword-rich template ready for any GS-3 infrastructure or GS-2 federalism prompt."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "order",
+                        "q": "Order the optimal Mains answer structure for an infrastructure coordination question.",
+                        "o": [
+                            "Intro: Gati-Shakti GIS master plan & NPG 3-tier architecture",
+                            "The Silo Pathology: Delhi-Meerut ROB (11 mo) & Kochi LNG pipeline",
+                            "Private Capital & Monetisation: NMP 2.0 (₹16.72L Cr) & SASCI",
+                            "Core Implementation Bottlenecks: 27% state absorption lag & land hurdles",
+                            "Conclusion: Cooperative federalism, 25% flexi-funds & outcome metrics"
+                        ],
+                        "e": "Definition → Silo Case Study → Financing Strategy → Structural Gaps → Reform Roadmap."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Best concluding thought for an answer on Gati-Shakti and infrastructure delivery?",
+                        "o": [
+                            "Infrastructure planning should be handed entirely back to individual departments.",
+                            "PM Gati-Shakti plans with spatial elegance, but real delivery depends on deep Centre-state trust, municipal engineering capacity, and balanced risk-sharing with private capital.",
+                            "India should stop building roads and ports altogether.",
+                            "Technology alone will automatically build bridges without state funding."
+                        ],
+                        "a": 1,
+                        "e": "A balanced, inspiring constitutional conclusion connecting technology, federalism, and private capital."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the indispensable Mains keywords for infrastructure questions.",
+                        "o": [
+                            "Whole-of-government approach",
+                            "Asset recycling",
+                            "Bankability and risk allocation",
+                            "Feudal agrarian serfdom"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Whole-of-government, asset recycling, and bankability are high-scoring keywords."
+                    }
+                ]
+            }
+        ],
+        "pyq": [
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2022 (GS-3): Examine the rationale of PM Gati-Shakti National Master Plan. How can it bring about coordination and convergence in infrastructure delivery while crowding in private investment? (150 words)",
+                "r": "<b>Rationale:</b> Indian infrastructure was plagued by fragmented departmental silos, causing severe cost and time overruns (e.g. Delhi-Meerut Expressway delayed 11 months for a single railway ROB; Kochi LNG pipeline delays).<br><b>Coordination & Convergence:</b><br>1. <b>Three-Tier Architecture:</b> EGOS, NPG, and TSU evaluate all projects above ₹500 Cr for multi-modality and synchronisation.<br>2. <b>GIS Integration:</b> 1,800+ data layers across 58 ministries and 36 States/UTs ensure synchronized utility shifting (roads, water, telecom).<br>3. <b>Regulatory Acceleration:</b> Parivesh portal cut environmental clearance duration from 600 to 162 days.<br><b>Crowding in Private Capital:</b><br>1. <b>ULIP APIs:</b> Open logistics tracking data enables private logistics operators to optimize fleet movements.<br>2. <b>Asset Monetisation:</b> NMP 2.0 (₹16.72L Cr potential) leverages brownfield leasing to attract ₹5.8L Cr in private investment.<br><b>Conclusion:</b> Gati-Shakti transforms planning from departmental turf wars into an integrated economic network, vital for reducing logistics costs to 7.97% of GDP."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2019 / 2023 (GS-3): Multi-level planning is essential for balanced regional growth. Discuss how PM Gati-Shakti and District Master Plans institutionalize bottom-up infrastructure convergence. (150 words)",
+                "r": "<b>The Federal Imperative:</b> Land, urban zoning, and power supply reside on the State List (7th Schedule); national economic corridors collapse if state and district feeders fail.<br><b>Institutionalizing Multi-Level Convergence:</b><br>1. <b>District Master Plans:</b> Rolled out across 28 Aspirational Districts, linking local agricultural Mandis and MSME clusters to national dedicated freight corridors.<br>2. <b>Inter-State Alignment:</b> Projects like the Madurai-Kollam corridor reviewed under the Master Plan across Tamil Nadu and Kerala illustrate horizontal coordination.<br>3. <b>SASCI Incentives:</b> 50-year interest-free central loans incentivize states to digitize cadastral records and adopt Gati-Shakti data layers.<br><b>Gaps:</b> 20 states spent only 27% of their budgeted capex in April-August FY26, exposing municipal planning deficits.<br><b>Way Forward:</b> Fund district planning cells and empower ULBs with GIS technical capacity."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2019 / 2024 (GS-3): 'Public-Private Partnerships in infrastructure demand bankability and fair risk allocation.' In light of this, evaluate the National Monetisation Pipeline (NMP) and recent risk-mitigation reforms. (150 words)",
+                "r": "<b>The PPP Dilemma:</b> Private capital shies away from greenfield projects due to land acquisition and execution delays.<br><b>The Brownfield Solution (NMP):</b><br>1. <b>Asset Recycling:</b> Government monetises de-risked, revenue-generating operating assets via InvITs and Toll-Operate-Transfer (TOT), retaining sovereign ownership.<br>2. <b>Track Record:</b> NMP 1.0 achieved ~90% target (₹5.3-5.4L Cr); NMP 2.0 targets ₹16.72L Cr potential with ₹5.8L Cr private investment.<br><b>Risk Allocation & Bankability:</b><br>1. <b>Kelkar Committee:</b> Risk must sit with the entity best able to control it; sovereign clearance risks must not be dumped on private developers.<br>2. <b>Infrastructure Risk Guarantee Fund (Budget 2026-27):</b> Provides credit enhancement and absorbs early-stage demand volatility.<br><b>Conclusion:</b> De-risked brownfield leasing crowds in long-term pension and sovereign wealth funds without inflating public debt."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2013 / 2025 (GS-2): The restructuring of Centrally Sponsored Schemes (CSS) is vital to preserve cooperative federalism. Analyse the fiscal friction caused by Article 282 conditional transfers and suggest measures. (150 words)",
+                "r": "<b>Fiscal Friction of CSS:</b><br>1. <b>Article 282 Proliferation:</b> Conditional grants have mushroomed to ₹5.41 Lakh Crore (2025-26), eroding states' constitutional fiscal space.<br>2. <b>Matching Share Distortion:</b> Rigid 60:40 and 50:50 matching formulas force poorer states to divert untied revenue, causing local priorities to starve (RBI Dec 2024 study).<br>3. <b>One-Size-Fits-All:</b> Uniform norms fail in diverse topographies (Himalayan vs coastal states).<br><b>Restructuring Blueprint for 16th Finance Commission Cycle:</b><br>1. <b>Sunset Clauses:</b> Mandatory expiry dates and third-party outcome audits for continuation beyond 2026.<br>2. <b>25% Flexi-Fund Window:</b> As recommended by NITI Aayog, allow states 25% flexibility within each scheme.<br>3. <b>Outcome-Linked Just-in-Time Transfers:</b> Use PFMS to disburse on verified milestones rather than unspent parking.<br><b>Conclusion:</b> Transforming CSS from rigid commands into flexible partnerships embodies true cooperative federalism."
+            }
+        ],
+        "sks": [
+            {
+                "t": "PM Gati-Shakti & Multimodal Delivery",
+                "s": [
+                    "Infrastructure suffered from departmental silos: Delhi-Meerut 11-mo ROB delay; Kochi LNG idle pipeline.",
+                    "PM Gati-Shakti (Oct 2021): 3-tier structure (EGOS, NPG, TSU) with 1,800+ GIS layers across 58 ministries.",
+                    "Pros: 396 projects evaluated (₹18.66L Cr), Parivesh cut clearances from 600 to 162 days. Cons: no independent budget.",
+                    "Network Planning Group, ULIP (open APIs), National Logistics Policy (7.97% cost rebasing).",
+                    "Flowchart: Silo Turf Wars → NPG GIS Synchronization → Fast-Track Multimodal Delivery."
+                ]
+            },
+            {
+                "t": "Asset Monetisation & Brownfield PPP",
+                "s": [
+                    "Asset recycling: lease operating de-risked assets, retain sovereign ownership, reinvest in greenfield capex.",
+                    "NMP 1.0 achieved 90% target (₹5.3-5.4L Cr); NMP 2.0 targets ₹16.72L Cr with ₹5.8L Cr private investment.",
+                    "Pros: crowds in private capital without debt. Cons: state clearance delays, municipal tax hurdles.",
+                    "Kelkar Committee on PPP, InvITs, Toll-Operate-Transfer (TOT), Infrastructure Risk Guarantee Fund.",
+                    "Ladder: Operating Asset → InvIT/TOT Lease → Reinvest Upfront Capital into Greenfield Assets."
+                ]
+            },
+            {
+                "t": "Cooperative Federalism & CSS Restructuring",
+                "s": [
+                    "Article 282 conditional CSS (₹5.41L Cr) with 60:40 matching shares restrict state expenditure flexibility (RBI 2024).",
+                    "SASCI 50-year interest-free capex loans; 20 states spent only 27% capex in April-August FY26.",
+                    "Pros of reform: 25% flexi-fund window, sunset clauses for 16th FC cycle. Cons: matching share distortions.",
+                    "B.K. Chaturvedi Committee, NITI Aayog guidelines, 16th Finance Commission, PFMS Just-in-Time.",
+                    "Balance: Central National Priorities on left vs State Autonomy with 25% Flexi-Funds on right."
+                ]
+            }
+        ],
+        "bg": {
+            "b": [
+                "Silos & Implementation Gaps",
+                "Statutory & Digital Solutions",
+                "Models & Frameworks"
+            ],
+            "it": [
+                [
+                    "Delhi-Meerut 11-Month ROB Delay",
+                    0,
+                    "Classic silo pathology where road was finished but stalled waiting for railway clearance."
+                ],
+                [
+                    "Network Planning Group (NPG)",
+                    1,
+                    "Gati-Shakti body evaluating all projects above ₹500 Cr for synchronization."
+                ],
+                [
+                    "Brownfield Asset Recycling",
+                    2,
+                    "Leasing revenue-generating operating assets while government keeps sovereign ownership."
+                ],
+                [
+                    "Kochi LNG Idle Pipeline Deficit",
+                    0,
+                    "Stranded asset capacity caused by uncoordinated pipeline land permissions."
+                ],
+                [
+                    "ULIP Open Logistics APIs",
+                    1,
+                    "Unified platform integrating 34 systems across 8 ministries for real-time tracking."
+                ],
+                [
+                    "Whole-of-Government Approach",
+                    2,
+                    "Cross-ministerial convergence replacing departmental silos with synchronized planning."
+                ],
+                [
+                    "27% State Capex Absorption Lag",
+                    0,
+                    "20 states spent only 27% of capex in early FY26, exposing administrative bottlenecks."
+                ],
+                [
+                    "Parivesh Green Clearance Portal",
+                    1,
+                    "Integrated digital environmental portal cutting clearance times from 600 to 162 days."
+                ],
+                [
+                    "NMP 2.0 (₹16.72 Lakh Crore)",
+                    2,
+                    "National pipeline monetizing infrastructure across 12 sectors targeting ₹5.8L Cr private capex."
+                ],
+                [
+                    "Article 282 Matching Share Burden",
+                    0,
+                    "Rigid conditional matching ratios (60:40) tying up states' untied revenues."
+                ],
+                [
+                    "SASCI 50-Year Capex Loans",
+                    1,
+                    "Interest-free 50-year central loans incentivizing states to invest in capital assets."
+                ],
+                [
+                    "Kelkar PPP Risk Allocation",
+                    2,
+                    "Foundational principle that project risk must sit with the party best equipped to manage it."
+                ]
+            ]
+        },
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "The Delhi-Meerut Expressway waited 11 months for a railway ROB approval,",
+                    "PM Gati-Shakti integrates over 1,800 GIS data layers across 58 ministries,",
+                    "and Gati-Shakti has its own separate ₹20 Lakh Crore bank account to finance highways directly."
+                ],
+                "a": 2,
+                "e": "Gati-Shakti is a GIS coordination platform; it has no separate direct infrastructure fund."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the National Logistics Policy (NLP) and ULIP were launched.",
+                "a": 2022,
+                "tol": 0,
+                "min": 2018,
+                "max": 2025,
+                "e": "2022."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Infrastructure Pathology or Modern Coordination Reform?",
+                "b": [
+                    "Silo Pathology",
+                    "Coordination Reform"
+                ],
+                "it": [
+                    [
+                        "11-month delay for railway road-over-bridge",
+                        0
+                    ],
+                    [
+                        "Network Planning Group (NPG) project review",
+                        1
+                    ],
+                    [
+                        "Kochi LNG terminal operating sub-capacity",
+                        0
+                    ],
+                    [
+                        "Parivesh cutting green clearance to 162 days",
+                        1
+                    ],
+                    [
+                        "20 states spending only 27% capex",
+                        0
+                    ],
+                    [
+                        "ULIP open API logistics interface",
+                        1
+                    ]
+                ],
+                "e": "Pairing pathologies with coordination reforms is essential for high Mains scores."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I was launched in October 2021 as a National Master Plan.",
+                    "I host over 1,800 GIS data layers across 58 central ministries and all States/UTs.",
+                    "My Network Planning Group evaluates multimodal connectivity above ₹500 Crore.",
+                    "I embody the 'whole-of-government' approach to kill departmental silos."
+                ],
+                "o": [
+                    "PM Gati-Shakti",
+                    "Bharatmala",
+                    "Sagarmala",
+                    "Smart Cities Mission"
+                ],
+                "a": 0,
+                "e": "PM Gati-Shakti National Master Plan."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am a single-window logistics platform created under the National Logistics Policy.",
+                    "I integrate 34 digital systems across 8 ministries via open APIs.",
+                    "I help India march towards a top-25 Logistics Performance Index rank."
+                ],
+                "o": [
+                    "ULIP",
+                    "FASTag",
+                    "ICEGATE",
+                    "Parivesh"
+                ],
+                "a": 0,
+                "e": "ULIP (Unified Logistics Interface Platform)."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I lease operational, de-risked brownfield public assets to private concessionaires.",
+                    "Government retains 100% sovereign asset ownership under me.",
+                    "My version 2.0 covers ₹16.72 Lakh Crore potential over FY2026-30."
+                ],
+                "o": [
+                    "National Monetisation Pipeline (NMP)",
+                    "Disinvestment Commission",
+                    "Privatization Board",
+                    "Asset Reconstruction Company"
+                ],
+                "a": 0,
+                "e": "National Monetisation Pipeline (NMP)."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: You are heading the State Infrastructure Cell. An urgent multimodal logistics park connecting a major port to an industrial corridor has stalled because the State Power Discom demands ₹80 Crore upfront to shift high-tension lines, while the Railways have halted bridge construction over track ownership.",
+            "e": "Values: whole-of-government convergence, inter-agency negotiation, cooperative federalism.",
+            "s": [
+                {
+                    "t": "The Power Discom threatens to cut supply to the construction camp unless the full ₹80 Cr is paid in 48 hours. Your first move?",
+                    "o": [
+                        [
+                            "Convene an immediate Gati-Shakti State Network Planning Group meeting with Discom and Road engineers to co-map utility lines on GIS and rationalize shifting costs",
+                            1,
+                            "Institutional Gati-Shakti convergence eliminates arbitrary departmental estimates."
+                        ],
+                        [
+                            "Blame the Discom on social media and file a court petition",
+                            0,
+                            "Litigation freezes projects for years and destroys inter-agency trust."
+                        ],
+                        [
+                            "Pay the ₹80 Crore without verifying actual line relocation requirements",
+                            0,
+                            "Wastes public capital and condones inflated departmental billing."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The Railways refuse permission for the bridge spur citing track safety and conflicting signal cables. How do you resolve this?",
+                    "o": [
+                        [
+                            "Escalate through the Gati-Shakti NPG to use pre-cleared standard bridge designs and Joint Inspection Teams with Railway zonal managers",
+                            1,
+                            "Standardized NPG templates eliminate the classic Delhi-Meerut 11-month ROB bottleneck."
+                        ],
+                        [
+                            "Abandon the rail connectivity and rely 100% on congested city roads",
+                            0,
+                            "Destroys multimodal efficiency and drives up logistics costs."
+                        ],
+                        [
+                            "Build the bridge without Railway permission",
+                            0,
+                            "Illegal and compromises public passenger safety."
+                        ]
+                    ]
+                },
+                {
+                    "t": "Private warehouse developers hesitate to invest because municipal land titles are contested by local encroachers. Your action?",
+                    "o": [
+                        [
+                            "Utilize digital cadastral drone mapping under SWAMITVA to establish undisputed legal titles and offer de-risked brownfield plots via an InvIT structure",
+                            1,
+                            "Clear title and brownfield de-risking attract bankable private institutional capital."
+                        ],
+                        [
+                            "Force private developers to fight title lawsuits in local civil courts",
+                            0,
+                            "Violates Kelkar PPP principles: private investors will exit the state."
+                        ],
+                        [
+                            "Cancel the logistics park completely",
+                            0,
+                            "Surrenders economic growth to procedural inertia."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: PM Gati-Shakti (Master Plan), NMP (Asset Monetisation), or Both?",
+            "b": [
+                "PM Gati-Shakti Only",
+                "NMP Only",
+                "Both"
+            ],
+            "it": [
+                [
+                    "GIS-based 3-tier multimodal planning platform",
+                    0
+                ],
+                [
+                    "Leasing operating brownfield assets for private capex",
+                    1
+                ],
+                [
+                    "Aims to crowd-in investment and cut infrastructure friction",
+                    2
+                ],
+                [
+                    "Evaluates projects above ₹500 Cr through NPG",
+                    0
+                ],
+                [
+                    "Utilizes InvITs and Toll-Operate-Transfer models",
+                    1
+                ],
+                [
+                    "Pillars of India's ₹12.2L Cr national capex push",
+                    2
+                ]
+            ],
+            "e": "Gati-Shakti plans and coordinates; NMP finances through brownfield recycling; both drive capex."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Whole-of-government",
+                    "approach",
+                    "replaces",
+                    "uncoordinated",
+                    "departmental",
+                    "silos"
+                ],
+                "e": "Whole-of-government approach replaces uncoordinated departmental silos."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Logistics",
+                    "costs",
+                    "rebased",
+                    "to",
+                    "7.97%",
+                    "of",
+                    "GDP"
+                ],
+                "e": "Logistics costs rebased to 7.97% of GDP."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Asset",
+                    "recycling",
+                    "retains",
+                    "sovereign",
+                    "public",
+                    "ownership"
+                ],
+                "e": "Asset recycling retains sovereign public ownership."
+            }
+        ]
+    },
+    "dbt": {
+        "id": "dbt",
+        "title": "Tech-Enabled Welfare Delivery: DBT & JAM",
+        "badge": "📲",
+        "sub": "Master the JAM trinity, ABPS exclusion errors, PDS leakage savings, cash vs kind debate, and UCT fiscal crowding-out.",
+        "hue": [
+            "#0f8a62",
+            "#2f63d6",
+            "#7442d6",
+            "#b8760a",
+            "#d23a40",
+            "#0b8a9a"
+        ],
+        "ico": [
+            [
+                "📲",
+                "💳",
+                "🏦"
+            ],
+            [
+                "⚖️",
+                "🔍",
+                "🌾"
+            ],
+            [
+                "👷",
+                "📋",
+                "🛡️"
+            ],
+            [
+                "👩",
+                "💰",
+                "📉"
+            ],
+            [
+                "🆔",
+                "🔒",
+                "📜"
+            ],
+            [
+                "🎯",
+                "🗺️",
+                "🏆"
+            ]
+        ],
+        "lessons": [
+            {
+                "n": "The JAM Trinity & DBT Evolution",
+                "e": "📲",
+                "d": "From 2013 launch to 59 Cr accounts and ₹3.48L Cr savings",
+                "c": [
+                    {
+                        "t": "Evolution of Direct Benefit Transfer (2013-2026)",
+                        "b": [
+                            "<b>DBT Mission launched on 1 January 2013</b> to move welfare payments directly into beneficiary bank accounts, bypassing corrupt intermediaries.",
+                            "Revolutionized by the <b>JAM Trinity</b>: <b>J</b>an Dhan bank accounts, <b>A</b>adhaar unique identity, and <b>M</b>obile connectivity as the digital delivery rail.",
+                            "Macro footprint: <b>Over ₹2.08 Lakh Crore transferred across 320+ schemes</b> in the current fiscal year alone; subsidy share of expenditure fell from <b>16% down to 9%</b>."
+                        ],
+                        "k": [
+                            "JAM Trinity",
+                            "DBT Mission (2013)",
+                            "16% to 9% Subsidy Share"
+                        ],
+                        "n": "JAM turned welfare from discretionary patronage into an entitlement transferred directly into accounts."
+                    },
+                    {
+                        "t": "DBT Bharat & Claimed Fiscal Savings",
+                        "b": [
+                            "<b>₹3.48 Lakh Crore cumulative savings</b> estimated across welfare programs (BlueKraft Digital Foundation assessment).",
+                            "<b>Targeted PDS accounts for ₹1.85 Lakh Crore (53%)</b> of total cumulative savings by weeding out duplicate and ghost ration cards.",
+                            "Beneficiary coverage expanded <b>16-fold from 11 Crore to over 176 Crore</b> transfer-events across fertilizers, LPG (PAHAL), scholarships, and pensions."
+                        ],
+                        "k": [
+                            "₹3.48L Cr Cumulative Savings",
+                            "PDS ₹1.85L Cr Leakage Plugged",
+                            "16-Fold Coverage Surge"
+                        ],
+                        "n": "Always attribute the ₹3.48L Cr figure as an assessment estimate rather than an audited CAG number."
+                    },
+                    {
+                        "t": "The Measurement Trap: Output vs Outcome",
+                        "b": [
+                            "The DBT Bharat portal tracks <b>volume of funds disbursed</b>, which is an input/output metric, not a human welfare outcome.",
+                            "<b>The Last-Mile Frictional Gap:</b> Having a Jan Dhan account does not guarantee easy cash withdrawal. Beneficiaries travel miles to erratic Banking Correspondents (BCs).",
+                            "Jan Dhan status (Aug 2026): <b>59.09 Crore accounts</b> holding <b>₹3,16,514 Crore</b> in deposits (average balance ₹5,356)."
+                        ],
+                        "k": [
+                            "Output vs Outcome",
+                            "59 Crore PMJDY Accounts",
+                            "Last-Mile Frictional Cost"
+                        ],
+                        "n": "Account opening is a necessary financial rail, but meaningful financial inclusion requires last-mile access."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Which welfare sector accounts for roughly 53% (₹1.85 Lakh Crore) of all estimated cumulative DBT savings?",
+                        "o": [
+                            "Public Distribution System (PDS)",
+                            "Higher Education Scholarships",
+                            "Urban Metro Subsidies",
+                            "Defence Pensions"
+                        ],
+                        "a": 0,
+                        "e": "PDS Aadhaar-linked reforms weeded out millions of ghost ration cards, generating over 53% of savings."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "The DBT Bharat portal primarily measures human nutritional outcomes rather than the quantum of money moved.",
+                        "a": 1,
+                        "e": "False. DBT Bharat tracks financial throughput (output), not qualitative nutritional or health outcomes."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all verified components and milestones of the JAM-DBT architecture.",
+                        "o": [
+                            "Jan Dhan accounts, Aadhaar identity, Mobile connectivity",
+                            "Over 59 Crore PMJDY bank accounts opened",
+                            "Subsidy share of central expenditure fell from 16% to 9%",
+                            "100% elimination of all poverty in India by 2015"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "JAM, 59 Cr accounts, and subsidy reduction are verified milestones; poverty elimination is incorrect."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the Direct Benefit Transfer (DBT) Mission was officially launched in India.",
+                        "a": 2013,
+                        "tol": 0,
+                        "min": 2010,
+                        "max": 2020,
+                        "e": "1 January 2013."
+                    }
+                ]
+            },
+            {
+                "n": "The Inclusion vs Exclusion Dilemma",
+                "e": "⚖️",
+                "d": "Leakage plugging vs genuine denial, and the offline fallback",
+                "c": [
+                    {
+                        "t": "Inclusion Error (Leakage) vs Exclusion Error (Denial)",
+                        "b": [
+                            "<b>Inclusion Error (Type I):</b> Ineligible or affluent individuals fraudulently capturing welfare benefits (leakage).",
+                            "<b>Exclusion Error (Type II):</b> Genuine, impoverished citizens denied their statutory legal entitlements due to technological hurdles.",
+                            "DBT systems are engineered aggressively to minimize inclusion errors, but frequently <b>escalate catastrophic exclusion errors</b>."
+                        ],
+                        "k": [
+                            "Inclusion vs Exclusion Errors",
+                            "Denial of Entitlement",
+                            "Technological Asymmetry"
+                        ],
+                        "n": "In welfare economics: An exclusion error (denying food to a starving citizen) is far more lethal than an inclusion error."
+                    },
+                    {
+                        "t": "Aadhaar Seeding vs Real-Time Authentication",
+                        "b": [
+                            "<b>Seeding:</b> Entering and linking an Aadhaar number to a welfare beneficiary record (static database linkage).",
+                            "<b>Authentication:</b> Live biometric verification (fingerprint, iris, face) at the point of welfare disbursal (dynamic transaction).",
+                            "Manual laborers, agricultural workers, and the elderly suffer <b>biometric fading and fingerprint wear</b>, leading to repeated machine rejection."
+                        ],
+                        "k": [
+                            "Seeding vs Authentication",
+                            "Biometric Fading",
+                            "Machine Rejection"
+                        ],
+                        "n": "Confusing successful seeding with successful authentication masks millions of live transaction failures."
+                    },
+                    {
+                        "t": "The Constitutional Mandate: Mandatory Offline Fallback",
+                        "b": [
+                            "Supreme Court in <b>Puttaswamy (2018)</b> explicitly held: <b>No citizen can be denied food, pensions, or basic welfare due to lack of Aadhaar or biometric failure</b>.",
+                            "Administrative practice frequently breaches this: Local dealers reject beneficiaries when PoS machines fail to capture biometrics or lose telecom signal.",
+                            "Remedy: A legally enforceable <b>offline exception handling fallback</b> (e.g., OTP, village head verification, register signing)."
+                        ],
+                        "k": [
+                            "Puttaswamy (2018) Mandate",
+                            "Mandatory Offline Fallback",
+                            "Non-Denial Clause"
+                        ],
+                        "n": "Without an offline fallback, e-governance violates Article 21 (Right to Dignified Life)."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What did the Supreme Court explicitly rule in the 2018 Puttaswamy judgment regarding Aadhaar authentication and welfare?",
+                        "o": [
+                            "Aadhaar is compulsory and failing authentication forfeits food automatically",
+                            "No citizen can be denied basic welfare, food, or pensions due to biometric or Aadhaar failure",
+                            "All welfare schemes must be shut down",
+                            "Fingerprints can never fail on digital PoS machines"
+                        ],
+                        "a": 1,
+                        "e": "The Constitution Bench held that genuine beneficiaries cannot be denied welfare if biometrics fail."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "Aadhaar seeding in a database guarantees that a worker will successfully authenticate biometrically at payment time.",
+                        "a": 1,
+                        "e": "False. Seeding is static linkage; biometric authentication can still fail due to fingerprint wear or connectivity loss."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the root causes of exclusion errors in biometric welfare delivery.",
+                        "o": [
+                            "Fingerprint fading among manual and agricultural laborers",
+                            "Poor telecom connectivity for Point-of-Sale (PoS) machines",
+                            "Name spelling discrepancies between bank passbook and Aadhaar",
+                            "Excessive nutrition among rural beneficiaries"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Biometric fading, connectivity drops, and name mismatches are the primary causes of welfare denial."
+                    }
+                ]
+            },
+            {
+                "n": "ABPS, MGNREGA & The Rural Jobs Transition",
+                "e": "👷",
+                "d": "ABPS mandate, 5.48 Cr card deletions, and the VB-G RAM G Act",
+                "c": [
+                    {
+                        "t": "Aadhaar-Based Payment System (ABPS) Mandate",
+                        "b": [
+                            "<b>ABPS Mechanism:</b> Routes wages using the worker's Aadhaar as the financial address through the NPCI mapper, crediting the latest linked bank account.",
+                            "<b>Readiness Deficit:</b> When ABPS was made mandatory in 2023, only <b>43% of MGNREGA workers</b> had fully ABPS-eligible linked accounts.",
+                            "Subtle discrepancies (e.g. 'Ram Kumar' vs 'Ram S. Kumar') between Job Card, Aadhaar, and Bank records break the NPCI bridge, silently rejecting wages."
+                        ],
+                        "k": [
+                            "ABPS NPCI Mapper",
+                            "43% Initial Readiness",
+                            "Name Discrepancy Rejections"
+                        ],
+                        "n": "Mandating technology ahead of ground readiness turns software errors into denial of livelihoods."
+                    },
+                    {
+                        "t": "The 5.48 Crore Job Card Deletion Surge",
+                        "b": [
+                            "In 2022-23, job cards covering over <b>5.48 Crore workers were deleted</b>, representing a staggering <b>267% increase</b> over the prior year.",
+                            "Late 2025: About <b>27 Lakh job cards were removed</b> within 5 weeks during rapid e-KYC and ABPS verification drives.",
+                            "Ministry Position: Routine administrative cleansing of deceased and ghost cards. Field Audits (LibTech): Thousands of active, genuine workers deleted to reach 100% saturation targets."
+                        ],
+                        "k": [
+                            "5.48 Cr Deletions (267% Surge)",
+                            "e-KYC Drive 2025",
+                            "LibTech Independent Audit"
+                        ],
+                        "n": "Administrative pressure to report '100% digital saturation' incentivizes deleting vulnerable workers."
+                    },
+                    {
+                        "t": "The VB-G RAM G Act, 2025/2026",
+                        "b": [
+                            "Replaces MGNREGA nationwide, taking effect on <b>1 July 2026</b>; expands guarantee from 100 to <b>125 days of work per rural household</b>.",
+                            "Codifies <b>mandatory biometric attendance, digital muster rolls, and a centralized national tracking platform</b> as core execution mechanisms.",
+                            "Criticism: Critics warn that mandatory facial recognition attendance at worksites with poor connectivity leads to wage deductions and surveillance."
+                        ],
+                        "k": [
+                            "VB-G RAM G Act 2025",
+                            "125-Day Guarantee",
+                            "Biometric Attendance & Muster Rolls"
+                        ],
+                        "n": "Higher statutory work days (125) must be paired with human-centric safeguards against attendance glitches."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "By what percentage did MGNREGA job card deletions surge in 2022-23 coinciding with ABPS enforcement?",
+                        "o": [
+                            "10%",
+                            "50%",
+                            "267% (5.48 Crore workers)",
+                            "1000%"
+                        ],
+                        "a": 2,
+                        "e": "Deletions surged by 267% to 5.48 Crore workers, exposing severe exclusion risks."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "How many days of guaranteed rural employment are provided under the new VB-G RAM G Act, 2025?",
+                        "o": [
+                            "50 Days",
+                            "100 Days",
+                            "125 Days",
+                            "365 Days"
+                        ],
+                        "a": 2,
+                        "e": "The Act expands the guaranteed wage employment ceiling from 100 to 125 days per household."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "Field audits by LibTech revealed that only deceased individuals were deleted during the 2022-23 job card drives.",
+                        "a": 1,
+                        "e": "False. Audits documented widespread wrongful deletion of active, living workers who struggled with ABPS mapper linkages."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year the VB-G RAM G Act takes effect nationwide.",
+                        "a": 2026,
+                        "tol": 0,
+                        "min": 2022,
+                        "max": 2028,
+                        "e": "1 July 2026."
+                    }
+                ]
+            },
+            {
+                "n": "Universal Cash Transfers & Fiscal Crowding-Out",
+                "e": "👩",
+                "d": "Women's UCTs, 0.5% GDP outlay, and cash vs kind",
+                "c": [
+                    {
+                        "t": "The Rise of State Women's UCTs",
+                        "b": [
+                            "Twelve major Indian states allocated roughly <b>₹1.68 Lakh Crore to women's Unconditional Cash Transfers (UCTs)</b> in 2025-26, nearly <b>0.5% of national GDP</b>.",
+                            "Examples: Madhya Pradesh's <b>Ladli Behna</b>, Maharashtra's <b>Ladki Bahin</b>, and Karnataka's <b>Gruha Lakshmi</b>.",
+                            "<b>Empirical Evidence (EAC-PM):</b> Studies confirm women's UCTs directly improve household calorie intake, child schooling expenditures, and female economic agency."
+                        ],
+                        "k": [
+                            "Women's UCTs (₹1.68L Cr)",
+                            "0.5% of National GDP",
+                            "EAC-PM Consumption Gains"
+                        ],
+                        "n": "Direct cash in the hands of female heads of household yields the highest social return on consumption."
+                    },
+                    {
+                        "t": "Fiscal Crowding-Out of Capital Capex",
+                        "b": [
+                            "In Madhya Pradesh, Ladli Behna allocated <b>₹18,669 Crore (2025-26)</b>, consuming <b>6.4% of the state's total revenue receipts</b>.",
+                            "<b>RBI State Finances Warning:</b> Unchecked proliferation of unconditional cash transfers severely squeezes fiscal space for capital expenditure (schools, hospitals, canal irrigation).",
+                            "In April 2026, the <b>Bombay High Court</b> questioned the fiscal sustainability of competitive pre-election cash handouts."
+                        ],
+                        "k": [
+                            "Fiscal Crowding-Out",
+                            "6.4% of Revenue Receipts",
+                            "RBI Capex Warning"
+                        ],
+                        "n": "Key economic tension: Short-term cash transfers vs long-term public capital asset creation."
+                    },
+                    {
+                        "t": "The Cash vs Kind Welfare Debate",
+                        "b": [
+                            "<b>DBT-Cash:</b> Maximizes consumer choice, eliminates storage/transit leakages, and reduces administrative overhead. Highly effective in urban areas with functioning private retail markets.",
+                            "<b>DBT-Kind (Physical PDS Grain):</b> Essential in remote, tribal, and agrarian pockets to protect vulnerable families against market price spikes, inflation, and local retailer cartels.",
+                            "Synthesis: Cash cannot substitute for public health and schools; cash and kind must be contextually combined."
+                        ],
+                        "k": [
+                            "Cash vs Kind Debate",
+                            "Consumer Choice vs Inflation Shield",
+                            "Contextual Welfare"
+                        ],
+                        "n": "Never treat cash transfers as a substitute for state investments in physical public healthcare and education."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Approximately what percentage of India's GDP is allocated by 12 states towards women's unconditional cash transfers in 2025-26?",
+                        "o": [
+                            "0.05% of GDP",
+                            "Nearly 0.5% of GDP (~₹1.68L Cr)",
+                            "5.0% of GDP",
+                            "15.0% of GDP"
+                        ],
+                        "a": 1,
+                        "e": "Twelve states spend ~₹1.68 Lakh Crore on women's cash transfers, which is nearly 0.5% of GDP."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "Direct cash transfers can completely substitute for government investments in physical hospitals, schools, and irrigation.",
+                        "a": 1,
+                        "e": "False. Cash transfers enhance consumer purchasing power but cannot build schools, hospitals, or trunk infrastructure."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the fiscal and welfare risks associated with uncalibrated cash transfers highlighted by the RBI.",
+                        "o": [
+                            "Fiscal crowding-out of public capital investments (capex)",
+                            "Competitive electoral bidding straining state revenue deficits",
+                            "High vulnerability to inflation in markets with weak food supply",
+                            "100% reduction in all state tax collections"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Crowding-out capex, revenue deficit strain, and inflation exposure are primary risks."
+                    }
+                ]
+            },
+            {
+                "n": "Aadhaar vs NPR & Rights Protection",
+                "e": "🆔",
+                "d": "Voluntary vs compulsory, deletion SOPs, and user-centric design",
+                "c": [
+                    {
+                        "t": "The 2014 Conflict: Voluntary vs Compulsory",
+                        "b": [
+                            "Historic 2014 clash: Planning Commission's <b>Aadhaar</b> (voluntary identity tool to plug welfare leakages) vs Home Ministry's <b>National Population Register (NPR)</b> (compulsory enumeration under Citizenship Act).",
+                            "Administrative evolution: What was introduced as voluntary gradually became <b>de facto compulsory</b> for accessing basic survival entitlements.",
+                            "Tension: Security-driven identification vs rights-based constitutional welfare delivery."
+                        ],
+                        "k": [
+                            "Aadhaar vs NPR (2014)",
+                            "Voluntary to Compulsory",
+                            "Administrative Coercion"
+                        ],
+                        "n": "The 2014 PYQ tests this exact tension: parallel duplicate schemes vs integrated rights protection."
+                    },
+                    {
+                        "t": "Mandatory Deletion Standard Operating Procedures (SOP)",
+                        "b": [
+                            "To prevent wrongful mass deletions, statutory SOPs mandate: <b>30-day draft list publication</b>, door-to-door verification, and mandatory Gram Sabha review.",
+                            "<b>Inclusion Audits:</b> The state must conduct independent audits assessing how many eligible citizens were wrongfully excluded before celebrating 'savings'.",
+                            "Publishing exclusion figures alongside claimed savings creates transparent accountability."
+                        ],
+                        "k": [
+                            "Deletion SOP",
+                            "Gram Sabha Review",
+                            "Inclusion Audits"
+                        ],
+                        "n": "A welfare state must celebrate the hungry citizens fed, not merely the records deleted."
+                    },
+                    {
+                        "t": "User-Centric Design over Technocratic Determinism",
+                        "b": [
+                            "<b>Technocratic Determinism:</b> The flawed belief that technology is flawless and any failure is due to corrupt or lazy beneficiaries.",
+                            "<b>User-Centric Architecture:</b> Designing digital systems that accommodate human frailty: manual labor calluses, rural power outages, and elder mobility.",
+                            "Technology must remain an <b>enabler and servant of human rights</b>, never the sole barricade."
+                        ],
+                        "k": [
+                            "Technocratic Determinism",
+                            "User-Centric Architecture",
+                            "Enabler not Gatekeeper"
+                        ],
+                        "n": "Core Mains thesis: Technology is the delivery rail, not the master of constitutional rights."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What did the 2014 policy conflict between Aadhaar and the National Population Register (NPR) center upon?",
+                        "o": [
+                            "Voluntary welfare identity (Aadhaar) vs compulsory citizenship enumeration (NPR)",
+                            "Selecting the official font for currency notes",
+                            "Abolishing the Supreme Court of India",
+                            "Exporting biometric data to private foreign corporations"
+                        ],
+                        "a": 0,
+                        "e": "The 2014 debate pitted UIDAI's voluntary welfare identity against MHA's compulsory NPR framework."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "An inclusion audit measures how many legitimate beneficiaries were wrongfully excluded by technological systems.",
+                        "a": 0,
+                        "e": "True. Inclusion audits assess wrongful exclusion rather than focusing solely on leakage savings."
+                    },
+                    {
+                        "k": "order",
+                        "q": "Order the mandatory procedural safeguards before a welfare job card can be deleted.",
+                        "o": [
+                            "30-day public draft list display in the Panchayat",
+                            "Individual show-cause notice and door-to-door inquiry",
+                            "Gram Sabha verification and public objection window",
+                            "Final reasoned administrative order"
+                        ],
+                        "e": "Draft list display → Individual notice → Gram Sabha verification → Final reasoned order."
+                    }
+                ]
+            },
+            {
+                "n": "Mains Toolkit: Welfare Technology Synthesis",
+                "e": "🎯",
+                "d": "Gain-cost-balance matrix, 5-stage blueprint, and safeguards",
+                "c": [
+                    {
+                        "t": "The Gain-Cost-Balance Evaluation Matrix",
+                        "b": [
+                            "<b>The Gain:</b> ₹3.48L Cr estimated savings, 59 Cr PMJDY accounts, 16% to 9% subsidy reduction, ghost card removal.",
+                            "<b>The Cost:</b> Biometric authentication denial, 5.48 Cr deletion surge, last-mile banking correspondent extortion, fiscal crowding-out.",
+                            "<b>The Constitutional Balance:</b> Mandatory offline fallback (Puttaswamy 2018), independent inclusion audits, and Gram Sabha deletion oversight."
+                        ],
+                        "k": [
+                            "Gain-Cost-Balance Matrix",
+                            "Puttaswamy Balance",
+                            "Inclusion Audit Protocol"
+                        ],
+                        "n": "Every Mains answer on e-governance must explicitly balance fiscal efficiency with rights protection."
+                    },
+                    {
+                        "t": "Mains 5-Stage Answer Skeleton",
+                        "b": [
+                            "<b>1. Intro:</b> Define DBT as the direct electronic transfer of welfare entitlements via JAM since 2013.",
+                            "<b>2. Achievements & Savings:</b> 59 Cr Jan Dhan base, 16-fold coverage expansion, ₹1.85L Cr PDS leakage plugging.",
+                            "<b>3. The Dark Side:</b> Inclusion vs Exclusion errors, ABPS 267% deletion spike (5.48 Cr cards), biometric fading among manual laborers.",
+                            "<b>4. Fiscal Dimensions:</b> Women's UCTs (₹1.68L Cr, 0.5% GDP) and the RBI warning on capital expenditure crowding-out.",
+                            "<b>5. Way Forward:</b> Technology as enabler not sole gatekeeper, mandatory offline fallback, Gram Sabha deletion review, and inclusion audits."
+                        ],
+                        "k": [
+                            "Intro → Achievements → Dark Side → Fiscal Debate → Way Forward"
+                        ],
+                        "n": "A balanced, high-scoring synthesis ready for any GS-2 governance or e-welfare question."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "order",
+                        "q": "Order the optimal Mains answer structure for a technology-enabled welfare delivery question.",
+                        "o": [
+                            "Intro: JAM Trinity architecture & ₹2.08L Cr throughput across 320+ schemes",
+                            "Fiscal Gains: ₹3.48L Cr cumulative savings & 59 Cr PMJDY accounts",
+                            "The Exclusion Challenge: ABPS 267% deletion surge & biometric authentication errors",
+                            "Fiscal Dilemma: Women's UCTs (₹1.68L Cr, 0.5% GDP) vs capex crowding-out",
+                            "Conclusion: Tech as enabler, mandatory offline fallback & inclusion audits"
+                        ],
+                        "e": "Architecture → Fiscal Gains → Exclusion Dilemma → Fiscal Trade-Off → Rights-Based Conclusion."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Best concluding thought for an answer on DBT and digital welfare delivery?",
+                        "o": [
+                            "All digital systems should be abolished immediately.",
+                            "Technology is a vital delivery rail, but welfare efficiency must never come at the cost of human inclusion; pairing digital pipes with mandatory offline fallbacks ensures no citizen is starved by software.",
+                            "Citizens who cannot authenticate biometrically do not deserve government welfare.",
+                            "Welfare should be given exclusively to urban internet users."
+                        ],
+                        "a": 1,
+                        "e": "A constitutionally grounded, balanced conclusion aligning efficiency with compassion."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the indispensable Mains keywords for welfare technology answers.",
+                        "o": [
+                            "Inclusion and exclusion errors",
+                            "Mandatory offline fallback",
+                            "Fiscal crowding-out",
+                            "Feudal bonded agrarian labor"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "e": "Inclusion errors, offline fallback, and crowding-out are top-tier evaluative concepts."
+                    }
+                ]
+            }
+        ],
+        "pyq": [
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2022 (GS-2): Reforming delivery of public services through Direct Benefit Transfer (DBT) is a progressive step, but it has its limitations. Discuss. (150 words)",
+                "r": "<b>Progressive Strides:</b><br>1. <b>Scale & Reach:</b> Driven by the JAM Trinity since 2013, DBT covers 320+ schemes transferring ₹2.08L Cr annually across 59 Cr PMJDY accounts.<br>2. <b>Leakage Reduction:</b> Claimed cumulative savings of ₹3.48L Cr (BlueKraft estimate), with PDS accounting for 53% (₹1.85L Cr) by weeding out ghost cards.<br>3. <b>Fiscal Discipline:</b> Central subsidy share of expenditure fell from 16% to 9%.<br><b>Structural Limitations:</b><br>1. <b>Exclusion Errors:</b> While tackling inclusion errors (leakage), technological hurdles cause exclusion errors. Biometric fading among laborers and connectivity failures lead to denial of food and pensions.<br>2. <b>ABPS Mandates:</b> 5.48 Crore job cards deleted in 2022-23 (up 267%), disproportionately affecting women and marginalized workers with unmapped accounts.<br>3. <b>Last-Mile Friction:</b> Banking correspondents (BCs) are erratic in remote areas, imposing high travel costs.<br><b>Way Forward:</b> Enforce Puttaswamy's mandatory offline fallback, mandate independent inclusion audits, and treat tech as an enabler rather than an exclusionary barrier."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2025 (GS-2): 'E-governance initiatives in India often suffer from technocratic determinism, prioritizing digital systems over user-centric human design.' Critically evaluate in the context of welfare delivery. (150 words)",
+                "r": "<b>The Technocratic Bias:</b> Administrative design frequently assumes digital infrastructure is infallible, equating 'software saturation' with actual welfare delivery.<br><b>Manifestations in Welfare Delivery:</b><br>1. <b>Premature Mandates:</b> ABPS was made compulsory when only 43% of MGNREGA workers were mapped, triggering massive card deletions to report 100% compliance.<br>2. <b>Biometric Inelasticity:</b> Fingerprint scanners fail to recognize aged or calloused hands of manual laborers; without an offline fallback, algorithmic failure becomes starvation.<br>3. <b>Surveillance over Service:</b> The VB-G RAM G Act (2025/2026) mandates worksite facial recognition, penalizing workers for poor telecom bandwidth.<br><b>Transitioning to User-Centric Design:</b><br>1. <b>Offline Exception Protocol:</b> Guarantee non-denial of statutory food and wages via Gram Sabha / register overrides.<br>2. <b>Inclusion Audits:</b> Measure un-served eligible citizens alongside fiscal savings.<br>3. <b>Participatory Architecture:</b> Co-design welfare portals with grassroots frontline workers (Asha, Anganwadi, Gram Rozgar Sevaks)."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2014 (GS-2): The dual existence of UIDAI's Aadhaar and the National Population Register (NPR) highlighted administrative conflict. Analyse the tension between voluntary welfare identification and compulsory enumeration. (150 words)",
+                "r": "<b>Context of Conflict (2014):</b><br>1. <b>Planning Commission's Aadhaar:</b> Conceived as a voluntary 12-digit digital identifier to plug welfare leakages under executive notification.<br>2. <b>Home Ministry's NPR:</b> Compulsory citizenship register under Section 14A of the Citizenship Act, 1955, backed by comprehensive biometric enumeration.<br><b>Underlying Tensions:</b><br>1. <b>Voluntary vs Compulsory:</b> While Aadhaar was statutorily voluntary, executive orders progressively made it mandatory for food and pensions, mimicking NPR's compulsory character without the same legislative safeguards.<br>2. <b>Duplication of Costs:</b> Both agencies spent thousands of crores collecting overlapping biometric datasets, creating public confusion.<br>3. <b>Privacy & Surveillance:</b> Lack of statutory backing (until the 2016 Act) created constitutional concerns over mass surveillance.<br><b>Resolution:</b> Cabinet bifurcated enrollment, ultimately passing the Aadhaar Act, 2016. Lesson: Inter-ministerial coordination must precede mass biometric rollouts to avoid duplicate taxpayer spending."
+            },
+            {
+                "k": "flip",
+                "q": "UPSC Mains 2013 (GS-2): Electronic Cash Transfer (ECT) systems have been heralded as a game-changer for welfare. Examine their efficacy and limitations in addressing rural poverty and food security. (150 words)",
+                "r": "<b>Game-Changing Potential:</b><br>1. <b>Eliminating Middlemen:</b> Direct electronic crediting stops bureaucratic siphoning and ghost ration cards.<br>2. <b>Financial Inclusion:</b> Catalyzed the PM Jan Dhan Yojana, bringing 59 Crore citizens into the formal banking net.<br>3. <b>Empowerment:</b> Direct cash transfers provide consumer choice and autonomy.<br><b>Supply-Side Limits in Food Security:</b><br>1. <b>Cash Cannot Substitute Grain:</b> In remote agrarian areas, cash handouts cannot protect against runaway food inflation or local trader monopolies; physical PDS grain provides a vital nutritional floor.<br>2. <b>Last-Mile Banking Deficit:</b> Rural branches are distant; cash transfers often sit idle in bank accounts due to lack of ATMs or dishonest Banking Correspondents.<br>3. <b>Fiscal Crowding-Out:</b> Expanding unconditional cash transfers (now ~0.5% of GDP across states) threatens public capital spending in rural irrigation, health, and education.<br><b>Conclusion:</b> ECT is an effective distribution pipe, but true food security demands resilient physical procurement and agricultural infrastructure."
+            }
+        ],
+        "sks": [
+            {
+                "t": "DBT & The JAM Trinity",
+                "s": [
+                    "DBT launched 2013; JAM (Jan Dhan, Aadhaar, Mobile) transformed welfare into direct electronic transfers.",
+                    "59 Cr PMJDY accounts; ₹3.48L Cr cumulative savings (BlueKraft); PDS accounts for 53% (₹1.85L Cr).",
+                    "Pros: leakage elimination, subsidy share down (16% to 9%). Cons: exclusion errors, last-mile BC friction.",
+                    "Puttaswamy (2018) non-denial mandate, DBT Bharat portal, Public Financial Management System (PFMS).",
+                    "Flowchart: JAM Rail → Direct Account Credit → Plugs Leakage → Demands Offline Fallback."
+                ]
+            },
+            {
+                "t": "ABPS & Rural Job Deletions",
+                "s": [
+                    "ABPS routes wages via NPCI mapper; made mandatory in 2023 when only 43% workers were ready.",
+                    "5.48 Cr cards deleted in 2022-23 (267% surge); 27 lakh removed in late 2025 e-KYC drives.",
+                    "Pros of technology: removes duplicate ghosts. Cons: name mismatches silently deny genuine workers' wages.",
+                    "VB-G RAM G Act 2025/2026 (125-day work guarantee, biometric attendance), LibTech independent audit.",
+                    "Ladder: Wage Demand → Biometric/ABPS Mapping → Glitch/Mismatch → Deletion / Non-Payment Crisis."
+                ]
+            },
+            {
+                "t": "Women's UCTs & Fiscal Crowding-Out",
+                "s": [
+                    "12 states allocate ₹1.68L Cr to women's cash transfers (0.5% of GDP): Ladli Behna, Ladki Bahin.",
+                    "EAC-PM studies confirm consumption, schooling, and nutrition gains among recipient households.",
+                    "Pros: female agency, poverty relief. Cons: MP Ladli Behna takes 6.4% revenue receipts; RBI capex warning.",
+                    "Cash vs Kind balance: cash for urban markets; physical PDS grain for remote tribal inflation shelter.",
+                    "Scale: Direct Female Cash Consumption on left vs Long-Term Public Hospital/School Capex on right."
+                ]
+            }
+        ],
+        "bg": {
+            "b": [
+                "Exclusion & Implementation Gaps",
+                "Statutory & Digital Solutions",
+                "Models & Frameworks"
+            ],
+            "it": [
+                [
+                    "5.48 Cr Job Card Deletion Surge",
+                    0,
+                    "Massive 267% spike in MGNREGA deletions coinciding with aggressive ABPS enforcement."
+                ],
+                [
+                    "Puttaswamy Offline Fallback",
+                    1,
+                    "Supreme Court mandate that no citizen can be denied welfare for lack of biometric authentication."
+                ],
+                [
+                    "JAM Trinity Delivery Rail",
+                    2,
+                    "Jan Dhan, Aadhaar, and Mobile architecture enabling direct electronic welfare transfers."
+                ],
+                [
+                    "Biometric Fading among Laborers",
+                    0,
+                    "Fingerprint wear from manual labor leading to frequent Point-of-Sale machine rejections."
+                ],
+                [
+                    "PDS ₹1.85L Cr Leakage Plugged",
+                    1,
+                    "Weeding out ghost cards generated 53% of all cumulative estimated welfare savings."
+                ],
+                [
+                    "Inclusion vs Exclusion Error Triad",
+                    2,
+                    "Foundational welfare balance: eliminating ghost leakage without starving genuine citizens."
+                ],
+                [
+                    "Fiscal Capex Crowding-Out",
+                    0,
+                    "State women's UCTs (0.5% GDP) eating up untied revenues needed for schools and hospitals."
+                ],
+                [
+                    "Mandatory Deletion SOP Protocol",
+                    1,
+                    "Statutory requirement of 30-day draft list, individual notice, and Gram Sabha verification."
+                ],
+                [
+                    "VB-G RAM G Act (125 Days)",
+                    2,
+                    "2025/2026 statutory rural framework expanding work guarantee to 125 days per household."
+                ],
+                [
+                    "Name Mismatch on NPCI Mapper",
+                    0,
+                    "Spelling discrepancies between passbook and Aadhaar silently breaking wage credits."
+                ],
+                [
+                    "Jan Dhan Overdraft & Mobile Banking",
+                    1,
+                    "Providing 59 Crore account holders with ₹10,000 overdraft facility and digital access."
+                ],
+                [
+                    "Cash vs Kind Contextual Model",
+                    2,
+                    "Deploying cash in competitive markets while preserving physical PDS grain against price shocks."
+                ]
+            ]
+        },
+        "aq": [
+            {
+                "k": "flag",
+                "q": "Tap the red flag.",
+                "o": [
+                    "Over 59 Crore Jan Dhan accounts have been opened across India,",
+                    "PDS reforms account for over 50% of estimated cumulative DBT savings,",
+                    "and the Supreme Court ruled that citizens who fail biometric authentication must be denied food."
+                ],
+                "a": 2,
+                "e": "The Supreme Court in Puttaswamy explicitly prohibited denying food or welfare due to biometric failure."
+            },
+            {
+                "k": "year",
+                "q": "Slide to the year the Supreme Court delivered the landmark Puttaswamy Aadhaar judgment.",
+                "a": 2018,
+                "tol": 0,
+                "min": 2014,
+                "max": 2022,
+                "e": "2018."
+            },
+            {
+                "k": "sort",
+                "q": "Sort every card: Welfare Technology Pathology or Constitutional Remedy?",
+                "b": [
+                    "Welfare Pathology",
+                    "Constitutional Remedy"
+                ],
+                "it": [
+                    [
+                        "5.48 Crore job card deletion surge",
+                        0
+                    ],
+                    [
+                        "Puttaswamy mandatory offline fallback",
+                        1
+                    ],
+                    [
+                        "Biometric fading causing food denial",
+                        0
+                    ],
+                    [
+                        "Independent inclusion audits before deletions",
+                        1
+                    ],
+                    [
+                        "Name mismatch breaking NPCI mapper",
+                        0
+                    ],
+                    [
+                        "Gram Sabha review of welfare rolls",
+                        1
+                    ]
+                ],
+                "e": "Pairing pathologies with statutory remedies is key to scoring top marks in Mains GS-2."
+            }
+        ],
+        "dq": [
+            {
+                "k": "riddle",
+                "q": "Who am I? Fewer clues, more XP.",
+                "c": [
+                    "I was launched in January 2013 to eliminate middlemen from welfare delivery.",
+                    "I rely on the JAM Trinity to route subsidies directly into bank accounts.",
+                    "I have enabled over ₹2.08 Lakh Crore in transfers across 320+ schemes this year.",
+                    "My cumulative estimated savings are pegged at ₹3.48 Lakh Crore."
+                ],
+                "o": [
+                    "DBT Mission",
+                    "NITI Aayog",
+                    "Finance Commission",
+                    "UIDAI"
+                ],
+                "a": 0,
+                "e": "Direct Benefit Transfer (DBT) Mission."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I use Aadhaar as a financial address to route wages via the NPCI mapper.",
+                    "I became mandatory for MGNREGA in 2023 when only 43% of workers were mapped.",
+                    "Spelling mismatches in my database silently reject rural wages."
+                ],
+                "o": [
+                    "ABPS",
+                    "UPI",
+                    "NEFT",
+                    "RTGS"
+                ],
+                "a": 0,
+                "e": "Aadhaar-Based Payment System (ABPS)."
+            },
+            {
+                "k": "riddle",
+                "q": "Who am I?",
+                "c": [
+                    "I am the newly passed statutory framework taking effect nationwide on 1 July 2026.",
+                    "I replace the historic MGNREGA legislation.",
+                    "I expand the rural employment guarantee to 125 days per household."
+                ],
+                "o": [
+                    "VB-G RAM G Act, 2025",
+                    "PM Awas Yojana",
+                    "National Rural Livelihood Mission",
+                    "PM-KISAN"
+                ],
+                "a": 0,
+                "e": "VB-G RAM G Act, 2025."
+            }
+        ],
+        "sq": {
+            "k": "story",
+            "q": "Officer mission: You are the District Magistrate. A massive e-KYC and ABPS saturation drive in your district resulted in the sudden deletion of 18,000 MGNREGA job cards within a single month. Hundreds of distraught tribal women assemble outside your collectorate, stating they have not received wages for 60 days and cannot buy rations.",
+            "e": "Values: compassion, administrative accountability, Puttaswamy non-denial mandate, proactive grievance redress.",
+            "s": [
+                {
+                    "t": "Your sub-divisional magistrate (SDM) suggests dismissing them, claiming the 18,000 deletions were 'system-generated duplicates' to achieve 100% digital compliance. Your response?",
+                    "o": [
+                        [
+                            "Halt further automated deletions immediately, meet the tribal delegation, and order an emergency physical audit of the 18,000 deleted names",
+                            1,
+                            "Upholds empathy, civil service accountability, and rejects blind technocratic determinism."
+                        ],
+                        [
+                            "Praise the SDM for achieving 100% digital saturation on the dashboard",
+                            0,
+                            "Celebrates paper compliance while real citizens starve."
+                        ],
+                        [
+                            "Call the police to disperse the assembled workers",
+                            0,
+                            "High-handed brutality that violates basic democratic governance."
+                        ]
+                    ]
+                },
+                {
+                    "t": "The emergency audit finds that 12,000 of the 18,000 workers are active, living citizens whose names were misspelled on bank passbooks. How do you resolve their pending wages?",
+                    "o": [
+                        [
+                            "Invoke the offline exception protocol to disburse pending wages via bank account transfer immediately while holding joint camp drives with bank managers to fix the NPCI mapper",
+                            1,
+                            "Ensures immediate food security while fixing the underlying systemic mapping glitch."
+                        ],
+                        [
+                            "Tell the workers to travel 40 km to district headquarters at their own cost to re-apply",
+                            0,
+                            "Imposes extortionate last-mile frictional costs on indigent citizens."
+                        ],
+                        [
+                            "Delete their names permanently from the central server",
+                            0,
+                            "Unlawful and fraudulent denial of statutory entitlements."
+                        ]
+                    ]
+                },
+                {
+                    "t": "A local fair-price ration dealer turns away elderly widows because their fingerprints fail on the biometric PoS machine. Your order?",
+                    "o": [
+                        [
+                            "Issue a strict executive circular enforcing the Puttaswamy non-denial mandate: dealers must provide grain via offline nominee verification or face criminal license cancellation",
+                            1,
+                            "Enforces the Supreme Court's constitutional non-denial doctrine against local gatekeeping."
+                        ],
+                        [
+                            "Support the dealer: if biometrics fail, no food can be given",
+                            0,
+                            "Directly violates the Supreme Court's 2018 Puttaswamy ruling."
+                        ],
+                        [
+                            "Tell the widows to get plastic surgery to restore their fingerprints",
+                            0,
+                            "Absurd, cruel, and completely devoid of human empathy."
+                        ]
+                    ]
+                }
+            ]
+        },
+        "vq": {
+            "k": "sort",
+            "q": "Venn sort: DBT-Cash, DBT-Kind (Physical PDS), or Both?",
+            "b": [
+                "DBT-Cash Only",
+                "DBT-Kind (PDS) Only",
+                "Both"
+            ],
+            "it": [
+                [
+                    "Maximizes consumer choice and autonomy in urban retail markets",
+                    0
+                ],
+                [
+                    "Shields poorest households against market food price inflation",
+                    1
+                ],
+                [
+                    "Aims to weed out ghost beneficiaries and plug welfare leakages",
+                    2
+                ],
+                [
+                    "Suffers when biometric PoS machines lose telecom connectivity",
+                    2
+                ],
+                [
+                    "Direct electronic account transfers (e.g. PM-KISAN, Ladli Behna)",
+                    0
+                ],
+                [
+                    "Physical food grain distribution via fair price shops",
+                    1
+                ]
+            ],
+            "e": "Cash gives choice; Kind shields against inflation; both demand robust biometric fallbacks."
+        },
+        "bq": [
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Technology",
+                    "must",
+                    "be",
+                    "an",
+                    "enabler",
+                    "not",
+                    "a",
+                    "barrier"
+                ],
+                "e": "Technology must be an enabler not a barrier."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Mandatory",
+                    "offline",
+                    "fallbacks",
+                    "prevent",
+                    "welfare",
+                    "denial"
+                ],
+                "e": "Mandatory offline fallbacks prevent welfare denial."
+            },
+            {
+                "k": "order",
+                "inl": 1,
+                "q": "Build the sentence: tap the words in order.",
+                "o": [
+                    "Inclusion",
+                    "audits",
+                    "measure",
+                    "wrongful",
+                    "citizen",
+                    "exclusions"
+                ],
+                "e": "Inclusion audits measure wrongful citizen exclusions."
             }
         ]
     }
