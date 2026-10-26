@@ -49,7 +49,7 @@ console.log("=== CAVA ENGINE & GAME HUB TEST SUITE START ===");
 console.log("1. Checking DATA topics...");
 const topics = Object.keys(DATA);
 console.log("Topics found:", topics);
-if (topics.length !== 7) throw new Error("Expected 7 topics, got " + topics.length);
+if (topics.length !== 8) throw new Error("Expected 8 topics, got " + topics.length);
 
 topics.forEach(t => {
   const top = DATA[t];
@@ -65,7 +65,7 @@ topics.forEach(t => {
   if (!top.vq || !top.vq.b || !top.vq.it) throw new Error(`Topic ${t} missing Venn sort card (vq)`);
   if (!top.bq || !top.bq.length) throw new Error(`Topic ${t} missing Sentence builders (bq)`);
   if (!top.bg || !top.bg.b || !top.bg.it || !top.bg.it.length) throw new Error(`Topic ${t} missing Block Game data (bg)`);
-  let has2020Pyq = top.pyq.some(q => q.q && (q.q.includes('2020') || q.q.includes('2021') || q.q.includes('2022') || q.q.includes('2023') || q.q.includes('2024') || q.q.includes('2025')));
+  let has2020Pyq = top.pyq.some(q => q.q && (q.q.includes('2020') || q.q.includes('2021') || q.q.includes('2022') || q.q.includes('2023') || q.q.includes('2024') || q.q.includes('2025') || q.q.includes('2026')));
   if (!has2020Pyq) throw new Error(`Topic ${t} missing 2020+ UPSC Mains PYQs`);
 
   top.lessons.forEach((l, li) => {

@@ -51,6 +51,26 @@ h1,h2,h3{letter-spacing:-0.025em;font-weight:800}
 .topic-btn{background:var(--card);border:2px solid var(--line);border-bottom-width:4px;border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;font-weight:800;color:var(--mut);cursor:pointer;white-space:nowrap;flex:none}
 .topic-btn:active{transform:translateY(2px);border-bottom-width:2px}
 .topic-btn.active{background:var(--acc);color:#2a1a00;border-color:var(--accd)}
+.gs-explorer{padding:2px 18px 8px;display:flex;flex-direction:column;gap:8px}
+.paper-row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.paper-row::-webkit-scrollbar{display:none}
+.paper-btn{background:var(--card);border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;padding:6px 12px;font:inherit;font-size:13px;font-weight:800;color:var(--mut);cursor:pointer;flex:none;transition:all .15s}
+.paper-btn:active{transform:translateY(2px);border-bottom-width:2px}
+.paper-btn.active{background:#2563eb;color:#fff;border-color:#1d4ed8;box-shadow:0 4px 12px rgba(37,99,235,0.25)}
+.domain-row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.domain-row::-webkit-scrollbar{display:none}
+.domain-btn{background:var(--card-sub);border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font:inherit;font-size:12.5px;font-weight:700;color:var(--ink);cursor:pointer;flex:none;transition:all .15s}
+.domain-btn:active{transform:translateY(1px)}
+.domain-btn.active{background:var(--acc);color:#2a1a00;border-color:var(--accd);box-shadow:0 2px 8px rgba(245,158,11,0.25)}
+.theme-card-box{background:var(--card);border:2px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:14px;box-shadow:0 4px 16px rgba(0,0,0,0.03)}
+.theme-item{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line);cursor:pointer;text-align:left;transition:background .15s}
+.theme-item:last-child{border-bottom:0}
+.theme-item:hover{background:var(--sel)}
+.theme-item.active{background:var(--sel);border-left:4px solid #2563eb}
+.theme-left{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0;padding-right:8px}
+.theme-title{font-size:15px;font-weight:800;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.theme-desc{font-size:11.5px;color:var(--mut);line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.theme-years{font-size:13.5px;font-weight:800;color:var(--ink);letter-spacing:-0.01em;white-space:nowrap;flex:none}
 .home{flex:1;overflow-y:auto;padding:0 18px 24px}
 h1{font-size:26px;line-height:1.15;margin:4px 0 4px;font-weight:800}
 .sub{color:var(--mut);margin:0 0 16px;font-size:15px;line-height:1.35}
@@ -162,12 +182,186 @@ button:focus-visible{outline:3px solid var(--selb);outline-offset:2px}
 <script>
 var DATA = %TOPICS_JSON%;
 
-var CUR_TOPIC = "msme";
+var CUR_TOPIC = "cs_structure";
 try {
   var ut = new URLSearchParams(window.location.search).get("topic");
   if (ut && DATA[ut]) CUR_TOPIC = ut;
 } catch(e) {}
-var S = {xp:0, streak:0, done:{}, kw:[], weak:[], dd:''};
+var S = {xp:0, streak:0, done:{}, kw:[], weak:[], dd:'', paper:'gs2', domain:'governance'};
+var app = document.getElementById("app"), R = {}, IV;
+
+var SYLLABUS = {
+  gs1: {
+    name: "GS 1",
+    label: "Heritage, Geography & Society",
+    domains: {
+      history: {
+        name: "History & Art",
+        ico: "🏺",
+        themes: [
+          { id: "art", title: "1. Ancient & Medieval Architecture", years: "2018, 2022", desc: "Temple architecture, Indo-Islamic forms & rock-cut caves" },
+          { id: "modern", title: "2. Modern Freedom Struggle", years: "2019, 2023", desc: "Tribal uprisings, Gandhian mass movements & revolutionary nationalists" }
+        ]
+      },
+      geography: {
+        name: "Geography",
+        ico: "🌋",
+        themes: [
+          { id: "clim", title: "1. Monsoon Dynamics & Climatology", years: "2020, 2024", desc: "El Nino, Indian Ocean Dipole & Western Disturbances" },
+          { id: "res", title: "2. Critical Mineral & Energy Resources", years: "2021, 2023", desc: "Lithium reserves, rare earths & renewable geography" }
+        ]
+      },
+      society: {
+        name: "Society",
+        ico: "👥",
+        themes: [
+          { id: "women", title: "1. Women's Empowerment & Demographic Shifts", years: "2020, 2024", desc: "Care economy, declining fertility rates & silver economy" },
+          { id: "secular", title: "2. Communalism, Regionalism & Secularism", years: "2019, 2023", desc: "Linguistic reorganization, cultural pluralism & urban integration" }
+        ]
+      }
+    }
+  },
+  gs2: {
+    name: "GS 2",
+    label: "Governance, Constitution, Polity & IR",
+    domains: {
+      governance: {
+        name: "Governance",
+        ico: "⚖️",
+        themes: [
+          { id: "cs_structure", title: "1. Structure & Culture", years: "2016, 2026", desc: "Colonial Legacy, Weberian Hierarchy, 3Cs Risk Aversion & Generalist vs Specialist", topic: "cs_structure" },
+          { id: "cs_ethos", title: "2. Ethos, Neutrality & Trust", years: "2017 (Part A), 2024", desc: "Civil Services Neutrality, Anonymity, Committed Bureaucracy, Citizen Trust & Ethics" },
+          { id: "cs_reforms", title: "3. Institutional Reforms", years: "2017 (Part B), 2020", desc: "Mission Karmayogi, Lateral Entry, Performance Management, e-Governance & 2nd ARC" },
+          { id: "charter", title: "4. Citizen’s Charter & Service Delivery", years: "2018, 2023", desc: "Sevottam model, Right to Service Acts, 2nd ARC 12th Report", topic: "charter" },
+          { id: "rti", title: "5. Right to Information (RTI) & Transparency", years: "2019, 2020, 2024", desc: "Article 19(1)(a), Section 8 exemptions, 2019 Amendments & DPDP Act", topic: "rti" },
+          { id: "exams", title: "6. Public Exams Act & Exam Integrity", years: "2024", desc: "Organized paper leaks, Radhakrishnan Committee & Section 10 deterrence", topic: "exams" }
+        ]
+      },
+      polity: {
+        name: "Polity",
+        ico: "🏛️",
+        themes: [
+          { id: "judiciary", title: "1. AI in Judiciary & Judicial Reforms", years: "2023, 2025", desc: "e-Courts Phase III, SUPACE, Constitutional morality vs algorithms", topic: "judiciary" },
+          { id: "federalism", title: "2. Federal Dynamics & Inter-State Water", years: "2020, 2024", desc: "Article 262, Finance Commission transfers & Governor's discretionary powers" },
+          { id: "elections", title: "3. Electoral Reforms & Political Finance", years: "2021, 2024", desc: "Electoral bonds ADR judgment, ECI independence & Model Code" }
+        ]
+      },
+      justice: {
+        name: "Social Justice",
+        ico: "🤝",
+        themes: [
+          { id: "dbt", title: "1. Tech-Enabled Welfare Delivery (DBT, JAM)", years: "2013, 2014, 2022", desc: "JAM Trinity, Inclusion vs Exclusion errors, ABPS & Women cash transfers", topic: "dbt" },
+          { id: "health_edu", title: "2. Public Health & Primary Education", years: "2020, 2023", desc: "Ayushman Bharat, out-of-pocket expenditure & Foundational Literacy" },
+          { id: "vulnerable", title: "3. Vulnerable Sections & Social Security", years: "2021, 2024", desc: "Senior citizens, Transgender welfare & Forest Rights Act compliance" }
+        ]
+      },
+      ir: {
+        name: "IR",
+        ico: "🌐",
+        themes: [
+          { id: "neighborhood", title: "1. Neighborhood First & Indian Ocean Region", years: "2022, 2024", desc: "SAGAR doctrine, Colombo Security Conclave & border connectivity" },
+          { id: "multilateral", title: "2. Global South & Strategic Autonomy", years: "2023, 2025", desc: "G20 legacy, Quad, BRICS expansion & reformed multilateralism" }
+        ]
+      }
+    }
+  },
+  gs3: {
+    name: "GS 3",
+    label: "Economy, Agriculture, Tech, Environment & Security",
+    domains: {
+      economy: {
+        name: "Economy",
+        ico: "📈",
+        themes: [
+          { id: "msme", title: "1. MSME Reforms & Economic Catalysts", years: "2020, 2023", desc: "31.1% GDP growth engine, 2020 definition, Section 43B(h), TReDS", topic: "msme" },
+          { id: "infra", title: "2. Infrastructure Delivery & PM Gati-Shakti", years: "2013, 2019, 2022", desc: "NPG 3-tier GIS platform, NMP 2.0 asset recycling, SASCI & ULIP", topic: "infra" },
+          { id: "agriculture", title: "3. Agri Supply Chains & Post-Harvest Losses", years: "2021, 2024", desc: "e-NAM, Quick Commerce, Cold chain infrastructure & FPOs" }
+        ]
+      },
+      tech_sec: {
+        name: "Tech & Security",
+        ico: "⚡",
+        themes: [
+          { id: "frontier_tech", title: "1. Frontier Tech & Semiconductor Mission", years: "2023, 2024", desc: "AI governance, India Semiconductor Mission & Quantum computing" },
+          { id: "climate_action", title: "2. Climate Mitigation & Green Hydrogen", years: "2022, 2024", desc: "Panchamrit, Carbon Border Adjustment Mechanism (CBAM) & COP targets" },
+          { id: "internal_sec", title: "3. Cybersecurity & Border Management", years: "2020, 2023", desc: "Smart border fencing, Drone warfare & critical infrastructure defense" }
+        ]
+      }
+    }
+  },
+  gs4: {
+    name: "GS 4",
+    label: "Ethics, Integrity, Aptitude & Probity",
+    domains: {
+      ethics: {
+        name: "Ethics & Probity",
+        ico: "⚖️",
+        themes: [
+          { id: "civil_values", title: "1. Foundational Values for Civil Services", years: "2019, 2022", desc: "Integrity, impartiality, objectivity, dedication & empathy for weaker sections" },
+          { id: "probity", title: "2. Probity in Governance & Anti-Corruption", years: "2020, 2024", desc: "Lokpal, CVC, Whistleblowers protection & Conflict of Interest code" },
+          { id: "case_dilemmas", title: "3. Ethical Dilemmas & Applied Case Studies", years: "2021, 2024", desc: "Balancing rules with compassion, public protest crisis & whistleblowing" }
+        ]
+      }
+    }
+  }
+};
+
+function showThemeSheet(themeId){
+  var m = document.createElement('div');
+  m.className = 'modal-overlay';
+  var h = '';
+  if (themeId === 'cs_ethos') {
+    h = '<div class="modal-sheet">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
+        '<span class="theme-tag">UPSC Mains: 2017 (Part A), 2024</span>' +
+        '<button class="x" id="modal-x" style="font-size:22px">×</button>' +
+      '</div>' +
+      '<h2>2. Ethos, Neutrality & Trust in Civil Services</h2>' +
+      '<p><b>Core Dilemma:</b> The Weberian doctrine demands political impartiality, anonymity, and institutional permanence, yet contemporary governance faces the risk of a "committed bureaucracy" and politicization of transfers.</p>' +
+      '<div class="modal-steps">' +
+        '<div class="modal-step"><span class="num">1</span><div><b>Target PYQ 2017:</b> Civil services were designed to achieve neutrality & effectiveness, which seems to have been compromised in recent times. (10M)</div></div>' +
+        '<div class="modal-step"><span class="num">2</span><div><b>Target PYQ 2024:</b> Erosion of public trust in administrative discretion and the demand for civil service functional autonomy. (10M)</div></div>' +
+        '<div class="modal-step"><span class="num">3</span><div><b>P.C. Hota Committee:</b> Statutory Civil Services Boards with fixed 2-year tenures to insulate officers from arbitrary punitive transfers.</div></div>' +
+        '<div class="modal-step"><span class="num">4</span><div><b>Post-Retirement Cooling-Off:</b> Mandatory 2-year cooling-off period before commercial or political appointments to prevent conflict of interest.</div></div>' +
+        '<div class="modal-step"><span class="num">5</span><div><b>2nd ARC (4th Report):</b> Enact a Public Service Bill defining statutory civil service values, objectivity, and ethical codes.</div></div>' +
+      '</div>' +
+      '<button class="btn" id="modal-close-btn" style="background:#2563eb;color:#fff">Got it • Return to Dashboard</button>' +
+    '</div>';
+  } else if (themeId === 'cs_reforms') {
+    h = '<div class="modal-sheet">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
+        '<span class="theme-tag">UPSC Mains: 2017 (Part B), 2020</span>' +
+        '<button class="x" id="modal-x" style="font-size:22px">×</button>' +
+      '</div>' +
+      '<h2>3. Institutional Reforms for Viksit Bharat</h2>' +
+      '<p><b>Core Dilemma:</b> Industrial-era vertical pyramids cannot deliver 21st-century digital governance; India needs agile, competency-driven, and mission-mode administration.</p>' +
+      '<div class="modal-steps">' +
+        '<div class="modal-step"><span class="num">1</span><div><b>Target PYQ 2020:</b> Institutional reforms imperative to make Indian Civil Services future-ready for Viksit Bharat. Discuss Mission Karmayogi. (10M)</div></div>' +
+        '<div class="modal-step"><span class="num">2</span><div><b>Mission Karmayogi (NPCSCB):</b> Shift from Rule-based compliance to Role-based competencies using the FRAC architecture and iGOT platform.</div></div>' +
+        '<div class="modal-step"><span class="num">3</span><div><b>Lateral Entry Framework:</b> Institutionalized UPSC-led recruitment with strict constitutional reservation quotas for social justice.</div></div>' +
+        '<div class="modal-step"><span class="num">4</span><div><b>Desk Officer System:</b> Capping Secretariat file-noting hierarchies to maximum three tiers to eliminate red-tapism.</div></div>' +
+        '<div class="modal-step"><span class="num">5</span><div><b>3Cs Safe-Harbor Protection:</b> Statutory protection for bona-fide risk taking, ending policy paralysis caused by retrospective CBI/CAG fear.</div></div>' +
+      '</div>' +
+      '<button class="btn" id="modal-close-btn" style="background:#2563eb;color:#fff">Got it • Return to Dashboard</button>' +
+    '</div>';
+  } else {
+    h = '<div class="modal-sheet">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
+        '<span class="theme-tag">UPSC Mains Topic</span>' +
+        '<button class="x" id="modal-x" style="font-size:22px">×</button>' +
+      '</div>' +
+      '<h2>' + esc(themeId) + '</h2>' +
+      '<p>Detailed syllabus module and PYQ analysis for this theme are mapped under the respective GS Paper.</p>' +
+      '<button class="btn" id="modal-close-btn">Close</button>' +
+    '</div>';
+  }
+  m.innerHTML = h;
+  document.body.appendChild(m);
+  var cb = document.getElementById('modal-close-btn'), cx = document.getElementById('modal-x');
+  if (cb) cb.onclick = function(){ m.remove(); };
+  if (cx) cx.onclick = function(){ m.remove(); };
+  m.onclick = function(e){ if (e.target === m) m.remove(); };
+}
 var app = document.getElementById("app"), R = {}, IV;
 
 try {
@@ -919,13 +1113,114 @@ function diag(topic, i, c){
         ar(80, 60, 160, 95) + ar(240, 60, 160, 95) +
         bx(20, 95, 280, 45, 'Fiscal Safeguard: RBI Capex Floor + Sunset Clauses', 'var(--ok)');
   }
+  // Civil Services Structure, Culture & Generalist vs Specialist Diagrams
+  else if(k === 'cs_structure:0:0'){
+    H = 175;
+    s = bx(10, 15, 95, 45, '1854: Macaulay|Revenue & Order', 'var(--no)') +
+        ar(105, 37, 130, 37) +
+        bx(130, 15, 80, 45, 'Post-1947|Welfare DNA') +
+        ar(210, 37, 235, 37) +
+        bx(235, 15, 75, 45, '2026: AI &|Knowledge', 'var(--h)') +
+        ar(170, 60, 170, 90) +
+        bx(25, 90, 270, 45, 'From Colonial "Steel Frame" to "Bamboo Frame"', 'var(--ok)') +
+        tx(160, 155, 'Evolution of Civil Services Mandate', 12, 'var(--mut)');
+  }
+  else if(k === 'cs_structure:1:0'){
+    H = 175;
+    s = bx(10, 15, 140, 50, 'Structural: 8-Tier Hierarchy|Water Split (4 Ministries)', 'var(--h)') +
+        bx(170, 15, 140, 50, 'Cultural: Red-Tape & Mai-Baap|3Cs Fear Policy Paralysis', 'var(--no)') +
+        ar(80, 65, 160, 95) + ar(240, 65, 160, 95) +
+        bx(30, 95, 260, 45, 'Result: Cost Overruns & Denied Citizen Rights', 'var(--no)') +
+        tx(160, 160, 'Core Bottlenecks (2016 Q14 Matrix)', 11, 'var(--mut)');
+  }
+  else if(k === 'cs_structure:2:1'){
+    H = 175;
+    s = bx(10, 15, 75, 35, 'Police') + bx(90, 15, 70, 35, 'Health') + bx(165, 15, 70, 35, 'PWD') + bx(240, 15, 70, 35, 'Revenue') +
+        ar(47, 50, 120, 85) + ar(125, 50, 140, 85) + ar(200, 50, 180, 85) + ar(275, 50, 200, 85) +
+        bx(35, 85, 250, 45, 'Generalist District Magistrate|Cross-Sectoral Integrator & Disaster Commander', 'var(--h)') +
+        tx(160, 155, 'Breaking Specialist Tunnel Vision', 12, 'var(--mut)');
+  }
+  else if(k === 'cs_structure:3:1'){
+    H = 165;
+    s = bx(10, 15, 95, 45, '18-Mo Transfers|Textiles → Space') +
+        ar(105, 37, 130, 37) +
+        bx(130, 15, 80, 45, 'Memory Loss|Domain Deficit', 'var(--no)') +
+        ar(210, 37, 235, 37) +
+        bx(235, 15, 75, 45, 'Big Four|Consultants', 'var(--h)') +
+        ar(170, 60, 170, 90) +
+        bx(30, 90, 260, 45, 'The "Hollow State" & Policy Capture Risk', 'var(--no)');
+  }
+  else if(k === 'cs_structure:4:0'){
+    H = 180;
+    s = bx(10, 15, 95, 38, 'Dr. Kurien|Op Flood') +
+        bx(112, 15, 95, 38, 'Sreedharan|Metro Rail') +
+        bx(214, 15, 95, 38, 'Nilekani|UIDAI / Tech') +
+        ar(57, 53, 130, 85) + ar(160, 53, 160, 85) + ar(262, 53, 190, 85) +
+        bx(40, 85, 240, 42, 'Specialist Delivery Breakthroughs', 'var(--h)') +
+        tx(160, 155, 'Swachh Bharat: P. Iyer Lateral Leadership', 12, 'var(--mut)');
+  }
+  else if(k === 'cs_structure:5:0'){
+    H = 250;
+    s = `<line x1='60' y1='20' x2='60' y2='230' stroke='var(--h)' stroke-width='3'/>`;
+    [['1968','Fulton: Cult of the amateur'],['1966','1st ARC: 8 Functional areas'],['2003','Surinder Nath: 11 Domain clusters'],['2009','2nd ARC: 13-Year domain rule'],['2020','Mission Karmayogi: FRAC role HR']].forEach(function(e,j){
+      var y = 25 + j*48;
+      s += `<circle cx='60' cy='${y}' r='8' fill='var(--h)'/>` + tx(26, y+5, e[0], 12, 'var(--h)') + tx(195, y+5, e[1], 12);
+    });
+  }
+  else if(k === 'cs_structure:6:0'){
+    H = 180;
+    s = bx(15, 20, 130, 60, 'Colonial "Steel Frame"|Rigid, Procedural|Top-Heavy, Risk-Averse', 'var(--no)') +
+        ar(145, 50, 175, 50) +
+        bx(175, 20, 130, 60, 'Collaborative "Bamboo Frame"|Deep Grassroots Roots|Apex Domain Mastery', 'var(--ok)') +
+        ar(160, 80, 160, 105) +
+        bx(30, 105, 260, 45, 'Viksit Bharat 2047: Synergistic Administration', 'var(--h)') +
+        tx(160, 165, 'Flexible, Resilient & Specialized', 11, 'var(--mut)');
+  }
 
   if(!s) return '';
   return `<p class='kw'>📊 Picture it</p><div class='dg'><svg viewBox='0 0 320 ${H}' width='100%' role='img' aria-label='Diagram'><defs><marker id='ar' markerWidth='8' markerHeight='8' refX='6' refY='4' orient='auto'><path d='M0,0L8,4L0,8z' fill='var(--h)'/></marker></defs>${s}</svg></div>`;
 }
 
 function home(){
-  var top = DATA[CUR_TOPIC];
+  S.paper = S.paper || 'gs2';
+  var curPaperObj = SYLLABUS[S.paper] || SYLLABUS.gs2;
+  var domainKeys = Object.keys(curPaperObj.domains);
+  if (!curPaperObj.domains[S.domain]) S.domain = domainKeys[0];
+  var curDomainObj = curPaperObj.domains[S.domain];
+
+  var top = DATA[CUR_TOPIC] || DATA["cs_structure"];
+
+  // 1. Paper Selector Tabs
+  var papersHtml = '<div class="paper-row">';
+  Object.keys(SYLLABUS).forEach(function(pk){
+    var p = SYLLABUS[pk];
+    papersHtml += '<button class="paper-btn' + (pk === S.paper ? ' active' : '') + '" data-p="' + pk + '">' + esc(p.name) + '</button>';
+  });
+  papersHtml += '</div>';
+
+  // 2. Domain Selector Tabs
+  var domainsHtml = '<div class="domain-row">';
+  domainKeys.forEach(function(dk){
+    var d = curPaperObj.domains[dk];
+    domainsHtml += '<button class="domain-btn' + (dk === S.domain ? ' active' : '') + '" data-d="' + dk + '">' + d.ico + ' ' + esc(d.name) + '</button>';
+  });
+  domainsHtml += '</div>';
+
+  // 3. Domain Themes Card List (matches the uploaded image)
+  var themesHtml = '<div class="theme-card-box">';
+  curDomainObj.themes.forEach(function(th){
+    var isActive = (th.topic && th.topic === CUR_TOPIC);
+    themesHtml += '<div class="theme-item' + (isActive ? ' active' : '') + '" data-th="' + th.id + '"' + (th.topic ? ' data-top="' + th.topic + '"' : '') + '>' +
+      '<div class="theme-left">' +
+        '<div class="theme-title">' + esc(th.title) + '</div>' +
+        '<div class="theme-desc">' + esc(th.desc) + '</div>' +
+      '</div>' +
+      '<div class="theme-years">' + esc(th.years) + '</div>' +
+    '</div>';
+  });
+  themesHtml += '</div>';
+
+  // 4. Quick Topic Pills
   var topicsHtml = '<div class="topics">';
   Object.keys(DATA).forEach(function(k){
     var t = DATA[k];
@@ -946,8 +1241,12 @@ function home(){
     '<span>🔥 ' + curStreak() + '</span>' +
     '<span>⚡ ' + (S.xp || 0) + ' XP</span>' +
   '</div>' +
-  topicsHtml +
+  '<div class="gs-explorer">' +
+    papersHtml +
+    domainsHtml +
+  '</div>' +
   '<div class="home">' +
+    themesHtml +
     '<h1>' + top.title + '</h1>' +
     '<p class="sub">' + esc(top.sub) + '</p>' +
     goalCard() +
@@ -961,7 +1260,9 @@ function home(){
     '</button>';
   });
 
-  app.innerHTML = h + '</div></div>';
+  h += '</div><div style="margin-top:20px"><small style="color:var(--mut);font-weight:700">Browse all CAVA modules:</small></div>' + topicsHtml + '</div>';
+
+  app.innerHTML = h;
 
   var tb = document.getElementById('theme-btn');
   if (tb) tb.onclick = function(){
@@ -977,9 +1278,54 @@ function home(){
   var ib = document.getElementById('btn-install');
   if (ib) ib.onclick = triggerInstall;
 
+  // Paper Selector clicks
+  app.querySelectorAll('.paper-btn').forEach(function(btn){
+    btn.onclick = function(){
+      S.paper = btn.dataset.p;
+      var dkeys = Object.keys(SYLLABUS[S.paper].domains);
+      S.domain = dkeys[0];
+      save();
+      home();
+    };
+  });
+
+  // Domain Selector clicks
+  app.querySelectorAll('.domain-btn').forEach(function(btn){
+    btn.onclick = function(){
+      S.domain = btn.dataset.d;
+      save();
+      home();
+    };
+  });
+
+  // Theme Item clicks
+  app.querySelectorAll('.theme-item').forEach(function(item){
+    item.onclick = function(){
+      var topId = item.dataset.top;
+      var thId = item.dataset.th;
+      if (topId && DATA[topId]) {
+        CUR_TOPIC = topId;
+        home();
+      } else {
+        showThemeSheet(thId);
+      }
+    };
+  });
+
   app.querySelectorAll('.topic-btn').forEach(function(b){
     b.onclick = function(){
       CUR_TOPIC = b.dataset.t;
+      // Auto-set matching paper & domain if known
+      if (CUR_TOPIC === 'cs_structure' || CUR_TOPIC === 'charter' || CUR_TOPIC === 'rti' || CUR_TOPIC === 'exams') {
+        S.paper = 'gs2'; S.domain = 'governance';
+      } else if (CUR_TOPIC === 'judiciary') {
+        S.paper = 'gs2'; S.domain = 'polity';
+      } else if (CUR_TOPIC === 'dbt') {
+        S.paper = 'gs2'; S.domain = 'justice';
+      } else if (CUR_TOPIC === 'msme' || CUR_TOPIC === 'infra') {
+        S.paper = 'gs3'; S.domain = 'economy';
+      }
+      save();
       home();
     };
   });
@@ -1467,7 +1813,7 @@ def generate():
 
     # 3. Write to root Citizen’s Charter_ Learn from Scratch.html
     root_charter_path = r"d:\Anki_Upgraded\Citizen’s Charter_ Learn from Scratch.html"
-    charter_html = rendered_html.replace('var CUR_TOPIC = "msme";', 'var CUR_TOPIC = "charter";')
+    charter_html = rendered_html.replace('var CUR_TOPIC = "cs_structure";', 'var CUR_TOPIC = "charter";')
     with open(root_charter_path, "w", encoding="utf-8") as f:
         f.write(charter_html)
     print(f"Generated Citizen's Charter file at {root_charter_path} ({len(charter_html)} bytes)")

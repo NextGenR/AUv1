@@ -194,6 +194,79 @@
 
     </section>
 
+    <!-- GS Mains Syllabus Interactive Dashboard Explorer -->
+    <section class="glass-card" style="margin-top: 1.5rem; margin-bottom: 2rem; border: 2px solid rgba(59,130,246,0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+        <div>
+          <span class="badge badge-primary" style="margin-bottom:0.4rem;">🎯 Syllabus Hierarchy Navigator</span>
+          <h3 style="font-family:var(--font-display); font-size:1.6rem; color:#fff; margin:0 0 4px;">UPSC Mains General Studies Explorer</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">Select a GS Paper, drill down into its core domain, and launch the interactive learning course.</p>
+        </div>
+        <div style="display:flex; gap:0.5rem;" id="idx-paper-tabs">
+          <button class="btn btn-sm btn-secondary" data-paper="gs1" style="font-weight:700;">GS 1</button>
+          <button class="btn btn-sm btn-primary" data-paper="gs2" style="font-weight:800; background:#2563eb;">GS 2 (Active)</button>
+          <button class="btn btn-sm btn-secondary" data-paper="gs3" style="font-weight:700;">GS 3</button>
+          <button class="btn btn-sm btn-secondary" data-paper="gs4" style="font-weight:700;">GS 4</button>
+        </div>
+      </div>
+
+      <!-- Domain Navigation Pills -->
+      <div style="display:flex; gap:0.6rem; overflow-x:auto; padding-bottom:0.75rem; border-bottom:1px solid var(--border-color); margin-bottom:1.25rem;" id="idx-domain-tabs">
+        <button class="btn btn-sm btn-secondary" data-domain="polity">🏛️ Polity</button>
+        <button class="btn btn-sm" data-domain="governance" style="background:#f59e0b; color:#2a1a00; font-weight:800;">⚖️ Governance</button>
+        <button class="btn btn-sm btn-secondary" data-domain="justice">🤝 Social Justice</button>
+        <button class="btn btn-sm btn-secondary" data-domain="ir">🌐 International Relations</button>
+      </div>
+
+      <!-- Themes List Container (Matches User Image) -->
+      <div id="idx-themes-container" style="background:rgba(20,21,25,0.6); border:1.5px solid var(--border-color); border-radius:14px; overflow:hidden;">
+        <!-- Theme 1 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.4rem; border-bottom:1px solid rgba(255,255,255,0.08); background:rgba(37,99,235,0.08);">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <span style="font-size:1.15rem; font-weight:800; color:#fff;">1. Structure & Culture</span>
+              <span class="badge badge-success" style="font-size:0.75rem;">Interactive Course Ready</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0.35rem 0 0;">Colonial Legacy (Macaulay 1854), Weberian Hierarchy, 3Cs Risk Aversion & Generalist vs Specialist Debate.</p>
+          </div>
+          <div style="text-align:right; flex-shrink:0; margin-left:1rem;">
+            <div style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:-0.02em;">2016, 2026</div>
+            <a href="mobile/index.html?topic=cs_structure" class="btn btn-sm btn-primary" style="margin-top:0.4rem; font-weight:700; background:#10b981;">
+              Launch Learning Module →
+            </a>
+          </div>
+        </div>
+
+        <!-- Theme 2 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.4rem; border-bottom:1px solid rgba(255,255,255,0.08);">
+          <div>
+            <div style="font-size:1.15rem; font-weight:800; color:#fff;">2. Ethos, Neutrality & Trust</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0.35rem 0 0;">Civil Services Neutrality vs Committed Bureaucracy, Anonymity doctrine, P.C. Hota Committee & Post-Retirement Cooling-Off.</p>
+          </div>
+          <div style="text-align:right; flex-shrink:0; margin-left:1rem;">
+            <div style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:-0.02em;">2017 (Part A), 2024</div>
+            <a href="mobile/index.html?topic=cs_structure" class="btn btn-sm btn-secondary" style="margin-top:0.4rem; font-weight:600;">
+              View PYQs & Pointers →
+            </a>
+          </div>
+        </div>
+
+        <!-- Theme 3 -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.4rem;">
+          <div>
+            <div style="font-size:1.15rem; font-weight:800; color:#fff;">3. Institutional Reforms</div>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0.35rem 0 0;">Mission Karmayogi (NPCSCB & FRAC), Lateral Entry with Reservation, Secretariat De-Layering & 2nd ARC Flatter Structures.</p>
+          </div>
+          <div style="text-align:right; flex-shrink:0; margin-left:1rem;">
+            <div style="font-size:1.1rem; font-weight:800; color:#fff; letter-spacing:-0.02em;">2017 (Part B), 2020</div>
+            <a href="mobile/index.html?topic=cs_structure" class="btn btn-sm btn-secondary" style="margin-top:0.4rem; font-weight:600;">
+              View PYQs & Pointers →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Featured Subject & Quick Links -->
     <section class="page-header" style="margin-top: 1rem; margin-bottom: 1.25rem;">
       <div class="page-header-content">
