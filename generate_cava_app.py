@@ -493,11 +493,56 @@ function finRev(win){
     addXp(15);
   }
   if(win) addXp(R.xp);
-  app.innerHTML = '<div class="end"><div class="big">' + (win ? '🎯' : '💔') + '</div>' +
+  
+  var top = DATA[CUR_TOPIC];
+  var nextL = 0;
+  if (top && top.lessons) {
+    top.lessons.forEach(function(l, idx){
+      if (!(S.done[CUR_TOPIC]||{})[idx] && nextL === 0) nextL = idx;
+    });
+  }
+
+  var autoTimer = null;
+  var nextLessonObj = (top && top.lessons && top.lessons[nextL]) ? top.lessons[nextL] : null;
+
+  var h = '<div class="end"><div class="big">' + (win ? '🎯' : '💔') + '</div>' +
     '<h1>' + (win ? (R.daily ? 'Daily challenge done!' : R.lab ? 'Lab complete!' : R.boss ? 'Boss defeated!' : R.lt ? 'Lightning round done!' : R.det ? 'Case closed!' : R.sto ? 'Mission complete!' : R.arc ? 'Arcade cleared!' : R.pyq ? 'PYQ drill completed!' : 'Weak spots reviewed!') : 'Out of hearts') + '</h1>' +
-    '<p class="sub">' + (win ? '+' + R.xp + ' XP. ' + (R.daily ? 'Daily bonus claimed.' : R.lab ? 'Core concepts locked in.' : R.boss ? 'Mastery unlocked.' : R.lt ? 'Rapid reflexes proven.' : R.det ? 'Clues deciphered.' : R.sto ? 'Governance mission accomplished.' : R.arc ? 'Arcade cleared.' : R.pyq ? 'PYQ drill finished.' : 'Weak spots cleared.') : 'Try again after re-reading the study cards.') + '</p>' +
-    '<button class="btn" id="a">Back to lessons</button></div>';
-  document.getElementById('a').onclick = home;
+    '<p class="sub">' + (win ? '+' + R.xp + ' XP earned!' : 'Try again after re-reading the study cards.') + '</p>';
+
+  if (win && nextLessonObj) {
+    h += '<div style="background:var(--card);border:2px solid var(--ok);border-radius:14px;padding:12px 16px;margin:10px 0 16px;max-width:340px;width:100%">' +
+      '<div style="font-size:12px;font-weight:700;color:var(--ok);text-transform:uppercase;letter-spacing:0.04em">Practice Complete · Next Lesson</div>' +
+      '<div style="font-size:16px;font-weight:800;color:var(--ink);margin:4px 0 2px">' + esc(nextLessonObj.e) + ' ' + esc(nextLessonObj.n) + '</div>' +
+      '<div style="font-size:13px;color:var(--mut)">Auto-starting in <b id="rev-cnt">3</b>s...</div>' +
+    '</div>' +
+    '<button class="btn" id="btn-next-l" style="max-width:320px;margin-bottom:8px;background:var(--ok);border-color:#0d7753;color:#fff">Start Next Lesson Now →</button>' +
+    '<button class="btn" id="a" style="max-width:320px;background:var(--card);border:2px solid var(--line);border-bottom-width:4px;color:var(--ink)">Back to Lessons</button>';
+  } else {
+    h += '<button class="btn" id="a" style="max-width:320px">Back to Lessons</button>';
+  }
+  h += '</div>';
+
+  app.innerHTML = h;
+
+  if (win && nextLessonObj) {
+    var sec = 3;
+    autoTimer = setInterval(function(){
+      sec--;
+      var cnt = document.getElementById('rev-cnt');
+      if (cnt) cnt.textContent = sec;
+      if (sec <= 0) {
+        clearInterval(autoTimer);
+        start(nextL);
+      }
+    }, 1000);
+    var bn = document.getElementById('btn-next-l');
+    if (bn) bn.onclick = function(){ clearInterval(autoTimer); start(nextL); };
+  }
+
+  document.getElementById('a').onclick = function(){
+    if (autoTimer) clearInterval(autoTimer);
+    home();
+  };
   if(win) confetti();
 }
 
@@ -1411,35 +1456,84 @@ function card(){ R.sh = 1; cardDraw(); }
 function cardDraw(){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[R.i];
-  var c = l.c[R.ci], n = c.b.length, all = R.sh >= n, tot = l.c.length;
+  var c = l.c[R.ci];
+  var n = c.b.length; // number of bullet points (e.g. 3)
+  var tot = l.c.length;
   var hue = top.hue[R.i % top.hue.length];
   var ico = top.ico[R.i % top.ico.length][R.ci % 3] || l.e;
+
+  // Check extra sequential steps available after bullet n
+  var diagramHtml = diag(CUR_TOPIC, R.i, R.ci);
+  var hasDiag = !!diagramHtml;
+  var hasKw = !!(c.k && c.k.length);
+  var hasOwl = !!c.n;
+
+  var extraSteps = [];
+  if (hasDiag) extraSteps.push('diag');
+  if (hasKw) extraSteps.push('kw');
+  if (hasOwl) extraSteps.push('owl');
+
+  var maxStage = extraSteps.length;
+  var totalCardSteps = n + maxStage;
+  var currentStep = R.sh;
 
   var h = head() + '<div class="body" style="--h:' + hue + '">' +
     '<div class="hero"><span class="ico">' + ico + '</span><div><small>' + esc(l.n) + ' · card ' + (R.ci+1) + ' of ' + tot + '</small><h2>' + esc(c.t) + '</h2></div></div>';
 
-  for(var i = 0; i < R.sh; i++){
-    h += '<div class="tile' + (i === R.sh-1 && i > 0 ? ' pop' : '') + '"><span class="dot">✦</span><p>' + c.b[i] + '</p></div>';
+  // 1. Show bullet points up to currentStep (capped at n)
+  var bulletsToShow = Math.min(currentStep, n);
+  for(var i = 0; i < bulletsToShow; i++){
+    h += '<div class="tile' + (i === bulletsToShow - 1 && i > 0 ? ' pop' : '') + '"><span class="dot">✦</span><p>' + c.b[i] + '</p></div>';
   }
 
-  if(all){
-    unlock(c);
-    h += diag(CUR_TOPIC, R.i, R.ci);
-    h += '<p class="kw">🔑 Keywords unlocked</p><div class="chips">';
-    c.k.forEach(function(k){ h += '<span class="chip">' + esc(k) + '</span>'; });
-    h += '</div>';
-    if(c.n) h += '<div class="bub"><span>🦉</span><p>' + esc(c.n) + '</p></div>';
+  // 2. Reveal post-bullet items sequentially ONLY when currentStep advances past n
+  var postStep = currentStep - n;
+  if (postStep > 0) {
+    for (var s = 0; s < postStep && s < extraSteps.length; s++) {
+      var stepType = extraSteps[s];
+      var isLatest = (s === postStep - 1);
+      if (stepType === 'diag') {
+        h += '<div class="' + (isLatest ? 'pop' : '') + '">' + diagramHtml + '</div>';
+      } else if (stepType === 'kw') {
+        unlock(c);
+        h += '<p class="kw' + (isLatest ? ' pop' : '') + '">🔑 Keywords unlocked</p><div class="chips' + (isLatest ? ' pop' : '') + '">';
+        c.k.forEach(function(k){ h += '<span class="chip">' + esc(k) + '</span>'; });
+        h += '</div>';
+      } else if (stepType === 'owl') {
+        h += '<div class="bub' + (isLatest ? ' pop' : '') + '"><span>🦉</span><p>' + esc(c.n) + '</p></div>';
+      }
+    }
   }
 
-  h += '</div><div class="foot"><button class="btn" id="go">' + (all ? 'Got it' : 'Continue (' + R.sh + '/' + n + ')') + '</button></div>';
+  // 3. Button label
+  var isFinal = (currentStep >= totalCardSteps);
+  var btnText = 'Continue';
+  if (currentStep < n) {
+    btnText = 'Continue (' + currentStep + '/' + n + ')';
+  } else if (isFinal) {
+    btnText = (R.ci === tot - 1) ? 'Got it · Start Questions →' : 'Got it · Next Card →';
+  } else {
+    var nextStepType = extraSteps[postStep];
+    if (nextStepType === 'diag') btnText = 'Continue → Picture it';
+    else if (nextStepType === 'kw') btnText = 'Continue → Keywords';
+    else if (nextStepType === 'owl') btnText = 'Continue → Note';
+    else btnText = 'Continue';
+  }
+
+  h += '</div><div class="foot"><button class="btn" id="go">' + btnText + '</button></div>';
   app.innerHTML = h;
   quit();
+
   document.getElementById("go").onclick = function(){
-    if(!all){
+    if (!isFinal) {
       R.sh++;
       cardDraw();
       var b = document.querySelector(".body");
-      if(b) b.scrollTop = b.scrollHeight;
+      if (b) {
+        setTimeout(function(){
+          b.scrollTo({ top: b.scrollHeight, behavior: 'smooth' });
+        }, 40);
+      }
     } else {
       R.solved++;
       R.ci++;
@@ -1706,10 +1800,62 @@ function fin(win){
     if(!S.done[CUR_TOPIC][R.i] || S.done[CUR_TOPIC][R.i] < pct) S.done[CUR_TOPIC][R.i] = pct;
     save();
   }
-  app.innerHTML = '<div class="end"><div class="big">' + (win ? '🏆' : '💔') + '</div><h1>' + (win ? 'Lesson complete!' : 'Out of hearts') + '</h1><p class="sub">' + (win ? l.n + ' cleared.' : 'Re-read the cards and try again.') + '</p>' +
-    (win ? '<div class="stats"><div class="stat">+' + R.xp + '<small>XP</small></div><div class="stat">' + pct + '%<small>Accuracy</small></div><div class="stat">' + R.hearts + '<small>Hearts left</small></div></div>' : '<div style="height:24px"></div>') +
-    '<button class="btn" id="a">' + (win ? 'Back to lessons' : 'Try again') + '</button></div>';
-  document.getElementById("a").onclick = function(){ win ? home() : start(R.i); };
+
+  var nextIdx = R.i + 1;
+  var hasNext = (nextIdx < top.lessons.length);
+  var nextLessonObj = hasNext ? top.lessons[nextIdx] : null;
+  var autoTimer = null;
+
+  var h = '<div class="end"><div class="big">' + (win ? '🏆' : '💔') + '</div>' +
+    '<h1>' + (win ? 'Lesson complete!' : 'Out of hearts') + '</h1>' +
+    '<p class="sub">' + (win ? esc(l.n) + ' cleared.' : 'Re-read the cards and try again.') + '</p>' +
+    (win ? '<div class="stats"><div class="stat">+' + R.xp + '<small>XP</small></div><div class="stat">' + pct + '%<small>Accuracy</small></div><div class="stat">' + R.hearts + '<small>Hearts left</small></div></div>' : '<div style="height:24px"></div>');
+
+  if (win && hasNext && nextLessonObj) {
+    h += '<div style="background:var(--card);border:2px solid var(--ok);border-radius:14px;padding:12px 16px;margin:10px 0 16px;max-width:340px;width:100%">' +
+      '<div style="font-size:12px;font-weight:700;color:var(--ok);text-transform:uppercase;letter-spacing:0.04em">Up Next · Auto-advancing</div>' +
+      '<div style="font-size:16px;font-weight:800;color:var(--ink);margin:4px 0 2px">' + esc(nextLessonObj.e) + ' ' + esc(nextLessonObj.n) + '</div>' +
+      '<div style="font-size:13px;color:var(--mut)">Starting in <b id="sec-cnt">3</b>s...</div>' +
+    '</div>' +
+    '<button class="btn" id="btn-next" style="max-width:320px;margin-bottom:8px;background:var(--ok);border-color:#0d7753;color:#fff">Start Next Lesson Now →</button>' +
+    '<button class="btn" id="a" style="max-width:320px;background:var(--card);border:2px solid var(--line);border-bottom-width:4px;color:var(--ink)">Back to Lessons</button>';
+  } else if (win) {
+    h += '<div style="background:var(--card);border:2px solid var(--acc);border-radius:14px;padding:12px 16px;margin:10px 0 16px;max-width:340px;width:100%">' +
+      '<div style="font-size:12px;font-weight:700;color:var(--accd);text-transform:uppercase;letter-spacing:0.04em">👑 All Lessons Cleared!</div>' +
+      '<div style="font-size:16px;font-weight:800;color:var(--ink);margin:4px 0 2px">Topic Mastered!</div>' +
+    '</div>' +
+    '<button class="btn" id="a" style="max-width:320px">Back to Dashboard</button>';
+  } else {
+    h += '<button class="btn" id="btn-retry" style="max-width:320px;margin-bottom:8px">Try again</button>' +
+      '<button class="btn" id="a" style="max-width:320px;background:var(--card);border:2px solid var(--line);border-bottom-width:4px;color:var(--ink)">Back to Lessons</button>';
+  }
+
+  h += '</div>';
+  app.innerHTML = h;
+
+  if (win && hasNext && nextLessonObj) {
+    var sec = 3;
+    autoTimer = setInterval(function(){
+      sec--;
+      var cnt = document.getElementById('sec-cnt');
+      if (cnt) cnt.textContent = sec;
+      if (sec <= 0) {
+        clearInterval(autoTimer);
+        start(nextIdx);
+      }
+    }, 1000);
+    var bn = document.getElementById('btn-next');
+    if (bn) bn.onclick = function(){ clearInterval(autoTimer); start(nextIdx); };
+  }
+
+  var btnRetry = document.getElementById('btn-retry');
+  if (btnRetry) btnRetry.onclick = function(){ start(R.i); };
+
+  document.getElementById("a").onclick = function(){
+    if (autoTimer) clearInterval(autoTimer);
+    home();
+  };
+
   if(win) confetti();
 }
 

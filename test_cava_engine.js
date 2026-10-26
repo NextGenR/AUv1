@@ -16,25 +16,31 @@ global.window = {
     get currentTime() { return 0; }
   }
 };
+const elements = {};
 global.document = {
   documentElement: {
     _attrs: {},
     getAttribute(k) { return this._attrs[k] || null; },
     setAttribute(k, v) { this._attrs[k] = String(v); }
   },
-  getElementById: (id) => ({
-    id,
-    classList: { add() {}, remove() {} },
-    style: {},
-    appendChild() {},
-    querySelectorAll: () => [],
-    querySelector: () => null,
-    scrollTop: 0,
-    scrollHeight: 100
-  }),
+  getElementById: (id) => {
+    if (!elements[id]) {
+      elements[id] = {
+        id,
+        classList: { add() {}, remove() {} },
+        style: {},
+        appendChild() {},
+        querySelectorAll: () => [],
+        querySelector: () => null,
+        scrollTop: 0,
+        scrollHeight: 100
+      };
+    }
+    return elements[id];
+  },
   querySelectorAll: () => [],
   querySelector: () => null,
-  createElement: () => ({ style: {}, className: '' })
+  createElement: () => ({ style: {}, className: '', appendChild() {} })
 };
 global.localStorage = {
   _store: {},
@@ -125,10 +131,51 @@ CUR_TOPIC = "exams";
 if (goalCard().includes("Public Exams")) console.log("Topic switched to exams successfully");
 CUR_TOPIC = "msme";
 
-console.log("5. Testing Lesson Start & Flow...");
+console.log("5. Testing Lesson Start, Progressive Concept Card Reveal & Auto-Next...");
+CUR_TOPIC = "cs_structure";
 start(0);
 if (R.total <= 0) throw new Error("Expected positive total items in lesson");
 if (R.hearts !== 5) throw new Error("Expected 5 initial hearts");
+
+// Card 0: Check step 1 (Point 1 only)
+const btn1 = global.document.getElementById("go");
+if (!btn1 || !app.innerHTML.includes("Continue (1/3)")) throw new Error("Expected Continue (1/3) on step 1");
+
+// Click to step 2 (Point 2)
+btn1.onclick();
+const btn2 = global.document.getElementById("go");
+if (!btn2 || !app.innerHTML.includes("Continue (2/3)")) throw new Error("Expected Continue (2/3) on step 2");
+
+// Click to step 3 (Point 3 - ONLY bullet 3, NO keywords or diagram yet!)
+btn2.onclick();
+const btn3 = global.document.getElementById("go");
+if (!app.innerHTML.includes("Post-1947") || !app.innerHTML.includes("affirmative action")) throw new Error("Expected bullet 3 on step 3");
+if (app.innerHTML.includes("Keywords unlocked")) throw new Error("Keywords should NOT be visible on bullet 3 step!");
+
+// Click to step 4 (Diagram reveals)
+btn3.onclick();
+if (!app.innerHTML.includes("Picture it")) throw new Error("Expected Picture it diagram on step 4");
+if (app.innerHTML.includes("Keywords unlocked")) throw new Error("Keywords should NOT be visible on diagram step!");
+
+// Click to step 5 (Keywords reveal)
+const btn4 = global.document.getElementById("go");
+btn4.onclick();
+if (!app.innerHTML.includes("Keywords unlocked") || !app.innerHTML.includes("Revenue Extraction DNA")) throw new Error("Expected Keywords unlocked on step 5");
+
+// Click to step 6 (Owl note reveals)
+const btn5 = global.document.getElementById("go");
+btn5.onclick();
+if (!app.innerHTML.includes("Crucial intro hook")) throw new Error("Expected Owl note on step 6");
+const btn6 = global.document.getElementById("go");
+if (!app.innerHTML.includes("Got it")) throw new Error("Expected Got it on final card step");
+
+console.log("Progressive concept card sequential reveal verified with 100% accuracy!");
+
+// Test fin(win) auto-next lesson
+fin(true);
+if (!app.innerHTML.includes("Up Next · Auto-advancing")) throw new Error("Expected Up Next · Auto-advancing banner on lesson completion");
+if (!app.innerHTML.includes("Start Next Lesson Now")) throw new Error("Expected Start Next Lesson button");
+console.log("Auto-advancing next lesson flow verified with 100% success!");
 
 console.log("6. Testing Game Hub Modes across topics...");
 topics.forEach(t => {
