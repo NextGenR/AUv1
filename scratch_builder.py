@@ -7770,51 +7770,109 @@ TOPICS = {
                 "n": "Question Demands & Thematic Clustering",
                 "e": "🎯",
                 "d": "Deconstruct 2016 Q14 & 2026 Q8 demands, directives, and thematic clubbing rationale",
+                "section": "Introduction",
                 "c": [
                     {
                         "t": "2016 (Q14) Demand Analysis: Traditional Bureaucracy vs Development",
+                        "isQuestionDemand": True,
+                        "pyqYear": "2016 (Q14 | 12.5 Marks | 200 Words)",
+                        "pyqText": "“Traditional bureaucratic structure and culture have hampered the process of socio-economic development in India.” Comment.",
+                        "pts": [
+                            {
+                                "kw": "Directive 'Comment'",
+                                "ex": "Requires balanced assessment: analyze the hampering factors, but validate the stabilizing counter-view (Patel's Steel Frame).",
+                                "desc": "In 'Comment' questions, never just agree blindly. Present an objective evaluation balancing structural and cultural bottlenecks with administrative stabilizing virtues before giving modern reforms."
+                            },
+                            {
+                                "kw": "Structural vs Cultural Split",
+                                "ex": "Structure (multi-tier hierarchy, silos, centralization) vs Culture (red-tapism, 'Mai-Baap' mindset, 3Cs dread).",
+                                "desc": "The question explicitly demands two distinct dimensions: structural design (the machinery) and administrative culture (the behavioral mindset) that together impede development."
+                            },
+                            {
+                                "kw": "Direct Developmental Link",
+                                "ex": "MOSPI data tracking 300+ major central projects with ₹3 Lakh Crore+ in cost escalations due to delayed approvals.",
+                                "desc": "Must establish a direct causal line between administrative friction and stalled socio-economic outcomes: capex lapses, project cost overruns, and welfare delivery leakages."
+                            }
+                        ],
                         "b": [
-                            "<b>Directive 'Comment':</b> Demands an objective, balanced evaluation rather than one-sided bureaucratic bashing — you must examine both the hampering pathologies and the structural counter-view (Patel’s Steel Frame).",
-                            "<b>The Dual Pathology Split:</b> Requires separating structural flaws (rigid Weberian hierarchy, departmental silos, over-centralization) from cultural mindsets (red-tapism, 'Mai-Baap' paternalism, risk-aversion).",
-                            "<b>Direct Developmental Linkage:</b> Must prove how administrative friction directly stalls socio-economic outcomes, citing capex delays, project cost overruns, and welfare delivery leakages."
+                            "<b>Directive 'Comment':</b> Demands an objective, balanced evaluation rather than one-sided bashing. Examine both the hampering factors and the structural counter-view (Patel's Steel Frame).<br><small>⚡ <i>Example: Balance structural critique with Patel's unifying role.</i></small>",
+                            "<b>Structural vs Cultural Split:</b> Segregates structural flaws (hierarchy, silos, centralization) from cultural mindsets (red-tapism, 'Mai-Baap' paternalism, risk-aversion).<br><small>⚡ <i>Example: 6-8 noting tiers (structure) vs 3Cs fear (culture).</i></small>",
+                            "<b>Direct Developmental Link:</b> Direct causal line between administrative friction and stalled socio-economic outcomes.<br><small>⚡ <i>Example: MOSPI data tracking 300+ projects with ₹3 Lakh Cr+ overruns.</i></small>"
                         ],
                         "k": [
                             "Comment Directive",
-                            "Structural Pathology",
-                            "Cultural Pathology",
-                            "Developmental Impediment"
-                        ],
-                        "n": "In 'Comment' questions, never just agree blindly. Validate the claim with empirical evidence, then present the structural counter-view (Sardar Patel’s unifying Steel Frame) before concluding with modern reforms!"
+                            "Structural Challenges",
+                            "Cultural Mindset",
+                            "Developmental Impact"
+                        ]
                     },
                     {
                         "t": "2026 (Q8) Demand Analysis: Generalist Advantages vs Limitations",
+                        "isQuestionDemand": True,
+                        "pyqYear": "2026 (Q8 | 10 Marks | 150 Words)",
+                        "pyqText": "Analyse the advantages and limitations of the generalist structure of the Indian Civil Services in contemporary governance.",
+                        "pts": [
+                            {
+                                "kw": "Directive 'Analyse'",
+                                "ex": "Break generalist model into constituent components: 5 enduring virtues vs 4 modern limitations.",
+                                "desc": "Analyse requires dissecting the model into its operational parts rather than describing general history, objectively weighing advantages against knowledge-economy limitations."
+                            },
+                            {
+                                "kw": "Contemporary Context Stress Test",
+                                "ex": "India's $10B Semiconductor Mission and AI regulation testing 19th-century generalist rotations.",
+                                "desc": "Evaluates how Macaulay's 1854 generalist model copes with 21st-century complex governance challenges like FinTech, carbon markets, and WTO trade disputes."
+                            },
+                            {
+                                "kw": "The Reform Mandate",
+                                "ex": "Transitioning beyond zero-sum binary to the 'Generalist-Plus' model and Mission Karmayogi's Bamboo Frame.",
+                                "desc": "Demands an actionable way forward that preserves grassroots district immersion while institutionalizing apex domain specialization."
+                            }
+                        ],
                         "b": [
-                            "<b>Directive 'Analyse':</b> Demands breaking the generalist administrative model into its constituent parts — objectively weighing 5 enduring virtues against 4 modern technical limitations.",
-                            "<b>The Contemporary Stress Test:</b> Evaluates how Macaulay’s 1854 generalist model copes with 21st-century governance challenges (AI regulation, green bonds, semiconductor subsidies, WTO plurilateral pacts).",
-                            "<b>The Reform Mandate:</b> Demands a structural transition beyond the zero-sum binary, evolving toward the 'Generalist-Plus' model and Mission Karmayogi’s Bamboo Frame."
+                            "<b>Directive 'Analyse':</b> Break the generalist model into constituent parts: 5 enduring virtues vs 4 modern limitations.<br><small>⚡ <i>Example: District Collector coordination vs Big Four dependency.</i></small>",
+                            "<b>Contemporary Context:</b> Stress test Macaulay's 1854 generalist model against 21st-century complexities.<br><small>⚡ <i>Example: Semiconductor fab subsidies & AI regulation.</i></small>",
+                            "<b>The Reform Mandate:</b> Evolve beyond zero-sum binary to the 'Generalist-Plus' model and Bamboo Frame.<br><small>⚡ <i>Example: 2nd ARC 13-year rule & Mission Karmayogi.</i></small>"
                         ],
                         "k": [
                             "Analyse Directive",
                             "Generalist Structure",
                             "Contemporary Governance",
                             "Bamboo Frame"
-                        ],
-                        "n": "Notice the 10-year continuum: 2016 asked *why* traditional bureaucracy hampers development; 2026 asks *how* generalist design handles technical modern statehood!"
+                        ]
                     },
                     {
-                        "t": "Thematic Clubbing Rationale: Structure vs Modern Development",
+                        "t": "Thematic Synthesis: Why These PYQs Club Together",
+                        "isQuestionDemand": True,
+                        "pyqYear": "Theme 2 · Core Cluster 1 Rationale",
+                        "pyqText": "Why 2016 (Q14) and 2026 (Q8) share the same structural answer blueprint.",
+                        "pts": [
+                            {
+                                "kw": "Shared Colonial DNA",
+                                "ex": "1854 Macaulay meritocracy and Weberian legal-rationalism designed for imperial control, not welfare delivery.",
+                                "desc": "Both questions probe how India's Macaulay-era, Weberian administrative apparatus struggles to deliver modern socio-economic welfare and technical governance."
+                            },
+                            {
+                                "kw": "From Maintenance to Mission",
+                                "ex": "Mismatch between 19th-century law-and-order apparatus and a $5 Trillion knowledge economy.",
+                                "desc": "Examines the fundamental structural tension between administrative stability and dynamic developmental execution."
+                            },
+                            {
+                                "kw": "Master Answer Blueprint",
+                                "ex": "Unified toolkit: historical hooks, structural/cultural challenges, generalist pros/cons, committee blueprints, Bamboo Frame.",
+                                "desc": "Mastering Cluster 1 equips you to answer any UPSC Mains question on civil service structure, generalist vs specialist, and administrative reform."
+                            }
+                        ],
                         "b": [
-                            "<b>Shared Colonial DNA:</b> Both questions probe how India’s Macaulay-era, Weberian administrative apparatus struggles to deliver modern socio-economic welfare and technical governance.",
-                            "<b>From Maintenance to Mission:</b> Examines the mismatch between an administrative design built for 19th-century colonial control and the demands of a $5 Trillion knowledge economy.",
-                            "<b>Master Answer Blueprint:</b> A unified structural toolkit combining historical genesis, structural/cultural pathologies, generalist virtues/limits, committee blueprints, and the Bamboo Frame."
+                            "<b>Shared Colonial DNA:</b> Both questions probe how Macaulay's 1854 apparatus struggles to deliver modern socio-economic welfare.<br><small>⚡ <i>Example: Revenue extraction DNA vs welfare delivery.</i></small>",
+                            "<b>From Maintenance to Mission:</b> Mismatch between colonial control machinery and a $5T knowledge economy.<br><small>⚡ <i>Example: Physical file transit vs digital real-time governance.</i></small>",
+                            "<b>Master Answer Blueprint:</b> Unified structural toolkit across historical genesis, challenges, committees, and Bamboo Frame.<br><small>⚡ <i>Example: 2nd ARC, ADP synergy, and Mission Karmayogi.</i></small>"
                         ],
                         "k": [
                             "Thematic Synthesis",
                             "Colonial Legacy",
                             "Knowledge Economy Mismatch",
                             "Master Blueprint"
-                        ],
-                        "n": "Mastering Cluster 1 equips you to answer ANY question on civil service structure, generalist vs specialist, colonial legacy, and administrative reforms in UPSC Mains!"
+                        ]
                     }
                 ],
                 "q": []
@@ -7822,43 +7880,70 @@ TOPICS = {
             {
                 "n": "Evolution of the Steel Frame: Macaulay to Weber",
                 "e": "🏛️",
-                "d": "Macaulay 1854, Weberian legal-rationalism & Sardar Patel’s unifying Steel Frame",
+                "d": "Macaulay 1854 meritocracy, Weberian legal-rationalism & Patel's Steel Frame",
+                "section": "Background",
                 "c": [
                     {
-                        "t": "Lord Macaulay’s 1854 Paradigm: Meritocracy & The Generalist Ideal",
+                        "t": "Lord Macaulay's 1854 Paradigm: Meritocracy & The Generalist Ideal",
+                        "pts": [
+                            {
+                                "kw": "Macaulay Committee (1854)",
+                                "ex": "1854 competitive exam abolished East India Company patronage and director nominations.",
+                                "desc": "Instituted open competitive examinations to recruit the finest young minds based on merit rather than aristocratic patronage."
+                            },
+                            {
+                                "kw": "Cult of the Cultivated Mind",
+                                "ex": "Exams tested classical history, philosophy, and mathematics rather than technical training.",
+                                "desc": "Macaulay firmly believed that a general liberal arts education produced superior cognitive adaptability over narrow vocational schooling."
+                            },
+                            {
+                                "kw": "Colonial Extractive Imperative",
+                                "ex": "District Collector created under Regulation 1772 to collect land revenue and maintain imperial peace.",
+                                "desc": "The resulting Indian Civil Service (ICS) was explicitly designed for imperial revenue extraction, law-and-order maintenance, and territorial control."
+                            }
+                        ],
                         "b": [
-                            "<b>Open Competitive Meritocracy:</b> The 1854 Macaulay Committee abolished Company patronage and nepotism, instituting competitive examinations to recruit the finest young minds.",
-                            "<b>The Cult of the Cultivated Mind:</b> Macaulay firmly believed that a general liberal arts education (classics, philosophy, history) produced superior cognitive adaptability over narrow technical schooling.",
-                            "<b>Colonial Extractive Imperative:</b> The resulting Indian Civil Service (ICS) was explicitly designed for imperial revenue extraction, law-and-order maintenance, and territorial control — not socio-economic welfare."
+                            "<b>Macaulay Committee (1854):</b> Abolished Company patronage, instituting open competitive examinations.<br><small>⚡ <i>Example: Replaced East India Company director nominations.</i></small>",
+                            "<b>Cult of the Cultivated Mind:</b> Belief that liberal arts education produces superior general cognitive adaptability.<br><small>⚡ <i>Example: Classical history & philosophy over technical training.</i></small>",
+                            "<b>Colonial Extractive Imperative:</b> Designed for imperial revenue collection and territorial control.<br><small>⚡ <i>Example: District Collector created under Regulation 1772.</i></small>"
                         ],
                         "k": [
                             "Macaulay Committee 1854",
                             "Open Meritocracy",
-                            "Cult of the Cultivated Mind",
+                            "Cult of Cultivated Mind",
                             "Revenue Collector"
-                        ],
-                        "n": "Macaulay’s generalist officer was brilliant for maintaining Pax Britannica, but was never trained to run public healthcare systems, semiconductor subsidies, or AI supply chains!"
+                        ]
                     },
                     {
-                        "t": "Max Weber’s Legal-Rational Model & Sardar Patel’s Steel Frame",
+                        "t": "Max Weber's Legal-Rational Model & Sardar Patel's Steel Frame",
+                        "pts": [
+                            {
+                                "kw": "Weberian Legal-Rational Authority",
+                                "ex": "Official written files, procedural codes, and jurisdictional competencies.",
+                                "desc": "Max Weber theorized bureaucracy as an impersonal, rule-bound hierarchy where authority adheres to the office rather than the person, preventing arbitrariness."
+                            },
+                            {
+                                "kw": "Sardar Patel's Steel Frame (1949)",
+                                "ex": "Constitutional protection under Article 311 and creation of All-India Services (Article 312).",
+                                "desc": "In 1949 Constituent Assembly debates, Patel defended civil service guarantees as the indispensable 'Steel Frame' unifying 565 princely states into one federal republic."
+                            }
+                        ],
                         "b": [
-                            "<b>Legal-Rational Authority:</b> Max Weber theorized bureaucracy as an impersonal, rule-bound hierarchy where authority adheres to the office rather than the individual, preventing arbitrariness.",
-                            "<b>Specialization by Division:</b> Characterized by fixed jurisdictional competencies, written documentation (files), and exhaustive procedural codification.",
-                            "<b>Sardar Patel’s Constitutional Guarantee:</b> In 1949 Constituent Assembly debates, Patel defended Article 311 protections, declaring the All-India Services as the indispensable 'Steel Frame' unifying the nascent Indian federation."
+                            "<b>Weberian Legal-Rational Authority:</b> Impersonal, rule-bound hierarchy where authority adheres to the office.<br><small>⚡ <i>Example: Written official file notings and procedural codes.</i></small>",
+                            "<b>Sardar Patel's Steel Frame:</b> Defended Article 311 protections, declaring All-India Services as unifying national glue.<br><small>⚡ <i>Example: Article 312 All-India Services binding 565 princely states.</i></small>"
                         ],
                         "k": [
                             "Weberian Rationalism",
                             "Impersonality",
                             "Article 311",
-                            "Patel’s Steel Frame"
-                        ],
-                        "n": "Patel defended the Steel Frame because he needed national unity in 1947. But a structure built for stability easily calcifies into status-quoism if not modernized!"
+                            "Patel's Steel Frame"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "year",
-                        "q": "Slide to the year of the landmark Macaulay Committee Report on the Indian Civil Service.",
+                        "q": "Slide to the year of the Macaulay Committee Report establishing open merit competition for Indian Civil Services.",
                         "a": 1854,
                         "tol": 0,
                         "min": 1800,
@@ -7869,20 +7954,20 @@ TOPICS = {
                         "k": "mc",
                         "q": "What was the primary design imperative of the colonial Indian Civil Service (ICS)?",
                         "o": [
-                            "Decentralized socio-economic development",
+                            "Decentralized socio-economic welfare",
                             "Imperial revenue extraction and law-and-order maintenance",
                             "Promotion of heavy industrialization",
-                            "Grassroots Panchayati Raj governance"
+                            "Panchayati Raj empowerment"
                         ],
                         "a": 1,
                         "e": "The colonial ICS was designed as an extractive instrument to collect land revenue and maintain imperial control."
                     },
                     {
                         "k": "match",
-                        "q": "Match the thinker or framework to their core administrative concept.",
+                        "q": "Match the thinker or framework to their core administrative contribution.",
                         "p": [
                             [
-                                "Lord Macaulay",
+                                "Lord Macaulay (1854)",
                                 "Cult of the Cultivated Mind"
                             ],
                             [
@@ -7890,7 +7975,7 @@ TOPICS = {
                                 "Legal-Rational Impersonal Authority"
                             ],
                             [
-                                "Sardar Patel",
+                                "Sardar Patel (1949)",
                                 "Article 311 Unifying Steel Frame"
                             ]
                         ]
@@ -7899,7 +7984,7 @@ TOPICS = {
                         "k": "tf",
                         "q": "Sardar Patel intended the All-India Services to be subordinate to transient political factions rather than upholding constitutional neutrality.",
                         "a": 1,
-                        "e": "False. Patel insisted on constitutional insulation (Article 311) precisely so civil servants could advise fearlessly without partisan political subservience."
+                        "e": "False. Patel insisted on constitutional insulation (Article 311) precisely so civil servants could advise fearlessly without partisan subservience."
                     }
                 ]
             },
@@ -7907,42 +7992,63 @@ TOPICS = {
                 "n": "Modern Knowledge Economy & Northcote-Trevelyan",
                 "e": "⚡",
                 "d": "Northcote-Trevelyan 1854 & the 21st-century knowledge economy stress test",
+                "section": "Background",
                 "c": [
                     {
                         "t": "The Northcote-Trevelyan Legacy: The Permanent Amateur Elite",
+                        "pts": [
+                            {
+                                "kw": "Northcote-Trevelyan Model (1854)",
+                                "ex": "The British Permanent Secretary archetype who switches between Fisheries and Defence without technical background.",
+                                "desc": "Established the permanent civil service with entry by open competition, unified grading, and placement of generalist administrators above technical specialists."
+                            },
+                            {
+                                "kw": "Division of Administrative Labor",
+                                "ex": "Rigid divide between intellectual policy formulation and routine mechanical execution.",
+                                "desc": "Created an administrative caste detached from technical operations, institutionalizing the 'all-rounder generalist' across Commonwealth democracies."
+                            }
+                        ],
                         "b": [
-                            "<b>British Civil Service Genesis:</b> The 1854 Northcote-Trevelyan Report established a permanent civil service with entry by open competition, unified grading, and strict separation between intellectual policy and routine mechanical labor.",
-                            "<b>Export to Commonwealth:</b> Institutionalized the 'Permanent Secretary' archetype across the British Empire — generalist administrators who rotate seamlessly across diverse ministerial portfolios.",
-                            "<b>Generalist Hegemony:</b> Entrenched the administrative tradition of placing generalist liberal arts graduates above subject-matter technical specialists in policy formulation."
+                            "<b>Northcote-Trevelyan Model (1854):</b> Established permanent generalist mandarin class rotating across portfolios.<br><small>⚡ <i>Example: Permanent Secretary switching between Fisheries and Defence.</i></small>",
+                            "<b>Division of Administrative Labor:</b> Separation between intellectual policy and routine mechanical execution.<br><small>⚡ <i>Example: Generalists commanding technical specialists.</i></small>"
                         ],
                         "k": [
                             "Northcote-Trevelyan 1854",
                             "Permanent Cadre",
                             "Intellectual vs Mechanical",
                             "Permanent Secretary"
-                        ],
-                        "n": "The Northcote-Trevelyan report created the permanent mandarin who can switch from Fisheries to Defence overnight without domain training!"
+                        ]
                     },
                     {
                         "t": "The 21st-Century Knowledge Economy: The Generalist Stress Test",
+                        "pts": [
+                            {
+                                "kw": "21st-Century Tech Complexity",
+                                "ex": "Regulating algorithmic antitrust, semiconductor fab subsidies, green hydrogen, and FinTech.",
+                                "desc": "Modern governance spans hyper-specialized domains requiring deep technical literacy that cannot be mastered in brief 18-month rotational postings."
+                            },
+                            {
+                                "kw": "Global Technocratic Asymmetry",
+                                "ex": "Global regulators (US FDA, SEC, EU DG-COMP) staffed by career domain scientists and economists.",
+                                "desc": "Indian generalist officers face severe informational and technical negotiating disadvantages in international trade and climate forums."
+                            }
+                        ],
                         "b": [
-                            "<b>Technological Complexity:</b> Modern governance spans hyper-specialized domains (semiconductor fabrication, algorithmic antitrust, green hydrogen, synthetic genomics) requiring deep technical literacy.",
-                            "<b>Velocity of Governance:</b> 21st-century black-swan crises demand real-time big data analytics and agile execution, whereas 19th-century physical file movement moves at glacial speed.",
-                            "<b>Global Regulatory Technocracy:</b> Major global regulators (US FDA, SEC, EU DG-COMP) are staffed by career domain scientists and economists, creating severe negotiating asymmetry for India."
+                            "<b>21st-Century Tech Complexity:</b> Hyper-specialized domains require deep technical literacy.<br><small>⚡ <i>Example: Semiconductor fabrication subsidies & AI regulation.</i></small>",
+                            "<b>Global Technocratic Asymmetry:</b> Global regulators led by career technocrats, creating negotiating disadvantages.<br><small>⚡ <i>Example: Negotiating carbon border adjustments against EU economists.</i></small>"
                         ],
                         "k": [
                             "Knowledge Economy",
                             "Technical Asymmetry",
                             "Algorithmic Antitrust",
                             "Regulatory Technocracy"
-                        ],
-                        "n": "When an IAS generalist negotiates carbon border tax mechanisms against EU climate economists, the domain gap directly compromises national strategic interests!"
+                        ]
                     }
                 ],
                 "q": [
                     {
                         "k": "mc",
-                        "q": "Which landmark report laid the foundation of the modern British generalist civil service model in 1854?",
+                        "q": "Which landmark 1854 report laid the foundation of the British permanent generalist civil service model?",
                         "o": [
                             "Fulton Committee Report",
                             "Northcote-Trevelyan Report",
@@ -7954,7 +8060,7 @@ TOPICS = {
                     },
                     {
                         "k": "sort",
-                        "q": "Sort the administrative domains by structural demand: Generalist-Friendly vs Knowledge-Economy Specialist.",
+                        "q": "Sort administrative domains by operational demand: Generalist-Friendly vs Knowledge-Economy Specialist.",
                         "b": [
                             "Generalist-Friendly",
                             "Specialist-Demanding"
@@ -7965,7 +8071,7 @@ TOPICS = {
                                 0
                             ],
                             [
-                                "Law & Order Coordination",
+                                "Law & Order Crisis Coordination",
                                 0
                             ],
                             [
@@ -7987,7 +8093,7 @@ TOPICS = {
                             "and generalist officers require no domain training to negotiate global carbon tariffs."
                         ],
                         "a": 2,
-                        "e": "Red Flag: Negotiating specialized carbon border mechanisms without domain expertise creates severe asymmetries that harm national interests."
+                        "e": "Red Flag: Negotiating complex carbon border mechanisms without domain expertise creates severe asymmetries that harm national interests."
                     },
                     {
                         "k": "riddle",
@@ -8012,36 +8118,63 @@ TOPICS = {
                 "n": "Structural Challenges",
                 "e": "🧱",
                 "d": "Hierarchy, departmental silos, secretariat monopoly & the accountability deficit",
+                "section": "Challenges",
                 "c": [
                     {
-                        "t": "Structural Pathology: Steep Hierarchies & Departmental Silos",
+                        "t": "Structural Challenges: Steep Hierarchy & Departmental Silos",
+                        "pts": [
+                            {
+                                "kw": "6–8 File Noting Tiers",
+                                "ex": "Official files taking an average of 22+ days to cross 6 tiers from Section Officer to Secretary for routine clearance.",
+                                "desc": "Files traverse Dealing Assistant, Section Officer, Under Secretary, Deputy Secretary, Director, Joint Secretary, and Secretary, creating massive procedural inertia."
+                            },
+                            {
+                                "kw": "Departmental Silos",
+                                "ex": "Water governance artificially divided across Jal Shakti, Agriculture, Environment, and Rural Development ministries.",
+                                "desc": "Ministries function as hermetically sealed fiefdoms with zero data-sharing or interoperability, crippling multi-sectoral projects."
+                            },
+                            {
+                                "kw": "Developmental Toll: Incoherent Infrastructure",
+                                "ex": "Freshly paved national highways repeatedly dug up by telecom and gas utilities until PM Gati-Shakti integrated digital master planning.",
+                                "desc": "Lack of horizontal inter-departmental communication leads to wasteful expenditure and policy contradictions."
+                            }
+                        ],
                         "b": [
-                            "<b>Multi-Layered File Noting:</b> Official files move through 6–8 bureaucratic tiers (Dealing Assistant → Section Officer → Under Sec → Deputy Sec → Director → Joint Sec → Sec), causing an average file transit of 22+ days for routine clearances.",
-                            "<b>Departmental Silos & Turf Wars:</b> Ministries operate as hermetically sealed fiefdoms with zero inter-operability; data hoarding and jurisdictional rivalry cripple multi-modal developmental projects.",
-                            "<b>Case in Point:</b> Prior to PM Gati-Shakti, newly paved national highways were repeatedly dug up by telecom and gas utilities due to zero cross-departmental coordination."
+                            "<b>6–8 File Noting Tiers:</b> Files move through multi-layered pyramid hierarchy.<br><small>⚡ <i>Example: Average 22+ days transit delay from Section Officer to Secretary.</i></small>",
+                            "<b>Departmental Silos:</b> Ministries function as sealed fiefdoms with zero data-sharing.<br><small>⚡ <i>Example: Water governance split across 4 different ministries.</i></small>",
+                            "<b>Incoherent Infrastructure:</b> Lack of coordination creates wasteful rework.<br><small>⚡ <i>Example: Roads dug up repeatedly by utilities before PM Gati-Shakti.</i></small>"
                         ],
                         "k": [
                             "Multi-Layer Noting",
                             "Departmental Silos",
                             "Turf Wars",
                             "PM Gati-Shakti"
-                        ],
-                        "n": "A file in the Central Secretariat often requires 4 identical 'approved as proposed' signatures before any funds can actually be disbursed!"
+                        ]
                     },
                     {
-                        "t": "Structural Pathology: Secretariat Monopoly & Accountability Asymmetry",
+                        "t": "Structural Challenges: Secretariat Monopoly & Accountability Asymmetry",
+                        "pts": [
+                            {
+                                "kw": "Secretariat Monopoly & 3Fs Gap",
+                                "ex": "State secretariats withholding technical engineering staff and untied funds from Gram Panchayats despite 73rd/74th Amendments.",
+                                "desc": "Concentration of financial and administrative power at central and state secretariats emasculates local self-governments."
+                            },
+                            {
+                                "kw": "Asymmetric Appraisal (ACR/APAR)",
+                                "ex": "An officer faces vigilance inquiries for an innovative procurement model that hits an audit glitch, but earns seniority promotion for doing nothing for three years.",
+                                "desc": "Appraisals punish procedural slips (errors of commission) while carrying zero penalty for missed developmental opportunities or project delays (errors of omission)."
+                            }
+                        ],
                         "b": [
-                            "<b>Centralized Top-Down Monopoly:</b> Power remains monopolized at central and state secretariats, actively emasculating local self-governments (PRIs and ULBs) and subverting democratic decentralization.",
-                            "<b>Starvation of the 3Fs:</b> Three decades after the 73rd and 74th Amendments, state secretariats still starve Panchayats of adequate Functions, Funds, and Functionaries.",
-                            "<b>Asymmetric Performance Appraisal:</b> Annual performance appraisals (ACR/APAR) strictly punish procedural errors of commission (audits/vigilance), but never penalize costly developmental delays or errors of omission."
+                            "<b>Secretariat Monopoly & 3Fs Gap:</b> Power concentrated at secretariats, starving Panchayats.<br><small>⚡ <i>Example: Three decades of 73rd Amendment gap in devolving engineering staff.</i></small>",
+                            "<b>Asymmetric Appraisal (ACR/APAR):</b> Punishes procedural commission, ignores costly omission.<br><small>⚡ <i>Example: Inaction earns promotion while innovation risks vigilance audits.</i></small>"
                         ],
                         "k": [
                             "Secretariat Monopoly",
                             "3Fs Deficit",
                             "73rd/74th Amendments",
                             "Error of Commission vs Omission"
-                        ],
-                        "n": "In traditional bureaucracy, you face vigilance inquiries for taking an innovative decision that hits an audit glitch, but get promoted on seniority for doing nothing for three years!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8073,10 +8206,10 @@ TOPICS = {
                     },
                     {
                         "k": "sort",
-                        "q": "Sort the bureaucratic dysfunctions into Hierarchy/Silo Flaws vs Decentralization/Accountability Flaws.",
+                        "q": "Sort the bureaucratic dysfunctions into Hierarchy/Silo Challenges vs Decentralization/Appraisal Challenges.",
                         "b": [
-                            "Hierarchy & Silo Flaws",
-                            "Decentralization & Appraisal Flaws"
+                            "Hierarchy & Silo Challenges",
+                            "Decentralization & Appraisal Challenges"
                         ],
                         "it": [
                             [
@@ -8109,36 +8242,69 @@ TOPICS = {
                 "n": "Cultural Mindset and Developmental Challenges",
                 "e": "⏳",
                 "d": "Red-tapism, 'Mai-Baap' paternalism & the 3Cs risk aversion policy paralysis",
+                "section": "Challenges",
                 "c": [
                     {
-                        "t": "Cultural Pathology: Red-Tapism & 'Mai-Baap' Paternalism",
+                        "t": "Cultural Mindset: Red-Tapism & 'Mai-Baap' Paternalism",
+                        "pts": [
+                            {
+                                "kw": "Red-Tapism & Process Obsession",
+                                "ex": "Government hospital drug procurement files delayed for months over minor audit queries while essential medicines run out.",
+                                "desc": "Rules become an end in themselves; procedural compliance on paper takes precedence over ground-level developmental delivery."
+                            },
+                            {
+                                "kw": "Feudal 'Mai-Baap' Paternalism",
+                                "ex": "Citizens forced to visit government offices as supplicants rather than receiving guaranteed digital service delivery.",
+                                "desc": "Inherited colonial attitude viewing public services as state largesse rather than legal citizen entitlements."
+                            },
+                            {
+                                "kw": "Subversion of Citizen Charters",
+                                "ex": "Citizen charters treated as ornamental wall plaques without statutory penalties for delayed service delivery.",
+                                "desc": "Lack of legal teeth in Citizen's Charters preserves administrative unaccountability."
+                            }
+                        ],
                         "b": [
-                            "<b>Process Fetishism (*Red-Tapism*):</b> Rules become an end in themselves rather than a means to public welfare; procedural perfection on paper takes precedence over ground-level developmental delivery.",
-                            "<b>Feudal 'Mai-Baap' Mindset:</b> Inherited colonial attitude viewing citizens as passive supplicants pleading for government largesse rather than rights-bearing entitlement holders.",
-                            "<b>Subversion of Citizen Charters:</b> Citizen’s Charters remain ornamental wall plaques without statutory grievance redress penalties or enforceable service delivery timelines."
+                            "<b>Red-Tapism & Process Obsession:</b> Rules become an end rather than a means to welfare.<br><small>⚡ <i>Example: Hospital drug files delayed for audit queries while drugs run out.</i></small>",
+                            "<b>Feudal 'Mai-Baap' Paternalism:</b> Viewing citizens as supplicants receiving state largesse.<br><small>⚡ <i>Example: Citizens forced to plead for basic welfare entitlements.</i></small>",
+                            "<b>Subversion of Citizen Charters:</b> Ornamental wall plaques without statutory penalties.<br><small>⚡ <i>Example: Lack of enforceable timelines or financial compensation.</i></small>"
                         ],
                         "k": [
                             "Process Fetishism",
                             "Red-Tapism",
                             "Mai-Baap Mindset",
                             "Sevottam Framework"
-                        ],
-                        "n": "When the documentation is audit-compliant, the traditional bureaucrat sleeps peacefully even if the government hospital has run completely out of medicines!"
+                        ]
                     },
                     {
-                        "t": "Cultural Pathology: The 3Cs Fear & Policy Paralysis",
+                        "t": "Cultural Mindset: The 3Cs Fear & Policy Paralysis",
+                        "pts": [
+                            {
+                                "kw": "The 3Cs Syndrome",
+                                "ex": "Senior bureaucrats setting up endless committees and file referrals to avoid signing commercial tenders.",
+                                "desc": "Pervasive dread of retrospective witch-hunts by investigative agencies (CBI, CVC, CAG) causes defensive administration."
+                            },
+                            {
+                                "kw": "Developmental Toll: ₹3 Lakh Cr Overruns",
+                                "ex": "MOSPI data consistently tracks over 300 major central infrastructure projects with ₹3 Lakh Crore+ in cost overruns due to delayed approvals.",
+                                "desc": "Decision avoidance translates directly into multi-year capital expenditure delays and investor hesitation."
+                            },
+                            {
+                                "kw": "Section 17A PC Act Reform",
+                                "ex": "Section 17A amended in 2018 to mandate prior government sanction before investigating bona fide official decisions.",
+                                "desc": "Legislative safeguard introduced to curb 3Cs panic and restore decision-making confidence among bureaucrats."
+                            }
+                        ],
                         "b": [
-                            "<b>The 3Cs Syndrome:</b> Pervasive dread of retrospective witch-hunts by investigative agencies — Central Bureau of Investigation (CBI), Central Vigilance Commission (CVC), and Comptroller & Auditor General (CAG).",
-                            "<b>Defensive Administration:</b> Officers systematically avoid taking commercial or procurement decisions, proliferating committees and file-referrals to diffuse personal responsibility.",
-                            "<b>Developmental Toll:</b> Chronic decision avoidance translates into massive infrastructure cost overruns (MOSPI data consistently tracks 300+ major central projects with multi-year delays)."
+                            "<b>The 3Cs Syndrome:</b> Dread of retrospective CBI, CVC, and CAG scrutiny.<br><small>⚡ <i>Example: Bureaucrats setting up endless committees to avoid signing tenders.</i></small>",
+                            "<b>Developmental Toll:</b> Chronic decision avoidance translates into massive cost escalations.<br><small>⚡ <i>Example: MOSPI data tracking ₹3 Lakh Cr+ infrastructure overruns.</i></small>",
+                            "<b>Section 17A PC Act Reform:</b> Prior sanction requirement to protect honest decision-making.<br><small>⚡ <i>Example: 2018 amendment shielding bona fide commercial decisions.</i></small>"
                         ],
                         "k": [
                             "3Cs Syndrome",
                             "Policy Paralysis",
                             "Defensive Administration",
                             "MOSPI Capex Overruns"
-                        ],
-                        "n": "Section 17A of the Prevention of Corruption Act was amended in 2018 precisely to curb 3Cs panic by requiring prior sanction before investigating bona fide decisions!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8155,7 +8321,7 @@ TOPICS = {
                     },
                     {
                         "k": "match",
-                        "q": "Match the cultural pathology to its direct developmental consequence.",
+                        "q": "Match the cultural challenge to its direct developmental consequence.",
                         "p": [
                             [
                                 "Red-Tapism",
@@ -8195,36 +8361,63 @@ TOPICS = {
                 "n": "Dimension B: Generalist Virtues & Enduring Relevance",
                 "e": "🛡️",
                 "d": "Grassroots field reality, holistic coordination, crisis command & the federal glue",
+                "section": "Solutions",
                 "c": [
                     {
                         "t": "Generalist Virtues: Grassroots Immersion & Holistic Integration",
+                        "pts": [
+                            {
+                                "kw": "Grassroots Field Perspective",
+                                "ex": "Young SDM and District Collector postings resolving rural land disputes and managing local PDS delivery.",
+                                "desc": "Early career field immersion provides first-hand exposure to rural poverty, caste friction, and implementation reality, bringing a human face to Secretariat policymaking."
+                            },
+                            {
+                                "kw": "Holistic Inter-Departmental Synthesizer",
+                                "ex": "District Collector balancing district budget allocations between health, roads, drinking water, and schools.",
+                                "desc": "Acts as a neutral arbiter across specialized line departments, preventing specialized 'tunnel vision' and balancing competing public priorities."
+                            }
+                        ],
                         "b": [
-                            "<b>Grassroots Field Immersion:</b> Mandatory tenures as Sub-Divisional Magistrate (SDM) and District Collector expose officers directly to multi-dimensional rural poverty, land disputes, and caste friction.",
-                            "<b>Ground-Truthing Policy Design:</b> When framing national policies at the Centre, generalists bring irreplaceable ground-level intuition of how schemes actually operate in remote tehsils.",
-                            "<b>Neutral Holistic Synthesizer:</b> Specialists often develop narrow 'tunnel vision' favoring their own sector; the generalist acts as an impartial arbiter balancing conflicting departmental budget demands."
+                            "<b>Grassroots Field Perspective:</b> SDM/Collector tenures ground central policies in village-level realities.<br><small>⚡ <i>Example: Resolving rural land disputes and managing local PDS delivery.</i></small>",
+                            "<b>Holistic Inter-Departmental Synthesizer:</b> Impartial arbiter balancing competing technical demands.<br><small>⚡ <i>Example: Balancing health vs public works budgets without tunnel vision.</i></small>"
                         ],
                         "k": [
                             "Grassroots Immersion",
                             "District Collector",
                             "Tunnel Vision Prevention",
                             "Impartial Synthesizer"
-                        ],
-                        "n": "A medical specialist might want the entire district budget for hospitals; the generalist balances healthcare, rural roads, electricity, and schools!"
+                        ]
                     },
                     {
                         "t": "Generalist Virtues: Crisis Leadership & The Federal Glue",
+                        "pts": [
+                            {
+                                "kw": "Multi-Departmental Crisis Command",
+                                "ex": "Rapid multi-agency mobilization during Cyclone Dana/Remal evacuations and nationwide COVID-19 lockdown supply chains.",
+                                "desc": "Commands police, health, civil supplies, and military logistics under unified magisterial leadership during multi-dimensional emergencies."
+                            },
+                            {
+                                "kw": "Administrative Unity & Federal Glue",
+                                "ex": "All-India Services (Article 312) cadre allocations binding Centre and States under a common administrative ethos.",
+                                "desc": "Sardar Patel's vision of AIS officers mitigating regional parochialism and ensuring nationwide administrative cohesion."
+                            },
+                            {
+                                "kw": "Buffer for Political Executive",
+                                "ex": "Translating multi-disciplinary technical jargon from scientists into constitutionally sound cabinet notes.",
+                                "desc": "Bridges the gap between technical expertise and political feasibility under democratic ministerial oversight."
+                            }
+                        ],
                         "b": [
-                            "<b>Multi-Departmental Crisis Command:</b> In natural disasters (cyclones, floods) and law-and-order emergencies, generalists command police, health, food supply, and military logistics under unified leadership.",
-                            "<b>Sardar Patel’s 'Federal Glue':</b> All-India Services officers serve both Centre and States, mitigating regional parochialism and ensuring nationwide administrative cohesion.",
-                            "<b>Constitutional Neutrality & Buffer:</b> Provide uninterrupted continuity across regime transitions and political parties, upholding the permanent civil service compact under democratic executive oversight."
+                            "<b>Multi-Departmental Crisis Command:</b> Unified leadership in cyclones and pandemics.<br><small>⚡ <i>Example: Cyclone Dana evacuations and COVID-19 relief supply chains.</i></small>",
+                            "<b>Administrative Unity & Federal Glue:</b> All-India Services binding Centre and States.<br><small>⚡ <i>Example: Article 312 AIS mitigating regional parochialism.</i></small>",
+                            "<b>Buffer for Political Executive:</b> Translates technical jargon into constitutionally sound cabinet notes.<br><small>⚡ <i>Example: Synthesizing multi-disciplinary inputs for Ministers.</i></small>"
                         ],
                         "k": [
                             "Crisis Command",
                             "Federal Glue",
                             "AIS Cadre Allocation",
                             "Administrative Continuity"
-                        ],
-                        "n": "During Cyclone Remal or COVID-19, having a single administrative authority who can coordinate police, doctors, and relief supplies saved thousands of lives!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8289,36 +8482,63 @@ TOPICS = {
                 "n": "Dimension B: Generalist Limitations in Modern Governance",
                 "e": "⚠️",
                 "d": "Domain asymmetry, 18-month musical chairs, Big Four capture & specialist demoralization",
+                "section": "Challenges",
                 "c": [
                     {
                         "t": "Generalist Limitations: Domain Asymmetry & Musical Chairs",
+                        "pts": [
+                            {
+                                "kw": "Technical Domain Asymmetry",
+                                "ex": "Generalists with liberal arts backgrounds negotiating complex WTO plurilateral trade disputes or carbon market tariffs.",
+                                "desc": "Rapidly rotating generalists lack the depth needed for nuanced policy formulation in AI, quantum computing, and biotechnology."
+                            },
+                            {
+                                "kw": "18-Month Musical Chairs Transfers",
+                                "ex": "An officer transferred across Textiles, Space, and Animal Husbandry within 3 years, leaving policy design dependent on lower clerical staff.",
+                                "desc": "Frequent inter-sectoral transfers destroy departmental institutional memory and stall multi-year reforms."
+                            },
+                            {
+                                "kw": "Big Four Consultant Capture",
+                                "ex": "Critical national digital policy tenders drafted entirely by private consultants (McKinsey, BCG, EY, PwC), compromising sovereign policy autonomy.",
+                                "desc": "Inability to evaluate advanced data models causes total dependence on private global management consultancies."
+                            }
+                        ],
                         "b": [
-                            "<b>Severe Technical Domain Asymmetry:</b> Rapidly rotating generalists through deep technical domains (nuclear energy, space, telecom, intellectual property) lack the depth needed for nuanced policy formulation.",
-                            "<b>18-Month Musical Chairs:</b> The average tenure of senior civil servants in a ministry is barely 18 months, wiping out institutional memory and stalling complex multi-year reforms.",
-                            "<b>Consultant Capture of Policy:</b> Inability to evaluate advanced data models leads to total dependence on global management consultancies (McKinsey, BCG, EY, PwC), eroding sovereign policy autonomy."
+                            "<b>Technical Domain Asymmetry:</b> Lack of depth in AI, quantum tech, and carbon markets.<br><small>⚡ <i>Example: Negotiating WTO trade disputes without specialized trade law background.</i></small>",
+                            "<b>18-Month Musical Chairs Transfers:</b> Rapid rotation destroys institutional memory.<br><small>⚡ <i>Example: Transfers across Textiles, Space, and Health within 3 years.</i></small>",
+                            "<b>Big Four Consultant Capture:</b> Over-reliance on private consulting firms.<br><small>⚡ <i>Example: Digital India tenders drafted entirely by external consulting wings.</i></small>"
                         ],
                         "k": [
                             "Domain Asymmetry",
                             "Musical Chairs Transfers",
                             "Institutional Memory Loss",
                             "Consultant Capture"
-                        ],
-                        "n": "If an officer spends 18 months in Agriculture, 14 months in Power, and 12 months in AI, who actually writes the national policy? The Big Four private consultants!"
+                        ]
                     },
                     {
                         "t": "Generalist Limitations: Specialist Demoralization & Regulatory Failures",
+                        "pts": [
+                            {
+                                "kw": "Glass Ceiling for Technical Cadres",
+                                "ex": "Senior IRS officers with 25 years of specialized tax litigation experience reporting to an IAS officer newly assigned to the revenue department.",
+                                "desc": "Monopolization of top Secretariat posts (Joint Secretary and above) by the generalist IAS creates resentment among technical services (IRS, scientists, engineers)."
+                            },
+                            {
+                                "kw": "Costly Regulatory Blunders",
+                                "ex": "Ill-conceived government technology tenders, botched tax policies, and failed infrastructure PPP contracts.",
+                                "desc": "Lack of technical grasp at the drafting stage leads to poorly designed regulations and costly litigation."
+                            }
+                        ],
                         "b": [
-                            "<b>Glass Ceiling for Technical Cadres:</b> The IAS monopoly over Joint Secretary and Secretary positions demoralizes specialized services (IRS, Indian Telecom Service, engineers, scientists).",
-                            "<b>Costly Policy & Regulatory Blunders:</b> Ill-conceived government technology tenders, botched tax policies, and failed infrastructure PPP contracts frequently stem from generalist lack of technical grasp.",
-                            "<b>Public Sector Brain Drain:</b> Premier technical, legal, and financial talent shuns public service careers due to administrative subordination under generalist administrative cadres."
+                            "<b>Glass Ceiling for Technical Cadres:</b> IAS monopoly over Joint Secretary posts demoralizes specialist services.<br><small>⚡ <i>Example: Experienced IRS officers reporting to newly posted generalists.</i></small>",
+                            "<b>Costly Regulatory Blunders:</b> Lack of technical grasp leads to botched regulations and tenders.<br><small>⚡ <i>Example: Impractical technical tenders and retrospective tax controversies.</i></small>"
                         ],
                         "k": [
                             "Glass Ceiling",
                             "Technocratic Subordination",
                             "Flawed Procurement",
                             "Specialist Brain Drain"
-                        ],
-                        "n": "Why should an experienced IRS officer with 25 years of specialized tax expertise report to an IAS officer who joined the revenue department last month?"
+                        ]
                     }
                 ],
                 "q": [
@@ -8393,37 +8613,58 @@ TOPICS = {
             {
                 "n": "Early Administrative Reforms: Fulton & 1st ARC",
                 "e": "📜",
-                "d": "Lord Fulton’s 'Cult of the Amateur' & the 1st ARC 8 functional specializations",
+                "d": "Lord Fulton's 'Cult of the Amateur' & the 1st ARC 8 functional specializations",
+                "section": "Committees",
                 "c": [
                     {
                         "t": "The Fulton Committee (UK, 1968): Indicting the 'Cult of the Amateur'",
+                        "pts": [
+                            {
+                                "kw": "Fulton Committee (1968)",
+                                "ex": "Lord Fulton coined the phrase 'Cult of the Amateur' regarding the British Civil Service.",
+                                "desc": "Condemned the civil service for its amateur philosophy, arguing that 20th-century government demands professional management and technical expertise."
+                            },
+                            {
+                                "kw": "Abolition of Class Barriers",
+                                "ex": "Recommended unified grading allowing specialists equal opportunity to rise to top policy posts.",
+                                "desc": "Provided the foundational intellectual critique of generalist dominance inherited by Commonwealth bureaucracies including India's IAS."
+                            }
+                        ],
                         "b": [
-                            "<b>'Cult of the Amateur' Critique:</b> Lord Fulton sharply condemned the British civil service for its amateur philosophy, arguing that 20th-century government demands professional management and technical expertise.",
-                            "<b>Abolition of Class Barriers:</b> Recommended abolishing the rigid separation between the generalist administrative class and technical specialists, creating a unified grading system.",
-                            "<b>Direct Relevance to 2026 Q8:</b> Provided the foundational intellectual critique of generalist dominance inherited by Commonwealth bureaucracies including India’s IAS."
+                            "<b>Fulton Committee (1968):</b> Criticized the 'Cult of the Amateur' in modern administration.<br><small>⚡ <i>Example: Argued modern statehood requires technical and managerial professionals.</i></small>",
+                            "<b>Abolition of Class Barriers:</b> Proposed unified grading structure opening top posts to specialists.<br><small>⚡ <i>Example: Primary intellectual critique of generalist hegemony in 2026 Q8.</i></small>"
                         ],
                         "k": [
                             "Fulton Committee 1968",
                             "Cult of the Amateur",
                             "Unified Grading",
                             "Professional Management"
-                        ],
-                        "n": "Quote Fulton directly in 2026 Q8: 'The civil service is still fundamentally based on the philosophy of the amateur... It must become professional!'"
+                        ]
                     },
                     {
                         "t": "1st Administrative Reforms Commission (1966): 8 Functional Areas",
+                        "pts": [
+                            {
+                                "kw": "1st ARC (1966): 8 Functional Areas",
+                                "ex": "Grouping posts into 8 streams (economic, financial, social, agricultural, industrial, personnel, security, local).",
+                                "desc": "Recommended that after 8–10 years of general field experience, civil servants must specialize within one functional stream."
+                            },
+                            {
+                                "kw": "Early Warning on Developmental Planning",
+                                "ex": "First official Indian body to declare that chaotic generalist rotation damages long-term economic planning.",
+                                "desc": "Recognized that running an industrializing India on 19th-century generalist rotation was unsustainable."
+                            }
+                        ],
                         "b": [
-                            "<b>8 Functional Areas:</b> Recommended grouping civil service assignments into 8 functional specializations: economic, security, social, financial, agricultural, industrial, personnel, and local administration.",
-                            "<b>Mid-Career Specialization Track:</b> Recommended that after 8–10 years of general field experience, officers must select and remain within one specific functional stream.",
-                            "<b>Early Warning on Developmental Planning:</b> The first official Indian body to declare that chaotic generalist rotation damages long-term economic planning and industrialization."
+                            "<b>1st ARC (1966): 8 Functional Areas:</b> Categorized civil services into 8 specialized areas.<br><small>⚡ <i>Example: Economic, financial, industrial, and social functional streams.</i></small>",
+                            "<b>Early Warning on Planning:</b> Warned that chaotic rotation hampers developmental planning.<br><small>⚡ <i>Example: Advocated mid-career domain clustering after 8-10 years.</i></small>"
                         ],
                         "k": [
                             "1st ARC 1966",
                             "8 Functional Areas",
                             "Mid-Career Specialization",
                             "Developmental Planning"
-                        ],
-                        "n": "Way back in 1966, the 1st ARC saw that running an industrializing India on 19th-century generalist rotation was completely unsustainable!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8478,28 +8719,56 @@ TOPICS = {
                 "n": "Modern Reform Blueprints: Surinder Nath & 2nd ARC",
                 "e": "🏛️",
                 "d": "Surinder Nath 11 domain clusters, 2nd ARC 13-year rule & flatter agencies",
+                "section": "Committees",
                 "c": [
                     {
                         "t": "Surinder Nath Committee (2003): 11 Domain Clusters",
+                        "pts": [
+                            {
+                                "kw": "Surinder Nath Committee (2003)",
+                                "ex": "Grouping all central government ministries into 11 coherent domain clusters.",
+                                "desc": "Proposed empanelment based on academic background, demonstrated aptitude, and officer experience rather than arbitrary seniority."
+                            },
+                            {
+                                "kw": "Ending Random Transfers",
+                                "ex": "Mandated fixed 3–5 year tenures within an assigned domain cluster.",
+                                "desc": "Prohibited abrupt cross-sectoral transfers to build institutional depth."
+                            }
+                        ],
                         "b": [
-                            "<b>11 Domain Clusters:</b> Formally recommended categorizing all central government ministries into 11 coherent domain clusters (Infrastructure, Finance, Social Sector, Security, Agriculture, etc.).",
-                            "<b>Aptitude & Track Record Empanelment:</b> Recommended assigning officers to domain clusters based on academic qualifications, demonstrated performance, and aptitude rather than arbitrary cadre seniority.",
-                            "<b>Ending Arbitrary Rotations:</b> Proposed that once empanelled into a domain cluster, an officer must complete at least 3–5 years without sudden cross-sector transfers."
+                            "<b>Surinder Nath Committee (2003):</b> 11 domain clusters for central empanelment.<br><small>⚡ <i>Example: Aptitude and experience matching rather than arbitrary seniority.</i></small>",
+                            "<b>Ending Random Transfers:</b> Mandated fixed 3-5 year tenures within domain tracks.<br><small>⚡ <i>Example: Ending chaotic cross-sector transfers from Culture to Defence.</i></small>"
                         ],
                         "k": [
                             "Surinder Nath Committee 2003",
                             "11 Domain Clusters",
                             "Aptitude Matching",
                             "Rotational Stability"
-                        ],
-                        "n": "Surinder Nath was the first to design a concrete, implementable matrix of 11 domains for IAS empanelment and posting!"
+                        ]
                     },
                     {
                         "t": "2nd Administrative Reforms Commission (10th & 13th Reports)",
+                        "pts": [
+                            {
+                                "kw": "2nd ARC 13-Year Rule (10th Report)",
+                                "ex": "Mandatory 13-year threshold: 13 years of generalist field administration, followed by compulsory domain specialization.",
+                                "desc": "Struck the golden mean: preserve the generalist field foundation for 13 years, then demand rigorous domain specialization."
+                            },
+                            {
+                                "kw": "Open Competition for SAG/HAG",
+                                "ex": "Senior Management (Joint Secretary & Secretary) posts opened to all central services, technical cadres, and lateral entrants on merit.",
+                                "desc": "Dismantles the single-cadre monopoly at the policy apex."
+                            },
+                            {
+                                "kw": "Flatter Mission Agencies (13th Report)",
+                                "ex": "Replacing multi-tier secretariats with autonomous executive agencies headed by specialists.",
+                                "desc": "Recommended agile, single-purpose mission organizations."
+                            }
+                        ],
                         "b": [
-                            "<b>The 13-Year Rule (10th Report):</b> Mandated that officers spend their first 13 years gaining broad field administration experience, after which domain specialization becomes strictly compulsory.",
-                            "<b>Open Competition for SAG/HAG:</b> Senior Administrative Grade (Joint Secretary) and Higher Administrative Grade (Secretary) posts must be open to all services and lateral entrants on merit.",
-                            "<b>Flatter Mission Agencies (13th Report):</b> Proposed dismantling multi-tier secretariat hierarchies and replacing them with autonomous executive agencies headed by domain specialists."
+                            "<b>2nd ARC 13-Year Rule:</b> Mandatory domain specialization after 13 years of field service.<br><small>⚡ <i>Example: 13 years generalist foundation, then domain specialization.</i></small>",
+                            "<b>Open Competition for SAG/HAG:</b> Senior Management posts open to all services on merit.<br><small>⚡ <i>Example: Ending single-service monopoly over Joint Secretary positions.</i></small>",
+                            "<b>Flatter Mission Agencies:</b> Autonomous executive agencies replacing multi-tier secretariats.<br><small>⚡ <i>Example: 13th Report proposal for agile, single-purpose agencies.</i></small>"
                         ],
                         "k": [
                             "2nd ARC 10th Report",
@@ -8507,8 +8776,7 @@ TOPICS = {
                             "SAG/HAG Open Merit",
                             "2nd ARC 13th Report",
                             "Flatter Agencies"
-                        ],
-                        "n": "The 2nd ARC struck the golden mean: preserve the generalist field foundation for 13 years, then demand rigorous domain specialization!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8566,13 +8834,25 @@ TOPICS = {
                 "n": "Real-World Case Studies & Contemporary Dilemmas",
                 "e": "💼",
                 "d": "Technocrat pioneers, Aspirational Districts synergy & the August 2024 lateral entry dilemma",
+                "section": "Case Studies",
                 "c": [
                     {
                         "t": "Case Studies: Technocrat Nation-Builders & Lateral Leaders",
+                        "pts": [
+                            {
+                                "kw": "Technocrat Nation-Builders",
+                                "ex": "Dr. Verghese Kurien (AMUL / Operation Flood), Dr. M.S. Swaminathan (Green Revolution), and E. Sreedharan (Delhi Metro).",
+                                "desc": "Proved that domain mastery transforms national outcomes when granted operational autonomy, long tenures, and direct reporting lines to the political executive."
+                            },
+                            {
+                                "kw": "Modern Lateral Integration",
+                                "ex": "Nandan Nilekani (UIDAI / Aadhaar architecture) and Parameswaran Iyer (Swachh Bharat Mission Grameen).",
+                                "desc": "Blended external specialized expertise with state machinery to execute world-class digital and sanitation public goods."
+                            }
+                        ],
                         "b": [
-                            "<b>Technocrat Pioneers:</b> Dr. Verghese Kurien (AMUL / White Revolution), Dr. M.S. Swaminathan (Green Revolution), and E. Sreedharan (Delhi Metro / Konkan Railway) demonstrated how deep domain mastery transforms national outcomes.",
-                            "<b>Modern Lateral Integration:</b> Nandan Nilekani (UIDAI / Aadhaar digital identity architecture) and Parameswaran Iyer (Swachh Bharat Mission Grameen) proved the power of lateral domain leadership in mission-mode schemes.",
-                            "<b>Key Common Denominator:</b> Success occurred when specialists were granted operational autonomy, fixed tenures, and direct reporting lines to the political executive."
+                            "<b>Technocrat Pioneers:</b> Kurien (AMUL), Swaminathan (Agri), and Sreedharan (Metro).<br><small>⚡ <i>Example: E. Sreedharan delivered Delhi Metro lines ahead of schedule.</i></small>",
+                            "<b>Modern Lateral Integration:</b> Nandan Nilekani (Aadhaar) and Parameswaran Iyer (Swachh Bharat).<br><small>⚡ <i>Example: Combining specialist expertise with government machinery.</i></small>"
                         ],
                         "k": [
                             "Verghese Kurien",
@@ -8580,23 +8860,32 @@ TOPICS = {
                             "E. Sreedharan",
                             "Nandan Nilekani",
                             "Parameswaran Iyer"
-                        ],
-                        "n": "E. Sreedharan finished Delhi Metro lines ahead of schedule because he had a 25-year railway engineering background and zero tolerance for bureaucratic red-tape!"
+                        ]
                     },
                     {
                         "t": "Synergy & Dilemma: Aspirational Districts & Lateral Entry Safeguards",
+                        "pts": [
+                            {
+                                "kw": "Aspirational Districts Programme (ADP)",
+                                "ex": "Fast-tracked development in 112 backward districts driven by real-time ranking on the Champions of Change dashboard.",
+                                "desc": "Proven synergy — young Generalist District Collectors coordinate line departments while Specialist Fellows provide deep data analytics."
+                            },
+                            {
+                                "kw": "August 2024 Lateral Entry Rollback",
+                                "ex": "In August 2024, UPSC withdrew an advertisement for 45 lateral posts (Joint Secretary/Director) over concerns regarding non-application of Article 16(4) reservation quotas.",
+                                "desc": "Established the urgent need for an institutionalized, permanent UPSC statutory framework harmonizing domain expertise with constitutional social justice."
+                            }
+                        ],
                         "b": [
-                            "<b>Aspirational Districts Programme (ADP):</b> Proven institutional synergy — young Generalist District Collectors coordinate while Specialist Aspirational District Fellows provide technical data analytics on Champions of Change.",
-                            "<b>August 2024 Lateral Entry Rollback:</b> UPSC withdrew an advertisement for 45 lateral posts (Joint Secretary & Director) due to public concerns regarding non-application of Article 16(4) reservation quotas.",
-                            "<b>The Resolution Blueprint:</b> Institutionalize lateral entry through a transparent, statutory UPSC framework with clear cadre-pooling and constitutional reservation safeguards."
+                            "<b>Aspirational Districts Programme:</b> Generalist Collector coordination + Specialist Fellows.<br><small>⚡ <i>Example: Real-time monitoring on Champions of Change dashboard.</i></small>",
+                            "<b>August 2024 Lateral Entry Rollback:</b> 45 lateral posts withdrawn over Article 16(4) reservation compliance.<br><small>⚡ <i>Example: Need for institutionalized UPSC statutory framework.</i></small>"
                         ],
                         "k": [
                             "Aspirational Districts Programme",
                             "Champions of Change",
                             "Lateral Entry Controversy",
                             "Article 16(4) Compliance"
-                        ],
-                        "n": "The ADP shows that generalists and specialists don't need to fight — they complement each other when digital platforms bridge the gap!"
+                        ]
                     }
                 ],
                 "q": [
@@ -8672,13 +8961,25 @@ TOPICS = {
                 "n": "The 4-Pillar Way Forward & The 'Bamboo Frame'",
                 "e": "🎋",
                 "d": "Mission Karmayogi FRAC, Desk Officer de-layering, Generalist-Plus & the Bamboo Frame",
+                "section": "Way Forward",
                 "c": [
                     {
                         "t": "Way Forward: Mission Karmayogi & 3-Tier Desk Officer System",
+                        "pts": [
+                            {
+                                "kw": "Rule-Based to Role-Based HR",
+                                "ex": "Over 40 lakh civil servants undergoing competency-mapped training on the iGOT Karmayogi digital platform.",
+                                "desc": "Mission Karmayogi's Framework of Roles, Activities, and Competencies (FRAC) matches officers to posts based on demonstrated competencies rather than seniority alone."
+                            },
+                            {
+                                "kw": "Desk Officer System (Max 3 Tiers)",
+                                "ex": "Central Secretariat Desk Officer System eliminating 4 layers of file transit.",
+                                "desc": "Caps file noting to a maximum of 3 tiers (Desk Officer → Joint Sec → Sec), eliminating sluggish multi-layer paper trails."
+                            }
+                        ],
                         "b": [
-                            "<b>From Rule-Based to Role-Based HR:</b> Mission Karmayogi’s Framework for Roles, Activities, and Competencies (FRAC) replaces arbitrary seniority with competency-mapped assignments.",
-                            "<b>iGOT Karmayogi Continuous Upskilling:</b> Digital learning platform delivering continuous professional training across behavioral, functional, and domain competencies.",
-                            "<b>Desk Officer De-layering:</b> Capping secretariat file noting to a maximum of 3 tiers (Desk Officer → Joint Sec → Sec), eliminating the sluggish 6–8 tier paper relay."
+                            "<b>Rule-Based to Role-Based HR:</b> Mission Karmayogi FRAC competency mapping.<br><small>⚡ <i>Example: Over 40 lakh civil servants trained on iGOT platform.</i></small>",
+                            "<b>Desk Officer System:</b> Caps file noting to a maximum of 3 tiers.<br><small>⚡ <i>Example: Eliminates 4 layers of file transit in Central Secretariat.</i></small>"
                         ],
                         "k": [
                             "Mission Karmayogi",
@@ -8686,23 +8987,32 @@ TOPICS = {
                             "iGOT Platform",
                             "Desk Officer System",
                             "3-Tier De-layering"
-                        ],
-                        "n": "FRAC ensures you don't get assigned to the Ministry of Finance just because your batch rank was high 20 years ago!"
+                        ]
                     },
                     {
                         "t": "Way Forward: The 'Generalist-Plus' Model & The 'Bamboo Frame'",
+                        "pts": [
+                            {
+                                "kw": "The 'Generalist-Plus' Model",
+                                "ex": "10–12 years of foundational grassroots district immersion (SDM/DM) followed by mandatory specialization in 2–3 core domain clusters.",
+                                "desc": "Preserves the irreplaceable grassroots field reality while building technical depth at the policy apex."
+                            },
+                            {
+                                "kw": "Steel Frame to Bamboo Frame Metaphor",
+                                "ex": "Ready-to-use conclusion for 2016 Q14 and 2026 Q8.",
+                                "desc": "“Contemporary governance does not require choosing between the generalist and the specialist in a zero-sum binary; rather, it demands evolving from a colonial 'Steel Frame' into a collaborative 'Bamboo Frame'—flexible, specialized at the apex, yet deeply rooted in grassroots realities—to achieve Viksit Bharat by 2047.”"
+                            }
+                        ],
                         "b": [
-                            "<b>The Generalist-Plus Hybrid:</b> 10–12 years of foundational grassroots district immersion (SDM/DM) followed by mandatory domain-track specialization in 1 of 11 clusters.",
-                            "<b>Opening SAG/HAG Posts:</b> Senior Administrative Grade and Higher Administrative Grade posts open to all cadres (IAS, IPS, IRS, engineers, scientists, and lateral entrants) on merit.",
-                            "<b>Steel Frame to Bamboo Frame:</b> India must transition from an unbending, rigid colonial 'Steel Frame' to a flexible, resilient, deeply anchored 'Bamboo Frame' for Viksit Bharat 2047."
+                            "<b>The 'Generalist-Plus' Model:</b> 10–12 years district field immersion followed by mandatory domain specialization.<br><small>⚡ <i>Example: Ground-truth district empathy combined with apex domain mastery.</i></small>",
+                            "<b>Steel Frame to Bamboo Frame:</b> Flexible, specialized at apex, deeply rooted in grassroots.<br><small>⚡ <i>Example: Ready-to-use conclusion for 2016 Q14 and 2026 Q8.</i></small>"
                         ],
                         "k": [
                             "Generalist-Plus Model",
                             "SAG/HAG Open Merit",
                             "Bamboo Frame",
                             "Viksit Bharat 2047"
-                        ],
-                        "n": "Conclude your 2016 and 2026 mains answers with this punchy metaphor: 'We must transition from an unbending colonial Steel Frame to a resilient, deeply rooted Bamboo Frame!'"
+                        ]
                     }
                 ],
                 "q": [

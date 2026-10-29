@@ -181,6 +181,26 @@ button:focus-visible{outline:3px solid var(--selb);outline-offset:2px}
 
 
 
+
+/* SR Minimalist Fast-Reading Styles (Exclusively for cs_structure / SR Tab) */
+.sr-card-head{display:flex;flex-direction:column;gap:4px;margin-bottom:14px;padding-bottom:10px;border-bottom:1.5px solid var(--line)}
+.sr-badge-tag{align-self:flex-start;background:var(--card-sub);border:1.5px solid var(--line);border-radius:6px;padding:3px 10px;font-size:11.5px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:0.04em}
+.sr-counter{font-size:12px;font-weight:700;color:var(--mut)}
+.sr-card-title{font-size:20px;line-height:1.25;font-weight:800;margin:2px 0 0;color:var(--ink)}
+.sr-pyq-box{background:var(--card-sub);border:1.5px solid var(--line);border-left:4px solid var(--selb);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.sr-pyq-year{font-size:12px;font-weight:800;color:var(--selb);text-transform:uppercase;margin-bottom:4px}
+.sr-pyq-text{font-size:15px;line-height:1.4;font-weight:700;color:var(--ink)}
+.sr-demand-label{font-size:12px;font-weight:800;color:var(--accd);letter-spacing:0.03em;margin-bottom:8px}
+.sr-point-box{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.02)}
+.sr-kw-btn{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;padding:0 0 6px;cursor:pointer;text-align:left;font:inherit}
+.sr-kw-tag{background:rgba(37,99,235,0.08);color:var(--selb);padding:4px 10px;border-radius:8px;font-size:13.5px;font-weight:800}
+.sr-kw-toggle{font-size:12px;color:var(--mut);font-weight:600}
+.sr-visible-example{background:var(--card-sub);border-radius:8px;padding:8px 10px;margin-top:4px;font-size:13px;line-height:1.35;color:var(--ink)}
+.sr-ex-badge{font-size:11px;font-weight:800;color:var(--accd);text-transform:uppercase;display:inline-block;margin-right:4px}
+.sr-ex-text{display:inline;font-weight:600}
+.sr-hidden-detail{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:13.5px;line-height:1.4;color:var(--ink);animation:pop .2s ease-out}
+.sr-diag-box{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px;margin-top:8px;margin-bottom:14px}
+
 </style></head><body><div id="app"></div>
 <script>
 var DATA = %TOPICS_JSON%;
@@ -302,6 +322,23 @@ var SYLLABUS = {
           { id: "civil_values", title: "1. Foundational Values for Civil Services", years: "2019, 2022", desc: "Integrity, impartiality, objectivity, dedication & empathy for weaker sections" },
           { id: "probity", title: "2. Probity in Governance & Anti-Corruption", years: "2020, 2024", desc: "Lokpal, CVC, Whistleblowers protection & Conflict of Interest code" },
           { id: "case_dilemmas", title: "3. Ethical Dilemmas & Applied Case Studies", years: "2021, 2024", desc: "Balancing rules with compassion, public protest crisis & whistleblowing" }
+        ]
+      }
+    }
+  },
+  sr: {
+    name: "SR",
+    label: "Spaced Repetition & High-Yield Governance",
+    domains: {
+      governance: {
+        name: "Governance",
+        ico: "🏛️",
+        themes: [
+          { id: "gov_theme_1", title: "1. Important Aspects of Governance, Transparency & Accountability", years: "2018, 2023", desc: "E-Governance applications, Citizen's Charters, transparency, accountability and institutional measures.", topic: "charter" },
+          { id: "gov_theme_2", title: "2. Role of Civil Services in a Democracy (Active: Cluster 1) 🎯", years: "2016, 2017, 2020, 2024, 2026", desc: "Colonial legacy, generalist vs specialist, 3Cs risk aversion, committees & Bamboo Frame.", topic: "cs_structure" },
+          { id: "gov_theme_3", title: "3. Development Processes & The Development Industry", years: "2015, 2021, 2023", desc: "Role of NGOs, SHGs, various groups and associations, donors, charities, institutional and other stakeholders." },
+          { id: "gov_theme_4", title: "4. Government Policies & Interventions for Development", years: "2017, 2019, 2024", desc: "Government policies and interventions for development in various sectors and issues arising out of their design and implementation." },
+          { id: "gov_theme_5", title: "5. Pressure Groups & Formal/Informal Associations", years: "2016, 2019, 2023", desc: "Pressure groups and formal/informal associations and their role in the Polity (or statutory, regulatory & quasi-judicial bodies)." }
         ]
       }
     }
@@ -1590,17 +1627,104 @@ function quit(){
 
 function card(){ R.sh = 1; cardDraw(); }
 
+
+function toggleSRDetail(idx){
+  var el = document.getElementById('sr-det-' + idx);
+  var arr = document.getElementById('sr-arr-' + idx);
+  if (el) {
+    if (el.style.display === 'none' || !el.style.display) {
+      el.style.display = 'block';
+      if (arr) arr.textContent = ' ▴ (Tap to collapse)';
+    } else {
+      el.style.display = 'none';
+      if (arr) arr.textContent = ' ▾ (Tap to read write-up)';
+    }
+  }
+}
+
 function cardDraw(){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[R.i];
   var c = l.c[R.ci];
-  var n = c.b.length; // number of bullet points (e.g. 3)
   var tot = l.c.length;
   var hue = top.hue[R.i % top.hue.length];
   var ico = top.ico[R.i % top.ico.length][R.ci % 3] || l.e;
-
-  // Check extra sequential steps available after bullet n
   var diagramHtml = diag(CUR_TOPIC, R.i, R.ci);
+
+  // === DEDICATED SR TAB / CS_STRUCTURE MINIMALIST ARCHITECTURE ===
+  if (CUR_TOPIC === 'cs_structure') {
+    var secName = l.section || (R.i === 0 ? 'Introduction' : (R.i <= 2 ? 'Background' : (R.i <= 4 ? 'Challenges' : (R.i === 5 ? 'Solutions' : (R.i === 6 ? 'Challenges' : (R.i <= 8 ? 'Committees' : (R.i === 9 ? 'Case Studies' : 'Way Forward')))))));
+    var h = head() + '<div class="body" style="--h:' + hue + '">';
+
+    // Clean Minimalist Heading (No colorful icon top bar)
+    h += '<div class="sr-card-head">' +
+      '<div class="sr-badge-tag">' + esc(secName) + '</div>' +
+      '<div class="sr-counter">Page ' + (R.ci + 1) + ' of ' + tot + '</div>' +
+      '<h2 class="sr-card-title">' + esc(c.t) + '</h2>' +
+    '</div>';
+
+    // Step 1: Special Question Demand Formatting
+    if (c.isQuestionDemand && c.pyqText) {
+      h += '<div class="sr-pyq-box">' +
+        '<div class="sr-pyq-year">' + esc(c.pyqYear) + '</div>' +
+        '<div class="sr-pyq-text">' + esc(c.pyqText) + '</div>' +
+      '</div>';
+      h += '<div class="sr-demand-label">🎯 DEMAND OF THE QUESTION:</div>';
+    }
+
+    // Points Rendering (Keywords-First with Visible Recent Examples & Tap-to-Reveal Write-Ups)
+    if (c.pts && c.pts.length) {
+      for (var p = 0; p < c.pts.length; p++) {
+        var pt = c.pts[p];
+        h += '<div class="sr-point-box">' +
+          '<button class="sr-kw-btn" type="button" onclick="toggleSRDetail(' + p + ')">' +
+            '<span class="sr-kw-tag">🔑 ' + esc(pt.kw) + '</span>' +
+            '<span class="sr-kw-toggle" id="sr-arr-' + p + '"> ▾ (Tap to read write-up)</span>' +
+          '</button>' +
+          '<div class="sr-visible-example">' +
+            '<span class="sr-ex-badge">⚡ Example</span>' +
+            '<div class="sr-ex-text">' + pt.ex + '</div>' +
+          '</div>' +
+          '<div class="sr-hidden-detail" id="sr-det-' + p + '" style="display:none">' +
+            '<div class="sr-desc-text">' + pt.desc + '</div>' +
+          '</div>' +
+        '</div>';
+      }
+    } else if (c.b && c.b.length) {
+      for (var i = 0; i < c.b.length; i++) {
+        h += '<div class="tile"><span class="dot">✦</span><p>' + c.b[i] + '</p></div>';
+      }
+    }
+
+    // Diagram (rendered below points)
+    if (diagramHtml) {
+      h += '<div class="sr-diag-box">' + diagramHtml + '</div>';
+    }
+
+    // Button Label
+    var btnText = 'Got it · Next Card →';
+    if (R.i === 0) {
+      if (R.ci === 0) btnText = 'Continue to Question 2 →';
+      else if (R.ci === 1) btnText = 'Continue to Thematic Synthesis →';
+      else btnText = 'Start Learning Chapter →';
+    } else if (R.ci === tot - 1) {
+      btnText = (l.q && l.q.length) ? 'Got it · Start Questions →' : 'Complete Step →';
+    }
+
+    h += '</div><div class="foot"><button class="btn" id="go">' + btnText + '</button></div>';
+    app.innerHTML = h;
+    quit();
+
+    document.getElementById("go").onclick = function(){
+      R.solved++;
+      R.ci++;
+      next();
+    };
+    return;
+  }
+
+  // === STANDARD CAVA LEARNING ENGINE FOR ALL OTHER TOPICS (100% INTACT) ===
+  var n = c.b.length;
   var hasDiag = !!diagramHtml;
   var hasKw = !!(c.k && c.k.length);
   var hasOwl = !!c.n;
