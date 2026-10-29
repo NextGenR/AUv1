@@ -58,798 +58,977 @@ TOPICS = {
         ],
         "lessons": [
             {
-                "n": "Macro Pillars & Economic Footprint",
-                "e": "🏭",
-                "d": "GDP, GVA, exports and 11.1 Cr livelihoods",
-                "c": [
-                    {
-                        "t": "The Giant in Plain Sight",
-                        "b": [
-                            "India's MSME sector is the second largest employer after agriculture, sustaining <b>over 11.1 Crore jobs</b> across <b>6.33 Crore enterprises</b>.",
-                            "Macro footprint: <b>31.1% of India's GDP</b>, <b>35.4% of Manufacturing GVA</b>, and <b>48.6% of Total Merchandise Exports</b>.",
-                            "Over <b>51.2% of MSMEs are in rural areas</b>, promoting equitable regional growth and reducing distress migration."
-                        ],
-                        "k": [
-                            "31.1% GDP Share",
-                            "48.6% Merchandise Exports",
-                            "11.1 Crore Jobs",
-                            "Rural Democratization"
-                        ],
-                        "n": "Low capital investment per job created makes MSMEs vital for India's demographic dividend."
-                    },
-                    {
-                        "t": "Constitutional & Policy Canvas",
-                        "b": [
-                            "Rooted in <b>Directive Principles: Article 39(b) and 39(c)</b> to prevent concentration of wealth and ensure equitable resource distribution.",
-                            "Key pillar for realizing a <b>$5 Trillion economy</b> and achieving the vision of <b>Viksit Bharat 2047</b>.",
-                            "High representation of vulnerable social groups: significant ownership by SC, ST, and women entrepreneurs."
-                        ],
-                        "k": [
-                            "Article 39(b) & 39(c)",
-                            "Inclusive Growth",
-                            "Viksit Bharat 2047"
-                        ],
-                        "n": "Exam angle: GS-3 (Mobilization of Resources, Employment, Industrial Policy)."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "What proportion of India's total merchandise exports is contributed by MSMEs?",
-                        "o": [
-                            "About 15%",
-                            "About 25%",
-                            "About 48.6%",
-                            "Over 75%"
-                        ],
-                        "a": 2,
-                        "e": "MSMEs account for ~48.6% of India's total merchandise exports across textiles, engineering, and leather."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "More than 50% of MSME units in India are located in rural areas.",
-                        "a": 0,
-                        "e": "True. 51.2% of MSMEs are based in rural India, serving as a vital engine for decentralized growth."
-                    },
-                    {
-                        "k": "multi",
-                        "q": "Tap all verified macroeconomic benchmarks of India's MSME sector.",
-                        "o": [
-                            "31.1% of India's GDP",
-                            "35.4% of Manufacturing GVA",
-                            "11.1 Crore jobs sustained",
-                            "90% of central corporate tax"
-                        ],
-                        "a": [
-                            0,
-                            1,
-                            2
-                        ],
-                        "e": "31.1% GDP, 35.4% Manufacturing GVA, and 11.1 Cr jobs are verified government benchmarks."
-                    },
-                    {
-                        "k": "match",
-                        "q": "Match the macroeconomic metric to its official benchmark.",
-                        "p": [
-                            [
-                                "GDP Contribution",
-                                "31.1% of GDP"
-                            ],
-                            [
-                                "Manufacturing GVA",
-                                "35.4% share"
-                            ],
-                            [
-                                "Merchandise Exports",
-                                "48.6% of total"
-                            ],
-                            [
-                                "Employment Footprint",
-                                "11.1 Crore jobs"
-                            ]
-                        ],
-                        "e": "Memorize these four data points for your GS-3 introduction paragraphs!"
-                    },
-                    {
-                        "k": "flag",
-                        "q": "Tap the red flag: the one false part of this statement.",
-                        "o": [
-                            "MSMEs contribute 31.1% of India’s GDP,",
-                            "pay 90% of central corporate tax,",
-                            "and sustain 11.1 Crore livelihoods across India."
-                        ],
-                        "a": 1,
-                        "e": "MSMEs do NOT pay 90% of corporate tax; corporate tax is dominated by large conglomerates."
-                    },
-                    {
-                        "k": "order",
-                        "inl": 1,
-                        "q": "Build the sentence: tap words in order.",
-                        "o": [
-                            "MSMEs",
-                            "power",
-                            "nearly",
-                            "half",
-                            "of",
-                            "India’s",
-                            "merchandise",
-                            "exports"
-                        ],
-                        "e": "MSMEs power nearly half of India’s merchandise exports."
-                    }
-                ]
-            },
-            {
-                "n": "2020 Composite Classification",
-                "e": "📐",
-                "d": "Investment, turnover and export carve-out",
-                "c": [
-                    {
-                        "t": "The 2020 Paradigm Shift",
-                        "b": [
-                            "Under the <b>Atmanirbhar Bharat package (July 2020)</b>, the government scrapped the old 2006 bifurcation between manufacturing and service units.",
-                            "Introduced a <b>composite criteria</b> combining both <b>Plant & Machinery Investment</b> and <b>Annual Turnover</b>.",
-                            "Both conditions must be satisfied. Crossing either limit moves the enterprise into the higher bracket."
-                        ],
-                        "k": [
-                            "Composite Criteria",
-                            "Unified Classification",
-                            "Atmanirbhar Bharat"
-                        ],
-                        "n": "Replaced the archaic 2006 manufacturing vs services equipment division."
-                    },
-                    {
-                        "t": "The 1/5, 10/50, 50/250 Rule",
-                        "b": [
-                            "<b>Micro:</b> Investment up to <b>₹1 Crore</b> AND Turnover up to <b>₹5 Crore</b> (1:5 ratio).",
-                            "<b>Small:</b> Investment up to <b>₹10 Crore</b> AND Turnover up to <b>₹50 Crore</b> (10:50 ratio).",
-                            "<b>Medium:</b> Investment up to <b>₹50 Crore</b> AND Turnover up to <b>₹250 Crore</b> (50:250 ratio).",
-                            "Notice the constant <b>5x turnover multiplier</b> across all three tiers!"
-                        ],
-                        "k": [
-                            "Micro (1 Cr / 5 Cr)",
-                            "Small (10 Cr / 50 Cr)",
-                            "Medium (50 Cr / 250 Cr)",
-                            "5x Multiplier"
-                        ],
-                        "n": "Easy mnemonic: 1 -> 10 -> 50 for Investment, multiply by 5 for Turnover!"
-                    },
-                    {
-                        "t": "Export Turnover Exclusion",
-                        "b": [
-                            "A landmark reform: <b>Export turnover is completely EXCLUDED</b> from calculating the turnover ceiling!",
-                            "Why? To prevent growing firms from fearing that exporting more will cost them their MSME priority sector status.",
-                            "An enterprise can export ₹500 Cr and still remain a 'Small' enterprise as long as domestic turnover is under ₹50 Cr."
-                        ],
-                        "k": [
-                            "Export Carve-out",
-                            "Global Scale",
-                            "Incentive Compatibility"
-                        ],
-                        "n": "Removes the export penalty and directly supports Atmanirbhar Bharat export competitiveness."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "What are the ceiling limits for a 'Small' enterprise under the 2020 classification?",
-                        "o": [
-                            "Inv ₹1 Cr / TO ₹5 Cr",
-                            "Inv ₹10 Cr / TO ₹50 Cr",
-                            "Inv ₹50 Cr / TO ₹250 Cr",
-                            "Inv ₹25 Cr / TO ₹100 Cr"
-                        ],
-                        "a": 1,
-                        "e": "Small enterprise: Investment up to ₹10 Crore AND Turnover up to ₹50 Crore."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "Export turnover is included when determining whether an enterprise crosses the MSME turnover threshold.",
-                        "a": 1,
-                        "e": "False. Export turnover is explicitly excluded to encourage MSMEs to export aggressively without losing benefits."
-                    },
-                    {
-                        "k": "order",
-                        "q": "Arrange the 2020 MSME tiers in ascending order of investment ceilings.",
-                        "o": [
-                            "Micro (₹1 Crore)",
-                            "Small (₹10 Crore)",
-                            "Medium (₹50 Crore)"
-                        ],
-                        "e": "Micro (₹1 Cr) → Small (₹10 Cr) → Medium (₹50 Cr)."
-                    },
-                    {
-                        "k": "match",
-                        "q": "Match the MSME tier to its maximum investment limit.",
-                        "p": [
-                            [
-                                "Micro Enterprise",
-                                "Up to ₹1 Crore"
-                            ],
-                            [
-                                "Small Enterprise",
-                                "Up to ₹10 Crore"
-                            ],
-                            [
-                                "Medium Enterprise",
-                                "Up to ₹50 Crore"
-                            ],
-                            [
-                                "Turnover Multiplier",
-                                "5x Investment"
-                            ]
-                        ],
-                        "e": "Clean 1:5, 10:50, 50:250 mathematical formula."
-                    },
-                    {
-                        "k": "year",
-                        "q": "Slide to the year the composite MSME classification (Investment + Turnover) was notified under Atmanirbhar Bharat.",
-                        "a": 2020,
-                        "tol": 0,
-                        "min": 2005,
-                        "max": 2025,
-                        "e": "July 2020."
-                    },
-                    {
-                        "k": "sort",
-                        "q": "Sort by enterprise ceiling: Micro, Small, or Medium?",
-                        "b": [
-                            "Micro",
-                            "Small",
-                            "Medium"
-                        ],
-                        "it": [
-                            [
-                                "₹1 Cr Invest / ₹5 Cr Turnover",
-                                0
-                            ],
-                            [
-                                "₹10 Cr Invest / ₹50 Cr Turnover",
-                                1
-                            ],
-                            [
-                                "₹50 Cr Invest / ₹250 Cr Turnover",
-                                2
-                            ]
-                        ],
-                        "e": "Micro = 1/5; Small = 10/50; Medium = 50/250. Export turnover is excluded!"
-                    }
-                ]
-            },
-            {
-                "n": "The Dwarfism Paradox",
-                "e": "📉",
-                "d": "Why Indian firms stay micro vs German Mittelstand",
-                "c": [
-                    {
-                        "t": "The Missing Middle & Dwarfism",
-                        "b": [
-                            "Economic Survey highlights a severe structural deformity: <b>over 99.4% of enterprises in India remain Micro</b>!",
-                            "Only <b>0.52% are Small</b>, and an infinitesimal <b>0.08% are Medium</b>.",
-                            "Instead of an upright pyramid or healthy cylinder, India has an <b>inverted mushroom</b>: vast dwarfs and giant conglomerates, with a missing middle."
-                        ],
-                        "k": [
-                            "Dwarfism Paradox",
-                            "Missing Middle",
-                            "99.4% Micro Share"
-                        ],
-                        "n": "Economic Survey distinguishes between 'infants' (young firms that grow) and 'dwarfs' (old firms that deliberately stay small)."
-                    },
-                    {
-                        "t": "The Regulatory Cliff",
-                        "b": [
-                            "Why don't Indian firms grow? Because crossing the micro threshold triggers a <b>regulatory cliff</b>.",
-                            "Firms fear losing priority sector lending, tax breaks, and flexible labor compliance exemptions.",
-                            "Capital and labor become locked in low-productivity dwarf units, preventing <b>Schumpeterian 'Creative Destruction'</b>."
-                        ],
-                        "k": [
-                            "Regulatory Cliff",
-                            "Perverse Incentives",
-                            "Creative Destruction"
-                        ],
-                        "n": "Subsidies tied to remaining small perversely incentivize staying small."
-                    },
-                    {
-                        "t": "The German 'Mittelstand' Benchmark",
-                        "b": [
-                            "Germany's economic miracle rests on its <b>Mittelstand</b>: highly innovative, agile medium-sized manufacturing champions.",
-                            "Features: <b>Scale-neutral incentives</b> (subsidies don't vanish upon growth), <b>dual vocational training</b>, and long-term bank capital.",
-                            "India must transition from protecting dwarfs to empowering Mittelstand-style global scale."
-                        ],
-                        "k": [
-                            "German Mittelstand",
-                            "Scale-Neutrality",
-                            "Hidden Champions"
-                        ],
-                        "n": "A classic international case study to quote in your GS-3 conclusion."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "What percentage of enterprises in India's MSME sector are micro units?",
-                        "o": [
-                            "Around 50%",
-                            "Around 75%",
-                            "Over 99.4%",
-                            "Exactly 33%"
-                        ],
-                        "a": 2,
-                        "e": "Over 99.4% of all MSMEs in India are micro enterprises, showcasing extreme dwarfism."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "Economic Survey describes 'dwarfs' as young startup firms that need temporary policy protection to grow.",
-                        "a": 1,
-                        "e": "False. Young firms are 'infants'. 'Dwarfs' are older firms that intentionally stay small to exploit policy exemptions."
-                    },
-                    {
-                        "k": "multi",
-                        "q": "Tap the core root causes of MSME dwarfism in India.",
-                        "o": [
-                            "Regulatory cliff upon scaling up",
-                            "Loss of priority sector lending and fiscal exemptions",
-                            "Excessive supply of equity capital",
-                            "Distortionary size-based incentives"
-                        ],
-                        "a": [
-                            0,
-                            1,
-                            3
-                        ],
-                        "e": "Size-based incentives, regulatory cliffs, and fear of losing exemptions trap firms in dwarfism."
-                    },
-                    {
-                        "k": "match",
-                        "q": "Match the economic concept to its definition.",
-                        "p": [
-                            [
-                                "Dwarfism",
-                                "Older firms deliberately remaining small"
-                            ],
-                            [
-                                "Missing Middle",
-                                "Scarcity of medium-sized enterprises"
-                            ],
-                            [
-                                "Mittelstand",
-                                "German scale-neutral medium firm model"
-                            ],
-                            [
-                                "Creative Destruction",
-                                "Dynamic firms replacing obsolete ones"
-                            ]
-                        ],
-                        "e": "Crucial terminology for GS-3 industrial policy answers."
-                    },
-                    {
-                        "k": "riddle",
-                        "q": "Detective: who am I? Fewer clues, more XP.",
+                        "n": "Macro Pillars & Economic Footprint",
+                        "d": "31.1% GDP, 48.6% exports, 11 Cr livelihoods & rural footprint",
+                        "e": "🏭",
+                        "practice_first": True,
                         "c": [
-                            "I am an economic phenomenon documented by Chief Economic Advisor KV Subramanian.",
-                            "Firms stay deliberately small and under 100 workers to retain subsidies and avoid labor inspections.",
-                            "I prevent India from building global Mittelstand champions."
+                                    {
+                                                "t": "The Giant in Plain Sight: 31.1% GDP & 48.6% Exports",
+                                                "b": [
+                                                            "<b>31.1% of India's GDP</b> and ~35.4% of total manufacturing gross value added (GVA) originate from the MSME ecosystem.",
+                                                            "MSMEs drive <b>48.6% of India's total merchandise exports</b> across textiles, engineering goods, leather, and gems.",
+                                                            "With <b>11.1 Crore jobs</b>, MSMEs are the second largest employer in India after agriculture, creating ~33 jobs per crore of capital invested."
+                                                ],
+                                                "k": [
+                                                            "31.1% GDP",
+                                                            "48.6% Exports",
+                                                            "11.1 Cr Jobs",
+                                                            "Labor-to-Capital Ratio"
+                                                ],
+                                                "n": "MSMEs are not a peripheral welfare sector—they power nearly half of India's outward trade and absorb rural surplus labor."
+                                    },
+                                    {
+                                                "t": "Decentralized Livelihoods: 51.2% Rural Anchor",
+                                                "b": [
+                                                            "Over <b>51.2% of MSMEs</b> are based in rural India, serving as the frontline defense against distress agrarian migration.",
+                                                            "Social equity anchor: ~<b>66% of MSMEs</b> are owned by socially disadvantaged groups (SC, ST, and OBCs), and ~20% are women-led.",
+                                                            "Fulfills <b>Article 43</b> (promotion of cottage industries) and decentralizes manufacturing away from congested tier-1 metros."
+                                                ],
+                                                "k": [
+                                                            "51.2% Rural",
+                                                            "66% SC/ST/OBC Owned",
+                                                            "Article 43",
+                                                            "Spatial Decentralization"
+                                                ],
+                                                "n": "Whenever you argue for inclusive regional growth in GS-3, cite the 51.2% rural MSME footprint."
+                                    }
                         ],
-                        "o": [
-                            "Dwarfism syndrome",
-                            "Twin balance sheet",
-                            "Dutch disease",
-                            "Liquidity trap"
-                        ],
-                        "a": 0,
-                        "e": "Dwarfism syndrome: firms stay dwarfs rather than growing into giants."
-                    }
-                ]
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "A state draft industrial policy claims that MSMEs contribute only ~15% to India's merchandise exports and under 20% to GDP. What is the verified official macroeconomic footprint of MSMEs in India?",
+                                                "o": [
+                                                            "~15% GDP and ~20% Exports",
+                                                            "~20% GDP and ~30% Exports",
+                                                            "~31.1% GDP and ~48.6% Merchandise Exports",
+                                                            "~45% GDP and ~70% Merchandise Exports"
+                                                ],
+                                                "a": 2,
+                                                "kw": "Foundational Macroeconomic Share",
+                                                "e": "MSMEs are the backbone of India's economy, accounting for ~31.1% of India's GDP, 35.4% of manufacturing output, and an astonishing 48.6% of total merchandise exports.",
+                                                "data": "31.1% of GDP · 35.4% Manufacturing GVA · 48.6% Merchandise Exports (MSME Ministry Annual Report 2023-24).",
+                                                "ex": "Engineering goods from Rajkot, leather from Agra, textiles from Tirupur and Surat drive nearly half of India's outward shipments.",
+                                                "mains": "Quote these 3 golden macro figures in any introduction to establish the high developmental stakes of MSME growth."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "True or False: More than 60% of all MSME enterprises in India are concentrated in urban metropolitan tier-1 hubs.",
+                                                "a": 1,
+                                                "kw": "Rural Industrialization & Decentralization",
+                                                "e": "False! Official data shows that 51.2% of MSMEs are located in rural India, serving as the country's primary engine for decentralized livelihood diversification outside agriculture.",
+                                                "data": "51.2% Rural vs 48.8% Urban distribution across 6.33 Crore estimated MSMEs.",
+                                                "ex": "Agro-processing units, handlooms, brassware in Moradabad, and bamboo crafts in Assam generate local employment, arresting distress urban migration.",
+                                                "mains": "Highlights MSMEs' role in reducing regional disparities and fulfilling Article 43 (decentralized cottage industries)."
+                                    },
+                                    {
+                                                "k": "multi",
+                                                "q": "Tap all verified macroeconomic benchmarks of India's MSME sector:",
+                                                "o": [
+                                                            "Sustains approximately 11.1 Crore jobs (second largest employer after agriculture)",
+                                                            "Owned predominantly (~66%) by socially disadvantaged groups (SC, ST, and OBCs)",
+                                                            "Accounts for nearly half (~48.6%) of merchandise exports",
+                                                            "Generates over 75% of India's central corporate income tax"
+                                                ],
+                                                "a": [
+                                                            0,
+                                                            1,
+                                                            2
+                                                ],
+                                                "kw": "Triple Inclusion Footprint",
+                                                "e": "MSMEs excel in employment (11.1 Cr jobs), export competitiveness (48.6%), and social inclusion (~66% SC/ST/OBC ownership). However, being predominantly informal and micro, they do NOT generate 75% of corporate tax.",
+                                                "data": "11.1 Crore jobs · ~66% owned by SC/ST/OBC entrepreneurs · ~20% women-headed.",
+                                                "ex": "Micro-enterprises in weaving clusters in Pochampally and coir units in Alappuzha sustain rural and marginalized family livelihoods.",
+                                                "mains": "Use the 'Employment-Equity-Export' triad to structure arguments on MSME-led inclusive development."
+                                    },
+                                    {
+                                                "k": "match",
+                                                "q": "Match each macroeconomic indicator to its official benchmark:",
+                                                "p": [
+                                                            [
+                                                                        "Merchandise Exports Share",
+                                                                        "48.6%"
+                                                            ],
+                                                            [
+                                                                        "GDP Contribution",
+                                                                        "31.1%"
+                                                            ],
+                                                            [
+                                                                        "Livelihoods Sustained",
+                                                                        "11.1 Crore jobs"
+                                                            ],
+                                                            [
+                                                                        "Rural Concentration",
+                                                                        "51.2% of units"
+                                                            ]
+                                                ],
+                                                "kw": "Macro Metric Matrix",
+                                                "e": "Mastering these four exact figures prevents generic statements in GS Paper 3 answers and earns high evaluator credibility.",
+                                                "data": "Merchandise exports: 48.6% | GDP: 31.1% | Livelihoods: 11.1 Cr | Rural: 51.2%.",
+                                                "ex": "Economic Survey 2023-24 highlights that capital-to-labor ratio in MSMEs is 4x lower than in large conglomerates, yielding higher job creation per invested crore.",
+                                                "mains": "Contrasts capital-intensive 'Jobless Growth' with labor-intensive MSME manufacturing."
+                                    },
+                                    {
+                                                "k": "flag",
+                                                "q": "Spot the red flag: which part of this statement is factually incorrect?",
+                                                "o": [
+                                                            "MSMEs employ over 11 Crore people across India",
+                                                            "Capital-intensive conglomerates create 4x more jobs per crore invested than MSMEs",
+                                                            "Over 50% of MSME units operate in rural areas",
+                                                            "MSMEs contribute more than 35% of India's manufacturing GVA"
+                                                ],
+                                                "a": 1,
+                                                "kw": "Capital Efficiency of MSMEs",
+                                                "e": "MSMEs—not large conglomerates—create nearly 4x more jobs per crore of capital invested because they utilize labor-intensive and decentralized manufacturing techniques.",
+                                                "data": "Labor intensity: MSMEs create ~33 jobs per ₹1 Crore invested vs ~8 jobs in heavy capital conglomerates.",
+                                                "ex": "Powerloom units in Bhiwandi and shoe-stitching workshops in Kanpur employ hundreds with modest capital equipment.",
+                                                "mains": "Vital argument against premature de-industrialization and hyper-capital automation."
+                                    },
+                                    {
+                                                "k": "order",
+                                                "q": "Build the sentence: tap words in order to form the core thesis on MSMEs.",
+                                                "o": [
+                                                            "MSMEs",
+                                                            "power",
+                                                            "half of",
+                                                            "India's exports",
+                                                            "and sustain",
+                                                            "11 Crore jobs"
+                                                ],
+                                                "kw": "Macro Synthesis Thesis",
+                                                "e": "MSMEs power nearly half of India's merchandise exports and sustain 11 Crore jobs across rural and urban landscapes.",
+                                                "data": "6.33 Crore enterprises across India, driving 48.6% of merchandise shipments.",
+                                                "ex": "Coimbatore pump and motor manufacturers supplying domestic and international markets.",
+                                                "mains": "Perfect 1-sentence opening hook for GS-3 answers on manufacturing and employment."
+                                    }
+                        ]
             },
             {
-                "n": "Delayed Payments & Section 43B(h)",
-                "e": "⏳",
-                "d": "MSMED Act Sections 15-19 & statutory teeth",
-                "c": [
-                    {
-                        "t": "Working Capital Asphyxiation",
-                        "b": [
-                            "Delayed payments from large corporate buyers and CPSEs are the #1 cause of MSME mortality.",
-                            "Small suppliers have weak bargaining power and are forced to accept payment delays of 120-180 days.",
-                            "This triggers severe liquidity crunches, inability to service bank debt, and insolvency."
-                        ],
-                        "k": [
-                            "Delayed Payments",
-                            "Working Capital Crisis",
-                            "Bargaining Asymmetry"
-                        ],
-                        "n": "MSMEs are often profitable on paper but bankrupt in cash flow."
-                    },
-                    {
-                        "t": "MSMED Act Statutory Mandate (Sections 15-19)",
-                        "b": [
-                            "<b>Section 15:</b> Buyer must pay within agreed period (maximum <b>45 days</b>; or 15 days if no agreement in writing).",
-                            "<b>Section 16:</b> Defaulting buyer must pay <b>compound interest with monthly rests at 3 TIMES the RBI Bank Rate</b>!",
-                            "<b>Section 18 & 19:</b> Micro & Small Enterprise Facilitation Councils (MSEFC). If buyer appeals, they must pre-deposit <b>75% of the award amount</b>!"
-                        ],
-                        "k": [
-                            "45-day Maximum Window",
-                            "3x RBI Bank Rate Compound Interest",
-                            "MSEFC",
-                            "75% Pre-deposit"
-                        ],
-                        "n": "The 75% pre-deposit under Section 19 prevents big buyers from tying small vendors in endless litigation."
-                    },
-                    {
-                        "t": "Section 43B(h) Income Tax Act Tooth",
-                        "b": [
-                            "Introduced in <b>Finance Act 2023</b> to enforce real payment discipline on buyers.",
-                            "Rule: A buyer can only claim tax deduction for purchases from MSMEs in the year the payment is <b>actually made</b>!",
-                            "If payment is delayed beyond the 45-day window, the deduction is disallowed that financial year, sharply raising the buyer's income tax bill."
-                        ],
-                        "k": [
-                            "Section 43B(h)",
-                            "Tax Disallowance",
-                            "Payment Discipline"
-                        ],
-                        "n": "Provides a direct financial penalty that forces corporate CFOs to pay MSMEs on time."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "What is the maximum payment credit period permitted under Section 15 of MSMED Act when agreed in writing?",
-                        "o": [
-                            "15 days",
-                            "30 days",
-                            "45 days",
-                            "90 days"
-                        ],
-                        "a": 2,
-                        "e": "Section 15 stipulates that the agreed credit period cannot exceed 45 days under any circumstances."
-                    },
-                    {
-                        "k": "mc",
-                        "q": "What penal interest rate applies to delayed payments under Section 16 of the MSMED Act?",
-                        "o": [
-                            "Bank Rate + 2%",
-                            "Simple interest at 10%",
-                            "3 times the RBI Bank Rate (compound interest)",
-                            "No interest penalty"
-                        ],
-                        "a": 2,
-                        "e": "Defaulting buyers must pay compound interest with monthly rests at 3 times the RBI Bank Rate."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "Under Section 43B(h), buyers can still claim tax deductions for delayed payments if they provide an affidavit.",
-                        "a": 1,
-                        "e": "False. Deductions are strictly disallowed for that financial year unless payment was made within the statutory 45-day limit."
-                    },
-                    {
-                        "k": "order",
-                        "q": "Put the delayed payments enforcement process in sequence.",
-                        "o": [
-                            "Supply of goods/services completed",
-                            "45-day maximum statutory window expires",
-                            "Filing application on MSME Samadhaan portal",
-                            "MSEFC arbitral award with 3x bank rate interest",
-                            "Buyer mandatory 75% pre-deposit for appeal"
-                        ],
-                        "e": "Supply → 45 days expire → Samadhaan filing → MSEFC award → 75% pre-deposit."
-                    },
-                    {
-                        "k": "flag",
-                        "q": "Tap the red flag.",
-                        "o": [
-                            "Section 15 of MSMED Act mandates payment within 45 days,",
-                            "defaults incur compound interest at 3 times bank rate,",
-                            "and defaulting corporate buyers get instant income tax deductions."
-                        ],
-                        "a": 2,
-                        "e": "Section 43B(h) DISALLOWS tax deduction to defaulting buyers until actual payment is made!"
-                    }
-                ]
-            },
-            {
-                "n": "Credit Gap & Financing Innovations",
-                "e": "💳",
-                "d": "UK Sinha Committee, TReDS & cash-flow lending",
-                "c": [
-                    {
-                        "t": "The ₹30 Lakh Crore Credit Chasm",
-                        "b": [
-                            "The <b>UK Sinha Committee (RBI, 2019)</b> estimated an unmet credit gap of over <b>₹30 Lakh Crore</b> in the MSME sector.",
-                            "Over 85% of MSMEs lack access to formal bank loans due to an absence of immovable physical collateral (real estate/land).",
-                            "Traditional banking relies on asset-based mortgages rather than business cash-flows."
-                        ],
-                        "k": [
-                            "UK Sinha Committee",
-                            "₹30 Lakh Crore Deficit",
-                            "Collateral Trap"
-                        ],
-                        "n": "Without formal credit, MSMEs are forced into predatory informal borrowing at 30-40% interest."
-                    },
-                    {
-                        "t": "Shift to Digital Cash-Flow Underwriting",
-                        "b": [
-                            "Public sector banks are pivoting from physical collateral to <b>digital footprint underwriting</b>.",
-                            "Assessing creditworthiness through <b>GST invoices</b>, bank statements via <b>Account Aggregators</b>, and UPI merchant turnover.",
-                            "Enables algorithm-driven collateral-free credit sanctioning in minutes rather than weeks."
-                        ],
-                        "k": [
-                            "Cash-flow Lending",
-                            "Account Aggregator",
-                            "Digital Footprint"
-                        ],
-                        "n": "Turns transaction data into an economic asset for the borrower."
-                    },
-                    {
-                        "t": "TReDS: Invoice Factoring Platform",
-                        "b": [
-                            "<b>Trade Receivables Discounting System (TReDS)</b>: an RBI-regulated institutional mechanism for electronic factoring.",
-                            "MSMEs upload accepted invoices; multiple banks and NBFCs bid to discount them without recourse.",
-                            "Budget 2024-25 lowered the mandatory buyer onboarding turnover threshold to <b>₹500 Crore</b> to force CPSEs and corporates onto the platform."
-                        ],
-                        "k": [
-                            "TReDS",
-                            "Factoring without Recourse",
-                            "₹500 Cr Mandate"
-                        ],
-                        "n": "Converts locked accounts receivable into instant liquid working capital."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "Which RBI-appointed committee authored the comprehensive blueprint on MSME credit and structural reforms?",
-                        "o": [
-                            "Nachiket Mor Committee",
-                            "UK Sinha Committee",
-                            "Bimal Jalan Committee",
-                            "Urjit Patel Committee"
-                        ],
-                        "a": 1,
-                        "e": "The UK Sinha Committee (2019) recommended the overhaul of MSME credit, TReDS expansion, and cash-flow underwriting."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "TReDS is an RBI-regulated electronic platform that enables MSMEs to discount their trade invoices through competitive financier bidding.",
-                        "a": 0,
-                        "e": "True. TReDS allows MSMEs to auction unpaid corporate invoices to financiers for upfront cash without recourse."
-                    },
-                    {
-                        "k": "multi",
-                        "q": "Tap all instruments facilitating digital cash-flow based MSME credit.",
-                        "o": [
-                            "Account Aggregator framework",
-                            "GST invoice data analytics",
-                            "TReDS factoring platform",
-                            "Physical land registry mortgage"
-                        ],
-                        "a": [
-                            0,
-                            1,
-                            2
-                        ],
-                        "e": "Account Aggregator, GST returns, and TReDS enable cash-flow lending, replacing physical mortgages."
-                    },
-                    {
-                        "k": "match",
-                        "q": "Match the financing tool to its key mechanism.",
-                        "p": [
-                            [
-                                "UK Sinha Committee",
-                                "₹30 Lakh Crore credit gap analysis"
-                            ],
-                            [
-                                "TReDS Platform",
-                                "Invoice discounting without recourse"
-                            ],
-                            [
-                                "Account Aggregator",
-                                "Consent-based digital financial data sharing"
-                            ],
-                            [
-                                "Cash-Flow Lending",
-                                "Credit based on GST transactions, not land"
-                            ]
-                        ],
-                        "e": "Core pillars of the digital credit revolution for MSMEs."
-                    },
-                    {
-                        "k": "riddle",
-                        "q": "Detective: who am I?",
+                        "n": "2020 Composite Classification",
+                        "d": "Composite criteria, 1:5 ratio, and the Export Exclusion Rule",
+                        "e": "📐",
+                        "practice_first": True,
                         "c": [
-                            "I am an institutional electronic platform regulated by RBI.",
-                            "MSMEs upload their trade receivables against corporate buyers.",
-                            "Financiers bid in reverse auctions to discount the invoices without recourse."
+                                    {
+                                                "t": "The 2020 Composite Criteria Paradigm Shift",
+                                                "b": [
+                                                            "<b>Abolition of the Manufacturing vs Services divide:</b> Pre-2020 thresholds penalized service firms with much lower investment caps. The 2020 reform unified both sectors under identical rules.",
+                                                            "<b>Composite formula:</b> Classification requires meeting BOTH <b>Investment in Plant & Machinery</b> AND <b>Annual Turnover</b> criteria simultaneously.",
+                                                            "<b>Uniform 1:5 ratio:</b> Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), Medium (50 Cr / 250 Cr)."
+                                                ],
+                                                "k": [
+                                                            "Composite Formula",
+                                                            "Mfg-Services Parity",
+                                                            "1:5 Proportionality",
+                                                            "July 2020 Reform"
+                                                ],
+                                                "n": "Memorize the 1:5 ratio: Investment multiplied by 5 gives the corresponding turnover ceiling."
+                                    },
+                                    {
+                                                "t": "The Export Turnover Exclusion Rule (Section 7)",
+                                                "b": [
+                                                            "<b>Export turnover is 100% EXCLUDED:</b> When calculating an enterprise's turnover ceiling, export of both goods and services is deducted.",
+                                                            "<b>Neutralizes fear of growth:</b> Allows successful MSME exporters to scale globally without fearing immediate loss of MSME fiscal shields.",
+                                                            "<b>Depreciated written-down value (WDV):</b> Investment is calculated on depreciated IT value, excluding pollution control and safety equipment."
+                                                ],
+                                                "k": [
+                                                            "Export Exclusion",
+                                                            "Section 7 MSMED",
+                                                            "Written Down Value",
+                                                            "Global Competitiveness"
+                                                ],
+                                                "n": "Export turnover exclusion is the most tested analytical nuance in UPSC Prelims and Mains."
+                                    },
+                                    {
+                                                "t": "Udyam Digital Self-Declaration Ecosystem",
+                                                "b": [
+                                                            "<b>Paperless & self-declaration:</b> Replaced manual inspection with Aadhaar-linked Udyam registration.",
+                                                            "<b>API integration with CBDT & GSTN:</b> Automatically verifies turnover and investment figures directly from filed Income Tax returns and GST returns.",
+                                                            "<b>Zero registration fee:</b> Eliminates touts and middleman extortion at the district industries center (DIC) level."
+                                                ],
+                                                "k": [
+                                                            "Udyam Registration",
+                                                            "PAN-GSTN Integration",
+                                                            "Faceless Governance",
+                                                            "Self-Declaration"
+                                                ],
+                                                "n": "Udyam is a textbook example of Digital Public Infrastructure applied to industrial regulation."
+                                    }
                         ],
-                        "o": [
-                            "TReDS",
-                            "Udyam",
-                            "GeM",
-                            "SWIFT"
-                        ],
-                        "a": 0,
-                        "e": "TReDS (Trade Receivables Electronic Discounting System)."
-                    }
-                ]
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "Scenario: Alpha Tech (Pune) has ₹8 Crore invested in plant & machinery, ₹45 Crore domestic turnover, and ₹20 Crore foreign export turnover (total turnover ₹65 Crore). Under the 2020 MSME notification, what is its legal classification?",
+                                                "o": [
+                                                            "Medium Enterprise (because total turnover ₹65 Cr exceeds ₹50 Cr)",
+                                                            "Small Enterprise (because export turnover is 100% excluded)",
+                                                            "Micro Enterprise (due to depreciation allowance on machinery)",
+                                                            "Disqualified from MSME status"
+                                                ],
+                                                "a": 1,
+                                                "kw": "The Export Exclusion Rule",
+                                                "e": "Crucial Rule: Under Section 7(1) of the amended MSMED Act, export turnover (both goods and services) is completely EXCLUDED when calculating the turnover ceiling! Net Turnover = ₹45 Cr – ₹20 Cr export = ₹25 Cr. Since Investment (₹8 Cr <= ₹10 Cr) and Net Turnover (₹25 Cr <= ₹50 Cr) both fit the Small tier, Alpha Tech is a Small Enterprise!",
+                                                "data": "Section 7 of MSMED Act (Notification S.O. 2119(E) dated 26 June 2020) explicitly mandates export exclusion.",
+                                                "ex": "A textile garment exporter in Tirupur with ₹70 Cr export sales and ₹30 Cr domestic sales remains a Small Enterprise, preserving preferential credit.",
+                                                "mains": "Explains how the 2020 reform incentivizes global export orientation without fear of losing MSME fiscal protections."
+                                    },
+                                    {
+                                                "k": "mc",
+                                                "q": "What are the ceiling limits for a 'Small' enterprise under the composite criteria introduced in July 2020?",
+                                                "o": [
+                                                            "Investment ₹1 Cr and Turnover ₹5 Cr",
+                                                            "Investment ₹10 Cr and Turnover ₹50 Cr",
+                                                            "Investment ₹20 Cr and Turnover ₹100 Cr",
+                                                            "Investment ₹50 Cr and Turnover ₹250 Cr"
+                                                ],
+                                                "a": 1,
+                                                "kw": "1:5 Proportionality Principle",
+                                                "e": "Under the 2020 composite definition, the ratio between Investment and Turnover is uniformly 1:5 across all tiers: Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), and Medium (50 Cr / 250 Cr).",
+                                                "data": "Micro: <= ₹1 Cr / <= ₹5 Cr | Small: <= ₹10 Cr / <= ₹50 Cr | Medium: <= ₹50 Cr / <= ₹250 Cr.",
+                                                "ex": "Eliminated the pre-2020 gap where service enterprises were restricted to lower investment thresholds than manufacturing.",
+                                                "mains": "Composite criteria ended the artificial divide between manufacturing and services, aligning with modern service-integrated production."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "True or False: If an enterprise exceeds the investment ceiling of ₹1 Crore for Micro, but its turnover is only ₹3 Crore (within the ₹5 Cr limit), it still remains classified as a Micro enterprise.",
+                                                "a": 1,
+                                                "kw": "Dual Ceiling Breach Trap",
+                                                "e": "False! To remain in a lower tier, an enterprise must satisfy BOTH criteria simultaneously. If EITHER the investment OR turnover crosses the ceiling, the enterprise is immediately upgraded to the higher tier.",
+                                                "data": "MSMED Notification 2020 Clause 2(1): Crossing either threshold automatically shifts the unit upward.",
+                                                "ex": "A high-precision dental lab buying a ₹2.5 Cr 3D metal printer is pushed into 'Small', even if its revenues are modest.",
+                                                "mains": "Prevents capital gold-plating while holding growing firms to appropriate compliance standards."
+                                    },
+                                    {
+                                                "k": "sort",
+                                                "q": "Sort these ceiling limits into their correct MSME tiers:",
+                                                "it": [
+                                                            [
+                                                                        "₹1 Cr Invest / ₹5 Cr Turn",
+                                                                        0
+                                                            ],
+                                                            [
+                                                                        "₹10 Cr Invest / ₹50 Cr Turn",
+                                                                        1
+                                                            ],
+                                                            [
+                                                                        "₹50 Cr Invest / ₹250 Cr Turn",
+                                                                        2
+                                                            ],
+                                                            [
+                                                                        "Micro Threshold",
+                                                                        0
+                                                            ],
+                                                            [
+                                                                        "Small Threshold",
+                                                                        1
+                                                            ],
+                                                            [
+                                                                        "Medium Threshold",
+                                                                        2
+                                                            ]
+                                                ],
+                                                "b": [
+                                                            "Micro",
+                                                            "Small",
+                                                            "Medium"
+                                                ],
+                                                "kw": "Threshold Matrix Calibration",
+                                                "e": "Micro (1/5 Cr), Small (10/50 Cr), and Medium (50/250 Cr) create a smooth upward glide-path for growing firms.",
+                                                "data": "Uniform 1:5 ratio maintains structural consistency across all three enterprise brackets.",
+                                                "ex": "Over 99% of registered enterprises fall in the Micro bucket; the threshold increases allow units to modernize equipment.",
+                                                "mains": "Essential table to reproduce in 10-marker and 15-marker GS-3 answers on MSME definitions."
+                                    },
+                                    {
+                                                "k": "year",
+                                                "q": "Slide to the year when the unified composite criteria (Investment + Turnover) and Udyam Portal were introduced:",
+                                                "min": 2014,
+                                                "max": 2024,
+                                                "a": 2020,
+                                                "tol": 0,
+                                                "kw": "Atmanirbhar Bharat Paradigm Shift",
+                                                "e": "Notification dated 26th June 2020 took effect on 1st July 2020 as part of the Atmanirbhar Bharat package, replacing the outdated 2006 framework.",
+                                                "data": "Replaced MSMED Act 2006 classification which relied purely on historical plant and machinery cost.",
+                                                "ex": "Launched alongside Udyam Registration, linking GSTN and PAN databases for automatic turnover verification.",
+                                                "mains": "Marked a decisive break from inspection-heavy physical verification to digital self-certification."
+                                    },
+                                    {
+                                                "k": "match",
+                                                "q": "Match the MSME tier to its maximum permissible investment in plant & machinery:",
+                                                "p": [
+                                                            [
+                                                                        "Micro Enterprise",
+                                                                        "₹1 Crore"
+                                                            ],
+                                                            [
+                                                                        "Small Enterprise",
+                                                                        "₹10 Crore"
+                                                            ],
+                                                            [
+                                                                        "Medium Enterprise",
+                                                                        "₹50 Crore"
+                                                            ],
+                                                            [
+                                                                        "Turnover Ratio",
+                                                                        "5x Investment"
+                                                            ]
+                                                ],
+                                                "kw": "Investment Cap Synthesis",
+                                                "e": "Investment caps are based on depreciated written down value (WDV) or purchase invoice, excluding pollution control and safety equipment.",
+                                                "data": "Micro <= ₹1 Cr | Small <= ₹10 Cr | Medium <= ₹50 Cr.",
+                                                "ex": "Auto component suppliers in Manesar upgrading CNC machines up to ₹10 Cr retain Small enterprise status.",
+                                                "mains": "Exclusion of pollution control equipment encourages green industrial upgrades without triggering threshold penalties."
+                                    }
+                        ]
             },
             {
-                "n": "Budget 2025-26 & Flagship Schemes",
-                "e": "🚀",
-                "d": "Credit guarantee, PM Vishwakarma & E-Commerce Hubs",
-                "c": [
-                    {
-                        "t": "New Credit Guarantee Scheme (Budget 2025)",
-                        "b": [
-                            "A self-financing guarantee fund providing <b>collateral-free credit cover up to ₹100 Crore</b> per MSME for machinery & equipment purchase.",
-                            "Focuses specifically on manufacturing scale-up and technological upgradation.",
-                            "Borrowers pay an annual guarantee fee based on the diminishing loan balance."
+                        "n": "The Dwarfism Paradox",
+                        "d": "Dwarfs vs infants, missing middle, and regulatory cliffs",
+                        "e": "📉",
+                        "practice_first": True,
+                        "c": [
+                                    {
+                                                "t": "The Inverted Pyramid & The Missing Middle",
+                                                "b": [
+                                                            "<b>99.4% Micro concentration:</b> Out of 6.33 Crore estimated MSMEs, an astounding 99.4% are Micro units. Small units comprise only 0.52%, and Medium units a meager 0.08%.",
+                                                            "<b>The Missing Middle:</b> In advanced industrial economies (Germany, Japan), mid-sized firms form a robust core. In India, micro-enterprises rarely graduate into small or medium scale.",
+                                                            "<b>Scale deficit:</b> Prevents Indian manufacturing from achieving economies of scale, supply chain resiliency, and global export dominance."
+                                                ],
+                                                "k": [
+                                                            "99.4% Micro",
+                                                            "Missing Middle",
+                                                            "Scale Deficit",
+                                                            "Inverted Pyramid"
+                                                ],
+                                                "n": "The Missing Middle is the primary structural reason India's manufacturing share has stagnated near 16-17% of GDP."
+                                    },
+                                    {
+                                                "t": "Economic Survey: Dwarfs vs Infant Enterprises",
+                                                "b": [
+                                                            "<b>Infants vs Dwarfs:</b> Former CEA K.V. Subramanian distinguished between 'Infants' (young firms that start small and rapidly scale up) and 'Dwarfs' (firms older than 10 years that deliberately remain small).",
+                                                            "<b>Perverse incentives:</b> Perpetual size-based subsidies, priority sector shields, and labor exemption thresholds incentivize firms to stay stunted forever.",
+                                                            "<b>Low productivity:</b> Dwarfs in India are 5x less productive and generate far fewer productive jobs than large, scaled enterprises."
+                                                ],
+                                                "k": [
+                                                            "Dwarfism Paradox",
+                                                            "Infant Enterprises",
+                                                            "K.V. Subramanian",
+                                                            "Sunset Clauses"
+                                                ],
+                                                "n": "Propose 'Sunset Clauses' on MSME tax shields so incentives expire after 7-10 years, forcing firms to scale."
+                                    },
+                                    {
+                                                "t": "The 100-Worker Regulatory Cliff",
+                                                "b": [
+                                                            "<b>Chapter V-B Industrial Disputes Act 1947:</b> Mandated government permission before retrenching workers or closing units for factories with 100+ workers.",
+                                                            "<b>Deliberate firm splitting:</b> Entrepreneurs intentionally split single manufacturing operations into multiple dummy legal entities to keep each below 100 workers.",
+                                                            "<b>Labor Code reform:</b> The Industrial Relations Code 2020 raised this threshold to 300 workers, but state-level notification remains uneven."
+                                                ],
+                                                "k": [
+                                                            "Chapter V-B IDA",
+                                                            "100-Worker Cliff",
+                                                            "Entity Fragmentation",
+                                                            "Labor Code 2020"
+                                                ],
+                                                "n": "Regulatory cliffs turn compliance into a penalty on job creation."
+                                    }
                         ],
-                        "k": [
-                            "₹100 Cr Guarantee Fund",
-                            "Machinery Purchase",
-                            "Self-financing"
-                        ],
-                        "n": "Solves the capex financing roadblock for ambitious small enterprises."
-                    },
-                    {
-                        "t": "PM Vishwakarma Scheme (₹13,000 Crore)",
-                        "b": [
-                            "Central Sector Scheme offering end-to-end holistic lifecycle support for <b>18 traditional artisan trades</b> (carpenters, blacksmiths, potters, etc.).",
-                            "Five pillars: <b>PM Vishwakarma Certificate & ID</b>, <b>Skill training with ₹500/day stipend</b>, <b>₹15,000 modern toolkit incentive</b>.",
-                            "Collateral-free enterprise credit up to <b>₹3 Lakh</b> (₹1L tranche 1 + ₹2L tranche 2) at a concessional interest rate of <b>5%</b>!"
-                        ],
-                        "k": [
-                            "PM Vishwakarma",
-                            "18 Traditional Trades",
-                            "₹15,000 Toolkit",
-                            "5% Subsidized Loans"
-                        ],
-                        "n": "Protects traditional artisanal heritage while linking them to modern value chains."
-                    },
-                    {
-                        "t": "E-Commerce Export Hubs (ECEH) & Mudra Expansion",
-                        "b": [
-                            "<b>E-Commerce Export Hubs (ECEH):</b> Public-private partnership zones providing single-window regulatory, customs, and testing clearances for cross-border e-commerce.",
-                            "<b>Mudra 'Tarun Plus':</b> Loan ceiling doubled from ₹10 Lakh to <b>₹20 Lakh</b> for entrepreneurs who have successfully repaid prior Tarun loans.",
-                            "<b>TReDS expansion:</b> Lowering buyer mandate to ₹500 Cr adds 22 CPSEs and 7,000+ private companies."
-                        ],
-                        "k": [
-                            "E-Commerce Export Hubs",
-                            "Mudra Tarun Plus (₹20 Lakh)",
-                            "Cross-border Trade"
-                        ],
-                        "n": "Empowers grassroots MSMEs to sell directly to consumers across the globe via digital marketplaces."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "mc",
-                        "q": "What is the maximum credit cover provided under the Budget 2025 Credit Guarantee Scheme for machinery purchase?",
-                        "o": [
-                            "₹10 Crore",
-                            "₹25 Crore",
-                            "₹50 Crore",
-                            "₹100 Crore"
-                        ],
-                        "a": 3,
-                        "e": "Budget 2024-25 introduced a guarantee fund facilitating collateral-free term loans up to ₹100 Crore."
-                    },
-                    {
-                        "k": "mc",
-                        "q": "How many traditional artisan trades are supported under the PM Vishwakarma Scheme?",
-                        "o": [
-                            "10 trades",
-                            "12 trades",
-                            "18 trades",
-                            "25 trades"
-                        ],
-                        "a": 2,
-                        "e": "The scheme covers 18 traditional family-based trades including carpenters, blacksmiths, goldsmiths, and sculptors."
-                    },
-                    {
-                        "k": "tf",
-                        "q": "The Mudra 'Tarun Plus' ceiling was doubled to ₹20 Lakh in the Union Budget.",
-                        "a": 0,
-                        "e": "True. The limit was raised to ₹20 Lakh for entrepreneurs who have successfully repaid earlier Tarun loans."
-                    },
-                    {
-                        "k": "multi",
-                        "q": "Tap all key pillars of the PM Vishwakarma Scheme.",
-                        "o": [
-                            "PM Vishwakarma Certificate & ID card",
-                            "₹15,000 grant for modern toolkits",
-                            "Collateral-free credit up to ₹3 Lakh at 5% interest",
-                            "Mandatory nationalization of private workshops"
-                        ],
-                        "a": [
-                            0,
-                            1,
-                            2
-                        ],
-                        "e": "Certification, toolkit grant of ₹15,000, and subsidized loans at 5% form the scheme's core."
-                    }
-                ]
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "What percentage of all enterprises in India's MSME sector are concentrated at the 'Micro' tier?",
+                                                "o": [
+                                                            "About 55%",
+                                                            "About 75%",
+                                                            "About 99.4%",
+                                                            "About 35%"
+                                                ],
+                                                "a": 2,
+                                                "kw": "The Inverted Pyramid of Indian Industry",
+                                                "e": "A staggering 99.4% of all MSMEs in India are Micro enterprises! Small enterprises make up just 0.52%, and Medium enterprises a tiny 0.08%. This acute lack of transition creates India's chronic 'Missing Middle'.",
+                                                "data": "99.4% Micro · 0.52% Small · 0.08% Medium (Udyam Registration & MSME Annual Report data).",
+                                                "ex": "Unlike Japan or Germany where medium enterprises anchor supply chains, India has millions of tiny single-person shops and very few mid-sized competitive factories.",
+                                                "mains": "Highlight this inverted pyramid diagram in GS-3 to prove why Indian industry struggles with economies of scale."
+                                    },
+                                    {
+                                                "k": "riddle",
+                                                "q": "Detective: who am I? (Fewer clues, more XP)",
+                                                "c": [
+                                                            "I am an economic pathology documented by Chief Economic Advisor K.V. Subramanian in the Economic Survey.",
+                                                            "Firms afflicted by me intentionally refuse to hire their 100th worker to avoid strict Chapter V-B labor permissions.",
+                                                            "I describe old firms that remain perpetually stunted to exploit size-based tax shields, rather than growing into productive giants."
+                                                ],
+                                                "o": [
+                                                            "Dwarfism Paradox",
+                                                            "Infant Industry Syndrome",
+                                                            "Dutch Disease",
+                                                            "Middle Income Trap"
+                                                ],
+                                                "a": 0,
+                                                "kw": "Dwarfs vs Infants Distinction",
+                                                "e": "The Dwarfism Paradox! Economic Survey distinguishes between 'Infants' (young startups that grow rapidly into productive scale) and 'Dwarfs' (firms older than 10 years that deliberately stay tiny to harvest regulatory exemptions).",
+                                                "data": "Firms with <100 workers account for 85% of manufacturing firms in India, but generate only ~14% of manufacturing value add.",
+                                                "ex": "Garment manufacturers in Tirupur splitting into 5 separate legal entities under family names to stay below 100 workers.",
+                                                "mains": "Quote Economic Survey: 'Subsidies and regulatory shields must be tied to age (sunset clauses), not firm size, to eliminate perverse incentives for dwarfism.'"
+                                    },
+                                    {
+                                                "k": "multi",
+                                                "q": "Tap the core systemic drivers creating the MSME 'Dwarfism' and 'Missing Middle' trap:",
+                                                "o": [
+                                                            "The 100-worker regulatory cliff under Industrial Disputes Act 1947",
+                                                            "Perpetual size-based tax exemptions and subsidies without sunset clauses",
+                                                            "Fear of aggressive tax inspections upon registering on the formal GST net",
+                                                            "Excessive availability of low-cost venture debt for micro-units"
+                                                ],
+                                                "a": [
+                                                            0,
+                                                            1,
+                                                            2
+                                                ],
+                                                "kw": "Perverse Incentive Triad",
+                                                "e": "Indian firms intentionally stay small because crossing regulatory thresholds (100 workers, GST limits) brings heavy compliance burdens, labor rigidities, and loss of priority subsidies, while low-cost venture debt is notoriously absent.",
+                                                "data": "Dwarfs are 5x less productive and generate 10x fewer jobs per unit of capital than large firms.",
+                                                "ex": "A leather goods maker capping employees at 95 to avoid mandatory government permission before retrenchment or closure.",
+                                                "mains": "Framework: 'Subsidizing Smallness vs Rewarding Growth' — advocate sunset clauses on incentives to encourage scaling up."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "True or False: According to the Economic Survey, large enterprises in India are significantly less productive in total factor productivity (TFP) than informal micro-enterprises.",
+                                                "a": 1,
+                                                "kw": "Scale Productivity Differential",
+                                                "e": "False! Large formal enterprises in India are 3 to 5 times more productive than micro-enterprises due to automation, economies of scale, formal R&D, and access to low-cost institutional capital.",
+                                                "data": "Productivity gap: Formal firms with >500 workers generate 4.8x more output per worker than informal micro units.",
+                                                "ex": "Automated automotive assembly lines in Chennai vs manual backyard fabrication workshops.",
+                                                "mains": "Explains why perpetuating informal dwarfism holds down India's manufacturing wage growth and global competitiveness."
+                                    },
+                                    {
+                                                "k": "match",
+                                                "q": "Match the industrial structure to its characteristic:",
+                                                "p": [
+                                                            [
+                                                                        "Dwarf Enterprise",
+                                                                        "Old firm stunted by choice"
+                                                            ],
+                                                            [
+                                                                        "Infant Enterprise",
+                                                                        "Young startup scaling rapidly"
+                                                            ],
+                                                            [
+                                                                        "Missing Middle",
+                                                                        "Absence of mid-sized factories"
+                                                            ],
+                                                            [
+                                                                        "German Mittelstand",
+                                                                        "Global niche market leaders"
+                                                            ]
+                                                ],
+                                                "kw": "Industrial Typology Matrix",
+                                                "e": "Transforming India's 99.4% micro dwarfs into scaling infant enterprises and resilient mid-sized Mittelstand champions is the central challenge of Indian industrial policy.",
+                                                "data": "German Mittelstand contributes ~55% of German GDP and accounts for ~68% of total German patents.",
+                                                "ex": "Specialized German family-owned precision optics or turbine companies dominating 80% global market share.",
+                                                "mains": "Use German Mittelstand as the international best practice benchmark in GS-3 industrial policy answers."
+                                    }
+                        ]
             },
             {
-                "n": "Mains Answer Mastery Toolkit",
-                "e": "🎯",
-                "d": "Keywords, 5-point skeleton & conclusion",
-                "c": [
-                    {
-                        "t": "High-Yield Keywords to Drop",
-                        "b": [
-                            "<b>Macro & Structure:</b> 31.1% GDP, 48.6% merchandise exports, 11.1 crore livelihoods, rural democratization.",
-                            "<b>Diagnostic Terminology:</b> Dwarfism paradox, regulatory cliff, missing middle, Schumpeterian creative destruction, working capital asphyxiation.",
-                            "<b>Policy & Reform Solutions:</b> German Mittelstand model, scale-neutral incentives, Section 43B(h) statutory discipline, TReDS invoice factoring, E-Commerce Export Hubs (ECEH)."
+                        "n": "Delayed Payments & Section 43B(h)",
+                        "d": "Section 15, 16 penal interest, 43B(h) disallowance, and Samadhaan",
+                        "e": "⏳",
+                        "practice_first": True,
+                        "c": [
+                                    {
+                                                "t": "Statutory Payment Ceilings: Section 15 of MSMED Act",
+                                                "b": [
+                                                            "<b>Strict 45-day ceiling:</b> Payment to a Micro or Small supplier must be made on or before the agreed date, which CANNOT exceed 45 days from delivery.",
+                                                            "<b>15 days without contract:</b> In the absence of a written agreement, the statutory deadline is strictly 15 calendar days.",
+                                                            "<b>Statutory override:</b> Any contractual clause where an MSE agreed to 60 or 90 days is legally void ab initio."
+                                                ],
+                                                "k": [
+                                                            "Section 15",
+                                                            "45-Day Limit",
+                                                            "15-Day Default",
+                                                            "Statutory Override"
+                                                ],
+                                                "n": "Section 15 is intended to eliminate working capital asphyxiation caused by large corporate buyers."
+                                    },
+                                    {
+                                                "t": "Draconian Penal Interest: Section 16 & Section 23",
+                                                "b": [
+                                                            "<b>3x Bank Rate compound interest:</b> Unpaid dues attract compound interest with monthly rests at 3 times the RBI Bank Rate.",
+                                                            "<b>Tax penalty (Section 23):</b> Penal interest paid to MSMEs CANNOT be deducted as an expense for corporate income tax calculation.",
+                                                            "<b>Mandatory liability:</b> Even if a buyer disputes quality, interest continues to accrue until adjudicated."
+                                                ],
+                                                "k": [
+                                                            "Section 16",
+                                                            "3x Bank Rate",
+                                                            "Monthly Rests",
+                                                            "Section 23 Disallowance"
+                                                ],
+                                                "n": "Penal interest at ~20% compounded monthly creates existential legal exposure for chronic defaulting buyers."
+                                    },
+                                    {
+                                                "t": "Section 43B(h) Income Tax Disallowance Weapon",
+                                                "b": [
+                                                            "<b>Finance Act 2023 amendment:</b> Added clause (h) to Section 43B of Income Tax Act 1961, effective from AY 2024-25.",
+                                                            "<b>Expense disallowance:</b> Any sum payable to a Micro or Small enterprise beyond the Section 15 deadline is disallowed as a business expense for that financial year.",
+                                                            "<b>Added to taxable income:</b> Unpaid invoices are added directly to the buyer's net profit and taxed at 25-30% in that year.",
+                                                            "<b>Exclusions:</b> Applies strictly to Micro and Small suppliers; Medium enterprises and Udyam-registered traders are excluded."
+                                                ],
+                                                "k": [
+                                                            "Section 43B(h)",
+                                                            "CBDT Enforcement",
+                                                            "Tax Disallowance",
+                                                            "Micro & Small Only"
+                                                ],
+                                                "n": "Section 43B(h) converted the toothless delayed payment rules into a feared tax audit weapon."
+                                    }
                         ],
-                        "k": [
-                            "Use 4 to 5 per Mains answer!"
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "Scenario: AutoCorp purchases auto components from a registered Micro enterprise on Jan 10 with a written contract stipulating 60-day credit. Under Section 15 of the MSMED Act 2006, what is the maximum permissible payment period?",
+                                                "o": [
+                                                            "60 days as agreed in the contract",
+                                                            "45 days (the statutory ceiling overrides the contract)",
+                                                            "15 days",
+                                                            "90 days as per standard industry practice"
+                                                ],
+                                                "a": 1,
+                                                "kw": "Section 15 Statutory Override",
+                                                "e": "Section 15 of the MSMED Act specifies that payment must be made within the agreed date, but that period CANNOT exceed 45 days from delivery! Any contractual clause agreeing to more than 45 days is legally null and void. In the absence of a written agreement, the limit is strictly 15 days.",
+                                                "data": "Section 15 MSMED Act 2006: Max 45 days with written agreement; max 15 days without agreement.",
+                                                "ex": "Auto parts suppliers in Pune frequently faced 90–120 day payment cycles from OEMs before statutory enforcement tightened.",
+                                                "mains": "Protects asymmetrical bargaining power where tiny suppliers cannot legally negotiate fair terms against massive corporate buyers."
+                                    },
+                                    {
+                                                "k": "mc",
+                                                "q": "What penal interest rate is mandatory under Section 16 of the MSMED Act when a buyer delays payment to a Micro or Small enterprise beyond 45 days?",
+                                                "o": [
+                                                            "Standard Bank Rate",
+                                                            "Simple interest at 12% per annum",
+                                                            "Compound interest with monthly rests at 3 times the RBI Bank Rate",
+                                                            "18% penalty waived if buyer offers credit notes"
+                                                ],
+                                                "a": 2,
+                                                "kw": "Section 16 Draconian Penal Rate",
+                                                "e": "Under Section 16, delayed payments attract compound interest with monthly rests at 3 TIMES the RBI Bank Rate! Furthermore, this interest penalty is strictly disallowed as a tax-deductible expense under Section 23.",
+                                                "data": "Section 16 MSMED Act: 3x RBI Bank Rate, compounded monthly; Section 23: Zero tax deduction on penal interest.",
+                                                "ex": "If RBI Bank Rate is 6.75%, the penal interest rate is 20.25% compounded every month, creating huge legal liabilities for chronic defaulters.",
+                                                "mains": "Demonstrates statutory deterrence designed to eliminate working capital strangulation."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "Scenario: On March 31, a corporate buyer has ₹40 Lakhs in unpaid bills to a registered Micro supplier pending for 55 days. Under Section 43B(h) of the Income Tax Act, can the buyer claim this ₹40 Lakhs as a deductible business expense for that financial year?",
+                                                "a": 1,
+                                                "kw": "Section 43B(h) Tax Disallowance",
+                                                "e": "False! Section 43B(h) (enacted in Finance Act 2023) mandates that any sum payable to a Micro or Small enterprise beyond the Section 15 limit (45/15 days) is DISALLOWED as an expense for that tax year. It is added back to taxable profits and taxed at 25–30%! It can only be claimed in the year actual payment is made.",
+                                                "data": "Section 43B(h) of Income Tax Act 1961, effective 1 April 2024 (Assessment Year 2024-25).",
+                                                "ex": "Triggered massive payment clearances in March 2024 as Indian corporations rushed to clear MSME vendor dues to avoid hefty income tax hits.",
+                                                "mains": "A masterstroke leveraging the tax machinery (CBDT) to enforce MSMED Act compliance where arbitration had moved too slowly."
+                                    },
+                                    {
+                                                "k": "flag",
+                                                "q": "Spot the red flag: which entity is EXCLUDED from the protections of Section 43B(h) of the Income Tax Act?",
+                                                "o": [
+                                                            "Registered Micro enterprises",
+                                                            "Registered Small enterprises",
+                                                            "Medium enterprises and wholesale/retail traders",
+                                                            "Manufacturing enterprises with ₹50 Lakh investment"
+                                                ],
+                                                "a": 2,
+                                                "kw": "Section 43B(h) Scope Exclusions",
+                                                "e": "Section 43B(h) strictly applies ONLY to dues owed to Micro and Small enterprises! Dues owed to Medium enterprises, as well as wholesale and retail traders registered under Udyam, are completely exempt from this 45-day tax disallowance rule.",
+                                                "data": "CBDT Circular & Office Memorandum: Section 43B(h) does not apply to Medium units or Udyam-registered traders.",
+                                                "ex": "Some buyers attempted to switch orders to Medium enterprises or traders to bypass the 45-day deadline, creating unexpected distortion.",
+                                                "mains": "Crucial analytical nuance: highlights the risk of unintended substitution effects hurting micro suppliers."
+                                    },
+                                    {
+                                                "k": "order",
+                                                "q": "Order the statutory delayed payment recovery process in logical sequence:",
+                                                "o": [
+                                                            "Goods/Services delivered",
+                                                            "45-day statutory window expires",
+                                                            "3x Bank Rate penal interest accrues",
+                                                            "Case filed on MSME Samadhaan portal",
+                                                            "MSEFC initiates conciliation/arbitration"
+                                                ],
+                                                "kw": "MSEFC Dispute Workflow",
+                                                "e": "Delivery -> Expiry of 45-day statutory period -> Mandatory penal interest accrual -> Online filing on MSME Samadhaan -> Formal conciliation & arbitration before the Micro & Small Enterprises Facilitation Council (MSEFC).",
+                                                "data": "Over 1.7 Lakh delayed payment applications filed on MSME Samadhaan, with >₹40,000 Crore stuck in disputed dues.",
+                                                "ex": "An electrical contractor in Jaipur recovering ₹18 Lakh overdue from a state PSU via an MSEFC award.",
+                                                "mains": "Institutional reform: advocate time-bound MSEFC benches and pre-litigation online dispute resolution (ODR)."
+                                    }
+                        ]
+            },
+            {
+                        "n": "Credit Gap & Financing Innovations",
+                        "d": "UK Sinha committee, TReDS factoring, AA, and OCEN",
+                        "e": "💳",
+                        "practice_first": True,
+                        "c": [
+                                    {
+                                                "t": "The ₹25 Lakh Crore Credit Gap: UK Sinha Committee",
+                                                "b": [
+                                                            "<b>The ₹20–25 Lakh Crore deficit:</b> The RBI-appointed U.K. Sinha Committee (2019) diagnosed that formal bank credit reaches only ~15% of MSMEs.",
+                                                            "<b>Collateral trap:</b> Traditional commercial banking requires immovable real estate collateral, which 85% of asset-light MSMEs do not possess.",
+                                                            "<b>Recommendation:</b> Shift from collateral-based underwriting to data-driven, cash-flow-based underwriting using GST and bank transaction records."
+                                                ],
+                                                "k": [
+                                                            "UK Sinha (2019)",
+                                                            "₹25 Lakh Cr Deficit",
+                                                            "Collateral Trap",
+                                                            "Cash-Flow Lending"
+                                                ],
+                                                "n": "Cite the UK Sinha Committee whenever discussing financial inclusion or MSME debt reforms in GS-3."
+                                    },
+                                    {
+                                                "t": "TReDS: Institutional Factoring Without Recourse",
+                                                "b": [
+                                                            "<b>Trade Receivables Discounting System:</b> RBI-regulated digital auction platform (RXIL, M1xchange, Invoicemart).",
+                                                            "<b>Factoring without recourse:</b> Financiers bid to discount MSME invoices based on the buyer's corporate credit rating. Default risk falls on the buyer, not the MSME.",
+                                                            "<b>Mandatory participation:</b> All CPSEs and companies with turnover above ₹250 Crore are legally mandated to register on TReDS."
+                                                ],
+                                                "k": [
+                                                            "TReDS",
+                                                            "Without Recourse",
+                                                            "Reverse Factoring",
+                                                            "₹250 Cr Mandate"
+                                                ],
+                                                "n": "TReDS solves the working capital trap by converting trade receivables into instant cash in 48 hours."
+                                    },
+                                    {
+                                                "t": "Fintech Stack: Account Aggregator, OCEN & CGTMSE",
+                                                "b": [
+                                                            "<b>Account Aggregator (AA):</b> Digital framework allowing MSEs to securely share financial statements and GST returns with banks in seconds.",
+                                                            "<b>OCEN (Open Credit Enablement Network):</b> Open API protocol embedding credit into platforms (e.g. GeM, Amazon, Zomato) for sachet loans.",
+                                                            "<b>CGTMSE guarantee:</b> Provides collateral-free credit guarantees to banks for MSE loans up to ₹5 Crore."
+                                                ],
+                                                "k": [
+                                                            "Account Aggregator",
+                                                            "OCEN",
+                                                            "CGTMSE (₹5 Cr)",
+                                                            "Digital Underwriting"
+                                                ],
+                                                "n": "DPI is replacing land mortgages with transaction data as the new collateral of the digital economy."
+                                    }
                         ],
-                        "n": "Examiners scan for specific diagnostic vocabulary rather than generic essays."
-                    },
-                    {
-                        "t": "Mains 5-Stage Answer Skeleton",
-                        "b": [
-                            "<b>1. Introduction:</b> Macro triad (31.1% GDP, 35.4% GVA, 48.6% exports) + Article 39(b)/(c) constitutional link.",
-                            "<b>2. Structural Significance:</b> Low capital cost per job, rural balance, export dynamo.",
-                            "<b>3. Core Bottlenecks:</b> Dwarfism (99.4% micro), ₹30L Cr credit gap (UK Sinha), delayed payments.",
-                            "<b>4. Recent Policy Push:</b> 2020 composite criteria, Budget 2025 ₹100 Cr guarantee, Sec 43B(h), PM Vishwakarma.",
-                            "<b>5. Way Forward & Conclusion:</b> Transition from dwarfs to German Mittelstand; engine for $5T economy and Viksit Bharat 2047."
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "Which RBI-appointed committee quantified India's formal MSME credit gap at ₹20–25 Lakh Crore and formulated the master blueprint for cash-flow lending?",
+                                                "o": [
+                                                            "Nandan Nilekani Committee",
+                                                            "U.K. Sinha Committee (2019)",
+                                                            "Urjit Patel Committee",
+                                                            "Raghuram Rajan Committee"
+                                                ],
+                                                "a": 1,
+                                                "kw": "The UK Sinha Committee (2019) Blueprint",
+                                                "e": "The U.K. Sinha Committee on MSMEs (2019) diagnosed India's ₹20–25 Lakh Crore ($300B+) MSME credit deficit and recommended transitioning from physical collateral-based lending to data-driven cash-flow lending, alongside expanding TReDS.",
+                                                "data": "Formal credit reaches only ~15% of MSMEs; remaining 85% rely on costly informal credit or internal accruals.",
+                                                "ex": "Traditional banks rejecting viable fabrication shops because the owner lacks urban immovable land to mortgage.",
+                                                "mains": "Always cite the UK Sinha Committee when proposing MSME financial architecture reforms."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "True or False: Under TReDS (Trade Receivables Discounting System), the credit risk of invoice factoring is borne by the small supplier if the corporate buyer defaults.",
+                                                "a": 1,
+                                                "kw": "Without-Recourse Factoring Mechanics",
+                                                "e": "False! Factoring on TReDS is strictly 'WITHOUT RECOURSE' to the MSME supplier! The financier discounts the invoice based on the corporate buyer's creditworthiness. If the buyer defaults, the bank cannot demand the money back from the MSME!",
+                                                "data": "TReDS operates through 3 RBI-licensed platforms: RXIL, M1xchange, and Invoicemart.",
+                                                "ex": "A micro gear manufacturer discounts a ₹10 Lakh Mahindra & Mahindra invoice on RXIL at 8% p.a., getting instant cash within 48 hours without risk.",
+                                                "mains": "TReDS liberates MSMEs from their buyers' credit cycles and converts corporate balance sheets into supplier liquidity."
+                                    },
+                                    {
+                                                "k": "multi",
+                                                "q": "Tap all digital infrastructure mechanisms transforming MSME credit from collateral-based to cash-flow lending:",
+                                                "o": [
+                                                            "Account Aggregator (AA) framework sharing consent-based bank cash-flows",
+                                                            "Open Credit Enablement Network (OCEN) embedding credit into digital platforms",
+                                                            "Mandatory registration of CPSEs and ₹250 Cr+ corporates on TReDS",
+                                                            "Physical mortgage of agricultural land titles under State Land Ceiling Acts"
+                                                ],
+                                                "a": [
+                                                            0,
+                                                            1,
+                                                            2
+                                                ],
+                                                "kw": "Digital Public Infrastructure for Credit",
+                                                "e": "India's DPI stack (AA, OCEN, GSTN data, TReDS) enables real-time underwriting based on verified transaction invoices rather than physical land mortgages.",
+                                                "data": "OCEN enables micro-loans as small as ₹5,000 for 15 days with underwriting completed in under 3 minutes.",
+                                                "ex": "A tea stall or kirana store borrowing ₹10,000 for weekend inventory based on UPI transaction volumes via a smartphone app.",
+                                                "mains": "Framing: 'Moving from Asset-Based Underwriting to Information-Collateral (Cash-Flow) Underwriting'."
+                                    },
+                                    {
+                                                "k": "match",
+                                                "q": "Match the MSME financing innovation to its core institutional mechanism:",
+                                                "p": [
+                                                            [
+                                                                        "TReDS",
+                                                                        "Without-recourse invoice factoring"
+                                                            ],
+                                                            [
+                                                                        "Account Aggregator",
+                                                                        "Consent-based cashflow data sharing"
+                                                            ],
+                                                            [
+                                                                        "CGTMSE",
+                                                                        "Collateral-free credit guarantee up to ₹5 Cr"
+                                                            ],
+                                                            [
+                                                                        "GeM Portal",
+                                                                        "Mandatory 25% public procurement quota"
+                                                            ]
+                                                ],
+                                                "kw": "Fintech Ecosystem Synthesis",
+                                                "e": "Each instrument addresses a distinct market failure: TReDS tackles receivables; AA solves data asymmetry; CGTMSE solves the collateral deficit; GeM guarantees market access.",
+                                                "data": "CGTMSE has approved cumulative guarantees exceeding ₹6 Lakh Crore, unlocking bank lending for asset-light firms.",
+                                                "ex": "A young bio-tech startup obtaining ₹2 Crore loan from Canara Bank backed 85% by CGTMSE without mortgaging founder assets.",
+                                                "mains": "A holistic 4-part toolkit to address the MSME liquidity lifecycle."
+                                    },
+                                    {
+                                                "k": "riddle",
+                                                "q": "Detective: who am I? (Fewer clues, more XP)",
+                                                "c": [
+                                                            "I am an open API protocol developed by iSPIRT and promoted by NITI Aayog.",
+                                                            "I unbundle lending into loan agents, technology platforms, and balance sheet lenders.",
+                                                            "I allow any digital platform (like GeM or Amazon) to offer embedded 'sachet' loans to small vendors in seconds."
+                                                ],
+                                                "o": [
+                                                            "Open Credit Enablement Network (OCEN)",
+                                                            "Unified Payments Interface (UPI)",
+                                                            "National Financial Switch (NFS)",
+                                                            "SWIFT Network"
+                                                ],
+                                                "a": 0,
+                                                "kw": "OCEN Embedded Finance Protocol",
+                                                "e": "OCEN (Open Credit Enablement Network)! It standardizes the APIs between platforms with customer flow (e.g. GeM, Zomato, Swiggy) and formal lenders, bringing down the cost of originating small loans to near zero.",
+                                                "data": "Enables ₹1,000 to ₹50,000 daily working capital loans for informal gig workers and micro vendors.",
+                                                "ex": "A small supplier on GeM instantly receiving an advance against a confirmed government purchase order via an OCEN-enabled lender.",
+                                                "mains": "Analogy: What UPI did for digital payments, OCEN is doing for digital credit democratisation."
+                                    }
+                        ]
+            },
+            {
+                        "n": "Budget 2025-26 & Flagship Schemes",
+                        "d": "₹100 Cr credit guarantee, Mudra Tarun Plus, TReDS expansion, and PM Vishwakarma",
+                        "e": "🚀",
+                        "practice_first": True,
+                        "c": [
+                                    {
+                                                "t": "Budget 2025-26: ₹100 Cr Credit Guarantee Scheme",
+                                                "b": [
+                                                            "<b>Dedicated manufacturing fund:</b> A new self-financing credit guarantee fund for MSMEs in manufacturing was launched in Union Budget 2024-25 / 2025-26.",
+                                                            "<b>Up to ₹100 Crore cover:</b> Guarantees term loans up to ₹100 Crore for purchasing machinery and equipment without collateral or third-party guarantee.",
+                                                            "<b>Direct scale catalyst:</b> Specifically addresses the mid-tier capital expenditure hump preventing small units from buying advanced CNC machinery."
+                                                ],
+                                                "k": [
+                                                            "Budget 2025",
+                                                            "₹100 Cr Guarantee",
+                                                            "Manufacturing Focus",
+                                                            "Machinery Loans"
+                                                ],
+                                                "n": "This scheme directly attacks the 'Dwarfism' trap by financing high-tech capital goods."
+                                    },
+                                    {
+                                                "t": "Mudra 'Tarun Plus' & Public Sector Bank Digital Scoring",
+                                                "b": [
+                                                            "<b>Mudra ceiling doubled:</b> 'Tarun Plus' category doubles the loan cap from ₹10 Lakh to ₹20 Lakh for entrepreneurs who successfully repaid Tarun loans.",
+                                                            "<b>In-house credit assessment:</b> Public sector banks mandated to build in-house digital scoring models using GST and banking footprints rather than external rating agency reports.",
+                                                            "<b>TReDS onboarding lowered:</b> Threshold for mandatory registration of buyers on TReDS reduced from ₹500 Cr to ₹250 Cr turnover."
+                                                ],
+                                                "k": [
+                                                            "Tarun Plus (₹20L)",
+                                                            "PSB Credit Models",
+                                                            "TReDS ₹250 Cr",
+                                                            "Graduation Trajectory"
+                                                ],
+                                                "n": "Highlight how Mudra creates a formal repayment track record enabling graduation to higher bank loans."
+                                    },
+                                    {
+                                                "t": "PM Vishwakarma Scheme (₹13,000 Crore)",
+                                                "b": [
+                                                            "<b>18 traditional trades:</b> End-to-end support for carpenters, boat makers, blacksmiths, armorers, potters, cobblers, tailors, etc.",
+                                                            "<b>Financial assistance:</b> Collateral-free enterprise credit up to ₹3 Lakh (₹1L first tranche + ₹2L second tranche) at a concessional 5% interest rate.",
+                                                            "<b>Skill & toolkit:</b> ₹500/day stipend during basic/advanced training, plus ₹15,000 digital toolkit incentive and PM Vishwakarma Certificate."
+                                                ],
+                                                "k": [
+                                                            "PM Vishwakarma",
+                                                            "18 Trades",
+                                                            "₹3L Concessional Loan",
+                                                            "₹15k Toolkit"
+                                                ],
+                                                "n": "PM Vishwakarma links traditional artisan heritage directly with formal financial markets and ONDC e-commerce."
+                                    }
                         ],
-                        "k": [
-                            "Intro → Significance → Bottlenecks → Policy → Mittelstand Conclusion"
+                        "q": [
+                                    {
+                                                "k": "mc",
+                                                "q": "In Union Budget 2024-25 / 2025-26, what historic credit guarantee mechanism was announced specifically for MSMEs in manufacturing?",
+                                                "o": [
+                                                            "A scheme offering 100% direct cash grants for imported machinery",
+                                                            "A self-financing guarantee fund providing collateral-free credit cover up to ₹100 Crore for machinery purchases",
+                                                            "Complete interest waiver on all Mudra loans for 5 years",
+                                                            "Mandatory 50% equity buyout of stressed MSMEs by SIDBI"
+                                                ],
+                                                "a": 1,
+                                                "kw": "Budget 2025 ₹100 Cr Machinery Guarantee",
+                                                "e": "Union Budget introduced a new self-financing credit guarantee fund providing cover up to ₹100 Crore for term loans taken by manufacturing MSMEs to purchase modern machinery and equipment without collateral or third-party guarantee!",
+                                                "data": "Guarantees term loans up to ₹100 Cr; borrower pays an upfront fee and annual guarantee fee on reducing balance.",
+                                                "ex": "An aerospace component maker in Bengaluru borrowing ₹60 Crore to import 5-axis CNC machines backed by the government guarantee.",
+                                                "mains": "Directly tackles the capital expenditure bottleneck preventing Indian MSMEs from scaling into high-tech global value chains."
+                                    },
+                                    {
+                                                "k": "mc",
+                                                "q": "Under Pradhan Mantri Mudra Yojana (PMMY), the Budget introduced the 'Tarun Plus' category. What is the enhanced loan limit?",
+                                                "o": [
+                                                            "₹12 Lakh",
+                                                            "₹15 Lakh",
+                                                            "₹20 Lakh",
+                                                            "₹50 Lakh"
+                                                ],
+                                                "a": 2,
+                                                "kw": "Mudra Tarun Plus Expansion",
+                                                "e": "Budget doubled the Mudra ceiling from ₹10 Lakh to ₹20 Lakh under the new 'Tarun Plus' category for entrepreneurs who have previously taken and successfully repaid loans under the Tarun category.",
+                                                "data": "Mudra categories: Shishu (up to ₹50,000), Kishore (₹50k to ₹5 Lakh), Tarun (₹5L to ₹10 Lakh), Tarun Plus (₹10L to ₹20 Lakh).",
+                                                "ex": "A commercial laundry or bakery owner graduating from Tarun to buy delivery vans and commercial ovens up to ₹20 Lakh.",
+                                                "mains": "Creates a graduation mechanism rewarding formal credit discipline and combating micro-credit stagnation."
+                                    },
+                                    {
+                                                "k": "tf",
+                                                "q": "True or False: Under Union Budget 2024-25/2026 reforms, the turnover threshold for mandatory onboarding of buyers onto the TReDS platform was reduced from ₹500 Crore to ₹250 Crore.",
+                                                "a": 0,
+                                                "kw": "TReDS ₹250 Cr Mandate Expansion",
+                                                "e": "True! The turnover threshold for mandatory onboarding of buyers on TReDS was lowered from ₹500 Crore to ₹250 Crore, bringing 22 more Central Public Sector Enterprises (CPSEs) and thousands of medium-large corporates into the factoring net.",
+                                                "data": "Threshold reduced from ₹500 Cr to ₹250 Cr turnover, exponentially expanding the liquidity pool for MSE vendors.",
+                                                "ex": "Mid-tier industrial corporations must now upload verified invoices to TReDS, eliminating payment delays for component suppliers.",
+                                                "mains": "Demonstrates deepening institutional depth by expanding the perimeter of formal supply chain finance."
+                                    },
+                                    {
+                                                "k": "multi",
+                                                "q": "Tap all core components of the PM Vishwakarma Scheme launched with an outlay of ₹13,000 Crore:",
+                                                "o": [
+                                                            "Covers 18 traditional artisan trades (carpenters, blacksmiths, potters, cobblers)",
+                                                            "Collateral-free enterprise credit up to ₹3 Lakh (₹1L + ₹2L) at concessional 5% interest",
+                                                            "Skill upgradation with ₹500/day stipend and ₹15,000 toolkit digital incentive",
+                                                            "Mandatory 50% reservation in government civil service recruitments"
+                                                ],
+                                                "a": [
+                                                            0,
+                                                            1,
+                                                            2
+                                                ],
+                                                "kw": "PM Vishwakarma Artisan Architecture",
+                                                "e": "PM Vishwakarma covers 18 artisan trades with end-to-end support: PM Vishwakarma Certificate & ID, basic/advanced training with ₹500/day stipend, ₹15,000 modern toolkit grant, collateral-free loans up to ₹3 Lakh at 5%, and digital transaction incentives.",
+                                                "data": "₹13,000 Crore outlay for 5 years (FY24 to FY28) targeting 30 Lakh artisan families.",
+                                                "ex": "A traditional blacksmith or stone carver purchasing modern ergonomic pneumatic chisels and selling through ONDC.",
+                                                "mains": "Combines heritage preservation with modern productivity tools and credit inclusion."
+                                    }
+                        ]
+            },
+            {
+                        "n": "Mains Answer Mastery Toolkit",
+                        "d": "15-marker structure, Mittelstand benchmark, and intro hooks",
+                        "e": "✍️",
+                        "practice_first": True,
+                        "c": [
+                                    {
+                                                "t": "The 15-Marker Blueprinted Structure for MSME Answers",
+                                                "b": [
+                                                            "<b>Introduction:</b> Macro Data Anchor (31.1% GDP, 48.6% Exports, 11.1 Cr jobs, 51.2% rural).",
+                                                            "<b>Body 1 (Structural Pathologies):</b> Inverted pyramid dwarfism (99.4% micro), ₹25 Lakh Cr credit gap, 45-day payment delays.",
+                                                            "<b>Body 2 (Policy Interventions):</b> 2020 composite definition, Section 43B(h), TReDS, Budget ₹100 Cr guarantee.",
+                                                            "<b>Way Forward:</b> UK Sinha committee recommendations, sunset clauses on incentives, cluster development on the German <i>Mittelstand</i> model."
+                                                ],
+                                                "k": [
+                                                            "15-Marker Blueprint",
+                                                            "4-Pillar Pathology",
+                                                            "Policy Matrix",
+                                                            "Way Forward"
+                                                ],
+                                                "n": "Always balance diagnostic critique with forward-looking institutional blueprints in GS-3."
+                                    },
+                                    {
+                                                "t": "The German Mittelstand Benchmark",
+                                                "b": [
+                                                            "<b>What is Mittelstand:</b> Mid-sized, family-owned companies that dominate specialized global niche markets ('Hidden Champions').",
+                                                            "<b>High R&D & dual apprenticeship:</b> Invest heavily in vocational apprenticeships and cutting-edge process patents.",
+                                                            "<b>Lesson for India:</b> India must transition its 99.4% micro-enterprises into high-tech, export-oriented mid-sized clusters."
+                                                ],
+                                                "k": [
+                                                            "German Mittelstand",
+                                                            "Hidden Champions",
+                                                            "Vocational Apprenticeship",
+                                                            "Niche Dominance"
+                                                ],
+                                                "n": "Citing the German Mittelstand provides an unbeatable international benchmark in industrial policy answers."
+                                    }
                         ],
-                        "n": "Structure your answers with subheadings, data, and visual flowcharts for top marks."
-                    }
-                ],
-                "q": [
-                    {
-                        "k": "order",
-                        "q": "Order the optimal Mains answer structure for an MSME question.",
-                        "o": [
-                            "Intro: 31.1% GDP, 48.6% exports, 11.1 Cr jobs",
-                            "Structural Significance & Employment Democratization",
-                            "Core Bottlenecks: Dwarfism, Credit Gap, Delayed Payments",
-                            "Government Initiatives: Sec 43B(h), Budget 2025, Vishwakarma",
-                            "Conclusion: German Mittelstand for Viksit Bharat 2047"
-                        ],
-                        "e": "Macro Data → Significance → Crisis/Bottlenecks → Policy Interventions → Global Benchmark Conclusion."
-                    },
-                    {
-                        "k": "mc",
-                        "q": "Which international manufacturing model is widely recommended for India to overcome the 'missing middle'?",
-                        "o": [
-                            "South Korean Chaebols",
-                            "German Mittelstand",
-                            "American Wall Street",
-                            "Japanese Keiretsu monopolies"
-                        ],
-                        "a": 1,
-                        "e": "The German Mittelstand model is praised for its scale-neutral policies, vocational training, and resilient medium enterprises."
-                    },
-                    {
-                        "k": "multi",
-                        "q": "Tap the indispensable Mains keywords for MSME answers.",
-                        "o": [
-                            "Dwarfism paradox",
-                            "Section 43B(h)",
-                            "German Mittelstand",
-                            "Agrarian collectivization"
-                        ],
-                        "a": [
-                            0,
-                            1,
-                            2
-                        ],
-                        "e": "Dwarfism, Section 43B(h), and Mittelstand are top-scoring keywords."
-                    },
-                    {
-                        "k": "flip",
-                        "q": "Draft a 2-line intro for 'MSMEs: From Regulatory Dwarfs to Viksit Bharat Engines'.",
-                        "r": "Sustaining 31.1% of India's GDP, 48.6% of merchandise exports, and over 11.1 crore livelihoods, MSMEs constitute the bedrock of India's economic architecture. Transitioning them from protected dwarfs into globally competitive, Mittelstand-style champions is the paramount prerequisite for a $5 Trillion economy."
-                    }
-                ]
+                        "q": [
+                                    {
+                                                "k": "order",
+                                                "q": "Order the optimal structure for a 15-mark UPSC Mains answer on MSME reforms:",
+                                                "o": [
+                                                            "Intro: 3-Pillar Data (31.1% GDP, 48.6% Export, 11 Cr jobs)",
+                                                            "Structural Pathology: Credit gap, dwarfism, 43B(h) delay friction",
+                                                            "Government Policy Matrix: Composite criteria, TReDS, Mudra, Budget guarantee",
+                                                            "Way Forward: UK Sinha blueprint, sunset clauses, German Mittelstand clusters"
+                                                ],
+                                                "kw": "Mains 15-Marker Blueprinted Structure",
+                                                "e": "Data Hook Intro -> 4 Structural Pathologies (Credit, Scale, Payments, Tech) -> Government Interventions (Schemes + Statutes) -> Strategic Way Forward (Committees, International Benchmarks).",
+                                                "data": "High-scoring answers balance quantitative data, statutory provisions (MSMED Act/43B(h)), and reform blueprints.",
+                                                "ex": "Toppers consistently use 4-box diagrams summarizing the 4 bottlenecks and matching solutions.",
+                                                "mains": "Guarantees a balanced 250-word answer scoring in the top 10% percentile."
+                                    },
+                                    {
+                                                "k": "mc",
+                                                "q": "Which global manufacturing model is universally cited by NITI Aayog and economists as the strategic benchmark for solving India's 'Missing Middle'?",
+                                                "o": [
+                                                            "The Chinese Town & Village Enterprises (TVE) model",
+                                                            "The German 'Mittelstand' model (family-owned specialized niche exporters)",
+                                                            "The South Korean Chaebol conglomerate model",
+                                                            "The American Silicon Valley venture capital model"
+                                                ],
+                                                "a": 1,
+                                                "kw": "German Mittelstand Paradigm",
+                                                "e": "The German Mittelstand consists of mid-sized, highly innovative, family-owned enterprises that dominate specialized global niche markets ('Hidden Champions'). They invest heavily in apprentice training and R&D, providing high-wage industrial employment without massive corporate bureaucracy.",
+                                                "data": "Mittelstand accounts for 99.6% of German companies, employing ~60% of German workers and driving over 50% of German exports.",
+                                                "ex": "German family firms specializing in industrial labeling machines, optical sensors, or specialized pump valves holding 80% global market share.",
+                                                "mains": "The definitive answer when asked how India can scale its micro-enterprises into globally competitive manufacturing champions."
+                                    },
+                                    {
+                                                "k": "multi",
+                                                "q": "Tap all high-scoring keywords and phrases that should appear in an MSME Mains answer:",
+                                                "o": [
+                                                            "'Missing Middle' and 'Dwarfism vs Infant firms'",
+                                                            "'Transition from Collateral-Based to Information/Cash-Flow Lending'",
+                                                            "'Without-Recourse Factoring via TReDS'",
+                                                            "'Sunset Clauses on Regulatory Shields'"
+                                                ],
+                                                "a": [
+                                                            0,
+                                                            1,
+                                                            2,
+                                                            3
+                                                ],
+                                                "kw": "Evaluator Vocabulary Trigger",
+                                                "e": "All 4 are golden phrases! Using precise academic and policy terminology ('Missing Middle', 'Cash-Flow Lending', 'Without-Recourse', 'Sunset Clauses') instantly signals mastery to the UPSC evaluator.",
+                                                "data": "Derived from Economic Survey, RBI Reports, and UK Sinha Committee papers.",
+                                                "ex": "Synthesized into punchy subheadings like 'From Regulatory Dwarfs to Global Mittelstand'.",
+                                                "mains": "Replaces vague platitudes with decisive, policy-grade analysis."
+                                    },
+                                    {
+                                                "k": "flip",
+                                                "q": "Flip to reveal the model 25-word opening hook for an answer on: 'MSMEs: From Regulatory Dwarfs to Engines of Inclusive Growth':",
+                                                "r": "Anchoring 31.1% of GDP and 48.6% of exports with 11 Crore livelihoods, India's MSMEs are the bedrock of socio-economic resilience. However, transitioning from 99.4% informal 'dwarfs' to scaled 'infants' remains the critical frontier for Atmanirbhar Bharat.",
+                                                "kw": "Punchy Opening Formula",
+                                                "e": "This intro combines hard data (31.1%, 48.6%, 11 Cr), economic doctrine (dwarfs vs infants), and national vision (Atmanirbhar Bharat) in just 2 sentences!",
+                                                "data": "31.1% GDP · 48.6% Exports · 11 Cr jobs · 99.4% Micro.",
+                                                "ex": "Immediately sets a scholarly, authoritative tone for the entire script.",
+                                                "mains": "Memorize and reproduce in the first 30 seconds of tackling any MSME question in GS-3."
+                                    }
+                        ]
             }
-        ],
+],
         "pyq": [
             {
                 "k": "flip",

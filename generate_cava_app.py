@@ -201,6 +201,28 @@ button:focus-visible{outline:3px solid var(--selb);outline-offset:2px}
 .sr-hidden-detail{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:13.5px;line-height:1.4;color:var(--ink);animation:pop .2s ease-out}
 .sr-diag-box{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px;margin-top:8px;margin-bottom:14px}
 
+/* Practice Model & Teach-and-Learn Styles */
+.opt.good{border-color:var(--ok);background:rgba(16,185,129,0.12);color:var(--ok)}
+.debrief-box{margin-top:16px;padding:16px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,0.06);animation:pop .25s ease-out;text-align:left}
+.debrief-box.debrief-ok{border-left:4px solid var(--ok)}
+.debrief-box.debrief-no{border-left:4px solid var(--no)}
+.debrief-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.debrief-badge{font-size:15px;font-weight:800}
+.debrief-ok .debrief-badge{color:var(--ok)}
+.debrief-no .debrief-badge{color:var(--no)}
+.debrief-retry-pill{background:rgba(245,158,11,0.15);color:#d97706;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:800;border:1px solid rgba(245,158,11,0.3)}
+.debrief-kw{background:var(--card-sub);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:13.5px}
+.debrief-kw-lbl{color:var(--selb,#2563eb);font-weight:800;margin-right:6px}
+.debrief-desc{font-size:14px;line-height:1.5;color:var(--ink);margin-bottom:12px}
+.debrief-row{display:flex;flex-direction:column;gap:3px;background:var(--card-sub);border-left:3px solid var(--selb,#2563eb);border-radius:6px;padding:8px 10px;margin-bottom:8px;font-size:13px;line-height:1.45}
+.debrief-data{border-left-color:#0284c7}
+.debrief-ex{border-left-color:#10b981}
+.debrief-mains{border-left-color:#8b5cf6}
+.debrief-tag{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;color:var(--mut)}
+.debrief-recycle-note{font-size:12px;color:#d97706;margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);line-height:1.4}
+.practice-pill{display:inline-flex;align-items:center;background:rgba(37,99,235,0.1);color:var(--selb,#2563eb);padding:3px 10px;border-radius:99px;font-size:12px;font-weight:800;border:1px solid rgba(37,99,235,0.25)}
+.practice-mode-banner{background:var(--card-sub);border:1.5px solid var(--selb,#2563eb);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:13px;line-height:1.45;color:var(--ink)}
+
 </style></head><body><div id="app"></div>
 <script>
 var DATA = %TOPICS_JSON%;
@@ -1459,13 +1481,15 @@ function home(){
     '<h1>' + top.title + '</h1>' +
     '<p class="sub">' + esc(top.sub) + '</p>' +
     goalCard() +
+    (CUR_TOPIC === 'msme' ? '<div class="practice-mode-banner">⚡ <b>Practice-First Model Active</b> · Solve real-world scenarios, calculations, and legal challenges. Concepts are taught via active trial-and-error debriefs!</div>' : '') +
     '<div class="path">';
 
   top.lessons.forEach(function(l, i){
     var d = (S.done[CUR_TOPIC] || {})[i];
+    var subLabel = (CUR_TOPIC === 'msme' ? (l.q.length + ' Practice Drills · ' + esc(l.d)) : esc(l.d)) + (d ? ' · best ' + d + '%' : '');
     h += '<button class="lesson' + (d ? ' done' : '') + '" data-i="' + i + '">' +
       '<span class="badge">' + (d ? '✓' : l.e) + '</span>' +
-      '<span><b>' + esc(l.n) + '</b><small>' + esc(l.d) + (d ? ' · best ' + d + '%' : '') + '</small></span>' +
+      '<span><b>' + esc(l.n) + '</b><small>' + subLabel + '</small></span>' +
     '</button>';
   });
 
@@ -1565,13 +1589,15 @@ function home(){
 function start(i){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[i];
+  var isPractice = (CUR_TOPIC === 'msme' || !!l.practice_first);
   R = {
     i: i,
-    ci: 0,
+    ci: isPractice ? (l.c ? l.c.length : 0) : 0,
+    isPractice: isPractice,
     queue: l.q.map(function(q, n){ return { q: q, key: CUR_TOPIC + ':' + i + ':' + n }; }),
-    total: l.c.length + l.q.length,
+    total: isPractice ? l.q.length : (l.c.length + l.q.length),
     solved: 0,
-    hearts: 5,
+    hearts: isPractice ? 999 : 5,
     mist: 0,
     xp: 0
   };
@@ -1581,8 +1607,8 @@ function start(i){
 function next(){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[R.i];
-  if(l && R.ci < l.c.length) return card();
-  if(R.hearts <= 0) return fin(false);
+  if(!R.isPractice && l && R.ci < l.c.length) return card();
+  if(!R.isPractice && R.hearts <= 0) return fin(false);
   if(!R.queue.length) return fin(true);
   R.cur = R.queue.shift();
   clearInterval(IV);
@@ -1609,10 +1635,18 @@ function next(){
 }
 
 function head(){
+  var rightIndicator;
+  if (R.isPractice) {
+    rightIndicator = '<span class="practice-pill">🎯 Practice ' + Math.min(R.solved + 1, R.total) + '/' + R.total + '</span>';
+  } else if (R.pyq) {
+    rightIndicator = '';
+  } else {
+    rightIndicator = '<span class="hearts">❤ ' + R.hearts + '</span>';
+  }
   return '<div class="qhead">' +
     '<button class="x" id="quit" aria-label="Quit lesson">✕</button>' +
     '<div class="bar"><i style="width:' + Math.round(R.solved/R.total*100) + '%"></i></div>' +
-    (R.pyq ? '' : '<span class="hearts">❤ ' + R.hearts + '</span>') +
+    rightIndicator +
   '</div>';
 }
 
@@ -1839,7 +1873,14 @@ function inner(){
       }
     }
     R.ord.forEach(function(i){
-      h += '<button class="opt' + (q.k === "flag" ? ' fl' : '') + (R.sel.indexOf(i) > -1 ? ' sel' : '') + '" data-i="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(lab[i]) + '</button>';
+      var isSel = R.sel.indexOf(i) > -1;
+      var isCorrect = (q.k === "multi" ? (q.a && q.a.indexOf(i) > -1) : (i === q.a));
+      var cls = 'opt' + (q.k === "flag" ? ' fl' : '') + (isSel ? ' sel' : '');
+      if(R.ok !== null){
+        if(isCorrect) cls += ' good';
+        else if(isSel) cls += ' bad';
+      }
+      h += '<button class="' + cls + '" data-i="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(lab[i]) + '</button>';
     });
     el.innerHTML = h;
     var nc = document.getElementById("nc");
@@ -1986,6 +2027,21 @@ function inner(){
     };
     if(R.pyq && !R.rev) pyTimer();
   }
+  if(R.ok !== null && R.isPractice){
+    var dh = '<div class="debrief-box ' + (R.ok ? 'debrief-ok' : 'debrief-no') + '">' +
+      '<div class="debrief-hdr">' +
+        '<span class="debrief-badge">' + (R.ok ? '✅ Nailed it!' : '❌ Concept Trap Triggered!') + '</span>' +
+        (R.cur.again ? '<span class="debrief-retry-pill">🔁 Mastery Retry</span>' : '') +
+      '</div>' +
+      (q.kw ? '<div class="debrief-kw"><span class="debrief-kw-lbl">🔑 Core Rule:</span> <strong>' + esc(q.kw) + '</strong></div>' : '') +
+      '<div class="debrief-desc">' + esc(R.msg !== undefined ? R.msg : (q.e || '')) + '</div>' +
+      (q.data ? '<div class="debrief-row debrief-data"><span class="debrief-tag">📊 Benchmark Data</span><div>' + esc(q.data) + '</div></div>' : '') +
+      (q.ex ? '<div class="debrief-row debrief-ex"><span class="debrief-tag">⚡ Case Scenario</span><div>' + esc(q.ex) + '</div></div>' : '') +
+      (q.mains ? '<div class="debrief-row debrief-mains"><span class="debrief-tag">🏛️ Mains Value-Add</span><div>' + esc(q.mains) + '</div></div>' : '') +
+      (!R.ok ? '<div class="debrief-recycle-note">💡 <em>Hypercorrection: This challenge will return at the end of the session until mastered.</em></div>' : '') +
+    '</div>';
+    el.insertAdjacentHTML('beforeend', dh);
+  }
 }
 
 function foot(){
@@ -1993,7 +2049,11 @@ function foot(){
   f.className = "foot";
   if(R.ok !== null){
     f.className = "foot " + (R.ok ? "ok" : "no");
-    f.innerHTML = '<h3>🦉 ' + owlSay() + '</h3><p>' + esc(R.msg !== undefined ? R.msg : (q.e || "")) + '</p><button class="btn" id="go">Continue</button>';
+    if(R.isPractice){
+      f.innerHTML = '<button class="btn" id="go">' + (R.ok ? 'Got it · Continue →' : 'Understood · Continue →') + '</button>';
+    } else {
+      f.innerHTML = '<h3>🦉 ' + owlSay() + '</h3><p>' + esc(R.msg !== undefined ? R.msg : (q.e || "")) + '</p><button class="btn" id="go">Continue</button>';
+    }
     document.getElementById("go").onclick = done;
     return;
   }
@@ -2025,10 +2085,27 @@ function foot(){
 
 function finish(){
   if(R.ok){ R.xp += 10; R.cb = (R.cb || 0) + 1; }
-  else { R.hearts--; R.mist++; R.cb = 0; }
+  else {
+    if(!R.isPractice) R.hearts--;
+    R.mist++;
+    R.cb = 0;
+  }
   beep(R.ok);
   try { navigator.vibrate && navigator.vibrate(R.ok ? 15 : [40, 30, 40]); } catch(e) {}
   inner(); foot();
+  if(R.isPractice){
+    setTimeout(function(){
+      var b = document.querySelector(".body");
+      if (b) {
+        var dBox = b.querySelector(".debrief-box");
+        if (dBox) {
+          dBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          b.scrollTo({ top: b.scrollHeight, behavior: 'smooth' });
+        }
+      }
+    }, 60);
+  }
 }
 
 function done(){
@@ -2041,11 +2118,8 @@ function done(){
     }
   } else {
     if(k && S.weak.indexOf(k) < 0) S.weak.push(k);
-    if(!R.cur.again){
-      R.queue.push({ q: R.cur.q, again: true, key: k });
-    } else {
-      R.solved++;
-    }
+    // Practice model: always recycle until mastered
+    R.queue.push({ q: R.cur.q, again: true, key: k });
   }
   save(); next();
 }
@@ -2070,7 +2144,7 @@ function fin(win){
   var h = '<div class="end"><div class="big">' + (win ? '🏆' : '💔') + '</div>' +
     '<h1>' + (win ? 'Lesson complete!' : 'Out of hearts') + '</h1>' +
     '<p class="sub">' + (win ? esc(l.n) + ' cleared.' : 'Re-read the cards and try again.') + '</p>' +
-    (win ? '<div class="stats"><div class="stat">+' + R.xp + '<small>XP</small></div><div class="stat">' + pct + '%<small>Accuracy</small></div><div class="stat">' + R.hearts + '<small>Hearts left</small></div></div>' : '<div style="height:24px"></div>');
+    (win ? '<div class="stats"><div class="stat">+' + R.xp + '<small>XP</small></div><div class="stat">' + pct + '%<small>Accuracy</small></div>' + (R.isPractice ? '<div class="stat">100%<small>Mastery</small></div>' : '<div class="stat">' + R.hearts + '<small>Hearts left</small></div>') + '</div>' : '<div style="height:24px"></div>');
 
   if (win && hasNext && nextLessonObj) {
     h += '<div style="background:var(--card);border:2px solid var(--ok);border-radius:14px;padding:12px 16px;margin:10px 0 16px;max-width:340px;width:100%">' +
