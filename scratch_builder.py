@@ -58,977 +58,977 @@ TOPICS = {
         ],
         "lessons": [
             {
-                        "n": "Macro Pillars & Economic Footprint",
-                        "d": "31.1% GDP, 48.6% exports, 11 Cr livelihoods & rural footprint",
-                        "e": "🏭",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "The Giant in Plain Sight: 31.1% GDP & 48.6% Exports",
-                                                "b": [
-                                                            "<b>31.1% of India's GDP</b> and ~35.4% of total manufacturing gross value added (GVA) originate from the MSME ecosystem.",
-                                                            "MSMEs drive <b>48.6% of India's total merchandise exports</b> across textiles, engineering goods, leather, and gems.",
-                                                            "With <b>11.1 Crore jobs</b>, MSMEs are the second largest employer in India after agriculture, creating ~33 jobs per crore of capital invested."
-                                                ],
-                                                "k": [
-                                                            "31.1% GDP",
-                                                            "48.6% Exports",
-                                                            "11.1 Cr Jobs",
-                                                            "Labor-to-Capital Ratio"
-                                                ],
-                                                "n": "MSMEs are not a peripheral welfare sector—they power nearly half of India's outward trade and absorb rural surplus labor."
-                                    },
-                                    {
-                                                "t": "Decentralized Livelihoods: 51.2% Rural Anchor",
-                                                "b": [
-                                                            "Over <b>51.2% of MSMEs</b> are based in rural India, serving as the frontline defense against distress agrarian migration.",
-                                                            "Social equity anchor: ~<b>66% of MSMEs</b> are owned by socially disadvantaged groups (SC, ST, and OBCs), and ~20% are women-led.",
-                                                            "Fulfills <b>Article 43</b> (promotion of cottage industries) and decentralizes manufacturing away from congested tier-1 metros."
-                                                ],
-                                                "k": [
-                                                            "51.2% Rural",
-                                                            "66% SC/ST/OBC Owned",
-                                                            "Article 43",
-                                                            "Spatial Decentralization"
-                                                ],
-                                                "n": "Whenever you argue for inclusive regional growth in GS-3, cite the 51.2% rural MSME footprint."
-                                    }
+                "n": "Macro Pillars & Economic Footprint",
+                "d": "31.1% GDP, 48.6% exports, 11 Cr livelihoods & rural footprint",
+                "e": "🏭",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "The Giant in Plain Sight: 31.1% GDP & 48.6% Exports",
+                        "b": [
+                            "<b>31.1% of India's GDP</b> and ~35.4% of total manufacturing gross value added (GVA) originate from the MSME ecosystem.",
+                            "MSMEs drive <b>48.6% of India's total merchandise exports</b> across textiles, engineering goods, leather, and gems.",
+                            "With <b>11.1 Crore jobs</b>, MSMEs are the second largest employer in India after agriculture, creating ~33 jobs per crore of capital invested."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "A state draft industrial policy claims that MSMEs contribute only ~15% to India's merchandise exports and under 20% to GDP. What is the verified official macroeconomic footprint of MSMEs in India?",
-                                                "o": [
-                                                            "~15% GDP and ~20% Exports",
-                                                            "~20% GDP and ~30% Exports",
-                                                            "~31.1% GDP and ~48.6% Merchandise Exports",
-                                                            "~45% GDP and ~70% Merchandise Exports"
-                                                ],
-                                                "a": 2,
-                                                "kw": "Foundational Macroeconomic Share",
-                                                "e": "MSMEs are the backbone of India's economy, accounting for ~31.1% of India's GDP, 35.4% of manufacturing output, and an astonishing 48.6% of total merchandise exports.",
-                                                "data": "31.1% of GDP · 35.4% Manufacturing GVA · 48.6% Merchandise Exports (MSME Ministry Annual Report 2023-24).",
-                                                "ex": "Engineering goods from Rajkot, leather from Agra, textiles from Tirupur and Surat drive nearly half of India's outward shipments.",
-                                                "mains": "Quote these 3 golden macro figures in any introduction to establish the high developmental stakes of MSME growth."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "True or False: More than 60% of all MSME enterprises in India are concentrated in urban metropolitan tier-1 hubs.",
-                                                "a": 1,
-                                                "kw": "Rural Industrialization & Decentralization",
-                                                "e": "False! Official data shows that 51.2% of MSMEs are located in rural India, serving as the country's primary engine for decentralized livelihood diversification outside agriculture.",
-                                                "data": "51.2% Rural vs 48.8% Urban distribution across 6.33 Crore estimated MSMEs.",
-                                                "ex": "Agro-processing units, handlooms, brassware in Moradabad, and bamboo crafts in Assam generate local employment, arresting distress urban migration.",
-                                                "mains": "Highlights MSMEs' role in reducing regional disparities and fulfilling Article 43 (decentralized cottage industries)."
-                                    },
-                                    {
-                                                "k": "multi",
-                                                "q": "Tap all verified macroeconomic benchmarks of India's MSME sector:",
-                                                "o": [
-                                                            "Sustains approximately 11.1 Crore jobs (second largest employer after agriculture)",
-                                                            "Owned predominantly (~66%) by socially disadvantaged groups (SC, ST, and OBCs)",
-                                                            "Accounts for nearly half (~48.6%) of merchandise exports",
-                                                            "Generates over 75% of India's central corporate income tax"
-                                                ],
-                                                "a": [
-                                                            0,
-                                                            1,
-                                                            2
-                                                ],
-                                                "kw": "Triple Inclusion Footprint",
-                                                "e": "MSMEs excel in employment (11.1 Cr jobs), export competitiveness (48.6%), and social inclusion (~66% SC/ST/OBC ownership). However, being predominantly informal and micro, they do NOT generate 75% of corporate tax.",
-                                                "data": "11.1 Crore jobs · ~66% owned by SC/ST/OBC entrepreneurs · ~20% women-headed.",
-                                                "ex": "Micro-enterprises in weaving clusters in Pochampally and coir units in Alappuzha sustain rural and marginalized family livelihoods.",
-                                                "mains": "Use the 'Employment-Equity-Export' triad to structure arguments on MSME-led inclusive development."
-                                    },
-                                    {
-                                                "k": "match",
-                                                "q": "Match each macroeconomic indicator to its official benchmark:",
-                                                "p": [
-                                                            [
-                                                                        "Merchandise Exports Share",
-                                                                        "48.6%"
-                                                            ],
-                                                            [
-                                                                        "GDP Contribution",
-                                                                        "31.1%"
-                                                            ],
-                                                            [
-                                                                        "Livelihoods Sustained",
-                                                                        "11.1 Crore jobs"
-                                                            ],
-                                                            [
-                                                                        "Rural Concentration",
-                                                                        "51.2% of units"
-                                                            ]
-                                                ],
-                                                "kw": "Macro Metric Matrix",
-                                                "e": "Mastering these four exact figures prevents generic statements in GS Paper 3 answers and earns high evaluator credibility.",
-                                                "data": "Merchandise exports: 48.6% | GDP: 31.1% | Livelihoods: 11.1 Cr | Rural: 51.2%.",
-                                                "ex": "Economic Survey 2023-24 highlights that capital-to-labor ratio in MSMEs is 4x lower than in large conglomerates, yielding higher job creation per invested crore.",
-                                                "mains": "Contrasts capital-intensive 'Jobless Growth' with labor-intensive MSME manufacturing."
-                                    },
-                                    {
-                                                "k": "flag",
-                                                "q": "Spot the red flag: which part of this statement is factually incorrect?",
-                                                "o": [
-                                                            "MSMEs employ over 11 Crore people across India",
-                                                            "Capital-intensive conglomerates create 4x more jobs per crore invested than MSMEs",
-                                                            "Over 50% of MSME units operate in rural areas",
-                                                            "MSMEs contribute more than 35% of India's manufacturing GVA"
-                                                ],
-                                                "a": 1,
-                                                "kw": "Capital Efficiency of MSMEs",
-                                                "e": "MSMEs—not large conglomerates—create nearly 4x more jobs per crore of capital invested because they utilize labor-intensive and decentralized manufacturing techniques.",
-                                                "data": "Labor intensity: MSMEs create ~33 jobs per ₹1 Crore invested vs ~8 jobs in heavy capital conglomerates.",
-                                                "ex": "Powerloom units in Bhiwandi and shoe-stitching workshops in Kanpur employ hundreds with modest capital equipment.",
-                                                "mains": "Vital argument against premature de-industrialization and hyper-capital automation."
-                                    },
-                                    {
-                                                "k": "order",
-                                                "q": "Build the sentence: tap words in order to form the core thesis on MSMEs.",
-                                                "o": [
-                                                            "MSMEs",
-                                                            "power",
-                                                            "half of",
-                                                            "India's exports",
-                                                            "and sustain",
-                                                            "11 Crore jobs"
-                                                ],
-                                                "kw": "Macro Synthesis Thesis",
-                                                "e": "MSMEs power nearly half of India's merchandise exports and sustain 11 Crore jobs across rural and urban landscapes.",
-                                                "data": "6.33 Crore enterprises across India, driving 48.6% of merchandise shipments.",
-                                                "ex": "Coimbatore pump and motor manufacturers supplying domestic and international markets.",
-                                                "mains": "Perfect 1-sentence opening hook for GS-3 answers on manufacturing and employment."
-                                    }
-                        ]
+                        "k": [
+                            "31.1% GDP",
+                            "48.6% Exports",
+                            "11.1 Cr Jobs",
+                            "Labor-to-Capital Ratio"
+                        ],
+                        "n": "MSMEs are not a peripheral welfare sector—they power nearly half of India's outward trade and absorb rural surplus labor."
+                    },
+                    {
+                        "t": "Decentralized Livelihoods: 51.2% Rural Anchor",
+                        "b": [
+                            "Over <b>51.2% of MSMEs</b> are based in rural India, serving as the frontline defense against distress agrarian migration.",
+                            "Social equity anchor: ~<b>66% of MSMEs</b> are owned by socially disadvantaged groups (SC, ST, and OBCs), and ~20% are women-led.",
+                            "Fulfills <b>Article 43</b> (promotion of cottage industries) and decentralizes manufacturing away from congested tier-1 metros."
+                        ],
+                        "k": [
+                            "51.2% Rural",
+                            "66% SC/ST/OBC Owned",
+                            "Article 43",
+                            "Spatial Decentralization"
+                        ],
+                        "n": "Whenever you argue for inclusive regional growth in GS-3, cite the 51.2% rural MSME footprint."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "A state draft industrial policy claims that MSMEs contribute only ~15% to India's merchandise exports and under 20% to GDP. What is the verified official macroeconomic footprint of MSMEs in India?",
+                        "o": [
+                            "~15% GDP and ~20% Exports",
+                            "~20% GDP and ~30% Exports",
+                            "~31.1% GDP and ~48.6% Merchandise Exports",
+                            "~45% GDP and ~70% Merchandise Exports"
+                        ],
+                        "a": 2,
+                        "kw": "Foundational Macroeconomic Share",
+                        "e": "MSMEs are the backbone of India's economy, accounting for ~31.1% of India's GDP, 35.4% of manufacturing output, and an astonishing 48.6% of total merchandise exports.",
+                        "data": "31.1% of GDP · 35.4% Manufacturing GVA · 48.6% Merchandise Exports (MSME Ministry Annual Report 2023-24).",
+                        "ex": "Engineering goods from Rajkot, leather from Agra, textiles from Tirupur and Surat drive nearly half of India's outward shipments.",
+                        "mains": "Quote these 3 golden macro figures in any introduction to establish the high developmental stakes of MSME growth."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "True or False: More than 60% of all MSME enterprises in India are concentrated in urban metropolitan tier-1 hubs.",
+                        "a": 1,
+                        "kw": "Rural Industrialization & Decentralization",
+                        "e": "False! Official data shows that 51.2% of MSMEs are located in rural India, serving as the country's primary engine for decentralized livelihood diversification outside agriculture.",
+                        "data": "51.2% Rural vs 48.8% Urban distribution across 6.33 Crore estimated MSMEs.",
+                        "ex": "Agro-processing units, handlooms, brassware in Moradabad, and bamboo crafts in Assam generate local employment, arresting distress urban migration.",
+                        "mains": "Highlights MSMEs' role in reducing regional disparities and fulfilling Article 43 (decentralized cottage industries)."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all verified macroeconomic benchmarks of India's MSME sector:",
+                        "o": [
+                            "Sustains approximately 11.1 Crore jobs (second largest employer after agriculture)",
+                            "Owned predominantly (~66%) by socially disadvantaged groups (SC, ST, and OBCs)",
+                            "Accounts for nearly half (~48.6%) of merchandise exports",
+                            "Generates over 75% of India's central corporate income tax"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "kw": "Triple Inclusion Footprint",
+                        "e": "MSMEs excel in employment (11.1 Cr jobs), export competitiveness (48.6%), and social inclusion (~66% SC/ST/OBC ownership). However, being predominantly informal and micro, they do NOT generate 75% of corporate tax.",
+                        "data": "11.1 Crore jobs · ~66% owned by SC/ST/OBC entrepreneurs · ~20% women-headed.",
+                        "ex": "Micro-enterprises in weaving clusters in Pochampally and coir units in Alappuzha sustain rural and marginalized family livelihoods.",
+                        "mains": "Use the 'Employment-Equity-Export' triad to structure arguments on MSME-led inclusive development."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match each macroeconomic indicator to its official benchmark:",
+                        "p": [
+                            [
+                                "Merchandise Exports Share",
+                                "48.6%"
+                            ],
+                            [
+                                "GDP Contribution",
+                                "31.1%"
+                            ],
+                            [
+                                "Livelihoods Sustained",
+                                "11.1 Crore jobs"
+                            ],
+                            [
+                                "Rural Concentration",
+                                "51.2% of units"
+                            ]
+                        ],
+                        "kw": "Macro Metric Matrix",
+                        "e": "Mastering these four exact figures prevents generic statements in GS Paper 3 answers and earns high evaluator credibility.",
+                        "data": "Merchandise exports: 48.6% | GDP: 31.1% | Livelihoods: 11.1 Cr | Rural: 51.2%.",
+                        "ex": "Economic Survey 2023-24 highlights that capital-to-labor ratio in MSMEs is 4x lower than in large conglomerates, yielding higher job creation per invested crore.",
+                        "mains": "Contrasts capital-intensive 'Jobless Growth' with labor-intensive MSME manufacturing."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Spot the red flag: which part of this statement is factually incorrect?",
+                        "o": [
+                            "MSMEs employ over 11 Crore people across India",
+                            "Capital-intensive conglomerates create 4x more jobs per crore invested than MSMEs",
+                            "Over 50% of MSME units operate in rural areas",
+                            "MSMEs contribute more than 35% of India's manufacturing GVA"
+                        ],
+                        "a": 1,
+                        "kw": "Capital Efficiency of MSMEs",
+                        "e": "MSMEs—not large conglomerates—create nearly 4x more jobs per crore of capital invested because they utilize labor-intensive and decentralized manufacturing techniques.",
+                        "data": "Labor intensity: MSMEs create ~33 jobs per ₹1 Crore invested vs ~8 jobs in heavy capital conglomerates.",
+                        "ex": "Powerloom units in Bhiwandi and shoe-stitching workshops in Kanpur employ hundreds with modest capital equipment.",
+                        "mains": "Vital argument against premature de-industrialization and hyper-capital automation."
+                    },
+                    {
+                        "k": "order",
+                        "q": "Build the sentence: tap words in order to form the core thesis on MSMEs.",
+                        "o": [
+                            "MSMEs",
+                            "power",
+                            "half of",
+                            "India's exports",
+                            "and sustain",
+                            "11 Crore jobs"
+                        ],
+                        "kw": "Macro Synthesis Thesis",
+                        "e": "MSMEs power nearly half of India's merchandise exports and sustain 11 Crore jobs across rural and urban landscapes.",
+                        "data": "6.33 Crore enterprises across India, driving 48.6% of merchandise shipments.",
+                        "ex": "Coimbatore pump and motor manufacturers supplying domestic and international markets.",
+                        "mains": "Perfect 1-sentence opening hook for GS-3 answers on manufacturing and employment."
+                    }
+                ]
             },
             {
-                        "n": "2020 Composite Classification",
-                        "d": "Composite criteria, 1:5 ratio, and the Export Exclusion Rule",
-                        "e": "📐",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "The 2020 Composite Criteria Paradigm Shift",
-                                                "b": [
-                                                            "<b>Abolition of the Manufacturing vs Services divide:</b> Pre-2020 thresholds penalized service firms with much lower investment caps. The 2020 reform unified both sectors under identical rules.",
-                                                            "<b>Composite formula:</b> Classification requires meeting BOTH <b>Investment in Plant & Machinery</b> AND <b>Annual Turnover</b> criteria simultaneously.",
-                                                            "<b>Uniform 1:5 ratio:</b> Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), Medium (50 Cr / 250 Cr)."
-                                                ],
-                                                "k": [
-                                                            "Composite Formula",
-                                                            "Mfg-Services Parity",
-                                                            "1:5 Proportionality",
-                                                            "July 2020 Reform"
-                                                ],
-                                                "n": "Memorize the 1:5 ratio: Investment multiplied by 5 gives the corresponding turnover ceiling."
-                                    },
-                                    {
-                                                "t": "The Export Turnover Exclusion Rule (Section 7)",
-                                                "b": [
-                                                            "<b>Export turnover is 100% EXCLUDED:</b> When calculating an enterprise's turnover ceiling, export of both goods and services is deducted.",
-                                                            "<b>Neutralizes fear of growth:</b> Allows successful MSME exporters to scale globally without fearing immediate loss of MSME fiscal shields.",
-                                                            "<b>Depreciated written-down value (WDV):</b> Investment is calculated on depreciated IT value, excluding pollution control and safety equipment."
-                                                ],
-                                                "k": [
-                                                            "Export Exclusion",
-                                                            "Section 7 MSMED",
-                                                            "Written Down Value",
-                                                            "Global Competitiveness"
-                                                ],
-                                                "n": "Export turnover exclusion is the most tested analytical nuance in UPSC Prelims and Mains."
-                                    },
-                                    {
-                                                "t": "Udyam Digital Self-Declaration Ecosystem",
-                                                "b": [
-                                                            "<b>Paperless & self-declaration:</b> Replaced manual inspection with Aadhaar-linked Udyam registration.",
-                                                            "<b>API integration with CBDT & GSTN:</b> Automatically verifies turnover and investment figures directly from filed Income Tax returns and GST returns.",
-                                                            "<b>Zero registration fee:</b> Eliminates touts and middleman extortion at the district industries center (DIC) level."
-                                                ],
-                                                "k": [
-                                                            "Udyam Registration",
-                                                            "PAN-GSTN Integration",
-                                                            "Faceless Governance",
-                                                            "Self-Declaration"
-                                                ],
-                                                "n": "Udyam is a textbook example of Digital Public Infrastructure applied to industrial regulation."
-                                    }
+                "n": "2020 Composite Classification",
+                "d": "Composite criteria, 1:5 ratio, and the Export Exclusion Rule",
+                "e": "📐",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "The 2020 Composite Criteria Paradigm Shift",
+                        "b": [
+                            "<b>Abolition of the Manufacturing vs Services divide:</b> Pre-2020 thresholds penalized service firms with much lower investment caps. The 2020 reform unified both sectors under identical rules.",
+                            "<b>Composite formula:</b> Classification requires meeting BOTH <b>Investment in Plant & Machinery</b> AND <b>Annual Turnover</b> criteria simultaneously.",
+                            "<b>Uniform 1:5 ratio:</b> Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), Medium (50 Cr / 250 Cr)."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "Scenario: Alpha Tech (Pune) has ₹8 Crore invested in plant & machinery, ₹45 Crore domestic turnover, and ₹20 Crore foreign export turnover (total turnover ₹65 Crore). Under the 2020 MSME notification, what is its legal classification?",
-                                                "o": [
-                                                            "Medium Enterprise (because total turnover ₹65 Cr exceeds ₹50 Cr)",
-                                                            "Small Enterprise (because export turnover is 100% excluded)",
-                                                            "Micro Enterprise (due to depreciation allowance on machinery)",
-                                                            "Disqualified from MSME status"
-                                                ],
-                                                "a": 1,
-                                                "kw": "The Export Exclusion Rule",
-                                                "e": "Crucial Rule: Under Section 7(1) of the amended MSMED Act, export turnover (both goods and services) is completely EXCLUDED when calculating the turnover ceiling! Net Turnover = ₹45 Cr – ₹20 Cr export = ₹25 Cr. Since Investment (₹8 Cr <= ₹10 Cr) and Net Turnover (₹25 Cr <= ₹50 Cr) both fit the Small tier, Alpha Tech is a Small Enterprise!",
-                                                "data": "Section 7 of MSMED Act (Notification S.O. 2119(E) dated 26 June 2020) explicitly mandates export exclusion.",
-                                                "ex": "A textile garment exporter in Tirupur with ₹70 Cr export sales and ₹30 Cr domestic sales remains a Small Enterprise, preserving preferential credit.",
-                                                "mains": "Explains how the 2020 reform incentivizes global export orientation without fear of losing MSME fiscal protections."
-                                    },
-                                    {
-                                                "k": "mc",
-                                                "q": "What are the ceiling limits for a 'Small' enterprise under the composite criteria introduced in July 2020?",
-                                                "o": [
-                                                            "Investment ₹1 Cr and Turnover ₹5 Cr",
-                                                            "Investment ₹10 Cr and Turnover ₹50 Cr",
-                                                            "Investment ₹20 Cr and Turnover ₹100 Cr",
-                                                            "Investment ₹50 Cr and Turnover ₹250 Cr"
-                                                ],
-                                                "a": 1,
-                                                "kw": "1:5 Proportionality Principle",
-                                                "e": "Under the 2020 composite definition, the ratio between Investment and Turnover is uniformly 1:5 across all tiers: Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), and Medium (50 Cr / 250 Cr).",
-                                                "data": "Micro: <= ₹1 Cr / <= ₹5 Cr | Small: <= ₹10 Cr / <= ₹50 Cr | Medium: <= ₹50 Cr / <= ₹250 Cr.",
-                                                "ex": "Eliminated the pre-2020 gap where service enterprises were restricted to lower investment thresholds than manufacturing.",
-                                                "mains": "Composite criteria ended the artificial divide between manufacturing and services, aligning with modern service-integrated production."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "True or False: If an enterprise exceeds the investment ceiling of ₹1 Crore for Micro, but its turnover is only ₹3 Crore (within the ₹5 Cr limit), it still remains classified as a Micro enterprise.",
-                                                "a": 1,
-                                                "kw": "Dual Ceiling Breach Trap",
-                                                "e": "False! To remain in a lower tier, an enterprise must satisfy BOTH criteria simultaneously. If EITHER the investment OR turnover crosses the ceiling, the enterprise is immediately upgraded to the higher tier.",
-                                                "data": "MSMED Notification 2020 Clause 2(1): Crossing either threshold automatically shifts the unit upward.",
-                                                "ex": "A high-precision dental lab buying a ₹2.5 Cr 3D metal printer is pushed into 'Small', even if its revenues are modest.",
-                                                "mains": "Prevents capital gold-plating while holding growing firms to appropriate compliance standards."
-                                    },
-                                    {
-                                                "k": "sort",
-                                                "q": "Sort these ceiling limits into their correct MSME tiers:",
-                                                "it": [
-                                                            [
-                                                                        "₹1 Cr Invest / ₹5 Cr Turn",
-                                                                        0
-                                                            ],
-                                                            [
-                                                                        "₹10 Cr Invest / ₹50 Cr Turn",
-                                                                        1
-                                                            ],
-                                                            [
-                                                                        "₹50 Cr Invest / ₹250 Cr Turn",
-                                                                        2
-                                                            ],
-                                                            [
-                                                                        "Micro Threshold",
-                                                                        0
-                                                            ],
-                                                            [
-                                                                        "Small Threshold",
-                                                                        1
-                                                            ],
-                                                            [
-                                                                        "Medium Threshold",
-                                                                        2
-                                                            ]
-                                                ],
-                                                "b": [
-                                                            "Micro",
-                                                            "Small",
-                                                            "Medium"
-                                                ],
-                                                "kw": "Threshold Matrix Calibration",
-                                                "e": "Micro (1/5 Cr), Small (10/50 Cr), and Medium (50/250 Cr) create a smooth upward glide-path for growing firms.",
-                                                "data": "Uniform 1:5 ratio maintains structural consistency across all three enterprise brackets.",
-                                                "ex": "Over 99% of registered enterprises fall in the Micro bucket; the threshold increases allow units to modernize equipment.",
-                                                "mains": "Essential table to reproduce in 10-marker and 15-marker GS-3 answers on MSME definitions."
-                                    },
-                                    {
-                                                "k": "year",
-                                                "q": "Slide to the year when the unified composite criteria (Investment + Turnover) and Udyam Portal were introduced:",
-                                                "min": 2014,
-                                                "max": 2024,
-                                                "a": 2020,
-                                                "tol": 0,
-                                                "kw": "Atmanirbhar Bharat Paradigm Shift",
-                                                "e": "Notification dated 26th June 2020 took effect on 1st July 2020 as part of the Atmanirbhar Bharat package, replacing the outdated 2006 framework.",
-                                                "data": "Replaced MSMED Act 2006 classification which relied purely on historical plant and machinery cost.",
-                                                "ex": "Launched alongside Udyam Registration, linking GSTN and PAN databases for automatic turnover verification.",
-                                                "mains": "Marked a decisive break from inspection-heavy physical verification to digital self-certification."
-                                    },
-                                    {
-                                                "k": "match",
-                                                "q": "Match the MSME tier to its maximum permissible investment in plant & machinery:",
-                                                "p": [
-                                                            [
-                                                                        "Micro Enterprise",
-                                                                        "₹1 Crore"
-                                                            ],
-                                                            [
-                                                                        "Small Enterprise",
-                                                                        "₹10 Crore"
-                                                            ],
-                                                            [
-                                                                        "Medium Enterprise",
-                                                                        "₹50 Crore"
-                                                            ],
-                                                            [
-                                                                        "Turnover Ratio",
-                                                                        "5x Investment"
-                                                            ]
-                                                ],
-                                                "kw": "Investment Cap Synthesis",
-                                                "e": "Investment caps are based on depreciated written down value (WDV) or purchase invoice, excluding pollution control and safety equipment.",
-                                                "data": "Micro <= ₹1 Cr | Small <= ₹10 Cr | Medium <= ₹50 Cr.",
-                                                "ex": "Auto component suppliers in Manesar upgrading CNC machines up to ₹10 Cr retain Small enterprise status.",
-                                                "mains": "Exclusion of pollution control equipment encourages green industrial upgrades without triggering threshold penalties."
-                                    }
-                        ]
+                        "k": [
+                            "Composite Formula",
+                            "Mfg-Services Parity",
+                            "1:5 Proportionality",
+                            "July 2020 Reform"
+                        ],
+                        "n": "Memorize the 1:5 ratio: Investment multiplied by 5 gives the corresponding turnover ceiling."
+                    },
+                    {
+                        "t": "The Export Turnover Exclusion Rule (Section 7)",
+                        "b": [
+                            "<b>Export turnover is 100% EXCLUDED:</b> When calculating an enterprise's turnover ceiling, export of both goods and services is deducted.",
+                            "<b>Neutralizes fear of growth:</b> Allows successful MSME exporters to scale globally without fearing immediate loss of MSME fiscal shields.",
+                            "<b>Depreciated written-down value (WDV):</b> Investment is calculated on depreciated IT value, excluding pollution control and safety equipment."
+                        ],
+                        "k": [
+                            "Export Exclusion",
+                            "Section 7 MSMED",
+                            "Written Down Value",
+                            "Global Competitiveness"
+                        ],
+                        "n": "Export turnover exclusion is the most tested analytical nuance in UPSC Prelims and Mains."
+                    },
+                    {
+                        "t": "Udyam Digital Self-Declaration Ecosystem",
+                        "b": [
+                            "<b>Paperless & self-declaration:</b> Replaced manual inspection with Aadhaar-linked Udyam registration.",
+                            "<b>API integration with CBDT & GSTN:</b> Automatically verifies turnover and investment figures directly from filed Income Tax returns and GST returns.",
+                            "<b>Zero registration fee:</b> Eliminates touts and middleman extortion at the district industries center (DIC) level."
+                        ],
+                        "k": [
+                            "Udyam Registration",
+                            "PAN-GSTN Integration",
+                            "Faceless Governance",
+                            "Self-Declaration"
+                        ],
+                        "n": "Udyam is a textbook example of Digital Public Infrastructure applied to industrial regulation."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Scenario: Alpha Tech (Pune) has ₹8 Crore invested in plant & machinery, ₹45 Crore domestic turnover, and ₹20 Crore foreign export turnover (total turnover ₹65 Crore). Under the 2020 MSME notification, what is its legal classification?",
+                        "o": [
+                            "Medium Enterprise (because total turnover ₹65 Cr exceeds ₹50 Cr)",
+                            "Small Enterprise (because export turnover is 100% excluded)",
+                            "Micro Enterprise (due to depreciation allowance on machinery)",
+                            "Disqualified from MSME status"
+                        ],
+                        "a": 1,
+                        "kw": "The Export Exclusion Rule",
+                        "e": "Crucial Rule: Under Section 7(1) of the amended MSMED Act, export turnover (both goods and services) is completely EXCLUDED when calculating the turnover ceiling! Net Turnover = ₹45 Cr – ₹20 Cr export = ₹25 Cr. Since Investment (₹8 Cr <= ₹10 Cr) and Net Turnover (₹25 Cr <= ₹50 Cr) both fit the Small tier, Alpha Tech is a Small Enterprise!",
+                        "data": "Section 7 of MSMED Act (Notification S.O. 2119(E) dated 26 June 2020) explicitly mandates export exclusion.",
+                        "ex": "A textile garment exporter in Tirupur with ₹70 Cr export sales and ₹30 Cr domestic sales remains a Small Enterprise, preserving preferential credit.",
+                        "mains": "Explains how the 2020 reform incentivizes global export orientation without fear of losing MSME fiscal protections."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "What are the ceiling limits for a 'Small' enterprise under the composite criteria introduced in July 2020?",
+                        "o": [
+                            "Investment ₹1 Cr and Turnover ₹5 Cr",
+                            "Investment ₹10 Cr and Turnover ₹50 Cr",
+                            "Investment ₹20 Cr and Turnover ₹100 Cr",
+                            "Investment ₹50 Cr and Turnover ₹250 Cr"
+                        ],
+                        "a": 1,
+                        "kw": "1:5 Proportionality Principle",
+                        "e": "Under the 2020 composite definition, the ratio between Investment and Turnover is uniformly 1:5 across all tiers: Micro (1 Cr / 5 Cr), Small (10 Cr / 50 Cr), and Medium (50 Cr / 250 Cr).",
+                        "data": "Micro: <= ₹1 Cr / <= ₹5 Cr | Small: <= ₹10 Cr / <= ₹50 Cr | Medium: <= ₹50 Cr / <= ₹250 Cr.",
+                        "ex": "Eliminated the pre-2020 gap where service enterprises were restricted to lower investment thresholds than manufacturing.",
+                        "mains": "Composite criteria ended the artificial divide between manufacturing and services, aligning with modern service-integrated production."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "True or False: If an enterprise exceeds the investment ceiling of ₹1 Crore for Micro, but its turnover is only ₹3 Crore (within the ₹5 Cr limit), it still remains classified as a Micro enterprise.",
+                        "a": 1,
+                        "kw": "Dual Ceiling Breach Trap",
+                        "e": "False! To remain in a lower tier, an enterprise must satisfy BOTH criteria simultaneously. If EITHER the investment OR turnover crosses the ceiling, the enterprise is immediately upgraded to the higher tier.",
+                        "data": "MSMED Notification 2020 Clause 2(1): Crossing either threshold automatically shifts the unit upward.",
+                        "ex": "A high-precision dental lab buying a ₹2.5 Cr 3D metal printer is pushed into 'Small', even if its revenues are modest.",
+                        "mains": "Prevents capital gold-plating while holding growing firms to appropriate compliance standards."
+                    },
+                    {
+                        "k": "sort",
+                        "q": "Sort these ceiling limits into their correct MSME tiers:",
+                        "it": [
+                            [
+                                "₹1 Cr Invest / ₹5 Cr Turn",
+                                0
+                            ],
+                            [
+                                "₹10 Cr Invest / ₹50 Cr Turn",
+                                1
+                            ],
+                            [
+                                "₹50 Cr Invest / ₹250 Cr Turn",
+                                2
+                            ],
+                            [
+                                "Micro Threshold",
+                                0
+                            ],
+                            [
+                                "Small Threshold",
+                                1
+                            ],
+                            [
+                                "Medium Threshold",
+                                2
+                            ]
+                        ],
+                        "b": [
+                            "Micro",
+                            "Small",
+                            "Medium"
+                        ],
+                        "kw": "Threshold Matrix Calibration",
+                        "e": "Micro (1/5 Cr), Small (10/50 Cr), and Medium (50/250 Cr) create a smooth upward glide-path for growing firms.",
+                        "data": "Uniform 1:5 ratio maintains structural consistency across all three enterprise brackets.",
+                        "ex": "Over 99% of registered enterprises fall in the Micro bucket; the threshold increases allow units to modernize equipment.",
+                        "mains": "Essential table to reproduce in 10-marker and 15-marker GS-3 answers on MSME definitions."
+                    },
+                    {
+                        "k": "year",
+                        "q": "Slide to the year when the unified composite criteria (Investment + Turnover) and Udyam Portal were introduced:",
+                        "min": 2014,
+                        "max": 2024,
+                        "a": 2020,
+                        "tol": 0,
+                        "kw": "Atmanirbhar Bharat Paradigm Shift",
+                        "e": "Notification dated 26th June 2020 took effect on 1st July 2020 as part of the Atmanirbhar Bharat package, replacing the outdated 2006 framework.",
+                        "data": "Replaced MSMED Act 2006 classification which relied purely on historical plant and machinery cost.",
+                        "ex": "Launched alongside Udyam Registration, linking GSTN and PAN databases for automatic turnover verification.",
+                        "mains": "Marked a decisive break from inspection-heavy physical verification to digital self-certification."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the MSME tier to its maximum permissible investment in plant & machinery:",
+                        "p": [
+                            [
+                                "Micro Enterprise",
+                                "₹1 Crore"
+                            ],
+                            [
+                                "Small Enterprise",
+                                "₹10 Crore"
+                            ],
+                            [
+                                "Medium Enterprise",
+                                "₹50 Crore"
+                            ],
+                            [
+                                "Turnover Ratio",
+                                "5x Investment"
+                            ]
+                        ],
+                        "kw": "Investment Cap Synthesis",
+                        "e": "Investment caps are based on depreciated written down value (WDV) or purchase invoice, excluding pollution control and safety equipment.",
+                        "data": "Micro <= ₹1 Cr | Small <= ₹10 Cr | Medium <= ₹50 Cr.",
+                        "ex": "Auto component suppliers in Manesar upgrading CNC machines up to ₹10 Cr retain Small enterprise status.",
+                        "mains": "Exclusion of pollution control equipment encourages green industrial upgrades without triggering threshold penalties."
+                    }
+                ]
             },
             {
-                        "n": "The Dwarfism Paradox",
-                        "d": "Dwarfs vs infants, missing middle, and regulatory cliffs",
-                        "e": "📉",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "The Inverted Pyramid & The Missing Middle",
-                                                "b": [
-                                                            "<b>99.4% Micro concentration:</b> Out of 6.33 Crore estimated MSMEs, an astounding 99.4% are Micro units. Small units comprise only 0.52%, and Medium units a meager 0.08%.",
-                                                            "<b>The Missing Middle:</b> In advanced industrial economies (Germany, Japan), mid-sized firms form a robust core. In India, micro-enterprises rarely graduate into small or medium scale.",
-                                                            "<b>Scale deficit:</b> Prevents Indian manufacturing from achieving economies of scale, supply chain resiliency, and global export dominance."
-                                                ],
-                                                "k": [
-                                                            "99.4% Micro",
-                                                            "Missing Middle",
-                                                            "Scale Deficit",
-                                                            "Inverted Pyramid"
-                                                ],
-                                                "n": "The Missing Middle is the primary structural reason India's manufacturing share has stagnated near 16-17% of GDP."
-                                    },
-                                    {
-                                                "t": "Economic Survey: Dwarfs vs Infant Enterprises",
-                                                "b": [
-                                                            "<b>Infants vs Dwarfs:</b> Former CEA K.V. Subramanian distinguished between 'Infants' (young firms that start small and rapidly scale up) and 'Dwarfs' (firms older than 10 years that deliberately remain small).",
-                                                            "<b>Perverse incentives:</b> Perpetual size-based subsidies, priority sector shields, and labor exemption thresholds incentivize firms to stay stunted forever.",
-                                                            "<b>Low productivity:</b> Dwarfs in India are 5x less productive and generate far fewer productive jobs than large, scaled enterprises."
-                                                ],
-                                                "k": [
-                                                            "Dwarfism Paradox",
-                                                            "Infant Enterprises",
-                                                            "K.V. Subramanian",
-                                                            "Sunset Clauses"
-                                                ],
-                                                "n": "Propose 'Sunset Clauses' on MSME tax shields so incentives expire after 7-10 years, forcing firms to scale."
-                                    },
-                                    {
-                                                "t": "The 100-Worker Regulatory Cliff",
-                                                "b": [
-                                                            "<b>Chapter V-B Industrial Disputes Act 1947:</b> Mandated government permission before retrenching workers or closing units for factories with 100+ workers.",
-                                                            "<b>Deliberate firm splitting:</b> Entrepreneurs intentionally split single manufacturing operations into multiple dummy legal entities to keep each below 100 workers.",
-                                                            "<b>Labor Code reform:</b> The Industrial Relations Code 2020 raised this threshold to 300 workers, but state-level notification remains uneven."
-                                                ],
-                                                "k": [
-                                                            "Chapter V-B IDA",
-                                                            "100-Worker Cliff",
-                                                            "Entity Fragmentation",
-                                                            "Labor Code 2020"
-                                                ],
-                                                "n": "Regulatory cliffs turn compliance into a penalty on job creation."
-                                    }
+                "n": "The Dwarfism Paradox",
+                "d": "Dwarfs vs infants, missing middle, and regulatory cliffs",
+                "e": "📉",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "The Inverted Pyramid & The Missing Middle",
+                        "b": [
+                            "<b>99.4% Micro concentration:</b> Out of 6.33 Crore estimated MSMEs, an astounding 99.4% are Micro units. Small units comprise only 0.52%, and Medium units a meager 0.08%.",
+                            "<b>The Missing Middle:</b> In advanced industrial economies (Germany, Japan), mid-sized firms form a robust core. In India, micro-enterprises rarely graduate into small or medium scale.",
+                            "<b>Scale deficit:</b> Prevents Indian manufacturing from achieving economies of scale, supply chain resiliency, and global export dominance."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "What percentage of all enterprises in India's MSME sector are concentrated at the 'Micro' tier?",
-                                                "o": [
-                                                            "About 55%",
-                                                            "About 75%",
-                                                            "About 99.4%",
-                                                            "About 35%"
-                                                ],
-                                                "a": 2,
-                                                "kw": "The Inverted Pyramid of Indian Industry",
-                                                "e": "A staggering 99.4% of all MSMEs in India are Micro enterprises! Small enterprises make up just 0.52%, and Medium enterprises a tiny 0.08%. This acute lack of transition creates India's chronic 'Missing Middle'.",
-                                                "data": "99.4% Micro · 0.52% Small · 0.08% Medium (Udyam Registration & MSME Annual Report data).",
-                                                "ex": "Unlike Japan or Germany where medium enterprises anchor supply chains, India has millions of tiny single-person shops and very few mid-sized competitive factories.",
-                                                "mains": "Highlight this inverted pyramid diagram in GS-3 to prove why Indian industry struggles with economies of scale."
-                                    },
-                                    {
-                                                "k": "riddle",
-                                                "q": "Detective: who am I? (Fewer clues, more XP)",
-                                                "c": [
-                                                            "I am an economic pathology documented by Chief Economic Advisor K.V. Subramanian in the Economic Survey.",
-                                                            "Firms afflicted by me intentionally refuse to hire their 100th worker to avoid strict Chapter V-B labor permissions.",
-                                                            "I describe old firms that remain perpetually stunted to exploit size-based tax shields, rather than growing into productive giants."
-                                                ],
-                                                "o": [
-                                                            "Dwarfism Paradox",
-                                                            "Infant Industry Syndrome",
-                                                            "Dutch Disease",
-                                                            "Middle Income Trap"
-                                                ],
-                                                "a": 0,
-                                                "kw": "Dwarfs vs Infants Distinction",
-                                                "e": "The Dwarfism Paradox! Economic Survey distinguishes between 'Infants' (young startups that grow rapidly into productive scale) and 'Dwarfs' (firms older than 10 years that deliberately stay tiny to harvest regulatory exemptions).",
-                                                "data": "Firms with <100 workers account for 85% of manufacturing firms in India, but generate only ~14% of manufacturing value add.",
-                                                "ex": "Garment manufacturers in Tirupur splitting into 5 separate legal entities under family names to stay below 100 workers.",
-                                                "mains": "Quote Economic Survey: 'Subsidies and regulatory shields must be tied to age (sunset clauses), not firm size, to eliminate perverse incentives for dwarfism.'"
-                                    },
-                                    {
-                                                "k": "multi",
-                                                "q": "Tap the core systemic drivers creating the MSME 'Dwarfism' and 'Missing Middle' trap:",
-                                                "o": [
-                                                            "The 100-worker regulatory cliff under Industrial Disputes Act 1947",
-                                                            "Perpetual size-based tax exemptions and subsidies without sunset clauses",
-                                                            "Fear of aggressive tax inspections upon registering on the formal GST net",
-                                                            "Excessive availability of low-cost venture debt for micro-units"
-                                                ],
-                                                "a": [
-                                                            0,
-                                                            1,
-                                                            2
-                                                ],
-                                                "kw": "Perverse Incentive Triad",
-                                                "e": "Indian firms intentionally stay small because crossing regulatory thresholds (100 workers, GST limits) brings heavy compliance burdens, labor rigidities, and loss of priority subsidies, while low-cost venture debt is notoriously absent.",
-                                                "data": "Dwarfs are 5x less productive and generate 10x fewer jobs per unit of capital than large firms.",
-                                                "ex": "A leather goods maker capping employees at 95 to avoid mandatory government permission before retrenchment or closure.",
-                                                "mains": "Framework: 'Subsidizing Smallness vs Rewarding Growth' — advocate sunset clauses on incentives to encourage scaling up."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "True or False: According to the Economic Survey, large enterprises in India are significantly less productive in total factor productivity (TFP) than informal micro-enterprises.",
-                                                "a": 1,
-                                                "kw": "Scale Productivity Differential",
-                                                "e": "False! Large formal enterprises in India are 3 to 5 times more productive than micro-enterprises due to automation, economies of scale, formal R&D, and access to low-cost institutional capital.",
-                                                "data": "Productivity gap: Formal firms with >500 workers generate 4.8x more output per worker than informal micro units.",
-                                                "ex": "Automated automotive assembly lines in Chennai vs manual backyard fabrication workshops.",
-                                                "mains": "Explains why perpetuating informal dwarfism holds down India's manufacturing wage growth and global competitiveness."
-                                    },
-                                    {
-                                                "k": "match",
-                                                "q": "Match the industrial structure to its characteristic:",
-                                                "p": [
-                                                            [
-                                                                        "Dwarf Enterprise",
-                                                                        "Old firm stunted by choice"
-                                                            ],
-                                                            [
-                                                                        "Infant Enterprise",
-                                                                        "Young startup scaling rapidly"
-                                                            ],
-                                                            [
-                                                                        "Missing Middle",
-                                                                        "Absence of mid-sized factories"
-                                                            ],
-                                                            [
-                                                                        "German Mittelstand",
-                                                                        "Global niche market leaders"
-                                                            ]
-                                                ],
-                                                "kw": "Industrial Typology Matrix",
-                                                "e": "Transforming India's 99.4% micro dwarfs into scaling infant enterprises and resilient mid-sized Mittelstand champions is the central challenge of Indian industrial policy.",
-                                                "data": "German Mittelstand contributes ~55% of German GDP and accounts for ~68% of total German patents.",
-                                                "ex": "Specialized German family-owned precision optics or turbine companies dominating 80% global market share.",
-                                                "mains": "Use German Mittelstand as the international best practice benchmark in GS-3 industrial policy answers."
-                                    }
-                        ]
+                        "k": [
+                            "99.4% Micro",
+                            "Missing Middle",
+                            "Scale Deficit",
+                            "Inverted Pyramid"
+                        ],
+                        "n": "The Missing Middle is the primary structural reason India's manufacturing share has stagnated near 16-17% of GDP."
+                    },
+                    {
+                        "t": "Economic Survey: Dwarfs vs Infant Enterprises",
+                        "b": [
+                            "<b>Infants vs Dwarfs:</b> Former CEA K.V. Subramanian distinguished between 'Infants' (young firms that start small and rapidly scale up) and 'Dwarfs' (firms older than 10 years that deliberately remain small).",
+                            "<b>Perverse incentives:</b> Perpetual size-based subsidies, priority sector shields, and labor exemption thresholds incentivize firms to stay stunted forever.",
+                            "<b>Low productivity:</b> Dwarfs in India are 5x less productive and generate far fewer productive jobs than large, scaled enterprises."
+                        ],
+                        "k": [
+                            "Dwarfism Paradox",
+                            "Infant Enterprises",
+                            "K.V. Subramanian",
+                            "Sunset Clauses"
+                        ],
+                        "n": "Propose 'Sunset Clauses' on MSME tax shields so incentives expire after 7-10 years, forcing firms to scale."
+                    },
+                    {
+                        "t": "The 100-Worker Regulatory Cliff",
+                        "b": [
+                            "<b>Chapter V-B Industrial Disputes Act 1947:</b> Mandated government permission before retrenching workers or closing units for factories with 100+ workers.",
+                            "<b>Deliberate firm splitting:</b> Entrepreneurs intentionally split single manufacturing operations into multiple dummy legal entities to keep each below 100 workers.",
+                            "<b>Labor Code reform:</b> The Industrial Relations Code 2020 raised this threshold to 300 workers, but state-level notification remains uneven."
+                        ],
+                        "k": [
+                            "Chapter V-B IDA",
+                            "100-Worker Cliff",
+                            "Entity Fragmentation",
+                            "Labor Code 2020"
+                        ],
+                        "n": "Regulatory cliffs turn compliance into a penalty on job creation."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "What percentage of all enterprises in India's MSME sector are concentrated at the 'Micro' tier?",
+                        "o": [
+                            "About 55%",
+                            "About 75%",
+                            "About 99.4%",
+                            "About 35%"
+                        ],
+                        "a": 2,
+                        "kw": "The Inverted Pyramid of Indian Industry",
+                        "e": "A staggering 99.4% of all MSMEs in India are Micro enterprises! Small enterprises make up just 0.52%, and Medium enterprises a tiny 0.08%. This acute lack of transition creates India's chronic 'Missing Middle'.",
+                        "data": "99.4% Micro · 0.52% Small · 0.08% Medium (Udyam Registration & MSME Annual Report data).",
+                        "ex": "Unlike Japan or Germany where medium enterprises anchor supply chains, India has millions of tiny single-person shops and very few mid-sized competitive factories.",
+                        "mains": "Highlight this inverted pyramid diagram in GS-3 to prove why Indian industry struggles with economies of scale."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I? (Fewer clues, more XP)",
+                        "c": [
+                            "I am an economic pathology documented by Chief Economic Advisor K.V. Subramanian in the Economic Survey.",
+                            "Firms afflicted by me intentionally refuse to hire their 100th worker to avoid strict Chapter V-B labor permissions.",
+                            "I describe old firms that remain perpetually stunted to exploit size-based tax shields, rather than growing into productive giants."
+                        ],
+                        "o": [
+                            "Dwarfism Paradox",
+                            "Infant Industry Syndrome",
+                            "Dutch Disease",
+                            "Middle Income Trap"
+                        ],
+                        "a": 0,
+                        "kw": "Dwarfs vs Infants Distinction",
+                        "e": "The Dwarfism Paradox! Economic Survey distinguishes between 'Infants' (young startups that grow rapidly into productive scale) and 'Dwarfs' (firms older than 10 years that deliberately stay tiny to harvest regulatory exemptions).",
+                        "data": "Firms with <100 workers account for 85% of manufacturing firms in India, but generate only ~14% of manufacturing value add.",
+                        "ex": "Garment manufacturers in Tirupur splitting into 5 separate legal entities under family names to stay below 100 workers.",
+                        "mains": "Quote Economic Survey: 'Subsidies and regulatory shields must be tied to age (sunset clauses), not firm size, to eliminate perverse incentives for dwarfism.'"
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap the core systemic drivers creating the MSME 'Dwarfism' and 'Missing Middle' trap:",
+                        "o": [
+                            "The 100-worker regulatory cliff under Industrial Disputes Act 1947",
+                            "Perpetual size-based tax exemptions and subsidies without sunset clauses",
+                            "Fear of aggressive tax inspections upon registering on the formal GST net",
+                            "Excessive availability of low-cost venture debt for micro-units"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "kw": "Perverse Incentive Triad",
+                        "e": "Indian firms intentionally stay small because crossing regulatory thresholds (100 workers, GST limits) brings heavy compliance burdens, labor rigidities, and loss of priority subsidies, while low-cost venture debt is notoriously absent.",
+                        "data": "Dwarfs are 5x less productive and generate 10x fewer jobs per unit of capital than large firms.",
+                        "ex": "A leather goods maker capping employees at 95 to avoid mandatory government permission before retrenchment or closure.",
+                        "mains": "Framework: 'Subsidizing Smallness vs Rewarding Growth' — advocate sunset clauses on incentives to encourage scaling up."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "True or False: According to the Economic Survey, large enterprises in India are significantly less productive in total factor productivity (TFP) than informal micro-enterprises.",
+                        "a": 1,
+                        "kw": "Scale Productivity Differential",
+                        "e": "False! Large formal enterprises in India are 3 to 5 times more productive than micro-enterprises due to automation, economies of scale, formal R&D, and access to low-cost institutional capital.",
+                        "data": "Productivity gap: Formal firms with >500 workers generate 4.8x more output per worker than informal micro units.",
+                        "ex": "Automated automotive assembly lines in Chennai vs manual backyard fabrication workshops.",
+                        "mains": "Explains why perpetuating informal dwarfism holds down India's manufacturing wage growth and global competitiveness."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the industrial structure to its characteristic:",
+                        "p": [
+                            [
+                                "Dwarf Enterprise",
+                                "Old firm stunted by choice"
+                            ],
+                            [
+                                "Infant Enterprise",
+                                "Young startup scaling rapidly"
+                            ],
+                            [
+                                "Missing Middle",
+                                "Absence of mid-sized factories"
+                            ],
+                            [
+                                "German Mittelstand",
+                                "Global niche market leaders"
+                            ]
+                        ],
+                        "kw": "Industrial Typology Matrix",
+                        "e": "Transforming India's 99.4% micro dwarfs into scaling infant enterprises and resilient mid-sized Mittelstand champions is the central challenge of Indian industrial policy.",
+                        "data": "German Mittelstand contributes ~55% of German GDP and accounts for ~68% of total German patents.",
+                        "ex": "Specialized German family-owned precision optics or turbine companies dominating 80% global market share.",
+                        "mains": "Use German Mittelstand as the international best practice benchmark in GS-3 industrial policy answers."
+                    }
+                ]
             },
             {
-                        "n": "Delayed Payments & Section 43B(h)",
-                        "d": "Section 15, 16 penal interest, 43B(h) disallowance, and Samadhaan",
-                        "e": "⏳",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "Statutory Payment Ceilings: Section 15 of MSMED Act",
-                                                "b": [
-                                                            "<b>Strict 45-day ceiling:</b> Payment to a Micro or Small supplier must be made on or before the agreed date, which CANNOT exceed 45 days from delivery.",
-                                                            "<b>15 days without contract:</b> In the absence of a written agreement, the statutory deadline is strictly 15 calendar days.",
-                                                            "<b>Statutory override:</b> Any contractual clause where an MSE agreed to 60 or 90 days is legally void ab initio."
-                                                ],
-                                                "k": [
-                                                            "Section 15",
-                                                            "45-Day Limit",
-                                                            "15-Day Default",
-                                                            "Statutory Override"
-                                                ],
-                                                "n": "Section 15 is intended to eliminate working capital asphyxiation caused by large corporate buyers."
-                                    },
-                                    {
-                                                "t": "Draconian Penal Interest: Section 16 & Section 23",
-                                                "b": [
-                                                            "<b>3x Bank Rate compound interest:</b> Unpaid dues attract compound interest with monthly rests at 3 times the RBI Bank Rate.",
-                                                            "<b>Tax penalty (Section 23):</b> Penal interest paid to MSMEs CANNOT be deducted as an expense for corporate income tax calculation.",
-                                                            "<b>Mandatory liability:</b> Even if a buyer disputes quality, interest continues to accrue until adjudicated."
-                                                ],
-                                                "k": [
-                                                            "Section 16",
-                                                            "3x Bank Rate",
-                                                            "Monthly Rests",
-                                                            "Section 23 Disallowance"
-                                                ],
-                                                "n": "Penal interest at ~20% compounded monthly creates existential legal exposure for chronic defaulting buyers."
-                                    },
-                                    {
-                                                "t": "Section 43B(h) Income Tax Disallowance Weapon",
-                                                "b": [
-                                                            "<b>Finance Act 2023 amendment:</b> Added clause (h) to Section 43B of Income Tax Act 1961, effective from AY 2024-25.",
-                                                            "<b>Expense disallowance:</b> Any sum payable to a Micro or Small enterprise beyond the Section 15 deadline is disallowed as a business expense for that financial year.",
-                                                            "<b>Added to taxable income:</b> Unpaid invoices are added directly to the buyer's net profit and taxed at 25-30% in that year.",
-                                                            "<b>Exclusions:</b> Applies strictly to Micro and Small suppliers; Medium enterprises and Udyam-registered traders are excluded."
-                                                ],
-                                                "k": [
-                                                            "Section 43B(h)",
-                                                            "CBDT Enforcement",
-                                                            "Tax Disallowance",
-                                                            "Micro & Small Only"
-                                                ],
-                                                "n": "Section 43B(h) converted the toothless delayed payment rules into a feared tax audit weapon."
-                                    }
+                "n": "Delayed Payments & Section 43B(h)",
+                "d": "Section 15, 16 penal interest, 43B(h) disallowance, and Samadhaan",
+                "e": "⏳",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "Statutory Payment Ceilings: Section 15 of MSMED Act",
+                        "b": [
+                            "<b>Strict 45-day ceiling:</b> Payment to a Micro or Small supplier must be made on or before the agreed date, which CANNOT exceed 45 days from delivery.",
+                            "<b>15 days without contract:</b> In the absence of a written agreement, the statutory deadline is strictly 15 calendar days.",
+                            "<b>Statutory override:</b> Any contractual clause where an MSE agreed to 60 or 90 days is legally void ab initio."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "Scenario: AutoCorp purchases auto components from a registered Micro enterprise on Jan 10 with a written contract stipulating 60-day credit. Under Section 15 of the MSMED Act 2006, what is the maximum permissible payment period?",
-                                                "o": [
-                                                            "60 days as agreed in the contract",
-                                                            "45 days (the statutory ceiling overrides the contract)",
-                                                            "15 days",
-                                                            "90 days as per standard industry practice"
-                                                ],
-                                                "a": 1,
-                                                "kw": "Section 15 Statutory Override",
-                                                "e": "Section 15 of the MSMED Act specifies that payment must be made within the agreed date, but that period CANNOT exceed 45 days from delivery! Any contractual clause agreeing to more than 45 days is legally null and void. In the absence of a written agreement, the limit is strictly 15 days.",
-                                                "data": "Section 15 MSMED Act 2006: Max 45 days with written agreement; max 15 days without agreement.",
-                                                "ex": "Auto parts suppliers in Pune frequently faced 90–120 day payment cycles from OEMs before statutory enforcement tightened.",
-                                                "mains": "Protects asymmetrical bargaining power where tiny suppliers cannot legally negotiate fair terms against massive corporate buyers."
-                                    },
-                                    {
-                                                "k": "mc",
-                                                "q": "What penal interest rate is mandatory under Section 16 of the MSMED Act when a buyer delays payment to a Micro or Small enterprise beyond 45 days?",
-                                                "o": [
-                                                            "Standard Bank Rate",
-                                                            "Simple interest at 12% per annum",
-                                                            "Compound interest with monthly rests at 3 times the RBI Bank Rate",
-                                                            "18% penalty waived if buyer offers credit notes"
-                                                ],
-                                                "a": 2,
-                                                "kw": "Section 16 Draconian Penal Rate",
-                                                "e": "Under Section 16, delayed payments attract compound interest with monthly rests at 3 TIMES the RBI Bank Rate! Furthermore, this interest penalty is strictly disallowed as a tax-deductible expense under Section 23.",
-                                                "data": "Section 16 MSMED Act: 3x RBI Bank Rate, compounded monthly; Section 23: Zero tax deduction on penal interest.",
-                                                "ex": "If RBI Bank Rate is 6.75%, the penal interest rate is 20.25% compounded every month, creating huge legal liabilities for chronic defaulters.",
-                                                "mains": "Demonstrates statutory deterrence designed to eliminate working capital strangulation."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "Scenario: On March 31, a corporate buyer has ₹40 Lakhs in unpaid bills to a registered Micro supplier pending for 55 days. Under Section 43B(h) of the Income Tax Act, can the buyer claim this ₹40 Lakhs as a deductible business expense for that financial year?",
-                                                "a": 1,
-                                                "kw": "Section 43B(h) Tax Disallowance",
-                                                "e": "False! Section 43B(h) (enacted in Finance Act 2023) mandates that any sum payable to a Micro or Small enterprise beyond the Section 15 limit (45/15 days) is DISALLOWED as an expense for that tax year. It is added back to taxable profits and taxed at 25–30%! It can only be claimed in the year actual payment is made.",
-                                                "data": "Section 43B(h) of Income Tax Act 1961, effective 1 April 2024 (Assessment Year 2024-25).",
-                                                "ex": "Triggered massive payment clearances in March 2024 as Indian corporations rushed to clear MSME vendor dues to avoid hefty income tax hits.",
-                                                "mains": "A masterstroke leveraging the tax machinery (CBDT) to enforce MSMED Act compliance where arbitration had moved too slowly."
-                                    },
-                                    {
-                                                "k": "flag",
-                                                "q": "Spot the red flag: which entity is EXCLUDED from the protections of Section 43B(h) of the Income Tax Act?",
-                                                "o": [
-                                                            "Registered Micro enterprises",
-                                                            "Registered Small enterprises",
-                                                            "Medium enterprises and wholesale/retail traders",
-                                                            "Manufacturing enterprises with ₹50 Lakh investment"
-                                                ],
-                                                "a": 2,
-                                                "kw": "Section 43B(h) Scope Exclusions",
-                                                "e": "Section 43B(h) strictly applies ONLY to dues owed to Micro and Small enterprises! Dues owed to Medium enterprises, as well as wholesale and retail traders registered under Udyam, are completely exempt from this 45-day tax disallowance rule.",
-                                                "data": "CBDT Circular & Office Memorandum: Section 43B(h) does not apply to Medium units or Udyam-registered traders.",
-                                                "ex": "Some buyers attempted to switch orders to Medium enterprises or traders to bypass the 45-day deadline, creating unexpected distortion.",
-                                                "mains": "Crucial analytical nuance: highlights the risk of unintended substitution effects hurting micro suppliers."
-                                    },
-                                    {
-                                                "k": "order",
-                                                "q": "Order the statutory delayed payment recovery process in logical sequence:",
-                                                "o": [
-                                                            "Goods/Services delivered",
-                                                            "45-day statutory window expires",
-                                                            "3x Bank Rate penal interest accrues",
-                                                            "Case filed on MSME Samadhaan portal",
-                                                            "MSEFC initiates conciliation/arbitration"
-                                                ],
-                                                "kw": "MSEFC Dispute Workflow",
-                                                "e": "Delivery -> Expiry of 45-day statutory period -> Mandatory penal interest accrual -> Online filing on MSME Samadhaan -> Formal conciliation & arbitration before the Micro & Small Enterprises Facilitation Council (MSEFC).",
-                                                "data": "Over 1.7 Lakh delayed payment applications filed on MSME Samadhaan, with >₹40,000 Crore stuck in disputed dues.",
-                                                "ex": "An electrical contractor in Jaipur recovering ₹18 Lakh overdue from a state PSU via an MSEFC award.",
-                                                "mains": "Institutional reform: advocate time-bound MSEFC benches and pre-litigation online dispute resolution (ODR)."
-                                    }
-                        ]
+                        "k": [
+                            "Section 15",
+                            "45-Day Limit",
+                            "15-Day Default",
+                            "Statutory Override"
+                        ],
+                        "n": "Section 15 is intended to eliminate working capital asphyxiation caused by large corporate buyers."
+                    },
+                    {
+                        "t": "Draconian Penal Interest: Section 16 & Section 23",
+                        "b": [
+                            "<b>3x Bank Rate compound interest:</b> Unpaid dues attract compound interest with monthly rests at 3 times the RBI Bank Rate.",
+                            "<b>Tax penalty (Section 23):</b> Penal interest paid to MSMEs CANNOT be deducted as an expense for corporate income tax calculation.",
+                            "<b>Mandatory liability:</b> Even if a buyer disputes quality, interest continues to accrue until adjudicated."
+                        ],
+                        "k": [
+                            "Section 16",
+                            "3x Bank Rate",
+                            "Monthly Rests",
+                            "Section 23 Disallowance"
+                        ],
+                        "n": "Penal interest at ~20% compounded monthly creates existential legal exposure for chronic defaulting buyers."
+                    },
+                    {
+                        "t": "Section 43B(h) Income Tax Disallowance Weapon",
+                        "b": [
+                            "<b>Finance Act 2023 amendment:</b> Added clause (h) to Section 43B of Income Tax Act 1961, effective from AY 2024-25.",
+                            "<b>Expense disallowance:</b> Any sum payable to a Micro or Small enterprise beyond the Section 15 deadline is disallowed as a business expense for that financial year.",
+                            "<b>Added to taxable income:</b> Unpaid invoices are added directly to the buyer's net profit and taxed at 25-30% in that year.",
+                            "<b>Exclusions:</b> Applies strictly to Micro and Small suppliers; Medium enterprises and Udyam-registered traders are excluded."
+                        ],
+                        "k": [
+                            "Section 43B(h)",
+                            "CBDT Enforcement",
+                            "Tax Disallowance",
+                            "Micro & Small Only"
+                        ],
+                        "n": "Section 43B(h) converted the toothless delayed payment rules into a feared tax audit weapon."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Scenario: AutoCorp purchases auto components from a registered Micro enterprise on Jan 10 with a written contract stipulating 60-day credit. Under Section 15 of the MSMED Act 2006, what is the maximum permissible payment period?",
+                        "o": [
+                            "60 days as agreed in the contract",
+                            "45 days (the statutory ceiling overrides the contract)",
+                            "15 days",
+                            "90 days as per standard industry practice"
+                        ],
+                        "a": 1,
+                        "kw": "Section 15 Statutory Override",
+                        "e": "Section 15 of the MSMED Act specifies that payment must be made within the agreed date, but that period CANNOT exceed 45 days from delivery! Any contractual clause agreeing to more than 45 days is legally null and void. In the absence of a written agreement, the limit is strictly 15 days.",
+                        "data": "Section 15 MSMED Act 2006: Max 45 days with written agreement; max 15 days without agreement.",
+                        "ex": "Auto parts suppliers in Pune frequently faced 90–120 day payment cycles from OEMs before statutory enforcement tightened.",
+                        "mains": "Protects asymmetrical bargaining power where tiny suppliers cannot legally negotiate fair terms against massive corporate buyers."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "What penal interest rate is mandatory under Section 16 of the MSMED Act when a buyer delays payment to a Micro or Small enterprise beyond 45 days?",
+                        "o": [
+                            "Standard Bank Rate",
+                            "Simple interest at 12% per annum",
+                            "Compound interest with monthly rests at 3 times the RBI Bank Rate",
+                            "18% penalty waived if buyer offers credit notes"
+                        ],
+                        "a": 2,
+                        "kw": "Section 16 Draconian Penal Rate",
+                        "e": "Under Section 16, delayed payments attract compound interest with monthly rests at 3 TIMES the RBI Bank Rate! Furthermore, this interest penalty is strictly disallowed as a tax-deductible expense under Section 23.",
+                        "data": "Section 16 MSMED Act: 3x RBI Bank Rate, compounded monthly; Section 23: Zero tax deduction on penal interest.",
+                        "ex": "If RBI Bank Rate is 6.75%, the penal interest rate is 20.25% compounded every month, creating huge legal liabilities for chronic defaulters.",
+                        "mains": "Demonstrates statutory deterrence designed to eliminate working capital strangulation."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "Scenario: On March 31, a corporate buyer has ₹40 Lakhs in unpaid bills to a registered Micro supplier pending for 55 days. Under Section 43B(h) of the Income Tax Act, can the buyer claim this ₹40 Lakhs as a deductible business expense for that financial year?",
+                        "a": 1,
+                        "kw": "Section 43B(h) Tax Disallowance",
+                        "e": "False! Section 43B(h) (enacted in Finance Act 2023) mandates that any sum payable to a Micro or Small enterprise beyond the Section 15 limit (45/15 days) is DISALLOWED as an expense for that tax year. It is added back to taxable profits and taxed at 25–30%! It can only be claimed in the year actual payment is made.",
+                        "data": "Section 43B(h) of Income Tax Act 1961, effective 1 April 2024 (Assessment Year 2024-25).",
+                        "ex": "Triggered massive payment clearances in March 2024 as Indian corporations rushed to clear MSME vendor dues to avoid hefty income tax hits.",
+                        "mains": "A masterstroke leveraging the tax machinery (CBDT) to enforce MSMED Act compliance where arbitration had moved too slowly."
+                    },
+                    {
+                        "k": "flag",
+                        "q": "Spot the red flag: which entity is EXCLUDED from the protections of Section 43B(h) of the Income Tax Act?",
+                        "o": [
+                            "Registered Micro enterprises",
+                            "Registered Small enterprises",
+                            "Medium enterprises and wholesale/retail traders",
+                            "Manufacturing enterprises with ₹50 Lakh investment"
+                        ],
+                        "a": 2,
+                        "kw": "Section 43B(h) Scope Exclusions",
+                        "e": "Section 43B(h) strictly applies ONLY to dues owed to Micro and Small enterprises! Dues owed to Medium enterprises, as well as wholesale and retail traders registered under Udyam, are completely exempt from this 45-day tax disallowance rule.",
+                        "data": "CBDT Circular & Office Memorandum: Section 43B(h) does not apply to Medium units or Udyam-registered traders.",
+                        "ex": "Some buyers attempted to switch orders to Medium enterprises or traders to bypass the 45-day deadline, creating unexpected distortion.",
+                        "mains": "Crucial analytical nuance: highlights the risk of unintended substitution effects hurting micro suppliers."
+                    },
+                    {
+                        "k": "order",
+                        "q": "Order the statutory delayed payment recovery process in logical sequence:",
+                        "o": [
+                            "Goods/Services delivered",
+                            "45-day statutory window expires",
+                            "3x Bank Rate penal interest accrues",
+                            "Case filed on MSME Samadhaan portal",
+                            "MSEFC initiates conciliation/arbitration"
+                        ],
+                        "kw": "MSEFC Dispute Workflow",
+                        "e": "Delivery -> Expiry of 45-day statutory period -> Mandatory penal interest accrual -> Online filing on MSME Samadhaan -> Formal conciliation & arbitration before the Micro & Small Enterprises Facilitation Council (MSEFC).",
+                        "data": "Over 1.7 Lakh delayed payment applications filed on MSME Samadhaan, with >₹40,000 Crore stuck in disputed dues.",
+                        "ex": "An electrical contractor in Jaipur recovering ₹18 Lakh overdue from a state PSU via an MSEFC award.",
+                        "mains": "Institutional reform: advocate time-bound MSEFC benches and pre-litigation online dispute resolution (ODR)."
+                    }
+                ]
             },
             {
-                        "n": "Credit Gap & Financing Innovations",
-                        "d": "UK Sinha committee, TReDS factoring, AA, and OCEN",
-                        "e": "💳",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "The ₹25 Lakh Crore Credit Gap: UK Sinha Committee",
-                                                "b": [
-                                                            "<b>The ₹20–25 Lakh Crore deficit:</b> The RBI-appointed U.K. Sinha Committee (2019) diagnosed that formal bank credit reaches only ~15% of MSMEs.",
-                                                            "<b>Collateral trap:</b> Traditional commercial banking requires immovable real estate collateral, which 85% of asset-light MSMEs do not possess.",
-                                                            "<b>Recommendation:</b> Shift from collateral-based underwriting to data-driven, cash-flow-based underwriting using GST and bank transaction records."
-                                                ],
-                                                "k": [
-                                                            "UK Sinha (2019)",
-                                                            "₹25 Lakh Cr Deficit",
-                                                            "Collateral Trap",
-                                                            "Cash-Flow Lending"
-                                                ],
-                                                "n": "Cite the UK Sinha Committee whenever discussing financial inclusion or MSME debt reforms in GS-3."
-                                    },
-                                    {
-                                                "t": "TReDS: Institutional Factoring Without Recourse",
-                                                "b": [
-                                                            "<b>Trade Receivables Discounting System:</b> RBI-regulated digital auction platform (RXIL, M1xchange, Invoicemart).",
-                                                            "<b>Factoring without recourse:</b> Financiers bid to discount MSME invoices based on the buyer's corporate credit rating. Default risk falls on the buyer, not the MSME.",
-                                                            "<b>Mandatory participation:</b> All CPSEs and companies with turnover above ₹250 Crore are legally mandated to register on TReDS."
-                                                ],
-                                                "k": [
-                                                            "TReDS",
-                                                            "Without Recourse",
-                                                            "Reverse Factoring",
-                                                            "₹250 Cr Mandate"
-                                                ],
-                                                "n": "TReDS solves the working capital trap by converting trade receivables into instant cash in 48 hours."
-                                    },
-                                    {
-                                                "t": "Fintech Stack: Account Aggregator, OCEN & CGTMSE",
-                                                "b": [
-                                                            "<b>Account Aggregator (AA):</b> Digital framework allowing MSEs to securely share financial statements and GST returns with banks in seconds.",
-                                                            "<b>OCEN (Open Credit Enablement Network):</b> Open API protocol embedding credit into platforms (e.g. GeM, Amazon, Zomato) for sachet loans.",
-                                                            "<b>CGTMSE guarantee:</b> Provides collateral-free credit guarantees to banks for MSE loans up to ₹5 Crore."
-                                                ],
-                                                "k": [
-                                                            "Account Aggregator",
-                                                            "OCEN",
-                                                            "CGTMSE (₹5 Cr)",
-                                                            "Digital Underwriting"
-                                                ],
-                                                "n": "DPI is replacing land mortgages with transaction data as the new collateral of the digital economy."
-                                    }
+                "n": "Credit Gap & Financing Innovations",
+                "d": "UK Sinha committee, TReDS factoring, AA, and OCEN",
+                "e": "💳",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "The ₹25 Lakh Crore Credit Gap: UK Sinha Committee",
+                        "b": [
+                            "<b>The ₹20–25 Lakh Crore deficit:</b> The RBI-appointed U.K. Sinha Committee (2019) diagnosed that formal bank credit reaches only ~15% of MSMEs.",
+                            "<b>Collateral trap:</b> Traditional commercial banking requires immovable real estate collateral, which 85% of asset-light MSMEs do not possess.",
+                            "<b>Recommendation:</b> Shift from collateral-based underwriting to data-driven, cash-flow-based underwriting using GST and bank transaction records."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "Which RBI-appointed committee quantified India's formal MSME credit gap at ₹20–25 Lakh Crore and formulated the master blueprint for cash-flow lending?",
-                                                "o": [
-                                                            "Nandan Nilekani Committee",
-                                                            "U.K. Sinha Committee (2019)",
-                                                            "Urjit Patel Committee",
-                                                            "Raghuram Rajan Committee"
-                                                ],
-                                                "a": 1,
-                                                "kw": "The UK Sinha Committee (2019) Blueprint",
-                                                "e": "The U.K. Sinha Committee on MSMEs (2019) diagnosed India's ₹20–25 Lakh Crore ($300B+) MSME credit deficit and recommended transitioning from physical collateral-based lending to data-driven cash-flow lending, alongside expanding TReDS.",
-                                                "data": "Formal credit reaches only ~15% of MSMEs; remaining 85% rely on costly informal credit or internal accruals.",
-                                                "ex": "Traditional banks rejecting viable fabrication shops because the owner lacks urban immovable land to mortgage.",
-                                                "mains": "Always cite the UK Sinha Committee when proposing MSME financial architecture reforms."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "True or False: Under TReDS (Trade Receivables Discounting System), the credit risk of invoice factoring is borne by the small supplier if the corporate buyer defaults.",
-                                                "a": 1,
-                                                "kw": "Without-Recourse Factoring Mechanics",
-                                                "e": "False! Factoring on TReDS is strictly 'WITHOUT RECOURSE' to the MSME supplier! The financier discounts the invoice based on the corporate buyer's creditworthiness. If the buyer defaults, the bank cannot demand the money back from the MSME!",
-                                                "data": "TReDS operates through 3 RBI-licensed platforms: RXIL, M1xchange, and Invoicemart.",
-                                                "ex": "A micro gear manufacturer discounts a ₹10 Lakh Mahindra & Mahindra invoice on RXIL at 8% p.a., getting instant cash within 48 hours without risk.",
-                                                "mains": "TReDS liberates MSMEs from their buyers' credit cycles and converts corporate balance sheets into supplier liquidity."
-                                    },
-                                    {
-                                                "k": "multi",
-                                                "q": "Tap all digital infrastructure mechanisms transforming MSME credit from collateral-based to cash-flow lending:",
-                                                "o": [
-                                                            "Account Aggregator (AA) framework sharing consent-based bank cash-flows",
-                                                            "Open Credit Enablement Network (OCEN) embedding credit into digital platforms",
-                                                            "Mandatory registration of CPSEs and ₹250 Cr+ corporates on TReDS",
-                                                            "Physical mortgage of agricultural land titles under State Land Ceiling Acts"
-                                                ],
-                                                "a": [
-                                                            0,
-                                                            1,
-                                                            2
-                                                ],
-                                                "kw": "Digital Public Infrastructure for Credit",
-                                                "e": "India's DPI stack (AA, OCEN, GSTN data, TReDS) enables real-time underwriting based on verified transaction invoices rather than physical land mortgages.",
-                                                "data": "OCEN enables micro-loans as small as ₹5,000 for 15 days with underwriting completed in under 3 minutes.",
-                                                "ex": "A tea stall or kirana store borrowing ₹10,000 for weekend inventory based on UPI transaction volumes via a smartphone app.",
-                                                "mains": "Framing: 'Moving from Asset-Based Underwriting to Information-Collateral (Cash-Flow) Underwriting'."
-                                    },
-                                    {
-                                                "k": "match",
-                                                "q": "Match the MSME financing innovation to its core institutional mechanism:",
-                                                "p": [
-                                                            [
-                                                                        "TReDS",
-                                                                        "Without-recourse invoice factoring"
-                                                            ],
-                                                            [
-                                                                        "Account Aggregator",
-                                                                        "Consent-based cashflow data sharing"
-                                                            ],
-                                                            [
-                                                                        "CGTMSE",
-                                                                        "Collateral-free credit guarantee up to ₹5 Cr"
-                                                            ],
-                                                            [
-                                                                        "GeM Portal",
-                                                                        "Mandatory 25% public procurement quota"
-                                                            ]
-                                                ],
-                                                "kw": "Fintech Ecosystem Synthesis",
-                                                "e": "Each instrument addresses a distinct market failure: TReDS tackles receivables; AA solves data asymmetry; CGTMSE solves the collateral deficit; GeM guarantees market access.",
-                                                "data": "CGTMSE has approved cumulative guarantees exceeding ₹6 Lakh Crore, unlocking bank lending for asset-light firms.",
-                                                "ex": "A young bio-tech startup obtaining ₹2 Crore loan from Canara Bank backed 85% by CGTMSE without mortgaging founder assets.",
-                                                "mains": "A holistic 4-part toolkit to address the MSME liquidity lifecycle."
-                                    },
-                                    {
-                                                "k": "riddle",
-                                                "q": "Detective: who am I? (Fewer clues, more XP)",
-                                                "c": [
-                                                            "I am an open API protocol developed by iSPIRT and promoted by NITI Aayog.",
-                                                            "I unbundle lending into loan agents, technology platforms, and balance sheet lenders.",
-                                                            "I allow any digital platform (like GeM or Amazon) to offer embedded 'sachet' loans to small vendors in seconds."
-                                                ],
-                                                "o": [
-                                                            "Open Credit Enablement Network (OCEN)",
-                                                            "Unified Payments Interface (UPI)",
-                                                            "National Financial Switch (NFS)",
-                                                            "SWIFT Network"
-                                                ],
-                                                "a": 0,
-                                                "kw": "OCEN Embedded Finance Protocol",
-                                                "e": "OCEN (Open Credit Enablement Network)! It standardizes the APIs between platforms with customer flow (e.g. GeM, Zomato, Swiggy) and formal lenders, bringing down the cost of originating small loans to near zero.",
-                                                "data": "Enables ₹1,000 to ₹50,000 daily working capital loans for informal gig workers and micro vendors.",
-                                                "ex": "A small supplier on GeM instantly receiving an advance against a confirmed government purchase order via an OCEN-enabled lender.",
-                                                "mains": "Analogy: What UPI did for digital payments, OCEN is doing for digital credit democratisation."
-                                    }
-                        ]
+                        "k": [
+                            "UK Sinha (2019)",
+                            "₹25 Lakh Cr Deficit",
+                            "Collateral Trap",
+                            "Cash-Flow Lending"
+                        ],
+                        "n": "Cite the UK Sinha Committee whenever discussing financial inclusion or MSME debt reforms in GS-3."
+                    },
+                    {
+                        "t": "TReDS: Institutional Factoring Without Recourse",
+                        "b": [
+                            "<b>Trade Receivables Discounting System:</b> RBI-regulated digital auction platform (RXIL, M1xchange, Invoicemart).",
+                            "<b>Factoring without recourse:</b> Financiers bid to discount MSME invoices based on the buyer's corporate credit rating. Default risk falls on the buyer, not the MSME.",
+                            "<b>Mandatory participation:</b> All CPSEs and companies with turnover above ₹250 Crore are legally mandated to register on TReDS."
+                        ],
+                        "k": [
+                            "TReDS",
+                            "Without Recourse",
+                            "Reverse Factoring",
+                            "₹250 Cr Mandate"
+                        ],
+                        "n": "TReDS solves the working capital trap by converting trade receivables into instant cash in 48 hours."
+                    },
+                    {
+                        "t": "Fintech Stack: Account Aggregator, OCEN & CGTMSE",
+                        "b": [
+                            "<b>Account Aggregator (AA):</b> Digital framework allowing MSEs to securely share financial statements and GST returns with banks in seconds.",
+                            "<b>OCEN (Open Credit Enablement Network):</b> Open API protocol embedding credit into platforms (e.g. GeM, Amazon, Zomato) for sachet loans.",
+                            "<b>CGTMSE guarantee:</b> Provides collateral-free credit guarantees to banks for MSE loans up to ₹5 Crore."
+                        ],
+                        "k": [
+                            "Account Aggregator",
+                            "OCEN",
+                            "CGTMSE (₹5 Cr)",
+                            "Digital Underwriting"
+                        ],
+                        "n": "DPI is replacing land mortgages with transaction data as the new collateral of the digital economy."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "Which RBI-appointed committee quantified India's formal MSME credit gap at ₹20–25 Lakh Crore and formulated the master blueprint for cash-flow lending?",
+                        "o": [
+                            "Nandan Nilekani Committee",
+                            "U.K. Sinha Committee (2019)",
+                            "Urjit Patel Committee",
+                            "Raghuram Rajan Committee"
+                        ],
+                        "a": 1,
+                        "kw": "The UK Sinha Committee (2019) Blueprint",
+                        "e": "The U.K. Sinha Committee on MSMEs (2019) diagnosed India's ₹20–25 Lakh Crore ($300B+) MSME credit deficit and recommended transitioning from physical collateral-based lending to data-driven cash-flow lending, alongside expanding TReDS.",
+                        "data": "Formal credit reaches only ~15% of MSMEs; remaining 85% rely on costly informal credit or internal accruals.",
+                        "ex": "Traditional banks rejecting viable fabrication shops because the owner lacks urban immovable land to mortgage.",
+                        "mains": "Always cite the UK Sinha Committee when proposing MSME financial architecture reforms."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "True or False: Under TReDS (Trade Receivables Discounting System), the credit risk of invoice factoring is borne by the small supplier if the corporate buyer defaults.",
+                        "a": 1,
+                        "kw": "Without-Recourse Factoring Mechanics",
+                        "e": "False! Factoring on TReDS is strictly 'WITHOUT RECOURSE' to the MSME supplier! The financier discounts the invoice based on the corporate buyer's creditworthiness. If the buyer defaults, the bank cannot demand the money back from the MSME!",
+                        "data": "TReDS operates through 3 RBI-licensed platforms: RXIL, M1xchange, and Invoicemart.",
+                        "ex": "A micro gear manufacturer discounts a ₹10 Lakh Mahindra & Mahindra invoice on RXIL at 8% p.a., getting instant cash within 48 hours without risk.",
+                        "mains": "TReDS liberates MSMEs from their buyers' credit cycles and converts corporate balance sheets into supplier liquidity."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all digital infrastructure mechanisms transforming MSME credit from collateral-based to cash-flow lending:",
+                        "o": [
+                            "Account Aggregator (AA) framework sharing consent-based bank cash-flows",
+                            "Open Credit Enablement Network (OCEN) embedding credit into digital platforms",
+                            "Mandatory registration of CPSEs and ₹250 Cr+ corporates on TReDS",
+                            "Physical mortgage of agricultural land titles under State Land Ceiling Acts"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "kw": "Digital Public Infrastructure for Credit",
+                        "e": "India's DPI stack (AA, OCEN, GSTN data, TReDS) enables real-time underwriting based on verified transaction invoices rather than physical land mortgages.",
+                        "data": "OCEN enables micro-loans as small as ₹5,000 for 15 days with underwriting completed in under 3 minutes.",
+                        "ex": "A tea stall or kirana store borrowing ₹10,000 for weekend inventory based on UPI transaction volumes via a smartphone app.",
+                        "mains": "Framing: 'Moving from Asset-Based Underwriting to Information-Collateral (Cash-Flow) Underwriting'."
+                    },
+                    {
+                        "k": "match",
+                        "q": "Match the MSME financing innovation to its core institutional mechanism:",
+                        "p": [
+                            [
+                                "TReDS",
+                                "Without-recourse invoice factoring"
+                            ],
+                            [
+                                "Account Aggregator",
+                                "Consent-based cashflow data sharing"
+                            ],
+                            [
+                                "CGTMSE",
+                                "Collateral-free credit guarantee up to ₹5 Cr"
+                            ],
+                            [
+                                "GeM Portal",
+                                "Mandatory 25% public procurement quota"
+                            ]
+                        ],
+                        "kw": "Fintech Ecosystem Synthesis",
+                        "e": "Each instrument addresses a distinct market failure: TReDS tackles receivables; AA solves data asymmetry; CGTMSE solves the collateral deficit; GeM guarantees market access.",
+                        "data": "CGTMSE has approved cumulative guarantees exceeding ₹6 Lakh Crore, unlocking bank lending for asset-light firms.",
+                        "ex": "A young bio-tech startup obtaining ₹2 Crore loan from Canara Bank backed 85% by CGTMSE without mortgaging founder assets.",
+                        "mains": "A holistic 4-part toolkit to address the MSME liquidity lifecycle."
+                    },
+                    {
+                        "k": "riddle",
+                        "q": "Detective: who am I? (Fewer clues, more XP)",
+                        "c": [
+                            "I am an open API protocol developed by iSPIRT and promoted by NITI Aayog.",
+                            "I unbundle lending into loan agents, technology platforms, and balance sheet lenders.",
+                            "I allow any digital platform (like GeM or Amazon) to offer embedded 'sachet' loans to small vendors in seconds."
+                        ],
+                        "o": [
+                            "Open Credit Enablement Network (OCEN)",
+                            "Unified Payments Interface (UPI)",
+                            "National Financial Switch (NFS)",
+                            "SWIFT Network"
+                        ],
+                        "a": 0,
+                        "kw": "OCEN Embedded Finance Protocol",
+                        "e": "OCEN (Open Credit Enablement Network)! It standardizes the APIs between platforms with customer flow (e.g. GeM, Zomato, Swiggy) and formal lenders, bringing down the cost of originating small loans to near zero.",
+                        "data": "Enables ₹1,000 to ₹50,000 daily working capital loans for informal gig workers and micro vendors.",
+                        "ex": "A small supplier on GeM instantly receiving an advance against a confirmed government purchase order via an OCEN-enabled lender.",
+                        "mains": "Analogy: What UPI did for digital payments, OCEN is doing for digital credit democratisation."
+                    }
+                ]
             },
             {
-                        "n": "Budget 2025-26 & Flagship Schemes",
-                        "d": "₹100 Cr credit guarantee, Mudra Tarun Plus, TReDS expansion, and PM Vishwakarma",
-                        "e": "🚀",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "Budget 2025-26: ₹100 Cr Credit Guarantee Scheme",
-                                                "b": [
-                                                            "<b>Dedicated manufacturing fund:</b> A new self-financing credit guarantee fund for MSMEs in manufacturing was launched in Union Budget 2024-25 / 2025-26.",
-                                                            "<b>Up to ₹100 Crore cover:</b> Guarantees term loans up to ₹100 Crore for purchasing machinery and equipment without collateral or third-party guarantee.",
-                                                            "<b>Direct scale catalyst:</b> Specifically addresses the mid-tier capital expenditure hump preventing small units from buying advanced CNC machinery."
-                                                ],
-                                                "k": [
-                                                            "Budget 2025",
-                                                            "₹100 Cr Guarantee",
-                                                            "Manufacturing Focus",
-                                                            "Machinery Loans"
-                                                ],
-                                                "n": "This scheme directly attacks the 'Dwarfism' trap by financing high-tech capital goods."
-                                    },
-                                    {
-                                                "t": "Mudra 'Tarun Plus' & Public Sector Bank Digital Scoring",
-                                                "b": [
-                                                            "<b>Mudra ceiling doubled:</b> 'Tarun Plus' category doubles the loan cap from ₹10 Lakh to ₹20 Lakh for entrepreneurs who successfully repaid Tarun loans.",
-                                                            "<b>In-house credit assessment:</b> Public sector banks mandated to build in-house digital scoring models using GST and banking footprints rather than external rating agency reports.",
-                                                            "<b>TReDS onboarding lowered:</b> Threshold for mandatory registration of buyers on TReDS reduced from ₹500 Cr to ₹250 Cr turnover."
-                                                ],
-                                                "k": [
-                                                            "Tarun Plus (₹20L)",
-                                                            "PSB Credit Models",
-                                                            "TReDS ₹250 Cr",
-                                                            "Graduation Trajectory"
-                                                ],
-                                                "n": "Highlight how Mudra creates a formal repayment track record enabling graduation to higher bank loans."
-                                    },
-                                    {
-                                                "t": "PM Vishwakarma Scheme (₹13,000 Crore)",
-                                                "b": [
-                                                            "<b>18 traditional trades:</b> End-to-end support for carpenters, boat makers, blacksmiths, armorers, potters, cobblers, tailors, etc.",
-                                                            "<b>Financial assistance:</b> Collateral-free enterprise credit up to ₹3 Lakh (₹1L first tranche + ₹2L second tranche) at a concessional 5% interest rate.",
-                                                            "<b>Skill & toolkit:</b> ₹500/day stipend during basic/advanced training, plus ₹15,000 digital toolkit incentive and PM Vishwakarma Certificate."
-                                                ],
-                                                "k": [
-                                                            "PM Vishwakarma",
-                                                            "18 Trades",
-                                                            "₹3L Concessional Loan",
-                                                            "₹15k Toolkit"
-                                                ],
-                                                "n": "PM Vishwakarma links traditional artisan heritage directly with formal financial markets and ONDC e-commerce."
-                                    }
+                "n": "Budget 2025-26 & Flagship Schemes",
+                "d": "₹100 Cr credit guarantee, Mudra Tarun Plus, TReDS expansion, and PM Vishwakarma",
+                "e": "🚀",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "Budget 2025-26: ₹100 Cr Credit Guarantee Scheme",
+                        "b": [
+                            "<b>Dedicated manufacturing fund:</b> A new self-financing credit guarantee fund for MSMEs in manufacturing was launched in Union Budget 2024-25 / 2025-26.",
+                            "<b>Up to ₹100 Crore cover:</b> Guarantees term loans up to ₹100 Crore for purchasing machinery and equipment without collateral or third-party guarantee.",
+                            "<b>Direct scale catalyst:</b> Specifically addresses the mid-tier capital expenditure hump preventing small units from buying advanced CNC machinery."
                         ],
-                        "q": [
-                                    {
-                                                "k": "mc",
-                                                "q": "In Union Budget 2024-25 / 2025-26, what historic credit guarantee mechanism was announced specifically for MSMEs in manufacturing?",
-                                                "o": [
-                                                            "A scheme offering 100% direct cash grants for imported machinery",
-                                                            "A self-financing guarantee fund providing collateral-free credit cover up to ₹100 Crore for machinery purchases",
-                                                            "Complete interest waiver on all Mudra loans for 5 years",
-                                                            "Mandatory 50% equity buyout of stressed MSMEs by SIDBI"
-                                                ],
-                                                "a": 1,
-                                                "kw": "Budget 2025 ₹100 Cr Machinery Guarantee",
-                                                "e": "Union Budget introduced a new self-financing credit guarantee fund providing cover up to ₹100 Crore for term loans taken by manufacturing MSMEs to purchase modern machinery and equipment without collateral or third-party guarantee!",
-                                                "data": "Guarantees term loans up to ₹100 Cr; borrower pays an upfront fee and annual guarantee fee on reducing balance.",
-                                                "ex": "An aerospace component maker in Bengaluru borrowing ₹60 Crore to import 5-axis CNC machines backed by the government guarantee.",
-                                                "mains": "Directly tackles the capital expenditure bottleneck preventing Indian MSMEs from scaling into high-tech global value chains."
-                                    },
-                                    {
-                                                "k": "mc",
-                                                "q": "Under Pradhan Mantri Mudra Yojana (PMMY), the Budget introduced the 'Tarun Plus' category. What is the enhanced loan limit?",
-                                                "o": [
-                                                            "₹12 Lakh",
-                                                            "₹15 Lakh",
-                                                            "₹20 Lakh",
-                                                            "₹50 Lakh"
-                                                ],
-                                                "a": 2,
-                                                "kw": "Mudra Tarun Plus Expansion",
-                                                "e": "Budget doubled the Mudra ceiling from ₹10 Lakh to ₹20 Lakh under the new 'Tarun Plus' category for entrepreneurs who have previously taken and successfully repaid loans under the Tarun category.",
-                                                "data": "Mudra categories: Shishu (up to ₹50,000), Kishore (₹50k to ₹5 Lakh), Tarun (₹5L to ₹10 Lakh), Tarun Plus (₹10L to ₹20 Lakh).",
-                                                "ex": "A commercial laundry or bakery owner graduating from Tarun to buy delivery vans and commercial ovens up to ₹20 Lakh.",
-                                                "mains": "Creates a graduation mechanism rewarding formal credit discipline and combating micro-credit stagnation."
-                                    },
-                                    {
-                                                "k": "tf",
-                                                "q": "True or False: Under Union Budget 2024-25/2026 reforms, the turnover threshold for mandatory onboarding of buyers onto the TReDS platform was reduced from ₹500 Crore to ₹250 Crore.",
-                                                "a": 0,
-                                                "kw": "TReDS ₹250 Cr Mandate Expansion",
-                                                "e": "True! The turnover threshold for mandatory onboarding of buyers on TReDS was lowered from ₹500 Crore to ₹250 Crore, bringing 22 more Central Public Sector Enterprises (CPSEs) and thousands of medium-large corporates into the factoring net.",
-                                                "data": "Threshold reduced from ₹500 Cr to ₹250 Cr turnover, exponentially expanding the liquidity pool for MSE vendors.",
-                                                "ex": "Mid-tier industrial corporations must now upload verified invoices to TReDS, eliminating payment delays for component suppliers.",
-                                                "mains": "Demonstrates deepening institutional depth by expanding the perimeter of formal supply chain finance."
-                                    },
-                                    {
-                                                "k": "multi",
-                                                "q": "Tap all core components of the PM Vishwakarma Scheme launched with an outlay of ₹13,000 Crore:",
-                                                "o": [
-                                                            "Covers 18 traditional artisan trades (carpenters, blacksmiths, potters, cobblers)",
-                                                            "Collateral-free enterprise credit up to ₹3 Lakh (₹1L + ₹2L) at concessional 5% interest",
-                                                            "Skill upgradation with ₹500/day stipend and ₹15,000 toolkit digital incentive",
-                                                            "Mandatory 50% reservation in government civil service recruitments"
-                                                ],
-                                                "a": [
-                                                            0,
-                                                            1,
-                                                            2
-                                                ],
-                                                "kw": "PM Vishwakarma Artisan Architecture",
-                                                "e": "PM Vishwakarma covers 18 artisan trades with end-to-end support: PM Vishwakarma Certificate & ID, basic/advanced training with ₹500/day stipend, ₹15,000 modern toolkit grant, collateral-free loans up to ₹3 Lakh at 5%, and digital transaction incentives.",
-                                                "data": "₹13,000 Crore outlay for 5 years (FY24 to FY28) targeting 30 Lakh artisan families.",
-                                                "ex": "A traditional blacksmith or stone carver purchasing modern ergonomic pneumatic chisels and selling through ONDC.",
-                                                "mains": "Combines heritage preservation with modern productivity tools and credit inclusion."
-                                    }
-                        ]
+                        "k": [
+                            "Budget 2025",
+                            "₹100 Cr Guarantee",
+                            "Manufacturing Focus",
+                            "Machinery Loans"
+                        ],
+                        "n": "This scheme directly attacks the 'Dwarfism' trap by financing high-tech capital goods."
+                    },
+                    {
+                        "t": "Mudra 'Tarun Plus' & Public Sector Bank Digital Scoring",
+                        "b": [
+                            "<b>Mudra ceiling doubled:</b> 'Tarun Plus' category doubles the loan cap from ₹10 Lakh to ₹20 Lakh for entrepreneurs who successfully repaid Tarun loans.",
+                            "<b>In-house credit assessment:</b> Public sector banks mandated to build in-house digital scoring models using GST and banking footprints rather than external rating agency reports.",
+                            "<b>TReDS onboarding lowered:</b> Threshold for mandatory registration of buyers on TReDS reduced from ₹500 Cr to ₹250 Cr turnover."
+                        ],
+                        "k": [
+                            "Tarun Plus (₹20L)",
+                            "PSB Credit Models",
+                            "TReDS ₹250 Cr",
+                            "Graduation Trajectory"
+                        ],
+                        "n": "Highlight how Mudra creates a formal repayment track record enabling graduation to higher bank loans."
+                    },
+                    {
+                        "t": "PM Vishwakarma Scheme (₹13,000 Crore)",
+                        "b": [
+                            "<b>18 traditional trades:</b> End-to-end support for carpenters, boat makers, blacksmiths, armorers, potters, cobblers, tailors, etc.",
+                            "<b>Financial assistance:</b> Collateral-free enterprise credit up to ₹3 Lakh (₹1L first tranche + ₹2L second tranche) at a concessional 5% interest rate.",
+                            "<b>Skill & toolkit:</b> ₹500/day stipend during basic/advanced training, plus ₹15,000 digital toolkit incentive and PM Vishwakarma Certificate."
+                        ],
+                        "k": [
+                            "PM Vishwakarma",
+                            "18 Trades",
+                            "₹3L Concessional Loan",
+                            "₹15k Toolkit"
+                        ],
+                        "n": "PM Vishwakarma links traditional artisan heritage directly with formal financial markets and ONDC e-commerce."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "mc",
+                        "q": "In Union Budget 2024-25 / 2025-26, what historic credit guarantee mechanism was announced specifically for MSMEs in manufacturing?",
+                        "o": [
+                            "A scheme offering 100% direct cash grants for imported machinery",
+                            "A self-financing guarantee fund providing collateral-free credit cover up to ₹100 Crore for machinery purchases",
+                            "Complete interest waiver on all Mudra loans for 5 years",
+                            "Mandatory 50% equity buyout of stressed MSMEs by SIDBI"
+                        ],
+                        "a": 1,
+                        "kw": "Budget 2025 ₹100 Cr Machinery Guarantee",
+                        "e": "Union Budget introduced a new self-financing credit guarantee fund providing cover up to ₹100 Crore for term loans taken by manufacturing MSMEs to purchase modern machinery and equipment without collateral or third-party guarantee!",
+                        "data": "Guarantees term loans up to ₹100 Cr; borrower pays an upfront fee and annual guarantee fee on reducing balance.",
+                        "ex": "An aerospace component maker in Bengaluru borrowing ₹60 Crore to import 5-axis CNC machines backed by the government guarantee.",
+                        "mains": "Directly tackles the capital expenditure bottleneck preventing Indian MSMEs from scaling into high-tech global value chains."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Under Pradhan Mantri Mudra Yojana (PMMY), the Budget introduced the 'Tarun Plus' category. What is the enhanced loan limit?",
+                        "o": [
+                            "₹12 Lakh",
+                            "₹15 Lakh",
+                            "₹20 Lakh",
+                            "₹50 Lakh"
+                        ],
+                        "a": 2,
+                        "kw": "Mudra Tarun Plus Expansion",
+                        "e": "Budget doubled the Mudra ceiling from ₹10 Lakh to ₹20 Lakh under the new 'Tarun Plus' category for entrepreneurs who have previously taken and successfully repaid loans under the Tarun category.",
+                        "data": "Mudra categories: Shishu (up to ₹50,000), Kishore (₹50k to ₹5 Lakh), Tarun (₹5L to ₹10 Lakh), Tarun Plus (₹10L to ₹20 Lakh).",
+                        "ex": "A commercial laundry or bakery owner graduating from Tarun to buy delivery vans and commercial ovens up to ₹20 Lakh.",
+                        "mains": "Creates a graduation mechanism rewarding formal credit discipline and combating micro-credit stagnation."
+                    },
+                    {
+                        "k": "tf",
+                        "q": "True or False: Under Union Budget 2024-25/2026 reforms, the turnover threshold for mandatory onboarding of buyers onto the TReDS platform was reduced from ₹500 Crore to ₹250 Crore.",
+                        "a": 0,
+                        "kw": "TReDS ₹250 Cr Mandate Expansion",
+                        "e": "True! The turnover threshold for mandatory onboarding of buyers on TReDS was lowered from ₹500 Crore to ₹250 Crore, bringing 22 more Central Public Sector Enterprises (CPSEs) and thousands of medium-large corporates into the factoring net.",
+                        "data": "Threshold reduced from ₹500 Cr to ₹250 Cr turnover, exponentially expanding the liquidity pool for MSE vendors.",
+                        "ex": "Mid-tier industrial corporations must now upload verified invoices to TReDS, eliminating payment delays for component suppliers.",
+                        "mains": "Demonstrates deepening institutional depth by expanding the perimeter of formal supply chain finance."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all core components of the PM Vishwakarma Scheme launched with an outlay of ₹13,000 Crore:",
+                        "o": [
+                            "Covers 18 traditional artisan trades (carpenters, blacksmiths, potters, cobblers)",
+                            "Collateral-free enterprise credit up to ₹3 Lakh (₹1L + ₹2L) at concessional 5% interest",
+                            "Skill upgradation with ₹500/day stipend and ₹15,000 toolkit digital incentive",
+                            "Mandatory 50% reservation in government civil service recruitments"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "kw": "PM Vishwakarma Artisan Architecture",
+                        "e": "PM Vishwakarma covers 18 artisan trades with end-to-end support: PM Vishwakarma Certificate & ID, basic/advanced training with ₹500/day stipend, ₹15,000 modern toolkit grant, collateral-free loans up to ₹3 Lakh at 5%, and digital transaction incentives.",
+                        "data": "₹13,000 Crore outlay for 5 years (FY24 to FY28) targeting 30 Lakh artisan families.",
+                        "ex": "A traditional blacksmith or stone carver purchasing modern ergonomic pneumatic chisels and selling through ONDC.",
+                        "mains": "Combines heritage preservation with modern productivity tools and credit inclusion."
+                    }
+                ]
             },
             {
-                        "n": "Mains Answer Mastery Toolkit",
-                        "d": "15-marker structure, Mittelstand benchmark, and intro hooks",
-                        "e": "✍️",
-                        "practice_first": True,
-                        "c": [
-                                    {
-                                                "t": "The 15-Marker Blueprinted Structure for MSME Answers",
-                                                "b": [
-                                                            "<b>Introduction:</b> Macro Data Anchor (31.1% GDP, 48.6% Exports, 11.1 Cr jobs, 51.2% rural).",
-                                                            "<b>Body 1 (Structural Pathologies):</b> Inverted pyramid dwarfism (99.4% micro), ₹25 Lakh Cr credit gap, 45-day payment delays.",
-                                                            "<b>Body 2 (Policy Interventions):</b> 2020 composite definition, Section 43B(h), TReDS, Budget ₹100 Cr guarantee.",
-                                                            "<b>Way Forward:</b> UK Sinha committee recommendations, sunset clauses on incentives, cluster development on the German <i>Mittelstand</i> model."
-                                                ],
-                                                "k": [
-                                                            "15-Marker Blueprint",
-                                                            "4-Pillar Pathology",
-                                                            "Policy Matrix",
-                                                            "Way Forward"
-                                                ],
-                                                "n": "Always balance diagnostic critique with forward-looking institutional blueprints in GS-3."
-                                    },
-                                    {
-                                                "t": "The German Mittelstand Benchmark",
-                                                "b": [
-                                                            "<b>What is Mittelstand:</b> Mid-sized, family-owned companies that dominate specialized global niche markets ('Hidden Champions').",
-                                                            "<b>High R&D & dual apprenticeship:</b> Invest heavily in vocational apprenticeships and cutting-edge process patents.",
-                                                            "<b>Lesson for India:</b> India must transition its 99.4% micro-enterprises into high-tech, export-oriented mid-sized clusters."
-                                                ],
-                                                "k": [
-                                                            "German Mittelstand",
-                                                            "Hidden Champions",
-                                                            "Vocational Apprenticeship",
-                                                            "Niche Dominance"
-                                                ],
-                                                "n": "Citing the German Mittelstand provides an unbeatable international benchmark in industrial policy answers."
-                                    }
+                "n": "Mains Answer Mastery Toolkit",
+                "d": "15-marker structure, Mittelstand benchmark, and intro hooks",
+                "e": "✍️",
+                "practice_first": True,
+                "c": [
+                    {
+                        "t": "The 15-Marker Blueprinted Structure for MSME Answers",
+                        "b": [
+                            "<b>Introduction:</b> Macro Data Anchor (31.1% GDP, 48.6% Exports, 11.1 Cr jobs, 51.2% rural).",
+                            "<b>Body 1 (Structural Pathologies):</b> Inverted pyramid dwarfism (99.4% micro), ₹25 Lakh Cr credit gap, 45-day payment delays.",
+                            "<b>Body 2 (Policy Interventions):</b> 2020 composite definition, Section 43B(h), TReDS, Budget ₹100 Cr guarantee.",
+                            "<b>Way Forward:</b> UK Sinha committee recommendations, sunset clauses on incentives, cluster development on the German <i>Mittelstand</i> model."
                         ],
-                        "q": [
-                                    {
-                                                "k": "order",
-                                                "q": "Order the optimal structure for a 15-mark UPSC Mains answer on MSME reforms:",
-                                                "o": [
-                                                            "Intro: 3-Pillar Data (31.1% GDP, 48.6% Export, 11 Cr jobs)",
-                                                            "Structural Pathology: Credit gap, dwarfism, 43B(h) delay friction",
-                                                            "Government Policy Matrix: Composite criteria, TReDS, Mudra, Budget guarantee",
-                                                            "Way Forward: UK Sinha blueprint, sunset clauses, German Mittelstand clusters"
-                                                ],
-                                                "kw": "Mains 15-Marker Blueprinted Structure",
-                                                "e": "Data Hook Intro -> 4 Structural Pathologies (Credit, Scale, Payments, Tech) -> Government Interventions (Schemes + Statutes) -> Strategic Way Forward (Committees, International Benchmarks).",
-                                                "data": "High-scoring answers balance quantitative data, statutory provisions (MSMED Act/43B(h)), and reform blueprints.",
-                                                "ex": "Toppers consistently use 4-box diagrams summarizing the 4 bottlenecks and matching solutions.",
-                                                "mains": "Guarantees a balanced 250-word answer scoring in the top 10% percentile."
-                                    },
-                                    {
-                                                "k": "mc",
-                                                "q": "Which global manufacturing model is universally cited by NITI Aayog and economists as the strategic benchmark for solving India's 'Missing Middle'?",
-                                                "o": [
-                                                            "The Chinese Town & Village Enterprises (TVE) model",
-                                                            "The German 'Mittelstand' model (family-owned specialized niche exporters)",
-                                                            "The South Korean Chaebol conglomerate model",
-                                                            "The American Silicon Valley venture capital model"
-                                                ],
-                                                "a": 1,
-                                                "kw": "German Mittelstand Paradigm",
-                                                "e": "The German Mittelstand consists of mid-sized, highly innovative, family-owned enterprises that dominate specialized global niche markets ('Hidden Champions'). They invest heavily in apprentice training and R&D, providing high-wage industrial employment without massive corporate bureaucracy.",
-                                                "data": "Mittelstand accounts for 99.6% of German companies, employing ~60% of German workers and driving over 50% of German exports.",
-                                                "ex": "German family firms specializing in industrial labeling machines, optical sensors, or specialized pump valves holding 80% global market share.",
-                                                "mains": "The definitive answer when asked how India can scale its micro-enterprises into globally competitive manufacturing champions."
-                                    },
-                                    {
-                                                "k": "multi",
-                                                "q": "Tap all high-scoring keywords and phrases that should appear in an MSME Mains answer:",
-                                                "o": [
-                                                            "'Missing Middle' and 'Dwarfism vs Infant firms'",
-                                                            "'Transition from Collateral-Based to Information/Cash-Flow Lending'",
-                                                            "'Without-Recourse Factoring via TReDS'",
-                                                            "'Sunset Clauses on Regulatory Shields'"
-                                                ],
-                                                "a": [
-                                                            0,
-                                                            1,
-                                                            2,
-                                                            3
-                                                ],
-                                                "kw": "Evaluator Vocabulary Trigger",
-                                                "e": "All 4 are golden phrases! Using precise academic and policy terminology ('Missing Middle', 'Cash-Flow Lending', 'Without-Recourse', 'Sunset Clauses') instantly signals mastery to the UPSC evaluator.",
-                                                "data": "Derived from Economic Survey, RBI Reports, and UK Sinha Committee papers.",
-                                                "ex": "Synthesized into punchy subheadings like 'From Regulatory Dwarfs to Global Mittelstand'.",
-                                                "mains": "Replaces vague platitudes with decisive, policy-grade analysis."
-                                    },
-                                    {
-                                                "k": "flip",
-                                                "q": "Flip to reveal the model 25-word opening hook for an answer on: 'MSMEs: From Regulatory Dwarfs to Engines of Inclusive Growth':",
-                                                "r": "Anchoring 31.1% of GDP and 48.6% of exports with 11 Crore livelihoods, India's MSMEs are the bedrock of socio-economic resilience. However, transitioning from 99.4% informal 'dwarfs' to scaled 'infants' remains the critical frontier for Atmanirbhar Bharat.",
-                                                "kw": "Punchy Opening Formula",
-                                                "e": "This intro combines hard data (31.1%, 48.6%, 11 Cr), economic doctrine (dwarfs vs infants), and national vision (Atmanirbhar Bharat) in just 2 sentences!",
-                                                "data": "31.1% GDP · 48.6% Exports · 11 Cr jobs · 99.4% Micro.",
-                                                "ex": "Immediately sets a scholarly, authoritative tone for the entire script.",
-                                                "mains": "Memorize and reproduce in the first 30 seconds of tackling any MSME question in GS-3."
-                                    }
-                        ]
+                        "k": [
+                            "15-Marker Blueprint",
+                            "4-Pillar Pathology",
+                            "Policy Matrix",
+                            "Way Forward"
+                        ],
+                        "n": "Always balance diagnostic critique with forward-looking institutional blueprints in GS-3."
+                    },
+                    {
+                        "t": "The German Mittelstand Benchmark",
+                        "b": [
+                            "<b>What is Mittelstand:</b> Mid-sized, family-owned companies that dominate specialized global niche markets ('Hidden Champions').",
+                            "<b>High R&D & dual apprenticeship:</b> Invest heavily in vocational apprenticeships and cutting-edge process patents.",
+                            "<b>Lesson for India:</b> India must transition its 99.4% micro-enterprises into high-tech, export-oriented mid-sized clusters."
+                        ],
+                        "k": [
+                            "German Mittelstand",
+                            "Hidden Champions",
+                            "Vocational Apprenticeship",
+                            "Niche Dominance"
+                        ],
+                        "n": "Citing the German Mittelstand provides an unbeatable international benchmark in industrial policy answers."
+                    }
+                ],
+                "q": [
+                    {
+                        "k": "order",
+                        "q": "Order the optimal structure for a 15-mark UPSC Mains answer on MSME reforms:",
+                        "o": [
+                            "Intro: 3-Pillar Data (31.1% GDP, 48.6% Export, 11 Cr jobs)",
+                            "Structural Pathology: Credit gap, dwarfism, 43B(h) delay friction",
+                            "Government Policy Matrix: Composite criteria, TReDS, Mudra, Budget guarantee",
+                            "Way Forward: UK Sinha blueprint, sunset clauses, German Mittelstand clusters"
+                        ],
+                        "kw": "Mains 15-Marker Blueprinted Structure",
+                        "e": "Data Hook Intro -> 4 Structural Pathologies (Credit, Scale, Payments, Tech) -> Government Interventions (Schemes + Statutes) -> Strategic Way Forward (Committees, International Benchmarks).",
+                        "data": "High-scoring answers balance quantitative data, statutory provisions (MSMED Act/43B(h)), and reform blueprints.",
+                        "ex": "Toppers consistently use 4-box diagrams summarizing the 4 bottlenecks and matching solutions.",
+                        "mains": "Guarantees a balanced 250-word answer scoring in the top 10% percentile."
+                    },
+                    {
+                        "k": "mc",
+                        "q": "Which global manufacturing model is universally cited by NITI Aayog and economists as the strategic benchmark for solving India's 'Missing Middle'?",
+                        "o": [
+                            "The Chinese Town & Village Enterprises (TVE) model",
+                            "The German 'Mittelstand' model (family-owned specialized niche exporters)",
+                            "The South Korean Chaebol conglomerate model",
+                            "The American Silicon Valley venture capital model"
+                        ],
+                        "a": 1,
+                        "kw": "German Mittelstand Paradigm",
+                        "e": "The German Mittelstand consists of mid-sized, highly innovative, family-owned enterprises that dominate specialized global niche markets ('Hidden Champions'). They invest heavily in apprentice training and R&D, providing high-wage industrial employment without massive corporate bureaucracy.",
+                        "data": "Mittelstand accounts for 99.6% of German companies, employing ~60% of German workers and driving over 50% of German exports.",
+                        "ex": "German family firms specializing in industrial labeling machines, optical sensors, or specialized pump valves holding 80% global market share.",
+                        "mains": "The definitive answer when asked how India can scale its micro-enterprises into globally competitive manufacturing champions."
+                    },
+                    {
+                        "k": "multi",
+                        "q": "Tap all high-scoring keywords and phrases that should appear in an MSME Mains answer:",
+                        "o": [
+                            "'Missing Middle' and 'Dwarfism vs Infant firms'",
+                            "'Transition from Collateral-Based to Information/Cash-Flow Lending'",
+                            "'Without-Recourse Factoring via TReDS'",
+                            "'Sunset Clauses on Regulatory Shields'"
+                        ],
+                        "a": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "kw": "Evaluator Vocabulary Trigger",
+                        "e": "All 4 are golden phrases! Using precise academic and policy terminology ('Missing Middle', 'Cash-Flow Lending', 'Without-Recourse', 'Sunset Clauses') instantly signals mastery to the UPSC evaluator.",
+                        "data": "Derived from Economic Survey, RBI Reports, and UK Sinha Committee papers.",
+                        "ex": "Synthesized into punchy subheadings like 'From Regulatory Dwarfs to Global Mittelstand'.",
+                        "mains": "Replaces vague platitudes with decisive, policy-grade analysis."
+                    },
+                    {
+                        "k": "flip",
+                        "q": "Flip to reveal the model 25-word opening hook for an answer on: 'MSMEs: From Regulatory Dwarfs to Engines of Inclusive Growth':",
+                        "r": "Anchoring 31.1% of GDP and 48.6% of exports with 11 Crore livelihoods, India's MSMEs are the bedrock of socio-economic resilience. However, transitioning from 99.4% informal 'dwarfs' to scaled 'infants' remains the critical frontier for Atmanirbhar Bharat.",
+                        "kw": "Punchy Opening Formula",
+                        "e": "This intro combines hard data (31.1%, 48.6%, 11 Cr), economic doctrine (dwarfs vs infants), and national vision (Atmanirbhar Bharat) in just 2 sentences!",
+                        "data": "31.1% GDP · 48.6% Exports · 11 Cr jobs · 99.4% Micro.",
+                        "ex": "Immediately sets a scholarly, authoritative tone for the entire script.",
+                        "mains": "Memorize and reproduce in the first 30 seconds of tackling any MSME question in GS-3."
+                    }
+                ]
             }
-],
+        ],
         "pyq": [
             {
                 "k": "flip",
@@ -1556,13 +1556,21 @@ TOPICS = {
                             "Bombay High Court"
                         ],
                         "a": 1,
-                        "e": "The Chhattisgarh High Court highlighted the profound moral and generational damage wrought by examination leaks."
+                        "e": "The Chhattisgarh High Court highlighted the profound moral and generational damage wrought by examination leaks.",
+                        "kw": "Judicial Rebuke on Paper Leaks",
+                        "data": "Over 48 paper leaks across 16 states affecting 1.5+ Crore candidates between 2018–2023.",
+                        "ex": "Chhattisgarh High Court (2024) highlighting profound moral and generational damage.",
+                        "mains": "Quote High Court: 'Paper leaks destroy the moral fabric of public examinations and constitutional meritocracy.'"
                     },
                     {
                         "k": "tf",
                         "q": "Modern paper leaks in India are primarily minor, isolated classroom offenses rather than organized interstate operations.",
                         "a": 1,
-                        "e": "False. Investigations (e.g. EOU Bihar, CBI) reveal multi-state organized crime syndicates charging ₹30-50L per candidate."
+                        "e": "False. Investigations (e.g. EOU Bihar, CBI) reveal multi-state organized crime syndicates charging ₹30-50L per candidate.",
+                        "kw": "Interstate Organized Crime Syndicates",
+                        "data": "Bastar to Patna solver networks charging ₹30L to ₹50L per candidate.",
+                        "ex": "EOU Bihar and CBI crackdowns in NEET-UG uncovering encrypted dark web paper distribution.",
+                        "mains": "Shifts the criminological paradigm from petty academic cheating to sophisticated organized economic syndicates."
                     },
                     {
                         "k": "multi",
@@ -1578,7 +1586,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Compromised exams destroy meritocracy, waste precious years of youth, and hit marginalized families hardest."
+                        "e": "Compromised exams destroy meritocracy, waste precious years of youth, and hit marginalized families hardest.",
+                        "kw": "Social Mobility & Demographic Erosion",
+                        "data": "Over 65% of candidates hail from non-metro rural areas where government service is the primary vehicle of upward mobility.",
+                        "ex": "Aspirants in Mukherjee Nagar and Prayagraj spending 4-6 prime youth years in uncertainty due to repeated cancellations.",
+                        "mains": "Framing: 'Erosion of Social Contract' — public exams are the demographic safety valve of a developing democracy."
                     },
                     {
                         "k": "flag",
@@ -1589,9 +1601,14 @@ TOPICS = {
                             "and the High Court described paper leaks as minor administrative irregularities."
                         ],
                         "a": 2,
-                        "e": "The High Court held: 'A paper leak is more heinous than murder because it destroys the careers of millions.'"
+                        "e": "The High Court held: 'A paper leak is more heinous than murder because it destroys the careers of millions.'",
+                        "kw": "Intergenerational Merit Injury",
+                        "data": "Repeated cancellations cost the exchequer over ₹1,000 Crore annually in re-conducting logistics.",
+                        "ex": "UGC-NET cancellation within 24 hours of conduct based on MHA Cyber Crime Coordination Center (I4C) inputs.",
+                        "mains": "Highlights the necessity for institutional resilience and preemptive cyber threat intelligence."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Public Examinations Act 2024",
@@ -1652,13 +1669,21 @@ TOPICS = {
                             "₹1 Crore"
                         ],
                         "a": 3,
-                        "e": "Section 10(2) mandates a minimum fine of ₹1 Crore alongside 5 to 10 years imprisonment for organized syndicates."
+                        "e": "Section 10(2) mandates a minimum fine of ₹1 Crore alongside 5 to 10 years imprisonment for organized syndicates.",
+                        "kw": "Section 10(2) Organized Crime Penalties",
+                        "data": "5 to 10 years imprisonment and minimum ₹1 Crore fine under Section 10(2).",
+                        "ex": "Attachment of assets of paper leak kingpins in Rajasthan under Section 12.",
+                        "mains": "Deterrence doctrine: economic cost of committing exam crime must exceed expected illegal profits."
                     },
                     {
                         "k": "tf",
                         "q": "Bona fide student aspirants caught copying are sentenced to mandatory 5-year prison terms under the 2024 Act.",
                         "a": 1,
-                        "e": "False. Candidates are explicitly protected from the criminal provisions of the Act, which target organized syndicates."
+                        "e": "False. Candidates are explicitly protected from the criminal provisions of the Act, which target organized syndicates.",
+                        "kw": "Bona Fide Candidate Immunity",
+                        "data": "Section 10(1) proviso explicitly protects bona fide candidates from criminal prosecution under the Act.",
+                        "ex": "Students caught copying are dealt with under examination body administrative rules (debarment), not criminal penal codes.",
+                        "mains": "Balanced jurisprudence: shields vulnerable candidates while punishing predatory commercial mafias."
                     },
                     {
                         "k": "match",
@@ -1681,7 +1706,11 @@ TOPICS = {
                                 "Immune from criminal prosecution under Act"
                             ]
                         ],
-                        "e": "Clear graduated liability framework."
+                        "e": "Clear graduated liability framework.",
+                        "kw": "Graduated Statutory Penal Hierarchy",
+                        "data": "Individual: 3-5 yrs + ₹10L | Syndicate: 5-10 yrs + ₹1 Cr | Agency: Asset attachment | Candidate: Debarment only.",
+                        "ex": "Private test center operators in Haryana facing business blacklisting and cost recovery under Section 11.",
+                        "mains": "Reproduce the 4-tier graduated liability table to demonstrate precise legislative command."
                     },
                     {
                         "k": "year",
@@ -1690,7 +1719,11 @@ TOPICS = {
                         "tol": 0,
                         "min": 2018,
                         "max": 2026,
-                        "e": "2024."
+                        "e": "2024.",
+                        "kw": "Public Examinations Act 2024",
+                        "data": "Enacted in February 2024 and notified in June 2024 as a Central umbrella legislation.",
+                        "ex": "Unified central umbrella law covering UPSC, SSC, RRB, IBPS, and NTA entrance tests.",
+                        "mains": "Fills a 75-year legislative vacuum where exam cheating was prosecuted under weak IPC provisions (Section 420)."
                     },
                     {
                         "k": "sort",
@@ -1721,9 +1754,14 @@ TOPICS = {
                                 1
                             ]
                         ],
-                        "e": "Section 10(1) punishes individuals; Section 10(2) slaps ₹1 Cr fine and asset attachment on syndicates."
+                        "e": "Section 10(1) punishes individuals; Section 10(2) slaps ₹1 Cr fine and asset attachment on syndicates.",
+                        "kw": "Section 10(1) vs 10(2) Demarcation",
+                        "data": "Section 10(1) covers individual collusion; Section 10(2) covers organized conspiracy.",
+                        "ex": "Solvers and question paper transport drivers categorized as organized syndicates when acting in concert.",
+                        "mains": "Aligns with organized crime frameworks like MCOCA and PMLA for asset confiscation."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Radhakrishnan Committee Reforms",
@@ -1770,7 +1808,11 @@ TOPICS = {
                             "Dr. Anil Kakodkar"
                         ],
                         "a": 1,
-                        "e": "Former ISRO Chairman Dr. K. Radhakrishnan headed the 7-member committee on exam reforms."
+                        "e": "Former ISRO Chairman Dr. K. Radhakrishnan headed the 7-member committee on exam reforms.",
+                        "kw": "Dr. K. Radhakrishnan High-Level Committee",
+                        "data": "7-member high-level expert committee constituted by Ministry of Education in June 2024.",
+                        "ex": "Former ISRO Chairman applying space-grade mission security and fail-safe protocols to national testing.",
+                        "mains": "The definitive reform reference for exam governance in GS-2 Governance questions."
                     },
                     {
                         "k": "multi",
@@ -1786,13 +1828,21 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Multi-stage testing, hybrid transmission, and using only public institutions (KVs, IITs, NITs) were recommended."
+                        "e": "Multi-stage testing, hybrid transmission, and using only public institutions (KVs, IITs, NITs) were recommended.",
+                        "kw": "3-Pillar Exam Security Architecture",
+                        "data": "Transitioning exams with >10 Lakh candidates to 2-tier screening (Prelims screening + Mains testing).",
+                        "ex": "NEET-UG moving toward 2-stage testing to eliminate high-stakes single-day vulnerability.",
+                        "mains": "Three pillars: 'Structural De-Risking (Multi-Stage), Digital Defense (Hybrid), and Public Venues (KVs/IITs)'."
                     },
                     {
                         "k": "tf",
                         "q": "The Radhakrishnan Committee recommended expanding outsourcing of exam center management to unverified private IT institutes.",
                         "a": 1,
-                        "e": "False. It strongly recommended eliminating private testing centers in favor of trusted government institutions."
+                        "e": "False. It strongly recommended eliminating private testing centers in favor of trusted government institutions.",
+                        "kw": "Exclusion of Private Testing Venues",
+                        "data": "Committee recommended conducting all national tests exclusively in government institutions (Kendriya Vidyalayas, Navodaya, IITs, NITs).",
+                        "ex": "Phasing out private computer labs in industrial estates that were vulnerable to remote desktop tampering.",
+                        "mains": "Reclaiming public trust by returning sovereign examination duties to state-owned infrastructure."
                     },
                     {
                         "k": "riddle",
@@ -1809,7 +1859,11 @@ TOPICS = {
                             "Santhanam Committee"
                         ],
                         "a": 0,
-                        "e": "Dr. K. Radhakrishnan High-Level Committee on Exam Reforms."
+                        "e": "Dr. K. Radhakrishnan High-Level Committee on Exam Reforms.",
+                        "kw": "Space-Grade Testing Integrity",
+                        "data": "Submitted comprehensive report in November 2024 recommending restructuring of NTA.",
+                        "ex": "End-to-end QR code tracking of test booklets and digital encryption at question bank level.",
+                        "mains": "Analogy: Applying ISRO's redundancy and dual-validation protocols to national examination logistics."
                     },
                     {
                         "k": "order",
@@ -1825,9 +1879,14 @@ TOPICS = {
                             "and",
                             "integrity"
                         ],
-                        "e": "Public examinations must ensure uncompromising merit and integrity."
+                        "e": "Public examinations must ensure uncompromising merit and integrity.",
+                        "kw": "Constitutional Merit Axiom",
+                        "data": "Public examinations must ensure uncompromising merit, equity, and operational integrity.",
+                        "ex": "Over 2 Crore candidates annually appear for central examinations across India.",
+                        "mains": "Core thesis for essay and GS-2 answers on public recruitment transparency."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "NTA Deficits & Economics of Crime",
@@ -1874,13 +1933,21 @@ TOPICS = {
                             "Over-regulation by state governments"
                         ],
                         "a": 1,
-                        "e": "NTA's reliance on only ~24 permanent officers forces excessive outsourcing to vulnerable third-party contractors."
+                        "e": "NTA's reliance on only ~24 permanent officers forces excessive outsourcing to vulnerable third-party contractors.",
+                        "kw": "The 24-Staff Paradox",
+                        "data": "NTA conducted tests for over 1.3 Crore candidates in 2024 with only ~24 permanent officers.",
+                        "ex": "Critical operational roles (question setting, center inspection, IT) outsourced to private vendors.",
+                        "mains": "Administrative critique: 'Hollow State Syndrome' where core sovereign functions are outsourced without supervisory capacity."
                     },
                     {
                         "k": "tf",
                         "q": "According to Gary Becker's Economics of Crime, doubling the prison sentence guarantees crime prevention even if detection probability is low.",
                         "a": 1,
-                        "e": "False. Severity without high detection probability provides zero deterrent effect."
+                        "e": "False. Severity without high detection probability provides zero deterrent effect.",
+                        "kw": "Becker's Deterrence Calculus",
+                        "data": "Gary Becker's formula: E(U) = p*U(Penalty) + (1-p)*U(Loot). If p -> 0, penalty size has zero deterrence.",
+                        "ex": "Severe death penalties for murder failed to eliminate crime where conviction rates were below 10%.",
+                        "mains": "Pairing statutory severity (10 yrs jail) with high detection probability (CCTV, AI proctoring, rapid trials)."
                     },
                     {
                         "k": "match",
@@ -1903,9 +1970,14 @@ TOPICS = {
                                 "Continuous AI-proctoring and forensic audits"
                             ]
                         ],
-                        "e": "Pair problem with structural administrative remedy."
+                        "e": "Pair problem with structural administrative remedy.",
+                        "kw": "Institutional Remedy Pairing",
+                        "data": "Permanent cadre, public venues, encrypted hybrid distribution, and forensic data audits.",
+                        "ex": "UPSC model: dedicated permanent secretarial cadre conducting flaw-free exams for decades.",
+                        "mains": "Propose UPSC-style autonomous statutory board status for NTA with its own permanent service cadre."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Constitutional & Ethical Canvas",
@@ -1952,13 +2024,21 @@ TOPICS = {
                             "Residuary Powers"
                         ],
                         "a": 1,
-                        "e": "Entry 25 of the Concurrent List (introduced via 42nd Amendment, 1976) covers education."
+                        "e": "Entry 25 of the Concurrent List (introduced via 42nd Amendment, 1976) covers education.",
+                        "kw": "Entry 25 Concurrent Jurisdiction",
+                        "data": "Shifted from State List (Entry 11) to Concurrent List (Entry 25) via 42nd Amendment Act 1976.",
+                        "ex": "Enables Parliament to enact uniform national testing standards while requiring state police cooperation.",
+                        "mains": "Exemplifies cooperative federalism: center sets standards; states provide law enforcement and venue security."
                     },
                     {
                         "k": "tf",
                         "q": "Paper leaks violate Article 16 of the Indian Constitution.",
                         "a": 0,
-                        "e": "True. Article 16 guarantees equality of opportunity in matters of public employment."
+                        "e": "True. Article 16 guarantees equality of opportunity in matters of public employment.",
+                        "kw": "Article 16 Equality in Public Employment",
+                        "data": "Article 16(1) guarantees equality of opportunity for all citizens in public sector appointments.",
+                        "ex": "When leak recipients buy ranks, impoverished hardworking candidates are unconstitutionally shut out.",
+                        "mains": "Constitutional hook: Paper leaks are not merely administrative lapses, but substantive violations of Fundamental Rights (Articles 14 & 16)."
                     },
                     {
                         "k": "multi",
@@ -1974,9 +2054,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Articles 14, 16, and 21 are directly undermined when merit is subverted."
+                        "e": "Articles 14, 16, and 21 are directly undermined when merit is subverted.",
+                        "kw": "Constitutional Triumvirate Breach",
+                        "data": "Article 14 (Arbitrariness), Article 16 (Merit equality), Article 21 (Dignity and livelihood).",
+                        "ex": "Supreme Court observed in multiple rulings that fairness in public recruitment is intrinsic to the Rule of Law.",
+                        "mains": "Structure your constitutional critique using the Golden Triangle (Articles 14, 19, 21) plus Article 16."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Answer Mastery Toolkit",
@@ -2021,7 +2106,11 @@ TOPICS = {
                             "Remedial Architecture: Radhakrishnan Committee & 2024 Act",
                             "Conclusion: Preserving meritocracy in the social contract"
                         ],
-                        "e": "Social Context → Constitutional Breach → Bottlenecks → Reform Blueprint → Conclusion."
+                        "e": "Social Context → Constitutional Breach → Bottlenecks → Reform Blueprint → Conclusion.",
+                        "kw": "15-Marker Exam Integrity Blueprint",
+                        "data": "Context (Leaks) -> Constitutional Breach (Art 14/16) -> Root Causes (24-Staff/Outsourcing) -> Radhakrishnan Blueprint -> Conclusion.",
+                        "ex": "Framework adopted by toppers to ensure 360-degree coverage of policy, law, and administrative reform.",
+                        "mains": "Guarantees a logical narrative flow scoring in the top decile."
                     },
                     {
                         "k": "mc",
@@ -2033,14 +2122,23 @@ TOPICS = {
                             "Punishment alone will solve all problems automatically."
                         ],
                         "a": 1,
-                        "e": "A balanced, inspiring constitutional conclusion."
+                        "e": "A balanced, inspiring constitutional conclusion.",
+                        "kw": "Constitutional Social Mobility Vision",
+                        "data": "Fair exams are the lifeblood of India's social contract with 60 Crore youth under 35.",
+                        "ex": "Restoring absolute sanctity to NTA exams is an investment in national security and democratic legitimacy.",
+                        "mains": "End with a powerful, forward-looking statesmanlike synthesis."
                     },
                     {
                         "k": "flip",
                         "q": "Write a 2-line intro for 'Integrity of Public Examinations in India'.",
-                        "r": "Public competitive examinations are the primary engine of upward social mobility for India's youth. When paper leaks subvert this meritocratic ladder, they violate Articles 14 and 16, murdering the aspirations of millions as highlighted by the Chhattisgarh High Court."
+                        "r": "Public competitive examinations are the primary engine of upward social mobility for India's youth. When paper leaks subvert this meritocratic ladder, they violate Articles 14 and 16, murdering the aspirations of millions as highlighted by the Chhattisgarh High Court.",
+                        "kw": "Punchy Opening Hook",
+                        "data": "Over 1.5 Crore aspirants compete annually for limited public vacancies.",
+                        "ex": "Combines demographic stakes, constitutional merit, and legislative deterrence in 2 lines.",
+                        "mains": "Memorize for instantaneous reproduction in GS-2 governance questions."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [
@@ -2496,13 +2594,21 @@ TOPICS = {
                             "Over 10 Crore cases"
                         ],
                         "a": 2,
-                        "e": "NJDG records over 5 Crore pending cases across Supreme Court, High Courts, and Subordinate Courts."
+                        "e": "NJDG records over 5 Crore pending cases across Supreme Court, High Courts, and Subordinate Courts.",
+                        "kw": "5 Crore Case Pendency Crisis",
+                        "data": "NJDG: 5.1 Crore pending cases across SC, HCs (62 Lakh), and Subordinate Courts (4.4 Crore).",
+                        "ex": "Land title disputes pending for 20+ years in district courts.",
+                        "mains": "Economic Survey: Judicial delays cost India ~1.5–2% of GDP annually in locked capital."
                     },
                     {
                         "k": "tf",
                         "q": "The Supreme Court has endorsed replacing human judges with autonomous AI sentencing algorithms in criminal courts.",
                         "a": 1,
-                        "e": "False. The Supreme Court strictly maintains that AI can only be an assistive tool; human adjudication is non-negotiable."
+                        "e": "False. The Supreme Court strictly maintains that AI can only be an assistive tool; human adjudication is non-negotiable.",
+                        "kw": "Assistive vs Determinative AI",
+                        "data": "Chief Justice of India: AI can assist judges with case research, but cannot replace judicial discretion or empathy.",
+                        "ex": "AI drafting routine bail notices vs human judge evaluating complex life-and-liberty facts.",
+                        "mains": "Core doctrine: 'AI as an administrative assist, never an algorithmic arbiter'."
                     },
                     {
                         "k": "multi",
@@ -2518,7 +2624,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Translation, categorization, and scheduling are ideal assistive tasks. Adjudication remains human."
+                        "e": "Translation, categorization, and scheduling are ideal assistive tasks. Adjudication remains human.",
+                        "kw": "High-Yield Assistive Judicial Tasks",
+                        "data": "Categorization, speech-to-text transcription, translation, and automated summons tracking.",
+                        "ex": "Live transcription of Constitution Bench hearings in Supreme Court Courtroom 1.",
+                        "mains": "Separating mechanical clerical bottlenecks from core sovereign adjudicatory functions."
                     },
                     {
                         "k": "flag",
@@ -2529,9 +2639,14 @@ TOPICS = {
                             "and the Supreme Court has cleared 100% of its backlog with zero pending cases."
                         ],
                         "a": 2,
-                        "e": "The Supreme Court still has ~80,000 pending cases."
+                        "e": "The Supreme Court still has ~80,000 pending cases.",
+                        "kw": "Inherent Algorithmic Limitations",
+                        "data": "Generative AI operates on statistical pattern matching, lacking moral discernment or constitutional empathy.",
+                        "ex": "AI bail-scoring software (COMPAS in US) reproducing historical racial and caste biases.",
+                        "mains": "Justice without empathy is mechanical bureaucracy; violates Article 21's guarantee of reasoned justice."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Draft Guidelines 2026 & Hallucinations",
@@ -2578,13 +2693,21 @@ TOPICS = {
                             "Chlorine Gas"
                         ],
                         "a": 2,
-                        "e": "The Supreme Court warned that citing unverified AI hallucinations pollutes the judicial stream like toxic Methyl Isocyanate."
+                        "e": "The Supreme Court warned that citing unverified AI hallucinations pollutes the judicial stream like toxic Methyl Isocyanate.",
+                        "kw": "Judicial Hallucination Hazard",
+                        "data": "SC Draft Guidelines on Responsible Use of AI in Indian Courts (2025-26).",
+                        "ex": "US lawyers fined for submitting fictitious judicial citations fabricated by ChatGPT.",
+                        "mains": "Supreme Court warning: 'Citing fake AI citations is like introducing poison into the stream of justice.'"
                     },
                     {
                         "k": "tf",
                         "q": "Under the SC Draft AI Guidelines, advocates must disclose if AI was utilized and personally verify all cited legal precedents.",
                         "a": 0,
-                        "e": "True. Personal verification by advocates is mandatory to eliminate hallucinated case submissions."
+                        "e": "True. Personal verification by advocates is mandatory to eliminate hallucinated case submissions.",
+                        "kw": "Mandatory AI Disclosure Duty",
+                        "data": "Draft Guidelines Rule 4: Advocates must disclose if pleadings, case citations, or briefs were generated using GenAI.",
+                        "ex": "Bar Council of India notices on professional ethics regarding unverified AI legal research.",
+                        "mains": "Enforces professional liability and safeguards against synthetic judicial pollution."
                     },
                     {
                         "k": "multi",
@@ -2600,7 +2723,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Hallucinations threaten legal certainty and the doctrine of binding precedent."
+                        "e": "Hallucinations threaten legal certainty and the doctrine of binding precedent.",
+                        "kw": "GenAI Legal Vulnerabilities",
+                        "data": "Hallucinated precedents, data leakage of confidential filings, and algorithmic bias.",
+                        "ex": "Uploading sealed-cover corporate arbitration documents to commercial public AI servers.",
+                        "mains": "Requires sovereign in-house AI servers hosted on National Informatics Centre (NIC) cloud."
                     },
                     {
                         "k": "sort",
@@ -2635,9 +2762,14 @@ TOPICS = {
                                 1
                             ]
                         ],
-                        "e": "AI assists with routine admin and translation; human judges alone decide guilt, sentencing, and justice."
+                        "e": "AI assists with routine admin and translation; human judges alone decide guilt, sentencing, and justice.",
+                        "kw": "Permissible Judicial AI Boundary",
+                        "data": "Clerical transcription/translation = Assistive; Bail adjudication/Sentencing = Human-only.",
+                        "ex": "SUPACE clustering civil appeals vs judge determining whether death sentence is warranted.",
+                        "mains": "Preserves constitutional sovereignty under Articles 14, 21, and 32."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Key Technological Initiatives",
@@ -2695,7 +2827,11 @@ TOPICS = {
                                 "₹7,210 Cr digital-native cloud infrastructure"
                             ]
                         ],
-                        "e": "A classic match question for Prelims and high-yield data for Mains."
+                        "e": "A classic match question for Prelims and high-yield data for Mains.",
+                        "kw": "Supreme Court Tech Stack",
+                        "data": "SUPACE (Workflow efficiency), SUVAS (Vernacular translation), FASTER (Instant bail transmission), e-Courts (Digitization).",
+                        "ex": "FASTER transmission eliminating wrongful imprisonment of bailed undertrials.",
+                        "mains": "Mastery table linking digital tools directly to constitutional remedies."
                     },
                     {
                         "k": "mc",
@@ -2707,13 +2843,21 @@ TOPICS = {
                             "Bhashini"
                         ],
                         "a": 1,
-                        "e": "SUVAS (Supreme Court Vidhik Anuvaad Software) handles regional language judicial translations."
+                        "e": "SUVAS (Supreme Court Vidhik Anuvaad Software) handles regional language judicial translations.",
+                        "kw": "SUVAS (Vidhik Anuvaad Software)",
+                        "data": "AI-powered translation engine translating SC judgments into 18 scheduled languages.",
+                        "ex": "Rural litigants in Odisha reading Supreme Court judgments in Odia within hours of delivery.",
+                        "mains": "Democratizes access to justice: breaking the English-language hegemony of higher courts."
                     },
                     {
                         "k": "tf",
                         "q": "FASTER was introduced to ensure that prisoners granted bail are not kept incarcerated due to physical paper transit delays.",
                         "a": 0,
-                        "e": "True. FASTER transmits electronic signed bail orders directly to jail authorities instantly."
+                        "e": "True. FASTER transmits electronic signed bail orders directly to jail authorities instantly.",
+                        "kw": "FASTER Digital Bail Dispatch",
+                        "data": "Fast and Secured Transmission of Electronic Records (FASTER) launched in 2022.",
+                        "ex": "Ended delays where prisoners languished for days in Agra Jail despite Supreme Court bail.",
+                        "mains": "Article 21 enforcement: delay in releasing a bailed prisoner is unlawful confinement."
                     },
                     {
                         "k": "year",
@@ -2722,7 +2866,11 @@ TOPICS = {
                         "tol": 0,
                         "min": 2015,
                         "max": 2025,
-                        "e": "September 2023."
+                        "e": "September 2023.",
+                        "kw": "e-Courts Phase III (₹7,210 Cr)",
+                        "data": "Union Cabinet approved e-Courts Phase III with ₹7,210 Crore outlay in September 2023.",
+                        "ex": "Cloud-based digital courtrooms, paperless courts, and open-source judicial APIs.",
+                        "mains": "Transforms the Indian judiciary from physical locations to digital public services."
                     },
                     {
                         "k": "riddle",
@@ -2738,7 +2886,11 @@ TOPICS = {
                             "CPGRAMS"
                         ],
                         "a": 0,
-                        "e": "SUVAS (Supreme Court Vidhik Anuvaad Software)."
+                        "e": "SUVAS (Supreme Court Vidhik Anuvaad Software).",
+                        "kw": "SUPACE Portal",
+                        "data": "Supreme Court Portal for Assistance in Court's Efficiency, piloted by former CJI S.A. Bobde.",
+                        "ex": "Extracts key facts, points of law, and precedents from voluminous 10,000-page case records.",
+                        "mains": "Reduces judicial reading time by up to 60%, tackling institutional pendency."
                     },
                     {
                         "k": "order",
@@ -2754,9 +2906,14 @@ TOPICS = {
                             "human",
                             "conscience"
                         ],
-                        "e": "AI must assist judges never replace human conscience."
+                        "e": "AI must assist judges never replace human conscience.",
+                        "kw": "Ethical Legal Tech Axiom",
+                        "data": "Technology must humanize the administration of justice, not mechanize judicial discretion.",
+                        "ex": "Virtual courts resolving over 4 Crore traffic challans without human court visits.",
+                        "mains": "Core philosophical conclusion for GS-2 essays on judicial modernization."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Constitutional Challenges & Algorithmic Bias",
@@ -2803,13 +2960,21 @@ TOPICS = {
                             "Article 324"
                         ],
                         "a": 1,
-                        "e": "Article 21 encompasses the right to a fair, speedy, and reasoned trial."
+                        "e": "Article 21 encompasses the right to a fair, speedy, and reasoned trial.",
+                        "kw": "Article 21 Reasoned Justice",
+                        "data": "Right to a fair, speedy, and reasoned trial is an inalienable component of Article 21.",
+                        "ex": "Supreme Court striking down unreasoned administrative orders as inherently arbitrary.",
+                        "mains": "AI 'black box' problem: if an algorithm cannot explain its reasoning, it violates natural justice."
                     },
                     {
                         "k": "tf",
                         "q": "Because AI algorithms use mathematics, they are inherently immune to historical caste, racial, or socio-economic prejudices.",
                         "a": 1,
-                        "e": "False. AI models trained on historical data frequently encode, amplify, and automate historical human prejudices."
+                        "e": "False. AI models trained on historical data frequently encode, amplify, and automate historical human prejudices.",
+                        "kw": "Historical Data Bias Amplification",
+                        "data": "Algorithms trained on past police arrest data replicate and amplify caste, community, and gender biases.",
+                        "ex": "Predictive policing algorithms disproportionately targeting denotified tribes in urban slums.",
+                        "mains": "Garbage In, Biased Justice Out: algorithmic neutrality is a mathematical myth."
                     },
                     {
                         "k": "multi",
@@ -2825,9 +2990,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Article 21, black-box opacity, and training bias are substantive constitutional challenges."
+                        "e": "Article 21, black-box opacity, and training bias are substantive constitutional challenges.",
+                        "kw": "Constitutional Triumvirate Safeguards",
+                        "data": "Lack of explainability (Black Box), absence of human accountability, and discriminatory training data.",
+                        "ex": "Denial of bail based on automated risk-scoring software without right to cross-examine.",
+                        "mains": "Doctrine of Non-Delegation: sovereign adjudicative power cannot be sub-delegated to algorithms."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Structural Bottlenecks & The Judge Deficit",
@@ -2874,13 +3044,21 @@ TOPICS = {
                             "75 per million (vs 150)"
                         ],
                         "a": 1,
-                        "e": "India has ~21 judges per million citizens, far below the Law Commission's recommended target of 50."
+                        "e": "India has ~21 judges per million citizens, far below the Law Commission's recommended target of 50.",
+                        "kw": "Judge Deficit Crisis",
+                        "data": "India has ~21 judges per million population vs Law Commission (120th Report) recommendation of 50 per million.",
+                        "ex": "US has ~107 judges per million; Germany has ~250 judges per million.",
+                        "mains": "AI can accelerate paperwork, but cannot substitute for doubling judge appointments."
                     },
                     {
                         "k": "tf",
                         "q": "If an economy's Case Clearance Rate (CCR) is below 100%, total judicial case pendency will inevitably rise.",
                         "a": 0,
-                        "e": "True. CCR below 100% means more cases are being filed than are being resolved, swelling the backlog."
+                        "e": "True. CCR below 100% means more cases are being filed than are being resolved, swelling the backlog.",
+                        "kw": "Case Clearance Rate (CCR) Dynamics",
+                        "data": "CCR = (Cases Disposed / Cases Filed) * 100. If CCR < 100%, pendency mathematically expands every year.",
+                        "ex": "High Courts with 88% CCR accumulating thousands of unreviewed writ petitions annually.",
+                        "mains": "Recommends annual All-India Judicial Service (AIJS) recruitments to achieve 110% CCR."
                     },
                     {
                         "k": "match",
@@ -2903,9 +3081,14 @@ TOPICS = {
                                 "₹7,210 Crore under Phase III"
                             ]
                         ],
-                        "e": "Essential statistics for GS-2 Judiciary questions."
+                        "e": "Essential statistics for GS-2 Judiciary questions.",
+                        "kw": "Judicial Performance Metrics",
+                        "data": "CCR (Clearance rate), Judge Ratio (21/million), Vacancy Rate (~30% in HCs), NJDG (National Judicial Data Grid).",
+                        "ex": "High Court vacancies exceeding 330 judges out of sanctioned 1,114 posts.",
+                        "mains": "Integrates hard institutional data into Mains answers."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Answer Mastery Toolkit",
@@ -2951,7 +3134,11 @@ TOPICS = {
                             "Policy Landscape: SUPACE, SUVAS, e-Courts Phase III",
                             "Conclusion: Preserving human empathy and judicial conscience"
                         ],
-                        "e": "Scale → Boundary → Risks → Policy → Constitutional Conclusion."
+                        "e": "Scale → Boundary → Risks → Policy → Constitutional Conclusion.",
+                        "kw": "Mains 15-Marker Judicial Tech Blueprint",
+                        "data": "Scale (5 Cr cases) -> Assistive AI (SUPACE/SUVAS) -> Constitutional Risks (Bias/Art 21) -> Policy Safeguards -> Humanistic Conclusion.",
+                        "ex": "Structured approach adopted by toppers to balance technological optimism with constitutional vigilance.",
+                        "mains": "High-scoring framework for GS-2 judiciary questions."
                     },
                     {
                         "k": "mc",
@@ -2963,14 +3150,23 @@ TOPICS = {
                             "Everything is working perfectly and no reforms are required."
                         ],
                         "a": 1,
-                        "e": "Balanced, keyword-rich, and constitutionally anchored."
+                        "e": "Balanced, keyword-rich, and constitutionally anchored.",
+                        "kw": "Human Dignity in Adjudication",
+                        "data": "AI can assist the clerk, but only the human heart and constitutional mind can judge.",
+                        "ex": "Balancing technological speed with empathetic justice for marginalized litigants.",
+                        "mains": "Memorize as a definitive, high-impact concluding remark."
                     },
                     {
                         "k": "flip",
                         "q": "Write a 2-line intro for 'AI in the Indian Judiciary: Potential and Perils'.",
-                        "r": "Confronting a monumental backlog of over 5 Crore pending cases on the NJDG, Artificial Intelligence offers transformative tools to accelerate case processing. However, as cautioned by the Supreme Court, AI must serve strictly as an assistive clerk, never usurping the moral conscience and constitutional empathy required in human adjudication."
+                        "r": "Confronting a monumental backlog of over 5 Crore pending cases on the NJDG, Artificial Intelligence offers transformative tools to accelerate case processing. However, as cautioned by the Supreme Court, AI must serve strictly as an assistive clerk, never usurping the moral conscience and constitutional empathy required in human adjudication.",
+                        "kw": "Judicial Tech Opening Hook",
+                        "data": "5.1 Crore pending cases with ~21 judges per million citizens.",
+                        "ex": "Synthesizes docket explosion with responsible AI governance in 2 sentences.",
+                        "mains": "Authoritative opening for UPSC GS-2 legal tech questions."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [
@@ -3423,7 +3619,11 @@ TOPICS = {
                         "k": "tf",
                         "q": "A Citizen’s Charter is legally enforceable in a court of law.",
                         "a": 1,
-                        "e": "False. It is a voluntary commitment. Enforceability needs a statute, such as a Right to Services Act."
+                        "e": "False. It is a voluntary commitment. Enforceability needs a statute, such as a Right to Services Act.",
+                        "kw": "Non-Justiciability of Charters",
+                        "data": "Citizen's Charters are voluntary administrative commitments, not statutory rights enforceable in High Courts.",
+                        "ex": "Litigants unable to sue municipal corporations for pothole delays under simple charter terms.",
+                        "mains": "Why 2nd ARC recommended enacting statutory Right to Public Services legislation."
                     },
                     {
                         "k": "mc",
@@ -3435,7 +3635,11 @@ TOPICS = {
                             "Japan"
                         ],
                         "a": 1,
-                        "e": "UK, under PM John Major."
+                        "e": "UK, under PM John Major.",
+                        "kw": "Major's Citizen's Charter (1991)",
+                        "data": "Launched by British Prime Minister John Major in 1991 to inject market consumer rights into public monopolies.",
+                        "ex": "Adopted in India at the Chief Ministers' Conference in May 1997 chaired by H.D. Deve Gowda.",
+                        "mains": "Historical genealogy: Shifted public administration paradigm from 'Subject' to 'Citizen-Consumer'."
                     },
                     {
                         "k": "mc",
@@ -3447,7 +3651,11 @@ TOPICS = {
                             "Finance Commission"
                         ],
                         "a": 2,
-                        "e": "DARPG in the Ministry of Personnel coordinates charters and grievance redress."
+                        "e": "DARPG in the Ministry of Personnel coordinates charters and grievance redress.",
+                        "kw": "DARPG Nodal Custodianship",
+                        "data": "Department of Administrative Reforms and Public Grievances (Ministry of Personnel).",
+                        "ex": "DARPG formulates guidelines and monitors over 4,500 Central and State charters.",
+                        "mains": "Central supervisory agency for administrative excellence and Sevottam certification."
                     },
                     {
                         "k": "mc",
@@ -3459,7 +3667,11 @@ TOPICS = {
                             "Colonial paternalism"
                         ],
                         "a": 0,
-                        "e": "Governance designed around the user of the service."
+                        "e": "Governance designed around the user of the service.",
+                        "kw": "Citizen-Centric Administration",
+                        "data": "2nd ARC 12th Report: 'Citizen-Centric Administration - The Heart of Governance'.",
+                        "ex": "Replacing bureaucratic condescension ('Babu culture') with professional service orientation.",
+                        "mains": "Fulfills democratic accountability: sovereignty resides with citizens, bureaucrats are public trustees."
                     },
                     {
                         "k": "flag",
@@ -3470,7 +3682,11 @@ TOPICS = {
                             "and are coordinated centrally by DARPG."
                         ],
                         "a": 0,
-                        "e": "Charters are voluntary commitments. Enforceability requires a statute such as a Right to Services Act."
+                        "e": "Charters are voluntary commitments. Enforceability requires a statute such as a Right to Services Act.",
+                        "kw": "Voluntary Pledge vs Statutory Act",
+                        "data": "Absence of legal penalties for non-compliance was identified by 2nd ARC as the #1 flaw.",
+                        "ex": "Charters framed in 1998 remaining un-updated for 20 years on dusty government noticeboards.",
+                        "mains": "Highlights need for statutory backing with pecuniary fines for defaulting officers."
                     },
                     {
                         "k": "year",
@@ -3479,9 +3695,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 1980,
                         "max": 2020,
-                        "e": "1991, under PM John Major."
+                        "e": "1991, under PM John Major.",
+                        "kw": "1991 Genesis Milestone",
+                        "data": "1991 UK launch sparked global public service reform movement.",
+                        "ex": "Adopted across Commonwealth nations and OECD economies.",
+                        "mains": "Comparative governance anchor for GS-2 international public administration answers."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Anatomy of a Charter",
@@ -3540,7 +3761,11 @@ TOPICS = {
                             "Transparency"
                         ],
                         "a": 2,
-                        "e": "Secrecy is the opposite of the charter spirit."
+                        "e": "Secrecy is the opposite of the charter spirit.",
+                        "kw": "6 Core Pillars of Citizen's Charter",
+                        "data": "Quality, Choice, Standards, Value for Taxpayers' Money, Accountability, and Transparency.",
+                        "ex": "Passport Seva Kendras displaying transparent processing times and fee tables.",
+                        "mains": "Commit the 6 DARPG charter pillars to memory for immediate Prelims & Mains recall."
                     },
                     {
                         "k": "multi",
@@ -3556,7 +3781,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Salaries are not part of a service promise."
+                        "e": "Salaries are not part of a service promise.",
+                        "kw": "Components of Model Charter",
+                        "data": "Vision/Mission, service delivery standards, grievance redress officer contact, and citizen responsibilities.",
+                        "ex": "Railway Citizen's Charter specifying refund timelines and grievance escalation matrix.",
+                        "mains": "Structure of a responsive public interface."
                     },
                     {
                         "k": "order",
@@ -3567,7 +3796,11 @@ TOPICS = {
                             "Publish widely",
                             "Monitor and review"
                         ],
-                        "e": "Consult → Standards → Publish → Review."
+                        "e": "Consult → Standards → Publish → Review.",
+                        "kw": "Charter Formulation Lifecycle",
+                        "data": "Consultation -> Benchmarking -> Publishing -> Training -> Independent Audit.",
+                        "ex": "Involving resident welfare associations before finalizing municipal service charters.",
+                        "mains": "Bottom-up participatory administration."
                     },
                     {
                         "k": "match",
@@ -3590,7 +3823,11 @@ TOPICS = {
                                 "Open rules and procedures"
                             ]
                         ],
-                        "e": "Use these one-liners to explain pillars in Mains."
+                        "e": "Use these one-liners to explain pillars in Mains.",
+                        "kw": "Pillar Operationalization",
+                        "data": "Standards (Measurable timelines), Redress (Grievance mechanism), Transparency (Fee disclosure).",
+                        "ex": "Speed Post delivery guaranteed within 48 hours with SMS tracking.",
+                        "mains": "Demonstrates measurable service level agreements (SLAs)."
                     },
                     {
                         "k": "order",
@@ -3605,9 +3842,14 @@ TOPICS = {
                             "public",
                             "promise"
                         ],
-                        "e": "A Citizen’s Charter is a public promise."
+                        "e": "A Citizen’s Charter is a public promise.",
+                        "kw": "Definitional Synthesis",
+                        "data": "A Citizen's Charter is an expression of understanding between the citizen and the public service provider.",
+                        "ex": "Standardizing public commitments across all district branches.",
+                        "mains": "Classic opening definition for 10-marker questions."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Committees & Models",
@@ -3662,7 +3904,11 @@ TOPICS = {
                             "15th: Local Governance only"
                         ],
                         "a": 1,
-                        "e": "12th Report: Citizen Centric Administration, The Heart of Governance."
+                        "e": "12th Report: Citizen Centric Administration, The Heart of Governance.",
+                        "kw": "2nd ARC 12th Report Milestone",
+                        "data": "12th Report: 'Citizen Centric Administration - The Heart of Governance' (2009).",
+                        "ex": "Recommended Sevottam model and making charters mandatory with legal teeth.",
+                        "mains": "The definitive committee authority on public service delivery in India."
                     },
                     {
                         "k": "multi",
@@ -3678,7 +3924,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Charter, grievance redress and delivery capability."
+                        "e": "Charter, grievance redress and delivery capability.",
+                        "kw": "Sevottam 3-Pillar Framework",
+                        "data": "1. Citizen's Charter | 2. Public Grievance Redress | 3. Service Delivery Capability.",
+                        "ex": "Seven-step assessment model implemented by Quality Council of India (QCI).",
+                        "mains": "Draw the 3-pillar Sevottam diagram in every Citizen's Charter answer."
                     },
                     {
                         "k": "match",
@@ -3701,13 +3951,21 @@ TOPICS = {
                                 "Citizen Centric Administration"
                             ]
                         ],
-                        "e": "Four keywords you can name-drop confidently."
+                        "e": "Four keywords you can name-drop confidently.",
+                        "kw": "Administrative Excellence Tools",
+                        "data": "Sevottam (Quality benchmark), CPGRAMS (Central grievance portal), RTS (Statutory guarantee).",
+                        "ex": "CPGRAMS receiving over 20 Lakh public grievances annually with 30-day resolution targets.",
+                        "mains": "Holistic public grievance redress architecture."
                     },
                     {
                         "k": "tf",
                         "q": "“Sevottam” combines the words Seva and Uttam.",
                         "a": 0,
-                        "e": "True: service of the highest quality."
+                        "e": "True: service of the highest quality.",
+                        "kw": "Sevottam Paradigm (Service Excellence)",
+                        "data": "Synthesizes 'Seva' (Service) and 'Uttam' (Excellence) into an indigenous administrative standard.",
+                        "ex": "ISO 9001-equivalent certification for government departments.",
+                        "mains": "Indigenous model shifting focus from inputs to citizen satisfaction outcomes."
                     },
                     {
                         "k": "riddle",
@@ -3724,7 +3982,11 @@ TOPICS = {
                             "Mission Karmayogi"
                         ],
                         "a": 0,
-                        "e": "Sevottam (Seva + Uttam)."
+                        "e": "Sevottam (Seva + Uttam).",
+                        "kw": "Sevottam Quality Framework",
+                        "data": "Developed by DARPG in 2006 to benchmark and certify citizen-friendly public bodies.",
+                        "ex": "Postal department and Income Tax department obtaining Sevottam certification.",
+                        "mains": "Tool for evaluating departmental administrative maturity."
                     },
                     {
                         "k": "year",
@@ -3733,9 +3995,14 @@ TOPICS = {
                         "tol": 1,
                         "min": 2000,
                         "max": 2020,
-                        "e": "2009: 12th Report of 2nd ARC."
+                        "e": "2009: 12th Report of 2nd ARC.",
+                        "kw": "2009 2nd ARC Report",
+                        "data": "Released under the chairmanship of Veerappa Moily in 2009.",
+                        "ex": "Provided roadmap for Right to Services Acts across Indian states.",
+                        "mains": "Crucial timeline anchor for civil service reforms."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Legal Backing",
@@ -3788,7 +4055,11 @@ TOPICS = {
                             "Gujarat"
                         ],
                         "a": 1,
-                        "e": "Madhya Pradesh Lok Sewa Guarantee Act, 2010."
+                        "e": "Madhya Pradesh Lok Sewa Guarantee Act, 2010.",
+                        "kw": "Madhya Pradesh Lok Sewa Guarantee Act (2010)",
+                        "data": "MP was the first state in India to enact statutory Right to Public Services law in August 2010.",
+                        "ex": "Guaranteed caste certificates, driving licenses, and ration cards within statutory timelines or pay fines.",
+                        "mains": "Won the UN Public Service Award 2012 for transformative administrative accountability."
                     },
                     {
                         "k": "mc",
@@ -3800,13 +4071,21 @@ TOPICS = {
                             "Fewer services"
                         ],
                         "a": 1,
-                        "e": "Statutory deadlines, penalties and appeals make it enforceable."
+                        "e": "Statutory deadlines, penalties and appeals make it enforceable.",
+                        "kw": "Statutory Teeth & Personal Penalties",
+                        "data": "RTS Acts impose direct salary deductions (₹250 to ₹5,000) on defaulting officers paid as compensation to citizens.",
+                        "ex": "Bihar RTS rejecting delayed disposal and recovering ₹1,000 fine from tehsildar.",
+                        "mains": "The game-changer: converting toothless moral promises into personal financial liability."
                     },
                     {
                         "k": "tf",
                         "q": "The Citizens Charter Bill, 2011 became an Act in 2012.",
                         "a": 1,
-                        "e": "False. It lapsed in 2014."
+                        "e": "False. It lapsed in 2014.",
+                        "kw": "The Lapsed Central Bill 2011",
+                        "data": "The Right of Citizens for Time Bound Delivery of Goods and Services Bill 2011 lapsed with 15th Lok Sabha dissolution in 2014.",
+                        "ex": "Absence of a Central umbrella RTS Act leaves central departments under voluntary charters.",
+                        "mains": "Advocate re-introducing and passing the Central Citizens Charter Bill."
                     },
                     {
                         "k": "multi",
@@ -3822,7 +4101,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Time limits, penalties and appeals."
+                        "e": "Time limits, penalties and appeals.",
+                        "kw": "Core Architecture of RTS Legislation",
+                        "data": "Time-bound delivery, automatic appellate hierarchy, and mandatory compensation for delays.",
+                        "ex": "Maharashtra Public Service Guarantee Act 2015 delivering 500+ services online via Aaple Sarkar.",
+                        "mains": "Model statutory design for public service delivery."
                     },
                     {
                         "k": "sort",
@@ -3853,7 +4136,11 @@ TOPICS = {
                                 1
                             ]
                         ],
-                        "e": "Charters are voluntary; RTS Acts are legally enforceable with penalties and appeals."
+                        "e": "Charters are voluntary; RTS Acts are legally enforceable with penalties and appeals.",
+                        "kw": "Charter vs RTS Comparative Matrix",
+                        "data": "Charter = Moral pledge, zero fines, no court remedy | RTS = Statutory right, salary deduction, appellate forum.",
+                        "ex": "Contrasting non-binding municipal charter with binding RTS guarantee.",
+                        "mains": "Mastery comparison to structure analytical arguments."
                     },
                     {
                         "k": "year",
@@ -3862,9 +4149,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 2000,
                         "max": 2020,
-                        "e": "2010."
+                        "e": "2010.",
+                        "kw": "2010 RTS Genesis",
+                        "data": "Enacted in 2010, followed by Bihar (2011), Rajasthan (2011), and over 20 other states.",
+                        "ex": "State-level legislative laboratories driving federal administrative innovation.",
+                        "mains": "Demonstrates sub-national administrative federalism in action."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Challenges",
@@ -3920,7 +4212,11 @@ TOPICS = {
                             "Funding problem"
                         ],
                         "a": 0,
-                        "e": "Top-down design is a design problem."
+                        "e": "Top-down design is a design problem.",
+                        "kw": "Top-Down Design Pathology",
+                        "data": "2nd ARC observed: Most charters were drafted by junior clerks without consulting frontline citizens.",
+                        "ex": "Setting unrealistically long 60-day deadlines for simple birth certificate issuance.",
+                        "mains": "Failure of participatory administration; calls for citizen co-design."
                     },
                     {
                         "k": "multi",
@@ -3936,7 +4232,11 @@ TOPICS = {
                             1,
                             3
                         ],
-                        "e": "Low readership, not high, is the problem."
+                        "e": "Low readership, not high, is the problem.",
+                        "kw": "4 Classic Charter Pathologies",
+                        "data": "Lack of awareness, absence of staff training, vague commitments, and lack of periodic review.",
+                        "ex": "Over 80% of citizens visiting district offices have never heard of a Citizen's Charter.",
+                        "mains": "Systemic critique: 'Charters as decorative wall hangings rather than administrative blueprints'."
                     },
                     {
                         "k": "match",
@@ -3959,7 +4259,11 @@ TOPICS = {
                                 "No SMART timelines"
                             ]
                         ],
-                        "e": "Pair cause and effect in your answers."
+                        "e": "Pair cause and effect in your answers.",
+                        "kw": "Root Cause Diagnosis",
+                        "data": "Vague standards (Bureaucratic inertia), Zero staff training (Resource apathy), No penalty (Statutory gap).",
+                        "ex": "Charters promising 'prompt service' without defining exact hours or days.",
+                        "mains": "Dissecting the gap between rhetoric and operational reality."
                     },
                     {
                         "k": "mc",
@@ -3970,7 +4274,11 @@ TOPICS = {
                             "Too many websites"
                         ],
                         "a": 0,
-                        "e": "Without consequences, a promise stays a slogan."
+                        "e": "Without consequences, a promise stays a slogan.",
+                        "kw": "The Non-Enforceability Achilles Heel",
+                        "data": "Without sanctions, bureaucratic compliance is purely discretionary.",
+                        "ex": "Defaulting officers suffering zero professional or financial consequence for chronic delays.",
+                        "mains": "Core insight: 'Accountability without sanctions is merely advice'."
                     },
                     {
                         "k": "sort",
@@ -4005,9 +4313,14 @@ TOPICS = {
                                 1
                             ]
                         ],
-                        "e": "Pair every failure mechanism with its institutional reform."
+                        "e": "Pair every failure mechanism with its institutional reform.",
+                        "kw": "Reform Matrix Calibration",
+                        "data": "Pathology: Vague timelines, zero consultation | Remedy: RTS statutory penalties, third-party audits.",
+                        "ex": "Replacing static noticeboards with real-time digital dashboards.",
+                        "mains": "Direct problem-solution mapping for GS-2."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Solutions & Best Practice",
@@ -4070,7 +4383,11 @@ TOPICS = {
                             1,
                             3
                         ],
-                        "e": "Transparency and consequences drive results."
+                        "e": "Transparency and consequences drive results.",
+                        "kw": "Best Practice Portfolio",
+                        "data": "Digital end-to-end processing, third-party social audits, and independent ombudsman.",
+                        "ex": "Karnataka's Sakala portal and Delhi's Doorstep Delivery of Public Services.",
+                        "mains": "Transforming service delivery through digital disintermediation."
                     },
                     {
                         "k": "mc",
@@ -4082,7 +4399,11 @@ TOPICS = {
                             "A police force"
                         ],
                         "a": 1,
-                        "e": "A recognition scheme that rewards good service."
+                        "e": "A recognition scheme that rewards good service.",
+                        "kw": "UK Charter Mark / Customer Service Excellence",
+                        "data": "Independent certification evaluating public agencies on customer satisfaction standards.",
+                        "ex": "Agencies compete for excellence certification, driving departmental pride and service quality.",
+                        "mains": "International benchmark for competitive service delivery."
                     },
                     {
                         "k": "match",
@@ -4105,7 +4426,11 @@ TOPICS = {
                                 "Bangalore (PAC)"
                             ]
                         ],
-                        "e": "One domestic and one global example is enough for Mains."
+                        "e": "One domestic and one global example is enough for Mains.",
+                        "kw": "State Best Practices Matrix",
+                        "data": "Sakala (Karnataka automated SLA tracking), Lok Sewa Kendra (MP single window), CPGRAMS (Central AI routing).",
+                        "ex": "Sakala processing over 98% of citizen applications within stipulated statutory timelines.",
+                        "mains": "Quote state models to prove practical administrative feasibility."
                     },
                     {
                         "k": "mc",
@@ -4117,7 +4442,11 @@ TOPICS = {
                             "Subjective and flexible"
                         ],
                         "a": 0,
-                        "e": "Clear, measurable, time-bound commitments."
+                        "e": "Clear, measurable, time-bound commitments.",
+                        "kw": "Digital Disintermediation Doctrine",
+                        "data": "Replacing human counter interfaces with faceless portals eliminates petty corruption and touts.",
+                        "ex": "DigiLocker and Passport Seva eliminating physical document verification friction.",
+                        "mains": "DPI as the ultimate guarantor of transparent citizen charters."
                     },
                     {
                         "k": "order",
@@ -4133,7 +4462,11 @@ TOPICS = {
                             "within",
                             "deadlines"
                         ],
-                        "e": "Right to Services Acts guarantee services within deadlines."
+                        "e": "Right to Services Acts guarantee services within deadlines.",
+                        "kw": "Karnataka Sakala Mission",
+                        "data": "Sakala ('Good services in good time') enacted under Karnataka Guarantee of Services to Citizens Act 2011.",
+                        "ex": "Over 1,000 government services guaranteed with automated SMS tracking and daily disposal monitoring.",
+                        "mains": "Gold standard for state-level public service guarantee delivery."
                     },
                     {
                         "k": "riddle",
@@ -4149,9 +4482,14 @@ TOPICS = {
                             "CPGRAMS"
                         ],
                         "a": 0,
-                        "e": "UK Charter Mark."
+                        "e": "UK Charter Mark.",
+                        "kw": "Strategic Reform Sequence",
+                        "data": "Consultation -> Standard Setting -> Digital Portal -> Social Audit -> Enforce Penalties.",
+                        "ex": "End-to-end service re-engineering before publishing revised charters.",
+                        "mains": "Blueprint for administrative modernization in GS-2."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Toolkit",
@@ -4205,7 +4543,11 @@ TOPICS = {
                             "Way forward",
                             "Conclusion"
                         ],
-                        "e": "Define → Explain → Critique → Fix → Conclude."
+                        "e": "Define → Explain → Critique → Fix → Conclude.",
+                        "kw": "15-Marker Citizen's Charter Blueprint",
+                        "data": "Concept/Genesis -> 6 Pillars & Sevottam -> 4 Critical Pathologies -> State RTS Models -> 2nd ARC Recommendations.",
+                        "ex": "Standardized structure utilized by rank holders for exhaustive coverage.",
+                        "mains": "Balanced 250-word answer scoring top marks."
                     },
                     {
                         "k": "mc",
@@ -4217,7 +4559,11 @@ TOPICS = {
                             "No more reform is needed."
                         ],
                         "a": 1,
-                        "e": "Balanced, forward-looking and keyword-rich."
+                        "e": "Balanced, forward-looking and keyword-rich.",
+                        "kw": "Citizen Sovereignty Synthesis",
+                        "data": "Citizen's Charter is not a favor granted by the state, but the rightful dividend of democratic sovereignty.",
+                        "ex": "Transforming governance from paternalistic authority to accountable public trusteeship.",
+                        "mains": "Memorable closing statement for GS-2 essays."
                     },
                     {
                         "k": "multi",
@@ -4233,14 +4579,23 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "The fourth is unrelated."
+                        "e": "The fourth is unrelated.",
+                        "kw": "Evaluator Vocabulary Trigger",
+                        "data": "Sevottam, Non-justiciability, Statutory RTS, Citizen-centric, Social Audit.",
+                        "ex": "Academic and policy terminology signaling deep syllabus command.",
+                        "mains": "Use these keywords in subheadings to maximize score."
                     },
                     {
                         "k": "flip",
                         "q": "Write a 2-line intro for ‘Citizen’s Charters have remained paper tigers’.",
-                        "r": "Citizen’s Charters, born in the UK in 1991 and adopted in India after 1997, promise time-bound, transparent services. Yet without statutory backing or penalties, most remain declarations of intent rather than guarantees."
+                        "r": "Citizen’s Charters, born in the UK in 1991 and adopted in India after 1997, promise time-bound, transparent services. Yet without statutory backing or penalties, most remain declarations of intent rather than guarantees.",
+                        "kw": "Punchy Opening Formula",
+                        "data": "From UK 1991 to 2nd ARC Sevottam model.",
+                        "ex": "Frames Citizen's Charters as the operational barometer of democratic trust.",
+                        "mains": "Instant 2-sentence opening hook."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [
@@ -4848,7 +5203,11 @@ TOPICS = {
                             "Minerva Mills v. Union of India"
                         ],
                         "a": 1,
-                        "e": "In State of UP v. Raj Narain (1975), Justice Mathew ruled that citizens have a right to know every public act done by their functionaries."
+                        "e": "In State of UP v. Raj Narain (1975), Justice Mathew ruled that citizens have a right to know every public act done by their functionaries.",
+                        "kw": "State of UP v. Raj Narain (1975)",
+                        "data": "Justice K.K. Mathew ruled that citizens have a right to know every public act done by public functionaries under Article 19(1)(a).",
+                        "ex": "Indira Gandhi election dispute where Supreme Court rejected government secrecy claims over the Blue Book.",
+                        "mains": "The fountainhead judgment establishing RTI as a Fundamental Right intrinsic to freedom of speech."
                     },
                     {
                         "k": "mc",
@@ -4860,7 +5219,11 @@ TOPICS = {
                             "Bhoodan Movement"
                         ],
                         "a": 1,
-                        "e": "MKSS, founded by Aruna Roy, Nikhil Dey, and Shankar Singh, championed rural transparency through Jan Sunwais."
+                        "e": "MKSS, founded by Aruna Roy, Nikhil Dey, and Shankar Singh, championed rural transparency through Jan Sunwais.",
+                        "kw": "SP Gupta (First Judges Case 1981)",
+                        "data": "Justice P.N. Bhagwati: Open government is a clean, healthy government; secrecy breeds corruption.",
+                        "ex": "Disclosure of correspondence between Law Minister and Chief Justice regarding judicial transfers.",
+                        "mains": "Established open government as a non-negotiable imperative of a functional democracy."
                     },
                     {
                         "k": "mc",
@@ -4872,7 +5235,11 @@ TOPICS = {
                             "Rajasthan"
                         ],
                         "a": 1,
-                        "e": "Tamil Nadu enacted India's first state-level Right to Information Act in 1997."
+                        "e": "Tamil Nadu enacted India's first state-level Right to Information Act in 1997.",
+                        "kw": "Article 19(1)(a) Fundamental Right",
+                        "data": "RTI Act 2005 merely codified a pre-existing Fundamental Right derived from Article 19(1)(a) and Article 21.",
+                        "ex": "Supreme Court reaffirmed that Parliament did not create the right to know; it only provided the operational statutory machinery.",
+                        "mains": "Crucial distinction: RTI cannot be repealed out of existence because its constitutional source is Part III."
                     },
                     {
                         "k": "order",
@@ -4883,7 +5250,11 @@ TOPICS = {
                             "Tamil Nadu enacts first state RTI law (1997)",
                             "Passage of the Right to Information Act (2005)"
                         ],
-                        "e": "1975 (Raj Narain) → 1990s (MKSS) → 1997 (Tamil Nadu) → 2005 (RTI Act)."
+                        "e": "1975 (Raj Narain) → 1990s (MKSS) → 1997 (Tamil Nadu) → 2005 (RTI Act).",
+                        "kw": "Mazdoor Kisan Shakti Sangathan (MKSS)",
+                        "data": "Aruna Roy and Nikhil Dey led grassroots 'Jan Sunwais' (public hearings) in Devdungri, Rajasthan in the 1990s.",
+                        "ex": "Villagers cross-checking muster rolls to uncover ghost labor and embezzlement in drought relief works.",
+                        "mains": "Grassroots slogan: 'Hamara Paisa, Hamara Hisab' (Our Money, Our Accounts) that birthed the national RTI movement."
                     },
                     {
                         "k": "year",
@@ -4892,7 +5263,11 @@ TOPICS = {
                         "tol": 0,
                         "min": 1970,
                         "max": 2010,
-                        "e": "1975."
+                        "e": "1975.",
+                        "kw": "Section 22 Statutory Override",
+                        "data": "Section 22 of RTI Act explicitly overrides the Official Secrets Act 1923 and any other inconsistent law.",
+                        "ex": "Ministries cannot hide corruption files behind the Official Secrets Act unless covered by Section 8.",
+                        "mains": "Section 22 is the supreme statutory shield ensuring transparency prevails over colonial secrecy."
                     },
                     {
                         "k": "flag",
@@ -4903,9 +5278,14 @@ TOPICS = {
                             "and the RTI Act was passed in 1885 under Lord Dufferin."
                         ],
                         "a": 2,
-                        "e": "The RTI Act was enacted in 2005, not 1885."
+                        "e": "The RTI Act was enacted in 2005, not 1885.",
+                        "kw": "RTI Act 2005 Enactment",
+                        "data": "Enacted in June 2005 and took full operational effect on 12th October 2005.",
+                        "ex": "Universal central legislation empowering every Indian citizen to seek public records.",
+                        "mains": "Considered India's most powerful democratic empowerment statute post-independence."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Core Architecture & Timelines",
@@ -4967,13 +5347,21 @@ TOPICS = {
                             "15 days"
                         ],
                         "a": 1,
-                        "e": "Section 7(1) mandates a strict 48-hour turnaround if information concerns an individual's life or liberty."
+                        "e": "Section 7(1) mandates a strict 48-hour turnaround if information concerns an individual's life or liberty.",
+                        "kw": "Section 7(1) Life & Liberty 48-Hour Proviso",
+                        "data": "Section 7(1): If information sought concerns the life or liberty of a person, it MUST be provided within 48 hours!",
+                        "ex": "Undertrials seeking medical records or arrested activists demanding detention grounds.",
+                        "mains": "A vital human rights safeguard preventing custodial torture or fatal medical neglect."
                     },
                     {
                         "k": "tf",
                         "q": "Citizens living Below the Poverty Line (BPL) must pay double the fee to prioritize their applications.",
                         "a": 1,
-                        "e": "False. Section 7(5) explicitly waives all application and copying fees for BPL citizens."
+                        "e": "False. Section 7(5) explicitly waives all application and copying fees for BPL citizens.",
+                        "kw": "Section 7(1) 30-Day Turnaround",
+                        "data": "Standard RTI applications must be disposed of within 30 days (35 days if filed via Assistant PIO).",
+                        "ex": "Citizen seeking land demarcation records or ration distribution records.",
+                        "mains": "Enforces statutory punctuality with Section 20 penal consequences for default."
                     },
                     {
                         "k": "multi",
@@ -4989,7 +5377,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Bodies created by Constitution, statute, or substantially financed by govt qualify. Wholly private clubs with no govt funds do not."
+                        "e": "Bodies created by Constitution, statute, or substantially financed by govt qualify. Wholly private clubs with no govt funds do not.",
+                        "kw": "Section 20 Penal Sanctions",
+                        "data": "Information Commissions can slap personal fines of ₹250 per day up to a maximum of ₹25,000 on defaulting PIOs.",
+                        "ex": "Fine deducted directly from the PIO's monthly salary.",
+                        "mains": "Personal financial liability is the primary enforcement muscle of the RTI Act."
                     },
                     {
                         "k": "match",
@@ -5012,7 +5404,11 @@ TOPICS = {
                                 "30-day / 48-hour deadlines & fees"
                             ]
                         ],
-                        "e": "Memorize Sections 2(h), 4, 7, 8, and 20 for GS-2 answers!"
+                        "e": "Memorize Sections 2(h), 4, 7, 8, and 20 for GS-2 answers!",
+                        "kw": "Section 4(1)(b) Proactive Suo Motu Disclosure",
+                        "data": "Mandates every public authority to proactively publish 17 categories of information online.",
+                        "ex": "Websites displaying budgets, employee salaries, subsidies, and tender details without waiting for requests.",
+                        "mains": "If Section 4 is implemented 100%, over 70% of routine RTI applications become unnecessary."
                     },
                     {
                         "k": "sort",
@@ -5036,9 +5432,14 @@ TOPICS = {
                                 2
                             ]
                         ],
-                        "e": "Life/liberty = 48 hrs; standard PIO = 30 days; through APIO = 35 days (+5 days)."
+                        "e": "Life/liberty = 48 hrs; standard PIO = 30 days; through APIO = 35 days (+5 days).",
+                        "kw": "RTI Dispute Resolution Hierarchy",
+                        "data": "PIO -> First Appellate Authority (FAA) -> Second Appeal to Information Commission (CIC/SIC) -> High Court Writ (Art 226).",
+                        "ex": "Appealing against arbitrary rejection by a municipal PIO.",
+                        "mains": "Exhaustion of statutory remedies before approaching constitutional courts."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Exemptions & Recent Amendments",
@@ -5100,13 +5501,21 @@ TOPICS = {
                             "To arrest citizens for asking sensitive questions"
                         ],
                         "a": 1,
-                        "e": "Section 8(2) allows disclosure of exempt records if the public interest in disclosure outweighs the harm."
+                        "e": "Section 8(2) allows disclosure of exempt records if the public interest in disclosure outweighs the harm.",
+                        "kw": "Section 8(2) Public Interest Override",
+                        "data": "Public interest in disclosure outweighs the harm to protected interests.",
+                        "ex": "Rafale deal documents disclosure permitted by Supreme Court despite defense classification.",
+                        "mains": "The crown jewel of RTI: even official secrets must yield to overriding public interest."
                     },
                     {
                         "k": "tf",
                         "q": "The RTI (Amendment) Act, 2019 strengthened the statutory autonomy of Information Commissioners by granting them constitutional status.",
                         "a": 1,
-                        "e": "False. It removed fixed 5-year tenures and salary parity, placing terms under executive discretion."
+                        "e": "False. It removed fixed 5-year tenures and salary parity, placing terms under executive discretion.",
+                        "kw": "DPDP Act 2023 Amendment to Section 8(1)(j)",
+                        "data": "Section 44(3) of DPDP Act 2023 deleted the public interest proviso to Section 8(1)(j), creating a blanket exemption for personal data.",
+                        "ex": "Refusal to disclose educational degrees of candidates or assets of public officials citing privacy.",
+                        "mains": "Critical analytical concern: risks converting the privacy defense into an opaque bureaucratic shield."
                     },
                     {
                         "k": "mc",
@@ -5118,7 +5527,11 @@ TOPICS = {
                             "Banned journalists from filing RTIs"
                         ],
                         "a": 1,
-                        "e": "Section 44(3) of DPDP Act substituted Section 8(1)(j) to broaden exemptions for personal information."
+                        "e": "Section 44(3) of DPDP Act substituted Section 8(1)(j) to broaden exemptions for personal information.",
+                        "kw": "RTI Amendment Act 2019 (Tenure & Salary)",
+                        "data": "Replaced fixed 5-year tenure and CEC-parity salary of Information Commissioners with terms decided by Central Govt.",
+                        "ex": "Term reduced from 5 years to 3 years; salaries no longer protected by statute.",
+                        "mains": "Critique: Erodes institutional independence and makes Information Commissions subservient to the executive."
                     },
                     {
                         "k": "multi",
@@ -5134,7 +5547,11 @@ TOPICS = {
                             1,
                             3
                         ],
-                        "e": "Section 8(2) still overrides, parliamentary parity stands, and completed cabinet decisions become disclosable."
+                        "e": "Section 8(2) still overrides, parliamentary parity stands, and completed cabinet decisions become disclosable.",
+                        "kw": "Section 24 Intelligence Exemption (Second Schedule)",
+                        "data": "Exempts 26 agencies (RAW, IB, NTRO, etc.) from RTI, EXCEPT for allegations of corruption and human rights violations.",
+                        "ex": "Whistleblower seeking corruption details in procurement within a paramilitary force.",
+                        "mains": "Provisos to Section 24 ensure that national security cannot become a cover for financial graft."
                     },
                     {
                         "k": "riddle",
@@ -5151,9 +5568,14 @@ TOPICS = {
                             "Section 7(1)"
                         ],
                         "a": 0,
-                        "e": "Section 8(2): Public Interest Override."
+                        "e": "Section 8(2): Public Interest Override.",
+                        "kw": "Section 8 Taxonomy",
+                        "data": "Commercial confidence, trade secrets, fiduciary relationships can be overridden by public interest.",
+                        "ex": "Disclosing audit reports of private discoms providing public electricity.",
+                        "mains": "Substantive calibration between legitimate state confidentiality and democratic scrutiny."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Landmark Case Laws",
@@ -5223,7 +5645,11 @@ TOPICS = {
                                 "Struck down Electoral Bonds under Art 19(1)(a)"
                             ]
                         ],
-                        "e": "These four cases represent the bedrock of judicial interpretation of the RTI Act."
+                        "e": "These four cases represent the bedrock of judicial interpretation of the RTI Act.",
+                        "kw": "RTI Jurisprudential Bedrock",
+                        "data": "Raj Narain (Art 19(1)(a) root), SP Gupta (Open govt), ADR (Voter's right to candidate assets), Subhash Agarwal (CJI office under RTI).",
+                        "ex": "Supreme Court Constitution Bench holding that CJI is a public authority under Section 2(h).",
+                        "mains": "Always cite this quartet of judgments to anchor legal authority."
                     },
                     {
                         "k": "mc",
@@ -5235,13 +5661,21 @@ TOPICS = {
                             "Jayantilal Mistry Case"
                         ],
                         "a": 1,
-                        "e": "In Thalappalam (2013), SC clarified that cooperative societies need substantial govt control or funds to fall under Sec 2(h)."
+                        "e": "In Thalappalam (2013), SC clarified that cooperative societies need substantial govt control or funds to fall under Sec 2(h).",
+                        "kw": "CJI Office Under RTI (2019)",
+                        "data": "Constitution Bench held that the Office of Chief Justice of India is a Public Authority under RTI Act.",
+                        "ex": "Assets of Supreme Court judges and collegium resolution details subject to public interest balancing.",
+                        "mains": "Reaffirmed that judicial independence does not mean judicial opacity."
                     },
                     {
                         "k": "tf",
                         "q": "In Subhash Chandra Agarwal (2019), the Supreme Court ruled that judicial independence completely excludes the higher judiciary from the RTI Act.",
                         "a": 1,
-                        "e": "False. The Constitution Bench held that the CJI's office IS a public authority under RTI, harmonized via proportionality."
+                        "e": "False. The Constitution Bench held that the CJI's office IS a public authority under RTI, harmonized via proportionality.",
+                        "kw": "ADR Voter Right to Know (2002)",
+                        "data": "Mandatory disclosure of criminal antecedents, assets, and educational qualifications of election candidates.",
+                        "ex": "Form 26 affidavits filed by every parliamentary and assembly election candidate.",
+                        "mains": "Empowered citizens to make informed democratic electoral choices."
                     },
                     {
                         "k": "year",
@@ -5250,7 +5684,11 @@ TOPICS = {
                         "tol": 0,
                         "min": 2015,
                         "max": 2025,
-                        "e": "February 2024."
+                        "e": "February 2024.",
+                        "kw": "Girish Ramchandra Deshpande (2013)",
+                        "data": "Personal details, memos, and income tax returns of public servants held to be personal info exempt under 8(1)(j).",
+                        "ex": "Citizens denied access to disciplinary records of corrupt police officers.",
+                        "mains": "Tension between individual privacy of public servants and public accountability."
                     },
                     {
                         "k": "order",
@@ -5268,9 +5706,14 @@ TOPICS = {
                             "Article",
                             "19"
                         ],
-                        "e": "Voters have a fundamental right to know under Article 19."
+                        "e": "Voters have a fundamental right to know under Article 19.",
+                        "kw": "Constitutional Evolution Chronology",
+                        "data": "1975 (Raj Narain) -> 1981 (SP Gupta) -> 2002 (ADR) -> 2019 (Subhash Agarwal).",
+                        "ex": "45 years of progressive judicial interpretation expanding transparency.",
+                        "mains": "Chronological narrative mastery for GS-2 essays."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Systemic Challenges & Whistleblower Peril",
@@ -5331,13 +5774,21 @@ TOPICS = {
                             "Exactly 0%"
                         ],
                         "a": 2,
-                        "e": "Transparency studies reveal that penalties are imposed in only ~4% of eligible violation cases, nullifying deterrence."
+                        "e": "Transparency studies reveal that penalties are imposed in only ~4% of eligible violation cases, nullifying deterrence.",
+                        "kw": "The 4% Penalty Deficit",
+                        "data": "Studies show Information Commissions impose Section 20 penalties in only ~4% of cases where delays/rejections occurred.",
+                        "ex": "PIOs face near-zero consequences for ignoring citizen requests for months.",
+                        "mains": "Institutional toothlessness: lack of strict deterrence encourages bureaucratic non-compliance."
                     },
                     {
                         "k": "tf",
                         "q": "The Whistleblowers Protection Act, 2014 has established dedicated local safe-houses and comprehensive rules in all states.",
                         "a": 1,
-                        "e": "False. The Act has not been fully operationalized through comprehensive notified rules."
+                        "e": "False. The Act has not been fully operationalized through comprehensive notified rules.",
+                        "kw": "The 3.5 Lakh Backlog Crisis",
+                        "data": "Over 3.5 Lakh appeals/complaints pending across 29 Information Commissions in India.",
+                        "ex": "A second appeal in West Bengal or Maharashtra taking 3 to 4 years to be heard.",
+                        "mains": "Justice delayed is transparency denied: by the time information arrives, the scam or exam is over."
                     },
                     {
                         "k": "multi",
@@ -5353,9 +5804,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Vacancies, activist murders, and lack of penalties cripple implementation. Officers are almost never jailed."
+                        "e": "Vacancies, activist murders, and lack of penalties cripple implementation. Officers are almost never jailed.",
+                        "kw": "Whistleblower Protection Vacuum",
+                        "data": "Over 100 RTI activists murdered and 400+ assaulted between 2005 and 2024.",
+                        "ex": "Grassroots activists in Bihar and Maharashtra killed after exposing illegal sand mining and PDS diversion.",
+                        "mains": "Whistleblowers Protection Act 2014 passed by Parliament remains un-operationalized due to pending rules."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "2nd ARC & The Way Forward",
@@ -5417,7 +5873,11 @@ TOPICS = {
                             "Public Grievance Council"
                         ],
                         "a": 1,
-                        "e": "The 2nd ARC recommended an NCC under the Chief Information Commissioner to monitor RTI nationwide."
+                        "e": "The 2nd ARC recommended an NCC under the Chief Information Commissioner to monitor RTI nationwide.",
+                        "kw": "2nd ARC 1st Report: 'Right to Information' (2006)",
+                        "data": "Dedicated first report exclusively to operationalizing RTI and repealing Official Secrets Act.",
+                        "ex": "Recommended National Coordination Committee (NCC) under Chief Information Commissioner.",
+                        "mains": "The primary governance committee reference for RTI institutional reforms."
                     },
                     {
                         "k": "mc",
@@ -5429,7 +5889,11 @@ TOPICS = {
                             "100%"
                         ],
                         "a": 2,
-                        "e": "The 2nd ARC recommended at least 50% non-civil service commissioners to avoid bureaucratic insularity."
+                        "e": "The 2nd ARC recommended at least 50% non-civil service commissioners to avoid bureaucratic insularity.",
+                        "kw": "Repeal Colonial Secrecy Laws",
+                        "data": "2nd ARC recommended repealing OSA 1923 and substituting it with a chapter in the National Security Act.",
+                        "ex": "Eliminates colonial culture where every administrative file was automatically stamped 'Confidential'.",
+                        "mains": "Decolonizing public administration: open disclosure must be the default, secrecy the rare exception."
                     },
                     {
                         "k": "multi",
@@ -5445,7 +5909,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Public Records Offices, protection chapter, and standardized digital access are 2nd ARC cornerstones."
+                        "e": "Public Records Offices, protection chapter, and standardized digital access are 2nd ARC cornerstones.",
+                        "kw": "CIC/SIC Vacancy Elimination",
+                        "data": "Supreme Court in Anjali Bhardwaj (2019) ordered timely appointments to prevent commissions from becoming headless.",
+                        "ex": "CIC operating with zero commissioners or massive vacancies for months, halting citizen appeals.",
+                        "mains": "Institutional autonomy requires time-bound, transparent, cross-party collegium selection."
                     },
                     {
                         "k": "match",
@@ -5468,9 +5936,14 @@ TOPICS = {
                                 "Shields whistleblowers from physical violence"
                             ]
                         ],
-                        "e": "Strategic solutions to cite in Mains GS-2 answers."
+                        "e": "Strategic solutions to cite in Mains GS-2 answers.",
+                        "kw": "Next-Gen AI Proactive Disclosure",
+                        "data": "Auto-publishing public expenditures, geo-tagged projects, and beneficiary lists on open dashboards.",
+                        "ex": "Jan Soochna Portal in Rajasthan providing suo motu data on 115 schemes across 70 departments.",
+                        "mains": "Jan Soochna model: Transitioning from 'Right to Seek Information' to 'Sovereign Guarantee of Proactive Information'."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Answer Mastery Toolkit",
@@ -5516,7 +5989,11 @@ TOPICS = {
                             "Contemporary Challenges: Vacancies, 4% penalty & whistleblower peril",
                             "Way Forward: 2nd ARC National Coordination Committee & Protection"
                         ],
-                        "e": "Constitutional Roots → Statutory Design → Jurisprudence → Bottlenecks → 2nd ARC Solutions."
+                        "e": "Constitutional Roots → Statutory Design → Jurisprudence → Bottlenecks → 2nd ARC Solutions.",
+                        "kw": "Mains 15-Marker RTI Blueprint",
+                        "data": "Constitutional Roots (Art 19) -> Architecture (Sec 4/7/8) -> Landmark Cases -> 3 Systemic Deficits -> 2nd ARC Way Forward.",
+                        "ex": "Comprehensive framework scoring maximum marks in GS-2.",
+                        "mains": "Guarantees balanced constitutional and administrative synthesis."
                     },
                     {
                         "k": "mc",
@@ -5528,14 +6005,23 @@ TOPICS = {
                             "Information Commissions should be abolished to save public funds."
                         ],
                         "a": 1,
-                        "e": "A balanced, inspiring constitutional conclusion directly echoing the 2nd ARC."
+                        "e": "A balanced, inspiring constitutional conclusion directly echoing the 2nd ARC.",
+                        "kw": "Democratic Sunlight Synthesis",
+                        "data": "Information is the currency of democracy; sunlight remains the best disinfectant for governance.",
+                        "ex": "Empowering the poorest citizen to hold the highest public authority accountable.",
+                        "mains": "Classic, unforgettable closing line."
                     },
                     {
                         "k": "flip",
                         "q": "Write a 2-line intro for 'Right to Information: Cornerstone of Democratic Governance'.",
-                        "r": "Recognized in State of UP v. Raj Narain (1975) as an integral part of Article 19(1)(a) and birthed by grassroots struggle (MKSS), the RTI Act, 2005 dismantled the colonial culture of secrecy. By institutionalizing transparency and citizen participation, it serves as the master key to democratic accountability."
+                        "r": "Recognized in State of UP v. Raj Narain (1975) as an integral part of Article 19(1)(a) and birthed by grassroots struggle (MKSS), the RTI Act, 2005 dismantled the colonial culture of secrecy. By institutionalizing transparency and citizen participation, it serves as the master key to democratic accountability.",
+                        "kw": "Punchy Opening Formula",
+                        "data": "Codified from Article 19(1)(a) into India's most democratic sunshine statute.",
+                        "ex": "Combines jurisprudence, statutory power, and citizen empowerment in 2 lines.",
+                        "mains": "Ready-to-use opening hook for GS-2."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [
@@ -6061,13 +6547,21 @@ TOPICS = {
                             "Railway Board"
                         ],
                         "a": 0,
-                        "e": "The Network Planning Group (NPG) reviews all major connectivity projects for synchronization."
+                        "e": "The Network Planning Group (NPG) reviews all major connectivity projects for synchronization.",
+                        "kw": "Network Planning Group (NPG)",
+                        "data": "NPG consists of heads of planning divisions across 8 infrastructure ministries to evaluate projects synchronously.",
+                        "ex": "Preventing newly paved national highways from being dug up days later for gas pipelines or telecom optical fiber.",
+                        "mains": "Institutional remedy for inter-ministerial silos: institutionalizing 'Synchronous Planning'."
                     },
                     {
                         "k": "tf",
                         "q": "PM Gati-Shakti possesses an independent ₹10 Lakh Crore budgetary fund to directly finance infrastructure.",
                         "a": 1,
-                        "e": "False. It is a digital GIS coordination and planning platform; project capital is funded through respective ministry budgets."
+                        "e": "False. It is a digital GIS coordination and planning platform; project capital is funded through respective ministry budgets.",
+                        "kw": "GIS Data Platform Architecture",
+                        "data": "PM Gati-Shakti is not a budgetary financing scheme; it is a dynamic GIS-based geospatial data platform integrating 1,400+ layers.",
+                        "ex": "BISAG-N (Bhaskaracharya National Institute for Space Applications and Geo-informatics) powers the digital mapping.",
+                        "mains": "Crucial distinction: Gati-Shakti coordinates existing Capex budgets across ministries, eliminating redundant spending."
                     },
                     {
                         "k": "multi",
@@ -6083,7 +6577,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Delhi-Meerut ROB and Kochi LNG are classic silo delays; Madurai-Kollam represents Gati-Shakti inter-state coordination."
+                        "e": "Delhi-Meerut ROB and Kochi LNG are classic silo delays; Madurai-Kollam represents Gati-Shakti inter-state coordination.",
+                        "kw": "Classic Infrastructure Silo Pathologies",
+                        "data": "Dug-up highways, ports without railway evacuation lines, and power plants without coal sidings.",
+                        "ex": "Ennore Port or Paradip Port where cargo unloaded in hours sat stuck for weeks due to missing rail rakes.",
+                        "mains": "Framing: 'From Departmental Silos to Integrated Multimodal Ecosystems'."
                     },
                     {
                         "k": "order",
@@ -6093,7 +6591,11 @@ TOPICS = {
                             "Network Planning Group (NPG)",
                             "Technical Support Unit (TSU) / ITLA"
                         ],
-                        "e": "EGOS (Strategic Apex) → NPG (Project Evaluation) → Technical Support Unit (GIS Analytics)."
+                        "e": "EGOS (Strategic Apex) → NPG (Project Evaluation) → Technical Support Unit (GIS Analytics).",
+                        "kw": "Gati-Shakti 3-Tier Governance Hierarchy",
+                        "data": "1. EGOS (Empowered Group of Secretaries - chaired by Cabinet Secretary) | 2. NPG (Network Planning Group) | 3. TSC (Technical Support Unit).",
+                        "ex": "Cabinet Secretary arbitrating inter-ministerial disputes on port connectivity.",
+                        "mains": "Draw the 3-tier pyramid in every infrastructure answer."
                     },
                     {
                         "k": "year",
@@ -6102,9 +6604,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 2018,
                         "max": 2025,
-                        "e": "October 2021."
+                        "e": "October 2021.",
+                        "kw": "October 2021 National Master Plan",
+                        "data": "Launched on 13th October 2021 with a target to coordinate ₹100 Lakh Crore National Infrastructure Pipeline (NIP).",
+                        "ex": "Standardizing multimodal project development across Central and State agencies.",
+                        "mains": "Milestone marking India's shift to digital spatial infrastructure planning."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Multimodal Logistics & Cost Rebasing",
@@ -6165,13 +6672,21 @@ TOPICS = {
                             "18.5% of GDP"
                         ],
                         "a": 1,
-                        "e": "Rebased to 7.97% of GDP (2023-24), replacing the outdated 13-14% estimate."
+                        "e": "Rebased to 7.97% of GDP (2023-24), replacing the outdated 13-14% estimate.",
+                        "kw": "National Logistics Cost Rebasing",
+                        "data": "Rebased by Ministry of Commerce & NCAER to ~7.97%–8.9% of GDP (2023-24), dismantling the outdated 14% estimate.",
+                        "ex": "Brought India's official logistics benchmark into alignment with international OECD statistical standards.",
+                        "mains": "Quote rebased 7.97% data in GS-3 to demonstrate up-to-date economic literacy."
                     },
                     {
                         "k": "tf",
                         "q": "The Unified Logistics Interface Platform (ULIP) integrates data across 8 ministries via open APIs.",
                         "a": 0,
-                        "e": "True. ULIP integrates 34 logistics systems across 8 ministries for transparent tracking."
+                        "e": "True. ULIP integrates 34 logistics systems across 8 ministries for transparent tracking.",
+                        "kw": "Unified Logistics Interface Platform (ULIP)",
+                        "data": "Integrates 34 digital systems across 8 ministries, including FASTag, FOIS, Vahan, Sarathi, and Port Community System.",
+                        "ex": "Single API tracking a cargo container moving from a Haryana inland dry port to JNPT and onto a cargo ship.",
+                        "mains": "The 'UPI of Logistics': unifies fragmented logistics data into an open digital public infrastructure."
                     },
                     {
                         "k": "match",
@@ -6194,7 +6709,11 @@ TOPICS = {
                                 "GIS multimodal coordination master plan"
                             ]
                         ],
-                        "e": "These 4 tools represent the technical spine of Indian logistics reforms."
+                        "e": "These 4 tools represent the technical spine of Indian logistics reforms.",
+                        "kw": "National Logistics Policy (NLP 2022) Stack",
+                        "data": "ULIP (Data integration), LPI (Logistics Ease Across Different States - LEADS), E-Logs (Grievance portal).",
+                        "ex": "States ranked on LEADS index competing to improve warehouse clearances.",
+                        "mains": "Holistic ecosystem addressing soft infrastructure (regulations) and hard infrastructure (highways/ports)."
                     },
                     {
                         "k": "flag",
@@ -6205,9 +6724,14 @@ TOPICS = {
                             "and rail freight carries 95% of all domestic cargo in India."
                         ],
                         "a": 2,
-                        "e": "Rail carries only ~27% of domestic cargo; roads dominate with over 65%."
+                        "e": "Rail carries only ~27% of domestic cargo; roads dominate with over 65%.",
+                        "kw": "Multimodal Modal Shift Imperative",
+                        "data": "Rail transport costs ₹1.4/ton-km vs Road ₹2.6/ton-km; yet road carries ~65% of Indian freight due to last-mile friction.",
+                        "ex": "Dedicated Freight Corridors (DFC) designed to double rail freight modal share to 45% by 2030.",
+                        "mains": "Reducing logistics costs requires shifting long-haul freight from highways to electrified railways and inland waterways."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Asset Monetisation & Brownfield PPPs",
@@ -6268,13 +6792,21 @@ TOPICS = {
                             "Over 150%"
                         ],
                         "a": 2,
-                        "e": "NMP 1.0 reached ~90% of its target via InvITs, toll concessions, and airport deals."
+                        "e": "NMP 1.0 reached ~90% of its target via InvITs, toll concessions, and airport deals.",
+                        "kw": "National Monetisation Pipeline (NMP 1.0)",
+                        "data": "NMP 1.0 (2021–2025) targeted ₹6 Lakh Crore brownfield asset recycling; achieved ~₹5.4 Lakh Crore (~90%).",
+                        "ex": "NHAI toll-operate-transfer (TOT) concessions and PowerGrid InvITs raising private capital.",
+                        "mains": "Proven asset recycling model unlocking dead public capital for greenfield infrastructure construction."
                     },
                     {
                         "k": "tf",
                         "q": "In brownfield asset recycling under NMP, the government permanently sells asset ownership to private companies.",
                         "a": 1,
-                        "e": "False. Government retains 100% asset ownership; only operating and revenue rights are leased for a fixed term."
+                        "e": "False. Government retains 100% asset ownership; only operating and revenue rights are leased for a fixed term.",
+                        "kw": "Brownfield Asset Recycling vs Outright Privatization",
+                        "data": "Government retains 100% asset ownership; transfers only operational concession rights for a fixed tenure (15–30 years).",
+                        "ex": "Private operators manage highway tolling and maintenance, then return asset to NHAI in pristine condition.",
+                        "mains": "Essential distinction: NMP monetizes operating cash flows, NOT sovereign public ownership."
                     },
                     {
                         "k": "multi",
@@ -6290,7 +6822,11 @@ TOPICS = {
                             1,
                             3
                         ],
-                        "e": "InvITs, TOT, and operating leases are legitimate monetization instruments; core sovereignty is not liquidated."
+                        "e": "InvITs, TOT, and operating leases are legitimate monetization instruments; core sovereignty is not liquidated.",
+                        "kw": "Asset Monetisation Financing Instruments",
+                        "data": "Infrastructure Investment Trusts (InvITs), Real Estate Investment Trusts (REITs), and Toll-Operate-Transfer (TOT).",
+                        "ex": "Retail investors buying ₹10,000 units in NHAI InvIT, earning 8% stable yields from national toll revenues.",
+                        "mains": "Democratizing infrastructure finance: bridging domestic savings into public capital assets."
                     },
                     {
                         "k": "year",
@@ -6299,9 +6835,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 2020,
                         "max": 2030,
-                        "e": "February 2026."
+                        "e": "February 2026.",
+                        "kw": "NMP 2.0 Expansion",
+                        "data": "Budget announced NMP 2.0 expanding recycling into municipal assets, renewable transmission, and telecom towers.",
+                        "ex": "State governments incentivized to recycle municipal water utilities and bus terminals.",
+                        "mains": "Institutionalizing perpetual asset recycling across Union and State balance sheets."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Cooperative Fiscal Federalism & SASCI",
@@ -6362,13 +6903,21 @@ TOPICS = {
                             "100 Years"
                         ],
                         "a": 2,
-                        "e": "SASCI provides 50-year interest-free loans to boost capital creation in states."
+                        "e": "SASCI provides 50-year interest-free loans to boost capital creation in states.",
+                        "kw": "Scheme for Special Assistance to States for Capital Investment (SASCI)",
+                        "data": "Provides ₹1.3–₹1.5 Lakh Crore annually in 50-year interest-free loans over and above state borrowing caps.",
+                        "ex": "States financing rural roads, power substation upgrades, and urban regeneration without fiscal interest burden.",
+                        "mains": "Masterpiece of cooperative federalism: center finances capital assets, states execute decentralized local projects."
                     },
                     {
                         "k": "tf",
                         "q": "In April-August FY26, 20 major states absorbed over 90% of their budgeted capital expenditure.",
                         "a": 1,
-                        "e": "False. 20 states spent only about 27% of their budgeted capex in April-August FY26, showing an absorption lag."
+                        "e": "False. 20 states spent only about 27% of their budgeted capex in April-August FY26, showing an absorption lag.",
+                        "kw": "State Capital Absorption Bottleneck",
+                        "data": "Absorption friction: states often delay milestone submissions, leaving substantial SASCI allocations unutilized.",
+                        "ex": "Land acquisition disputes and delayed DPR approvals stalling fund drawdowns.",
+                        "mains": "Highlights need for state-level project preparation facilities and technical capacity building."
                     },
                     {
                         "k": "flag",
@@ -6379,9 +6928,14 @@ TOPICS = {
                             "and all municipal cadastral land records across India are 100% digitized with zero discrepancies."
                         ],
                         "a": 2,
-                        "e": "Cadastral land records and municipal mapping remain incomplete and highly fragmented."
+                        "e": "Cadastral land records and municipal mapping remain incomplete and highly fragmented.",
+                        "kw": "Fiscal Deficit & Capex Multiplication",
+                        "data": "Capex has a high fiscal multiplier of 2.5–3.5x GDP growth vs revenue expenditure multiplier of ~0.9x.",
+                        "ex": "Investing ₹1 Crore in highway connectivity generates ₹3.2 Crore in regional economic value within 3 years.",
+                        "mains": "Justifies aggressive fiscal prioritization of capital expenditure over populist subsidies."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Centrally Sponsored Schemes (CSS) Restructuring",
@@ -6442,13 +6996,21 @@ TOPICS = {
                             "Article 370"
                         ],
                         "a": 1,
-                        "e": "Article 282 provides for discretionary, conditional grants by the Union or State."
+                        "e": "Article 282 provides for discretionary, conditional grants by the Union or State.",
+                        "kw": "Article 282 Discretionary Grants",
+                        "data": "Article 282 allows Union and States to make grants for any public purpose, often bypassing 16th FC untied transfers.",
+                        "ex": "PM Awas Yojana or Jal Jeevan Mission requiring mandatory 40% state matching funds.",
+                        "mains": "Debate on fiscal federalism: over-proliferation of CSS restricts state budgetary autonomy."
                     },
                     {
                         "k": "tf",
                         "q": "NITI Aayog and expenditure committees recommended a 25% flexi-fund component within CSS for states.",
                         "a": 0,
-                        "e": "True. A 25% flexi-fund quota allows states to adapt central schemes to local priorities."
+                        "e": "True. A 25% flexi-fund quota allows states to adapt central schemes to local priorities.",
+                        "kw": "25% Flexi-Fund Flexibility",
+                        "data": "NITI Aayog and B.K. Chaturvedi Committee recommended earmarking 25% of CSS funds for state-specific local adaptations.",
+                        "ex": "Hilly states using Jal Jeevan funds for spring rejuvenation rather than standard plains groundwater borewells.",
+                        "mains": "Overcomes 'One-Size-Fits-All' rigidity in Centrally Sponsored Schemes."
                     },
                     {
                         "k": "multi",
@@ -6464,9 +7026,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Sunset clauses, evaluations, and flexi-funds are central to the 2026 CSS review."
+                        "e": "Sunset clauses, evaluations, and flexi-funds are central to the 2026 CSS review.",
+                        "kw": "16th Finance Commission CSS Rationalization",
+                        "data": "Consolidating 100+ fragmented CSS into fewer umbrella missions with strict sunset clauses.",
+                        "ex": "Sunsetting mature schemes to free up fiscal space for green hydrogen and semiconductor infrastructure.",
+                        "mains": "Structural fiscal reform: aligning CSS architecture with 21st-century strategic priorities."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Toolkit: Infrastructure Synthesis",
@@ -6511,7 +7078,11 @@ TOPICS = {
                             "Core Implementation Bottlenecks: 27% state absorption lag & land hurdles",
                             "Conclusion: Cooperative federalism, 25% flexi-funds & outcome metrics"
                         ],
-                        "e": "Definition → Silo Case Study → Financing Strategy → Structural Gaps → Reform Roadmap."
+                        "e": "Definition → Silo Case Study → Financing Strategy → Structural Gaps → Reform Roadmap.",
+                        "kw": "Mains 15-Marker Infrastructure Blueprint",
+                        "data": "Silo Problem -> PM Gati-Shakti GIS -> Financing (NMP/SASCI) -> Federal Gaps -> Multimodal Conclusion.",
+                        "ex": "Complete narrative flow addressing institutional, financial, and federal dimensions.",
+                        "mains": "Guarantees top-decile scores in GS-3 infrastructure questions."
                     },
                     {
                         "k": "mc",
@@ -6523,7 +7094,11 @@ TOPICS = {
                             "Technology alone will automatically build bridges without state funding."
                         ],
                         "a": 1,
-                        "e": "A balanced, inspiring constitutional conclusion connecting technology, federalism, and private capital."
+                        "e": "A balanced, inspiring constitutional conclusion connecting technology, federalism, and private capital.",
+                        "kw": "Infrastructure as Economic Multiplier",
+                        "data": "Infrastructure is not merely concrete and steel; it is the physical nervous system of a $5 Trillion economy.",
+                        "ex": "Connecting remote rural producers to global supply chains.",
+                        "mains": "Inspiring closing synthesis."
                     },
                     {
                         "k": "multi",
@@ -6539,9 +7114,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Whole-of-government, asset recycling, and bankability are high-scoring keywords."
+                        "e": "Whole-of-government, asset recycling, and bankability are high-scoring keywords.",
+                        "kw": "Evaluator Vocabulary Trigger",
+                        "data": "Synchronous Planning, GIS Geospatial Mapping, ULIP, Brownfield Asset Recycling, Capex Multiplier.",
+                        "ex": "Policy terminology demonstrating contemporary economic mastery.",
+                        "mains": "Use as subheading anchors across your answer script."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [
@@ -7032,13 +7612,21 @@ TOPICS = {
                             "Defence Pensions"
                         ],
                         "a": 0,
-                        "e": "PDS Aadhaar-linked reforms weeded out millions of ghost ration cards, generating over 53% of savings."
+                        "e": "PDS Aadhaar-linked reforms weeded out millions of ghost ration cards, generating over 53% of savings.",
+                        "kw": "PDS Digital De-Duplication",
+                        "data": "PDS digitization accounts for ~53% (₹1.85 Lakh Crore) of total cumulative DBT savings by weeding out 4.5+ Crore ghost ration cards.",
+                        "ex": "Aadhaar-seeded e-PoS biometric machines at fair price shops preventing grain diversion to open markets.",
+                        "mains": "Demonstrates how biometric de-duplication plugs leakages in high-volume public distribution schemes."
                     },
                     {
                         "k": "tf",
                         "q": "The DBT Bharat portal primarily measures human nutritional outcomes rather than the quantum of money moved.",
                         "a": 1,
-                        "e": "False. DBT Bharat tracks financial throughput (output), not qualitative nutritional or health outcomes."
+                        "e": "False. DBT Bharat tracks financial throughput (output), not qualitative nutritional or health outcomes.",
+                        "kw": "Input-Centric DBT Measurement Gap",
+                        "data": "DBT Bharat portal tracks cash disbursed and ghost accounts deleted, but fails to track nutritional or multidimensional poverty outcomes.",
+                        "ex": "Cash successfully debited to mother's account, but child remains malnourished due to lack of local eggs/milk supply.",
+                        "mains": "Crucial policy critique: 'Cash transfer is a delivery mechanism, not an outcome'."
                     },
                     {
                         "k": "multi",
@@ -7054,7 +7642,11 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "JAM, 59 Cr accounts, and subsidy reduction are verified milestones; poverty elimination is incorrect."
+                        "e": "JAM, 59 Cr accounts, and subsidy reduction are verified milestones; poverty elimination is incorrect.",
+                        "kw": "JAM Trinity Architecture",
+                        "data": "53+ Crore Jan Dhan accounts, 138+ Crore Aadhaars, and 110+ Crore mobile subscribers.",
+                        "ex": "Instant Covid-19 relief cash transfers to 20 Crore women Jan Dhan account holders in 24 hours.",
+                        "mains": "The world's largest digital public welfare delivery infrastructure."
                     },
                     {
                         "k": "year",
@@ -7063,9 +7655,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 2010,
                         "max": 2020,
-                        "e": "1 January 2013."
+                        "e": "1 January 2013.",
+                        "kw": "DBT Mission Launch (2013)",
+                        "data": "Launched on 1st January 2013 in 43 districts; scaled nationwide under JAM trinity post-2014.",
+                        "ex": "Transitioned welfare from physical cash and coupons to direct electronic bank deposits.",
+                        "mains": "Transformed India's welfare architecture from patronage-heavy discretion to rights-based digital certainty."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "The Inclusion vs Exclusion Dilemma",
@@ -7126,13 +7723,21 @@ TOPICS = {
                             "Fingerprints can never fail on digital PoS machines"
                         ],
                         "a": 1,
-                        "e": "The Constitution Bench held that genuine beneficiaries cannot be denied welfare if biometrics fail."
+                        "e": "The Constitution Bench held that genuine beneficiaries cannot be denied welfare if biometrics fail.",
+                        "kw": "Justice K.S. Puttaswamy (Aadhaar 2018)",
+                        "data": "Supreme Court 5-judge Constitution Bench held that NO citizen can be denied food, health, or welfare due to biometric authentication failure.",
+                        "ex": "Ration dealer compelled to provide manual register fallback if elderly grandmother's fingerprints fail to scan.",
+                        "mains": "Article 21 Right to Food overrides administrative biometric efficiency."
                     },
                     {
                         "k": "tf",
                         "q": "Aadhaar seeding in a database guarantees that a worker will successfully authenticate biometrically at payment time.",
                         "a": 1,
-                        "e": "False. Seeding is static linkage; biometric authentication can still fail due to fingerprint wear or connectivity loss."
+                        "e": "False. Seeding is static linkage; biometric authentication can still fail due to fingerprint wear or connectivity loss.",
+                        "kw": "Aadhaar Seeding vs NPCI Bank Mapping Gap",
+                        "data": "Aadhaar may be seeded in job card, but payment fails if not mapped on NPCI central mapper or if account is dormant.",
+                        "ex": "MGNREGA workers laboring for 15 days, but wages rejected due to 'silent account de-linking' on NPCI mapper.",
+                        "mains": "Technical nuance: 'Account Seeding != Payment Bridge Resolution' — highlights need for grievance reconciliation."
                     },
                     {
                         "k": "multi",
@@ -7148,9 +7753,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Biometric fading, connectivity drops, and name mismatches are the primary causes of welfare denial."
+                        "e": "Biometric fading, connectivity drops, and name mismatches are the primary causes of welfare denial.",
+                        "kw": "Biometric Exclusion Drivers",
+                        "data": "Fingerprint wear in manual laborers, poor rural mobile connectivity, and mismatch in spelling of names.",
+                        "ex": "Elderly MGNREGA workers with calloused fingers unable to unlock e-PoS devices in rural Jharkhand.",
+                        "mains": "Framing: 'Minimizing Type-I (Inclusion) Errors must not lead to catastrophic Type-II (Exclusion) Errors'."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "ABPS, MGNREGA & The Rural Jobs Transition",
@@ -7211,7 +7821,11 @@ TOPICS = {
                             "1000%"
                         ],
                         "a": 2,
-                        "e": "Deletions surged by 267% to 5.48 Crore workers, exposing severe exclusion risks."
+                        "e": "Deletions surged by 267% to 5.48 Crore workers, exposing severe exclusion risks.",
+                        "kw": "MGNREGA Job Card Purge (2022-23)",
+                        "data": "Over 5.48 Crore workers' job cards deleted in 2022-23 (a 267% increase) during the push for Aadhaar-based Payment Systems (ABPS).",
+                        "ex": "Field surveys by LibTech showing active, living, vulnerable workers wrongfully deleted as 'ghosts'.",
+                        "mains": "Reveals the dark side of algorithmic compliance: bureaucratic pressure to show 100% seeding results in mass wrongful deletions."
                     },
                     {
                         "k": "mc",
@@ -7223,13 +7837,21 @@ TOPICS = {
                             "365 Days"
                         ],
                         "a": 2,
-                        "e": "The Act expands the guaranteed wage employment ceiling from 100 to 125 days per household."
+                        "e": "The Act expands the guaranteed wage employment ceiling from 100 to 125 days per household.",
+                        "kw": "MGNREGA 100-Day Legal Entitlement",
+                        "data": "Mandates 100 days of guaranteed wage employment per rural household per financial year under Section 3.",
+                        "ex": "Acts as counter-cyclical distress shock absorber during droughts or post-harvest agrarian lulls.",
+                        "mains": "Statutory demand-driven safety net; technology must facilitate, not gatekeep, this basic right."
                     },
                     {
                         "k": "tf",
                         "q": "Field audits by LibTech revealed that only deceased individuals were deleted during the 2022-23 job card drives.",
                         "a": 1,
-                        "e": "False. Audits documented widespread wrongful deletion of active, living workers who struggled with ABPS mapper linkages."
+                        "e": "False. Audits documented widespread wrongful deletion of active, living workers who struggled with ABPS mapper linkages.",
+                        "kw": "Algorithmic Injustice & False Positives",
+                        "data": "Audits revealed over 40% of deleted workers were genuine living beneficiaries who simply had name spelling discrepancies.",
+                        "ex": "Worker 'Ramesh Kumar' deleted because bank passbook recorded 'Ramesh K'.",
+                        "mains": "Advocate mandatory physical door-to-door verification and written show-cause before deleting welfare entitlements."
                     },
                     {
                         "k": "year",
@@ -7238,9 +7860,14 @@ TOPICS = {
                         "tol": 0,
                         "min": 2022,
                         "max": 2028,
-                        "e": "1 July 2026."
+                        "e": "1 July 2026.",
+                        "kw": "Welfare Guarantee Codification",
+                        "data": "Reforms establishing mandatory digital and physical reconciliation protocols.",
+                        "ex": "State-level welfare ombudsman reinstating wrongfully deleted rural beneficiaries.",
+                        "mains": "Strengthening welfare grievance redressal."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Universal Cash Transfers & Fiscal Crowding-Out",
@@ -7301,13 +7928,21 @@ TOPICS = {
                             "15.0% of GDP"
                         ],
                         "a": 1,
-                        "e": "Twelve states spend ~₹1.68 Lakh Crore on women's cash transfers, which is nearly 0.5% of GDP."
+                        "e": "Twelve states spend ~₹1.68 Lakh Crore on women's cash transfers, which is nearly 0.5% of GDP.",
+                        "kw": "Universal Women's Cash Transfer Wave",
+                        "data": "12 states spend ~₹1.68 Lakh Crore (~1.2% of GSDP) on unconditional women's cash transfers (e.g. Ladli Behna, Gruha Lakshmi, Magalir Urimai).",
+                        "ex": "₹1,000 to ₹1,500 monthly transfers empowering female financial autonomy within households.",
+                        "mains": "High immediate welfare utility vs fiscal crowding-out of capital investments in rural schools, hospitals, and irrigation."
                     },
                     {
                         "k": "tf",
                         "q": "Direct cash transfers can completely substitute for government investments in physical hospitals, schools, and irrigation.",
                         "a": 1,
-                        "e": "False. Cash transfers enhance consumer purchasing power but cannot build schools, hospitals, or trunk infrastructure."
+                        "e": "False. Cash transfers enhance consumer purchasing power but cannot build schools, hospitals, or trunk infrastructure.",
+                        "kw": "Cash vs Public Goods Complementarity",
+                        "data": "Cash transfers provide purchasing power, but cannot construct hospitals, train doctors, or lay drinking water pipelines.",
+                        "ex": "A family receiving ₹1,000 cash cannot buy quality healthcare if primary health centers lack doctors and antibiotics.",
+                        "mains": "Essential policy doctrine: 'Cash transfers are a complement to, NEVER a substitute for, public health and education infrastructure'."
                     },
                     {
                         "k": "multi",
@@ -7323,9 +7958,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Crowding-out capex, revenue deficit strain, and inflation exposure are primary risks."
+                        "e": "Crowding-out capex, revenue deficit strain, and inflation exposure are primary risks.",
+                        "kw": "Fiscal Sustainability Trilemma",
+                        "data": "Expanding revenue deficits, reduction in capital expenditure (Capex), and long-term debt sustainability risks.",
+                        "ex": "States borrowing at 7.5% market yields to fund recurring monthly cash transfers.",
+                        "mains": "Advocate statutory fiscal caps (FRBM Act limits) and targeting cash transfers to vulnerable life-cycle milestones."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Aadhaar vs NPR & Rights Protection",
@@ -7386,13 +8026,21 @@ TOPICS = {
                             "Exporting biometric data to private foreign corporations"
                         ],
                         "a": 0,
-                        "e": "The 2014 debate pitted UIDAI's voluntary welfare identity against MHA's compulsory NPR framework."
+                        "e": "The 2014 debate pitted UIDAI's voluntary welfare identity against MHA's compulsory NPR framework.",
+                        "kw": "Aadhaar (UIDAI) vs NPR (MHA) Conflict",
+                        "data": "UIDAI designed Aadhaar as a voluntary proof of identity for welfare delivery; MHA designed NPR as a compulsory national citizenship register.",
+                        "ex": "2014 Cabinet compromise: Aadhaar assigned to welfare and financial inclusion; NPR separated for census/citizenship.",
+                        "mains": "Crucial constitutional distinction: Aadhaar is proof of IDENTITY and RESIDENCE, never proof of CITIZENSHIP."
                     },
                     {
                         "k": "tf",
                         "q": "An inclusion audit measures how many legitimate beneficiaries were wrongfully excluded by technological systems.",
                         "a": 0,
-                        "e": "True. Inclusion audits assess wrongful exclusion rather than focusing solely on leakage savings."
+                        "e": "True. Inclusion audits assess wrongful exclusion rather than focusing solely on leakage savings.",
+                        "kw": "The Inclusion Audit Paradigm",
+                        "data": "An inclusion audit measures what percentage of eligible poor citizens actually received their entitlement without biometric failure.",
+                        "ex": "Contrasts with traditional vigilance audits that only search for financial leakage and ghost beneficiaries.",
+                        "mains": "Advocate mandating annual social and inclusion audits under the Comptroller & Auditor General (CAG) framework."
                     },
                     {
                         "k": "order",
@@ -7403,9 +8051,14 @@ TOPICS = {
                             "Gram Sabha verification and public objection window",
                             "Final reasoned administrative order"
                         ],
-                        "e": "Draft list display → Individual notice → Gram Sabha verification → Final reasoned order."
+                        "e": "Draft list display → Individual notice → Gram Sabha verification → Final reasoned order.",
+                        "kw": "Due Process in Welfare De-Linking",
+                        "data": "Algorithmic flag -> Mandatory physical verification -> 30-day show-cause notice -> Right of appeal -> Deletion only with collector sign-off.",
+                        "ex": "Preventing arbitrary mass deletions of impoverished beneficiaries by computer scripts.",
+                        "mains": "Enforcing procedural fairness and administrative natural justice in digital governance."
                     }
-                ]
+                ],
+                "practice_first": True
             },
             {
                 "n": "Mains Toolkit: Welfare Technology Synthesis",
@@ -7452,7 +8105,11 @@ TOPICS = {
                             "Fiscal Dilemma: Women's UCTs (₹1.68L Cr, 0.5% GDP) vs capex crowding-out",
                             "Conclusion: Tech as enabler, mandatory offline fallback & inclusion audits"
                         ],
-                        "e": "Architecture → Fiscal Gains → Exclusion Dilemma → Fiscal Trade-Off → Rights-Based Conclusion."
+                        "e": "Architecture → Fiscal Gains → Exclusion Dilemma → Fiscal Trade-Off → Rights-Based Conclusion.",
+                        "kw": "Mains 15-Marker Digital Welfare Blueprint",
+                        "data": "JAM Architecture -> Fiscal Gains (₹2.7L Cr saved) -> Exclusion Pathology (Puttaswamy) -> Cash vs Public Goods -> Rights-Based Safeguards.",
+                        "ex": "Balanced structure addressing both administrative efficiency and fundamental rights.",
+                        "mains": "Guarantees top marks in GS-2 welfare governance questions."
                     },
                     {
                         "k": "mc",
@@ -7464,7 +8121,11 @@ TOPICS = {
                             "Welfare should be given exclusively to urban internet users."
                         ],
                         "a": 1,
-                        "e": "A constitutionally grounded, balanced conclusion aligning efficiency with compassion."
+                        "e": "A constitutionally grounded, balanced conclusion aligning efficiency with compassion.",
+                        "kw": "Empathetic Digital Welfare Vision",
+                        "data": "Technology in welfare must serve as a bridge of empowerment, never as an iron curtain of algorithmic exclusion.",
+                        "ex": "Preserving human dignity as the supreme benchmark of state welfare delivery.",
+                        "mains": "Powerful, resonant conclusion for GS-2 and Essay papers."
                     },
                     {
                         "k": "multi",
@@ -7480,9 +8141,14 @@ TOPICS = {
                             1,
                             2
                         ],
-                        "e": "Inclusion errors, offline fallback, and crowding-out are top-tier evaluative concepts."
+                        "e": "Inclusion errors, offline fallback, and crowding-out are top-tier evaluative concepts.",
+                        "kw": "Evaluator Vocabulary Trigger",
+                        "data": "JAM Trinity, Type-I vs Type-II Errors, Exclusion Friction, Puttaswamy Proportionality, Inclusion Audit.",
+                        "ex": "Precision policy vocabulary demonstrating deep analytical command.",
+                        "mains": "Essential keywords to highlight in your Mains answers."
                     }
-                ]
+                ],
+                "practice_first": True
             }
         ],
         "pyq": [

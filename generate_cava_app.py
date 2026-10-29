@@ -1481,12 +1481,12 @@ function home(){
     '<h1>' + top.title + '</h1>' +
     '<p class="sub">' + esc(top.sub) + '</p>' +
     goalCard() +
-    (CUR_TOPIC === 'msme' ? '<div class="practice-mode-banner">⚡ <b>Practice-First Model Active</b> · Solve real-world scenarios, calculations, and legal challenges. Concepts are taught via active trial-and-error debriefs!</div>' : '') +
+    (CUR_TOPIC !== 'cs_structure' ? '<div class="practice-mode-banner">⚡ <b>Practice-First Model Active</b> · Solve real-world scenarios, calculations, and legal challenges. Concepts are taught via active trial-and-error debriefs!</div>' : '') +
     '<div class="path">';
 
   top.lessons.forEach(function(l, i){
     var d = (S.done[CUR_TOPIC] || {})[i];
-    var subLabel = (CUR_TOPIC === 'msme' ? (l.q.length + ' Practice Drills · ' + esc(l.d)) : esc(l.d)) + (d ? ' · best ' + d + '%' : '');
+    var subLabel = (CUR_TOPIC !== 'cs_structure' ? (l.q.length + ' Practice Drills · ' + esc(l.d)) : esc(l.d)) + (d ? ' · best ' + d + '%' : '');
     h += '<button class="lesson' + (d ? ' done' : '') + '" data-i="' + i + '">' +
       '<span class="badge">' + (d ? '✓' : l.e) + '</span>' +
       '<span><b>' + esc(l.n) + '</b><small>' + subLabel + '</small></span>' +
@@ -1589,7 +1589,7 @@ function home(){
 function start(i){
   var top = DATA[CUR_TOPIC];
   var l = top.lessons[i];
-  var isPractice = (CUR_TOPIC === 'msme' || !!l.practice_first);
+  var isPractice = (CUR_TOPIC !== 'cs_structure');
   R = {
     i: i,
     ci: isPractice ? (l.c ? l.c.length : 0) : 0,
@@ -1905,8 +1905,12 @@ function inner(){
     });
   } else if(q.k === "order"){
     h = '<div class="slots' + (q.inl ? ' w' : '') + '">' + (R.sel.length ? '' : '<span class="ph">Tap the items below in order</span>');
-    R.sel.forEach(function(i){
-      h += '<button class="opt' + (q.inl ? ' fl' : '') + '" data-r="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
+    R.sel.forEach(function(i, slotIdx){
+      var cls = 'opt' + (q.inl ? ' fl' : '');
+      if(R.ok !== null){
+        cls += (i === slotIdx ? ' good' : ' bad');
+      }
+      h += '<button class="' + cls + '" data-r="' + i + '"' + (R.ok !== null ? ' disabled' : '') + '>' + esc(q.o[i]) + '</button>';
     });
     h += '</div>';
     R.ord.forEach(function(i){
