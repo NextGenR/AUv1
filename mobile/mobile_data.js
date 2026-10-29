@@ -222,6 +222,16 @@
 
   // The 3 Playable Topics
   const topics = {
+    'cs_structure': {
+      id: 'cs_structure',
+      title: 'Civil Services: Structure, Culture & Generalist vs Specialist',
+      badge: 'GS-2 Governance (PYQ Synced: 2016 & 2026)',
+      description: '11 progressive levels: Macaulay colonial legacy, Weberian hierarchy, 3Cs risk aversion, generalist virtues/limits, landmark committees & Bamboo Frame.',
+      color: '#2563eb',
+      icon: '🏛️',
+      flowcharts: [],
+      get levels() { return buildCivilServicesLevels(); }
+    },
     'msme': {
       id: 'msme',
       title: 'MSME Reforms & Catalysts',
@@ -255,7 +265,62 @@
   };
 
   // Backward compatible worlds builder
-  function buildWorlds() {
+  
+  // 4. TOPIC: Civil Services & Democratic Governance (Theme 2 Cluster 1: 11 Levels)
+  function buildCivilServicesLevels() {
+    const lessonsData = [
+      { id: 1, title: "Question Demands & Thematic Clustering", icon: "🎯", desc: "Deconstruct 2016 Q14 & 2026 Q8 demands, directives & thematic clubbing rationale" },
+      { id: 2, title: "Evolution of the Steel Frame: Macaulay to Weber", icon: "🏛️", desc: "Macaulay 1854 meritocracy, Weberian legal-rationalism & Patel's Steel Frame" },
+      { id: 3, title: "Modern Knowledge Economy & Northcote-Trevelyan", icon: "⚡", desc: "Northcote-Trevelyan 1854 & the 21st-century knowledge economy stress test" },
+      { id: 4, title: "Structural Challenges", icon: "🧱", desc: "Hierarchy, departmental silos, secretariat monopoly & the accountability deficit" },
+      { id: 5, title: "Cultural Mindset and Developmental Challenges", icon: "⏳", desc: "Red-tapism, 'Mai-Baap' paternalism & 3Cs risk aversion policy paralysis" },
+      { id: 6, title: "Dimension B: Generalist Virtues & Enduring Relevance", icon: "🛡️", desc: "Grassroots field reality, holistic coordination, crisis command & federal glue" },
+      { id: 7, title: "Dimension B: Generalist Limitations in Modern Governance", icon: "⚠️", desc: "Domain asymmetry, 18-month musical chairs, Big 4 capture & specialist demotivation" },
+      { id: 8, title: "Early Administrative Reforms: Fulton & 1st ARC", icon: "📜", desc: "Lord Fulton's 'Cult of the Amateur' & 1st ARC 8 functional specializations" },
+      { id: 9, title: "Modern Reform Blueprints: Surinder Nath & 2nd ARC", icon: "🏛️", desc: "Surinder Nath 11 domain clusters, 2nd ARC 13-year rule & flatter agencies" },
+      { id: 10, title: "Real-World Case Studies & Contemporary Dilemmas", icon: "💼", desc: "Technocrat pioneers, Aspirational Districts synergy & August 2024 lateral entry rollback" },
+      { id: 11, title: "The 4-Pillar Way Forward & The 'Bamboo Frame'", icon: "🎋", desc: "Mission Karmayogi FRAC, Desk Officer de-layering, Generalist-Plus & Bamboo Frame", isBoss: true }
+    ];
+
+    return lessonsData.map((lvl) => ({
+      id: lvl.id,
+      rawId: "cs-" + lvl.id,
+      topic: "cs_structure",
+      title: lvl.title,
+      subtitle: lvl.desc,
+      icon: lvl.icon,
+      unit: lvl.id <= 3 ? 1 : (lvl.id <= 7 ? 2 : 3),
+      unitColor: lvl.id <= 3 ? "#2563eb" : (lvl.id <= 7 ? "#d97706" : "#10b981"),
+      xpReward: 100,
+      coinsReward: 300,
+      isBoss: !!lvl.isBoss,
+      bossName: lvl.isBoss ? "The Status-Quoist Syndicate Overlord" : null,
+      bossHp: lvl.isBoss ? 1000 : null,
+      tasks: [
+        {
+          id: "cs-task-" + lvl.id + "-1",
+          type: "concept",
+          title: lvl.title,
+          content: lvl.desc
+        },
+        {
+          id: "cs-task-" + lvl.id + "-2",
+          type: "mcq",
+          question: "Which reform approach best represents modern civil service evolution for Viksit Bharat?",
+          options: [
+            "Returning to 1854 colonial company patronage",
+            "Transitioning from a rigid 'Steel Frame' to a flexible, role-based 'Bamboo Frame'",
+            "Completely abolishing grassroots district postings",
+            "Eliminating constitutional anonymity"
+          ],
+          correctIndex: 1,
+          explanation: "India must evolve from an unbending colonial Steel Frame to a resilient, domain-specialized, and deeply anchored Bamboo Frame."
+        }
+      ]
+    }));
+  }
+
+function buildWorlds() {
     return [
       {
         id: "world-msme",
@@ -283,8 +348,17 @@
         description: "Supreme Court Draft Regulations, 3-Tier AI Pyramid, and Regulation 43.",
         color: "#6366f1",
         levels: buildAiJudiciaryLevels()
-      }
-    ];
+      },
+      {
+        id: "world-governance-cs",
+        topicId: "cs_structure",
+        name: "World 4: Civil Services & Democratic Governance",
+        badge: "GS-2 Theme 2 (PYQ Synced: 2016 & 2026)",
+        description: "11 progressive levels: Colonial Macaulay Genesis, Weberian Hierarchy, 3Cs Paralysis, Generalist Virtues/Limits, Fulton, 1st & 2nd ARC, and the Bamboo Frame.",
+        color: "#2563eb",
+        levels: buildCivilServicesLevels()
+      },
+];
   }
 
   // Rapid-fire blitz statements (Comprehensive MSME + Public Exams + AI Judiciary)
